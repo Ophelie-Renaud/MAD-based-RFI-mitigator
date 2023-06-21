@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <key attr.name="parameters" for="graph" id="parameters"/>
+    <key attr.name="variables" for="graph" id="variables"/>
+    <key attr.name="arguments" for="node" id="arguments"/>
+    <key attr.name="name" attr.type="string" for="graph"/>
+    <key attr.name="graph_desc" attr.type="string" for="node"/>
+    <graph edgedefault="directed">
+        <data key="name">top_rfi2</data>
+        <node expr="200" id="N_BLOCKS" kind="param"/>
+        <node expr="2048" id="N_SAMPLES" kind="param"/>
+        <node id="Data_Acquisition" kind="actor">
+            <data key="graph_desc">Code/include/dataAcq.h</data>
+            <loop name="DataAcq">
+                <param direction="OUT" isConfig="false"
+                    name="raw_data_o" type="OUT unsigned char "/>
+            </loop>
+            <init name="initDataAcq"/>
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="raw_data_o"/>
+        </node>
+        <node id="Plot_RnI_Series" kind="actor">
+            <data key="graph_desc">Code/include/plotRnISeries.h</data>
+            <loop name="PlotRnISeries">
+                <param direction="IN" isConfig="false"
+                    name="raw_data_i" type="IN double complex "/>
+            </loop>
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="input" name="raw_data_i"/>
+        </node>
+        <node id="Brd_Cmplx" kind="broadcast">
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="input" name="in"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_0"/>
+        </node>
+        <edge kind="fifo" source="Data_Acquisition"
+            sourceport="raw_data_o" target="Brd_Cmplx"
+            targetport="in" type="double complex"/>
+        <edge kind="fifo" source="Brd_Cmplx" sourceport="out_0"
+            target="Plot_RnI_Series" targetport="raw_data_i" type="double complex"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Data_Acquisition" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Data_Acquisition" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_Cmplx" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_Cmplx" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Plot_RnI_Series" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Plot_RnI_Series" targetport="N_SAMPLES"/>
+    </graph>
+</graphml>
