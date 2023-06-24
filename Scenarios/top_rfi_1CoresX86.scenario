@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scenario>
     <files>
-        <algorithm url="/org.ietr.preesm.rfi/Algo/top_rfi.pi"/>
+        <algorithm url="/org.ietr.preesm.rfi/Algo/top_rfi2.pi"/>
         <architecture url="/org.ietr.preesm.rfi/Archi/1CoresX86.slam"/>
-        <codegenDirectory url="/org.ietr.preesm.rfi/Code/generated/"/>
+        <codegenDirectory url="/org.ietr.preesm.rfi/Code1CoreX86/generated"/>
     </files>
     <constraints excelUrl="">
         <constraintGroup>
             <operator name="Core0"/>
-            <task name="top_rfi/Data_Acquisition"/>
-            <task name="top_rfi/Median_Computation"/>
+            <task name="top_rfi2/Data_Acquisition"/>
+            <task name="top_rfi2/Plot_RnI_Histo"/>
+            <task name="top_rfi2/MAD_Computation"/>
+            <task name="top_rfi2/STD_Computation"/>
+            <task name="top_rfi2/Plot_Threshold"/>
+            <task name="top_rfi2/RFI_Filter"/>
+            <task name="top_rfi2/Plot_Filtered_Data"/>
+            <task name="top_rfi2/Data_Restitution"/>
+            <task name="top_rfi2"/>
         </constraintGroup>
     </constraints>
     <timings excelUrl="">
-        <timing opname="x86" time="100" vertexname="top_rfi/Data_Acquisition"/>
-        <timing opname="x86" time="100" vertexname="top_rfi/Median_Computation"/>
+        <memcpyspeed opname="x86" setuptime="1" timeperunit="0.001"/>
     </timings>
     <simuParams>
         <mainCore>Core0</mainCore>
         <mainComNode>shared_mem</mainComNode>
         <averageDataSize>1000</averageDataSize>
         <dataTypes>
-            <dataType name="uchar" size="1"/>
+            <dataType name="double" size="64"/>
         </dataTypes>
         <specialVertexOperators>
             <specialVertexOperator path="Core0"/>
