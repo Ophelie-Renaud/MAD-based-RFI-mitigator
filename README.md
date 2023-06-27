@@ -1,6 +1,15 @@
-# MAD-based-RFI-mitigator
+# MAD-based RFI mitigator deployed on multiple target architectures
 
-### PRINCIPLE :loud_sound: --> :sound:
+### PROJECT :satellite:
+The aim of this project is to provide a method that allow the deployement of an application on several type of architecture. The type of architecture considered here are CPU/GPU/FPGA.
+
+The methode consist in describing an application with th Synchronous Dataflow (SDF) model then adapt it's granularity with the Scaling up of Cluster of Actor on the Processing Element (SCAPE) method [[1]](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
+
+A special code generation has to be implemented for each in order to make this project possible.
+
+The use case to demonstrate the relevance of the method is a MAD-based RFI mitigator.
+
+### USE CASE PRINCIPLE :loud_sound: --> :sound:
 The process involves filtering Radio Frequency Interference (RFI) from an acquisition file obtained by a radio telescope. The file is in the ".dada" format (DADA stand for **Distributed Acquisition and Data Analysis**) and is comprised of two parts: the header, which contains information about the radio telescope, and the data part.
 
 The data part consists of complex numbers. The first step of the process is to separate the real and imaginary components of the data in order to apply filters to both.
@@ -18,14 +27,7 @@ Both filters aim to find a threshold and remove data points above this threshold
 
 Finally, the filtered real and imaginary parts are combined by taking their conjugates to reconstruct the complex numbers. These reconstructed complex numbers are then used to generate a new ".dada" file.
 
-### PROJECT
-The aim of this project is to provide a method that allow the deployement of an application on several type of architecture. The type of architecture considered here are CPU/GPU/FPGA.
-
-The methode consist in describing an application with th Synchronous Dataflow (SDF) model then adapt it's granularity with the Scaling up of Cluster of Actor on the Processing Element (SCAPE) method [[1]](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
-
-A special code generation has to be implemented for each in order to make this project possible.
-
-##### PREESM :briefcase:
+### PREESM PROJECT :gear:
 The present project is a PREESM project and contains folders with the name **Algo** for the algorithm model, **Archi** for the architecture model, **Scenarios** for the parameters and constraints of rapid prototyping, **Code** for the generated code, **Algo/generated** for the exported intermediate information, and **Workflows** for the different available rapid prototyping workflows.
 
 If you want to take advantage of this project
@@ -54,7 +56,7 @@ You can figure out that there is multiple Code folder each one contains the gene
 - "Code1CoreX86" contain the generated files for ...
 
 
-##### CODE EXECUTION :gear:
+### CODE EXECUTION :clapper:
 
 Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
 And of course:
