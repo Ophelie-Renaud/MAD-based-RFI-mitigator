@@ -72,8 +72,11 @@ install GNUplot:
 
 Install Vitis: 
 >> $ sudo apt install libncurses5
+
 >> $ sudo apt install libtinfo5
+
 >> $ sudo apt install libncurses5-dev libncursesw5-dev
+
 Vitis download [v2021-2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2021-2.html)
 - Vitis Core Development Kit, 130 GB installation space, 70 GB permanent space
 - Remove Model Composer
@@ -81,18 +84,20 @@ Vitis download [v2021-2](https://www.xilinx.com/support/download/index.html/cont
 
 Launch Vitis:
 >> $ source ~/Xilinx/Vitis_HLS/2021.2/settings64.sh
+
 >> $ vitis_hls
 
 Or create an alias in bashrc:
 >> nano ~/.bashrc
+
 At the very bottom of the file:
 >> alias VHLS='source ~/Xilinx/Vitis_HLS/2021.1/settings64.sh && vitis_hls&'
+
 close then save what you've done:
 >> $ source ~/.bashrc
+
 Then lauch Vitis:
 >> VHLS
-
-
 
 If the vitis windows closing immediatly:
 Edit file autopilot_init.tcl line 40 (source ~/Xilinx/Vitis_HLS/2021.2/common/scripts/autopilot_init.tcl)
@@ -100,7 +105,19 @@ Edit file autopilot_init.tcl line 40 (source ~/Xilinx/Vitis_HLS/2021.2/common/sc
 
 to 
 >> ----%r&-'%rl%&n$&lt'v->
+
 if you can't edit: 
 >> sudo chown orenaud autopilot_init.tcl
+
+create a vitis project
+>> New project
+
+>> add the top.cpp file as top function
+
+>> add the top_test_bench.cpp file as test bench function
+
+>> device> retrive the part : xc7z020clg400-1
+
+
 
 
