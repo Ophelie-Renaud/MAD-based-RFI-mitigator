@@ -7,9 +7,11 @@ The data part consists of complex numbers. The first step of the process is to s
 
 Two filters are computed simultaneously, and one of them is applied to the data. 
 - The first filter is the Standard Deviation (STD) filter. See [Wiki STD deviation](https://en.wikipedia.org/wiki/Standard_deviation)
+
 $$ {\displaystyle \operatorname {MAD} =\operatorname {median} (|X_{i}-{\tilde {X}}|)} $$
 
 - The second filter is the Median Average Deviation (MAD) filter. See [Wiki MAD deviation](https://en.wikipedia.org/wiki/Median_absolute_deviation).
+
 $$ \sigma =\sqrt{\frac{1}{N}\sum\limits_{i=1}^N (x_i - \mu)}$$
 
 Both filters aim to find a threshold and remove data points above this threshold.
