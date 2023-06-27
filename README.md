@@ -1,6 +1,6 @@
 # MAD-based-RFI-mitigator
 
-### PRINCIPLE
+### PRINCIPLE :loud_sound: --> :sound:
 The process involves filtering Radio Frequency Interference (RFI) from an acquisition file obtained by a radio telescope. The file is in the ".dada" format (DADA stand for **Distributed Acquisition and Data Analysis**) and is comprised of two parts: the header, which contains information about the radio telescope, and the data part.
 
 The data part consists of complex numbers. The first step of the process is to separate the real and imaginary components of the data in order to apply filters to both.
@@ -23,7 +23,7 @@ The methode consist in describing an application with th Synchronous Dataflow (S
 
 A special code generation has to be implemented for each in order to make this project possible.
 
-##### PREESM
+##### PREESM :briefcase:
 The present project is a PREESM project and contains folders with the name **Algo** for the algorithm model, **Archi** for the architecture model, **Scenarios** for the parameters and constraints of rapid prototyping, **Code** for the generated code, **Algo/generated** for the exported intermediate information, and **Workflows** for the different available rapid prototyping workflows.
 
 If you want to take advantage of this project
@@ -52,9 +52,9 @@ You can figure out that there is multiple Code folder each one contains the gene
 - "Code1CoreX86" contain the generated files for ...
 
 
-##### CODE EXECUTION
+##### CODE EXECUTION :gear:
 
-Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses:.
+Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
 And of course:
 >> sudo make install
 
@@ -63,7 +63,7 @@ install GNUplot:
 >> sudo apt-get install gnuplot
 
 
-### TARGET
+### TARGET :desktop_computer:
 
 **PYNQ Z2**: 
 >> Board setup see [Z2 setup](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html)
