@@ -60,10 +60,10 @@ void MADCpt(int N_SAMPLES, int SIGMA,  IN double *raw_data_real_i, IN double *ra
 
 }
 void sortList(double *data, int size, double *sorted_list) {
-    int* count = (int*)malloc(size * sizeof(int));
-    //int count[size] = {0};
+    //int* count = (int*)malloc(size * sizeof(int));
+    int count[409600] = {0};
 
-    int min_value = -50;
+    int min_value = MIN(data,size);
     int max_value = 50;
 // Count the occurrence of each number
     for (int i = 0; i < size; i++) {
@@ -77,7 +77,7 @@ void sortList(double *data, int size, double *sorted_list) {
             sorted_list[index++] = i + min_value;
         }
     }
-    free(count);
+    //free(count);
 /*// STORE the sorted list
     FILE* fstore;
     if((fstore = fopen(SORTREALPATH, "w")) == NULL )
@@ -92,6 +92,15 @@ void sortList(double *data, int size, double *sorted_list) {
         }
     }
     fclose(fstore);*/
+}
+double MIN(double *tab,int len){
+    double num = tab[0];
+    for(int i=1;i<len;i++){
+        if(tab[i] < num){
+            num = tab[i];
+        }
+    }
+    return num;
 }
 
 double computeMedian(double *list, int length) {

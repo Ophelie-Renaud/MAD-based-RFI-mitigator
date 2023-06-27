@@ -4,6 +4,7 @@ add_definitions( -DPROJECT_ROOT_PATH="${CMAKE_CURRENT_SOURCE_DIR}")
 project(rfi C)
 
 set(CMAKE_C_STANDARD 11)
+
 #[[# *******************************************
 # ************** SDL2 LIBRARY ***************
 # *******************************************
@@ -117,5 +118,6 @@ file(
 )
 
 add_executable(rfi ${source_files} ${header_files})
-target_link_libraries(rfi ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_EXTRA_LIB})
+target_link_libraries(rfi ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_EXTRA_LIB} ${LIBM_LIBRARIES})
+target_link_libraries(rfi PUBLIC m)
 target_link_libraries(rfi PUBLIC psrdada)

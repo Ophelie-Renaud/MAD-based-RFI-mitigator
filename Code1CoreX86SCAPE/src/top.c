@@ -29,6 +29,7 @@ void top(int SIGMA, int SAMPLE_RATE, int MODE, int HEADER_SIZE, int DISPLAY, int
     for(int i=0;i<N_BLOCKS;i++){
         MADCpt(N_SAMPLES,SIGMA,raw_data_real_o+i*N_SAMPLES,raw_data_im_o+i*N_SAMPLES,mad_R_o+i*N_SAMPLES,mad_I_o+i*N_SAMPLES);
         //TODO STDCpt...
+        STDCpt(N_SAMPLES,SIGMA,raw_data_real_o+i*N_SAMPLES,raw_data_im_o+i*N_SAMPLES,std_R_o+i*N_SAMPLES,std_I_o+i*N_SAMPLES);
         RFIFilter(MODE,N_SAMPLES,mad_R_o+i*N_SAMPLES,mad_I_o+i*N_SAMPLES,std_R_o+i*N_SAMPLES,std_I_o+i*N_SAMPLES,raw_data_real_o+i*N_SAMPLES,raw_data_im_o+i*N_SAMPLES,filtered_real_data_o+i*N_SAMPLES,filtered_im_data_o+i*N_SAMPLES);
     }
     PlotThreshold(SAMPLE_RATE,SIZE,DISPLAY,raw_data_real_o,raw_data_im_o,mad_R_o,mad_I_o,std_R_o,std_I_o);

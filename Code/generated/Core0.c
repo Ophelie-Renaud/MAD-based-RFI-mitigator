@@ -32,7 +32,7 @@ void* computationThread_Core0(void *arg) {
 #endif
   // Initialisation(s)
     printf("\nStart Core0\n");
-  initDataAcq(); // Data_Acquisition_0
+  //initDataAcq(); // Data_Acquisition_0
 
   // Begin the execution loop
   pthread_barrier_wait(&iter_barrier);
@@ -43,7 +43,7 @@ void* computationThread_Core0(void *arg) {
   while (!preesmStopThreads) {
 #endif
     // loop body
-    DataAcq2(raw_data_o__raw_data_i__0); // Data_Acquisition_0
+    DataAcq(raw_data_o__raw_data_i__0); // Data_Acquisition_0
 
     MedianCpt(raw_data_o__raw_data_i__0); // Median_Computation_0
 #ifdef PREESM_MD5_UPDATE

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<data>
-    <event color="#c896fa" end="100" mapping="Core0" start="0" title="Data_Acquisition_0 (x1)">Step_Data_Acquisition_0_(x1).</event>
-    <event color="#c896fa" end="200" mapping="Core0" start="100" title="Median_Computation_0 (x1)">Step_Median_Computation_0_(x1).</event>
-    <perfs impl_length="200" impl_nbCores="1" impl_nbUsedCores="1" span="200" work="200">
-        <core id="Core0" load="200" used_mem="1">Core_Core0.</core>
-    </perfs>
-</data>

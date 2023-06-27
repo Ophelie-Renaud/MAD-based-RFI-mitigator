@@ -6,9 +6,11 @@ The process involves filtering Radio Frequency Interference (RFI) from an acquis
 The data part consists of complex numbers. The first step of the process is to separate the real and imaginary components of the data in order to apply filters to both.
 
 Two filters are computed simultaneously, and one of them is applied to the data. 
-- The first filter is the Standard Deviation filter (STD)... (Note: The details of the STD filter algorithm are missing, marked as "// TODO")
+- The first filter is the Standard Deviation (STD) filter. See [Wiki STD deviation](https://en.wikipedia.org/wiki/Standard_deviation)
+$$ {\displaystyle \operatorname {MAD} =\operatorname {median} (|X_{i}-{\tilde {X}}|)} $$
 
-- The second filter is the Median Average Deviation (MAD) Filter. 
+- The second filter is the Median Average Deviation (MAD) filter. See [Wiki MAD deviation](https://en.wikipedia.org/wiki/Median_absolute_deviation).
+$$ \sigma =\sqrt{\frac{1}{N}\sum\limits_{i=1}^N (x_i - \mu)}$$
 
 Both filters aim to find a threshold and remove data points above this threshold.
 
@@ -17,7 +19,7 @@ Finally, the filtered real and imaginary parts are combined by taking their conj
 ### PROJECT
 The aim of this project is to provide a method that allow the deployement of an application on several type of architecture. The type of architecture considered here are CPU/GPU/FPGA.
 
-The methode consist in describing an application with th Synchronous Dataflow (SDF) model then adapt it's granularity with the Scaling up of Cluster of Actor on the Processing Element (SCAPE) method [1](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
+The methode consist in describing an application with th Synchronous Dataflow (SDF) model then adapt it's granularity with the Scaling up of Cluster of Actor on the Processing Element (SCAPE) method [[1]](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
 
 A special code generation has to be implemented for each in order to make this project possible.
 
@@ -59,3 +61,44 @@ And of course:
 install GNUplot:
 >> sudo apt-get update
 >> sudo apt-get install gnuplot
+
+
+### TARGET
+
+**PYNQ Z2**: 
+>> Board setup see [Z2 setup](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html)
+
+Install Vitis: 
+>> $ sudo apt install libncurses5
+>> $ sudo apt install libtinfo5
+>> $ sudo apt install libncurses5-dev libncursesw5-dev
+Vitis download [v2021-2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2021-2.html)
+- Vitis Core Development Kit, 130 GB installation space, 70 GB permanent space
+- Remove Model Composer
+- Install FPGA SoC only (Zynq, UltraScale)
+
+Launch Vitis:
+>> $ source ~/Xilinx/Vitis_HLS/2021.2/settings64.sh
+>> $ vitis_hls
+
+Or create an alias in bashrc:
+>> nano ~/.bashrc
+At the very bottom of the file:
+>> alias VHLS='source ~/Xilinx/Vitis_HLS/2021.1/settings64.sh && vitis_hls&'
+close then save what you've done:
+>> $ source ~/.bashrc
+Then lauch Vitis:
+>> VHLS
+
+
+
+If the vitis windows closing immediatly:
+Edit file autopilot_init.tcl line 40 (source ~/Xilinx/Vitis_HLS/2021.2/common/scripts/autopilot_init.tcl)
+>> ----%r&-'%rl%&n$&lt'v-=
+
+to 
+>> ----%r&-'%rl%&n$&lt'v->
+if you can't edit: 
+>> sudo chown orenaud autopilot_init.tcl
+
+

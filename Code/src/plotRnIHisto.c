@@ -38,6 +38,37 @@ void storeData(double *data,int size, const char* path) {
         fprintf(fstore, "%f \n",data[i]);
     }
     fclose(fstore);
+    //
+//    int count[SIZE] = {0};
+//
+//    int min_value = -50;
+//    int max_value = 50;
+//// Count the occurrence of each number
+//    for (int i = 0; i < n; i++) {
+//        int num = data[i];
+//        count[num - min_value]++;
+//    }
+//    // Generate the sorted list
+//    int index = 0;
+//    for (int i = 0; i < n; i++) {
+//        for (int j = 0; j < count[i]; j++) {
+//            sorted_list[index++] = i + min_value;
+//        }
+//    }
+//// STORE the sorted list
+//    FILE* fstore;
+//    if((fstore = fopen(SORTREALPATH, "w")) == NULL )
+//    {
+//        fprintf(stderr,"ERROR: Task read cannot open sort real file '%s'", SORTREALPATH);
+//        exit(1);
+//    }
+//   // printf("\n\nCount of each number:\n");
+//    for (int i = 0; i < SIZE; i++) {
+//        if (count[i] > 0) {
+//            fprintf(fstore,"%d: %d\n", i + min_value, count[i]);
+//        }
+//    }
+//    fclose(fstore);
 }
 void plotHistogram(const char* path, const char* label) {
     FILE* gp;
