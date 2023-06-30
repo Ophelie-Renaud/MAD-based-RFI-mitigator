@@ -16,19 +16,14 @@
         <node expr="128e6" id="SAMPLE_RATE" kind="param"/>
         <node expr="1" id="DISPLAY" kind="param"/>
         <node id="Data_Acquisition" kind="actor">
-            <data key="graph_desc">Code/include/dataAcq.h</data>
-            <loop name="DataAcq">
-                <param direction="IN" isConfig="true"
-                    name="N_BLOCKS" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="N_SAMPLES" type="int"/>
-                <param direction="IN" isConfig="true" name="SIZE" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="HEADER_SIZE" type="int"/>
-                <param direction="OUT" isConfig="false"
-                    name="raw_data_real_o" type="double "/>
-                <param direction="OUT" isConfig="false"
-                    name="raw_data_im_o" type="double "/>
+            <data key="graph_desc">CodeFPGA/include/dataAcq.hpp</data>
+            <loop isCPPdefinition="true" name="DataAcq&lt;N_BLOCKS,N_SAMPLES,SIZE,HEADER_SIZE,T>">
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_o" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_o" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="N_BLOCKS"/>
             <port kind="cfg_input" name="N_SAMPLES"/>
@@ -40,13 +35,14 @@
                 kind="output" name="raw_data_im_o"/>
         </node>
         <node id="Plot_RnI_Histo" kind="actor">
-            <data key="graph_desc">Code/include/plotRnIHisto.h</data>
-            <loop name="PlotRnIHisto">
-                <param direction="IN" isConfig="true" name="SIZE" type="int"/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double complex "/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double complex "/>
+            <data key="graph_desc">CodeFPGA/include/plotRnIHisto.hpp</data>
+            <loop isCPPdefinition="true" name="PlotRnIHisto&lt;SIZE,DISPLAY,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="SIZE"/>
             <port kind="cfg_input" name="DISPLAY"/>
@@ -70,20 +66,20 @@
                 kind="output" name="out_4"/>
         </node>
         <node id="MAD_Computation" kind="actor">
-            <data key="graph_desc">Code/include/madCpt.h</data>
-            <loop name="MADCpt">
-                <param direction="IN" isConfig="true"
-                    name="N_SAMPLES" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="SIGMA" type="int"/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
-                <param direction="OUT" isConfig="false"
-                    name="mad_R_o" type="double "/>
-                <param direction="OUT" isConfig="false"
-                    name="mad_I_o" type="double "/>
+            <data key="graph_desc">CodeFPGA/include/madCpt.hpp</data>
+            <loop isCPPdefinition="true" name="MADCpt&lt;N_SAMPLES,SIGMA,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_R_o" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_I_o" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="N_SAMPLES"/>
             <port kind="cfg_input" name="SIGMA"/>
@@ -95,18 +91,20 @@
                 kind="output" name="mad_I_o"/>
         </node>
         <node id="STD_Computation" kind="actor">
-            <data key="graph_desc">Code/include/stdCpt.h</data>
-            <loop name="STDCpt">
-                <param direction="IN" isConfig="true"
-                    name="N_SAMPLES" type="int"/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
-                <param direction="OUT" isConfig="false"
-                    name="std_R_o" type="double "/>
-                <param direction="OUT" isConfig="false"
-                    name="std_I_o" type="double "/>
+            <data key="graph_desc">CodeFPGA/include/stdCpt.hpp</data>
+            <loop isCPPdefinition="true" name="STDCpt&lt;N_SAMPLES,SIGMA,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_R_o" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_I_o" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="N_SAMPLES"/>
             <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_real_i"/>
@@ -117,23 +115,26 @@
                 kind="output" name="std_I_o"/>
         </node>
         <node id="Plot_Threshold" kind="actor">
-            <data key="graph_desc">Code/include/plotThreshold.h</data>
-            <loop name="PlotThreshold">
-                <param direction="IN" isConfig="true"
-                    name="SAMPLE_RATE" type="int"/>
-                <param direction="IN" isConfig="true" name="SIZE" type="int"/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="mad_R_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="mad_I_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="std_R_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="std_I_i" type="double "/>
+            <data key="graph_desc">CodeFPGA/include/plotThreshold.hpp</data>
+            <loop isCPPdefinition="true" name="PlotThreshold&lt;SAMPLE_RATE,SIZE,DISPLAY,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_R_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_I_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_R_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_I_i" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="SIZE"/>
             <port kind="cfg_input" name="SAMPLE_RATE"/>
@@ -164,27 +165,32 @@
                 kind="output" name="out_2"/>
         </node>
         <node id="RFI_Filter" kind="actor">
-            <data key="graph_desc">Code/include/rfiFilter.h</data>
-            <loop name="RFIFilter">
-                <param direction="IN" isConfig="true" name="MODE" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="N_SAMPLES" type="int"/>
-                <param direction="IN" isConfig="false"
-                    name="mad_R_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="mad_I_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="std_R_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="std_I_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
-                <param direction="OUT" isConfig="false"
-                    name="filtered_real_data_o" type="double "/>
-                <param direction="OUT" isConfig="false"
-                    name="filtered_im_data_o" type="double "/>
+            <data key="graph_desc">CodeFPGA/include/rfiFilter.hpp</data>
+            <loop isCPPdefinition="true" name="RFIFilter&lt;MODE,N_SAMPLES,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_R_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_I_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_R_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_I_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_real_data_o" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_im_data_o" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="MODE"/>
             <port kind="cfg_input" name="N_SAMPLES"/>
@@ -200,17 +206,14 @@
                 kind="output" name="filtered_im_data_o"/>
         </node>
         <node id="Plot_Filtered_Data" kind="actor">
-            <data key="graph_desc">Code/include/plotFilteredData.h</data>
-            <loop name="PlotFilteredData">
-                <param direction="IN" isConfig="true" name="SIZE" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="SAMPLE_RATE" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="DISPLAY" type="int"/>
-                <param direction="IN" isConfig="false"
-                    name="filtered_real_data_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="filtered_im_data_i" type="double "/>
+            <data key="graph_desc">CodeFPGA/include/plotFilteredData.hpp</data>
+            <loop isCPPdefinition="true" name="PlotFilteredData&lt;SIZE,SAMPLE_RATE,DISPLAY,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_real_data_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_im_data_i" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="DISPLAY"/>
             <port kind="cfg_input" name="SIZE"/>
@@ -253,19 +256,14 @@
                 kind="output" name="out_1"/>
         </node>
         <node id="Data_Restitution" kind="actor">
-            <data key="graph_desc">Code/include/dataRes.h</data>
-            <loop name="DataRes">
-                <param direction="IN" isConfig="true"
-                    name="N_BLOCKS" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="N_SAMPLES" type="int"/>
-                <param direction="IN" isConfig="true" name="SIZE" type="int"/>
-                <param direction="IN" isConfig="true"
-                    name="HEADER_SIZE" type="int"/>
-                <param direction="IN" isConfig="false"
-                    name="filtered_real_data_i" type="double "/>
-                <param direction="IN" isConfig="false"
-                    name="filtered_im_data_i" type="double "/>
+            <data key="graph_desc">CodeFPGA/include/dataRes.hpp</data>
+            <loop isCPPdefinition="true" name="DataRes&lt;N_BLOCKS,N_SAMPLES,SIZE,HEADER_SIZE,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_real_data_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_im_data_i" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="SIZE"/>
             <port kind="cfg_input" name="N_BLOCKS"/>

@@ -69,9 +69,10 @@ install GNUplot:
 
 ### TARGET :desktop_computer:
 
-**PYNQ Z2**: 
+#### PYNQ Z2 
 >> Board setup see [Z2 setup](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html)
 
+##### Vitis
 Install Vitis: 
 >> $ sudo apt install libncurses5
 
@@ -93,32 +94,34 @@ Or create an alias in bashrc:
 >> nano ~/.bashrc
 
 At the very bottom of the file:
->> alias VHLS='source ~/Xilinx/Vitis_HLS/2021.1/settings64.sh && vitis_hls&'
+>> alias VHLS='source ~/Xilinx/Vitis_HLS/2021.1/settings64.sh'
 
 close then save what you've done:
 >> $ source ~/.bashrc
 
-Then lauch Vitis:
+Open a terminal on the Makefile folder
 >> VHLS
 
-If the vitis windows closing immediatly:
-Edit file autopilot_init.tcl line 40 (source ~/Xilinx/Vitis_HLS/2021.2/common/scripts/autopilot_init.tcl)
->> ----%r&-'%rl%&n$&lt'v-=
+In the case you've installed the patch [here](https://support.xilinx.com/s/article/76960?language=en_US).
 
-to 
->> ----%r&-'%rl%&n$&lt'v->
+Then you can :
+>>$ make clean
+>>$ make all
 
-if you can't edit: 
->> sudo chown orenaud autopilot_init.tcl
+Otherwise:
+>>$ make top[...]
 
-create a vitis project
->> New project
+Then lauch Vitis:
 
->> add the top.cpp file as top function
+>> $ vitis_hls
 
->> add the top_test_bench.cpp file as test bench function
+Open the Vitis project
 
->> device> retrive the part : xc7z020clg400-1
+>> File > open project > open folder top
+
+Your project appear.
+
+>> run > C syntesis
 
 
 
