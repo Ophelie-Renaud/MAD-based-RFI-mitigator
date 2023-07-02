@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <key attr.name="parameters" for="graph" id="parameters"/>
+    <key attr.name="variables" for="graph" id="variables"/>
+    <key attr.name="arguments" for="node" id="arguments"/>
+    <key attr.name="name" attr.type="string" for="graph"/>
+    <key attr.name="graph_desc" attr.type="string" for="node"/>
+    <graph edgedefault="directed">
+        <data key="name">sub0_rfi</data>
+        <node expr="2048" id="N_SAMPLES" kind="param"/>
+        <node expr="200" id="N_BLOCKS" kind="param"/>
+        <node expr="4096" id="HEADER_SIZE" kind="param"/>
+        <node expr="N_BLOCKS*N_SAMPLES" id="SIZE" kind="param"/>
+        <node id="Data_Acquisition" kind="actor">
+            <data key="graph_desc">Code/include/dataAcq.h</data>
+            <loop name="DataAcq">
+                <param direction="IN" isConfig="true"
+                    name="N_BLOCKS" type="int"/>
+                <param direction="IN" isConfig="true"
+                    name="N_SAMPLES" type="int"/>
+                <param direction="IN" isConfig="true" name="SIZE" type="int"/>
+                <param direction="IN" isConfig="true"
+                    name="HEADER_SIZE" type="int"/>
+                <param direction="OUT" isConfig="false"
+                    name="raw_data_real_o" type="double "/>
+                <param direction="OUT" isConfig="false"
+                    name="raw_data_im_o" type="double "/>
+            </loop>
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="HEADER_SIZE"/>
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="raw_data_real_o"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="raw_data_im_o"/>
+        </node>
+        <node id="raw_data_real" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real"/>
+        </node>
+        <node id="raw_data_im" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im"/>
+        </node>
+        <edge kind="fifo" source="Data_Acquisition"
+            sourceport="raw_data_real_o" target="raw_data_real"
+            targetport="raw_data_real" type="void"/>
+        <edge kind="fifo" source="Data_Acquisition"
+            sourceport="raw_data_im_o" target="raw_data_im"
+            targetport="raw_data_im" type="void"/>
+        <edge kind="dependency" source="N_BLOCKS" target="SIZE"/>
+        <edge kind="dependency" source="N_SAMPLES" target="SIZE"/>
+        <edge kind="dependency" source="HEADER_SIZE"
+            target="Data_Acquisition" targetport="HEADER_SIZE"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Data_Acquisition" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Data_Acquisition" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="SIZE"
+            target="Data_Acquisition" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_im"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_real"/>
+    </graph>
+</graphml>

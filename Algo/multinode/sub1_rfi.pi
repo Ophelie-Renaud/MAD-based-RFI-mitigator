@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <key attr.name="parameters" for="graph" id="parameters"/>
+    <key attr.name="variables" for="graph" id="variables"/>
+    <key attr.name="arguments" for="node" id="arguments"/>
+    <key attr.name="name" attr.type="string" for="graph"/>
+    <key attr.name="graph_desc" attr.type="string" for="node"/>
+    <graph edgedefault="directed">
+        <data key="name">top_rfi_C</data>
+        <node expr="200" id="N_BLOCKS" kind="param"/>
+        <node expr="2048" id="N_SAMPLES" kind="param"/>
+        <node expr="0" id="MODE" kind="param"/>
+        <node expr="N_BLOCKS*N_SAMPLES" id="SIZE" kind="param"/>
+        <node expr="3" id="SIGMA" kind="param"/>
+        <node id="Brd_Acq_Real" kind="broadcast">
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="input" name="in"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_0"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_1"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_2"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_3"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_4"/>
+        </node>
+        <node id="MAD_Computation" kind="actor">
+            <data key="graph_desc">CodeFPGA/include/madCpt.hpp</data>
+            <loop isCPPdefinition="true" name="MADCpt&lt;N_SAMPLES,SIGMA,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_R_o" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_I_o" type="hls::stream&lt;T>"/>
+            </loop>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="SIGMA"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_real_i"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_im_i"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="mad_R_o"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="mad_I_o"/>
+        </node>
+        <node id="STD_Computation" kind="actor">
+            <data key="graph_desc">CodeFPGA/include/stdCpt.hpp</data>
+            <loop isCPPdefinition="true" name="STDCpt&lt;N_SAMPLES,SIGMA,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_R_o" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_I_o" type="hls::stream&lt;T>"/>
+            </loop>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_real_i"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_im_i"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="std_R_o"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="std_I_o"/>
+        </node>
+        <node id="Brd_MAD_R" kind="broadcast">
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="in"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_0"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_2"/>
+        </node>
+        <node id="Brd_STD_R" kind="broadcast">
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="in"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_1"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_2"/>
+        </node>
+        <node id="RFI_Filter" kind="actor">
+            <data key="graph_desc">CodeFPGA/include/rfiFilter.hpp</data>
+            <loop isCPPdefinition="true" name="RFIFilter&lt;MODE,N_SAMPLES,T>">
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_R_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="mad_I_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_R_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="std_I_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_real_i" type="hls::stream&lt;T>"/>
+                <param direction="IN" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="raw_data_im_i" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_real_data_o" type="hls::stream&lt;T>"/>
+                <param direction="OUT" isCPPdefinition="true"
+                    isConfig="false" isPassedByReference="true"
+                    name="filtered_im_data_o" type="hls::stream&lt;T>"/>
+            </loop>
+            <port kind="cfg_input" name="MODE"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="mad_R_i"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="std_R_i"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="mad_I_i"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="std_I_i"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_im_i"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_real_i"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="filtered_real_data_o"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="filtered_im_data_o"/>
+        </node>
+        <node id="Brd_Acq_Im" kind="broadcast">
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="input" name="in"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_0"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_1"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_2"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_3"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_4"/>
+        </node>
+        <node id="Brd_MAD_I" kind="broadcast">
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="in"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_0"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_1"/>
+        </node>
+        <node id="Brd_STD_I" kind="broadcast">
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port annotation="NONE" expr="N_SAMPLES" kind="input" name="in"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_0"/>
+            <port annotation="NONE" expr="N_SAMPLES"
+                kind="output" name="out_1"/>
+        </node>
+        <node id="Brd_Res_Im" kind="broadcast">
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="input" name="in"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_0"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_1"/>
+        </node>
+        <node id="Brd_Res_Real" kind="broadcast">
+            <port kind="cfg_input" name="N_BLOCKS"/>
+            <port kind="cfg_input" name="N_SAMPLES"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="input" name="in"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_0"/>
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="out_1"/>
+        </node>
+        <node id="raw_data_real_i" kind="src">
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="raw_data_real_i"/>
+        </node>
+        <node id="raw_data_im_i" kind="src">
+            <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
+                kind="output" name="raw_data_im_i"/>
+        </node>
+        <node id="raw_data_im_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im_o"/>
+        </node>
+        <node id="raw_data_real_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real_o"/>
+        </node>
+        <node id="mad_R_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="mad_R_o"/>
+        </node>
+        <node id="raw_data_real_1" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real_1"/>
+        </node>
+        <node id="std_R_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="std_R_o"/>
+        </node>
+        <node id="raw_data_im_1" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im_1"/>
+        </node>
+        <node id="mad_I_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="mad_I_o"/>
+        </node>
+        <node id="std_I_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="std_I_o"/>
+        </node>
+        <node id="filtered_im_0" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_0"/>
+        </node>
+        <node id="filtered_real_0" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_0"/>
+        </node>
+        <node id="filtered_im_1" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_1"/>
+        </node>
+        <node id="filtered_real_1" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_1"/>
+        </node>
+        <edge kind="fifo" source="raw_data_real_i"
+            sourceport="raw_data_real_i" target="Brd_Acq_Real"
+            targetport="in" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Real"
+            sourceport="out_0" target="raw_data_real_o"
+            targetport="raw_data_real_o" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Real"
+            sourceport="out_1" target="MAD_Computation"
+            targetport="raw_data_real_i" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Real"
+            sourceport="out_2" target="STD_Computation"
+            targetport="raw_data_real_i" type="double"/>
+        <edge kind="fifo" source="MAD_Computation"
+            sourceport="mad_R_o" target="Brd_MAD_R"
+            targetport="in" type="double"/>
+        <edge kind="fifo" source="Brd_MAD_R" sourceport="out_0"
+            target="mad_R_o" targetport="mad_R_o" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Real"
+            sourceport="out_3" target="raw_data_real_1"
+            targetport="raw_data_real_1" type="double"/>
+        <edge kind="fifo" source="STD_Computation"
+            sourceport="std_R_o" target="Brd_STD_R"
+            targetport="in" type="double"/>
+        <edge kind="fifo" source="Brd_STD_R" sourceport="out_1"
+            target="std_R_o" targetport="std_R_o" type="double"/>
+        <edge kind="fifo" source="Brd_MAD_R" sourceport="out_2"
+            target="RFI_Filter" targetport="mad_R_i" type="double"/>
+        <edge kind="fifo" source="Brd_STD_R" sourceport="out_2"
+            target="RFI_Filter" targetport="std_R_i" type="double"/>
+        <edge kind="fifo" source="RFI_Filter"
+            sourceport="filtered_real_data_o"
+            target="Brd_Res_Real" targetport="in" type="double"/>
+        <edge kind="fifo" source="raw_data_im_i"
+            sourceport="raw_data_im_i" target="Brd_Acq_Im"
+            targetport="in" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_0"
+            target="MAD_Computation" targetport="raw_data_im_i" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_1"
+            target="STD_Computation" targetport="raw_data_im_i" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_2"
+            target="raw_data_im_o" targetport="raw_data_im_o" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_3"
+            target="raw_data_im_1" targetport="raw_data_im_1" type="double"/>
+        <edge kind="fifo" source="MAD_Computation"
+            sourceport="mad_I_o" target="Brd_MAD_I"
+            targetport="in" type="double"/>
+        <edge kind="fifo" source="STD_Computation"
+            sourceport="std_I_o" target="Brd_STD_I"
+            targetport="in" type="double"/>
+        <edge kind="fifo" source="Brd_MAD_I" sourceport="out_0"
+            target="mad_I_o" targetport="mad_I_o" type="double"/>
+        <edge kind="fifo" source="Brd_MAD_I" sourceport="out_1"
+            target="RFI_Filter" targetport="mad_I_i" type="double"/>
+        <edge kind="fifo" source="Brd_STD_I" sourceport="out_0"
+            target="std_I_o" targetport="std_I_o" type="double"/>
+        <edge kind="fifo" source="Brd_STD_I" sourceport="out_1"
+            target="RFI_Filter" targetport="std_I_i" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_4"
+            target="RFI_Filter" targetport="raw_data_im_i" type="double"/>
+        <edge kind="fifo" source="Brd_Acq_Real"
+            sourceport="out_4" target="RFI_Filter"
+            targetport="raw_data_real_i" type="double"/>
+        <edge kind="fifo" source="RFI_Filter"
+            sourceport="filtered_im_data_o" target="Brd_Res_Im"
+            targetport="in" type="double"/>
+        <edge kind="fifo" source="Brd_Res_Im" sourceport="out_0"
+            target="filtered_im_1" targetport="filtered_im_1" type="double"/>
+        <edge kind="fifo" source="Brd_Res_Im" sourceport="out_1"
+            target="filtered_im_0" targetport="filtered_im_0" type="double"/>
+        <edge kind="fifo" source="Brd_Res_Real"
+            sourceport="out_0" target="filtered_real_1"
+            targetport="filtered_real_1" type="double"/>
+        <edge kind="fifo" source="Brd_Res_Real"
+            sourceport="out_1" target="filtered_real_0"
+            targetport="filtered_real_0" type="double"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_Acq_Real" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_Acq_Real" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="MODE" target="RFI_Filter" targetport="MODE"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="MAD_Computation" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="STD_Computation" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_MAD_R" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_STD_R" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_MAD_R" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_STD_R" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="RFI_Filter" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS" target="SIZE"/>
+        <edge kind="dependency" source="N_SAMPLES" target="SIZE"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_Acq_Im" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_Acq_Im" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="SIGMA"
+            target="MAD_Computation" targetport="SIGMA"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_MAD_I" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_MAD_I" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_STD_I" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_STD_I" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_Res_Im" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_Res_Im" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS"
+            target="Brd_Res_Real" targetport="N_BLOCKS"/>
+        <edge kind="dependency" source="N_SAMPLES"
+            target="Brd_Res_Real" targetport="N_SAMPLES"/>
+        <edge kind="dependency" source="N_BLOCKS" target="raw_data_real_i"/>
+        <edge kind="dependency" source="N_SAMPLES" target="raw_data_real_i"/>
+        <edge kind="dependency" source="N_BLOCKS" target="raw_data_im_i"/>
+        <edge kind="dependency" source="N_SAMPLES" target="raw_data_im_i"/>
+        <edge kind="dependency" source="SIZE" target="filtered_im_0"/>
+        <edge kind="dependency" source="SIZE" target="filtered_im_1"/>
+        <edge kind="dependency" source="SIZE" target="filtered_real_0"/>
+        <edge kind="dependency" source="SIZE" target="filtered_real_1"/>
+        <edge kind="dependency" source="SIZE" target="mad_I_o"/>
+        <edge kind="dependency" source="SIZE" target="mad_R_o"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_im_1"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_im_o"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_real_1"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_real_o"/>
+        <edge kind="dependency" source="SIZE" target="std_I_o"/>
+        <edge kind="dependency" source="SIZE" target="std_R_o"/>
+    </graph>
+</graphml>

@@ -56,7 +56,12 @@ You can figure out that there is multiple Code folder each one contains the gene
 - "Code1CoreX86" contain the generated files for ...
 
 
-### CODE EXECUTION :clapper:
+//### CODE EXECUTION :clapper:
+
+
+### TARGET :desktop_computer:
+#### CPU
+The CPU plateform used for example is my personnal computer 8 core x86 CPUs.
 
 Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
 And of course:
@@ -64,16 +69,27 @@ And of course:
 
 install GNUplot:
 >> sudo apt-get update
+
 >> sudo apt-get install gnuplot
 
+Open a terminal on a X86 of this project.
+e.g: Code1CoreX86
 
-### TARGET :desktop_computer:
+>> cmake .
 
-#### PYNQ Z2 
+>> make
+
+>> cd cmake-build-debug
+
+>> ./rfi
+
+#### FPGA: PYNQ Z2 
+The FPGA plateform used for example is a PYNQ Z2 board.
 >> Board setup see [Z2 setup](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html)
 
-##### Vitis
-Install Vitis: 
+The PREESM version when I build this project doesn't handle all FPGAs resource allocation. At this moment we just use preesm to handle memory and geenrate some c++ hls code then we use vitis to translate this code and perform the hardware synthesis. 
+
+Install some extra libraries: 
 >> $ sudo apt install libncurses5
 
 >> $ sudo apt install libtinfo5
@@ -103,6 +119,11 @@ Open a terminal on the Makefile folder
 >> VHLS
 
 In the case you've installed the patch [here](https://support.xilinx.com/s/article/76960?language=en_US).
+>> download, unzip the file in your /Xilinx folder
+>> in the case of permission
+>> check your permission : $ ls -l
+>> change ownership: $ sudo chown orenaud Xilinx/
+>> python patch.py
 
 Then you can :
 >>$ make clean
@@ -123,6 +144,9 @@ Your project appear.
 
 >> run > C syntesis
 
+At this step you should have generate 3 files in the generated folder:
 
-
+- The Jupyter notebook to run host_pynq_top_rfi.ipynb
+- The FPGA bitfile top_rfi.bit
+- The FPGA bitfile interface for PYNQ top_rfi.hw
 
