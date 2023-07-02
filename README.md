@@ -63,29 +63,30 @@ You can figure out that there is multiple Code folder each one contains the gene
 #### CPU
 The CPU plateform used for example is my personnal computer 8 core x86 CPUs.
 
-Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
-And of course:
->> sudo make install
-
-install GNUplot:
->> sudo apt-get update
-
->> sudo apt-get install gnuplot
-
-Open a terminal on a X86 of this project.
+>> - Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
+>> - And of course:
+>> $ sudo make install
+>> - install GNUplot:
+>> $ sudo apt-get update
+>> $ sudo apt-get install gnuplot
+>> - Open a terminal on a X86 of this project.
 e.g: Code1CoreX86
+>> $ cmake .
+>> $ make
+>> $ cd cmake-build-debug
+>> $ ./rfi
 
->> cmake .
-
->> make
-
->> cd cmake-build-debug
-
->> ./rfi
-
-#### FPGA: PYNQ Z2 
+#### FPGA 
 The FPGA plateform used for example is a PYNQ Z2 board.
 >> Board setup see [Z2 setup](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html)
+
+Assign a static IP adress:
+- Go to network connection parameter> Add connection
+- Select IPv4 > assign manual
+- adress: 192.168.2.1, mask:255.255.255.0, passerelle: 255.255.255.0
+
+check ping the board:
+>>ping 192.168.2.99
 
 The PREESM version when I build this project doesn't handle all FPGAs resource allocation. At this moment we just use preesm to handle memory and geenrate some c++ hls code then we use vitis to translate this code and perform the hardware synthesis. 
 
@@ -120,10 +121,20 @@ Open a terminal on the Makefile folder
 
 In the case you've installed the patch [here](https://support.xilinx.com/s/article/76960?language=en_US).
 >> download, unzip the file in your /Xilinx folder
->> in the case of permission
->> check your permission : $ ls -l
+
+Give you the permission to copy paste file in the Xilinx folder
+
 >> change ownership: $ sudo chown orenaud Xilinx/
->> python patch.py
+
+make sure that y2k22_patch is at the root of your Xilinx folder 
+>> python y2k22_patch/patch.py
+
+>> change ownership of Vitis_HLS--> Script: $ sudo chown orenaud Vitis_HlS/2021.2/common/scripts
+
+>> export LD_LIBRARY_PATH=$PWD/Vivado/2021.2/tps/lnx64/python-3.8.3/lib/
+     Vivado/2021.2/tps/lnx64/python-3.8.3/bin/python3 y2k22_patch/patch.py
+     
+make sure than the file "automg_patch_.." has been copied.
 
 Then you can :
 >>$ make clean
@@ -149,4 +160,5 @@ At this step you should have generate 3 files in the generated folder:
 - The Jupyter notebook to run host_pynq_top_rfi.ipynb
 - The FPGA bitfile top_rfi.bit
 - The FPGA bitfile interface for PYNQ top_rfi.hw
+
 
