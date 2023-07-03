@@ -65,100 +65,106 @@ The CPU plateform used for example is my personnal computer 8 core x86 CPUs.
 
 >> - Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
 >> - And of course:
+>>
 >> $ sudo make install
 >> - install GNUplot:
+>>
 >> $ sudo apt-get update
 >> $ sudo apt-get install gnuplot
 >> - Open a terminal on a X86 of this project.
 e.g: Code1CoreX86
+>>
 >> $ cmake .
+>>
 >> $ make
+>>
 >> $ cd cmake-build-debug
+>>
 >> $ ./rfi
 
 #### FPGA 
 The FPGA plateform used for example is a PYNQ Z2 board.
->> Board setup see [Z2 setup](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html)
+>> - Board setup see [Z2 setup](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html)
+>> - Assign a static IP adress:
+>>   1.  Go to network connection parameter> Add connection
+>>   1.  Select IPv4 > assign manual
+>>   1.  adress: 192.168.2.1, mask:255.255.255.0, passerelle: 255.255.255.0
+>> - Check ping the board:
+>>
+>>$ ping 192.168.2.99
 
-Assign a static IP adress:
-- Go to network connection parameter> Add connection
-- Select IPv4 > assign manual
-- adress: 192.168.2.1, mask:255.255.255.0, passerelle: 255.255.255.0
+The PREESM version when I build this project doesn't handle all FPGAs resource allocation. At this moment we just use preesm to handle memory and generate some c++ hls code then we use vitis to translate this code and perform the hardware synthesis. 
 
-check ping the board:
->>ping 192.168.2.99
-
-The PREESM version when I build this project doesn't handle all FPGAs resource allocation. At this moment we just use preesm to handle memory and geenrate some c++ hls code then we use vitis to translate this code and perform the hardware synthesis. 
-
-Install some extra libraries: 
+>> - Install some extra libraries: 
+>>
 >> $ sudo apt install libncurses5
-
+>>
 >> $ sudo apt install libtinfo5
-
+>>
 >> $ sudo apt install libncurses5-dev libncursesw5-dev
-
-Vitis download [v2021-2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2021-2.html)
-- Vitis Core Development Kit, 130 GB installation space, 70 GB permanent space
-- Remove Model Composer
-- Install FPGA SoC only (Zynq, UltraScale)
-
-Launch Vitis:
+>> - Vitis download [v2021-2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis/2021-2.html)
+>> - Vitis Core Development Kit, 130 GB installation space, 70 GB permanent space
+>> - Remove Model Composer
+>> - Install FPGA SoC only (Zynq, UltraScale)
+>> - Launch Vitis:
+>>
 >> $ source ~/Xilinx/Vitis_HLS/2021.2/settings64.sh
-
+>>
 >> $ vitis_hls
-
-Or create an alias in bashrc:
->> nano ~/.bashrc
-
-At the very bottom of the file:
+>> - Or create an alias in bashrc:
+>>
+>> $ nano ~/.bashrc
+>>
+>> At the very bottom of the file:
 >> alias VHLS='source ~/Xilinx/Vitis_HLS/2021.1/settings64.sh'
-
-close then save what you've done:
+>> - close then save what you've done:
+>>
 >> $ source ~/.bashrc
-
-Open a terminal on the Makefile folder
->> VHLS
-
-In the case you've installed the patch [here](https://support.xilinx.com/s/article/76960?language=en_US).
->> download, unzip the file in your /Xilinx folder
-
-Give you the permission to copy paste file in the Xilinx folder
-
->> change ownership: $ sudo chown orenaud Xilinx/
-
-make sure that y2k22_patch is at the root of your Xilinx folder 
->> python y2k22_patch/patch.py
-
->> change ownership of Vitis_HLS--> Script: $ sudo chown orenaud Vitis_HlS/2021.2/common/scripts
-
->> export LD_LIBRARY_PATH=$PWD/Vivado/2021.2/tps/lnx64/python-3.8.3/lib/
+>>
+>> - Open a terminal on the Makefile folder
+>>
+>> $ VHLS
+>> - In the case you've installed the patch [here](https://support.xilinx.com/s/article/76960?language=en_US).
+>>   1. download, unzip the file in your /Xilinx folder
+>>   1. Give you the permission to copy paste file in the Xilinx folder
+>>   1. change ownership: $ sudo chown orenaud Xilinx/
+>>   1. make sure that y2k22_patch is at the root of your Xilinx folder 
+>>
+>> $ python y2k22_patch/patch.py
+>>
+>> - change ownership of Vitis_HLS --> Script: 
+>>
+>> $ sudo chown orenaud Vitis_HlS/2021.2/common/scripts
+>>
+>> $ export LD_LIBRARY_PATH=$PWD/Vivado/2021.2/tps/lnx64/python-3.8.3/lib/
      Vivado/2021.2/tps/lnx64/python-3.8.3/bin/python3 y2k22_patch/patch.py
-     
-make sure than the file "automg_patch_.." has been copied.
-
-Then you can :
+>>     
+>> - make sure than the file "automg_patch_.." has been copied.
+>> - Add PYNQ-Z2 to Vivado boards:
+[...]
+>> - Then you can build the project:
+>>
 >>$ make clean
+>>
 >>$ make all
-
-Otherwise:
+>> - Otherwise:
+>>
 >>$ make top[...]
-
-Then lauch Vitis:
-
+>> - Then lauch Vitis:
+>>
 >> $ vitis_hls
-
-Open the Vitis project
-
->> File > open project > open folder top
-
-Your project appear.
-
->> run > C syntesis
-
-At this step you should have generate 3 files in the generated folder:
-
-- The Jupyter notebook to run host_pynq_top_rfi.ipynb
-- The FPGA bitfile top_rfi.bit
-- The FPGA bitfile interface for PYNQ top_rfi.hw
+>> - Open the Vitis project: File > open project > open folder top
+>> - Your project appear. run > C syntesis
+>> - At this step you should have generate 3 files in the generated folder:
+>>    1. The Jupyter notebook to run **host_pynq_top_rfi.ipynb**
+>>    1. The FPGA bitfile **top_rfi.bit**
+>>    1. The FPGA bitfile interface for **PYNQ top_rfi.hw**
+>> - browse on webpage: http://192.168.2.99 a jupiter notebook will appear
+>> - copy/paste these 3 files in the same folder
+>> - create a folder: new>folder
+>> - add files
+>>
+>> if '_xsrf' argument missing from POST ERROR, then logout
+>> - login: xilinx,mp: xilinx
 
 
