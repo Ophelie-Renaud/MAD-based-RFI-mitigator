@@ -27,7 +27,7 @@ Both filters aim to find a threshold and remove data points above this threshold
 
 Finally, the filtered real and imaginary parts are combined by taking their conjugates to reconstruct the complex numbers. These reconstructed complex numbers are then used to generate a new ".dada" file.
 
-![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/Pic/RFI_filter.png)
+![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/RFI_filter.png)
 
 ### PREESM PROJECT :gear:
 The present project is a PREESM project and contains folders with the name **Algo** for the algorithm model, **Archi** for the architecture model, **Scenarios** for the parameters and constraints of rapid prototyping, **Code** for the generated code, **Algo/generated** for the exported intermediate information, and **Workflows** for the different available rapid prototyping workflows.
