@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top_graph_top_rfi_C.cpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C.cpp"/>
+    <originFiles name="madCpt.hpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/include/madCpt.hpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

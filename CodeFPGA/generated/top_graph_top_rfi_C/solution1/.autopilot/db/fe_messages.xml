@@ -1,0 +1,12 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-3332" msg_severity="ERROR" msg_loc="../include/madCpt.hpp:112:9" msg_body="type 'hls::stream&lt;double&gt;' does not provide a subscript operator">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4230" msg_severity="INFO" msg_loc="top_graph_top_rfi_C.cpp:430:5" msg_body="in instantiation of function template specialization 'MADCpt&lt;2048, 3, double&gt;' requested here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-3332" msg_severity="ERROR" msg_loc="../include/madCpt.hpp:113:9" msg_body="type 'hls::stream&lt;double&gt;' does not provide a subscript operator">
+        <args/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,41 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/home/orenaud/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'orenaud' on host 'pc-eii26' (Linux_x86_64 version 5.19.0-46-generic) on Tue Jul 04 06:31:16 CEST 2023
+INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/orenaud/preesm2/RFI/CodeFPGA/generated'
+Sourcing Tcl script '/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project top_graph_top_rfi_C 
+INFO: [HLS 200-10] Opening project '/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C'.
+INFO: [HLS 200-1510] Running: set_top top_graph_top_rfi_C 
+INFO: [HLS 200-1510] Running: add_files ../include/madCpt.hpp 
+INFO: [HLS 200-10] Adding design file '../include/madCpt.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files top_graph_top_rfi_C.cpp -cflags -I../include 
+INFO: [HLS 200-10] Adding design file 'top_graph_top_rfi_C.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name top_graph_top_rfi_C top_graph_top_rfi_C 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] Analyzing design file 'top_graph_top_rfi_C.cpp' ... 
+ERROR: [HLS 207-3332] type 'hls::stream<double>' does not provide a subscript operator (../include/madCpt.hpp:112:9)
+INFO: [HLS 207-4230] in instantiation of function template specialization 'MADCpt<2048, 3, double>' requested here (top_graph_top_rfi_C.cpp:430:5)
+ERROR: [HLS 207-3332] type 'hls::stream<double>' does not provide a subscript operator (../include/madCpt.hpp:113:9)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0.97 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.6 seconds; current allocated memory: 0.000 MB.
+ 
+    while executing
+"source /home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1/csynth.tcl"
+    invoked from within
+"hls::main /home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 2.23 seconds. Total CPU system time: 0.47 seconds. Total elapsed time: 1.76 seconds; peak allocated memory: 1.029 GB.

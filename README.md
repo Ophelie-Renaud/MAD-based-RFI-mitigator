@@ -42,6 +42,8 @@ If you want to take advantage of this project
 >>     6. Click “Next”.
 >> Once these steps are completed, the unzipped project files can be accessed either from the “Package Explorer” view of Eclipse, or directly in the “Workspace” directory of eclipse (using your favorite browser).
 
+:warning: **warning**:  Download and extract the project close to your /home repository in order to prevent long path project issue.
+
 **Algo**: 
 - "top_rfi_c" refers to a dataflow graph described in C code that can only be deployed on a CPU.
 - "top_rfi_cplusplus" refers to a dataflow graph described in C++ code that can be deployed on CPU/GPU/FPGA.
@@ -55,8 +57,6 @@ The SCAPE folder contains the graph with the granularity adjusted for a specific
 You can figure out that there is multiple Code folder each one contains the generated code of a dedicated target and make file for the execution.
 - "Code1CoreX86" contain the generated files for ...
 
-
-//### CODE EXECUTION :clapper:
 
 
 ### TARGET :desktop_computer:
@@ -81,6 +81,7 @@ e.g: Code1CoreX86
 >> $ cd cmake-build-debug
 >>
 >> $ ./rfi
+:fireworks:
 
 #### FPGA 
 The FPGA plateform used for example is a PYNQ Z2 board.
@@ -138,7 +139,7 @@ The PREESM version when I build this project doesn't handle all FPGAs resource a
 >>
 >> $ export LD_LIBRARY_PATH=$PWD/Vivado/2021.2/tps/lnx64/python-3.8.3/lib/
      Vivado/2021.2/tps/lnx64/python-3.8.3/bin/python3 y2k22_patch/patch.py
->>     
+>>
 >> - make sure than the file "automg_patch_.." has been copied.
 >> - Add PYNQ-Z2 to Vivado boards:
 [...]
@@ -166,5 +167,7 @@ The PREESM version when I build this project doesn't handle all FPGAs resource a
 >>
 >> if '_xsrf' argument missing from POST ERROR, then logout
 >> - login: xilinx,mp: xilinx
+:fireworks:
 
+#### dual FPGA & CPU
 

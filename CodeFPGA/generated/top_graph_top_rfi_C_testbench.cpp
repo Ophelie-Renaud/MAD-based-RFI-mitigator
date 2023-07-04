@@ -47,21 +47,90 @@
 // Top function
 
 void top_graph_top_rfi_C(
-);
+  hls::stream<double> &raw_data_real_i_stream,
+  hls::stream<double> &raw_data_im_i_stream,
+  hls::stream<double> &raw_data_im_o_stream,
+  hls::stream<double> &raw_data_real_o_stream,
+  hls::stream<double> &mad_R_o_stream,
+  hls::stream<double> &raw_data_real_1_stream,
+  hls::stream<double> &std_R_o_stream,
+  hls::stream<double> &raw_data_im_1_stream,
+  hls::stream<double> &mad_I_o_stream,
+  hls::stream<double> &std_I_o_stream,
+  hls::stream<double> &filtered_im_0_stream,
+  hls::stream<double> &filtered_real_0_stream,
+  hls::stream<double> &filtered_im_1_stream,
+  hls::stream<double> &filtered_real_1_stream);
 
 
 int main() {
 
-	
+	  static hls::stream<double> raw_data_real_i_stream;
+  static hls::stream<double> raw_data_im_i_stream;
+  static hls::stream<double> raw_data_im_o_stream;
+  static hls::stream<double> raw_data_real_o_stream;
+  static hls::stream<double> mad_R_o_stream;
+  static hls::stream<double> raw_data_real_1_stream;
+  static hls::stream<double> std_R_o_stream;
+  static hls::stream<double> raw_data_im_1_stream;
+  static hls::stream<double> mad_I_o_stream;
+  static hls::stream<double> std_I_o_stream;
+  static hls::stream<double> filtered_im_0_stream;
+  static hls::stream<double> filtered_real_0_stream;
+  static hls::stream<double> filtered_im_1_stream;
+  static hls::stream<double> filtered_real_1_stream;
+
 
 	for (int i = 0; i < NB_ITERATIONS_COSIM; i++) {
 		// TODO initialize stream with application values
-		
+		  for(int i = 0; i < RATE_OF_RAW_DATA_REAL_I * FACTOR_OF_RAW_DATA_REAL_I; i++) {
+    raw_data_real_i_stream.write(0);
+  }
+  for(int i = 0; i < RATE_OF_RAW_DATA_IM_I * FACTOR_OF_RAW_DATA_IM_I; i++) {
+    raw_data_im_i_stream.write(0);
+  }
 
-		top_graph_top_rfi_C();
+
+		top_graph_top_rfi_C(raw_data_real_i_stream, raw_data_im_i_stream, raw_data_im_o_stream, raw_data_real_o_stream, mad_R_o_stream, raw_data_real_1_stream, std_R_o_stream, raw_data_im_1_stream, mad_I_o_stream, std_I_o_stream, filtered_im_0_stream, filtered_real_0_stream, filtered_im_1_stream, filtered_real_1_stream);
 
 		// TODO read and verify results
-		
+		  for(int i = 0; i < RATE_OF_RAW_DATA_IM_O * FACTOR_OF_RAW_DATA_IM_O; i++) {
+    raw_data_im_o_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_RAW_DATA_REAL_O * FACTOR_OF_RAW_DATA_REAL_O; i++) {
+    raw_data_real_o_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_MAD_R_O * FACTOR_OF_MAD_R_O; i++) {
+    mad_R_o_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_RAW_DATA_REAL_1 * FACTOR_OF_RAW_DATA_REAL_1; i++) {
+    raw_data_real_1_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_STD_R_O * FACTOR_OF_STD_R_O; i++) {
+    std_R_o_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_RAW_DATA_IM_1 * FACTOR_OF_RAW_DATA_IM_1; i++) {
+    raw_data_im_1_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_MAD_I_O * FACTOR_OF_MAD_I_O; i++) {
+    mad_I_o_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_STD_I_O * FACTOR_OF_STD_I_O; i++) {
+    std_I_o_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_FILTERED_IM_0 * FACTOR_OF_FILTERED_IM_0; i++) {
+    filtered_im_0_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_FILTERED_REAL_0 * FACTOR_OF_FILTERED_REAL_0; i++) {
+    filtered_real_0_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_FILTERED_IM_1 * FACTOR_OF_FILTERED_IM_1; i++) {
+    filtered_im_1_stream.read();
+  }
+  for(int i = 0; i < RATE_OF_FILTERED_REAL_1 * FACTOR_OF_FILTERED_REAL_1; i++) {
+    filtered_real_1_stream.read();
+  }
+
 	}
 }
 

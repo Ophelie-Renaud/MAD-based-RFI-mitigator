@@ -4,57 +4,32 @@
         <sizesAreInBit/>
     </flags>
     <files>
-        <algorithm url="/org.ietr.preesm.rfi/Algo/top_rfi_C++.pi"/>
+        <algorithm url="/org.ietr.preesm.rfi/Algo/multinode/sub1_rfi.pi"/>
         <architecture url="/org.ietr.preesm.gaussian-difference/Archi/PYNQ.slam"/>
         <codegenDirectory url="/org.ietr.preesm.rfi/CodeFPGA/generated"/>
     </files>
     <constraints excelUrl="">
         <constraintGroup>
             <operator name="Zynq"/>
-            <task name="top_rfi_C/Data_Acquisition"/>
-            <task name="top_rfi_C/Plot_RnI_Histo"/>
             <task name="top_rfi_C/MAD_Computation"/>
             <task name="top_rfi_C/STD_Computation"/>
-            <task name="top_rfi_C/Plot_Threshold"/>
             <task name="top_rfi_C/RFI_Filter"/>
-            <task name="top_rfi_C/Plot_Filtered_Data"/>
-            <task name="top_rfi_C/Data_Restitution"/>
             <task name="top_rfi_C"/>
         </constraintGroup>
     </constraints>
     <timings excelUrl="">
         <timing opname="FPGA" time="409600"
-            timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/Data_Acquisition"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/Data_Acquisition"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/Data_Restitution"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/Data_Restitution"/>
+            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/MAD_Computation"/>
         <timing opname="FPGA" time="409600"
             timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/MAD_Computation"/>
         <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/MAD_Computation"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/Plot_RnI_Histo"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/Plot_RnI_Histo"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/Plot_Filtered_Data"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/Plot_Filtered_Data"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/Plot_Threshold"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/Plot_Threshold"/>
+            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/RFI_Filter"/>
         <timing opname="FPGA" time="409600"
             timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/RFI_Filter"/>
         <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/RFI_Filter"/>
+            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/STD_Computation"/>
         <timing opname="FPGA" time="409600"
             timingtype="INITIATION_INTERVAL" vertexname="top_rfi_C/STD_Computation"/>
-        <timing opname="FPGA" time="409600"
-            timingtype="EXECUTION_TIME" vertexname="top_rfi_C/STD_Computation"/>
         <memcpyspeed opname="FPGA" setuptime="1" timeperunit="0.001"/>
     </timings>
     <simuParams>

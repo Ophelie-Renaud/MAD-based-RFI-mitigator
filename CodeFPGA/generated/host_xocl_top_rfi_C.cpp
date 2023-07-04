@@ -101,22 +101,64 @@ int main(int argc, char** argv) {
 
 
 // vectors containing interface elements
+  std::vector<double, aligned_allocator<double>> raw_data_real_i_vect(RATE_OF_RAW_DATA_REAL_I);
+  std::vector<double, aligned_allocator<double>> raw_data_im_i_vect(RATE_OF_RAW_DATA_IM_I);
+  std::vector<double, aligned_allocator<double>> raw_data_im_o_vect(RATE_OF_RAW_DATA_IM_O);
+  std::vector<double, aligned_allocator<double>> raw_data_real_o_vect(RATE_OF_RAW_DATA_REAL_O);
+  std::vector<double, aligned_allocator<double>> mad_R_o_vect(RATE_OF_MAD_R_O);
+  std::vector<double, aligned_allocator<double>> raw_data_real_1_vect(RATE_OF_RAW_DATA_REAL_1);
+  std::vector<double, aligned_allocator<double>> std_R_o_vect(RATE_OF_STD_R_O);
+  std::vector<double, aligned_allocator<double>> raw_data_im_1_vect(RATE_OF_RAW_DATA_IM_1);
+  std::vector<double, aligned_allocator<double>> mad_I_o_vect(RATE_OF_MAD_I_O);
+  std::vector<double, aligned_allocator<double>> std_I_o_vect(RATE_OF_STD_I_O);
+  std::vector<double, aligned_allocator<double>> filtered_im_0_vect(RATE_OF_FILTERED_IM_0);
+  std::vector<double, aligned_allocator<double>> filtered_real_0_vect(RATE_OF_FILTERED_REAL_0);
+  std::vector<double, aligned_allocator<double>> filtered_im_1_vect(RATE_OF_FILTERED_IM_1);
+  std::vector<double, aligned_allocator<double>> filtered_real_1_vect(RATE_OF_FILTERED_REAL_1);
 
 
 // buffers referencing interface elements
+  OCL_CHECK(err, cl::Buffer raw_data_real_i_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY, sizeof(double)*RATE_OF_RAW_DATA_REAL_I, raw_data_real_i_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_im_i_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY, sizeof(double)*RATE_OF_RAW_DATA_IM_I, raw_data_im_i_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_im_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_IM_O, raw_data_im_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_real_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_REAL_O, raw_data_real_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer mad_R_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_MAD_R_O, mad_R_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_real_1_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_REAL_1, raw_data_real_1_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer std_R_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_STD_R_O, std_R_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_im_1_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_IM_1, raw_data_im_1_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer mad_I_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_MAD_I_O, mad_I_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer std_I_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_STD_I_O, std_I_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_im_0_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_IM_0, filtered_im_0_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_real_0_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_REAL_0, filtered_real_0_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_im_1_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_IM_1, filtered_im_1_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_real_1_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_REAL_1, filtered_real_1_vect.data(), &err));
 
 
 // set kernel arguments
+  OCL_CHECK(err, err = krnl_mem_read.setArg(0, raw_data_real_i_buff));
+  OCL_CHECK(err, err = krnl_mem_read.setArg(2, raw_data_im_i_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(0, raw_data_im_o_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(2, raw_data_real_o_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(4, mad_R_o_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(6, raw_data_real_1_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(8, std_R_o_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(10, raw_data_im_1_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(12, mad_I_o_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(14, std_I_o_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(16, filtered_im_0_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(18, filtered_real_0_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(20, filtered_im_1_buff));
+  OCL_CHECK(err, err = krnl_mem_write.setArg(22, filtered_real_1_buff));
 // launch the OpenCL tasks
   std::cout << "Copying data..." << std::endl;
-  OCL_CHECK(err, err = q.enqueueMigrateMemObjects({}, 0));
+  OCL_CHECK(err, err = q.enqueueMigrateMemObjects({raw_data_real_i_buff, raw_data_im_i_buff}, 0));
   OCL_CHECK(err, err = q.finish());
   std::cout << "Launching kernels..." << std::endl;
   OCL_CHECK(err, err = q.enqueueTask(krnl_mem_read));
   OCL_CHECK(err, err = q.enqueueTask(krnl_mem_write));
   OCL_CHECK(err, err = q.finish());
   std::cout << "Getting results..." << std::endl;
-  OCL_CHECK(err, err = q.enqueueMigrateMemObjects({}, CL_MIGRATE_MEM_OBJECT_HOST));
+  OCL_CHECK(err, err = q.enqueueMigrateMemObjects({raw_data_im_o_buff, raw_data_real_o_buff, mad_R_o_buff, raw_data_real_1_buff, std_R_o_buff, raw_data_im_1_buff, mad_I_o_buff, std_I_o_buff, filtered_im_0_buff, filtered_real_0_buff, filtered_im_1_buff, filtered_real_1_buff}, CL_MIGRATE_MEM_OBJECT_HOST));
   OCL_CHECK(err, err = q.finish());
 
 
