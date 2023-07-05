@@ -3,9 +3,11 @@
 ### PROJECT :satellite:
 The aim of this project is to provide a method that allow the deployement of an application on several type of architecture. The type of architecture considered here are CPU/GPU/FPGA.
 
-The methode consist in describing an application with th Synchronous Dataflow (SDF) model then adapt it's granularity with the Scaling up of Cluster of Actor on the Processing Element (SCAPE) method [[1]](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
+The methode consist in describing an application with th Synchronous Dataflow (SDF) model, adapt it's granularity with the Scaling up of Cluster of Actor on the Processing Element (SCAPE) method [[1]](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf) [2] [3], then adjust the level of abstraction of the resulting code on the dedicated target [4]. A second method automatically deploys the same application on several target architectures for better computation-target consistency [5].
 
-A special code generation has to be implemented for each in order to make this project possible.
+The method is implemented in the [PREESM ](https://preesm.github.io/) rapid prototyping tool. The tool integrates dedicated resources allocation techniques for each target and aims to generalize it in once.
+The implementation of CPU-based resource allocation is the most advanced implementation in our tool, and the one we'd like to move towards for others target architectures.
+
 
 The use case to demonstrate the relevance of the method is a MAD-based RFI mitigator.
 
@@ -52,12 +54,20 @@ If you want to take advantage of this project
 The SCAPE folder contains the graph with the granularity adjusted for a specific target architecture. Please note that the automatic adaptation task for the graph is only available in the developer version of PREESM. However, the transformed graphs mentioned here are provided for your reference :grin:.
 - "top_rfi_scape_full_c" targets a single-core CPU architecture.
 - "top_rfi_scape_part_c" targets a multi-core CPU architecture, and the number of cores to be used needs to be specified in the parameter CORE.
-- "top_rfi_scape_full_cplusplus" targets a single-core CPU/GPU/FPGA architecture.
-- "top_rfi_scape_part_cplusplus" targets a multi-core CPU/GPU/FPGA architecture, and the number of cores to be used needs to be specified in the parameter CORE.
 
-**Code**
+
+**CPU-based workflow**:
+[TODO]
+
+**FPGA-based workflow**:
+[TODO]
+
+**Multinode CPU-based workflow**:
+[TODO]
+
+**Code**:
 You can figure out that there is multiple Code folder each one contains the generated code of a dedicated target and make file for the execution.
-- "Code1CoreX86" contain the generated files for ...
+e.g.:"Code[number of Processing element][Target type]" contain the generated files for the dedicated target.
 
 
 ### TARGET :desktop_computer:
@@ -158,7 +168,7 @@ The PREESM version when I build this project doesn't handle all FPGAs resource a
 >> - Open the Vitis project: File > open project > open folder top
 >> - Your project appear. run > C syntesis
 
-Have you ever seen such beautiful thing!!!
+Have you ever seen such beautiful thing!!! (Flow navigator > C synthesis > Reports & viewers > Dataflow Viewer)
 ![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/lifeisgood.png)
 
 >> - At this step you should have generate 3 files in the generated folder:
@@ -172,7 +182,49 @@ Have you ever seen such beautiful thing!!!
 >>
 >> if '_xsrf' argument missing from POST ERROR, then logout
 >> - login: xilinx,mp: xilinx
+
+As PREESM's application deployment on FPGAs exploits only their programmable cells, calculations linked to direct file reading/writing are replaced by interfaces. This means that, for the time being, these calculations are added manually to the Jupiter notebook file running on our PYNQ's Core dual Arm. Secton below provides solution for that.
+
+>> - Open host_pynq_top_rfi.ipynb in the editor
+>> - section TODO fill data copy/paste this:
+```
+filename = 'J1939_plus_2134_1152MHz.dada'
+headerSize = 4096
+printHeader = True
+hdr = {}
+fh = open(filename, 'rb')
+headerBuf = fh.read(headerSize)
+headerBuf = headerBuf.decode('utf-8')
+for line in headerBuf.split('\n'):
+    try:
+        k, v = line.split(None, 1) # splits each line in the header
+        hdr[k] = v # first part of each line in header is the key, other is the value for the dict
+    except ValueError:
+        pass
+
+if(printHeader == True):
+    print('HEADER INFO:')    
+    for key, val in hdr.items():
+        print(key, ':', val)
+```
+>> - section TODO check results copy/paste this:
+```
+oui oui
+```
+>> - run notebook
 :fireworks:
 
-#### dual FPGA & CPU
+#### FPGA & CPU
+[TODO]
 
+
+*References:*
+[[1] O. Renaud, D. Gageot, K. Desnos, J.-F. Nezan, SCAPE: HW-Aware Clustering of Dataflow Actors for Tunable Scheduling Complexity, IETR, 2023](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
+
+[2] O. Renaud, N. Haggui, K. Desnos, J.-F, Nezan. Automated Clustering and Pipelining of Dataflow Actors for Controlled Scheduling Complexity, IETR, 2023.
+
+[3]...
+
+[4] A. Honorat, M. Dardaillon. H Miomandre, J.-F, Nezan. Automated Buffer Sizing of Dataflow Applications in a High-Level Synthesis Workflow, IETR, 2023.
+
+[5] 
