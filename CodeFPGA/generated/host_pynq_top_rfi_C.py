@@ -16,15 +16,15 @@ RATE_OF_RAW_DATA_IM_I = 409600
 RATE_OF_RAW_DATA_IM_O = 409600
 RATE_OF_RAW_DATA_REAL_O = 409600
 RATE_OF_MAD_R_O = 409600
-RATE_OF_RAW_DATA_REAL_1 = 409600
+RATE_OF_RAW_DATA_REAL_1_O = 409600
 RATE_OF_STD_R_O = 409600
-RATE_OF_RAW_DATA_IM_1 = 409600
+RATE_OF_RAW_DATA_IM_1_O = 409600
 RATE_OF_MAD_I_O = 409600
 RATE_OF_STD_I_O = 409600
-RATE_OF_FILTERED_IM_0 = 409600
-RATE_OF_FILTERED_REAL_0 = 409600
-RATE_OF_FILTERED_IM_1 = 409600
-RATE_OF_FILTERED_REAL_1 = 409600
+RATE_OF_FILTERED_IM_0_O = 409600
+RATE_OF_FILTERED_REAL_0_O = 409600
+RATE_OF_FILTERED_IM_1_O = 409600
+RATE_OF_FILTERED_REAL_1_O = 409600
 
     
     
@@ -44,15 +44,15 @@ np.copyto(raw_data_im_i_buff, raw_data_im_i_vect)
 raw_data_im_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_O,), dtype=np.dtype('double'))
 raw_data_real_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_O,), dtype=np.dtype('double'))
 mad_R_o_buff = allocate(shape=(RATE_OF_MAD_R_O,), dtype=np.dtype('double'))
-raw_data_real_1_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_1,), dtype=np.dtype('double'))
+raw_data_real_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_1_O,), dtype=np.dtype('double'))
 std_R_o_buff = allocate(shape=(RATE_OF_STD_R_O,), dtype=np.dtype('double'))
-raw_data_im_1_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_1,), dtype=np.dtype('double'))
+raw_data_im_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_1_O,), dtype=np.dtype('double'))
 mad_I_o_buff = allocate(shape=(RATE_OF_MAD_I_O,), dtype=np.dtype('double'))
 std_I_o_buff = allocate(shape=(RATE_OF_STD_I_O,), dtype=np.dtype('double'))
-filtered_im_0_buff = allocate(shape=(RATE_OF_FILTERED_IM_0,), dtype=np.dtype('double'))
-filtered_real_0_buff = allocate(shape=(RATE_OF_FILTERED_REAL_0,), dtype=np.dtype('double'))
-filtered_im_1_buff = allocate(shape=(RATE_OF_FILTERED_IM_1,), dtype=np.dtype('double'))
-filtered_real_1_buff = allocate(shape=(RATE_OF_FILTERED_REAL_1,), dtype=np.dtype('double'))
+filtered_im_0_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_0_O,), dtype=np.dtype('double'))
+filtered_real_0_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_0_O,), dtype=np.dtype('double'))
+filtered_im_1_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_1_O,), dtype=np.dtype('double'))
+filtered_real_1_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_1_O,), dtype=np.dtype('double'))
 
 
         
@@ -62,15 +62,15 @@ mem_read.write(mem_read.register_map.raw_data_im_i_mem_1.address, raw_data_im_i_
 mem_write.write(mem_write.register_map.raw_data_im_o_mem_1.address, raw_data_im_o_buff.physical_address)
 mem_write.write(mem_write.register_map.raw_data_real_o_mem_1.address, raw_data_real_o_buff.physical_address)
 mem_write.write(mem_write.register_map.mad_R_o_mem_1.address, mad_R_o_buff.physical_address)
-mem_write.write(mem_write.register_map.raw_data_real_1_mem_1.address, raw_data_real_1_buff.physical_address)
+mem_write.write(mem_write.register_map.raw_data_real_1_o_mem_1.address, raw_data_real_1_o_buff.physical_address)
 mem_write.write(mem_write.register_map.std_R_o_mem_1.address, std_R_o_buff.physical_address)
-mem_write.write(mem_write.register_map.raw_data_im_1_mem_1.address, raw_data_im_1_buff.physical_address)
+mem_write.write(mem_write.register_map.raw_data_im_1_o_mem_1.address, raw_data_im_1_o_buff.physical_address)
 mem_write.write(mem_write.register_map.mad_I_o_mem_1.address, mad_I_o_buff.physical_address)
 mem_write.write(mem_write.register_map.std_I_o_mem_1.address, std_I_o_buff.physical_address)
-mem_write.write(mem_write.register_map.filtered_im_0_mem_1.address, filtered_im_0_buff.physical_address)
-mem_write.write(mem_write.register_map.filtered_real_0_mem_1.address, filtered_real_0_buff.physical_address)
-mem_write.write(mem_write.register_map.filtered_im_1_mem_1.address, filtered_im_1_buff.physical_address)
-mem_write.write(mem_write.register_map.filtered_real_1_mem_1.address, filtered_real_1_buff.physical_address)
+mem_write.write(mem_write.register_map.filtered_im_0_o_mem_1.address, filtered_im_0_o_buff.physical_address)
+mem_write.write(mem_write.register_map.filtered_real_0_o_mem_1.address, filtered_real_0_o_buff.physical_address)
+mem_write.write(mem_write.register_map.filtered_im_1_o_mem_1.address, filtered_im_1_o_buff.physical_address)
+mem_write.write(mem_write.register_map.filtered_real_1_o_mem_1.address, filtered_real_1_o_buff.physical_address)
 
 
 

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592344535">
+  <ports id="1" name="raw_data_real_i_stream" type="PortType" originalName="raw_data_real_i_stream" coreId="3621216858" bitwidth="64">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="2" name="raw_data_im_i_stream" type="PortType" originalName="raw_data_im_i_stream" coreId="52" bitwidth="64">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="raw_data_im_o_stream" type="PortType" originalName="raw_data_im_o_stream" coreId="54" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="4" name="raw_data_real_o_stream" type="PortType" originalName="raw_data_real_o_stream" coreId="2926570864" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="5" name="mad_R_o_stream" type="PortType" originalName="mad_R_o_stream" coreId="54" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="6" name="raw_data_real_1_o_stream" type="PortType" originalName="raw_data_real_1_o_stream" coreId="2479286464" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="7" name="std_R_o_stream" type="PortType" originalName="std_R_o_stream" coreId="2482739440" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="8" name="raw_data_im_1_o_stream" type="PortType" originalName="raw_data_im_1_o_stream" coreId="2482703024" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="9" name="mad_I_o_stream" type="PortType" originalName="mad_I_o_stream" coreId="2480064224" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="10" name="std_I_o_stream" type="PortType" originalName="std_I_o_stream" coreId="2478134048" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="11" name="filtered_im_0_o_stream" type="PortType" originalName="filtered_im_0_o_stream" coreId="2476825488" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="12" name="filtered_real_0_o_stream" type="PortType" originalName="filtered_real_0_o_stream" coreId="2481833728" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="13" name="filtered_im_1_o_stream" type="PortType" originalName="filtered_im_1_o_stream" coreId="2481242176" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="14" name="filtered_real_1_o_stream" type="PortType" originalName="filtered_real_1_o_stream" coreId="2480479712" bitwidth="64" direction="DirOut">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="121" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@ports.7"/>
+  <edges id="126" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="127" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@ports.3"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@ports.5"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@ports.4"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@ports.6"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@ports.8"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@ports.9"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@ports.13"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@ports.11"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.12"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@ports.10"/>
+  <edges id="155" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="156" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="157" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="158" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="159" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="160" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="161" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="162" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="163" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="164" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="165" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="166" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="167" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="168" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="169" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="170" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="171" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="172" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="173" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="174" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="175" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="176" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="177" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="178" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="179" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="180" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="181" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="182" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="183" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="184" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="185" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="186" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="187" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="188" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="189" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="190" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="191" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="192" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="193" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="194" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="195" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="196" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="197" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="198" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="937" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="938" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="939" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="940" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="941" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="942" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="943" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="944" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="945" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="946" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="947" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="948" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="949" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="950" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="951" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="952" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="953" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="954" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="383" RegionName="top_graph_top_rfi_C">
+    <basic_blocks id="118" name="top_graph_top_rfi_C" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="_ln206" lineNumber="206" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Acq_Im_U0" coreId="1872032161" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="206" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataInputObjs>raw_data_im_i_stream</dataInputObjs>
+        <dataOutputObjs>raw_data_im_o_stream</dataOutputObjs>
+        <dataOutputObjs>raw_data_im_1_o_stream</dataOutputObjs>
+        <constName>Brd_Acq_Im</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln207" lineNumber="207" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Acq_Real_U0" coreId="1330007625" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="207" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataInputObjs>raw_data_real_i_stream</dataInputObjs>
+        <dataOutputObjs>raw_data_real_o_stream</dataOutputObjs>
+        <dataOutputObjs>raw_data_real_1_o_stream</dataOutputObjs>
+        <constName>Brd_Acq_Real</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="_ln211" lineNumber="211" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="MADCpt_2048_3_double_U0" coreId="2480163360" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="211" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <constName>MADCpt_2048_3_double_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln218" lineNumber="218" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="STDCpt_2048_3_double_U0" coreId="2482259008" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="218" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <constName>STDCpt_2048_3_double_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln225" lineNumber="225" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_MAD_R_U0" coreId="2481834224" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="225" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataOutputObjs>mad_R_o_stream</dataOutputObjs>
+        <constName>Brd_MAD_R</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="_ln232" lineNumber="232" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_STD_R_U0" coreId="2482259008" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="232" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataOutputObjs>std_R_o_stream</dataOutputObjs>
+        <constName>Brd_STD_R</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="_ln239" lineNumber="239" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_MAD_I_U0" coreId="2482652560" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="239" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataOutputObjs>mad_I_o_stream</dataOutputObjs>
+        <constName>Brd_MAD_I</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="_ln246" lineNumber="246" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_STD_I_U0" coreId="1870766809" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="246" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataOutputObjs>std_I_o_stream</dataOutputObjs>
+        <constName>Brd_STD_I</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="_ln253" lineNumber="253" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="RFIFilter_0_2048_double_U0" coreId="539571767" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="253" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <constName>RFIFilter_0_2048_double_s</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="_ln257" lineNumber="257" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Res_Real_U0" coreId="2477448464" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="257" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataOutputObjs>filtered_real_1_o_stream</dataOutputObjs>
+        <dataOutputObjs>filtered_real_0_o_stream</dataOutputObjs>
+        <constName>Brd_Res_Real</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="_ln258" lineNumber="258" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Res_Im_U0" coreId="1873772571" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="258" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+        <dataOutputObjs>filtered_im_1_o_stream</dataOutputObjs>
+        <dataOutputObjs>filtered_im_0_o_stream</dataOutputObjs>
+        <constName>Brd_Res_Im</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="_ln259" lineNumber="259" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." coreId="2482165456" contextFuncName="top_graph_top_rfi_C" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="259" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="top_graph_top_rfi_C.cpp">
+        <validLinenumbers>206</validLinenumbers>
+        <validLinenumbers>207</validLinenumbers>
+        <validLinenumbers>211</validLinenumbers>
+        <validLinenumbers>218</validLinenumbers>
+        <validLinenumbers>225</validLinenumbers>
+        <validLinenumbers>232</validLinenumbers>
+        <validLinenumbers>239</validLinenumbers>
+        <validLinenumbers>246</validLinenumbers>
+        <validLinenumbers>253</validLinenumbers>
+        <validLinenumbers>257</validLinenumbers>
+        <validLinenumbers>258</validLinenumbers>
+        <validLinenumbers>259</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <moduleNodes realName="grp_Brd_MAD_I_fu_272">
+    <nodeIds>112</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Brd_STD_I_fu_282">
+    <nodeIds>113</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Brd_Acq_Im_fu_172">
+    <nodeIds>106</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Brd_Acq_Real_fu_188">
+    <nodeIds>107</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_MADCpt_2048_3_double_s_fu_204">
+    <nodeIds>108</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_RFIFilter_0_2048_double_s_fu_292">
+    <nodeIds>114</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_STDCpt_2048_3_double_s_fu_216">
+    <nodeIds>109</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Brd_Res_Im_fu_322">
+    <nodeIds>116</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Brd_STD_R_fu_262">
+    <nodeIds>111</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Brd_MAD_R_fu_252">
+    <nodeIds>110</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_Brd_Res_Real_fu_312">
+    <nodeIds>115</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_double_0_5_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_12_6_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_17_6_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_22_6_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_27_6_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_32_6_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_4_4_16_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_7_6_64_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V" portID="100">
+    <nodeIds>109</nodeIds>
+  </memoryPorts>
+  <ioPorts name="filtered_im_0_o_stream">
+    <contents name="call">
+      <nodeIds>116</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="filtered_im_1_o_stream">
+    <contents name="call">
+      <nodeIds>116</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="filtered_real_0_o_stream">
+    <contents name="call">
+      <nodeIds>115</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="filtered_real_1_o_stream">
+    <contents name="call">
+      <nodeIds>115</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mad_I_o_stream">
+    <contents name="call">
+      <nodeIds>112</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mad_R_o_stream">
+    <contents name="call">
+      <nodeIds>110</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="raw_data_im_1_o_stream">
+    <contents name="call">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="raw_data_im_i_stream">
+    <contents name="call">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="raw_data_im_o_stream">
+    <contents name="call">
+      <nodeIds>106</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="raw_data_real_1_o_stream">
+    <contents name="call">
+      <nodeIds>107</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="raw_data_real_i_stream">
+    <contents name="call">
+      <nodeIds>107</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="raw_data_real_o_stream">
+    <contents name="call">
+      <nodeIds>107</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="std_I_o_stream">
+    <contents name="call">
+      <nodeIds>113</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="std_R_o_stream">
+    <contents name="call">
+      <nodeIds>111</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1"/>
+    <states id="2">
+      <operations id="106" stage="2" latency="2"/>
+      <operations id="107" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="106" stage="1" latency="2"/>
+      <operations id="107" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="108" stage="2" latency="2"/>
+      <operations id="109" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="108" stage="1" latency="2"/>
+      <operations id="109" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="110" stage="2" latency="2"/>
+      <operations id="111" stage="2" latency="2"/>
+      <operations id="112" stage="2" latency="2"/>
+      <operations id="113" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="110" stage="1" latency="2"/>
+      <operations id="111" stage="1" latency="2"/>
+      <operations id="112" stage="1" latency="2"/>
+      <operations id="113" stage="1" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="114" stage="2" latency="2"/>
+    </states>
+    <states id="9">
+      <operations id="114" stage="1" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="115" stage="2" latency="2"/>
+      <operations id="116" stage="2" latency="2"/>
+    </states>
+    <states id="11">
+      <operations id="115" stage="1" latency="2"/>
+      <operations id="116" stage="1" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="top_graph_top_rfi_C" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="868460" mMaxLatency="-1" mIsDfPipe="true">
+      <basicBlocks>118</basicBlocks>
+      <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.4/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.5/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.6/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.7/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.9/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.10/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.0/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.1/@sink/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@channel_list.2/@sink/@inst">
+        <processe_list name="Brd_Acq_Im_U0" ssdmobj_id="106">
+          <pins>
+            <port name="raw_data_im_i_stream" type="SIOType" top_port_object_id="" top_port_object_id_reference="_129" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Im_U0" ssdmobj_id="106" object_id="_145"/>
+          </pins>
+          <pins>
+            <port name="raw_data_im_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_130" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Im_U0" ssdmobj_id="106" object_id="_145"/>
+          </pins>
+          <pins>
+            <port name="raw_data_im_1_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_135" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Im_U0" ssdmobj_id="106" object_id="_145"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Brd_Acq_Real_U0" ssdmobj_id="107">
+          <pins>
+            <port name="raw_data_real_i_stream" type="SIOType" top_port_object_id="" top_port_object_id_reference="_128" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Real_U0" ssdmobj_id="107" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="raw_data_real_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_131" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Real_U0" ssdmobj_id="107" object_id="_153"/>
+          </pins>
+          <pins>
+            <port name="raw_data_real_1_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_133" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Real_U0" ssdmobj_id="107" object_id="_153"/>
+          </pins>
+        </processe_list>
+        <processe_list name="MADCpt_2048_3_double_U0" ssdmobj_id="108"/>
+        <processe_list name="STDCpt_2048_3_double_U0" ssdmobj_id="109"/>
+        <processe_list name="Brd_MAD_R_U0" ssdmobj_id="110">
+          <pins>
+            <port name="mad_R_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_132" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_MAD_R_U0" ssdmobj_id="110" object_id="_163"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Brd_STD_R_U0" ssdmobj_id="111">
+          <pins>
+            <port name="std_R_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_134" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_STD_R_U0" ssdmobj_id="111" object_id="_167"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Brd_MAD_I_U0" ssdmobj_id="112">
+          <pins>
+            <port name="mad_I_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_136" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_MAD_I_U0" ssdmobj_id="112" object_id="_171"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Brd_STD_I_U0" ssdmobj_id="113">
+          <pins>
+            <port name="std_I_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_137" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_STD_I_U0" ssdmobj_id="113" object_id="_175"/>
+          </pins>
+        </processe_list>
+        <processe_list name="RFIFilter_0_2048_double_U0" ssdmobj_id="114"/>
+        <processe_list name="Brd_Res_Real_U0" ssdmobj_id="115">
+          <pins>
+            <port name="filtered_real_1_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_141" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Res_Real_U0" ssdmobj_id="115" object_id="_180"/>
+          </pins>
+          <pins>
+            <port name="filtered_real_0_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_139" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Res_Real_U0" ssdmobj_id="115" object_id="_180"/>
+          </pins>
+        </processe_list>
+        <processe_list name="Brd_Res_Im_U0" ssdmobj_id="116">
+          <pins>
+            <port name="filtered_im_1_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_140" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Res_Im_U0" ssdmobj_id="116" object_id="_186"/>
+          </pins>
+          <pins>
+            <port name="filtered_im_0_o_stream" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="_138" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Res_Im_U0" ssdmobj_id="116" object_id="_186"/>
+          </pins>
+        </processe_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i" ssdmobj_id="15">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Im_U0" ssdmobj_id="106" object_id="_145"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="MADCpt_2048_3_double_U0" ssdmobj_id="108" object_id="_194"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i" ssdmobj_id="16">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Im_U0" ssdmobj_id="106" object_id="_145"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="STDCpt_2048_3_double_U0" ssdmobj_id="109" object_id="_200"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="8156" bitwidth="64" suggested_type="0" suggested_depth="8156" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i" ssdmobj_id="17">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Im_U0" ssdmobj_id="106" object_id="_145"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i" ssdmobj_id="18">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Real_U0" ssdmobj_id="107" object_id="_153"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="MADCpt_2048_3_double_U0" ssdmobj_id="108" object_id="_194"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i" ssdmobj_id="19">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Real_U0" ssdmobj_id="107" object_id="_153"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="STDCpt_2048_3_double_U0" ssdmobj_id="109" object_id="_200"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="8156" bitwidth="64" suggested_type="0" suggested_depth="8156" name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i" ssdmobj_id="20">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Acq_Real_U0" ssdmobj_id="107" object_id="_153"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_MAD_Computation_mad_R_o_Brd_MAD_R_in" ssdmobj_id="21">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="MADCpt_2048_3_double_U0" ssdmobj_id="108" object_id="_194"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_MAD_R_U0" ssdmobj_id="110" object_id="_163"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_MAD_Computation_mad_I_o_Brd_MAD_I_in" ssdmobj_id="22">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="MADCpt_2048_3_double_U0" ssdmobj_id="108" object_id="_194"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_MAD_I_U0" ssdmobj_id="112" object_id="_171"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_STD_Computation_std_R_o_Brd_STD_R_in" ssdmobj_id="35">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="STDCpt_2048_3_double_U0" ssdmobj_id="109" object_id="_200"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_STD_R_U0" ssdmobj_id="111" object_id="_167"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_STD_Computation_std_I_o_Brd_STD_I_in" ssdmobj_id="36">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="STDCpt_2048_3_double_U0" ssdmobj_id="109" object_id="_200"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_STD_I_U0" ssdmobj_id="113" object_id="_175"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" ssdmobj_id="37">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_MAD_R_U0" ssdmobj_id="110" object_id="_163"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" ssdmobj_id="38">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_STD_R_U0" ssdmobj_id="111" object_id="_167"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i" ssdmobj_id="39">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_MAD_I_U0" ssdmobj_id="112" object_id="_171"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i" ssdmobj_id="40">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_STD_I_U0" ssdmobj_id="113" object_id="_175"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in" ssdmobj_id="41">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Res_Real_U0" ssdmobj_id="115" object_id="_180"/>
+          </sink>
+        </channel_list>
+        <channel_list depth="4078" bitwidth="64" suggested_type="0" suggested_depth="4078" name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in" ssdmobj_id="42">
+          <source>
+            <port name="in" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="RFIFilter_0_2048_double_U0" ssdmobj_id="114" object_id="_206"/>
+          </source>
+          <sink>
+            <port name="out" dir="DirOut" type="SIOType" top_port_object_id="" top_port_object_id_reference="" chan_object_id="" chan_object_id_reference=""/>
+            <inst name="Brd_Res_Im_U0" ssdmobj_id="116" object_id="_186"/>
+          </sink>
+        </channel_list>
+      </mDfPipe>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

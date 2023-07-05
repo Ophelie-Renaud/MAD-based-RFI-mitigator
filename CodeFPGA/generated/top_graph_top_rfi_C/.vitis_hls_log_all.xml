@@ -2,23 +2,14 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog>
-        <logs message="ERROR: [HLS 207-3332] type 'hls::stream&lt;double>' does not provide a subscript operator (../include/madCpt.hpp:113:9)" projectName="top_graph_top_rfi_C" solutionName="solution1" date="2023-07-04T06:31:18.168+0200"/>
-        <logs message="ERROR: [HLS 207-3332] type 'hls::stream&lt;double>' does not provide a subscript operator (../include/madCpt.hpp:112:9)" projectName="top_graph_top_rfi_C" solutionName="solution1" date="2023-07-04T06:31:18.160+0200"/>
-      </synLog>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <synLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="top_graph_top_rfi_C" solutionName="solution1" date="2023-07-05T23:25:42.641+0200" type="Warning"/>
+      </synLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

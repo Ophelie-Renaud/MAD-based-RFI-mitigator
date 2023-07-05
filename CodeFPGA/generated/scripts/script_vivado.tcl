@@ -72,11 +72,11 @@ connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/mad_R_o_stream] [get
 connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_mad_R_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/mad_R_o_stream]
 #apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_mad_R_o_stream/s_axis_aclk]
 
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_real_1_stream
-set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_real_1_stream]
-connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_real_1_stream] [get_bd_intf_pins axis_data_fifo_raw_data_real_1_stream/S_AXIS]
-connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_real_1_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_real_1_stream]
-#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_raw_data_real_1_stream/s_axis_aclk]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_real_1_o_stream
+set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_real_1_o_stream]
+connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_real_1_o_stream] [get_bd_intf_pins axis_data_fifo_raw_data_real_1_o_stream/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_real_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_real_1_o_stream]
+#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_raw_data_real_1_o_stream/s_axis_aclk]
 
 create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_std_R_o_stream
 set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_std_R_o_stream]
@@ -84,11 +84,11 @@ connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/std_R_o_stream] [get
 connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_std_R_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/std_R_o_stream]
 #apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_std_R_o_stream/s_axis_aclk]
 
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_im_1_stream
-set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_im_1_stream]
-connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_im_1_stream] [get_bd_intf_pins axis_data_fifo_raw_data_im_1_stream/S_AXIS]
-connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_im_1_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_im_1_stream]
-#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_raw_data_im_1_stream/s_axis_aclk]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_im_1_o_stream
+set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_im_1_o_stream]
+connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_im_1_o_stream] [get_bd_intf_pins axis_data_fifo_raw_data_im_1_o_stream/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_im_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_im_1_o_stream]
+#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_raw_data_im_1_o_stream/s_axis_aclk]
 
 create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_mad_I_o_stream
 set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_mad_I_o_stream]
@@ -102,29 +102,29 @@ connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/std_I_o_stream] [get
 connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_std_I_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/std_I_o_stream]
 #apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_std_I_o_stream/s_axis_aclk]
 
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_im_0_stream
-set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_im_0_stream]
-connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_im_0_stream] [get_bd_intf_pins axis_data_fifo_filtered_im_0_stream/S_AXIS]
-connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_im_0_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_im_0_stream]
-#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_im_0_stream/s_axis_aclk]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_im_0_o_stream
+set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_im_0_o_stream]
+connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_im_0_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_im_0_o_stream/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_im_0_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_im_0_o_stream]
+#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_im_0_o_stream/s_axis_aclk]
 
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_real_0_stream
-set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_real_0_stream]
-connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_real_0_stream] [get_bd_intf_pins axis_data_fifo_filtered_real_0_stream/S_AXIS]
-connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_real_0_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_real_0_stream]
-#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_real_0_stream/s_axis_aclk]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_real_0_o_stream
+set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_real_0_o_stream]
+connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_real_0_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_real_0_o_stream/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_real_0_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_real_0_o_stream]
+#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_real_0_o_stream/s_axis_aclk]
 
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_im_1_stream
-set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_im_1_stream]
-connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_im_1_stream] [get_bd_intf_pins axis_data_fifo_filtered_im_1_stream/S_AXIS]
-connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_im_1_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_im_1_stream]
-#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_im_1_stream/s_axis_aclk]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_im_1_o_stream
+set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_im_1_o_stream]
+connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_im_1_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_im_1_o_stream/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_im_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_im_1_o_stream]
+#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_im_1_o_stream/s_axis_aclk]
 
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_real_1_stream
-set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_real_1_stream]
-connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_real_1_stream] [get_bd_intf_pins axis_data_fifo_filtered_real_1_stream/S_AXIS]
-connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_real_1_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_real_1_stream]
-#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_real_1_stream/s_axis_aclk]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_real_1_o_stream
+set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_real_1_o_stream]
+connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_real_1_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_real_1_o_stream/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_real_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_real_1_o_stream]
+#apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_data_fifo_filtered_real_1_o_stream/s_axis_aclk]
 
 
 

@@ -70,6 +70,7 @@
                     name="std_I_o" type="hls::stream&lt;T>"/>
             </loop>
             <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="SIGMA"/>
             <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_real_i"/>
             <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_im_i"/>
             <port annotation="NONE" expr="N_SAMPLES"
@@ -207,14 +208,14 @@
         <node id="mad_R_o" kind="snk">
             <port annotation="NONE" expr="SIZE" kind="input" name="mad_R_o"/>
         </node>
-        <node id="raw_data_real_1" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real_1"/>
+        <node id="raw_data_real_1_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real_1_o"/>
         </node>
         <node id="std_R_o" kind="snk">
             <port annotation="NONE" expr="SIZE" kind="input" name="std_R_o"/>
         </node>
-        <node id="raw_data_im_1" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im_1"/>
+        <node id="raw_data_im_1_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im_1_o"/>
         </node>
         <node id="mad_I_o" kind="snk">
             <port annotation="NONE" expr="SIZE" kind="input" name="mad_I_o"/>
@@ -222,17 +223,17 @@
         <node id="std_I_o" kind="snk">
             <port annotation="NONE" expr="SIZE" kind="input" name="std_I_o"/>
         </node>
-        <node id="filtered_im_0" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_0"/>
+        <node id="filtered_im_0_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_0_o"/>
         </node>
-        <node id="filtered_real_0" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_0"/>
+        <node id="filtered_real_0_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_0_o"/>
         </node>
-        <node id="filtered_im_1" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_1"/>
+        <node id="filtered_im_1_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_1_o"/>
         </node>
-        <node id="filtered_real_1" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_1"/>
+        <node id="filtered_real_1_o" kind="snk">
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_1_o"/>
         </node>
         <edge kind="fifo" source="raw_data_real_i"
             sourceport="raw_data_real_i" target="Brd_Acq_Real"
@@ -252,8 +253,8 @@
         <edge kind="fifo" source="Brd_MAD_R" sourceport="out_0"
             target="mad_R_o" targetport="mad_R_o" type="double"/>
         <edge kind="fifo" source="Brd_Acq_Real"
-            sourceport="out_3" target="raw_data_real_1"
-            targetport="raw_data_real_1" type="double"/>
+            sourceport="out_3" target="raw_data_real_1_o"
+            targetport="raw_data_real_1_o" type="double"/>
         <edge kind="fifo" source="STD_Computation"
             sourceport="std_R_o" target="Brd_STD_R"
             targetport="in" type="double"/>
@@ -276,7 +277,7 @@
         <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_2"
             target="raw_data_im_o" targetport="raw_data_im_o" type="double"/>
         <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_3"
-            target="raw_data_im_1" targetport="raw_data_im_1" type="double"/>
+            target="raw_data_im_1_o" targetport="raw_data_im_1_o" type="double"/>
         <edge kind="fifo" source="MAD_Computation"
             sourceport="mad_I_o" target="Brd_MAD_I"
             targetport="in" type="double"/>
@@ -300,15 +301,15 @@
             sourceport="filtered_im_data_o" target="Brd_Res_Im"
             targetport="in" type="double"/>
         <edge kind="fifo" source="Brd_Res_Im" sourceport="out_0"
-            target="filtered_im_1" targetport="filtered_im_1" type="double"/>
+            target="filtered_im_1_o" targetport="filtered_im_1_o" type="double"/>
         <edge kind="fifo" source="Brd_Res_Im" sourceport="out_1"
-            target="filtered_im_0" targetport="filtered_im_0" type="double"/>
+            target="filtered_im_0_o" targetport="filtered_im_0_o" type="double"/>
         <edge kind="fifo" source="Brd_Res_Real"
-            sourceport="out_0" target="filtered_real_1"
-            targetport="filtered_real_1" type="double"/>
+            sourceport="out_0" target="filtered_real_1_o"
+            targetport="filtered_real_1_o" type="double"/>
         <edge kind="fifo" source="Brd_Res_Real"
-            sourceport="out_1" target="filtered_real_0"
-            targetport="filtered_real_0" type="double"/>
+            sourceport="out_1" target="filtered_real_0_o"
+            targetport="filtered_real_0_o" type="double"/>
         <edge kind="dependency" source="N_BLOCKS"
             target="Brd_Acq_Real" targetport="N_BLOCKS"/>
         <edge kind="dependency" source="N_SAMPLES"
@@ -356,17 +357,19 @@
         <edge kind="dependency" source="N_SAMPLES" target="raw_data_real_i"/>
         <edge kind="dependency" source="N_BLOCKS" target="raw_data_im_i"/>
         <edge kind="dependency" source="N_SAMPLES" target="raw_data_im_i"/>
-        <edge kind="dependency" source="SIZE" target="filtered_im_0"/>
-        <edge kind="dependency" source="SIZE" target="filtered_im_1"/>
-        <edge kind="dependency" source="SIZE" target="filtered_real_0"/>
-        <edge kind="dependency" source="SIZE" target="filtered_real_1"/>
+        <edge kind="dependency" source="SIZE" target="filtered_im_0_o"/>
+        <edge kind="dependency" source="SIZE" target="filtered_im_1_o"/>
+        <edge kind="dependency" source="SIZE" target="filtered_real_0_o"/>
+        <edge kind="dependency" source="SIZE" target="filtered_real_1_o"/>
         <edge kind="dependency" source="SIZE" target="mad_I_o"/>
         <edge kind="dependency" source="SIZE" target="mad_R_o"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_im_1"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_im_1_o"/>
         <edge kind="dependency" source="SIZE" target="raw_data_im_o"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_real_1"/>
+        <edge kind="dependency" source="SIZE" target="raw_data_real_1_o"/>
         <edge kind="dependency" source="SIZE" target="raw_data_real_o"/>
         <edge kind="dependency" source="SIZE" target="std_I_o"/>
         <edge kind="dependency" source="SIZE" target="std_R_o"/>
+        <edge kind="dependency" source="SIGMA"
+            target="STD_Computation" targetport="SIGMA"/>
     </graph>
 </graphml>

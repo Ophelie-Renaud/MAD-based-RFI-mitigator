@@ -157,6 +157,10 @@ The PREESM version when I build this project doesn't handle all FPGAs resource a
 >> $ vitis_hls
 >> - Open the Vitis project: File > open project > open folder top
 >> - Your project appear. run > C syntesis
+
+Have you ever seen such beautiful thing!!!
+![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/lifeisgood.png)
+
 >> - At this step you should have generate 3 files in the generated folder:
 >>    1. The Jupyter notebook to run **host_pynq_top_rfi.ipynb**
 >>    1. The FPGA bitfile **top_rfi.bit**

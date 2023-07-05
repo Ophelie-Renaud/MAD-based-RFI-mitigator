@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vitis HLS Report for 'Brd_Acq_Real'
+================================================================
+* Date:           Wed Jul  5 23:25:35 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        top_graph_top_rfi_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.507 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      6|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     77|    -|
+|Register         |        -|    -|       3|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       3|     83|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+----+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1     |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_io  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2     |        or|   0|  0|   2|           1|           1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |Total               |          |   0|  0|   6|           3|           3|
+    +--------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------------------------+----+-----------+-----+-----------+
+    |                               Name                              | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                                        |  14|          3|    1|          3|
+    |ap_done                                                          |   9|          2|    1|          2|
+    |raw_data_real_1_o_stream_TDATA_blk_n                             |   9|          2|    1|          2|
+    |raw_data_real_i_stream_TDATA_blk_n                               |   9|          2|    1|          2|
+    |raw_data_real_o_stream_TDATA_blk_n                               |   9|          2|    1|          2|
+    |stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_blk_n  |   9|          2|    1|          2|
+    |stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_blk_n  |   9|          2|    1|          2|
+    |stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_blk_n       |   9|          2|    1|          2|
+    +-----------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                            |  77|         17|    8|         17|
+    +-----------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  2|   0|    2|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  3|   0|    3|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|                             RTL Ports                            | Dir | Bits|  Protocol  |                       Source Object                       |    C Type    |
++------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+|ap_clk                                                            |   in|    1|  ap_ctrl_hs|                                               Brd_Acq_Real|  return value|
+|ap_rst                                                            |   in|    1|  ap_ctrl_hs|                                               Brd_Acq_Real|  return value|
+|ap_start                                                          |   in|    1|  ap_ctrl_hs|                                               Brd_Acq_Real|  return value|
+|ap_done                                                           |  out|    1|  ap_ctrl_hs|                                               Brd_Acq_Real|  return value|
+|ap_continue                                                       |   in|    1|  ap_ctrl_hs|                                               Brd_Acq_Real|  return value|
+|ap_idle                                                           |  out|    1|  ap_ctrl_hs|                                               Brd_Acq_Real|  return value|
+|ap_ready                                                          |  out|    1|  ap_ctrl_hs|                                               Brd_Acq_Real|  return value|
+|raw_data_real_i_stream_TDATA                                      |   in|   64|        axis|                                     raw_data_real_i_stream|       pointer|
+|raw_data_real_i_stream_TVALID                                     |   in|    1|        axis|                                     raw_data_real_i_stream|       pointer|
+|raw_data_real_i_stream_TREADY                                     |  out|    1|        axis|                                     raw_data_real_i_stream|       pointer|
+|raw_data_real_o_stream_TDATA                                      |  out|   64|        axis|                                     raw_data_real_o_stream|       pointer|
+|raw_data_real_o_stream_TVALID                                     |  out|    1|        axis|                                     raw_data_real_o_stream|       pointer|
+|raw_data_real_o_stream_TREADY                                     |   in|    1|        axis|                                     raw_data_real_o_stream|       pointer|
+|raw_data_real_1_o_stream_TDATA                                    |  out|   64|        axis|                                   raw_data_real_1_o_stream|       pointer|
+|raw_data_real_1_o_stream_TVALID                                   |  out|    1|        axis|                                   raw_data_real_1_o_stream|       pointer|
+|raw_data_real_1_o_stream_TREADY                                   |   in|    1|        axis|                                   raw_data_real_1_o_stream|       pointer|
+|stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din     |  out|   64|     ap_fifo|  stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_full_n  |   in|    1|     ap_fifo|  stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write   |  out|    1|     ap_fifo|  stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din     |  out|   64|     ap_fifo|  stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_full_n  |   in|    1|     ap_fifo|  stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write   |  out|    1|     ap_fifo|  stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din          |  out|   64|     ap_fifo|       stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n       |   in|    1|     ap_fifo|       stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write        |  out|    1|     ap_fifo|       stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i|       pointer|
++------------------------------------------------------------------+-----+-----+------------+-----------------------------------------------------------+--------------+
+

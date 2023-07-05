@@ -1,0 +1,782 @@
+
+
+================================================================
+== Vitis HLS Report for 'MADCpt_2048_3_double_s'
+================================================================
+* Date:           Wed Jul  5 23:25:24 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        top_graph_top_rfi_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.297 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  | max |   Type  |
+    +---------+---------+----------+----------+--------+-----+---------+
+    |   868460|        ?|  8.685 ms|         ?|  868460|    ?|       no|
+    +---------+---------+----------+----------+--------+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 65
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%sorted_list_R_i = alloca i64 1"   --->   Operation 66 'alloca' 'sorted_list_R_i' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%sorted_list_I_i = alloca i64 1"   --->   Operation 67 'alloca' 'sorted_list_I_i' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%RDRi = alloca i64 1" [../include/madCpt.hpp:81]   --->   Operation 68 'alloca' 'RDRi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%RDIi = alloca i64 1" [../include/madCpt.hpp:82]   --->   Operation 69 'alloca' 'RDIi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%deviation_list_R = alloca i64 1" [../include/madCpt.hpp:96]   --->   Operation 70 'alloca' 'deviation_list_R' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%deviation_list_I = alloca i64 1" [../include/madCpt.hpp:98]   --->   Operation 71 'alloca' 'deviation_list_I' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%sorted_deviated_list_R_i = alloca i64 1"   --->   Operation 72 'alloca' 'sorted_deviated_list_R_i' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%sorted_deviated_list_I_i = alloca i64 1"   --->   Operation 73 'alloca' 'sorted_deviated_list_I_i' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%MRo = alloca i64 1" [../include/madCpt.hpp:111]   --->   Operation 74 'alloca' 'MRo' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%MIo = alloca i64 1" [../include/madCpt.hpp:112]   --->   Operation 75 'alloca' 'MIo' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 76 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [2/2] (0.00ns)   --->   "%call_ln0 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_84_1, i64 %RDRi, i64 %RDIi, i64 %stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i, i64 %stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i"   --->   Operation 77 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 78 [1/2] (0.00ns)   --->   "%call_ln0 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_84_1, i64 %RDRi, i64 %RDIi, i64 %stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i, i64 %stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i"   --->   Operation 78 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.82>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%empty_322 = wait i32 @_ssdm_op_Wait"   --->   Operation 79 'wait' 'empty_322' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [2/2] (1.82ns)   --->   "%call_ln89 = call void @sortList, i64 %RDRi, i64 %sorted_list_R_i" [../include/madCpt.hpp:89]   --->   Operation 80 'call' 'call_ln89' <Predicate = true> <Delay = 1.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 81 [2/2] (1.82ns)   --->   "%call_ln90 = call void @sortList, i64 %RDIi, i64 %sorted_list_I_i" [../include/madCpt.hpp:90]   --->   Operation 81 'call' 'call_ln90' <Predicate = true> <Delay = 1.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 82 [1/2] (0.00ns)   --->   "%call_ln89 = call void @sortList, i64 %RDRi, i64 %sorted_list_R_i" [../include/madCpt.hpp:89]   --->   Operation 82 'call' 'call_ln89' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 83 [1/2] (0.00ns)   --->   "%call_ln90 = call void @sortList, i64 %RDIi, i64 %sorted_list_I_i" [../include/madCpt.hpp:90]   --->   Operation 83 'call' 'call_ln90' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%sorted_list_R_i_addr = getelementptr i64 %sorted_list_R_i, i64 0, i64 1023" [../include/madCpt.hpp:57]   --->   Operation 84 'getelementptr' 'sorted_list_R_i_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [2/2] (3.25ns)   --->   "%sorted_list_R_i_load = load i11 %sorted_list_R_i_addr" [../include/madCpt.hpp:57]   --->   Operation 85 'load' 'sorted_list_R_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%sorted_list_R_i_addr_1 = getelementptr i64 %sorted_list_R_i, i64 0, i64 1024" [../include/madCpt.hpp:57]   --->   Operation 86 'getelementptr' 'sorted_list_R_i_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [2/2] (3.25ns)   --->   "%sorted_list_R_i_load_1 = load i11 %sorted_list_R_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 87 'load' 'sorted_list_R_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%sorted_list_I_i_addr = getelementptr i64 %sorted_list_I_i, i64 0, i64 1023" [../include/madCpt.hpp:57]   --->   Operation 88 'getelementptr' 'sorted_list_I_i_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 89 [2/2] (3.25ns)   --->   "%sorted_list_I_i_load = load i11 %sorted_list_I_i_addr" [../include/madCpt.hpp:57]   --->   Operation 89 'load' 'sorted_list_I_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%sorted_list_I_i_addr_1 = getelementptr i64 %sorted_list_I_i, i64 0, i64 1024" [../include/madCpt.hpp:57]   --->   Operation 90 'getelementptr' 'sorted_list_I_i_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 91 [2/2] (3.25ns)   --->   "%sorted_list_I_i_load_1 = load i11 %sorted_list_I_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 91 'load' 'sorted_list_I_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+
+State 6 <SV = 5> <Delay = 3.25>
+ST_6 : Operation 92 [1/2] (3.25ns)   --->   "%sorted_list_R_i_load = load i11 %sorted_list_R_i_addr" [../include/madCpt.hpp:57]   --->   Operation 92 'load' 'sorted_list_R_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_6 : Operation 93 [1/2] (3.25ns)   --->   "%sorted_list_R_i_load_1 = load i11 %sorted_list_R_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 93 'load' 'sorted_list_R_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_6 : Operation 94 [1/2] (3.25ns)   --->   "%sorted_list_I_i_load = load i11 %sorted_list_I_i_addr" [../include/madCpt.hpp:57]   --->   Operation 94 'load' 'sorted_list_I_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_6 : Operation 95 [1/2] (3.25ns)   --->   "%sorted_list_I_i_load_1 = load i11 %sorted_list_I_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 95 'load' 'sorted_list_I_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+
+State 7 <SV = 6> <Delay = 7.29>
+ST_7 : Operation 96 [7/7] (7.29ns)   --->   "%add_i_i = dadd i64 %sorted_list_R_i_load, i64 %sorted_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 96 'dadd' 'add_i_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 97 [7/7] (7.29ns)   --->   "%add_i9_i = dadd i64 %sorted_list_I_i_load, i64 %sorted_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 97 'dadd' 'add_i9_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.29>
+ST_8 : Operation 98 [6/7] (7.29ns)   --->   "%add_i_i = dadd i64 %sorted_list_R_i_load, i64 %sorted_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 98 'dadd' 'add_i_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 99 [6/7] (7.29ns)   --->   "%add_i9_i = dadd i64 %sorted_list_I_i_load, i64 %sorted_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 99 'dadd' 'add_i9_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.29>
+ST_9 : Operation 100 [5/7] (7.29ns)   --->   "%add_i_i = dadd i64 %sorted_list_R_i_load, i64 %sorted_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 100 'dadd' 'add_i_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 101 [5/7] (7.29ns)   --->   "%add_i9_i = dadd i64 %sorted_list_I_i_load, i64 %sorted_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 101 'dadd' 'add_i9_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.29>
+ST_10 : Operation 102 [4/7] (7.29ns)   --->   "%add_i_i = dadd i64 %sorted_list_R_i_load, i64 %sorted_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 102 'dadd' 'add_i_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 103 [4/7] (7.29ns)   --->   "%add_i9_i = dadd i64 %sorted_list_I_i_load, i64 %sorted_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 103 'dadd' 'add_i9_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.29>
+ST_11 : Operation 104 [3/7] (7.29ns)   --->   "%add_i_i = dadd i64 %sorted_list_R_i_load, i64 %sorted_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 104 'dadd' 'add_i_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 105 [3/7] (7.29ns)   --->   "%add_i9_i = dadd i64 %sorted_list_I_i_load, i64 %sorted_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 105 'dadd' 'add_i9_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.29>
+ST_12 : Operation 106 [2/7] (7.29ns)   --->   "%add_i_i = dadd i64 %sorted_list_R_i_load, i64 %sorted_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 106 'dadd' 'add_i_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 107 [2/7] (7.29ns)   --->   "%add_i9_i = dadd i64 %sorted_list_I_i_load, i64 %sorted_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 107 'dadd' 'add_i9_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.29>
+ST_13 : Operation 108 [1/7] (7.29ns)   --->   "%add_i_i = dadd i64 %sorted_list_R_i_load, i64 %sorted_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 108 'dadd' 'add_i_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 109 [1/7] (7.29ns)   --->   "%add_i9_i = dadd i64 %sorted_list_I_i_load, i64 %sorted_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 109 'dadd' 'add_i9_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.71>
+ST_14 : Operation 110 [7/7] (6.71ns)   --->   "%div4_i_i = dmul i64 %add_i_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 110 'dmul' 'div4_i_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 111 [7/7] (6.71ns)   --->   "%div4_i1_i = dmul i64 %add_i9_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 111 'dmul' 'div4_i1_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.71>
+ST_15 : Operation 112 [6/7] (6.71ns)   --->   "%div4_i_i = dmul i64 %add_i_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 112 'dmul' 'div4_i_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 113 [6/7] (6.71ns)   --->   "%div4_i1_i = dmul i64 %add_i9_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 113 'dmul' 'div4_i1_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.71>
+ST_16 : Operation 114 [5/7] (6.71ns)   --->   "%div4_i_i = dmul i64 %add_i_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 114 'dmul' 'div4_i_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 115 [5/7] (6.71ns)   --->   "%div4_i1_i = dmul i64 %add_i9_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 115 'dmul' 'div4_i1_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.71>
+ST_17 : Operation 116 [4/7] (6.71ns)   --->   "%div4_i_i = dmul i64 %add_i_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 116 'dmul' 'div4_i_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 117 [4/7] (6.71ns)   --->   "%div4_i1_i = dmul i64 %add_i9_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 117 'dmul' 'div4_i1_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.71>
+ST_18 : Operation 118 [3/7] (6.71ns)   --->   "%div4_i_i = dmul i64 %add_i_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 118 'dmul' 'div4_i_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 119 [3/7] (6.71ns)   --->   "%div4_i1_i = dmul i64 %add_i9_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 119 'dmul' 'div4_i1_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 6.71>
+ST_19 : Operation 120 [2/7] (6.71ns)   --->   "%div4_i_i = dmul i64 %add_i_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 120 'dmul' 'div4_i_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 121 [2/7] (6.71ns)   --->   "%div4_i1_i = dmul i64 %add_i9_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 121 'dmul' 'div4_i1_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 6.71>
+ST_20 : Operation 122 [1/7] (6.71ns)   --->   "%div4_i_i = dmul i64 %add_i_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 122 'dmul' 'div4_i_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 123 [1/7] (6.71ns)   --->   "%div4_i1_i = dmul i64 %add_i9_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 123 'dmul' 'div4_i1_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 5.20>
+ST_21 : Operation 124 [2/2] (5.20ns)   --->   "%median = fptrunc i64 %div4_i_i" [../include/madCpt.hpp:57]   --->   Operation 124 'fptrunc' 'median' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 125 [2/2] (5.20ns)   --->   "%median_1_i = fptrunc i64 %div4_i1_i" [../include/madCpt.hpp:57]   --->   Operation 125 'fptrunc' 'median_1_i' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 5.20>
+ST_22 : Operation 126 [1/2] (5.20ns)   --->   "%median = fptrunc i64 %div4_i_i" [../include/madCpt.hpp:57]   --->   Operation 126 'fptrunc' 'median' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 127 [1/2] (5.20ns)   --->   "%median_1_i = fptrunc i64 %div4_i1_i" [../include/madCpt.hpp:57]   --->   Operation 127 'fptrunc' 'median_1_i' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 4.43>
+ST_23 : Operation 128 [2/2] (4.43ns)   --->   "%median_R = fpext i32 %median" [../include/madCpt.hpp:58]   --->   Operation 128 'fpext' 'median_R' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 129 [2/2] (4.43ns)   --->   "%median_I_i = fpext i32 %median_1_i" [../include/madCpt.hpp:58]   --->   Operation 129 'fpext' 'median_I_i' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 4.43>
+ST_24 : Operation 130 [1/2] (4.43ns)   --->   "%median_R = fpext i32 %median" [../include/madCpt.hpp:58]   --->   Operation 130 'fpext' 'median_R' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_24 : Operation 131 [2/2] (0.00ns)   --->   "%call_ln58 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_69_1, i64 %sorted_list_R_i, i64 %median_R, i64 %deviation_list_R" [../include/madCpt.hpp:58]   --->   Operation 131 'call' 'call_ln58' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 132 [1/2] (4.43ns)   --->   "%median_I_i = fpext i32 %median_1_i" [../include/madCpt.hpp:58]   --->   Operation 132 'fpext' 'median_I_i' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_24 : Operation 133 [2/2] (0.00ns)   --->   "%call_ln58 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_69_115, i64 %sorted_list_I_i, i64 %median_I_i, i64 %deviation_list_I" [../include/madCpt.hpp:58]   --->   Operation 133 'call' 'call_ln58' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 0.00>
+ST_25 : Operation 134 [1/2] (0.00ns)   --->   "%call_ln58 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_69_1, i64 %sorted_list_R_i, i64 %median_R, i64 %deviation_list_R" [../include/madCpt.hpp:58]   --->   Operation 134 'call' 'call_ln58' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 135 [1/2] (0.00ns)   --->   "%call_ln58 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_69_115, i64 %sorted_list_I_i, i64 %median_I_i, i64 %deviation_list_I" [../include/madCpt.hpp:58]   --->   Operation 135 'call' 'call_ln58' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 1.82>
+ST_26 : Operation 136 [2/2] (1.82ns)   --->   "%call_ln103 = call void @sortList, i64 %deviation_list_R, i64 %sorted_deviated_list_R_i" [../include/madCpt.hpp:103]   --->   Operation 136 'call' 'call_ln103' <Predicate = true> <Delay = 1.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_26 : Operation 137 [2/2] (1.82ns)   --->   "%call_ln105 = call void @sortList, i64 %deviation_list_I, i64 %sorted_deviated_list_I_i" [../include/madCpt.hpp:105]   --->   Operation 137 'call' 'call_ln105' <Predicate = true> <Delay = 1.82> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 0.00>
+ST_27 : Operation 138 [1/2] (0.00ns)   --->   "%call_ln103 = call void @sortList, i64 %deviation_list_R, i64 %sorted_deviated_list_R_i" [../include/madCpt.hpp:103]   --->   Operation 138 'call' 'call_ln103' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_27 : Operation 139 [1/2] (0.00ns)   --->   "%call_ln105 = call void @sortList, i64 %deviation_list_I, i64 %sorted_deviated_list_I_i" [../include/madCpt.hpp:105]   --->   Operation 139 'call' 'call_ln105' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 3.25>
+ST_28 : Operation 140 [1/1] (0.00ns)   --->   "%sorted_deviated_list_R_i_addr = getelementptr i64 %sorted_deviated_list_R_i, i64 0, i64 1023" [../include/madCpt.hpp:57]   --->   Operation 140 'getelementptr' 'sorted_deviated_list_R_i_addr' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 141 [2/2] (3.25ns)   --->   "%sorted_deviated_list_R_i_load = load i11 %sorted_deviated_list_R_i_addr" [../include/madCpt.hpp:57]   --->   Operation 141 'load' 'sorted_deviated_list_R_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_28 : Operation 142 [1/1] (0.00ns)   --->   "%sorted_deviated_list_R_i_addr_1 = getelementptr i64 %sorted_deviated_list_R_i, i64 0, i64 1024" [../include/madCpt.hpp:57]   --->   Operation 142 'getelementptr' 'sorted_deviated_list_R_i_addr_1' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 143 [2/2] (3.25ns)   --->   "%sorted_deviated_list_R_i_load_1 = load i11 %sorted_deviated_list_R_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 143 'load' 'sorted_deviated_list_R_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_28 : Operation 144 [1/1] (0.00ns)   --->   "%sorted_deviated_list_I_i_addr = getelementptr i64 %sorted_deviated_list_I_i, i64 0, i64 1023" [../include/madCpt.hpp:57]   --->   Operation 144 'getelementptr' 'sorted_deviated_list_I_i_addr' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 145 [2/2] (3.25ns)   --->   "%sorted_deviated_list_I_i_load = load i11 %sorted_deviated_list_I_i_addr" [../include/madCpt.hpp:57]   --->   Operation 145 'load' 'sorted_deviated_list_I_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_28 : Operation 146 [1/1] (0.00ns)   --->   "%sorted_deviated_list_I_i_addr_1 = getelementptr i64 %sorted_deviated_list_I_i, i64 0, i64 1024" [../include/madCpt.hpp:57]   --->   Operation 146 'getelementptr' 'sorted_deviated_list_I_i_addr_1' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 147 [2/2] (3.25ns)   --->   "%sorted_deviated_list_I_i_load_1 = load i11 %sorted_deviated_list_I_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 147 'load' 'sorted_deviated_list_I_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+
+State 29 <SV = 28> <Delay = 3.25>
+ST_29 : Operation 148 [1/2] (3.25ns)   --->   "%sorted_deviated_list_R_i_load = load i11 %sorted_deviated_list_R_i_addr" [../include/madCpt.hpp:57]   --->   Operation 148 'load' 'sorted_deviated_list_R_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_29 : Operation 149 [1/2] (3.25ns)   --->   "%sorted_deviated_list_R_i_load_1 = load i11 %sorted_deviated_list_R_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 149 'load' 'sorted_deviated_list_R_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_29 : Operation 150 [1/2] (3.25ns)   --->   "%sorted_deviated_list_I_i_load = load i11 %sorted_deviated_list_I_i_addr" [../include/madCpt.hpp:57]   --->   Operation 150 'load' 'sorted_deviated_list_I_i_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+ST_29 : Operation 151 [1/2] (3.25ns)   --->   "%sorted_deviated_list_I_i_load_1 = load i11 %sorted_deviated_list_I_i_addr_1" [../include/madCpt.hpp:57]   --->   Operation 151 'load' 'sorted_deviated_list_I_i_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 64> <Depth = 2048> <RAM>
+
+State 30 <SV = 29> <Delay = 7.29>
+ST_30 : Operation 152 [7/7] (7.29ns)   --->   "%add_i1_i = dadd i64 %sorted_deviated_list_R_i_load, i64 %sorted_deviated_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 152 'dadd' 'add_i1_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 153 [7/7] (7.29ns)   --->   "%add_i2_i = dadd i64 %sorted_deviated_list_I_i_load, i64 %sorted_deviated_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 153 'dadd' 'add_i2_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 7.29>
+ST_31 : Operation 154 [6/7] (7.29ns)   --->   "%add_i1_i = dadd i64 %sorted_deviated_list_R_i_load, i64 %sorted_deviated_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 154 'dadd' 'add_i1_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 155 [6/7] (7.29ns)   --->   "%add_i2_i = dadd i64 %sorted_deviated_list_I_i_load, i64 %sorted_deviated_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 155 'dadd' 'add_i2_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 7.29>
+ST_32 : Operation 156 [5/7] (7.29ns)   --->   "%add_i1_i = dadd i64 %sorted_deviated_list_R_i_load, i64 %sorted_deviated_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 156 'dadd' 'add_i1_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 157 [5/7] (7.29ns)   --->   "%add_i2_i = dadd i64 %sorted_deviated_list_I_i_load, i64 %sorted_deviated_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 157 'dadd' 'add_i2_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 7.29>
+ST_33 : Operation 158 [4/7] (7.29ns)   --->   "%add_i1_i = dadd i64 %sorted_deviated_list_R_i_load, i64 %sorted_deviated_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 158 'dadd' 'add_i1_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 159 [4/7] (7.29ns)   --->   "%add_i2_i = dadd i64 %sorted_deviated_list_I_i_load, i64 %sorted_deviated_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 159 'dadd' 'add_i2_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 7.29>
+ST_34 : Operation 160 [3/7] (7.29ns)   --->   "%add_i1_i = dadd i64 %sorted_deviated_list_R_i_load, i64 %sorted_deviated_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 160 'dadd' 'add_i1_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 161 [3/7] (7.29ns)   --->   "%add_i2_i = dadd i64 %sorted_deviated_list_I_i_load, i64 %sorted_deviated_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 161 'dadd' 'add_i2_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 7.29>
+ST_35 : Operation 162 [2/7] (7.29ns)   --->   "%add_i1_i = dadd i64 %sorted_deviated_list_R_i_load, i64 %sorted_deviated_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 162 'dadd' 'add_i1_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 163 [2/7] (7.29ns)   --->   "%add_i2_i = dadd i64 %sorted_deviated_list_I_i_load, i64 %sorted_deviated_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 163 'dadd' 'add_i2_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 7.29>
+ST_36 : Operation 164 [1/7] (7.29ns)   --->   "%add_i1_i = dadd i64 %sorted_deviated_list_R_i_load, i64 %sorted_deviated_list_R_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 164 'dadd' 'add_i1_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 165 [1/7] (7.29ns)   --->   "%add_i2_i = dadd i64 %sorted_deviated_list_I_i_load, i64 %sorted_deviated_list_I_i_load_1" [../include/madCpt.hpp:57]   --->   Operation 165 'dadd' 'add_i2_i' <Predicate = true> <Delay = 7.29> <CoreInst = "DAddSub_fulldsp">   --->   Core 37 'DAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 7.29> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 6.71>
+ST_37 : Operation 166 [7/7] (6.71ns)   --->   "%div4_i2_i = dmul i64 %add_i1_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 166 'dmul' 'div4_i2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 167 [7/7] (6.71ns)   --->   "%div4_i3_i = dmul i64 %add_i2_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 167 'dmul' 'div4_i3_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 6.71>
+ST_38 : Operation 168 [6/7] (6.71ns)   --->   "%div4_i2_i = dmul i64 %add_i1_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 168 'dmul' 'div4_i2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 169 [6/7] (6.71ns)   --->   "%div4_i3_i = dmul i64 %add_i2_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 169 'dmul' 'div4_i3_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 6.71>
+ST_39 : Operation 170 [5/7] (6.71ns)   --->   "%div4_i2_i = dmul i64 %add_i1_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 170 'dmul' 'div4_i2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 171 [5/7] (6.71ns)   --->   "%div4_i3_i = dmul i64 %add_i2_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 171 'dmul' 'div4_i3_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 6.71>
+ST_40 : Operation 172 [4/7] (6.71ns)   --->   "%div4_i2_i = dmul i64 %add_i1_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 172 'dmul' 'div4_i2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 173 [4/7] (6.71ns)   --->   "%div4_i3_i = dmul i64 %add_i2_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 173 'dmul' 'div4_i3_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 6.71>
+ST_41 : Operation 174 [3/7] (6.71ns)   --->   "%div4_i2_i = dmul i64 %add_i1_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 174 'dmul' 'div4_i2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 175 [3/7] (6.71ns)   --->   "%div4_i3_i = dmul i64 %add_i2_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 175 'dmul' 'div4_i3_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 6.71>
+ST_42 : Operation 176 [2/7] (6.71ns)   --->   "%div4_i2_i = dmul i64 %add_i1_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 176 'dmul' 'div4_i2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 177 [2/7] (6.71ns)   --->   "%div4_i3_i = dmul i64 %add_i2_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 177 'dmul' 'div4_i3_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 6.71>
+ST_43 : Operation 178 [1/7] (6.71ns)   --->   "%div4_i2_i = dmul i64 %add_i1_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 178 'dmul' 'div4_i2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 179 [1/7] (6.71ns)   --->   "%div4_i3_i = dmul i64 %add_i2_i, i64 0.5" [../include/madCpt.hpp:57]   --->   Operation 179 'dmul' 'div4_i3_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 5.20>
+ST_44 : Operation 180 [2/2] (5.20ns)   --->   "%median_1 = fptrunc i64 %div4_i2_i" [../include/madCpt.hpp:57]   --->   Operation 180 'fptrunc' 'median_1' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_44 : Operation 181 [2/2] (5.20ns)   --->   "%median_2 = fptrunc i64 %div4_i3_i" [../include/madCpt.hpp:57]   --->   Operation 181 'fptrunc' 'median_2' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 5.20>
+ST_45 : Operation 182 [1/2] (5.20ns)   --->   "%median_1 = fptrunc i64 %div4_i2_i" [../include/madCpt.hpp:57]   --->   Operation 182 'fptrunc' 'median_1' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_45 : Operation 183 [1/2] (5.20ns)   --->   "%median_2 = fptrunc i64 %div4_i3_i" [../include/madCpt.hpp:57]   --->   Operation 183 'fptrunc' 'median_2' <Predicate = true> <Delay = 5.20> <CoreInst = "Double2Float">   --->   Core 67 'Double2Float' <Latency = 1> <II = 1> <Delay = 5.20> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 4.43>
+ST_46 : Operation 184 [2/2] (4.43ns)   --->   "%conv5_i_i = fpext i32 %median_1" [../include/madCpt.hpp:58]   --->   Operation 184 'fpext' 'conv5_i_i' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_46 : Operation 185 [2/2] (4.43ns)   --->   "%conv5_i1_i = fpext i32 %median_2" [../include/madCpt.hpp:58]   --->   Operation 185 'fpext' 'conv5_i1_i' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 4.43>
+ST_47 : Operation 186 [1/2] (4.43ns)   --->   "%conv5_i_i = fpext i32 %median_1" [../include/madCpt.hpp:58]   --->   Operation 186 'fpext' 'conv5_i_i' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_47 : Operation 187 [1/2] (4.43ns)   --->   "%conv5_i1_i = fpext i32 %median_2" [../include/madCpt.hpp:58]   --->   Operation 187 'fpext' 'conv5_i1_i' <Predicate = true> <Delay = 4.43> <CoreInst = "Float2Double">   --->   Core 64 'Float2Double' <Latency = 1> <II = 1> <Delay = 4.43> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 6.71>
+ST_48 : Operation 188 [7/7] (6.71ns)   --->   "%median_absolute_deviation_R = dmul i64 %conv5_i_i, i64 1.4826" [../include/madCpt.hpp:108]   --->   Operation 188 'dmul' 'median_absolute_deviation_R' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 189 [7/7] (6.71ns)   --->   "%median_absolute_deviation_I = dmul i64 %conv5_i1_i, i64 1.4826" [../include/madCpt.hpp:109]   --->   Operation 189 'dmul' 'median_absolute_deviation_I' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 6.71>
+ST_49 : Operation 190 [6/7] (6.71ns)   --->   "%median_absolute_deviation_R = dmul i64 %conv5_i_i, i64 1.4826" [../include/madCpt.hpp:108]   --->   Operation 190 'dmul' 'median_absolute_deviation_R' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 191 [6/7] (6.71ns)   --->   "%median_absolute_deviation_I = dmul i64 %conv5_i1_i, i64 1.4826" [../include/madCpt.hpp:109]   --->   Operation 191 'dmul' 'median_absolute_deviation_I' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 6.71>
+ST_50 : Operation 192 [5/7] (6.71ns)   --->   "%median_absolute_deviation_R = dmul i64 %conv5_i_i, i64 1.4826" [../include/madCpt.hpp:108]   --->   Operation 192 'dmul' 'median_absolute_deviation_R' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 193 [5/7] (6.71ns)   --->   "%median_absolute_deviation_I = dmul i64 %conv5_i1_i, i64 1.4826" [../include/madCpt.hpp:109]   --->   Operation 193 'dmul' 'median_absolute_deviation_I' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 6.71>
+ST_51 : Operation 194 [4/7] (6.71ns)   --->   "%median_absolute_deviation_R = dmul i64 %conv5_i_i, i64 1.4826" [../include/madCpt.hpp:108]   --->   Operation 194 'dmul' 'median_absolute_deviation_R' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 195 [4/7] (6.71ns)   --->   "%median_absolute_deviation_I = dmul i64 %conv5_i1_i, i64 1.4826" [../include/madCpt.hpp:109]   --->   Operation 195 'dmul' 'median_absolute_deviation_I' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 6.71>
+ST_52 : Operation 196 [3/7] (6.71ns)   --->   "%median_absolute_deviation_R = dmul i64 %conv5_i_i, i64 1.4826" [../include/madCpt.hpp:108]   --->   Operation 196 'dmul' 'median_absolute_deviation_R' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 197 [3/7] (6.71ns)   --->   "%median_absolute_deviation_I = dmul i64 %conv5_i1_i, i64 1.4826" [../include/madCpt.hpp:109]   --->   Operation 197 'dmul' 'median_absolute_deviation_I' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 6.71>
+ST_53 : Operation 198 [2/7] (6.71ns)   --->   "%median_absolute_deviation_R = dmul i64 %conv5_i_i, i64 1.4826" [../include/madCpt.hpp:108]   --->   Operation 198 'dmul' 'median_absolute_deviation_R' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 199 [2/7] (6.71ns)   --->   "%median_absolute_deviation_I = dmul i64 %conv5_i1_i, i64 1.4826" [../include/madCpt.hpp:109]   --->   Operation 199 'dmul' 'median_absolute_deviation_I' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 6.71>
+ST_54 : Operation 200 [1/7] (6.71ns)   --->   "%median_absolute_deviation_R = dmul i64 %conv5_i_i, i64 1.4826" [../include/madCpt.hpp:108]   --->   Operation 200 'dmul' 'median_absolute_deviation_R' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 201 [1/7] (6.71ns)   --->   "%median_absolute_deviation_I = dmul i64 %conv5_i1_i, i64 1.4826" [../include/madCpt.hpp:109]   --->   Operation 201 'dmul' 'median_absolute_deviation_I' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 6.71>
+ST_55 : Operation 202 [7/7] (6.71ns)   --->   "%mul_i = dmul i64 %median_absolute_deviation_R, i64 3" [../include/madCpt.hpp:108]   --->   Operation 202 'dmul' 'mul_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 203 [7/7] (6.71ns)   --->   "%mul2_i = dmul i64 %median_absolute_deviation_I, i64 3" [../include/madCpt.hpp:109]   --->   Operation 203 'dmul' 'mul2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 6.71>
+ST_56 : Operation 204 [6/7] (6.71ns)   --->   "%mul_i = dmul i64 %median_absolute_deviation_R, i64 3" [../include/madCpt.hpp:108]   --->   Operation 204 'dmul' 'mul_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 205 [6/7] (6.71ns)   --->   "%mul2_i = dmul i64 %median_absolute_deviation_I, i64 3" [../include/madCpt.hpp:109]   --->   Operation 205 'dmul' 'mul2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 6.71>
+ST_57 : Operation 206 [5/7] (6.71ns)   --->   "%mul_i = dmul i64 %median_absolute_deviation_R, i64 3" [../include/madCpt.hpp:108]   --->   Operation 206 'dmul' 'mul_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 207 [5/7] (6.71ns)   --->   "%mul2_i = dmul i64 %median_absolute_deviation_I, i64 3" [../include/madCpt.hpp:109]   --->   Operation 207 'dmul' 'mul2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 6.71>
+ST_58 : Operation 208 [4/7] (6.71ns)   --->   "%mul_i = dmul i64 %median_absolute_deviation_R, i64 3" [../include/madCpt.hpp:108]   --->   Operation 208 'dmul' 'mul_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 209 [4/7] (6.71ns)   --->   "%mul2_i = dmul i64 %median_absolute_deviation_I, i64 3" [../include/madCpt.hpp:109]   --->   Operation 209 'dmul' 'mul2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 6.71>
+ST_59 : Operation 210 [3/7] (6.71ns)   --->   "%mul_i = dmul i64 %median_absolute_deviation_R, i64 3" [../include/madCpt.hpp:108]   --->   Operation 210 'dmul' 'mul_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 211 [3/7] (6.71ns)   --->   "%mul2_i = dmul i64 %median_absolute_deviation_I, i64 3" [../include/madCpt.hpp:109]   --->   Operation 211 'dmul' 'mul2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 59> <Delay = 6.71>
+ST_60 : Operation 212 [2/7] (6.71ns)   --->   "%mul_i = dmul i64 %median_absolute_deviation_R, i64 3" [../include/madCpt.hpp:108]   --->   Operation 212 'dmul' 'mul_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_60 : Operation 213 [2/7] (6.71ns)   --->   "%mul2_i = dmul i64 %median_absolute_deviation_I, i64 3" [../include/madCpt.hpp:109]   --->   Operation 213 'dmul' 'mul2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 61 <SV = 60> <Delay = 6.71>
+ST_61 : Operation 214 [1/7] (6.71ns)   --->   "%mul_i = dmul i64 %median_absolute_deviation_R, i64 3" [../include/madCpt.hpp:108]   --->   Operation 214 'dmul' 'mul_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 215 [1/7] (6.71ns)   --->   "%mul2_i = dmul i64 %median_absolute_deviation_I, i64 3" [../include/madCpt.hpp:109]   --->   Operation 215 'dmul' 'mul2_i' <Predicate = true> <Delay = 6.71> <CoreInst = "DMul_maxdsp">   --->   Core 49 'DMul_maxdsp' <Latency = 6> <II = 1> <Delay = 6.71> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 61> <Delay = 3.25>
+ST_62 : Operation 216 [2/2] (3.25ns)   --->   "%call_ln108 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_114_2, i64 %MRo, i64 %mul_i, i64 %MIo, i64 %mul2_i" [../include/madCpt.hpp:108]   --->   Operation 216 'call' 'call_ln108' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 63 <SV = 62> <Delay = 0.00>
+ST_63 : Operation 217 [1/2] (0.00ns)   --->   "%call_ln108 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_114_2, i64 %MRo, i64 %mul_i, i64 %MIo, i64 %mul2_i" [../include/madCpt.hpp:108]   --->   Operation 217 'call' 'call_ln108' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 64 <SV = 63> <Delay = 0.00>
+ST_64 : Operation 218 [1/1] (0.00ns)   --->   "%empty_323 = wait i32 @_ssdm_op_Wait"   --->   Operation 218 'wait' 'empty_323' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 219 [2/2] (0.00ns)   --->   "%call_ln0 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_119_3, i64 %MRo, i64 %MIo, i64 %stream_MAD_Computation_mad_R_o_Brd_MAD_R_in, i64 %stream_MAD_Computation_mad_I_o_Brd_MAD_I_in"   --->   Operation 219 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 65 <SV = 64> <Delay = 0.00>
+ST_65 : Operation 220 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 220 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 221 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 221 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 222 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 222 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 223 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 223 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 224 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 224 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 225 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 225 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 226 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_I_o_Brd_MAD_I_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 226 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 227 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_I_o_Brd_MAD_I_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 227 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 228 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_I_o_Brd_MAD_I_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 228 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 229 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_R_o_Brd_MAD_R_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 229 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 230 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_R_o_Brd_MAD_R_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 230 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 231 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_R_o_Brd_MAD_R_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 231 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 232 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_I_o_Brd_MAD_I_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 232 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 233 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_MAD_Computation_mad_R_o_Brd_MAD_R_in, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 233 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 234 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 234 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 235 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i, void @empty_4, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3"   --->   Operation 235 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_65 : Operation 236 [1/2] (0.00ns)   --->   "%call_ln0 = call void @MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_119_3, i64 %MRo, i64 %MIo, i64 %stream_MAD_Computation_mad_R_o_Brd_MAD_R_in, i64 %stream_MAD_Computation_mad_I_o_Brd_MAD_I_in"   --->   Operation 236 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_65 : Operation 237 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 237 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.83ns
+The critical path consists of the following:
+	'call' operation ('call_ln89', ../include/madCpt.hpp:89) to 'sortList' [34]  (1.83 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('sorted_list_R_i_addr', ../include/madCpt.hpp:57) [36]  (0 ns)
+	'load' operation ('sorted_list_R_i_load', ../include/madCpt.hpp:57) on array 'sorted_list_R_i' [37]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sorted_list_R_i_load', ../include/madCpt.hpp:57) on array 'sorted_list_R_i' [37]  (3.25 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i_i', ../include/madCpt.hpp:57) [40]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i_i', ../include/madCpt.hpp:57) [40]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i_i', ../include/madCpt.hpp:57) [40]  (7.3 ns)
+
+ <State 10>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i_i', ../include/madCpt.hpp:57) [40]  (7.3 ns)
+
+ <State 11>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i_i', ../include/madCpt.hpp:57) [40]  (7.3 ns)
+
+ <State 12>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i_i', ../include/madCpt.hpp:57) [40]  (7.3 ns)
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i_i', ../include/madCpt.hpp:57) [40]  (7.3 ns)
+
+ <State 14>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i_i', ../include/madCpt.hpp:57) [41]  (6.72 ns)
+
+ <State 15>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i_i', ../include/madCpt.hpp:57) [41]  (6.72 ns)
+
+ <State 16>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i_i', ../include/madCpt.hpp:57) [41]  (6.72 ns)
+
+ <State 17>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i_i', ../include/madCpt.hpp:57) [41]  (6.72 ns)
+
+ <State 18>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i_i', ../include/madCpt.hpp:57) [41]  (6.72 ns)
+
+ <State 19>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i_i', ../include/madCpt.hpp:57) [41]  (6.72 ns)
+
+ <State 20>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i_i', ../include/madCpt.hpp:57) [41]  (6.72 ns)
+
+ <State 21>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('median', ../include/madCpt.hpp:57) [42]  (5.2 ns)
+
+ <State 22>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('median', ../include/madCpt.hpp:57) [42]  (5.2 ns)
+
+ <State 23>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('median_R', ../include/madCpt.hpp:58) [43]  (4.44 ns)
+
+ <State 24>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('median_R', ../include/madCpt.hpp:58) [43]  (4.44 ns)
+
+ <State 25>: 0ns
+The critical path consists of the following:
+
+ <State 26>: 1.83ns
+The critical path consists of the following:
+	'call' operation ('call_ln103', ../include/madCpt.hpp:103) to 'sortList' [54]  (1.83 ns)
+
+ <State 27>: 0ns
+The critical path consists of the following:
+
+ <State 28>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('sorted_deviated_list_R_i_addr', ../include/madCpt.hpp:57) [56]  (0 ns)
+	'load' operation ('sorted_deviated_list_R_i_load', ../include/madCpt.hpp:57) on array 'sorted_deviated_list_R_i' [57]  (3.25 ns)
+
+ <State 29>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('sorted_deviated_list_R_i_load', ../include/madCpt.hpp:57) on array 'sorted_deviated_list_R_i' [57]  (3.25 ns)
+
+ <State 30>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i1_i', ../include/madCpt.hpp:57) [60]  (7.3 ns)
+
+ <State 31>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i1_i', ../include/madCpt.hpp:57) [60]  (7.3 ns)
+
+ <State 32>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i1_i', ../include/madCpt.hpp:57) [60]  (7.3 ns)
+
+ <State 33>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i1_i', ../include/madCpt.hpp:57) [60]  (7.3 ns)
+
+ <State 34>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i1_i', ../include/madCpt.hpp:57) [60]  (7.3 ns)
+
+ <State 35>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i1_i', ../include/madCpt.hpp:57) [60]  (7.3 ns)
+
+ <State 36>: 7.3ns
+The critical path consists of the following:
+	'dadd' operation ('add_i1_i', ../include/madCpt.hpp:57) [60]  (7.3 ns)
+
+ <State 37>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i2_i', ../include/madCpt.hpp:57) [61]  (6.72 ns)
+
+ <State 38>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i2_i', ../include/madCpt.hpp:57) [61]  (6.72 ns)
+
+ <State 39>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i2_i', ../include/madCpt.hpp:57) [61]  (6.72 ns)
+
+ <State 40>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i2_i', ../include/madCpt.hpp:57) [61]  (6.72 ns)
+
+ <State 41>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i2_i', ../include/madCpt.hpp:57) [61]  (6.72 ns)
+
+ <State 42>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i2_i', ../include/madCpt.hpp:57) [61]  (6.72 ns)
+
+ <State 43>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('div4_i2_i', ../include/madCpt.hpp:57) [61]  (6.72 ns)
+
+ <State 44>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('median', ../include/madCpt.hpp:57) [62]  (5.2 ns)
+
+ <State 45>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('median', ../include/madCpt.hpp:57) [62]  (5.2 ns)
+
+ <State 46>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('conv5_i_i', ../include/madCpt.hpp:58) [63]  (4.44 ns)
+
+ <State 47>: 4.44ns
+The critical path consists of the following:
+	'fpext' operation ('conv5_i_i', ../include/madCpt.hpp:58) [63]  (4.44 ns)
+
+ <State 48>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('median_absolute_deviation_R', ../include/madCpt.hpp:108) [64]  (6.72 ns)
+
+ <State 49>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('median_absolute_deviation_R', ../include/madCpt.hpp:108) [64]  (6.72 ns)
+
+ <State 50>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('median_absolute_deviation_R', ../include/madCpt.hpp:108) [64]  (6.72 ns)
+
+ <State 51>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('median_absolute_deviation_R', ../include/madCpt.hpp:108) [64]  (6.72 ns)
+
+ <State 52>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('median_absolute_deviation_R', ../include/madCpt.hpp:108) [64]  (6.72 ns)
+
+ <State 53>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('median_absolute_deviation_R', ../include/madCpt.hpp:108) [64]  (6.72 ns)
+
+ <State 54>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('median_absolute_deviation_R', ../include/madCpt.hpp:108) [64]  (6.72 ns)
+
+ <State 55>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('mul_i', ../include/madCpt.hpp:108) [74]  (6.72 ns)
+
+ <State 56>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('mul_i', ../include/madCpt.hpp:108) [74]  (6.72 ns)
+
+ <State 57>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('mul_i', ../include/madCpt.hpp:108) [74]  (6.72 ns)
+
+ <State 58>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('mul_i', ../include/madCpt.hpp:108) [74]  (6.72 ns)
+
+ <State 59>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('mul_i', ../include/madCpt.hpp:108) [74]  (6.72 ns)
+
+ <State 60>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('mul_i', ../include/madCpt.hpp:108) [74]  (6.72 ns)
+
+ <State 61>: 6.72ns
+The critical path consists of the following:
+	'dmul' operation ('mul_i', ../include/madCpt.hpp:108) [74]  (6.72 ns)
+
+ <State 62>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ln108', ../include/madCpt.hpp:108) to 'MADCpt<2048, 3, double>_Pipeline_VITIS_LOOP_114_2' [76]  (3.25 ns)
+
+ <State 63>: 0ns
+The critical path consists of the following:
+
+ <State 64>: 0ns
+The critical path consists of the following:
+
+ <State 65>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -54,15 +54,15 @@ int main(int argc, char **argv) {
   double* raw_data_im_o = malloc(sizeof(*raw_data_im_o) * RATE_OF_RAW_DATA_IM_O);
   double* raw_data_real_o = malloc(sizeof(*raw_data_real_o) * RATE_OF_RAW_DATA_REAL_O);
   double* mad_R_o = malloc(sizeof(*mad_R_o) * RATE_OF_MAD_R_O);
-  double* raw_data_real_1 = malloc(sizeof(*raw_data_real_1) * RATE_OF_RAW_DATA_REAL_1);
+  double* raw_data_real_1_o = malloc(sizeof(*raw_data_real_1_o) * RATE_OF_RAW_DATA_REAL_1_O);
   double* std_R_o = malloc(sizeof(*std_R_o) * RATE_OF_STD_R_O);
-  double* raw_data_im_1 = malloc(sizeof(*raw_data_im_1) * RATE_OF_RAW_DATA_IM_1);
+  double* raw_data_im_1_o = malloc(sizeof(*raw_data_im_1_o) * RATE_OF_RAW_DATA_IM_1_O);
   double* mad_I_o = malloc(sizeof(*mad_I_o) * RATE_OF_MAD_I_O);
   double* std_I_o = malloc(sizeof(*std_I_o) * RATE_OF_STD_I_O);
-  double* filtered_im_0 = malloc(sizeof(*filtered_im_0) * RATE_OF_FILTERED_IM_0);
-  double* filtered_real_0 = malloc(sizeof(*filtered_real_0) * RATE_OF_FILTERED_REAL_0);
-  double* filtered_im_1 = malloc(sizeof(*filtered_im_1) * RATE_OF_FILTERED_IM_1);
-  double* filtered_real_1 = malloc(sizeof(*filtered_real_1) * RATE_OF_FILTERED_REAL_1);
+  double* filtered_im_0_o = malloc(sizeof(*filtered_im_0_o) * RATE_OF_FILTERED_IM_0_O);
+  double* filtered_real_0_o = malloc(sizeof(*filtered_real_0_o) * RATE_OF_FILTERED_REAL_0_O);
+  double* filtered_im_1_o = malloc(sizeof(*filtered_im_1_o) * RATE_OF_FILTERED_IM_1_O);
+  double* filtered_real_1_o = malloc(sizeof(*filtered_real_1_o) * RATE_OF_FILTERED_REAL_1_O);
 
 
 	print("Transferring data\n\r");
@@ -79,15 +79,15 @@ int main(int argc, char **argv) {
   XMem_write_top_rfi_c_Set_raw_data_im_o_mem(&mem_write, (u32) raw_data_im_o);
   XMem_write_top_rfi_c_Set_raw_data_real_o_mem(&mem_write, (u32) raw_data_real_o);
   XMem_write_top_rfi_c_Set_mad_R_o_mem(&mem_write, (u32) mad_R_o);
-  XMem_write_top_rfi_c_Set_raw_data_real_1_mem(&mem_write, (u32) raw_data_real_1);
+  XMem_write_top_rfi_c_Set_raw_data_real_1_o_mem(&mem_write, (u32) raw_data_real_1_o);
   XMem_write_top_rfi_c_Set_std_R_o_mem(&mem_write, (u32) std_R_o);
-  XMem_write_top_rfi_c_Set_raw_data_im_1_mem(&mem_write, (u32) raw_data_im_1);
+  XMem_write_top_rfi_c_Set_raw_data_im_1_o_mem(&mem_write, (u32) raw_data_im_1_o);
   XMem_write_top_rfi_c_Set_mad_I_o_mem(&mem_write, (u32) mad_I_o);
   XMem_write_top_rfi_c_Set_std_I_o_mem(&mem_write, (u32) std_I_o);
-  XMem_write_top_rfi_c_Set_filtered_im_0_mem(&mem_write, (u32) filtered_im_0);
-  XMem_write_top_rfi_c_Set_filtered_real_0_mem(&mem_write, (u32) filtered_real_0);
-  XMem_write_top_rfi_c_Set_filtered_im_1_mem(&mem_write, (u32) filtered_im_1);
-  XMem_write_top_rfi_c_Set_filtered_real_1_mem(&mem_write, (u32) filtered_real_1);
+  XMem_write_top_rfi_c_Set_filtered_im_0_o_mem(&mem_write, (u32) filtered_im_0_o);
+  XMem_write_top_rfi_c_Set_filtered_real_0_o_mem(&mem_write, (u32) filtered_real_0_o);
+  XMem_write_top_rfi_c_Set_filtered_im_1_o_mem(&mem_write, (u32) filtered_im_1_o);
+  XMem_write_top_rfi_c_Set_filtered_real_1_o_mem(&mem_write, (u32) filtered_real_1_o);
 
 
 	// Flush input buffer to transfer to non-coherent memories
@@ -108,15 +108,15 @@ int main(int argc, char **argv) {
   Xil_DCacheFlushRange((INTPTR)raw_data_im_o, RATE_OF_RAW_DATA_IM_O * sizeof(*raw_data_im_o));
   Xil_DCacheFlushRange((INTPTR)raw_data_real_o, RATE_OF_RAW_DATA_REAL_O * sizeof(*raw_data_real_o));
   Xil_DCacheFlushRange((INTPTR)mad_R_o, RATE_OF_MAD_R_O * sizeof(*mad_R_o));
-  Xil_DCacheFlushRange((INTPTR)raw_data_real_1, RATE_OF_RAW_DATA_REAL_1 * sizeof(*raw_data_real_1));
+  Xil_DCacheFlushRange((INTPTR)raw_data_real_1_o, RATE_OF_RAW_DATA_REAL_1_O * sizeof(*raw_data_real_1_o));
   Xil_DCacheFlushRange((INTPTR)std_R_o, RATE_OF_STD_R_O * sizeof(*std_R_o));
-  Xil_DCacheFlushRange((INTPTR)raw_data_im_1, RATE_OF_RAW_DATA_IM_1 * sizeof(*raw_data_im_1));
+  Xil_DCacheFlushRange((INTPTR)raw_data_im_1_o, RATE_OF_RAW_DATA_IM_1_O * sizeof(*raw_data_im_1_o));
   Xil_DCacheFlushRange((INTPTR)mad_I_o, RATE_OF_MAD_I_O * sizeof(*mad_I_o));
   Xil_DCacheFlushRange((INTPTR)std_I_o, RATE_OF_STD_I_O * sizeof(*std_I_o));
-  Xil_DCacheFlushRange((INTPTR)filtered_im_0, RATE_OF_FILTERED_IM_0 * sizeof(*filtered_im_0));
-  Xil_DCacheFlushRange((INTPTR)filtered_real_0, RATE_OF_FILTERED_REAL_0 * sizeof(*filtered_real_0));
-  Xil_DCacheFlushRange((INTPTR)filtered_im_1, RATE_OF_FILTERED_IM_1 * sizeof(*filtered_im_1));
-  Xil_DCacheFlushRange((INTPTR)filtered_real_1, RATE_OF_FILTERED_REAL_1 * sizeof(*filtered_real_1));
+  Xil_DCacheFlushRange((INTPTR)filtered_im_0_o, RATE_OF_FILTERED_IM_0_O * sizeof(*filtered_im_0_o));
+  Xil_DCacheFlushRange((INTPTR)filtered_real_0_o, RATE_OF_FILTERED_REAL_0_O * sizeof(*filtered_real_0_o));
+  Xil_DCacheFlushRange((INTPTR)filtered_im_1_o, RATE_OF_FILTERED_IM_1_O * sizeof(*filtered_im_1_o));
+  Xil_DCacheFlushRange((INTPTR)filtered_real_1_o, RATE_OF_FILTERED_REAL_1_O * sizeof(*filtered_real_1_o));
 
 
 	// TODO Read results

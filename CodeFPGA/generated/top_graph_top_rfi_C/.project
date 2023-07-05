@@ -47,6 +47,16 @@
 			<location>/home/orenaud/preesm2/RFI/CodeFPGA/include/madCpt.hpp</location>
 		</link>
 		<link>
+			<name>source/rfiFilter.hpp</name>
+			<type>1</type>
+			<location>/home/orenaud/preesm2/RFI/CodeFPGA/include/rfiFilter.hpp</location>
+		</link>
+		<link>
+			<name>source/stdCpt.hpp</name>
+			<type>1</type>
+			<location>/home/orenaud/preesm2/RFI/CodeFPGA/include/stdCpt.hpp</location>
+		</link>
+		<link>
 			<name>source/top_graph_top_rfi_C.cpp</name>
 			<type>1</type>
 			<location>/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C.cpp</location>

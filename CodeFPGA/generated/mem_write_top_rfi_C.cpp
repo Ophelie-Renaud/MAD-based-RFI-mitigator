@@ -91,48 +91,48 @@ void mem_write_top_rfi_C(
   hls::stream<double> &raw_data_real_o_stream,
   double* mad_R_o_mem,
   hls::stream<double> &mad_R_o_stream,
-  double* raw_data_real_1_mem,
-  hls::stream<double> &raw_data_real_1_stream,
+  double* raw_data_real_1_o_mem,
+  hls::stream<double> &raw_data_real_1_o_stream,
   double* std_R_o_mem,
   hls::stream<double> &std_R_o_stream,
-  double* raw_data_im_1_mem,
-  hls::stream<double> &raw_data_im_1_stream,
+  double* raw_data_im_1_o_mem,
+  hls::stream<double> &raw_data_im_1_o_stream,
   double* mad_I_o_mem,
   hls::stream<double> &mad_I_o_stream,
   double* std_I_o_mem,
   hls::stream<double> &std_I_o_stream,
-  double* filtered_im_0_mem,
-  hls::stream<double> &filtered_im_0_stream,
-  double* filtered_real_0_mem,
-  hls::stream<double> &filtered_real_0_stream,
-  double* filtered_im_1_mem,
-  hls::stream<double> &filtered_im_1_stream,
-  double* filtered_real_1_mem,
-  hls::stream<double> &filtered_real_1_stream) {
+  double* filtered_im_0_o_mem,
+  hls::stream<double> &filtered_im_0_o_stream,
+  double* filtered_real_0_o_mem,
+  hls::stream<double> &filtered_real_0_o_stream,
+  double* filtered_im_1_o_mem,
+  hls::stream<double> &filtered_im_1_o_stream,
+  double* filtered_real_1_o_mem,
+  hls::stream<double> &filtered_real_1_o_stream) {
 #pragma HLS INTERFACE m_axi offset=slave port=raw_data_im_o_mem name=raw_data_im_o_mem
 #pragma HLS INTERFACE axis port=raw_data_im_o_stream name=raw_data_im_o_stream
 #pragma HLS INTERFACE m_axi offset=slave port=raw_data_real_o_mem name=raw_data_real_o_mem
 #pragma HLS INTERFACE axis port=raw_data_real_o_stream name=raw_data_real_o_stream
 #pragma HLS INTERFACE m_axi offset=slave port=mad_R_o_mem name=mad_R_o_mem
 #pragma HLS INTERFACE axis port=mad_R_o_stream name=mad_R_o_stream
-#pragma HLS INTERFACE m_axi offset=slave port=raw_data_real_1_mem name=raw_data_real_1_mem
-#pragma HLS INTERFACE axis port=raw_data_real_1_stream name=raw_data_real_1_stream
+#pragma HLS INTERFACE m_axi offset=slave port=raw_data_real_1_o_mem name=raw_data_real_1_o_mem
+#pragma HLS INTERFACE axis port=raw_data_real_1_o_stream name=raw_data_real_1_o_stream
 #pragma HLS INTERFACE m_axi offset=slave port=std_R_o_mem name=std_R_o_mem
 #pragma HLS INTERFACE axis port=std_R_o_stream name=std_R_o_stream
-#pragma HLS INTERFACE m_axi offset=slave port=raw_data_im_1_mem name=raw_data_im_1_mem
-#pragma HLS INTERFACE axis port=raw_data_im_1_stream name=raw_data_im_1_stream
+#pragma HLS INTERFACE m_axi offset=slave port=raw_data_im_1_o_mem name=raw_data_im_1_o_mem
+#pragma HLS INTERFACE axis port=raw_data_im_1_o_stream name=raw_data_im_1_o_stream
 #pragma HLS INTERFACE m_axi offset=slave port=mad_I_o_mem name=mad_I_o_mem
 #pragma HLS INTERFACE axis port=mad_I_o_stream name=mad_I_o_stream
 #pragma HLS INTERFACE m_axi offset=slave port=std_I_o_mem name=std_I_o_mem
 #pragma HLS INTERFACE axis port=std_I_o_stream name=std_I_o_stream
-#pragma HLS INTERFACE m_axi offset=slave port=filtered_im_0_mem name=filtered_im_0_mem
-#pragma HLS INTERFACE axis port=filtered_im_0_stream name=filtered_im_0_stream
-#pragma HLS INTERFACE m_axi offset=slave port=filtered_real_0_mem name=filtered_real_0_mem
-#pragma HLS INTERFACE axis port=filtered_real_0_stream name=filtered_real_0_stream
-#pragma HLS INTERFACE m_axi offset=slave port=filtered_im_1_mem name=filtered_im_1_mem
-#pragma HLS INTERFACE axis port=filtered_im_1_stream name=filtered_im_1_stream
-#pragma HLS INTERFACE m_axi offset=slave port=filtered_real_1_mem name=filtered_real_1_mem
-#pragma HLS INTERFACE axis port=filtered_real_1_stream name=filtered_real_1_stream
+#pragma HLS INTERFACE m_axi offset=slave port=filtered_im_0_o_mem name=filtered_im_0_o_mem
+#pragma HLS INTERFACE axis port=filtered_im_0_o_stream name=filtered_im_0_o_stream
+#pragma HLS INTERFACE m_axi offset=slave port=filtered_real_0_o_mem name=filtered_real_0_o_mem
+#pragma HLS INTERFACE axis port=filtered_real_0_o_stream name=filtered_real_0_o_stream
+#pragma HLS INTERFACE m_axi offset=slave port=filtered_im_1_o_mem name=filtered_im_1_o_mem
+#pragma HLS INTERFACE axis port=filtered_im_1_o_stream name=filtered_im_1_o_stream
+#pragma HLS INTERFACE m_axi offset=slave port=filtered_real_1_o_mem name=filtered_real_1_o_mem
+#pragma HLS INTERFACE axis port=filtered_real_1_o_stream name=filtered_real_1_o_stream
 #pragma HLS INTERFACE s_axilite port=return
 
   bool shouldContinue = true;
@@ -141,15 +141,15 @@ void mem_write_top_rfi_C(
     shouldContinue |= writeOutput<double, 0, FACTOR_OF_RAW_DATA_IM_O, RATE_OF_RAW_DATA_IM_O>(raw_data_im_o_mem, raw_data_im_o_stream);
     shouldContinue |= writeOutput<double, 1, FACTOR_OF_RAW_DATA_REAL_O, RATE_OF_RAW_DATA_REAL_O>(raw_data_real_o_mem, raw_data_real_o_stream);
     shouldContinue |= writeOutput<double, 2, FACTOR_OF_MAD_R_O, RATE_OF_MAD_R_O>(mad_R_o_mem, mad_R_o_stream);
-    shouldContinue |= writeOutput<double, 3, FACTOR_OF_RAW_DATA_REAL_1, RATE_OF_RAW_DATA_REAL_1>(raw_data_real_1_mem, raw_data_real_1_stream);
+    shouldContinue |= writeOutput<double, 3, FACTOR_OF_RAW_DATA_REAL_1_O, RATE_OF_RAW_DATA_REAL_1_O>(raw_data_real_1_o_mem, raw_data_real_1_o_stream);
     shouldContinue |= writeOutput<double, 4, FACTOR_OF_STD_R_O, RATE_OF_STD_R_O>(std_R_o_mem, std_R_o_stream);
-    shouldContinue |= writeOutput<double, 5, FACTOR_OF_RAW_DATA_IM_1, RATE_OF_RAW_DATA_IM_1>(raw_data_im_1_mem, raw_data_im_1_stream);
+    shouldContinue |= writeOutput<double, 5, FACTOR_OF_RAW_DATA_IM_1_O, RATE_OF_RAW_DATA_IM_1_O>(raw_data_im_1_o_mem, raw_data_im_1_o_stream);
     shouldContinue |= writeOutput<double, 6, FACTOR_OF_MAD_I_O, RATE_OF_MAD_I_O>(mad_I_o_mem, mad_I_o_stream);
     shouldContinue |= writeOutput<double, 7, FACTOR_OF_STD_I_O, RATE_OF_STD_I_O>(std_I_o_mem, std_I_o_stream);
-    shouldContinue |= writeOutput<double, 8, FACTOR_OF_FILTERED_IM_0, RATE_OF_FILTERED_IM_0>(filtered_im_0_mem, filtered_im_0_stream);
-    shouldContinue |= writeOutput<double, 9, FACTOR_OF_FILTERED_REAL_0, RATE_OF_FILTERED_REAL_0>(filtered_real_0_mem, filtered_real_0_stream);
-    shouldContinue |= writeOutput<double, 10, FACTOR_OF_FILTERED_IM_1, RATE_OF_FILTERED_IM_1>(filtered_im_1_mem, filtered_im_1_stream);
-    shouldContinue |= writeOutput<double, 11, FACTOR_OF_FILTERED_REAL_1, RATE_OF_FILTERED_REAL_1>(filtered_real_1_mem, filtered_real_1_stream);
+    shouldContinue |= writeOutput<double, 8, FACTOR_OF_FILTERED_IM_0_O, RATE_OF_FILTERED_IM_0_O>(filtered_im_0_o_mem, filtered_im_0_o_stream);
+    shouldContinue |= writeOutput<double, 9, FACTOR_OF_FILTERED_REAL_0_O, RATE_OF_FILTERED_REAL_0_O>(filtered_real_0_o_mem, filtered_real_0_o_stream);
+    shouldContinue |= writeOutput<double, 10, FACTOR_OF_FILTERED_IM_1_O, RATE_OF_FILTERED_IM_1_O>(filtered_im_1_o_mem, filtered_im_1_o_stream);
+    shouldContinue |= writeOutput<double, 11, FACTOR_OF_FILTERED_REAL_1_O, RATE_OF_FILTERED_REAL_1_O>(filtered_real_1_o_mem, filtered_real_1_o_stream);
   }
 }
 

@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vitis HLS Report for 'RFIFilter_0_2048_double_Pipeline_loop_2'
+================================================================
+* Date:           Wed Jul  5 23:25:41 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        top_graph_top_rfi_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.761 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2050|     2050|  20.500 us|  20.500 us|  2050|  2050|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_2  |     2048|     2048|         2|          1|          1|  2048|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     30|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     54|    -|
+|Register         |        -|    -|      27|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      27|     84|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln60_fu_98_p2                 |         +|   0|  0|  12|          12|           1|
+    |ap_block_pp0_stage0_11001         |       and|   0|  0|   2|           1|           1|
+    |icmp_ln60_fu_92_p2                |      icmp|   0|  0|  12|          12|          13|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  30|          27|          18|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |                            Name                            | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                                     |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_9                                        |   9|          2|   12|         24|
+    |i_fu_42                                                     |   9|          2|   12|         24|
+    |stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_blk_n      |   9|          2|    1|          2|
+    |stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_blk_n  |   9|          2|    1|          2|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                       |  54|         12|   28|         56|
+    +------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_9_reg_131              |  12|   0|   12|          0|
+    |i_fu_42                  |  12|   0|   12|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  27|   0|   27|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|                           RTL Ports                          | Dir | Bits|  Protocol  |                     Source Object                    |    C Type    |
++--------------------------------------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|ap_clk                                                        |   in|    1|  ap_ctrl_hs|            RFIFilter<0, 2048, double>_Pipeline_loop_2|  return value|
+|ap_rst                                                        |   in|    1|  ap_ctrl_hs|            RFIFilter<0, 2048, double>_Pipeline_loop_2|  return value|
+|ap_start                                                      |   in|    1|  ap_ctrl_hs|            RFIFilter<0, 2048, double>_Pipeline_loop_2|  return value|
+|ap_done                                                       |  out|    1|  ap_ctrl_hs|            RFIFilter<0, 2048, double>_Pipeline_loop_2|  return value|
+|ap_idle                                                       |  out|    1|  ap_ctrl_hs|            RFIFilter<0, 2048, double>_Pipeline_loop_2|  return value|
+|ap_ready                                                      |  out|    1|  ap_ctrl_hs|            RFIFilter<0, 2048, double>_Pipeline_loop_2|  return value|
+|stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout     |   in|   64|     ap_fifo|  stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n  |   in|    1|     ap_fifo|  stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read     |  out|    1|     ap_fifo|  stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i|       pointer|
+|stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout         |   in|   64|     ap_fifo|      stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i|       pointer|
+|stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n      |   in|    1|     ap_fifo|      stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i|       pointer|
+|stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read         |  out|    1|     ap_fifo|      stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i|       pointer|
+|RRi_address0                                                  |  out|   11|   ap_memory|                                                   RRi|         array|
+|RRi_ce0                                                       |  out|    1|   ap_memory|                                                   RRi|         array|
+|RRi_we0                                                       |  out|    1|   ap_memory|                                                   RRi|         array|
+|RRi_d0                                                        |  out|   64|   ap_memory|                                                   RRi|         array|
+|RIi_address0                                                  |  out|   11|   ap_memory|                                                   RIi|         array|
+|RIi_ce0                                                       |  out|    1|   ap_memory|                                                   RIi|         array|
+|RIi_we0                                                       |  out|    1|   ap_memory|                                                   RIi|         array|
+|RIi_d0                                                        |  out|   64|   ap_memory|                                                   RIi|         array|
++--------------------------------------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+

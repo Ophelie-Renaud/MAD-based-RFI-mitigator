@@ -76,10 +76,11 @@ void deviationList(double *list, double median, int length, double *deviation_li
 template<int N_SAMPLES, int SIGMA, typename T>
 void MADCpt(  hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls::stream<T> &mad_R_o, hls::stream<T> &mad_I_o){
     //sort list
-    double* sorted_list_R = (double*)malloc(N_SAMPLES * sizeof(double));
-    double* sorted_list_I = (double*)malloc(N_SAMPLES * sizeof(double));
-    double* RDRi = (double*)malloc(N_SAMPLES * sizeof(double));
-    double* RDIi = (double*)malloc(N_SAMPLES * sizeof(double));
+    double sorted_list_R[N_SAMPLES];
+    double sorted_list_I[N_SAMPLES];
+    double RDRi[N_SAMPLES];
+    double RDIi[N_SAMPLES];
+    //read inputs
     for(int i=0;i<N_SAMPLES;i++){
     	RDRi[i]=raw_data_real_i.read();
     	    RDIi[i]=raw_data_im_i.read();
@@ -92,32 +93,35 @@ void MADCpt(  hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hl
     double median_I = computeMedian(sorted_list_I, N_SAMPLES);
 
     //deviation list
-    double* deviation_list_R = (double*)malloc(N_SAMPLES * sizeof(double));
+    double deviation_list_R[N_SAMPLES];
     deviationList(sorted_list_R, median_R, N_SAMPLES, deviation_list_R);
-    double* deviation_list_I = (double*)malloc(N_SAMPLES * sizeof(double));
+    double deviation_list_I [N_SAMPLES];
     deviationList(sorted_list_I, median_I, N_SAMPLES, deviation_list_I);
 
     //sort list a second time
-    double* sorted_deviated_list_R = (double*)malloc(N_SAMPLES * sizeof(double));
+    double sorted_deviated_list_R[N_SAMPLES];
     sortList(deviation_list_R, N_SAMPLES, sorted_deviated_list_R);
-    double* sorted_deviated_list_I = (double*)malloc(N_SAMPLES * sizeof(double));
+    double sorted_deviated_list_I[N_SAMPLES];
     sortList(deviation_list_I, N_SAMPLES, sorted_deviated_list_I);
 
     //median cpt a second time
     double median_absolute_deviation_R = computeMedian(sorted_deviated_list_R, N_SAMPLES)*K;
     double median_absolute_deviation_I = computeMedian(sorted_deviated_list_I, N_SAMPLES)*K;
 
+    double MRo[N_SAMPLES];
+    double MIo[N_SAMPLES];
     //threshold cpt
     for(int i = 0; i<N_SAMPLES;i++){
-        mad_R_o[i]=median_absolute_deviation_R*SIGMA;
-        mad_I_o[i]=median_absolute_deviation_I*SIGMA;
+    	MRo[i]=median_absolute_deviation_R*SIGMA;
+    	MIo[i]=median_absolute_deviation_I*SIGMA;
     }
-    free(sorted_list_I);
-    free(sorted_list_R);
-    free(deviation_list_I);
-    free(deviation_list_R);
-    free(sorted_deviated_list_I);
-    free(sorted_deviated_list_R);
+    //write output
+    for(int i = 0; i<N_SAMPLES;i++){
+    	mad_R_o.write(MRo[i]);
+    	mad_I_o.write(MIo[i]);
+    }
+
+
 
 }
 
