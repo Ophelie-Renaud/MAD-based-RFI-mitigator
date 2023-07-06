@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592342051">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600340203">
   <ports id="1" name="RIi" type="PortType" coreName="RAM" coreId="997420912" bitwidth="64" iftype="IfTypeRegister" arraysize="2048">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="sub_i_neg_i" type="PortType" coreId="2479578864" bitwidth="63">
+  <ports id="2" name="sub_i_neg_i" type="PortType" coreId="842019375" bitwidth="63">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="icmp_ln20_2" type="PortType" coreId="2481741024" bitwidth="1">
+  <ports id="3" name="icmp_ln20_2" type="PortType" coreId="3218653104" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="sub_i_i" type="PortType" coreId="1876320054" bitwidth="64">
+  <ports id="4" name="sub_i_i" type="PortType" coreId="3219514416" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="RIo" type="PortType" coreName="RAM" coreId="2481102848" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
+  <ports id="5" name="RIo" type="PortType" coreName="RAM" coreId="1046834274" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="6" name="sub_i_to_int_i" type="PortType" coreId="2477327488" bitwidth="63">
+  <ports id="6" name="sub_i_to_int_i" type="PortType" coreId="3218269760" bitwidth="63">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="av_threshold_i" type="PortType" coreId="1873411852" bitwidth="64">
+  <ports id="7" name="av_threshold_i" type="PortType" coreId="1121523086" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="63" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -93,47 +93,47 @@
   <edges id="189" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
   <blocks id="16" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>_Z9madFilterPdidS_.exit.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i" originalName="i" coreId="320" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i" originalName="i" coreId="3215554048" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="av_threshold_i_read" coreId="2480433408" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="av_threshold_i_read" coreId="3214406160" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>av_threshold_i</dataInputObjs>
       <dataOutputObjs>dcmp</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="sub_i_to_int_i_read" coreId="2476816368" bitwidth="63" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="sub_i_to_int_i_read" coreId="3215251648" bitwidth="63" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>sub_i_to_int_i</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="sub_i_i_read" coreId="2476815312" bitwidth="64" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="sub_i_i_read" coreId="3218780128" bitwidth="64" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>sub_i_i</dataInputObjs>
       <dataOutputObjs>dcmp</dataOutputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="icmp_ln20_2_read" coreId="540697965" bitwidth="1" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="icmp_ln20_2_read" coreId="608" bitwidth="1" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>icmp_ln20_2</dataInputObjs>
       <dataOutputObjs>or</dataOutputObjs>
       <dataOutputObjs>or</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="sub_i_neg_i_read" coreId="2476830416" bitwidth="63" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="sub_i_neg_i_read" coreId="3214406160" bitwidth="63" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>sub_i_neg_i</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_write_ln0" coreId="304" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_write_ln0" coreId="48" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln0" coreId="1330010203" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln0" coreId="3214406160" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <controlInputObjs>_Z9madFilterPdidS_.exit.i</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="58" name="_Z9madFilterPdidS_.exit29.i.preheader.exitStub" type="BlockType">
     <controlInputObjs>_Z9madFilterPdidS_.exit.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="_ln0" coreId="2479406928" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="_ln0" coreId="3216830864" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="221" pipe_depth="5" RegionName="loop_1">
     <basic_blocks id="23" name="_Z9madFilterPdidS_.exit.i" type="BlockType">
@@ -143,7 +143,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z9madFilterPdidS_.exit29.i.preheader.exitStub</controlOutputObjs>
       <controlOutputObjs>.split2.i_ifconv</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_10" lineNumber="19" originalName="i" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="48" contextFuncName="madFilter" bitwidth="12" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_10" lineNumber="19" originalName="i" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="3214406160" contextFuncName="madFilter" bitwidth="12" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="19" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -162,7 +162,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln19" lineNumber="19" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="2480035296" contextFuncName="madFilter" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln19" lineNumber="19" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="480" contextFuncName="madFilter" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="19" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split2.i_ifconv</controlInputObjs>
@@ -176,13 +176,13 @@
       <controlInputObjs>_Z9madFilterPdidS_.exit.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z9madFilterPdidS_.exit.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="i_12_cast_i" lineNumber="19" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="i_12_cast_i_fu_158_p1" coreId="176" contextFuncName="madFilter" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="i_12_cast_i" lineNumber="19" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="i_12_cast_i_fu_158_p1" coreId="3216595184" contextFuncName="madFilter" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="19" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="RIi_addr" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="2477811088" contextFuncName="madFilter" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="RIi_addr" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="3214406160" contextFuncName="madFilter" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="20" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>RIi</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -199,19 +199,19 @@
         <dataOutputObjs>dcmp</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="bitcast_ln20" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="bitcast_ln20_fu_200_p1" coreId="2478698688" contextFuncName="madFilter" bitwidth="64" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="bitcast_ln20" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="bitcast_ln20_fu_200_p1" coreId="3214406160" contextFuncName="madFilter" bitwidth="64" opcode="bitcast" nodeLabel="3.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="20" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp_7" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="tmp_7_fu_203_p4" coreId="2478789184" contextFuncName="madFilter" bitwidth="11" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp_7" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="tmp_7_fu_203_p4" coreId="3218701128" contextFuncName="madFilter" bitwidth="11" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="20" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>bitcast</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="trunc_ln20" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="trunc_ln20_fu_213_p1" coreId="2476331472" contextFuncName="madFilter" bitwidth="52" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="trunc_ln20" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="trunc_ln20_fu_213_p1" coreId="3214406160" contextFuncName="madFilter" bitwidth="52" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="20" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>bitcast</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -241,7 +241,7 @@
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_9" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="tmp_9_fu_163_p4" coreId="2479321360" contextFuncName="madFilter" bitwidth="11" opcode="partselect" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_9" lineNumber="20" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="tmp_9_fu_163_p4" coreId="1599294536" contextFuncName="madFilter" bitwidth="11" opcode="partselect" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="20" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -283,7 +283,7 @@
         <dataInputObjs>dcmp</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="RIo_addr" lineNumber="21" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="2470518960" contextFuncName="madFilter" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="RIo_addr" lineNumber="21" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="3217172224" contextFuncName="madFilter" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="21" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>RIo</dataOutputObjs>
@@ -296,7 +296,7 @@
         <dataOutputObjs>and</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="tmp_12" lineNumber="22" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="tmp_12_fu_179_p4" coreId="2476012224" contextFuncName="madFilter" bitwidth="11" opcode="partselect" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="tmp_12" lineNumber="22" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="tmp_12_fu_179_p4" coreId="3218424864" contextFuncName="madFilter" bitwidth="11" opcode="partselect" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="22" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -357,12 +357,12 @@
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="i_write_ln19" lineNumber="19" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="1875967868" contextFuncName="madFilter" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="i_write_ln19" lineNumber="19" fileName="../include/rfiFilter.hpp" fileDirectory=".." coreId="1117411543" contextFuncName="madFilter" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="19" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="madFilter"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln0" coreId="1873980860" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln0" coreId="3214508672" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
         <controlInputObjs>_Z9madFilterPdidS_.exit.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../include/rfiFilter.hpp">

@@ -186,6 +186,10 @@ Have you ever seen such beautiful thing!!! (Flow navigator > C synthesis > Repor
 As PREESM's application deployment on FPGAs exploits only their programmable cells, calculations linked to direct file reading/writing are replaced by interfaces. This means that, for the time being, these calculations are added manually to the Jupiter notebook file running on our PYNQ's Core dual Arm. Secton below provides solution for that.
 
 >> - Open host_pynq_top_rfi.ipynb in the editor
+>> - section import copy/past this:
+```
+import matplotlib.pyplot as plt
+```
 >> - section TODO fill data copy/paste this:
 ```
 filename = 'J1939_plus_2134_1152MHz.dada'
@@ -206,10 +210,104 @@ if(printHeader == True):
     print('HEADER INFO:')    
     for key, val in hdr.items():
         print(key, ':', val)
+        
+fs = 128e6 # sample rate in Hz
+fc = int(hdr['FREQ'])*1e6 # centre frequency
+nSamples = 2048
+nBlocks = 200
+timeSeries = np.zeros(nSamples * nBlocks,dtype=complex)
+dataBufSize = 4*nSamples # size in bytes (samples are complex-values, 16-bits)
+for i in range(nBlocks):
+    dataBuf = fh.read(dataBufSize)
+    data = np.frombuffer(dataBuf, dtype='uint16')
+    # the next two lines convert the offset-binary format to Numpy floats
+    data = data.astype(np.int32)
+    data = (data - (2**15))
+    dataCmplx = data[0::2] + 1j*data[1::2]
+    timeSeries[i*nSamples:(i+1)*nSamples] = dataCmplx
+fh.close()
+
+raw_data_real_i_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_I,), dtype=np.dtype('double'))
+raw_data_real_i_vect = np.real(timeSeries);
+np.copyto(raw_data_real_i_buff, raw_data_real_i_vect)
+
+raw_data_im_i_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_I,), dtype=np.dtype('double'))
+raw_data_im_i_vect = np.imag(timeSeries)
+np.copyto(raw_data_im_i_buff, raw_data_im_i_vect)
+
+raw_data_im_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_O,), dtype=np.dtype('double'))
+raw_data_real_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_O,), dtype=np.dtype('double'))
+mad_R_o_buff = allocate(shape=(RATE_OF_MAD_R_O,), dtype=np.dtype('double'))
+raw_data_real_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_1_O,), dtype=np.dtype('double'))
+std_R_o_buff = allocate(shape=(RATE_OF_STD_R_O,), dtype=np.dtype('double'))
+raw_data_im_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_1_O,), dtype=np.dtype('double'))
+mad_I_o_buff = allocate(shape=(RATE_OF_MAD_I_O,), dtype=np.dtype('double'))
+std_I_o_buff = allocate(shape=(RATE_OF_STD_I_O,), dtype=np.dtype('double'))
+filtered_im_0_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_0_O,), dtype=np.dtype('double'))
+filtered_real_0_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_0_O,), dtype=np.dtype('double'))
+filtered_im_1_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_1_O,), dtype=np.dtype('double'))
+filtered_real_1_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_1_O,), dtype=np.dtype('double'))
+
 ```
 >> - section TODO check results copy/paste this:
 ```
-oui oui
+#plot Histo
+raw_real_vect = np.array(raw_data_real_o_buff)
+plt.hist(raw_real_vect,bins='auto')
+plt.title('Real component')
+pltH = plt.gcf()
+pltH.set_size_inches([10, 8])
+
+raw_real_vect = np.array(raw_data_im_o_buff)
+plt.hist(raw_real_vect,bins='auto')
+plt.title('Imaginary component')
+pltH = plt.gcf()
+pltH.set_size_inches([10, 8])
+
+#plot threshold
+mad_real_vect = np.array(mad_R_o_buff)
+std_real_vect = np.array(std_R_o_buff)
+raw_real_vect2 = np.array(raw_data_real_1_o_buff)
+plt.title('Real component')
+plt.plot(raw_real_vect2,label='Signal)
+plt.plot(mad_real_vect,label='MAD 3-$\sigma$ upper threshold')
+plt.plot(-mad_real_vect,label='MAD 3-$\sigma$ lower threshold')
+plt.plot(std_real_vect,label='STD 3-$\sigma$ upper threshold')
+plt.plot(-std_real_vect,label='STD 3-$\sigma$ lower threshold')
+pltH = plt.gcf()
+pltH.set_size_inches([10, 8])
+plt.legend()
+plt.show()
+
+mad_im_vect = np.array(mad_I_o_buff)
+std_im_vect = np.array(std_I_o_buff)
+raw_im_vect2 = np.array(raw_data_im_1_o_buff)
+plt.title('Imaginary component')
+plt.plot(raw_im_vect2,label='Signal)
+plt.plot(mad_im_vect,label='MAD 3-$\sigma$ upper threshold')
+plt.plot(-mad_im_vect,label='MAD 3-$\sigma$ lower threshold')
+plt.plot(std_im_vect,label='STD 3-$\sigma$ upper threshold')
+plt.plot(-std_im_vect,label='STD 3-$\sigma$ lower threshold')
+pltH = plt.gcf()
+pltH.set_size_inches([10, 8])
+plt.legend()
+plt.show()
+
+#plot filtered signal
+filter_real_vect = np.array(filtered_real_0_o_buff)
+plt.title('Real component')
+plt.plot(filter_real_vect,label='Filtered signal')
+pltH = plt.gcf()
+pltH.set_size_inches([10, 8])
+
+filter_im_vect = np.array(filtered_im_0_o_buff)
+plt.title('Imaginary component')
+plt.plot(filter_im_vect,label='Filtered signal')
+pltH = plt.gcf()
+pltH.set_size_inches([10, 8])
+
+# Data restitution
+#TODO
 ```
 >> - run notebook
 :fireworks:
@@ -218,7 +316,7 @@ oui oui
 [TODO]
 
 
-*References:*
+### References
 [[1] O. Renaud, D. Gageot, K. Desnos, J.-F. Nezan, SCAPE: HW-Aware Clustering of Dataflow Actors for Tunable Scheduling Complexity, IETR, 2023](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
 
 [2] O. Renaud, N. Haggui, K. Desnos, J.-F, Nezan. Automated Clustering and Pipelining of Dataflow Actors for Controlled Scheduling Complexity, IETR, 2023.

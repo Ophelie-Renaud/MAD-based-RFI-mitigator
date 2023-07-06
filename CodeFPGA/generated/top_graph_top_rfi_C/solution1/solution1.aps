@@ -13,7 +13,13 @@
         <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock default="false" name="default" period="10.0"/>
+        <clock name="default" default="false" period="10.0"/>
     </clockList>
+    <config>
+        <config_export format="ip_catalog" output="top_graph_top_rfi_C.zip" rtl="verilog"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="top_graph_top_rfi_C" version="" display_name="" taxonomy=""/>
+    </ExportDesign>
 </AutoPilot:solution>
 

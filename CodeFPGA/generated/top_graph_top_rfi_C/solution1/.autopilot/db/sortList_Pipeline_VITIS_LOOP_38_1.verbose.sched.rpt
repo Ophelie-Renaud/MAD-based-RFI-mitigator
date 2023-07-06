@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sortList_Pipeline_VITIS_LOOP_38_1'
 ================================================================
-* Date:           Wed Jul  5 23:25:23 2023
+* Date:           Thu Jul  6 01:41:36 2023
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        top_graph_top_rfi_C
@@ -174,7 +174,7 @@ The critical path consists of the following:
  <State 2>: 5.59ns
 The critical path consists of the following:
 	'load' operation ('x', ../include/madCpt.hpp:39) on array 'data' [23]  (3.25 ns)
-	'sub' operation ('sub_ln1364') [33]  (1.64 ns)
+	'add' operation ('sh', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:513) [31]  (1.64 ns)
 	'select' operation ('ush') [35]  (0.697 ns)
 
  <State 3>: 6.78ns

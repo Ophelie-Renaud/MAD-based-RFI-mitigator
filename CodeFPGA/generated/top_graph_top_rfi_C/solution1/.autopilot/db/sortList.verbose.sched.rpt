@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sortList'
 ================================================================
-* Date:           Wed Jul  5 23:25:24 2023
+* Date:           Thu Jul  6 01:41:36 2023
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        top_graph_top_rfi_C
@@ -222,9 +222,9 @@ The critical path consists of the following:
  <State 5>: 6.95ns
 The critical path consists of the following:
 	'load' operation ('num_1_loc_load') on local variable 'num_1_loc' [11]  (0 ns)
-	'sub' operation ('sub_ln1364') [21]  (1.64 ns)
+	'add' operation ('sh', /wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:513) [19]  (1.64 ns)
 	'select' operation ('ush') [23]  (0.697 ns)
-	'shl' operation ('r.V') [27]  (0 ns)
+	'lshr' operation ('r.V') [26]  (0 ns)
 	'select' operation ('val') [31]  (4.61 ns)
 
  <State 6>: 3.25ns

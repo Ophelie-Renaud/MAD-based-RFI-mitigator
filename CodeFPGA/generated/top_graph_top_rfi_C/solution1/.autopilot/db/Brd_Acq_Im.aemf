@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592335235">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600333295">
   <ports id="1" name="raw_data_im_i_stream" type="PortType" coreId="3789714224" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="raw_data_im_o_stream" type="PortType" coreId="2466504976" bitwidth="64" direction="DirOut">
+  <ports id="2" name="raw_data_im_o_stream" type="PortType" coreId="3204272208" bitwidth="64" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="3" name="raw_data_im_1_o_stream" type="PortType" coreId="2466067696" bitwidth="64" direction="DirOut">
+  <ports id="3" name="raw_data_im_1_o_stream" type="PortType" coreId="1139933544" bitwidth="64" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="2466065216" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="4" name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3204059312" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="2466087296" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="5" name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3203962464" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i" type="PortType" coreName="FIFO" coreId="2466091216" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="6" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3204274816" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="32" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>

@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" line="172" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="mem_read_top_rfi_C.cpp" line="82" pragmaType="interface" parentfunction="mem_read_top_rfi_C" mode="m_axi" port="raw_data_real_i_mem" bundle="" offset="slave" name="raw_data_real_i_mem" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="mem_read_top_rfi_C.cpp" line="83" pragmaType="interface" parentfunction="mem_read_top_rfi_C" mode="axis" port="raw_data_real_i_stream" register="0" register_mode="both" name="raw_data_real_i_stream" depth="-1"/>
+<pragma file="mem_read_top_rfi_C.cpp" line="84" pragmaType="interface" parentfunction="mem_read_top_rfi_C" mode="m_axi" port="raw_data_im_i_mem" bundle="" offset="slave" name="raw_data_im_i_mem" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="mem_read_top_rfi_C.cpp" line="85" pragmaType="interface" parentfunction="mem_read_top_rfi_C" mode="axis" port="raw_data_im_i_stream" register="0" register_mode="both" name="raw_data_im_i_stream" depth="-1"/>
+<pragma file="mem_read_top_rfi_C.cpp" line="86" pragmaType="interface" parentfunction="mem_read_top_rfi_C" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

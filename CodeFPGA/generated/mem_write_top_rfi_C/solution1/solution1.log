@@ -1,0 +1,68 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Cannot find source file ../include; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.026 GB.
+INFO: [HLS 200-10] Analyzing design file 'mem_write_top_rfi_C.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.87 seconds. CPU system time: 0.52 seconds. Elapsed time: 3.08 seconds; current allocated memory: 114.461 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 0, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 1, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 2, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 3, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 4, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 5, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 6, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 7, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 8, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 9, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 10, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 11, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.21 seconds. CPU system time: 0.23 seconds. Elapsed time: 3.51 seconds; current allocated memory: 114.832 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 114.832 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 116.184 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 116.238 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (mem_write_top_rfi_C.cpp:139) in function 'mem_write_top_rfi_C' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:88)...11 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 140.777 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 140.777 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mem_write_top_rfi_C' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem_write_top_rfi_C' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_1_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_2_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_3_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_4_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_11_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 12, Depth = 19, loop 'Loop 1'
+WARNING: [HLS 200-871] Estimated clock period (7.591ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'mem_write_top_rfi_C' consists of the following:	'load' operation ('current_rate_10_load', mem_write_top_rfi_C.cpp:58) on static variable 'current_rate_10' [117]  (0 ns)
+	'icmp' operation ('icmp_ln58', mem_write_top_rfi_C.cpp:58) [118]  (2.47 ns)
+	'and' operation ('and_ln58', mem_write_top_rfi_C.cpp:58) [121]  (0.978 ns)
+	multiplexor before 'phi' operation ('shouldContinue') [151]  (1.59 ns)
+	blocking operation 2.55 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.71 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.72 seconds; current allocated memory: 140.777 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 140.777 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------

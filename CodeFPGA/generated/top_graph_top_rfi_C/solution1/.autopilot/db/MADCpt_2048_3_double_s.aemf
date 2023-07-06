@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592336931">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600334975">
   <ports id="1" name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="2147483647" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -180,7 +180,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="empty" coreId="0" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="empty" coreId="3208721856" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1"/>
     <node_objs xsi:type="cdfg:CdfgNode" id="32" name="_ln0" rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1_fu_184" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
@@ -188,20 +188,20 @@
       <dataInputObjs>stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i</dataInputObjs>
       <constName>MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="empty_322" coreId="0" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="empty_322" coreId="3205671104" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
     <node_objs xsi:type="cdfg:CdfgNode" id="34" name="_ln89" lineNumber="89" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_sortList_fu_196" coreId="0" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.82" m_topoIndex="14" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="89" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>sortList</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln90" lineNumber="90" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_sortList_fu_202" coreId="2470941792" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.82" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln90" lineNumber="90" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_sortList_fu_202" coreId="0" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.82" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="90" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>sortList</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="sorted_list_R_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="0" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="sorted_list_R_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1664054124" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -212,7 +212,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>dadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="sorted_list_R_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2469768800" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="sorted_list_R_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="574452846" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -245,7 +245,7 @@
       <dataInputObjs>fptrunc</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="sorted_list_I_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2470101680" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="sorted_list_I_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="3207286080" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -256,7 +256,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>dadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sorted_list_I_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2469031888" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sorted_list_I_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="3207271464" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -267,7 +267,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>dadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="_ln58" lineNumber="58" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1_fu_208" coreId="2469208016" contextFuncName="computeMedian" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="_ln58" lineNumber="58" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1_fu_208" coreId="3207286080" contextFuncName="computeMedian" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="58" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>fpext</dataInputObjs>
@@ -296,26 +296,26 @@
       <dataInputObjs>fptrunc</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln58" lineNumber="58" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115_fu_215" coreId="784" contextFuncName="computeMedian" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln58" lineNumber="58" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115_fu_215" coreId="3207480536" contextFuncName="computeMedian" opcode="call" nodeLabel="23.0" nodeLatency="1" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="58" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>fpext</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln103" lineNumber="103" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_sortList_fu_196" coreId="2469210528" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="1.82" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln103" lineNumber="103" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_sortList_fu_196" coreId="0" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="1.82" m_topoIndex="34" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="103" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>sortList</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln105" lineNumber="105" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_sortList_fu_202" coreId="2468266128" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="1.82" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="_ln105" lineNumber="105" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_sortList_fu_202" coreId="3207805760" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="25.0" nodeLatency="1" m_display="0" m_delay="1.82" m_topoIndex="35" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="105" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>sortList</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="sorted_deviated_list_R_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="176" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="sorted_deviated_list_R_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="0" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -326,7 +326,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>dadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="sorted_deviated_list_R_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2469128528" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="sorted_deviated_list_R_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1702258035" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -365,7 +365,7 @@
       <dataOutputObjs>dmul</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="sorted_deviated_list_I_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2469987824" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="sorted_deviated_list_I_i_addr" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="3206955328" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -376,7 +376,7 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>dadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="sorted_deviated_list_I_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="304" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="sorted_deviated_list_I_i_addr_1" lineNumber="57" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="3207892960" contextFuncName="computeMedian" bitwidth="11" opcode="getelementptr" nodeLabel="27.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeMedian"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -427,7 +427,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln108" lineNumber="108" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2_fu_222" coreId="2469885776" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="61.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="56" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="_ln108" lineNumber="108" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2_fu_222" coreId="1111455275" contextFuncName="MADCpt_2048_3_double_s" opcode="call" nodeLabel="61.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="56" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="108" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>dmul</dataInputObjs>
@@ -435,15 +435,15 @@
       <dataInputObjs>dmul</dataInputObjs>
       <constName>MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="empty_323" coreId="0" bitwidth="32" opcode="wait" nodeLabel="63.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="_ln0" rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3_fu_230" coreId="2469919536" opcode="call" nodeLabel="63.0" nodeLatency="1" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="empty_323" coreId="3207286080" bitwidth="32" opcode="wait" nodeLabel="63.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="_ln0" rtlName="grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3_fu_230" coreId="3207286080" opcode="call" nodeLabel="63.0" nodeLatency="1" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>stream_MAD_Computation_mad_R_o_Brd_MAD_R_in</dataOutputObjs>
       <dataOutputObjs>stream_MAD_Computation_mad_I_o_Brd_MAD_I_in</dataOutputObjs>
       <constName>MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="_ln0" coreId="0" opcode="ret" nodeLabel="64.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="_ln0" coreId="3207686592" opcode="ret" nodeLabel="64.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="../include/madCpt.hpp">
       <validLinenumbers>81</validLinenumbers>
       <validLinenumbers>82</validLinenumbers>

@@ -200,10 +200,12 @@
   },
   "HlsSolution": {
     "FlowTarget": "vivado",
-    "DirectiveTcl": [
-      "set_directive_top top_graph_top_rfi_C -name top_graph_top_rfi_C",
-      "set_directive_top top_graph_top_rfi_C -name top_graph_top_rfi_C"
+    "ConfigTcl": [
+      "config_export -format=ip_catalog",
+      "config_export -output=top_graph_top_rfi_C.zip",
+      "config_export -rtl=verilog"
     ],
+    "DirectiveTcl": ["set_directive_top top_graph_top_rfi_C -name top_graph_top_rfi_C"],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "top_graph_top_rfi_C"
@@ -332,6 +334,15 @@
       "impl\/verilog\/top_graph_top_rfi_C_flow_control_loop_pipe_sequential_init.v",
       "impl\/verilog\/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1.v",
       "impl\/verilog\/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1.v",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_detection_unit.v",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_detector.vh",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_idx0_monitor.v",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_idx1_monitor.v",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_idx2_monitor.v",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_idx7_monitor.v",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_idx8_monitor.v",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_kernel_monitor_top.vh",
+      "impl\/verilog\/top_graph_top_rfi_C_hls_deadlock_report_unit.vh",
       "impl\/verilog\/top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1.v",
       "impl\/verilog\/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1.v",
       "impl\/verilog\/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115.v",
@@ -2713,7 +2724,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2023-07-05 23:25:46 CEST",
+    "Time": "2023-07-06 01:42:00 CEST",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }

@@ -1,0 +1,126 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:718:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:732:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:746:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:112:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=mem_write_top_rfi_C" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:112:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=raw_data_im_o_mem name=raw_data_im_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:113:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=raw_data_im_o_stream name=raw_data_im_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:114:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=raw_data_real_o_mem name=raw_data_real_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=raw_data_real_o_stream name=raw_data_real_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=mad_R_o_mem name=mad_R_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=mad_R_o_stream name=mad_R_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=raw_data_real_1_o_mem name=raw_data_real_1_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:119:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=raw_data_real_1_o_stream name=raw_data_real_1_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:120:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=std_R_o_mem name=std_R_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=std_R_o_stream name=std_R_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=raw_data_im_1_o_mem name=raw_data_im_1_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:123:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=raw_data_im_1_o_stream name=raw_data_im_1_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:124:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=mad_I_o_mem name=mad_I_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:125:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=mad_I_o_stream name=mad_I_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:126:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=std_I_o_mem name=std_I_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:127:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=std_I_o_stream name=std_I_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:128:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=filtered_im_0_o_mem name=filtered_im_0_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:129:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=filtered_im_0_o_stream name=filtered_im_0_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=filtered_real_0_o_mem name=filtered_real_0_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:131:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=filtered_real_0_o_stream name=filtered_real_0_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:132:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=filtered_im_1_o_mem name=filtered_im_1_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:133:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=filtered_im_1_o_stream name=filtered_im_1_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:134:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=filtered_real_1_o_mem name=filtered_real_1_o_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:135:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=filtered_real_1_o_stream name=filtered_real_1_o_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:136:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 2, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 2, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 3, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 3, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 4, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 4, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 5, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 5, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 6, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 6, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 7, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 7, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 8, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 8, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 9, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 9, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 10, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 10, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 11, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;double, 11, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

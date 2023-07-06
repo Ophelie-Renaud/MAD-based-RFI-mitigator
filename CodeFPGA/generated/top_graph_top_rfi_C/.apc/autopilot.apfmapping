@@ -6,5 +6,7 @@
     <originFiles name="rfiFilter.hpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/include/rfiFilter.hpp"/>
     <originFiles name="stdCpt.hpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/include/stdCpt.hpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="top_graph_top_rfi_C_testbench.cpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C_testbench.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592335347">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600333415">
   <ports id="1" name="RDRi" type="PortType" coreName="RAM" coreId="997420912" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <ports id="2" name="RDIi" type="PortType" coreName="RAM" coreId="2147483647" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="3" name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="192" bitwidth="64" iftype="IfTypeRom">
+  <ports id="3" name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="1140014365" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="2467180608" bitwidth="64" iftype="IfTypeRom">
+  <ports id="4" name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3204944160" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="37" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -45,24 +45,24 @@
   <edges id="134" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
   <blocks id="10" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>block_17</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i" originalName="i" coreId="1870146795" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i" originalName="i" coreId="4294967295" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_write_ln0" coreId="4294967295" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="2208643982" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <controlInputObjs>block_17</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="32" name=".exitStub" type="BlockType">
     <controlInputObjs>block_17</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="_ln0" coreId="2466004688" opcode="ret" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="_ln0" coreId="608" opcode="ret" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="103" pipe_depth="2" RegionName="VITIS_LOOP_84_1">
     <basic_blocks id="17" name="block_17" type="BlockType">
@@ -72,7 +72,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>.exitStub</controlOutputObjs>
       <controlOutputObjs>.split22.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="i_12" lineNumber="84" originalName="i" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="0" contextFuncName="MADCpt_2048_3_double_s" bitwidth="12" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="i_12" lineNumber="84" originalName="i" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="939524240" contextFuncName="MADCpt_2048_3_double_s" bitwidth="12" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="84" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -91,7 +91,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln84" lineNumber="84" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1870659004" contextFuncName="MADCpt_2048_3_double_s" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln84" lineNumber="84" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="304" contextFuncName="MADCpt_2048_3_double_s" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="84" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split22.i</controlInputObjs>
@@ -105,7 +105,7 @@
       <controlInputObjs>block_17</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_17</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_cast_i" lineNumber="84" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="i_cast_i_fu_109_p1" coreId="784" contextFuncName="MADCpt_2048_3_double_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_cast_i" lineNumber="84" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="i_cast_i_fu_109_p1" coreId="542329928" contextFuncName="MADCpt_2048_3_double_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="84" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -116,12 +116,12 @@
         <dataInputObjs>stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i</dataInputObjs>
         <dataOutputObjs>bitcast</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="RDRi_d0" coreId="176" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="RDRi_d0" coreId="1140230450" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="RDRi_addr" lineNumber="85" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="326" contextFuncName="MADCpt_2048_3_double_s" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="RDRi_addr" lineNumber="85" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="176" contextFuncName="MADCpt_2048_3_double_s" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="85" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>RDRi</dataOutputObjs>
@@ -138,12 +138,12 @@
         <dataInputObjs>stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i</dataInputObjs>
         <dataOutputObjs>bitcast</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="tmp_29" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="RDIi_d0" coreId="330" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="tmp_29" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="RDIi_d0" coreId="741681509" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="RDIi_addr" lineNumber="86" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1870214592" contextFuncName="MADCpt_2048_3_double_s" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="RDIi_addr" lineNumber="86" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1852404833" contextFuncName="MADCpt_2048_3_double_s" bitwidth="11" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="86" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>RDIi</dataOutputObjs>
@@ -155,12 +155,12 @@
         <dataInputObjs>bitcast</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_write_ln84" lineNumber="84" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2465974528" contextFuncName="MADCpt_2048_3_double_s" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_write_ln84" lineNumber="84" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="3204542400" contextFuncName="MADCpt_2048_3_double_s" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="84" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="MADCpt&amp;lt;2048, 3, double&amp;gt;"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln0" coreId="2466005744" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln0" coreId="3204575120" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <controlInputObjs>block_17</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../include/madCpt.hpp">

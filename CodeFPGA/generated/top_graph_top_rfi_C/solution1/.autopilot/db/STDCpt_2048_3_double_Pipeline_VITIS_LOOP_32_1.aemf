@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592339895">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600338039">
   <ports id="1" name="deviation_list_R" type="PortType" coreName="RAM" coreId="997420912" bitwidth="64" iftype="IfTypeRegister" arraysize="2048">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
@@ -44,39 +44,39 @@
   <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0" is_back_edge="1"/>
   <blocks id="8" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>_Z16stdDeviationListPddiS_.exit28.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="sum" originalName="sum" coreId="1702127904" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="sum" originalName="sum" coreId="480" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i_7" originalName="i" coreId="1885692960" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i_7" originalName="i" coreId="3213979744" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i_7_write_ln0" coreId="2473714512" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i_7_write_ln0" coreId="128" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sum_write_ln0" coreId="1014199401" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sum_write_ln0" coreId="544108393" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln0" coreId="741681509" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln0" coreId="1117724990" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <controlInputObjs>_Z16stdDeviationListPddiS_.exit28.i</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="29" name="_Z15computeVariancePdi.exit.i.preheader.exitStub" type="BlockType">
     <controlInputObjs>_Z16stdDeviationListPddiS_.exit28.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="sum_load" coreId="1599294536" bitwidth="64" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="sum_load" coreId="0" bitwidth="64" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="sum_4_out_write_ln0" coreId="2476894528" opcode="write" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="sum_4_out_write_ln0" coreId="3215609104" opcode="write" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>sum_4_out</dataOutputObjs>
     </node_objs>
@@ -90,7 +90,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z15computeVariancePdi.exit.i.preheader.exitStub</controlOutputObjs>
       <controlOutputObjs>.split6.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i" lineNumber="32" originalName="i" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="1919903342" contextFuncName="computeVariance" bitwidth="12" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i" lineNumber="32" originalName="i" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="3215244096" contextFuncName="computeVariance" bitwidth="12" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="32" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeVariance"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -109,7 +109,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln32" lineNumber="32" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="0" contextFuncName="computeVariance" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln32" lineNumber="32" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="304" contextFuncName="computeVariance" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="32" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeVariance"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split6.i</controlInputObjs>
@@ -123,18 +123,18 @@
       <controlInputObjs>_Z16stdDeviationListPddiS_.exit28.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z16stdDeviationListPddiS_.exit28.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="sum_load_2" lineNumber="33" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="2477986960" contextFuncName="computeVariance" bitwidth="64" opcode="load" nodeLabel="2.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="sum_load_2" lineNumber="33" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="657008190" contextFuncName="computeVariance" bitwidth="64" opcode="load" nodeLabel="2.0" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="33" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeVariance"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>store</dataInputObjs>
         <dataOutputObjs>dadd</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_7_cast_i" lineNumber="32" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="i_7_cast_i_fu_91_p1" coreId="0" contextFuncName="computeVariance" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_7_cast_i" lineNumber="32" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="i_7_cast_i_fu_91_p1" coreId="741681509" contextFuncName="computeVariance" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="32" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeVariance"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="deviation_list_R_addr" lineNumber="33" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="0" contextFuncName="computeVariance" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="deviation_list_R_addr" lineNumber="33" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="1014199401" contextFuncName="computeVariance" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="33" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeVariance"/>
         <dataInputObjs>deviation_list_R</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -152,18 +152,18 @@
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i_7_write_ln32" lineNumber="32" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="542329928" contextFuncName="computeVariance" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i_7_write_ln32" lineNumber="32" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="3214969600" contextFuncName="computeVariance" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="32" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeVariance"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="sum_write_ln33" lineNumber="33" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="0" contextFuncName="computeVariance" opcode="store" nodeLabel="9.0" m_display="1" m_delay="1.58" m_isLCDNode="true" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="sum_write_ln33" lineNumber="33" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="542329928" contextFuncName="computeVariance" opcode="store" nodeLabel="9.0" m_display="1" m_delay="1.58" m_isLCDNode="true" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="33" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeVariance"/>
         <dataInputObjs>dadd</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln0" coreId="2476895280" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln0" coreId="0" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
         <controlInputObjs>_Z16stdDeviationListPddiS_.exit28.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../include/stdCpt.hpp">

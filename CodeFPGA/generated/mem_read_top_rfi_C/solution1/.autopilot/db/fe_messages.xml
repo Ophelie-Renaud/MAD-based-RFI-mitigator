@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:718:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:732:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_ref.h:746:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_read_top_rfi_C.cpp:83:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="mem_read_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=mem_read_top_rfi_C" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_read_top_rfi_C.cpp:83:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_read_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=raw_data_real_i_mem name=raw_data_real_i_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_read_top_rfi_C.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_read_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=raw_data_real_i_stream name=raw_data_real_i_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_read_top_rfi_C.cpp:85:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_read_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi offset=slave port=raw_data_im_i_mem name=raw_data_im_i_mem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_read_top_rfi_C.cpp:86:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_read_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=raw_data_im_i_stream name=raw_data_im_i_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_read_top_rfi_C.cpp:87:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem_read_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Inlining function 'bool readInput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_read_top_rfi_C'">
+        <args Callee="bool readInput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_read_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Inlining function 'bool readInput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_read_top_rfi_C'">
+        <args Callee="bool readInput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_read_top_rfi_C"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

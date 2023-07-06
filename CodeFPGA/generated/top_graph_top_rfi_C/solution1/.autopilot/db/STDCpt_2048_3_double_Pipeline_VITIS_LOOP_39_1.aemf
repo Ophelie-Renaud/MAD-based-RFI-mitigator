@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592339139">
-  <ports id="1" name="RRi" type="PortType" coreName="RAM" coreId="2475315712" bitwidth="64" iftype="IfTypeRegister" arraysize="2048">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600337271">
+  <ports id="1" name="RRi" type="PortType" coreName="RAM" coreId="3211748112" bitwidth="64" iftype="IfTypeRegister" arraysize="2048">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="average_R" type="PortType" coreId="2470842960" bitwidth="64">
+  <ports id="2" name="average_R" type="PortType" coreId="1110690291" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="3" name="deviation_list_R" type="PortType" coreName="RAM" coreId="842019375" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
@@ -54,28 +54,28 @@
   <edges id="121" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
   <blocks id="20" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>block_27</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i_5" originalName="i" coreId="2475315712" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i_5" originalName="i" coreId="3211748112" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="average_R_read" coreId="2474535344" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="average_R_read" coreId="3212661952" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>average_R</dataInputObjs>
       <dataOutputObjs>dsub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_5_write_ln0" coreId="2475827440" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_5_write_ln0" coreId="3213593040" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln0" coreId="2475874896" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln0" coreId="3212786016" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <controlInputObjs>block_27</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="41" name="_Z16stdDeviationListPddiS_.exit.i.exitStub" type="BlockType">
     <controlInputObjs>block_27</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln0" coreId="2475824960" opcode="ret" nodeLabel="146.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="_ln0" coreId="3213590560" opcode="ret" nodeLabel="146.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="549" pipe_depth="148" RegionName="VITIS_LOOP_39_1">
     <basic_blocks id="27" name="block_27" type="BlockType">
@@ -85,7 +85,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z16stdDeviationListPddiS_.exit.i.exitStub</controlOutputObjs>
       <controlOutputObjs>.split10.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="i" lineNumber="39" originalName="i" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="1878096453" contextFuncName="stdDeviationList" bitwidth="12" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="i" lineNumber="39" originalName="i" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="3211808960" contextFuncName="stdDeviationList" bitwidth="12" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="39" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="stdDeviationList"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -104,7 +104,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="br_ln39" lineNumber="39" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="1836279141" contextFuncName="stdDeviationList" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="br_ln39" lineNumber="39" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="741681509" contextFuncName="stdDeviationList" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="39" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="stdDeviationList"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split10.i</controlInputObjs>
@@ -118,13 +118,13 @@
       <controlInputObjs>block_27</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_27</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_5_cast_i" lineNumber="39" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="i_5_cast_i_fu_156_p1" coreId="741681509" contextFuncName="stdDeviationList" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_5_cast_i" lineNumber="39" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="i_5_cast_i_fu_156_p1" coreId="3213590560" contextFuncName="stdDeviationList" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="39" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="stdDeviationList"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="RRi_addr" lineNumber="40" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="1752457581" contextFuncName="stdDeviationList" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="RRi_addr" lineNumber="40" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="3213609736" contextFuncName="stdDeviationList" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="40" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="stdDeviationList"/>
         <dataInputObjs>RRi</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -142,7 +142,7 @@
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_i" lineNumber="7" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" coreId="0" contextFuncName="pow" bitwidth="64" opcode="call" nodeLabel="9.0" nodeLatency="80" m_display="0" m_delay="6.56" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_i" lineNumber="7" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" coreId="3213590560" contextFuncName="pow" bitwidth="64" opcode="call" nodeLabel="9.0" nodeLatency="80" m_display="0" m_delay="6.56" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp" linenumber="7" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="pow"/>
         <dataInputObjs>dsub</dataInputObjs>
         <dataOutputObjs>dsqrt</dataOutputObjs>
@@ -153,7 +153,7 @@
         <dataInputObjs>call</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="deviation_list_R_addr" lineNumber="40" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="2475824960" contextFuncName="stdDeviationList" bitwidth="11" opcode="getelementptr" nodeLabel="147.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="deviation_list_R_addr" lineNumber="40" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="3213605184" contextFuncName="stdDeviationList" bitwidth="11" opcode="getelementptr" nodeLabel="147.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="40" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="stdDeviationList"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>deviation_list_R</dataOutputObjs>
@@ -165,12 +165,12 @@
         <dataInputObjs>dsqrt</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="i_5_write_ln39" lineNumber="39" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="2475824960" contextFuncName="stdDeviationList" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="i_5_write_ln39" lineNumber="39" fileName="../include/stdCpt.hpp" fileDirectory=".." coreId="3213607224" contextFuncName="stdDeviationList" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="39" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="stdDeviationList"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln0" coreId="0" opcode="br" nodeLabel="147.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln0" coreId="3213607552" opcode="br" nodeLabel="147.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <controlInputObjs>block_27</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592341319">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600339443">
   <ports id="1" name="mad_R_o_stream" type="PortType" coreId="997420912" bitwidth="64" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="2" name="stream_MAD_Computation_mad_R_o_Brd_MAD_R_in" type="PortType" coreName="FIFO" coreId="0" bitwidth="64" iftype="IfTypeRom">
+  <ports id="2" name="stream_MAD_Computation_mad_R_o_Brd_MAD_R_in" type="PortType" coreName="FIFO" coreId="3214030592" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" type="PortType" coreName="FIFO" coreId="0" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="3" name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" type="PortType" coreName="FIFO" coreId="3216648784" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="20" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -31,7 +31,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln0" coreId="2479658240" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln0" coreId="3216638424" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
       <validLinenumbers>144</validLinenumbers>
       <validLinenumbers>173</validLinenumbers>

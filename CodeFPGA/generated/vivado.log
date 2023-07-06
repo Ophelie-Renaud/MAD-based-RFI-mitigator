@@ -1,0 +1,505 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jul  6 01:44:08 2023
+# Process ID: 66536
+# Current directory: /home/orenaud/preesm2/RFI/CodeFPGA/generated
+# Command line: vivado -mode tcl -source scripts//script_vivado.tcl -tclargs -j 2
+# Log file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado.log
+# Journal file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado.jou
+# Running On: pc-eii26, OS: Linux, CPU Frequency: 4201.895 MHz, CPU Physical cores: 4, Host memory: 33456 MB
+#-----------------------------------------------------------
+source scripts//script_vivado.tcl
+# package require try
+# package require cmdline
+# set options {
+# 	{j.arg	1	"number of parallel jobs"}
+# }
+# set usage "script_hls \[options] \nooptions:"
+# try {
+# 	array set params [::cmdline::getoptions argv $options $usage]
+# } trap {CMDLINE USAGE} {msg o} {
+# 	puts $msg
+# 	exit 1
+# }
+# create_project vivado vivado -part xc7z020-clg400-1
+# set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+# create_bd_design "design_1"
+Wrote  : </home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [BD 41-2613] The output directory /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1 for design_1 cannot be found.
+# update_compile_order -fileset sources_1
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+# create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+# apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+# set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.051 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.006 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+# set_property  ip_repo_paths . [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/orenaud/preesm2/RFI/CodeFPGA/generated'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/orenaud/preesm2/RFI/CodeFPGA/generated' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado'.)
+# create_bd_cell -type ip -vlnv xilinx.com:hls:top_graph_top_rfi_C:1.0 top_graph_top_rfi_C_0
+# create_bd_cell -type ip -vlnv xilinx.com:hls:mem_read_top_rfi_C:1.0 mem_read_top_rfi_C_0
+# create_bd_cell -type ip -vlnv xilinx.com:hls:mem_write_top_rfi_C:1.0 mem_write_top_rfi_C_0
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/mem_read_top_rfi_C_0/s_axi_control} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins mem_read_top_rfi_C_0/s_axi_control]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment '/mem_read_top_rfi_C_0/s_axi_control/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/mem_write_top_rfi_C_0/s_axi_control} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins mem_write_top_rfi_C_0/s_axi_control]
+Slave segment '/mem_write_top_rfi_C_0/s_axi_control/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4001_0000 [ 64K ]>.
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/mem_read_top_rfi_C_0/m_axi_gmem} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/mem_read_top_rfi_C_0/Data_m_axi_gmem' at <0x0000_0000 [ 512M ]>.
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/mem_write_top_rfi_C_0/m_axi_gmem} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins mem_write_top_rfi_C_0/m_axi_gmem]
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/mem_write_top_rfi_C_0/Data_m_axi_gmem' at <0x0000_0000 [ 512M ]>.
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_real_i_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_raw_data_real_i_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_real_i_stream]
+# connect_bd_intf_net [get_bd_intf_pins mem_read_top_rfi_C_0/raw_data_real_i_stream] [get_bd_intf_pins axis_data_fifo_raw_data_real_i_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_real_i_stream/M_AXIS] [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_real_i_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_im_i_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_raw_data_im_i_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_im_i_stream]
+# connect_bd_intf_net [get_bd_intf_pins mem_read_top_rfi_C_0/raw_data_im_i_stream] [get_bd_intf_pins axis_data_fifo_raw_data_im_i_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_im_i_stream/M_AXIS] [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_im_i_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_im_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_raw_data_im_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_im_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_im_o_stream] [get_bd_intf_pins axis_data_fifo_raw_data_im_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_im_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_im_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_real_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_raw_data_real_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_real_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_real_o_stream] [get_bd_intf_pins axis_data_fifo_raw_data_real_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_real_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_real_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_mad_R_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_mad_R_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_mad_R_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/mad_R_o_stream] [get_bd_intf_pins axis_data_fifo_mad_R_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_mad_R_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/mad_R_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_real_1_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_raw_data_real_1_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_real_1_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_real_1_o_stream] [get_bd_intf_pins axis_data_fifo_raw_data_real_1_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_real_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_real_1_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_std_R_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_std_R_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_std_R_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/std_R_o_stream] [get_bd_intf_pins axis_data_fifo_std_R_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_std_R_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/std_R_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_raw_data_im_1_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_raw_data_im_1_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_raw_data_im_1_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/raw_data_im_1_o_stream] [get_bd_intf_pins axis_data_fifo_raw_data_im_1_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_raw_data_im_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/raw_data_im_1_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_mad_I_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_mad_I_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_mad_I_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/mad_I_o_stream] [get_bd_intf_pins axis_data_fifo_mad_I_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_mad_I_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/mad_I_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_std_I_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_std_I_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_std_I_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/std_I_o_stream] [get_bd_intf_pins axis_data_fifo_std_I_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_std_I_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/std_I_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_im_0_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_filtered_im_0_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_im_0_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_im_0_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_im_0_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_im_0_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_im_0_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_real_0_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_filtered_real_0_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_real_0_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_real_0_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_real_0_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_real_0_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_real_0_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_im_1_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_filtered_im_1_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_im_1_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_im_1_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_im_1_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_im_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_im_1_o_stream]
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_filtered_real_1_o_stream
+WARNING: [BD 41-1753] The name 'axis_data_fifo_filtered_real_1_o_stream' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.FIFO_DEPTH {64}] [get_bd_cells axis_data_fifo_filtered_real_1_o_stream]
+# connect_bd_intf_net [get_bd_intf_pins top_graph_top_rfi_C_0/filtered_real_1_o_stream] [get_bd_intf_pins axis_data_fifo_filtered_real_1_o_stream/S_AXIS]
+# connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_filtered_real_1_o_stream/M_AXIS] [get_bd_intf_pins mem_write_top_rfi_C_0/filtered_real_1_o_stream]
+# apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins top_graph_top_rfi_C_0/ap_clk]
+# save_bd_design
+Wrote  : </home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd> 
+# make_wrapper -files [get_files vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : </home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+# add_files -norecurse vivado/vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+# launch_runs impl_1 -to_step write_bitstream -jobs $params(j)
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s00_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_awlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/xbar/s_axi_arlock'(1) to pin: '/axi_mem_intercon/s01_couplers/M_AXI_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block top_graph_top_rfi_C_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_read_top_rfi_C_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_write_top_rfi_C_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_raw_data_real_i_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_raw_data_im_i_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_raw_data_im_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_raw_data_real_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_mad_R_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_raw_data_real_1_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_std_R_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_raw_data_im_1_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_mad_I_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_std_I_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_filtered_im_0_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_filtered_real_0_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_filtered_im_1_o_stream .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_filtered_real_1_o_stream .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+Exporting to file /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.hwdef
+[Thu Jul  6 01:44:59 2023] Launched design_1_top_graph_top_rfi_C_0_0_synth_1, design_1_mem_read_top_rfi_C_0_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_mem_write_top_rfi_C_0_0_synth_1, design_1_xbar_1_synth_1, design_1_axis_data_fifo_raw_data_real_i_stream_0_synth_1, design_1_axis_data_fifo_raw_data_im_i_stream_0_synth_1, design_1_axis_data_fifo_raw_data_im_o_stream_0_synth_1, design_1_axis_data_fifo_raw_data_real_o_stream_0_synth_1, design_1_axis_data_fifo_mad_R_o_stream_0_synth_1, design_1_axis_data_fifo_raw_data_real_1_o_stream_0_synth_1, design_1_axis_data_fifo_std_R_o_stream_0_synth_1, design_1_axis_data_fifo_raw_data_im_1_o_stream_0_synth_1, design_1_axis_data_fifo_mad_I_o_stream_0_synth_1, design_1_axis_data_fifo_std_I_o_stream_0_synth_1, design_1_axis_data_fifo_filtered_im_0_o_stream_0_synth_1, design_1_xbar_0_synth_1, design_1_rst_ps7_0_100M_0_synth_1, design_1_axis_data_fifo_filtered_real_0_o_stream_0_synth_1, design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1, design_1_axis_data_fifo_filtered_real_1_o_stream_0_synth_1, design_1_auto_pc_1_synth_1, design_1_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_top_graph_top_rfi_C_0_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_top_graph_top_rfi_C_0_0_synth_1/runme.log
+design_1_mem_read_top_rfi_C_0_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_mem_write_top_rfi_C_0_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_write_top_rfi_C_0_0_synth_1/runme.log
+design_1_xbar_1_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_xbar_1_synth_1/runme.log
+design_1_axis_data_fifo_raw_data_real_i_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_raw_data_real_i_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_raw_data_im_i_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_raw_data_im_i_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_raw_data_im_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_raw_data_im_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_raw_data_real_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_raw_data_real_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_mad_R_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_mad_R_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_raw_data_real_1_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_raw_data_real_1_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_std_R_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_std_R_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_raw_data_im_1_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_raw_data_im_1_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_mad_I_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_mad_I_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_std_I_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_std_I_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_filtered_im_0_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_im_0_o_stream_0_synth_1/runme.log
+design_1_xbar_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_xbar_0_synth_1/runme.log
+design_1_rst_ps7_0_100M_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_rst_ps7_0_100M_0_synth_1/runme.log
+design_1_axis_data_fifo_filtered_real_0_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_real_0_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1/runme.log
+design_1_axis_data_fifo_filtered_real_1_o_stream_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_real_1_o_stream_0_synth_1/runme.log
+design_1_auto_pc_1_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_auto_pc_1_synth_1/runme.log
+design_1_auto_pc_0_synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_auto_pc_0_synth_1/runme.log
+synth_1: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/runme.log
+[Thu Jul  6 01:44:59 2023] Launched impl_1...
+Run output will be captured here: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 3075.629 ; gain = 384.188 ; free physical = 6438 ; free virtual = 20005
+# wait_on_run impl_1
+[Thu Jul  6 01:44:59 2023] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/orenaud/preesm2/RFI/CodeFPGA/generated'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/orenaud/preesm2/RFI/CodeFPGA/generated' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/orenaud/Xilinx/Vivado/2021.2/data/ip'.
+Command: link_design -top design_1_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_filtered_im_0_o_stream_0/design_1_axis_data_fifo_filtered_im_0_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_filtered_im_0_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_filtered_im_1_o_stream_0/design_1_axis_data_fifo_filtered_im_1_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_filtered_im_1_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_filtered_real_0_o_stream_0/design_1_axis_data_fifo_filtered_real_0_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_filtered_real_0_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_filtered_real_1_o_stream_0/design_1_axis_data_fifo_filtered_real_1_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_filtered_real_1_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_mad_I_o_stream_0/design_1_axis_data_fifo_mad_I_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_mad_I_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_mad_R_o_stream_0/design_1_axis_data_fifo_mad_R_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_mad_R_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_data_im_1_o_stream_0/design_1_axis_data_fifo_raw_data_im_1_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_raw_data_im_1_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_data_im_i_stream_0/design_1_axis_data_fifo_raw_data_im_i_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_raw_data_im_i_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_data_im_o_stream_0/design_1_axis_data_fifo_raw_data_im_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_raw_data_im_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_data_real_1_o_stream_0/design_1_axis_data_fifo_raw_data_real_1_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_raw_data_real_1_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_data_real_i_stream_0/design_1_axis_data_fifo_raw_data_real_i_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_raw_data_real_i_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_data_real_o_stream_0/design_1_axis_data_fifo_raw_data_real_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_raw_data_real_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_std_I_o_stream_0/design_1_axis_data_fifo_std_I_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_std_I_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_std_R_o_stream_0/design_1_axis_data_fifo_std_R_o_stream_0.dcp' for cell 'design_1_i/axis_data_fifo_std_R_o_stream'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_mem_read_top_rfi_C_0_0/design_1_mem_read_top_rfi_C_0_0.dcp' for cell 'design_1_i/mem_read_top_rfi_C_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_mem_write_top_rfi_C_0_0/design_1_mem_write_top_rfi_C_0_0.dcp' for cell 'design_1_i/mem_write_top_rfi_C_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_top_graph_top_rfi_C_0_0/design_1_top_graph_top_rfi_C_0_0.dcp' for cell 'design_1_i/top_graph_top_rfi_C_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.dcp' for cell 'design_1_i/axi_mem_intercon/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2610.848 ; gain = 0.000 ; free physical = 8319 ; free virtual = 19485
+INFO: [Netlist 29-17] Analyzing 42564 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 14 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+INFO: [Project 1-1714] 31 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3181.695 ; gain = 0.000 ; free physical = 7786 ; free virtual = 18897
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 27123 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 2048 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 8176 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM64M => RAM64M (RAMD64E(x4)): 16128 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 768 instances
+
+34 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 3181.695 ; gain = 570.945 ; free physical = 7784 ; free virtual = 18897
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3181.695 ; gain = 0.000 ; free physical = 7759 ; free virtual = 18870
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: e1c5ed54
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:17 . Memory (MB): peak = 3910.246 ; gain = 728.551 ; free physical = 6788 ; free virtual = 17911
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst_i_2__0 into driver instance design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst_i_4__0, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/split_ongoing_i_1__0 into driver instance design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/S_AXI_AREADY_I_i_3__0, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/split_ongoing_i_1 into driver instance design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/S_AXI_AREADY_I_i_4, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst_i_1 into driver instance design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst_i_3__0, which resulted in an inversion of 8 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst_i_2 into driver instance design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_primitive_shifter.gen_srls[0].srl_inst_i_4, which resulted in an inversion of 7 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst_i_2__2 into driver instance design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_primitive_shifter.gen_srls[0].srl_inst_i_4__0, which resulted in an inversion of 7 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/mem_read_top_rfi_C_0/inst/gmem_m_axi_U/bus_read/fifo_rreq/readRequestFIFONotEmptyReg_i_1 into driver instance design_1_i/mem_read_top_rfi_C_0/inst/gmem_m_axi_U/bus_read/fifo_rreq/readRequestFIFONotEmptyReg_i_2, which resulted in an inversion of 53 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[1]_i_1 into driver instance design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_hot[2]_i_2, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/RFIFilter_0_2048_double_U0/dmul_64ns_64ns_64_7_max_dsp_1_U211/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_1 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/RFIFilter_0_2048_double_U0/dmul_64ns_64ns_64_7_max_dsp_1_U211/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[1]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112_fu_163/flow_control_loop_pipe_sequential_init_U/i_6_cast_i_reg_182[10]_i_2 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112_fu_163/flow_control_loop_pipe_sequential_init_U/i_fu_62[11]_i_3, which resulted in an inversion of 6 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1_fu_132/flow_control_loop_pipe_sequential_init_U/i_5_cast_i_reg_182[10]_i_2 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1_fu_132/flow_control_loop_pipe_sequential_init_U/i_5_fu_62[11]_i_3, which resulted in an inversion of 6 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 32 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1b8655018
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:11 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7122 ; free virtual = 18224
+INFO: [Opt 31-389] Phase Retarget created 274 cells and removed 380 cells
+INFO: [Opt 31-1021] In phase Retarget, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Phase 2 Constant propagation | Checksum: 183b0651a
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:12 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7121 ; free virtual = 18223
+INFO: [Opt 31-389] Phase Constant propagation created 265 cells and removed 872 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15baf5374
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:17 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7113 ; free virtual = 18230
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1046 cells
+INFO: [Opt 31-1021] In phase Sweep, 96 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 15baf5374
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:25 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7120 ; free virtual = 18236
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 1916a6c60
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7121 ; free virtual = 18237
+INFO: [Opt 31-389] Phase Shift Register Optimization created 11 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1d7b6c0f7
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7126 ; free virtual = 18240
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             274  |             380  |                                             27  |
+|  Constant propagation         |             265  |             872  |                                             27  |
+|  Sweep                        |               0  |            1046  |                                             96  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |              11  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             33  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.24 . Memory (MB): peak = 4201.262 ; gain = 0.000 ; free physical = 7131 ; free virtual = 18234
+Ending Logic Optimization Task | Checksum: 9a727f44
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:33 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7131 ; free virtual = 18234
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 888 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 440 newly gated: 15 Total Ports: 1776
+Number of Flops added for Enable Generation: 36
+
+Ending PowerOpt Patch Enables Task | Checksum: 1d4912fa5
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 6730 ; free virtual = 17841
+Ending Power Optimization Task | Checksum: 1d4912fa5
+
+Time (s): cpu = 00:03:50 ; elapsed = 00:02:24 . Memory (MB): peak = 6416.359 ; gain = 2215.098 ; free physical = 6917 ; free virtual = 18046
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 13bedf526
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:29 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 6979 ; free virtual = 18090
+Ending Final Cleanup Task | Checksum: 13bedf526
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:33 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 6982 ; free virtual = 18094
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 7009 ; free virtual = 18120
+Ending Netlist Obfuscation Task | Checksum: 13bedf526
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 7009 ; free virtual = 18120
+INFO: [Common 17-83] Releasing license: Implementation
+72 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:07:00 ; elapsed = 00:03:52 . Memory (MB): peak = 6416.359 ; gain = 3234.664 ; free physical = 7009 ; free virtual = 18121
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.02 . Memory (MB): peak = 6424.363 ; gain = 0.000 ; free physical = 7007 ; free virtual = 18121
+INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:41 ; elapsed = 00:00:28 . Memory (MB): peak = 6424.363 ; gain = 8.004 ; free physical = 6964 ; free virtual = 18108
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:04:38 ; elapsed = 00:00:54 . Memory (MB): peak = 6464.383 ; gain = 40.020 ; free physical = 6074 ; free virtual = 17281
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC UTLZ-1] Resource utilization: F7 Muxes over-utilized in Top Level Design (This design requires more F7 Muxes cells than are available in the target device. This design requires 28249 of such cell types but only 26600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: LUT as Distributed RAM over-utilized in Top Level Design (This design requires more LUT as Distributed RAM cells than are available in the target device. This design requires 106954 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+ERROR: [DRC UTLZ-1] Resource utilization: LUT as Memory over-utilized in Top Level Design (This design requires more LUT as Memory cells than are available in the target device. This design requires 108577 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+ERROR: [DRC UTLZ-1] Resource utilization: MUXF7 over-utilized in Top Level Design (This design requires more MUXF7 cells than are available in the target device. This design requires 28249 of such cell types but only 26600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 1776 of such cell types but only 280 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 888 of such cell types but only 140 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMB36E1 over-utilized in Top Level Design (This design requires more RAMB36E1 cells than are available in the target device. This design requires 888 of such cell types but only 140 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMD64E over-utilized in Top Level Design (This design requires more RAMD64E cells than are available in the target device. This design requires 74240 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMS64E over-utilized in Top Level Design (This design requires more RAMS64E cells than are available in the target device. This design requires 32704 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: Slice LUTs over-utilized in Top Level Design (This design requires more Slice LUTs cells than are available in the target device. This design requires 155592 of such cell types but only 53200 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[10] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[11] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[12] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[13] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[6] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[0]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[7] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[1]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[8] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[2]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[9] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[3]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 10 Errors, 8 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+87 Infos, 9 Warnings, 0 Critical Warnings and 11 Errors encountered.
+place_design failed
+place_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 6464.383 ; gain = 0.000 ; free physical = 6054 ; free virtual = 17247
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  6 02:04:24 2023...
+[Thu Jul  6 02:04:24 2023] impl_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'impl_1'
+wait_on_runs: Time (s): cpu = 00:24:24 ; elapsed = 00:19:25 . Memory (MB): peak = 3075.629 ; gain = 0.000 ; free physical = 6096 ; free virtual = 17289
+# exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  6 02:04:24 2023...

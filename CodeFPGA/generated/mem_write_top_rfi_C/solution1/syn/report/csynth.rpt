@@ -1,0 +1,288 @@
+
+
+================================================================
+== Synthesis Summary Report of 'mem_write_top_rfi_C'
+================================================================
++ General Information: 
+    * Date:           Thu Jul  6 01:43:40 2023
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        mem_write_top_rfi_C
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |        Modules        |  Issue |       | Latency | Latency| Iteration|         | Trip |          |        |    |           |            |     |
+    |        & Loops        |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |     LUT    | URAM|
+    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |+ mem_write_top_rfi_C  |  Timing|  -0.29|        -|       -|         -|        -|     -|        no|  8 (2%)|   -|  3897 (3%)|  5671 (10%)|    -|
+    | o Loop 1              |      II|   7.30|        -|       -|        19|       12|     -|       yes|       -|   -|          -|           -|    -|
+    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=8            |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-------------------------+--------+-------+--------+--------------------------------------+----------------------------------------------------------+
+| Interface     | Register                | Offset | Width | Access | Description                          | Bit Fields                                               |
++---------------+-------------------------+--------+-------+--------+--------------------------------------+----------------------------------------------------------+
+| s_axi_control | CTRL                    | 0x00   | 32    | RW     | Control signals                      | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART |
+| s_axi_control | GIER                    | 0x04   | 32    | RW     | Global Interrupt Enable Register     | 0=Enable                                                 |
+| s_axi_control | IP_IER                  | 0x08   | 32    | RW     | IP Interrupt Enable Register         | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN             |
+| s_axi_control | IP_ISR                  | 0x0c   | 32    | RW     | IP Interrupt Status Register         | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST             |
+| s_axi_control | raw_data_im_o_mem_1     | 0x10   | 32    | W      | Data signal of raw_data_im_o_mem     |                                                          |
+| s_axi_control | raw_data_im_o_mem_2     | 0x14   | 32    | W      | Data signal of raw_data_im_o_mem     |                                                          |
+| s_axi_control | raw_data_real_o_mem_1   | 0x1c   | 32    | W      | Data signal of raw_data_real_o_mem   |                                                          |
+| s_axi_control | raw_data_real_o_mem_2   | 0x20   | 32    | W      | Data signal of raw_data_real_o_mem   |                                                          |
+| s_axi_control | mad_R_o_mem_1           | 0x28   | 32    | W      | Data signal of mad_R_o_mem           |                                                          |
+| s_axi_control | mad_R_o_mem_2           | 0x2c   | 32    | W      | Data signal of mad_R_o_mem           |                                                          |
+| s_axi_control | raw_data_real_1_o_mem_1 | 0x34   | 32    | W      | Data signal of raw_data_real_1_o_mem |                                                          |
+| s_axi_control | raw_data_real_1_o_mem_2 | 0x38   | 32    | W      | Data signal of raw_data_real_1_o_mem |                                                          |
+| s_axi_control | std_R_o_mem_1           | 0x40   | 32    | W      | Data signal of std_R_o_mem           |                                                          |
+| s_axi_control | std_R_o_mem_2           | 0x44   | 32    | W      | Data signal of std_R_o_mem           |                                                          |
+| s_axi_control | raw_data_im_1_o_mem_1   | 0x4c   | 32    | W      | Data signal of raw_data_im_1_o_mem   |                                                          |
+| s_axi_control | raw_data_im_1_o_mem_2   | 0x50   | 32    | W      | Data signal of raw_data_im_1_o_mem   |                                                          |
+| s_axi_control | mad_I_o_mem_1           | 0x58   | 32    | W      | Data signal of mad_I_o_mem           |                                                          |
+| s_axi_control | mad_I_o_mem_2           | 0x5c   | 32    | W      | Data signal of mad_I_o_mem           |                                                          |
+| s_axi_control | std_I_o_mem_1           | 0x64   | 32    | W      | Data signal of std_I_o_mem           |                                                          |
+| s_axi_control | std_I_o_mem_2           | 0x68   | 32    | W      | Data signal of std_I_o_mem           |                                                          |
+| s_axi_control | filtered_im_0_o_mem_1   | 0x70   | 32    | W      | Data signal of filtered_im_0_o_mem   |                                                          |
+| s_axi_control | filtered_im_0_o_mem_2   | 0x74   | 32    | W      | Data signal of filtered_im_0_o_mem   |                                                          |
+| s_axi_control | filtered_real_0_o_mem_1 | 0x7c   | 32    | W      | Data signal of filtered_real_0_o_mem |                                                          |
+| s_axi_control | filtered_real_0_o_mem_2 | 0x80   | 32    | W      | Data signal of filtered_real_0_o_mem |                                                          |
+| s_axi_control | filtered_im_1_o_mem_1   | 0x88   | 32    | W      | Data signal of filtered_im_1_o_mem   |                                                          |
+| s_axi_control | filtered_im_1_o_mem_2   | 0x8c   | 32    | W      | Data signal of filtered_im_1_o_mem   |                                                          |
+| s_axi_control | filtered_real_1_o_mem_1 | 0x94   | 32    | W      | Data signal of filtered_real_1_o_mem |                                                          |
+| s_axi_control | filtered_real_1_o_mem_2 | 0x98   | 32    | W      | Data signal of filtered_real_1_o_mem |                                                          |
++---------------+-------------------------+--------+-------+--------+--------------------------------------+----------------------------------------------------------+
+
+* AXIS
++--------------------------+---------------+-------+--------+--------+
+| Interface                | Register Mode | TDATA | TREADY | TVALID |
++--------------------------+---------------+-------+--------+--------+
+| filtered_im_0_o_stream   | both          | 64    | 1      | 1      |
+| filtered_im_1_o_stream   | both          | 64    | 1      | 1      |
+| filtered_real_0_o_stream | both          | 64    | 1      | 1      |
+| filtered_real_1_o_stream | both          | 64    | 1      | 1      |
+| mad_I_o_stream           | both          | 64    | 1      | 1      |
+| mad_R_o_stream           | both          | 64    | 1      | 1      |
+| raw_data_im_1_o_stream   | both          | 64    | 1      | 1      |
+| raw_data_im_o_stream     | both          | 64    | 1      | 1      |
+| raw_data_real_1_o_stream | both          | 64    | 1      | 1      |
+| raw_data_real_o_stream   | both          | 64    | 1      | 1      |
+| std_I_o_stream           | both          | 64    | 1      | 1      |
+| std_R_o_stream           | both          | 64    | 1      | 1      |
++--------------------------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------------------+-----------+--------------------+
+| Argument                 | Direction | Datatype           |
++--------------------------+-----------+--------------------+
+| raw_data_im_o_mem        | out       | double*            |
+| raw_data_im_o_stream     | in        | stream<double, 0>& |
+| raw_data_real_o_mem      | out       | double*            |
+| raw_data_real_o_stream   | in        | stream<double, 0>& |
+| mad_R_o_mem              | out       | double*            |
+| mad_R_o_stream           | in        | stream<double, 0>& |
+| raw_data_real_1_o_mem    | out       | double*            |
+| raw_data_real_1_o_stream | in        | stream<double, 0>& |
+| std_R_o_mem              | out       | double*            |
+| std_R_o_stream           | in        | stream<double, 0>& |
+| raw_data_im_1_o_mem      | out       | double*            |
+| raw_data_im_1_o_stream   | in        | stream<double, 0>& |
+| mad_I_o_mem              | out       | double*            |
+| mad_I_o_stream           | in        | stream<double, 0>& |
+| std_I_o_mem              | out       | double*            |
+| std_I_o_stream           | in        | stream<double, 0>& |
+| filtered_im_0_o_mem      | out       | double*            |
+| filtered_im_0_o_stream   | in        | stream<double, 0>& |
+| filtered_real_0_o_mem    | out       | double*            |
+| filtered_real_0_o_stream | in        | stream<double, 0>& |
+| filtered_im_1_o_mem      | out       | double*            |
+| filtered_im_1_o_stream   | in        | stream<double, 0>& |
+| filtered_real_1_o_mem    | out       | double*            |
+| filtered_real_1_o_stream | in        | stream<double, 0>& |
++--------------------------+-----------+--------------------+
+
+* SW-to-HW Mapping
++--------------------------+--------------------------+-----------+----------+---------------------------------------------------+
+| Argument                 | HW Interface             | HW Type   | HW Usage | HW Info                                           |
++--------------------------+--------------------------+-----------+----------+---------------------------------------------------+
+| raw_data_im_o_mem        | m_axi_gmem               | interface |          |                                                   |
+| raw_data_im_o_mem        | s_axi_control            | register  | offset   | name=raw_data_im_o_mem_1 offset=0x10 range=32     |
+| raw_data_im_o_mem        | s_axi_control            | register  | offset   | name=raw_data_im_o_mem_2 offset=0x14 range=32     |
+| raw_data_im_o_stream     | raw_data_im_o_stream     | interface |          |                                                   |
+| raw_data_real_o_mem      | m_axi_gmem               | interface |          |                                                   |
+| raw_data_real_o_mem      | s_axi_control            | register  | offset   | name=raw_data_real_o_mem_1 offset=0x1c range=32   |
+| raw_data_real_o_mem      | s_axi_control            | register  | offset   | name=raw_data_real_o_mem_2 offset=0x20 range=32   |
+| raw_data_real_o_stream   | raw_data_real_o_stream   | interface |          |                                                   |
+| mad_R_o_mem              | m_axi_gmem               | interface |          |                                                   |
+| mad_R_o_mem              | s_axi_control            | register  | offset   | name=mad_R_o_mem_1 offset=0x28 range=32           |
+| mad_R_o_mem              | s_axi_control            | register  | offset   | name=mad_R_o_mem_2 offset=0x2c range=32           |
+| mad_R_o_stream           | mad_R_o_stream           | interface |          |                                                   |
+| raw_data_real_1_o_mem    | m_axi_gmem               | interface |          |                                                   |
+| raw_data_real_1_o_mem    | s_axi_control            | register  | offset   | name=raw_data_real_1_o_mem_1 offset=0x34 range=32 |
+| raw_data_real_1_o_mem    | s_axi_control            | register  | offset   | name=raw_data_real_1_o_mem_2 offset=0x38 range=32 |
+| raw_data_real_1_o_stream | raw_data_real_1_o_stream | interface |          |                                                   |
+| std_R_o_mem              | m_axi_gmem               | interface |          |                                                   |
+| std_R_o_mem              | s_axi_control            | register  | offset   | name=std_R_o_mem_1 offset=0x40 range=32           |
+| std_R_o_mem              | s_axi_control            | register  | offset   | name=std_R_o_mem_2 offset=0x44 range=32           |
+| std_R_o_stream           | std_R_o_stream           | interface |          |                                                   |
+| raw_data_im_1_o_mem      | m_axi_gmem               | interface |          |                                                   |
+| raw_data_im_1_o_mem      | s_axi_control            | register  | offset   | name=raw_data_im_1_o_mem_1 offset=0x4c range=32   |
+| raw_data_im_1_o_mem      | s_axi_control            | register  | offset   | name=raw_data_im_1_o_mem_2 offset=0x50 range=32   |
+| raw_data_im_1_o_stream   | raw_data_im_1_o_stream   | interface |          |                                                   |
+| mad_I_o_mem              | m_axi_gmem               | interface |          |                                                   |
+| mad_I_o_mem              | s_axi_control            | register  | offset   | name=mad_I_o_mem_1 offset=0x58 range=32           |
+| mad_I_o_mem              | s_axi_control            | register  | offset   | name=mad_I_o_mem_2 offset=0x5c range=32           |
+| mad_I_o_stream           | mad_I_o_stream           | interface |          |                                                   |
+| std_I_o_mem              | m_axi_gmem               | interface |          |                                                   |
+| std_I_o_mem              | s_axi_control            | register  | offset   | name=std_I_o_mem_1 offset=0x64 range=32           |
+| std_I_o_mem              | s_axi_control            | register  | offset   | name=std_I_o_mem_2 offset=0x68 range=32           |
+| std_I_o_stream           | std_I_o_stream           | interface |          |                                                   |
+| filtered_im_0_o_mem      | m_axi_gmem               | interface |          |                                                   |
+| filtered_im_0_o_mem      | s_axi_control            | register  | offset   | name=filtered_im_0_o_mem_1 offset=0x70 range=32   |
+| filtered_im_0_o_mem      | s_axi_control            | register  | offset   | name=filtered_im_0_o_mem_2 offset=0x74 range=32   |
+| filtered_im_0_o_stream   | filtered_im_0_o_stream   | interface |          |                                                   |
+| filtered_real_0_o_mem    | m_axi_gmem               | interface |          |                                                   |
+| filtered_real_0_o_mem    | s_axi_control            | register  | offset   | name=filtered_real_0_o_mem_1 offset=0x7c range=32 |
+| filtered_real_0_o_mem    | s_axi_control            | register  | offset   | name=filtered_real_0_o_mem_2 offset=0x80 range=32 |
+| filtered_real_0_o_stream | filtered_real_0_o_stream | interface |          |                                                   |
+| filtered_im_1_o_mem      | m_axi_gmem               | interface |          |                                                   |
+| filtered_im_1_o_mem      | s_axi_control            | register  | offset   | name=filtered_im_1_o_mem_1 offset=0x88 range=32   |
+| filtered_im_1_o_mem      | s_axi_control            | register  | offset   | name=filtered_im_1_o_mem_2 offset=0x8c range=32   |
+| filtered_im_1_o_stream   | filtered_im_1_o_stream   | interface |          |                                                   |
+| filtered_real_1_o_mem    | m_axi_gmem               | interface |          |                                                   |
+| filtered_real_1_o_mem    | s_axi_control            | register  | offset   | name=filtered_real_1_o_mem_1 offset=0x94 range=32 |
+| filtered_real_1_o_mem    | s_axi_control            | register  | offset   | name=filtered_real_1_o_mem_2 offset=0x98 range=32 |
+| filtered_real_1_o_stream | filtered_real_1_o_stream | interface |          |                                                   |
++--------------------------+--------------------------+-----------+----------+---------------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                     | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++--------------------------+-----+--------+-------------+-----+--------+---------+
+| + mem_write_top_rfi_C    | 0   |        |             |     |        |         |
+|   add_ln61_fu_762_p2     | -   |        | add_ln61    | add | fabric | 0       |
+|   add_ln62_fu_777_p2     | -   |        | add_ln62    | add | fabric | 0       |
+|   add_ln73_fu_801_p2     | -   |        | add_ln73    | add | fabric | 0       |
+|   add_ln61_1_fu_867_p2   | -   |        | add_ln61_1  | add | fabric | 0       |
+|   add_ln62_1_fu_882_p2   | -   |        | add_ln62_1  | add | fabric | 0       |
+|   add_ln73_1_fu_906_p2   | -   |        | add_ln73_1  | add | fabric | 0       |
+|   add_ln61_2_fu_972_p2   | -   |        | add_ln61_2  | add | fabric | 0       |
+|   add_ln62_2_fu_987_p2   | -   |        | add_ln62_2  | add | fabric | 0       |
+|   add_ln73_2_fu_1011_p2  | -   |        | add_ln73_2  | add | fabric | 0       |
+|   add_ln61_3_fu_1077_p2  | -   |        | add_ln61_3  | add | fabric | 0       |
+|   add_ln62_3_fu_1092_p2  | -   |        | add_ln62_3  | add | fabric | 0       |
+|   add_ln73_3_fu_1116_p2  | -   |        | add_ln73_3  | add | fabric | 0       |
+|   add_ln61_4_fu_1182_p2  | -   |        | add_ln61_4  | add | fabric | 0       |
+|   add_ln62_4_fu_1197_p2  | -   |        | add_ln62_4  | add | fabric | 0       |
+|   add_ln73_4_fu_1221_p2  | -   |        | add_ln73_4  | add | fabric | 0       |
+|   add_ln61_5_fu_1287_p2  | -   |        | add_ln61_5  | add | fabric | 0       |
+|   add_ln62_5_fu_1302_p2  | -   |        | add_ln62_5  | add | fabric | 0       |
+|   add_ln73_5_fu_1326_p2  | -   |        | add_ln73_5  | add | fabric | 0       |
+|   add_ln61_6_fu_1392_p2  | -   |        | add_ln61_6  | add | fabric | 0       |
+|   add_ln62_6_fu_1407_p2  | -   |        | add_ln62_6  | add | fabric | 0       |
+|   add_ln73_6_fu_1431_p2  | -   |        | add_ln73_6  | add | fabric | 0       |
+|   add_ln61_7_fu_1497_p2  | -   |        | add_ln61_7  | add | fabric | 0       |
+|   add_ln62_7_fu_1512_p2  | -   |        | add_ln62_7  | add | fabric | 0       |
+|   add_ln73_7_fu_1536_p2  | -   |        | add_ln73_7  | add | fabric | 0       |
+|   add_ln61_8_fu_1602_p2  | -   |        | add_ln61_8  | add | fabric | 0       |
+|   add_ln62_8_fu_1617_p2  | -   |        | add_ln62_8  | add | fabric | 0       |
+|   add_ln73_8_fu_1641_p2  | -   |        | add_ln73_8  | add | fabric | 0       |
+|   add_ln61_9_fu_1707_p2  | -   |        | add_ln61_9  | add | fabric | 0       |
+|   add_ln62_9_fu_1722_p2  | -   |        | add_ln62_9  | add | fabric | 0       |
+|   add_ln73_9_fu_1746_p2  | -   |        | add_ln73_9  | add | fabric | 0       |
+|   add_ln61_10_fu_1812_p2 | -   |        | add_ln61_10 | add | fabric | 0       |
+|   add_ln62_10_fu_1827_p2 | -   |        | add_ln62_10 | add | fabric | 0       |
+|   add_ln73_10_fu_1851_p2 | -   |        | add_ln73_10 | add | fabric | 0       |
+|   add_ln61_11_fu_1907_p2 | -   |        | add_ln61_11 | add | fabric | 0       |
+|   add_ln62_11_fu_1922_p2 | -   |        | add_ln62_11 | add | fabric | 0       |
+|   add_ln73_11_fu_1946_p2 | -   |        | add_ln73_11 | add | fabric | 0       |
++--------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| Type      | Options                                                                  | Location                                                                     |
++-----------+--------------------------------------------------------------------------+------------------------------------------------------------------------------+
+| interface | m_axi offset=slave port=raw_data_im_o_mem name=raw_data_im_o_mem         | mem_write_top_rfi_C.cpp:112 in mem_write_top_rfi_c, raw_data_im_o_mem        |
+| interface | axis port=raw_data_im_o_stream name=raw_data_im_o_stream                 | mem_write_top_rfi_C.cpp:113 in mem_write_top_rfi_c, raw_data_im_o_stream     |
+| interface | m_axi offset=slave port=raw_data_real_o_mem name=raw_data_real_o_mem     | mem_write_top_rfi_C.cpp:114 in mem_write_top_rfi_c, raw_data_real_o_mem      |
+| interface | axis port=raw_data_real_o_stream name=raw_data_real_o_stream             | mem_write_top_rfi_C.cpp:115 in mem_write_top_rfi_c, raw_data_real_o_stream   |
+| interface | m_axi offset=slave port=mad_R_o_mem name=mad_R_o_mem                     | mem_write_top_rfi_C.cpp:116 in mem_write_top_rfi_c, mad_R_o_mem              |
+| interface | axis port=mad_R_o_stream name=mad_R_o_stream                             | mem_write_top_rfi_C.cpp:117 in mem_write_top_rfi_c, mad_R_o_stream           |
+| interface | m_axi offset=slave port=raw_data_real_1_o_mem name=raw_data_real_1_o_mem | mem_write_top_rfi_C.cpp:118 in mem_write_top_rfi_c, raw_data_real_1_o_mem    |
+| interface | axis port=raw_data_real_1_o_stream name=raw_data_real_1_o_stream         | mem_write_top_rfi_C.cpp:119 in mem_write_top_rfi_c, raw_data_real_1_o_stream |
+| interface | m_axi offset=slave port=std_R_o_mem name=std_R_o_mem                     | mem_write_top_rfi_C.cpp:120 in mem_write_top_rfi_c, std_R_o_mem              |
+| interface | axis port=std_R_o_stream name=std_R_o_stream                             | mem_write_top_rfi_C.cpp:121 in mem_write_top_rfi_c, std_R_o_stream           |
+| interface | m_axi offset=slave port=raw_data_im_1_o_mem name=raw_data_im_1_o_mem     | mem_write_top_rfi_C.cpp:122 in mem_write_top_rfi_c, raw_data_im_1_o_mem      |
+| interface | axis port=raw_data_im_1_o_stream name=raw_data_im_1_o_stream             | mem_write_top_rfi_C.cpp:123 in mem_write_top_rfi_c, raw_data_im_1_o_stream   |
+| interface | m_axi offset=slave port=mad_I_o_mem name=mad_I_o_mem                     | mem_write_top_rfi_C.cpp:124 in mem_write_top_rfi_c, mad_I_o_mem              |
+| interface | axis port=mad_I_o_stream name=mad_I_o_stream                             | mem_write_top_rfi_C.cpp:125 in mem_write_top_rfi_c, mad_I_o_stream           |
+| interface | m_axi offset=slave port=std_I_o_mem name=std_I_o_mem                     | mem_write_top_rfi_C.cpp:126 in mem_write_top_rfi_c, std_I_o_mem              |
+| interface | axis port=std_I_o_stream name=std_I_o_stream                             | mem_write_top_rfi_C.cpp:127 in mem_write_top_rfi_c, std_I_o_stream           |
+| interface | m_axi offset=slave port=filtered_im_0_o_mem name=filtered_im_0_o_mem     | mem_write_top_rfi_C.cpp:128 in mem_write_top_rfi_c, filtered_im_0_o_mem      |
+| interface | axis port=filtered_im_0_o_stream name=filtered_im_0_o_stream             | mem_write_top_rfi_C.cpp:129 in mem_write_top_rfi_c, filtered_im_0_o_stream   |
+| interface | m_axi offset=slave port=filtered_real_0_o_mem name=filtered_real_0_o_mem | mem_write_top_rfi_C.cpp:130 in mem_write_top_rfi_c, filtered_real_0_o_mem    |
+| interface | axis port=filtered_real_0_o_stream name=filtered_real_0_o_stream         | mem_write_top_rfi_C.cpp:131 in mem_write_top_rfi_c, filtered_real_0_o_stream |
+| interface | m_axi offset=slave port=filtered_im_1_o_mem name=filtered_im_1_o_mem     | mem_write_top_rfi_C.cpp:132 in mem_write_top_rfi_c, filtered_im_1_o_mem      |
+| interface | axis port=filtered_im_1_o_stream name=filtered_im_1_o_stream             | mem_write_top_rfi_C.cpp:133 in mem_write_top_rfi_c, filtered_im_1_o_stream   |
+| interface | m_axi offset=slave port=filtered_real_1_o_mem name=filtered_real_1_o_mem | mem_write_top_rfi_C.cpp:134 in mem_write_top_rfi_c, filtered_real_1_o_mem    |
+| interface | axis port=filtered_real_1_o_stream name=filtered_real_1_o_stream         | mem_write_top_rfi_C.cpp:135 in mem_write_top_rfi_c, filtered_real_1_o_stream |
+| interface | s_axilite port=return                                                    | mem_write_top_rfi_C.cpp:136 in mem_write_top_rfi_c, return                   |
++-----------+--------------------------------------------------------------------------+------------------------------------------------------------------------------+
+
+

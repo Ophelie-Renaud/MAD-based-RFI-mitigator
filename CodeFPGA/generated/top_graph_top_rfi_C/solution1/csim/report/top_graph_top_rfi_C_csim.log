@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../top_graph_top_rfi_C_testbench.cpp in debug mode
+   Compiling ../../../../top_graph_top_rfi_C.cpp in debug mode
+   Generating csim.exe
+obj/top_graph_top_rfi_C_testbench.o: In function `main':
+/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1/csim/build/../../../../top_graph_top_rfi_C_testbench.cpp:94: undefined reference to `top_graph_top_rfi_C(hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&, hls::stream<double, 0>&)'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.rules:393: csim.exe] Error 1
+ERR: [SIM 100] CSim file generation failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

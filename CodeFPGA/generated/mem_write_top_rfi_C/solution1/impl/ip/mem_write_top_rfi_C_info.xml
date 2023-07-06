@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <core name="" type="" target="">
+    <kernel name="mem_write_top_rfi_C" language="c" vlnv="xilinx.com:hls:mem_write_top_rfi_C:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true">
+      <port name="S_AXI_CONTROL" mode="slave" range="0x1000" dataWidth="64" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_GMEM" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <arg name="raw_data_im_o_mem" addressQualifier="1" id="0" port="M_AXI_GMEM" size="0x4" offset="0x10" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="raw_data_real_o_mem" addressQualifier="1" id="1" port="M_AXI_GMEM" size="0x4" offset="0x1C" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="mad_R_o_mem" addressQualifier="1" id="2" port="M_AXI_GMEM" size="0x4" offset="0x28" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="raw_data_real_1_o_mem" addressQualifier="1" id="3" port="M_AXI_GMEM" size="0x4" offset="0x34" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="std_R_o_mem" addressQualifier="1" id="4" port="M_AXI_GMEM" size="0x4" offset="0x40" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="raw_data_im_1_o_mem" addressQualifier="1" id="5" port="M_AXI_GMEM" size="0x4" offset="0x4C" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="mad_I_o_mem" addressQualifier="1" id="6" port="M_AXI_GMEM" size="0x4" offset="0x58" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="std_I_o_mem" addressQualifier="1" id="7" port="M_AXI_GMEM" size="0x4" offset="0x64" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="filtered_im_0_o_mem" addressQualifier="1" id="8" port="M_AXI_GMEM" size="0x4" offset="0x70" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="filtered_real_0_o_mem" addressQualifier="1" id="9" port="M_AXI_GMEM" size="0x4" offset="0x7C" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="filtered_im_1_o_mem" addressQualifier="1" id="10" port="M_AXI_GMEM" size="0x4" offset="0x88" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="filtered_real_1_o_mem" addressQualifier="1" id="11" port="M_AXI_GMEM" size="0x4" offset="0x94" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="ap_local_deadlock" addressQualifier="0" id="12" port="S_AXI_CONTROL" size="0x4" offset="0x0" hostOffset="0x0" hostSize="0x4" type=""/>
+      <compileWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+  </core>
+</project>

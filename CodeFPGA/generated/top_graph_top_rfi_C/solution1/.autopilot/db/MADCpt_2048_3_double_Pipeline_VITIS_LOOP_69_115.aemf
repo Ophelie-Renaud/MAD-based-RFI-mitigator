@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592336263">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600334327">
   <ports id="1" name="sorted_list_I_i" type="PortType" coreName="RAM" coreId="0" bitwidth="64" iftype="IfTypeRegister" arraysize="2048">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="median_I_i" type="PortType" coreId="544435055" bitwidth="64">
+  <ports id="2" name="median_I_i" type="PortType" coreId="4294967295" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="3" name="deviation_list_I" type="PortType" coreName="RAM" coreId="0" bitwidth="64" direction="DirOut" iftype="IfTypeRegister" arraysize="2048">
@@ -44,28 +44,28 @@
   <edges id="101" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
   <blocks id="8" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>block_15</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="2469631168" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="3206313472" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="median_I_i_read" coreId="2468559472" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="median_I_i_read" coreId="3203967056" bitwidth="64" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>median_I_i</dataInputObjs>
       <dataOutputObjs>dsub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i_write_ln0" coreId="1868528261" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="i_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln0" coreId="1867993174" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="br_ln0" coreId="741681408" opcode="br" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <controlInputObjs>block_15</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="31" name="_Z13deviationListPddiS_.exit44.i.exitStub" type="BlockType">
     <controlInputObjs>block_15</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="_ln0" coreId="2469193632" opcode="ret" nodeLabel="8.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="_ln0" coreId="0" opcode="ret" nodeLabel="8.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="131" pipe_depth="10" RegionName="VITIS_LOOP_69_1">
     <basic_blocks id="15" name="block_15" type="BlockType">
@@ -75,7 +75,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_Z13deviationListPddiS_.exit44.i.exitStub</controlOutputObjs>
       <controlOutputObjs>.split18.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_13" lineNumber="69" originalName="i" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1867754985" contextFuncName="deviationList" bitwidth="12" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_13" lineNumber="69" originalName="i" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1108420413" contextFuncName="deviationList" bitwidth="12" opcode="load" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="69" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="deviationList"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -94,7 +94,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln69" lineNumber="69" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2469277840" contextFuncName="deviationList" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln69" lineNumber="69" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1330007625" contextFuncName="deviationList" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="69" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="deviationList"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>.split18.i</controlInputObjs>
@@ -108,13 +108,13 @@
       <controlInputObjs>block_15</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>block_15</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i_15_cast_i" lineNumber="69" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="i_15_cast_i_fu_98_p1" coreId="0" contextFuncName="deviationList" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i_15_cast_i" lineNumber="69" fileName="../include/madCpt.hpp" fileDirectory=".." rtlName="i_15_cast_i_fu_98_p1" coreId="3206872112" contextFuncName="deviationList" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="69" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="deviationList"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="sorted_list_I_i_addr" lineNumber="70" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2469316944" contextFuncName="deviationList" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="sorted_list_I_i_addr" lineNumber="70" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1108414925" contextFuncName="deviationList" bitwidth="11" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="70" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="deviationList"/>
         <dataInputObjs>sorted_list_I_i</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -132,28 +132,28 @@
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>bitcast</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="data_V" lineNumber="486" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_fu_108_p1" coreId="2469317664" contextFuncName="fp_struct" bitwidth="64" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="data_V" lineNumber="486" originalName="data.V" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="data_V_fu_108_p1" coreId="3207017200" contextFuncName="fp_struct" bitwidth="64" opcode="bitcast" nodeLabel="8.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="486" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="fp_struct"/>
         <dataInputObjs>dsub</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="trunc_ln368" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="trunc_ln368_fu_112_p1" coreId="1834971487" contextFuncName="operator_assign_52_false" bitwidth="63" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="trunc_ln368" lineNumber="368" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="trunc_ln368_fu_112_p1" coreId="1108637806" contextFuncName="operator_assign_52_false" bitwidth="63" opcode="trunc" nodeLabel="8.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;52, false&amp;gt;"/>
         <dataInputObjs>bitcast</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="p_Result_s" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_116_p3" coreId="2469278320" contextFuncName="operator_assign_52_false" bitwidth="64" opcode="bitconcatenate" nodeLabel="9.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="p_Result_s" lineNumber="368" originalName="__Result__" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="p_Result_s_fu_116_p3" coreId="3206605440" contextFuncName="operator_assign_52_false" bitwidth="64" opcode="bitconcatenate" nodeLabel="9.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files/ap_int_ref.h" linenumber="368" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="operator=&amp;lt;52, false&amp;gt;"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>bitcast</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="bitcast_ln524" lineNumber="524" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="deviation_list_I_d0" coreId="1868426702" contextFuncName="to_double" bitwidth="64" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="bitcast_ln524" lineNumber="524" fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" fileDirectory="../../../../../../../wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" rtlName="deviation_list_I_d0" coreId="3207035488" contextFuncName="to_double" bitwidth="64" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h" linenumber="524" fileDirectory="/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared" functionName="to_double"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="deviation_list_I_addr" lineNumber="70" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1868356254" contextFuncName="deviationList" bitwidth="11" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="deviation_list_I_addr" lineNumber="70" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="1110208664" contextFuncName="deviationList" bitwidth="11" opcode="getelementptr" nodeLabel="9.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="70" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="deviationList"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>deviation_list_I</dataOutputObjs>
@@ -165,12 +165,12 @@
         <dataInputObjs>bitcast</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="i_write_ln69" lineNumber="69" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="2468736416" contextFuncName="deviationList" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="i_write_ln69" lineNumber="69" fileName="../include/madCpt.hpp" fileDirectory=".." coreId="608" contextFuncName="deviationList" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../include/madCpt.hpp" linenumber="69" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="deviationList"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln0" coreId="2469661216" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln0" coreId="1110359572" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <controlInputObjs>block_15</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../include/madCpt.hpp">

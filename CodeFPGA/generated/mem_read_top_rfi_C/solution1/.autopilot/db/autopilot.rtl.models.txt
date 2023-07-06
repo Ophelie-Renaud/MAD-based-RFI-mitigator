@@ -1,0 +1,5 @@
+mem_read_top_rfi_C_control_s_axi
+mem_read_top_rfi_C_gmem_m_axi
+mem_read_top_rfi_C_regslice_both
+mem_read_top_rfi_C_regslice_both
+mem_read_top_rfi_C

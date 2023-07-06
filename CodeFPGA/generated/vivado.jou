@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jul  6 01:44:08 2023
+# Process ID: 66536
+# Current directory: /home/orenaud/preesm2/RFI/CodeFPGA/generated
+# Command line: vivado -mode tcl -source scripts//script_vivado.tcl -tclargs -j 2
+# Log file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado.log
+# Journal file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado.jou
+# Running On: pc-eii26, OS: Linux, CPU Frequency: 4201.895 MHz, CPU Physical cores: 4, Host memory: 33456 MB
+#-----------------------------------------------------------
+source scripts//script_vivado.tcl

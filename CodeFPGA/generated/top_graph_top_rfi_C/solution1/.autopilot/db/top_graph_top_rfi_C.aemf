@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592344535">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600342795">
   <ports id="1" name="raw_data_real_i_stream" type="PortType" originalName="raw_data_real_i_stream" coreId="3621216858" bitwidth="64">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -9,37 +9,37 @@
   <ports id="3" name="raw_data_im_o_stream" type="PortType" originalName="raw_data_im_o_stream" coreId="54" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="4" name="raw_data_real_o_stream" type="PortType" originalName="raw_data_real_o_stream" coreId="2926570864" bitwidth="64" direction="DirOut">
+  <ports id="4" name="raw_data_real_o_stream" type="PortType" originalName="raw_data_real_o_stream" coreId="3722320288" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <ports id="5" name="mad_R_o_stream" type="PortType" originalName="mad_R_o_stream" coreId="54" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="6" name="raw_data_real_1_o_stream" type="PortType" originalName="raw_data_real_1_o_stream" coreId="2479286464" bitwidth="64" direction="DirOut">
+  <ports id="6" name="raw_data_real_1_o_stream" type="PortType" originalName="raw_data_real_1_o_stream" coreId="3219369616" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="7" name="std_R_o_stream" type="PortType" originalName="std_R_o_stream" coreId="2482739440" bitwidth="64" direction="DirOut">
+  <ports id="7" name="std_R_o_stream" type="PortType" originalName="std_R_o_stream" coreId="3220442976" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="8" name="raw_data_im_1_o_stream" type="PortType" originalName="raw_data_im_1_o_stream" coreId="2482703024" bitwidth="64" direction="DirOut">
+  <ports id="8" name="raw_data_im_1_o_stream" type="PortType" originalName="raw_data_im_1_o_stream" coreId="3217383136" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="9" name="mad_I_o_stream" type="PortType" originalName="mad_I_o_stream" coreId="2480064224" bitwidth="64" direction="DirOut">
+  <ports id="9" name="mad_I_o_stream" type="PortType" originalName="mad_I_o_stream" coreId="3219223600" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="10" name="std_I_o_stream" type="PortType" originalName="std_I_o_stream" coreId="2478134048" bitwidth="64" direction="DirOut">
+  <ports id="10" name="std_I_o_stream" type="PortType" originalName="std_I_o_stream" coreId="3214043488" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="11" name="filtered_im_0_o_stream" type="PortType" originalName="filtered_im_0_o_stream" coreId="2476825488" bitwidth="64" direction="DirOut">
+  <ports id="11" name="filtered_im_0_o_stream" type="PortType" originalName="filtered_im_0_o_stream" coreId="1599294536" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="12" name="filtered_real_0_o_stream" type="PortType" originalName="filtered_real_0_o_stream" coreId="2481833728" bitwidth="64" direction="DirOut">
+  <ports id="12" name="filtered_real_0_o_stream" type="PortType" originalName="filtered_real_0_o_stream" coreId="3219230816" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="13" name="filtered_im_1_o_stream" type="PortType" originalName="filtered_im_1_o_stream" coreId="2481242176" bitwidth="64" direction="DirOut">
+  <ports id="13" name="filtered_im_1_o_stream" type="PortType" originalName="filtered_im_1_o_stream" coreId="3214043488" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="14" name="filtered_real_1_o_stream" type="PortType" originalName="filtered_real_1_o_stream" coreId="2480479712" bitwidth="64" direction="DirOut">
+  <ports id="14" name="filtered_real_1_o_stream" type="PortType" originalName="filtered_real_1_o_stream" coreId="1122659545" bitwidth="64" direction="DirOut">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="121" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
@@ -120,65 +120,65 @@
   <edges id="954" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
   <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="383" RegionName="top_graph_top_rfi_C">
     <basic_blocks id="118" name="top_graph_top_rfi_C" type="BlockType">
-      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="_ln206" lineNumber="206" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Acq_Im_U0" coreId="1872032161" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="_ln206" lineNumber="206" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Acq_Im_U0" coreId="1116982195" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="206" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataInputObjs>raw_data_im_i_stream</dataInputObjs>
         <dataOutputObjs>raw_data_im_o_stream</dataOutputObjs>
         <dataOutputObjs>raw_data_im_1_o_stream</dataOutputObjs>
         <constName>Brd_Acq_Im</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln207" lineNumber="207" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Acq_Real_U0" coreId="1330007625" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="_ln207" lineNumber="207" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Acq_Real_U0" coreId="1122808340" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="207" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataInputObjs>raw_data_real_i_stream</dataInputObjs>
         <dataOutputObjs>raw_data_real_o_stream</dataOutputObjs>
         <dataOutputObjs>raw_data_real_1_o_stream</dataOutputObjs>
         <constName>Brd_Acq_Real</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="_ln211" lineNumber="211" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="MADCpt_2048_3_double_U0" coreId="2480163360" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="_ln211" lineNumber="211" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="MADCpt_2048_3_double_U0" coreId="3216776304" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="211" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <constName>MADCpt_2048_3_double_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln218" lineNumber="218" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="STDCpt_2048_3_double_U0" coreId="2482259008" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="_ln218" lineNumber="218" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="STDCpt_2048_3_double_U0" coreId="3214043488" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="218" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <constName>STDCpt_2048_3_double_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln225" lineNumber="225" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_MAD_R_U0" coreId="2481834224" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="_ln225" lineNumber="225" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_MAD_R_U0" coreId="3219630240" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="225" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataOutputObjs>mad_R_o_stream</dataOutputObjs>
         <constName>Brd_MAD_R</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="_ln232" lineNumber="232" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_STD_R_U0" coreId="2482259008" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="_ln232" lineNumber="232" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_STD_R_U0" coreId="3214043488" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="232" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataOutputObjs>std_R_o_stream</dataOutputObjs>
         <constName>Brd_STD_R</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="_ln239" lineNumber="239" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_MAD_I_U0" coreId="2482652560" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="_ln239" lineNumber="239" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_MAD_I_U0" coreId="3218350784" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="239" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataOutputObjs>mad_I_o_stream</dataOutputObjs>
         <constName>Brd_MAD_I</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="_ln246" lineNumber="246" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_STD_I_U0" coreId="1870766809" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="_ln246" lineNumber="246" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_STD_I_U0" coreId="1119402724" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="246" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataOutputObjs>std_I_o_stream</dataOutputObjs>
         <constName>Brd_STD_I</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="_ln253" lineNumber="253" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="RFIFilter_0_2048_double_U0" coreId="539571767" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="_ln253" lineNumber="253" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="RFIFilter_0_2048_double_U0" coreId="3217692176" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="7.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="253" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <constName>RFIFilter_0_2048_double_s</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="_ln257" lineNumber="257" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Res_Real_U0" coreId="2477448464" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="_ln257" lineNumber="257" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Res_Real_U0" coreId="3219276152" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="257" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataOutputObjs>filtered_real_1_o_stream</dataOutputObjs>
         <dataOutputObjs>filtered_real_0_o_stream</dataOutputObjs>
         <constName>Brd_Res_Real</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="_ln258" lineNumber="258" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Res_Im_U0" coreId="1873772571" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="_ln258" lineNumber="258" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." rtlName="Brd_Res_Im_U0" coreId="3219275712" contextFuncName="top_graph_top_rfi_C" opcode="call" nodeLabel="9.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="258" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
         <dataOutputObjs>filtered_im_1_o_stream</dataOutputObjs>
         <dataOutputObjs>filtered_im_0_o_stream</dataOutputObjs>
         <constName>Brd_Res_Im</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="_ln259" lineNumber="259" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." coreId="2482165456" contextFuncName="top_graph_top_rfi_C" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="_ln259" lineNumber="259" fileName="top_graph_top_rfi_C.cpp" fileDirectory=".." coreId="3217602704" contextFuncName="top_graph_top_rfi_C" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="top_graph_top_rfi_C.cpp" linenumber="259" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="top_graph_top_rfi_C"/>
       </node_objs>
       <fileValidLineNumbers fileName="top_graph_top_rfi_C.cpp">

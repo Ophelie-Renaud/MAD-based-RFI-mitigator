@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592342427">
-  <ports id="1" name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i" type="PortType" coreName="FIFO" coreId="7" bitwidth="64" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600340571">
+  <ports id="1" name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i" type="PortType" coreName="FIFO" coreId="108" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" type="PortType" coreName="FIFO" coreId="440" bitwidth="64" iftype="IfTypeRom">
+  <ports id="2" name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" type="PortType" coreName="FIFO" coreId="7" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i" type="PortType" coreName="FIFO" coreId="4294967295" bitwidth="64" iftype="IfTypeRom">
+  <ports id="3" name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i" type="PortType" coreName="FIFO" coreId="440" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" type="PortType" coreName="FIFO" coreId="189" bitwidth="64" iftype="IfTypeRom">
+  <ports id="4" name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" type="PortType" coreName="FIFO" coreId="4294967295" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="5" name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i" type="PortType" coreName="FIFO" coreId="4294967295" bitwidth="64" iftype="IfTypeRom">
@@ -18,10 +18,10 @@
   <ports id="6" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i" type="PortType" coreName="FIFO" coreId="108" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="7" name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in" type="PortType" coreName="FIFO" coreId="2481345664" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="7" name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in" type="PortType" coreName="FIFO" coreId="3218166448" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="8" name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in" type="PortType" coreName="FIFO" coreId="2479789424" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="8" name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in" type="PortType" coreName="FIFO" coreId="3216170544" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="76" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.4"/>
@@ -124,21 +124,21 @@
       <dataInputObjs>stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i</dataInputObjs>
       <dataOutputObjs>bitcast</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="empty" coreId="2477569504" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln0" rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_2_fu_84" coreId="2480738640" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="empty" coreId="3217411712" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln0" rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_2_fu_84" coreId="304" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i</dataInputObjs>
       <dataInputObjs>stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i</dataInputObjs>
       <constName>RFIFilter_0_2048_double_Pipeline_loop_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="empty_317" coreId="2477425728" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="bitcast_ln144" lineNumber="144" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="grp_fu_126_p0" coreId="768" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="empty_317" coreId="3216103472" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="bitcast_ln144" lineNumber="144" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="grp_fu_126_p0" coreId="3219103120" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>dadd</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="bitcast_ln144_1" lineNumber="144" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="grp_fu_126_p1" coreId="2480795792" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="bitcast_ln144_1" lineNumber="144" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="grp_fu_126_p1" coreId="3216103472" contextFuncName="read" bitwidth="64" opcode="bitcast" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>dadd</dataOutputObjs>
@@ -157,20 +157,20 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="sub_i_to_int_i" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="sub_i_to_int_i_fu_143_p1" coreId="1874179768" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="64" opcode="bitcast" nodeLabel="15.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="sub_i_to_int_i" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="sub_i_to_int_i_fu_143_p1" coreId="3214508672" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="64" opcode="bitcast" nodeLabel="15.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="48" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, double&amp;gt;"/>
       <dataInputObjs>dmul</dataInputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>trunc</dataOutputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="empty_318" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="empty_318_fu_146_p1" coreId="2480408960" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="63" opcode="trunc" nodeLabel="15.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="empty_318" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="empty_318_fu_146_p1" coreId="3214508672" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="63" opcode="trunc" nodeLabel="15.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="48" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, double&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="empty_319" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="empty_319_fu_152_p1" coreId="1875140933" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="52" opcode="trunc" nodeLabel="15.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="empty_319" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="empty_319_fu_152_p1" coreId="30" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="52" opcode="trunc" nodeLabel="15.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="48" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, double&amp;gt;"/>
       <dataInputObjs>bitcast</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -182,13 +182,13 @@
       <dataOutputObjs>bitcast</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="empty_320" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="empty_320_fu_162_p1" coreId="1875230296" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="63" opcode="trunc" nodeLabel="15.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="empty_320" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="empty_320_fu_162_p1" coreId="3219592480" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="63" opcode="trunc" nodeLabel="15.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="48" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, double&amp;gt;"/>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="sub_i_i" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="sub_i_i_fu_168_p1" coreId="2480728480" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="64" opcode="bitcast" nodeLabel="15.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="sub_i_i" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="sub_i_i_fu_168_p1" coreId="3219592480" contextFuncName="RFIFilter_0_2048_double_s" bitwidth="64" opcode="bitcast" nodeLabel="15.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="48" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, double&amp;gt;"/>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
@@ -201,7 +201,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln48" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_1_fu_94" coreId="1873137900" contextFuncName="RFIFilter_0_2048_double_s" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.88" m_topoIndex="23" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln48" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_1_fu_94" coreId="3216897920" contextFuncName="RFIFilter_0_2048_double_s" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.88" m_topoIndex="23" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="48" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
@@ -212,7 +212,7 @@
       <dataInputObjs>dmul</dataInputObjs>
       <constName>RFIFilter_0_2048_double_Pipeline_loop_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln48" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_114_fu_105" coreId="0" contextFuncName="RFIFilter_0_2048_double_s" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.88" m_topoIndex="24" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln48" lineNumber="48" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_114_fu_105" coreId="3218682976" contextFuncName="RFIFilter_0_2048_double_s" opcode="call" nodeLabel="15.0" nodeLatency="1" m_display="0" m_delay="1.88" m_topoIndex="24" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="48" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
@@ -223,15 +223,15 @@
       <dataInputObjs>dmul</dataInputObjs>
       <constName>RFIFilter_0_2048_double_Pipeline_loop_114</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="empty_321" coreId="1330007625" bitwidth="32" opcode="wait" nodeLabel="17.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln0" rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_3_fu_116" coreId="2479842832" opcode="call" nodeLabel="17.0" nodeLatency="1" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="empty_321" coreId="1120479437" bitwidth="32" opcode="wait" nodeLabel="17.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln0" rtlName="grp_RFIFilter_0_2048_double_Pipeline_loop_3_fu_116" coreId="3217217232" opcode="call" nodeLabel="17.0" nodeLatency="1" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in</dataOutputObjs>
       <dataOutputObjs>stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in</dataOutputObjs>
       <constName>RFIFilter_0_2048_double_Pipeline_loop_3</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln0" coreId="2480728792" opcode="ret" nodeLabel="18.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln0" coreId="1120862976" opcode="ret" nodeLabel="18.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
       <validLinenumbers>144</validLinenumbers>
     </fileValidLineNumbers>

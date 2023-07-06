@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jul  6 01:55:28 2023
+# Process ID: 69342
+# Current directory: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1
+# Command line: vivado -log design_1_axis_data_fifo_filtered_im_1_o_stream_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_data_fifo_filtered_im_1_o_stream_0.tcl
+# Log file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1/design_1_axis_data_fifo_filtered_im_1_o_stream_0.vds
+# Journal file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1/vivado.jou
+# Running On: pc-eii26, OS: Linux, CPU Frequency: 3727.255 MHz, CPU Physical cores: 4, Host memory: 33456 MB
+#-----------------------------------------------------------
+source design_1_axis_data_fifo_filtered_im_1_o_stream_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/orenaud/preesm2/RFI/CodeFPGA/generated'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/orenaud/preesm2/RFI/CodeFPGA/generated' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/orenaud/Xilinx/Vivado/2021.2/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axis_data_fifo_filtered_im_1_o_stream_0, cache-ID = dc34db36bdbe2f7d.
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  6 01:55:43 2023...

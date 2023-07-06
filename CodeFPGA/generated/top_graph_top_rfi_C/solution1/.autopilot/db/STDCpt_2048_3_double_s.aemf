@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688592341187">
-  <ports id="1" name="stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="2477943056" bitwidth="64" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600339395">
+  <ports id="1" name="stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="3215792944" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="1874946338" bitwidth="64" iftype="IfTypeRom">
+  <ports id="2" name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3216638200" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
   <ports id="15" name="stream_STD_Computation_std_R_o_Brd_STD_R_in" type="PortType" coreName="FIFO" coreId="4" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
@@ -109,22 +109,22 @@
   <edges id="483" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.18"/>
   <edges id="484" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.21"/>
   <blocks id="68" name="STDCpt&lt;2048, 3, double>" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="sum_6_loc" coreId="2476404496" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="sum_6_loc" coreId="1818324329" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="sum_4_loc" coreId="1397508187" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="sum_4_loc" coreId="842019375" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="sum_2_loc" coreId="2478449936" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="sum_2_loc" coreId="1118121395" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="sum_loc" coreId="2478870096" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="sum_loc" coreId="3215123312" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -167,21 +167,21 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="empty" coreId="0" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_loop_2_fu_108" coreId="2478428992" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="empty" coreId="3216238464" bitwidth="32" opcode="wait" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_loop_2_fu_108" coreId="0" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i</dataInputObjs>
       <dataInputObjs>stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i</dataInputObjs>
       <constName>STDCpt_2048_3_double_Pipeline_loop_2</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="empty_315" coreId="2478190112" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1_fu_120" coreId="171847458" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="empty_315" coreId="0" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1_fu_120" coreId="0" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="sum_loc_load" coreId="2478190416" bitwidth="64" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="sum_loc_load" coreId="3217279968" bitwidth="64" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>dmul</dataOutputObjs>
     </node_objs>
@@ -190,7 +190,7 @@
       <dataInputObjs>alloca</dataInputObjs>
       <constName>STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sum_2_loc_load" coreId="0" bitwidth="64" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sum_2_loc_load" coreId="3217279968" bitwidth="64" opcode="load" nodeLabel="6.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>dmul</dataOutputObjs>
     </node_objs>
@@ -200,7 +200,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln25" lineNumber="25" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1_fu_132" coreId="2478232288" contextFuncName="computeAverage" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln25" lineNumber="25" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1_fu_132" coreId="3217279968" contextFuncName="computeAverage" opcode="call" nodeLabel="10.0" nodeLatency="1" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="25" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeAverage"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>dmul</dataInputObjs>
@@ -213,14 +213,14 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln25" lineNumber="25" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112_fu_163" coreId="2477626544" contextFuncName="computeAverage" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="_ln25" lineNumber="25" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112_fu_163" coreId="3217294320" contextFuncName="computeAverage" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="25" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="computeAverage"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>dmul</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1_fu_194" coreId="2476847456" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1_fu_194" coreId="3217244976" opcode="call" nodeLabel="12.0" nodeLatency="1" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1</constName>
@@ -229,7 +229,7 @@
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>dmul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113_fu_200" coreId="2479531488" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113_fu_200" coreId="3217261360" opcode="call" nodeLabel="14.0" nodeLatency="1" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113</constName>
@@ -272,7 +272,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln73" lineNumber="73" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1_fu_206" coreId="2479482560" contextFuncName="STDCpt_2048_3_double_s" opcode="call" nodeLabel="87.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln73" lineNumber="73" fileName="../include/stdCpt.hpp" fileDirectory=".." rtlName="grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1_fu_206" coreId="3217138880" contextFuncName="STDCpt_2048_3_double_s" opcode="call" nodeLabel="87.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="32" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../include/stdCpt.hpp" linenumber="73" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="STDCpt&amp;lt;2048, 3, double&amp;gt;"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>dmul</dataInputObjs>
@@ -281,14 +281,14 @@
       <constName>STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="65" name="empty_316" coreId="0" bitwidth="32" opcode="wait" nodeLabel="89.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_loop_3_fu_214" coreId="2479482560" opcode="call" nodeLabel="89.0" nodeLatency="1" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln0" rtlName="grp_STDCpt_2048_3_double_Pipeline_loop_3_fu_214" coreId="0" opcode="call" nodeLabel="89.0" nodeLatency="1" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>stream_STD_Computation_std_R_o_Brd_STD_R_in</dataOutputObjs>
       <dataOutputObjs>stream_STD_Computation_std_I_o_Brd_STD_I_in</dataOutputObjs>
       <constName>STDCpt_2048_3_double_Pipeline_loop_3</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln0" coreId="0" opcode="ret" nodeLabel="90.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln0" coreId="3217068880" opcode="ret" nodeLabel="90.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="../include/stdCpt.hpp">
       <validLinenumbers>46</validLinenumbers>
       <validLinenumbers>47</validLinenumbers>
