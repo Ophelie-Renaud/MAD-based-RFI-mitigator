@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="top_graph_top_rfi_C" xd:componentRef="top_graph_top_rfi_C" xd:initiationInterval="x" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
-  <xd:arg xd:name="raw_data_real_i_stream" xd:originalName="raw_data_real_i_stream" xd:direction="in" xd:interfaceRef="raw_data_real_i_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="raw_data_im_i_stream" xd:originalName="raw_data_im_i_stream" xd:direction="in" xd:interfaceRef="raw_data_im_i_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="raw_data_im_o_stream" xd:originalName="raw_data_im_o_stream" xd:direction="out" xd:interfaceRef="raw_data_im_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="raw_data_real_o_stream" xd:originalName="raw_data_real_o_stream" xd:direction="out" xd:interfaceRef="raw_data_real_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="mad_R_o_stream" xd:originalName="mad_R_o_stream" xd:direction="out" xd:interfaceRef="mad_R_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="raw_data_real_1_o_stream" xd:originalName="raw_data_real_1_o_stream" xd:direction="out" xd:interfaceRef="raw_data_real_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="std_R_o_stream" xd:originalName="std_R_o_stream" xd:direction="out" xd:interfaceRef="std_R_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="raw_data_im_1_o_stream" xd:originalName="raw_data_im_1_o_stream" xd:direction="out" xd:interfaceRef="raw_data_im_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="mad_I_o_stream" xd:originalName="mad_I_o_stream" xd:direction="out" xd:interfaceRef="mad_I_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="std_I_o_stream" xd:originalName="std_I_o_stream" xd:direction="out" xd:interfaceRef="std_I_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="filtered_im_0_o_stream" xd:originalName="filtered_im_0_o_stream" xd:direction="out" xd:interfaceRef="filtered_im_0_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="filtered_real_0_o_stream" xd:originalName="filtered_real_0_o_stream" xd:direction="out" xd:interfaceRef="filtered_real_0_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="filtered_im_1_o_stream" xd:originalName="filtered_im_1_o_stream" xd:direction="out" xd:interfaceRef="filtered_im_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:arg xd:name="filtered_real_1_o_stream" xd:originalName="filtered_real_1_o_stream" xd:direction="out" xd:interfaceRef="filtered_real_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="64"/>
-  <xd:latencyEstimates xd:best-case="868460" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="30050" xd:FF="27767" xd:BRAM="0" xd:DSP="115"/>
+  <xd:arg xd:name="raw_data_real_i_stream" xd:originalName="raw_data_real_i_stream" xd:direction="in" xd:interfaceRef="raw_data_real_i_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="raw_data_im_i_stream" xd:originalName="raw_data_im_i_stream" xd:direction="in" xd:interfaceRef="raw_data_im_i_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="raw_data_im_o_stream" xd:originalName="raw_data_im_o_stream" xd:direction="out" xd:interfaceRef="raw_data_im_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="raw_data_real_o_stream" xd:originalName="raw_data_real_o_stream" xd:direction="out" xd:interfaceRef="raw_data_real_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="mad_R_o_stream" xd:originalName="mad_R_o_stream" xd:direction="out" xd:interfaceRef="mad_R_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="raw_data_real_1_o_stream" xd:originalName="raw_data_real_1_o_stream" xd:direction="out" xd:interfaceRef="raw_data_real_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="std_R_o_stream" xd:originalName="std_R_o_stream" xd:direction="out" xd:interfaceRef="std_R_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="raw_data_im_1_o_stream" xd:originalName="raw_data_im_1_o_stream" xd:direction="out" xd:interfaceRef="raw_data_im_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="mad_I_o_stream" xd:originalName="mad_I_o_stream" xd:direction="out" xd:interfaceRef="mad_I_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="std_I_o_stream" xd:originalName="std_I_o_stream" xd:direction="out" xd:interfaceRef="std_I_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="filtered_im_0_o_stream" xd:originalName="filtered_im_0_o_stream" xd:direction="out" xd:interfaceRef="filtered_im_0_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="filtered_real_0_o_stream" xd:originalName="filtered_real_0_o_stream" xd:direction="out" xd:interfaceRef="filtered_real_0_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="filtered_im_1_o_stream" xd:originalName="filtered_im_1_o_stream" xd:direction="out" xd:interfaceRef="filtered_im_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="filtered_real_1_o_stream" xd:originalName="filtered_real_1_o_stream" xd:direction="out" xd:interfaceRef="filtered_real_1_o_stream" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="18326" xd:FF="19225" xd:BRAM="0" xd:DSP="67"/>
 </xd:acceleratorMap>

@@ -14,6 +14,9 @@
 #include "preesm.h"
 #define REAL_HEADER_PATH PROJECT_ROOT_PATH "/dat/real.data"
 #define IM_HEADER_PATH PROJECT_ROOT_PATH "/dat/im.data"
+#define REAL_ROOT "/dat/real.data"
+//#define IM_ROOT "/dat/im.data"
+
 
 /**
 * Read a new frame from the YUV file.

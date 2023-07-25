@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vitis HLS Report for 'sortList_Pipeline_occurence_loop'
+================================================================
+* Date:           Tue Jul 25 02:51:41 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        top_graph_top_rfi_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.585 ns|     1.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2051|     2051|  20.510 us|  20.510 us|  2051|  2051|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- occurence_loop  |     2049|     2049|         3|          1|          1|  2048|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    106|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     54|    -|
+|Register         |        -|    -|     109|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     109|    160|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln885_fu_164_p2     |         +|   0|  0|  23|          16|           1|
+    |i_V_4_fu_110_p2         |         +|   0|  0|  12|          12|           1|
+    |ret_fu_130_p2           |         -|   0|  0|  12|          11|          11|
+    |addr_cmp_fu_143_p2      |      icmp|   0|  0|  29|          64|          64|
+    |icmp_ln43_fu_104_p2     |      icmp|   0|  0|  12|          12|          13|
+    |reuse_select_fu_157_p3  |    select|   0|  0|  16|           1|          16|
+    |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 106|         117|         108|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_V_3   |   9|          2|   12|         24|
+    |i_V_fu_46                |   9|          2|   12|         24|
+    |reuse_addr_reg_fu_38     |   9|          2|   64|        128|
+    |reuse_reg_fu_42          |   9|          2|   16|         32|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|  106|        212|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |addr_cmp_reg_217                  |   1|   0|    1|          0|
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |count_V_addr_reg_211              |  11|   0|   11|          0|
+    |i_V_fu_46                         |  12|   0|   12|          0|
+    |reuse_addr_reg_fu_38              |  64|   0|   64|          0|
+    |reuse_reg_fu_42                   |  16|   0|   16|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 109|   0|  109|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+----------------------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|  sortList_Pipeline_occurence_loop|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|  sortList_Pipeline_occurence_loop|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|  sortList_Pipeline_occurence_loop|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|  sortList_Pipeline_occurence_loop|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|  sortList_Pipeline_occurence_loop|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|  sortList_Pipeline_occurence_loop|  return value|
+|data_address0     |  out|   11|   ap_memory|                              data|         array|
+|data_ce0          |  out|    1|   ap_memory|                              data|         array|
+|data_q0           |   in|   16|   ap_memory|                              data|         array|
+|trunc_ln          |   in|   11|     ap_none|                          trunc_ln|        scalar|
+|count_V_address0  |  out|   11|   ap_memory|                           count_V|         array|
+|count_V_ce0       |  out|    1|   ap_memory|                           count_V|         array|
+|count_V_we0       |  out|    1|   ap_memory|                           count_V|         array|
+|count_V_d0        |  out|   16|   ap_memory|                           count_V|         array|
+|count_V_address1  |  out|   11|   ap_memory|                           count_V|         array|
+|count_V_ce1       |  out|    1|   ap_memory|                           count_V|         array|
+|count_V_q1        |   in|   16|   ap_memory|                           count_V|         array|
++------------------+-----+-----+------------+----------------------------------+--------------+
+

@@ -20,6 +20,7 @@
 
    ======================================================================*/
 void PlotFilteredData( int SIZE, int SAMPLE_RATE, int DISPLAY, IN double *filtered_real_data_i, IN double *filtered_im_data_i){
+    //DISPLAY = 0;
     if(DISPLAY==1) {
         double fs = SAMPLE_RATE;
         double Ts;
@@ -33,12 +34,30 @@ void PlotFilteredData( int SIZE, int SAMPLE_RATE, int DISPLAY, IN double *filter
             tmAx[i] = i * Ts;
         }
 
-        plotData(tmAx, filtered_real_data_i, SIZE, "Real");
-        plotData(tmAx, filtered_im_data_i, SIZE, "Imaginary");
+        plotData(tmAx, filtered_real_data_i, SIZE, "Real",REAL_FILTER_PATH);
+        plotData(tmAx, filtered_im_data_i, SIZE, "Imaginary",IM_FILTER_PATH);
     }
 }
 
-void plotData(double* x, double* y, int size, const char* label) {
+void plotData(double* x, double* y, int size, const char* label,const char* path) {
+    FILE* fstore;
+    if((fstore = fopen(path, "w")) == NULL )
+    {
+        fprintf(stderr,"ERROR: Task read cannot open sort real file '%s'", path);
+        exit(1);
+    }
+
+    for (int i = 0; i < size; i++) {
+        fprintf(fstore, "%.6f %.6f\n", x[i] * 1e6, y[i]);
+    }
+    fclose(fstore);
+
+
+
+    //-----------------------------------------------
+
+
+
     FILE* gp;
     int i;
     gp = popen("gnuplot -persist", "w");
@@ -46,11 +65,13 @@ void plotData(double* x, double* y, int size, const char* label) {
     fprintf(gp, "set ylabel 'Amplitude (lin.)'\n");
     fprintf(gp, "set grid\n");
     fprintf(gp, "set title '%s'\n", label);
-    fprintf(gp, "plot '-' with lines title '%s'\n", label);
-    for (i = 0; i < size; i++) {
-        fprintf(gp, "%.6f %.6f\n", x[i] * 1e6, y[i]);
-    }
-    fprintf(gp, "e\n");
+    fprintf(gp, "plot '%s' using 1:2 with lines lw 1 title '%s'\n",path, "Filtered data");
+    //fprintf(gp, "plot '-' with lines lw 1
+    //fprintf(gp, "plot '-' with lines title '%s'\n", label);
+//    for (i = 0; i < size; i++) {
+//        fprintf(gp, "%.6f %.6f\n", x[i] * 1e6, y[i]);
+//    }
+//    fprintf(gp, "e\n");
     fflush(gp);
     fprintf(gp, "exit\n");
     pclose(gp);

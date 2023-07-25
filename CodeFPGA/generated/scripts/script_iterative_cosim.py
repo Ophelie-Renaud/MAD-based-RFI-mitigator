@@ -11,7 +11,7 @@ names = [ 'SIZE_OF_STREAM__BRD_ACQ_REAL_OUT_1__MAD_COMPUTATION_RAW_DATA_REAL_I',
 upper_bound = [ 4078, 4078, 4078, 4078, 4078, 4078, 4078, 4078, 4078, 4078, 4078, 4078, 4078, 8156, 8156, 4078 ] # Upper bound included from range of values
 lower_bound = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ] # Lower bound excluded from range of values
 lambdas = [ -1677309963, -1677309963, -37858, -37858, -37858, -37858, -1677309963, -1677309963, -1677309963, -37858, -37858, -37858, -37858, -1677309963, -1677309963, -1677309963 ]
-widths = [ 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64 ]
+widths = [ 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16 ]
 graph_ii = 81920000
 
 # DSE constants and variables

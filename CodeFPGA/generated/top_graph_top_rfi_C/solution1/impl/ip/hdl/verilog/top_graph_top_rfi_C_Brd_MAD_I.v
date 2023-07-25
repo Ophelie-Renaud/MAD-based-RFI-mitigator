@@ -36,13 +36,13 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output  [63:0] mad_I_o_stream_TDATA;
+output  [15:0] mad_I_o_stream_TDATA;
 output   mad_I_o_stream_TVALID;
 input   mad_I_o_stream_TREADY;
-input  [63:0] stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout;
+input  [15:0] stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout;
 input   stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n;
 output   stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read;
-output  [63:0] stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din;
+output  [15:0] stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din;
 input   stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_full_n;
 output   stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_write;
 
@@ -77,7 +77,7 @@ initial begin
 end
 
 top_graph_top_rfi_C_regslice_both #(
-    .DataWidth( 64 ))
+    .DataWidth( 16 ))
 regslice_both_mad_I_o_stream_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),

@@ -3,10 +3,6 @@
   <source>
     <originFiles name="top_graph_top_rfi_C.cpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C.cpp"/>
     <originFiles name="madCpt.hpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/include/madCpt.hpp"/>
-    <originFiles name="rfiFilter.hpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/include/rfiFilter.hpp"/>
-    <originFiles name="stdCpt.hpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/include/stdCpt.hpp"/>
   </source>
-  <testbench>
-    <originFiles name="top_graph_top_rfi_C_testbench.cpp" path="/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C_testbench.cpp"/>
-  </testbench>
+  <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

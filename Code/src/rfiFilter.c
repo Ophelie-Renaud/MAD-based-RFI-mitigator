@@ -22,6 +22,7 @@
 void RFIFilter(int MODE, int N_SAMPLES,IN double *mad_R_i, IN double *mad_I_i, IN double *std_R_i, IN double *std_I_i, IN double *raw_data_real_i, IN double *raw_data_im_i, OUT double *filtered_real_data_o, OUT double *filtered_im_data_o){
     if(MODE==0){
         double av_threshold = (mad_I_i[0]+ mad_R_i[0])/2;
+        //double av_threshold =mad_R_i[0];
         madFilter(raw_data_real_i,N_SAMPLES,av_threshold,filtered_real_data_o);
         madFilter(raw_data_im_i,N_SAMPLES,av_threshold,filtered_im_data_o);
     }else if(MODE==1){

@@ -55,8 +55,8 @@
 // Preesm special actors
 
 
-static void Brd_Acq_Real(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1, hls::stream<double> &out_2, hls::stream<double> &out_3, hls::stream<double> &out_4) {
-double tmp = in.read();
+static void Brd_Acq_Real(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1, hls::stream<ap_int<16>> &out_2, hls::stream<ap_int<16>> &out_3, hls::stream<ap_int<16>> &out_4) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 out_2.write(tmp);
@@ -64,20 +64,20 @@ out_3.write(tmp);
 out_4.write(tmp);
 }
 
-static void Brd_MAD_R(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_2) {
-double tmp = in.read();
+static void Brd_MAD_R(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_2) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_2.write(tmp);
 }
 
-static void Brd_STD_R(hls::stream<double> &in, hls::stream<double> &out_1, hls::stream<double> &out_2) {
-double tmp = in.read();
+static void Brd_STD_R(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_1, hls::stream<ap_int<16>> &out_2) {
+ap_int<16> tmp = in.read();
 out_1.write(tmp);
 out_2.write(tmp);
 }
 
-static void Brd_Acq_Im(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1, hls::stream<double> &out_2, hls::stream<double> &out_3, hls::stream<double> &out_4) {
-double tmp = in.read();
+static void Brd_Acq_Im(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1, hls::stream<ap_int<16>> &out_2, hls::stream<ap_int<16>> &out_3, hls::stream<ap_int<16>> &out_4) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 out_2.write(tmp);
@@ -85,26 +85,26 @@ out_3.write(tmp);
 out_4.write(tmp);
 }
 
-static void Brd_MAD_I(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_MAD_I(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
 
-static void Brd_STD_I(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_STD_I(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
 
-static void Brd_Res_Im(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_Res_Im(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
 
-static void Brd_Res_Real(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_Res_Real(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
@@ -123,20 +123,20 @@ out_1.write(tmp);
 
 extern "C" {
 void top_graph_top_rfi_C(
-  hls::stream<double> &raw_data_real_i_stream,
-  hls::stream<double> &raw_data_im_i_stream,
-  hls::stream<double> &raw_data_im_o_stream,
-  hls::stream<double> &raw_data_real_o_stream,
-  hls::stream<double> &mad_R_o_stream,
-  hls::stream<double> &raw_data_real_1_o_stream,
-  hls::stream<double> &std_R_o_stream,
-  hls::stream<double> &raw_data_im_1_o_stream,
-  hls::stream<double> &mad_I_o_stream,
-  hls::stream<double> &std_I_o_stream,
-  hls::stream<double> &filtered_im_0_o_stream,
-  hls::stream<double> &filtered_real_0_o_stream,
-  hls::stream<double> &filtered_im_1_o_stream,
-  hls::stream<double> &filtered_real_1_o_stream){
+  hls::stream<ap_int<16>> &raw_data_real_i_stream,
+  hls::stream<ap_int<16>> &raw_data_im_i_stream,
+  hls::stream<ap_int<16>> &raw_data_im_o_stream,
+  hls::stream<ap_int<16>> &raw_data_real_o_stream,
+  hls::stream<ap_int<16>> &mad_R_o_stream,
+  hls::stream<ap_int<16>> &raw_data_real_1_o_stream,
+  hls::stream<ap_int<16>> &std_R_o_stream,
+  hls::stream<ap_int<16>> &raw_data_im_1_o_stream,
+  hls::stream<ap_int<16>> &mad_I_o_stream,
+  hls::stream<ap_int<16>> &std_I_o_stream,
+  hls::stream<ap_int<16>> &filtered_im_0_o_stream,
+  hls::stream<ap_int<16>> &filtered_real_0_o_stream,
+  hls::stream<ap_int<16>> &filtered_im_1_o_stream,
+  hls::stream<ap_int<16>> &filtered_real_1_o_stream){
 #pragma HLS INTERFACE axis port=raw_data_real_i_stream name=raw_data_real_i_stream
 #pragma HLS INTERFACE axis port=raw_data_im_i_stream name=raw_data_im_i_stream
 #pragma HLS INTERFACE axis port=raw_data_im_o_stream name=raw_data_im_o_stream
@@ -154,52 +154,52 @@ void top_graph_top_rfi_C(
 #pragma HLS interface ap_ctrl_none port=return
 #pragma HLS dataflow disable_start_propagation
 
-  static hls::stream<double> stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i;
+  static hls::stream<ap_int<16>> stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i;
   const int size_of_stream__brd_acq_real_out_1__mad_computation_raw_data_real_i = SIZE_OF_STREAM__BRD_ACQ_REAL_OUT_1__MAD_COMPUTATION_RAW_DATA_REAL_I;
 #pragma HLS stream variable=stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_1__mad_computation_raw_data_real_i
-  static hls::stream<double> stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i;
+  static hls::stream<ap_int<16>> stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i;
   const int size_of_stream__brd_acq_real_out_2__std_computation_raw_data_real_i = SIZE_OF_STREAM__BRD_ACQ_REAL_OUT_2__STD_COMPUTATION_RAW_DATA_REAL_I;
 #pragma HLS stream variable=stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_2__std_computation_raw_data_real_i
-  static hls::stream<double> stream__MAD_Computation_mad_R_o__Brd_MAD_R_in;
+  static hls::stream<ap_int<16>> stream__MAD_Computation_mad_R_o__Brd_MAD_R_in;
   const int size_of_stream__mad_computation_mad_r_o__brd_mad_r_in = SIZE_OF_STREAM__MAD_COMPUTATION_MAD_R_O__BRD_MAD_R_IN;
 #pragma HLS stream variable=stream__MAD_Computation_mad_R_o__Brd_MAD_R_in depth=size_of_stream__mad_computation_mad_r_o__brd_mad_r_in
-  static hls::stream<double> stream__STD_Computation_std_R_o__Brd_STD_R_in;
+  static hls::stream<ap_int<16>> stream__STD_Computation_std_R_o__Brd_STD_R_in;
   const int size_of_stream__std_computation_std_r_o__brd_std_r_in = SIZE_OF_STREAM__STD_COMPUTATION_STD_R_O__BRD_STD_R_IN;
 #pragma HLS stream variable=stream__STD_Computation_std_R_o__Brd_STD_R_in depth=size_of_stream__std_computation_std_r_o__brd_std_r_in
-  static hls::stream<double> stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i;
+  static hls::stream<ap_int<16>> stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i;
   const int size_of_stream__brd_mad_r_out_2__rfi_filter_mad_r_i = SIZE_OF_STREAM__BRD_MAD_R_OUT_2__RFI_FILTER_MAD_R_I;
 #pragma HLS stream variable=stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i depth=size_of_stream__brd_mad_r_out_2__rfi_filter_mad_r_i
-  static hls::stream<double> stream__Brd_STD_R_out_2__RFI_Filter_std_R_i;
+  static hls::stream<ap_int<16>> stream__Brd_STD_R_out_2__RFI_Filter_std_R_i;
   const int size_of_stream__brd_std_r_out_2__rfi_filter_std_r_i = SIZE_OF_STREAM__BRD_STD_R_OUT_2__RFI_FILTER_STD_R_I;
 #pragma HLS stream variable=stream__Brd_STD_R_out_2__RFI_Filter_std_R_i depth=size_of_stream__brd_std_r_out_2__rfi_filter_std_r_i
-  static hls::stream<double> stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in;
+  static hls::stream<ap_int<16>> stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in;
   const int size_of_stream__rfi_filter_filtered_real_data_o__brd_res_real_in = SIZE_OF_STREAM__RFI_FILTER_FILTERED_REAL_DATA_O__BRD_RES_REAL_IN;
 #pragma HLS stream variable=stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in depth=size_of_stream__rfi_filter_filtered_real_data_o__brd_res_real_in
-  static hls::stream<double> stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i;
+  static hls::stream<ap_int<16>> stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i;
   const int size_of_stream__brd_acq_im_out_0__mad_computation_raw_data_im_i = SIZE_OF_STREAM__BRD_ACQ_IM_OUT_0__MAD_COMPUTATION_RAW_DATA_IM_I;
 #pragma HLS stream variable=stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_0__mad_computation_raw_data_im_i
-  static hls::stream<double> stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i;
+  static hls::stream<ap_int<16>> stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i;
   const int size_of_stream__brd_acq_im_out_1__std_computation_raw_data_im_i = SIZE_OF_STREAM__BRD_ACQ_IM_OUT_1__STD_COMPUTATION_RAW_DATA_IM_I;
 #pragma HLS stream variable=stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_1__std_computation_raw_data_im_i
-  static hls::stream<double> stream__MAD_Computation_mad_I_o__Brd_MAD_I_in;
+  static hls::stream<ap_int<16>> stream__MAD_Computation_mad_I_o__Brd_MAD_I_in;
   const int size_of_stream__mad_computation_mad_i_o__brd_mad_i_in = SIZE_OF_STREAM__MAD_COMPUTATION_MAD_I_O__BRD_MAD_I_IN;
 #pragma HLS stream variable=stream__MAD_Computation_mad_I_o__Brd_MAD_I_in depth=size_of_stream__mad_computation_mad_i_o__brd_mad_i_in
-  static hls::stream<double> stream__STD_Computation_std_I_o__Brd_STD_I_in;
+  static hls::stream<ap_int<16>> stream__STD_Computation_std_I_o__Brd_STD_I_in;
   const int size_of_stream__std_computation_std_i_o__brd_std_i_in = SIZE_OF_STREAM__STD_COMPUTATION_STD_I_O__BRD_STD_I_IN;
 #pragma HLS stream variable=stream__STD_Computation_std_I_o__Brd_STD_I_in depth=size_of_stream__std_computation_std_i_o__brd_std_i_in
-  static hls::stream<double> stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i;
+  static hls::stream<ap_int<16>> stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i;
   const int size_of_stream__brd_mad_i_out_1__rfi_filter_mad_i_i = SIZE_OF_STREAM__BRD_MAD_I_OUT_1__RFI_FILTER_MAD_I_I;
 #pragma HLS stream variable=stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i depth=size_of_stream__brd_mad_i_out_1__rfi_filter_mad_i_i
-  static hls::stream<double> stream__Brd_STD_I_out_1__RFI_Filter_std_I_i;
+  static hls::stream<ap_int<16>> stream__Brd_STD_I_out_1__RFI_Filter_std_I_i;
   const int size_of_stream__brd_std_i_out_1__rfi_filter_std_i_i = SIZE_OF_STREAM__BRD_STD_I_OUT_1__RFI_FILTER_STD_I_I;
 #pragma HLS stream variable=stream__Brd_STD_I_out_1__RFI_Filter_std_I_i depth=size_of_stream__brd_std_i_out_1__rfi_filter_std_i_i
-  static hls::stream<double> stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i;
+  static hls::stream<ap_int<16>> stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i;
   const int size_of_stream__brd_acq_im_out_4__rfi_filter_raw_data_im_i = SIZE_OF_STREAM__BRD_ACQ_IM_OUT_4__RFI_FILTER_RAW_DATA_IM_I;
 #pragma HLS stream variable=stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i depth=size_of_stream__brd_acq_im_out_4__rfi_filter_raw_data_im_i
-  static hls::stream<double> stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i;
+  static hls::stream<ap_int<16>> stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i;
   const int size_of_stream__brd_acq_real_out_4__rfi_filter_raw_data_real_i = SIZE_OF_STREAM__BRD_ACQ_REAL_OUT_4__RFI_FILTER_RAW_DATA_REAL_I;
 #pragma HLS stream variable=stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i depth=size_of_stream__brd_acq_real_out_4__rfi_filter_raw_data_real_i
-  static hls::stream<double> stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in;
+  static hls::stream<ap_int<16>> stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in;
   const int size_of_stream__rfi_filter_filtered_im_data_o__brd_res_im_in = SIZE_OF_STREAM__RFI_FILTER_FILTERED_IM_DATA_O__BRD_RES_IM_IN;
 #pragma HLS stream variable=stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in depth=size_of_stream__rfi_filter_filtered_im_data_o__brd_res_im_in
 
@@ -208,21 +208,14 @@ void top_graph_top_rfi_C(
   #ifndef __SYNTHESIS__
   for(int i = 0; i < 200; i++) {
 #endif
-    MADCpt<2048,3,double>(stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i,stream__MAD_Computation_mad_R_o__Brd_MAD_R_in,stream__MAD_Computation_mad_I_o__Brd_MAD_I_in);
+    STDCpt<2048,3,ap_int<16>>(stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i,stream__STD_Computation_std_R_o__Brd_STD_R_in,stream__STD_Computation_std_I_o__Brd_STD_I_in);
 #ifndef __SYNTHESIS__
   }
 #endif
   #ifndef __SYNTHESIS__
   for(int i = 0; i < 200; i++) {
 #endif
-    STDCpt<2048,3,double>(stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i,stream__STD_Computation_std_R_o__Brd_STD_R_in,stream__STD_Computation_std_I_o__Brd_STD_I_in);
-#ifndef __SYNTHESIS__
-  }
-#endif
-  #ifndef __SYNTHESIS__
-  for(int i = 0; i < 200; i++) {
-#endif
-    Brd_MAD_R(stream__MAD_Computation_mad_R_o__Brd_MAD_R_in, mad_R_o_stream, stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i);
+    MADCpt<2048,3,ap_int<16>>(stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i,stream__MAD_Computation_mad_R_o__Brd_MAD_R_in,stream__MAD_Computation_mad_I_o__Brd_MAD_I_in);
 #ifndef __SYNTHESIS__
   }
 #endif
@@ -230,6 +223,13 @@ void top_graph_top_rfi_C(
   for(int i = 0; i < 200; i++) {
 #endif
     Brd_STD_R(stream__STD_Computation_std_R_o__Brd_STD_R_in, std_R_o_stream, stream__Brd_STD_R_out_2__RFI_Filter_std_R_i);
+#ifndef __SYNTHESIS__
+  }
+#endif
+  #ifndef __SYNTHESIS__
+  for(int i = 0; i < 200; i++) {
+#endif
+    Brd_MAD_R(stream__MAD_Computation_mad_R_o__Brd_MAD_R_in, mad_R_o_stream, stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i);
 #ifndef __SYNTHESIS__
   }
 #endif
@@ -250,12 +250,12 @@ void top_graph_top_rfi_C(
   #ifndef __SYNTHESIS__
   for(int i = 0; i < 200; i++) {
 #endif
-    RFIFilter<0,2048,double>(stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i,stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i,stream__Brd_STD_R_out_2__RFI_Filter_std_R_i,stream__Brd_STD_I_out_1__RFI_Filter_std_I_i,stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i,stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i,stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in,stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in);
+    RFIFilter<0,2048,ap_int<16>>(stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i,stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i,stream__Brd_STD_R_out_2__RFI_Filter_std_R_i,stream__Brd_STD_I_out_1__RFI_Filter_std_I_i,stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i,stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i,stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in,stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in);
 #ifndef __SYNTHESIS__
   }
 #endif
-  Brd_Res_Real(stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in, filtered_real_1_o_stream, filtered_real_0_o_stream);
   Brd_Res_Im(stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in, filtered_im_1_o_stream, filtered_im_0_o_stream);
+  Brd_Res_Real(stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in, filtered_real_1_o_stream, filtered_real_0_o_stream);
 }
 }
 

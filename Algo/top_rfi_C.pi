@@ -26,9 +26,9 @@
                 <param direction="IN" isConfig="true"
                     name="HEADER_SIZE" type="int"/>
                 <param direction="OUT" isConfig="false"
-                    name="raw_data_real_o" type="double "/>
+                    name="raw_data_real_o" type="double"/>
                 <param direction="OUT" isConfig="false"
-                    name="raw_data_im_o" type="double "/>
+                    name="raw_data_im_o" type="double"/>
             </loop>
             <port kind="cfg_input" name="N_BLOCKS"/>
             <port kind="cfg_input" name="N_SAMPLES"/>
@@ -43,10 +43,12 @@
             <data key="graph_desc">Code/include/plotRnIHisto.h</data>
             <loop name="PlotRnIHisto">
                 <param direction="IN" isConfig="true" name="SIZE" type="int"/>
+                <param direction="IN" isConfig="true"
+                    name="DISPLAY" type="int"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double complex "/>
+                    name="raw_data_real_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double complex "/>
+                    name="raw_data_im_i" type="double"/>
             </loop>
             <port kind="cfg_input" name="SIZE"/>
             <port kind="cfg_input" name="DISPLAY"/>
@@ -77,13 +79,13 @@
                 <param direction="IN" isConfig="true"
                     name="SIGMA" type="int"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
+                    name="raw_data_real_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
+                    name="raw_data_im_i" type="double"/>
                 <param direction="OUT" isConfig="false"
-                    name="mad_R_o" type="double "/>
+                    name="mad_R_o" type="double"/>
                 <param direction="OUT" isConfig="false"
-                    name="mad_I_o" type="double "/>
+                    name="mad_I_o" type="double"/>
             </loop>
             <port kind="cfg_input" name="N_SAMPLES"/>
             <port kind="cfg_input" name="SIGMA"/>
@@ -99,16 +101,19 @@
             <loop name="STDCpt">
                 <param direction="IN" isConfig="true"
                     name="N_SAMPLES" type="int"/>
+                <param direction="IN" isConfig="true"
+                    name="SIGMA" type="int"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
+                    name="raw_data_real_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
+                    name="raw_data_im_i" type="double"/>
                 <param direction="OUT" isConfig="false"
-                    name="std_R_o" type="double "/>
+                    name="std_R_o" type="double"/>
                 <param direction="OUT" isConfig="false"
-                    name="std_I_o" type="double "/>
+                    name="std_I_o" type="double"/>
             </loop>
             <port kind="cfg_input" name="N_SAMPLES"/>
+            <port kind="cfg_input" name="SIGMA"/>
             <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_real_i"/>
             <port annotation="NONE" expr="N_SAMPLES" kind="input" name="raw_data_im_i"/>
             <port annotation="NONE" expr="N_SAMPLES"
@@ -122,18 +127,20 @@
                 <param direction="IN" isConfig="true"
                     name="SAMPLE_RATE" type="int"/>
                 <param direction="IN" isConfig="true" name="SIZE" type="int"/>
+                <param direction="IN" isConfig="true"
+                    name="DISPLAY" type="int"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
+                    name="raw_data_real_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
+                    name="raw_data_im_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="mad_R_i" type="double "/>
+                    name="mad_R_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="mad_I_i" type="double "/>
+                    name="mad_I_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="std_R_i" type="double "/>
+                    name="std_R_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="std_I_i" type="double "/>
+                    name="std_I_i" type="double"/>
             </loop>
             <port kind="cfg_input" name="SIZE"/>
             <port kind="cfg_input" name="SAMPLE_RATE"/>
@@ -170,21 +177,21 @@
                 <param direction="IN" isConfig="true"
                     name="N_SAMPLES" type="int"/>
                 <param direction="IN" isConfig="false"
-                    name="mad_R_i" type="double "/>
+                    name="mad_R_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="mad_I_i" type="double "/>
+                    name="mad_I_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="std_R_i" type="double "/>
+                    name="std_R_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="std_I_i" type="double "/>
+                    name="std_I_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_real_i" type="double "/>
+                    name="raw_data_real_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="raw_data_im_i" type="double "/>
+                    name="raw_data_im_i" type="double"/>
                 <param direction="OUT" isConfig="false"
-                    name="filtered_real_data_o" type="double "/>
+                    name="filtered_real_data_o" type="double"/>
                 <param direction="OUT" isConfig="false"
-                    name="filtered_im_data_o" type="double "/>
+                    name="filtered_im_data_o" type="double"/>
             </loop>
             <port kind="cfg_input" name="MODE"/>
             <port kind="cfg_input" name="N_SAMPLES"/>
@@ -208,9 +215,9 @@
                 <param direction="IN" isConfig="true"
                     name="DISPLAY" type="int"/>
                 <param direction="IN" isConfig="false"
-                    name="filtered_real_data_i" type="double "/>
+                    name="filtered_real_data_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="filtered_im_data_i" type="double "/>
+                    name="filtered_im_data_i" type="double"/>
             </loop>
             <port kind="cfg_input" name="DISPLAY"/>
             <port kind="cfg_input" name="SIZE"/>
@@ -263,9 +270,9 @@
                 <param direction="IN" isConfig="true"
                     name="HEADER_SIZE" type="int"/>
                 <param direction="IN" isConfig="false"
-                    name="filtered_real_data_i" type="double "/>
+                    name="filtered_real_data_i" type="double"/>
                 <param direction="IN" isConfig="false"
-                    name="filtered_im_data_i" type="double "/>
+                    name="filtered_im_data_i" type="double"/>
             </loop>
             <port kind="cfg_input" name="SIZE"/>
             <port kind="cfg_input" name="N_BLOCKS"/>
@@ -446,5 +453,7 @@
             target="Data_Restitution" targetport="N_SAMPLES"/>
         <edge kind="dependency" source="HEADER_SIZE"
             target="Data_Restitution" targetport="HEADER_SIZE"/>
+        <edge kind="dependency" source="SIGMA"
+            target="STD_Computation" targetport="SIGMA"/>
     </graph>
 </graphml>

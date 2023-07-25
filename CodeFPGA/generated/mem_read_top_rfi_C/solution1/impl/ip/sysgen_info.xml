@@ -3,32 +3,32 @@
   <CTypeInfo>
       <RtlPort>
         <name>raw_data_im_i_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_i_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_i_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_i_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_i_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_i_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
   </CTypeInfo>

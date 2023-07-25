@@ -12440,12 +12440,18 @@ using std::wcstombs;
 using std::wctomb;
 # 17 "../include/madCpt.hpp" 2
 
+# 1 "/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int.h" 1
+# 19 "../include/madCpt.hpp" 2
 
 
 
-double MIN(double *tab,int len){
-    double num = tab[0];
-    VITIS_LOOP_23_1: for(int i=1;i<len;i++){
+
+
+
+ap_int<16> MIN(ap_int<16> *tab,ap_int<16> len){
+
+ ap_int<16> num = tab[0];
+    VITIS_LOOP_28_1: for(ap_int<16> i=1;i<len;i++){
         if(tab[i] < num){
             num = tab[i];
         }
@@ -12454,44 +12460,53 @@ double MIN(double *tab,int len){
 }
 
 
-void sortList(double *data, int size, double *sorted_list){
-    int count[409600] = {0};
+void sortList(ap_int<16> *data, ap_int<16> size, ap_int<16> *sorted_list){
+ ap_int<16> count[2048] = {0};
 
-    int min_value = MIN(data,size);
-    int max_value = 50;
+ ap_int<16> min_value = MIN(data,size);
+ ap_int<16> max_value = 50;
 
-    VITIS_LOOP_38_1: for (int i = 0; i < size; i++) {
-        int num = data[i];
+    occurence_loop: for (ap_int<16> i = 0; i < size; i++) {
+#pragma HLS pipeline II=1
+ ap_int<16> num = data[i];
         count[num - min_value]++;
     }
 
-    int index = 0;
-    VITIS_LOOP_44_2: for (int i = 0; i < size; i++) {
-        VITIS_LOOP_45_3: for (int j = 0; j < count[i]; j++) {
-            sorted_list[index++] = i + min_value;
+    char index = 0;
+    char i = 0;
+
+    VITIS_LOOP_52_1: for (ap_int<16> i = 0; i < size; i++) {
+     ap_int<16> j = 0;
+
+        VITIS_LOOP_55_2: for (ap_int<16> j = 0; j < count[i]; j++) {
+#pragma HLS LOOP_TRIPCOUNT max=50 min=0
+
+ sorted_list[index++] = i + min_value;
+
         }
+
     }
 }
 
 
-double computeMedian(double *list, int length) {
+ap_int<16> computeMedian(ap_int<16> *list, ap_int<16> length) {
  if (length % 2 == 0) {
 
-         int midIndex1 = length / 2 - 1;
-         int midIndex2 = length / 2;
-         float median = (list[midIndex1] + list[midIndex2]) / 2.0;
+  ap_int<16> midIndex1 = length / 2 - 1;
+  ap_int<16> midIndex2 = length / 2;
+  ap_int<16> median = (list[midIndex1] + list[midIndex2]) / 2.0;
          return median;
      } else {
 
-         int midIndex = length / 2;
-         float median = list[midIndex];
+      ap_int<16> midIndex = length / 2;
+      ap_int<16> median = list[midIndex];
          return median;
      }
 }
 
 
-void deviationList(double *list, double median, int length, double *deviation_list) {
-    VITIS_LOOP_69_1: for(int i=0;i<length;i++){
+void deviationList(ap_int<16> *list, ap_int<16> median, ap_int<16> length, ap_int<16> *deviation_list) {
+    VITIS_LOOP_83_1: for(ap_int<16> i=0;i<length;i++){
         deviation_list[i] = abs(list[i]-median);
     }
 }
@@ -12501,12 +12516,12 @@ void deviationList(double *list, double median, int length, double *deviation_li
 template<int N_SAMPLES, int SIGMA, typename T>
 void MADCpt( hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls::stream<T> &mad_R_o, hls::stream<T> &mad_I_o){
 
-    double sorted_list_R[N_SAMPLES];
-    double sorted_list_I[N_SAMPLES];
-    double RDRi[N_SAMPLES];
-    double RDIi[N_SAMPLES];
+ ap_int<16> sorted_list_R[N_SAMPLES];
+ ap_int<16> sorted_list_I[N_SAMPLES];
+ ap_int<16> RDRi[N_SAMPLES];
+ ap_int<16> RDIi[N_SAMPLES];
 
-    VITIS_LOOP_84_1: for(int i=0;i<N_SAMPLES;i++){
+    VITIS_LOOP_98_1: for(ap_int<16> i=0;i<N_SAMPLES;i++){
      RDRi[i]=raw_data_real_i.read();
          RDIi[i]=raw_data_im_i.read();
     }
@@ -12514,39 +12529,37 @@ void MADCpt( hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls
     sortList(RDRi,N_SAMPLES, sorted_list_R);
     sortList(RDIi,N_SAMPLES, sorted_list_I);
 
-    double median_R = computeMedian(sorted_list_R, N_SAMPLES);
-    double median_I = computeMedian(sorted_list_I, N_SAMPLES);
+    ap_int<16> median_R = computeMedian(sorted_list_R, N_SAMPLES);
+    ap_int<16> median_I = computeMedian(sorted_list_I, N_SAMPLES);
 
 
-    double deviation_list_R[N_SAMPLES];
+    ap_int<16> deviation_list_R[N_SAMPLES];
     deviationList(sorted_list_R, median_R, N_SAMPLES, deviation_list_R);
-    double deviation_list_I [N_SAMPLES];
+    ap_int<16> deviation_list_I [N_SAMPLES];
     deviationList(sorted_list_I, median_I, N_SAMPLES, deviation_list_I);
 
 
-    double sorted_deviated_list_R[N_SAMPLES];
+    ap_int<16> sorted_deviated_list_R[N_SAMPLES];
     sortList(deviation_list_R, N_SAMPLES, sorted_deviated_list_R);
-    double sorted_deviated_list_I[N_SAMPLES];
+    ap_int<16> sorted_deviated_list_I[N_SAMPLES];
     sortList(deviation_list_I, N_SAMPLES, sorted_deviated_list_I);
 
 
-    double median_absolute_deviation_R = computeMedian(sorted_deviated_list_R, N_SAMPLES)*1.4826;
-    double median_absolute_deviation_I = computeMedian(sorted_deviated_list_I, N_SAMPLES)*1.4826;
+    ap_int<16> median_absolute_deviation_R = computeMedian(sorted_deviated_list_R, N_SAMPLES)*1.4826;
+    ap_int<16> median_absolute_deviation_I = computeMedian(sorted_deviated_list_I, N_SAMPLES)*1.4826;
 
-    double MRo[N_SAMPLES];
-    double MIo[N_SAMPLES];
+    ap_int<16> MRo[N_SAMPLES];
+    ap_int<16> MIo[N_SAMPLES];
 
-    VITIS_LOOP_114_2: for(int i = 0; i<N_SAMPLES;i++){
+    VITIS_LOOP_128_2: for(ap_int<16> i = 0; i<N_SAMPLES;i++){
      MRo[i]=median_absolute_deviation_R*SIGMA;
      MIo[i]=median_absolute_deviation_I*SIGMA;
     }
 
-    VITIS_LOOP_119_3: for(int i = 0; i<N_SAMPLES;i++){
+    VITIS_LOOP_133_3: for(ap_int<16> i = 0; i<N_SAMPLES;i++){
      mad_R_o.write(MRo[i]);
      mad_I_o.write(MIo[i]);
     }
-
-
 
 }
 # 46 "top_graph_top_rfi_C.cpp" 2
@@ -12554,67 +12567,68 @@ void MADCpt( hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls
 # 15 "../include/stdCpt.hpp"
 # 1 "/home/orenaud/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/math.h" 1 3
 # 16 "../include/stdCpt.hpp" 2
-double computeAverage( double *list, int size){
-    double sum = 0.0;
-    double av = 0.0;
-    int i;
 
-    VITIS_LOOP_21_1: for (i = 0; i < size; i++) {
+# 1 "/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int.h" 1
+# 18 "../include/stdCpt.hpp" 2
+ap_int<16> computeAverage( ap_int<16> *list, ap_int<16> size){
+ ap_int<16> sum = 0;
+ ap_int<16> av = 0;
+    VITIS_LOOP_21_1: for (ap_int<16> i = 0; i < size; i++) {
         sum += list[i];
     }
 
     av = sum/size;
     return av;
 }
-double computeVariance( double *list, int size){
-    double sum = 0.0;
-     int i;
+ap_int<16> computeVariance( ap_int<16> *list, ap_int<16> size){
+ ap_int<16> sum = 0;
 
-     VITIS_LOOP_32_1: for (i = 0; i < size; i++) {
+
+     VITIS_LOOP_32_1: for (ap_int<16> i = 0; i < size; i++) {
          sum += list[i];
      }
 
      return sum / size;
 }
-void stdDeviationList(double *list, double average, int length, double *deviation_list){
-    VITIS_LOOP_39_1: for(int i=0;i<length;i++){
-        deviation_list[i] = sqrt(pow(list[i]-average,2));
+void stdDeviationList(ap_int<16> *list, ap_int<16> average, ap_int<16> length, ap_int<16> *deviation_list){
+    VITIS_LOOP_39_1: for(ap_int<16> i=0;i<length;i++){
+        deviation_list[i] = ((ap_int<16>) sqrt(pow((float)(list[i]-average),2)));
     }
 }
 
 template<int N_SAMPLES, int SIGMA, typename T>
 void STDCpt( hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls::stream<T> &std_R_o, hls::stream<T> &std_I_o){
- double RRi[N_SAMPLES];
- double RRo[N_SAMPLES];
- double RIi[N_SAMPLES];
- double RIo[N_SAMPLES];
- loop_2: for(int i=0;i<N_SAMPLES;i++){
+ ap_int<16> RRi[N_SAMPLES];
+ ap_int<16> RRo[N_SAMPLES];
+ ap_int<16> RIi[N_SAMPLES];
+ ap_int<16> RIo[N_SAMPLES];
+ loop_2: for(ap_int<16> i=0;i<N_SAMPLES;i++){
          RRi[i] = raw_data_real_i.read();
          RIi[i] = raw_data_im_i.read();
          }
 
 
-    double average_R = computeAverage(RRi, N_SAMPLES);
-    double average_I = computeAverage(RIi, N_SAMPLES);
+ ap_int<16> average_R = computeAverage(RRi, N_SAMPLES);
+ ap_int<16> average_I = computeAverage(RIi, N_SAMPLES);
 
 
-    double deviation_list_R[N_SAMPLES];
+ ap_int<16> deviation_list_R[N_SAMPLES];
     stdDeviationList(RRi, average_R, N_SAMPLES, deviation_list_R);
-    double deviation_list_I[N_SAMPLES];
+    ap_int<16> deviation_list_I[N_SAMPLES];
     stdDeviationList(RIi, average_I, N_SAMPLES, deviation_list_I);
 
 
 
 
-    double variance_R = computeVariance(deviation_list_R, N_SAMPLES);
-    double variance_I = computeVariance(deviation_list_I, N_SAMPLES);
+    ap_int<16> variance_R = computeVariance(deviation_list_R, N_SAMPLES);
+    ap_int<16> variance_I = computeVariance(deviation_list_I, N_SAMPLES);
 
 
-    VITIS_LOOP_72_1: for(int i = 0; i<N_SAMPLES;i++){
-     RRo[i]= sqrt(variance_R)*SIGMA ;
-     RIo[i]=sqrt(variance_I)*SIGMA;
+    VITIS_LOOP_72_1: for(ap_int<16> i = 0; i<N_SAMPLES;i++){
+     RRo[i]= ((ap_int<16>)sqrt((float)variance_R)*SIGMA) ;
+     RIo[i]=((ap_int<16>)sqrt((float)variance_I)*SIGMA);
     }
-    loop_3:for(int i = 0; i<N_SAMPLES;i++){
+    loop_3:for(ap_int<16> i = 0; i<N_SAMPLES;i++){
      std_R_o.write(RRo[i]);
      std_I_o.write(RIo[i]);
             }
@@ -12623,8 +12637,11 @@ void STDCpt( hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls
 # 47 "top_graph_top_rfi_C.cpp" 2
 # 1 "../include/rfiFilter.hpp" 1
 # 18 "../include/rfiFilter.hpp"
-void madFilter(double *raw_data, int length, double threshold, double *filtered_data){
-    loop_1:for(int i = 0; i < length;i++){
+# 1 "/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int.h" 1
+# 19 "../include/rfiFilter.hpp" 2
+
+void madFilter(ap_int<16> *raw_data, ap_int<16> length, ap_int<16> threshold, ap_int<16> *filtered_data){
+    loop_1:for(ap_int<16> i = 0; i < length;i++){
         if(raw_data[i]<0 && raw_data[i]<-threshold){
             filtered_data[i] = -threshold;
         }else if(raw_data[i]>0 && raw_data[i]>threshold){
@@ -12634,10 +12651,10 @@ void madFilter(double *raw_data, int length, double threshold, double *filtered_
         }
     }
 }
-void stdFilter(double *raw_data, int length, double threshold, double *filtered_data)
+void stdFilter(ap_int<16> *raw_data, ap_int<16> length, ap_int<16> threshold, ap_int<16> *filtered_data)
 {
 
- loop_1:for(int i = 0; i < length;i++){
+ loop_1:for(ap_int<16> i = 0; i < length;i++){
          if(raw_data[i]<0 && raw_data[i]<-threshold){
              filtered_data[i] = -threshold;
          }else if(raw_data[i]>0 && raw_data[i]>threshold){
@@ -12650,8 +12667,8 @@ void stdFilter(double *raw_data, int length, double threshold, double *filtered_
 
 template<int MODE, int N_SAMPLES, typename T>
 void RFIFilter(hls::stream<T> &mad_R_i, hls::stream<T> &mad_I_i, hls::stream<T> &std_R_i, hls::stream<T> &std_I_i, hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls::stream<T> &filtered_real_data_o, hls::stream<T> &filtered_im_data_o){
- double av_threshold = 0;
- double temp = (std_I_i.read()+ std_R_i.read())/2;
+ ap_int<16> av_threshold = 0;
+ ap_int<16> temp = (std_I_i.read()+ std_R_i.read())/2;
  if(MODE==0){
          av_threshold = (mad_I_i.read()+ mad_R_i.read())/2;
     }else if(MODE==1){
@@ -12659,20 +12676,20 @@ void RFIFilter(hls::stream<T> &mad_R_i, hls::stream<T> &mad_I_i, hls::stream<T> 
           av_threshold = (std_I_i.read()+ std_R_i.read())/2;
         }
 
-        double RRi[N_SAMPLES];
-        double RRo[N_SAMPLES];
+ ap_int<16> RRi[N_SAMPLES];
+ ap_int<16> RRo[N_SAMPLES];
 
-        double RIi[N_SAMPLES];
-        double RIo[N_SAMPLES];
+ ap_int<16> RIi[N_SAMPLES];
+ ap_int<16> RIo[N_SAMPLES];
 
-        loop_2: for(int i=0;i<N_SAMPLES;i++){
+        loop_2: for(ap_int<16> i=0;i<N_SAMPLES;i++){
         RRi[i] = raw_data_real_i.read();
         RIi[i] = raw_data_im_i.read();
         }
         madFilter(RRi,N_SAMPLES,av_threshold,RRo);
         madFilter(RIi,N_SAMPLES,av_threshold,RIo);
 
-        loop_3:for(int i = 0; i<N_SAMPLES;i++){
+        loop_3:for(ap_int<16> i = 0; i<N_SAMPLES;i++){
          filtered_real_data_o.write(RRo[i]);
          filtered_im_data_o.write(RIo[i]);
         }
@@ -12690,8 +12707,8 @@ void RFIFilter(hls::stream<T> &mad_R_i, hls::stream<T> &mad_I_i, hls::stream<T> 
 
 
 
-static void Brd_Acq_Real(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1, hls::stream<double> &out_2, hls::stream<double> &out_3, hls::stream<double> &out_4) {
-double tmp = in.read();
+static void Brd_Acq_Real(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1, hls::stream<ap_int<16>> &out_2, hls::stream<ap_int<16>> &out_3, hls::stream<ap_int<16>> &out_4) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 out_2.write(tmp);
@@ -12699,20 +12716,20 @@ out_3.write(tmp);
 out_4.write(tmp);
 }
 
-static void Brd_MAD_R(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_2) {
-double tmp = in.read();
+static void Brd_MAD_R(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_2) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_2.write(tmp);
 }
 
-static void Brd_STD_R(hls::stream<double> &in, hls::stream<double> &out_1, hls::stream<double> &out_2) {
-double tmp = in.read();
+static void Brd_STD_R(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_1, hls::stream<ap_int<16>> &out_2) {
+ap_int<16> tmp = in.read();
 out_1.write(tmp);
 out_2.write(tmp);
 }
 
-static void Brd_Acq_Im(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1, hls::stream<double> &out_2, hls::stream<double> &out_3, hls::stream<double> &out_4) {
-double tmp = in.read();
+static void Brd_Acq_Im(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1, hls::stream<ap_int<16>> &out_2, hls::stream<ap_int<16>> &out_3, hls::stream<ap_int<16>> &out_4) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 out_2.write(tmp);
@@ -12720,46 +12737,46 @@ out_3.write(tmp);
 out_4.write(tmp);
 }
 
-static void Brd_MAD_I(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_MAD_I(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
 
-static void Brd_STD_I(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_STD_I(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
 
-static void Brd_Res_Im(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_Res_Im(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
 
-static void Brd_Res_Real(hls::stream<double> &in, hls::stream<double> &out_0, hls::stream<double> &out_1) {
-double tmp = in.read();
+static void Brd_Res_Real(hls::stream<ap_int<16>> &in, hls::stream<ap_int<16>> &out_0, hls::stream<ap_int<16>> &out_1) {
+ap_int<16> tmp = in.read();
 out_0.write(tmp);
 out_1.write(tmp);
 }
 # 124 "top_graph_top_rfi_C.cpp"
 extern "C" {
 __attribute__((sdx_kernel("top_graph_top_rfi_C", 0))) void top_graph_top_rfi_C(
-  hls::stream<double> &raw_data_real_i_stream,
-  hls::stream<double> &raw_data_im_i_stream,
-  hls::stream<double> &raw_data_im_o_stream,
-  hls::stream<double> &raw_data_real_o_stream,
-  hls::stream<double> &mad_R_o_stream,
-  hls::stream<double> &raw_data_real_1_o_stream,
-  hls::stream<double> &std_R_o_stream,
-  hls::stream<double> &raw_data_im_1_o_stream,
-  hls::stream<double> &mad_I_o_stream,
-  hls::stream<double> &std_I_o_stream,
-  hls::stream<double> &filtered_im_0_o_stream,
-  hls::stream<double> &filtered_real_0_o_stream,
-  hls::stream<double> &filtered_im_1_o_stream,
-  hls::stream<double> &filtered_real_1_o_stream){
+  hls::stream<ap_int<16>> &raw_data_real_i_stream,
+  hls::stream<ap_int<16>> &raw_data_im_i_stream,
+  hls::stream<ap_int<16>> &raw_data_im_o_stream,
+  hls::stream<ap_int<16>> &raw_data_real_o_stream,
+  hls::stream<ap_int<16>> &mad_R_o_stream,
+  hls::stream<ap_int<16>> &raw_data_real_1_o_stream,
+  hls::stream<ap_int<16>> &std_R_o_stream,
+  hls::stream<ap_int<16>> &raw_data_im_1_o_stream,
+  hls::stream<ap_int<16>> &mad_I_o_stream,
+  hls::stream<ap_int<16>> &std_I_o_stream,
+  hls::stream<ap_int<16>> &filtered_im_0_o_stream,
+  hls::stream<ap_int<16>> &filtered_real_0_o_stream,
+  hls::stream<ap_int<16>> &filtered_im_1_o_stream,
+  hls::stream<ap_int<16>> &filtered_real_1_o_stream){
 #pragma HLSDIRECTIVE TOP name=top_graph_top_rfi_C
 # 139 "top_graph_top_rfi_C.cpp"
 
@@ -12780,52 +12797,52 @@ __attribute__((sdx_kernel("top_graph_top_rfi_C", 0))) void top_graph_top_rfi_C(
 #pragma HLS interface ap_ctrl_none port=return
 #pragma HLS dataflow disable_start_propagation
 
- static hls::stream<double> stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i;
+ static hls::stream<ap_int<16>> stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i;
   const int size_of_stream__brd_acq_real_out_1__mad_computation_raw_data_real_i = 4078;
 #pragma HLS stream variable=stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_1__mad_computation_raw_data_real_i
- static hls::stream<double> stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i;
+ static hls::stream<ap_int<16>> stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i;
   const int size_of_stream__brd_acq_real_out_2__std_computation_raw_data_real_i = 4078;
 #pragma HLS stream variable=stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_2__std_computation_raw_data_real_i
- static hls::stream<double> stream__MAD_Computation_mad_R_o__Brd_MAD_R_in;
+ static hls::stream<ap_int<16>> stream__MAD_Computation_mad_R_o__Brd_MAD_R_in;
   const int size_of_stream__mad_computation_mad_r_o__brd_mad_r_in = 4078;
 #pragma HLS stream variable=stream__MAD_Computation_mad_R_o__Brd_MAD_R_in depth=size_of_stream__mad_computation_mad_r_o__brd_mad_r_in
- static hls::stream<double> stream__STD_Computation_std_R_o__Brd_STD_R_in;
+ static hls::stream<ap_int<16>> stream__STD_Computation_std_R_o__Brd_STD_R_in;
   const int size_of_stream__std_computation_std_r_o__brd_std_r_in = 4078;
 #pragma HLS stream variable=stream__STD_Computation_std_R_o__Brd_STD_R_in depth=size_of_stream__std_computation_std_r_o__brd_std_r_in
- static hls::stream<double> stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i;
+ static hls::stream<ap_int<16>> stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i;
   const int size_of_stream__brd_mad_r_out_2__rfi_filter_mad_r_i = 4078;
 #pragma HLS stream variable=stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i depth=size_of_stream__brd_mad_r_out_2__rfi_filter_mad_r_i
- static hls::stream<double> stream__Brd_STD_R_out_2__RFI_Filter_std_R_i;
+ static hls::stream<ap_int<16>> stream__Brd_STD_R_out_2__RFI_Filter_std_R_i;
   const int size_of_stream__brd_std_r_out_2__rfi_filter_std_r_i = 4078;
 #pragma HLS stream variable=stream__Brd_STD_R_out_2__RFI_Filter_std_R_i depth=size_of_stream__brd_std_r_out_2__rfi_filter_std_r_i
- static hls::stream<double> stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in;
+ static hls::stream<ap_int<16>> stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in;
   const int size_of_stream__rfi_filter_filtered_real_data_o__brd_res_real_in = 4078;
 #pragma HLS stream variable=stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in depth=size_of_stream__rfi_filter_filtered_real_data_o__brd_res_real_in
- static hls::stream<double> stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i;
+ static hls::stream<ap_int<16>> stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i;
   const int size_of_stream__brd_acq_im_out_0__mad_computation_raw_data_im_i = 4078;
 #pragma HLS stream variable=stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_0__mad_computation_raw_data_im_i
- static hls::stream<double> stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i;
+ static hls::stream<ap_int<16>> stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i;
   const int size_of_stream__brd_acq_im_out_1__std_computation_raw_data_im_i = 4078;
 #pragma HLS stream variable=stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_1__std_computation_raw_data_im_i
- static hls::stream<double> stream__MAD_Computation_mad_I_o__Brd_MAD_I_in;
+ static hls::stream<ap_int<16>> stream__MAD_Computation_mad_I_o__Brd_MAD_I_in;
   const int size_of_stream__mad_computation_mad_i_o__brd_mad_i_in = 4078;
 #pragma HLS stream variable=stream__MAD_Computation_mad_I_o__Brd_MAD_I_in depth=size_of_stream__mad_computation_mad_i_o__brd_mad_i_in
- static hls::stream<double> stream__STD_Computation_std_I_o__Brd_STD_I_in;
+ static hls::stream<ap_int<16>> stream__STD_Computation_std_I_o__Brd_STD_I_in;
   const int size_of_stream__std_computation_std_i_o__brd_std_i_in = 4078;
 #pragma HLS stream variable=stream__STD_Computation_std_I_o__Brd_STD_I_in depth=size_of_stream__std_computation_std_i_o__brd_std_i_in
- static hls::stream<double> stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i;
+ static hls::stream<ap_int<16>> stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i;
   const int size_of_stream__brd_mad_i_out_1__rfi_filter_mad_i_i = 4078;
 #pragma HLS stream variable=stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i depth=size_of_stream__brd_mad_i_out_1__rfi_filter_mad_i_i
- static hls::stream<double> stream__Brd_STD_I_out_1__RFI_Filter_std_I_i;
+ static hls::stream<ap_int<16>> stream__Brd_STD_I_out_1__RFI_Filter_std_I_i;
   const int size_of_stream__brd_std_i_out_1__rfi_filter_std_i_i = 4078;
 #pragma HLS stream variable=stream__Brd_STD_I_out_1__RFI_Filter_std_I_i depth=size_of_stream__brd_std_i_out_1__rfi_filter_std_i_i
- static hls::stream<double> stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i;
+ static hls::stream<ap_int<16>> stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i;
   const int size_of_stream__brd_acq_im_out_4__rfi_filter_raw_data_im_i = 8156;
 #pragma HLS stream variable=stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i depth=size_of_stream__brd_acq_im_out_4__rfi_filter_raw_data_im_i
- static hls::stream<double> stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i;
+ static hls::stream<ap_int<16>> stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i;
   const int size_of_stream__brd_acq_real_out_4__rfi_filter_raw_data_real_i = 8156;
 #pragma HLS stream variable=stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i depth=size_of_stream__brd_acq_real_out_4__rfi_filter_raw_data_real_i
- static hls::stream<double> stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in;
+ static hls::stream<ap_int<16>> stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in;
   const int size_of_stream__rfi_filter_filtered_im_data_o__brd_res_im_in = 4078;
 #pragma HLS stream variable=stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in depth=size_of_stream__rfi_filter_filtered_im_data_o__brd_res_im_in
 
@@ -12834,21 +12851,14 @@ __attribute__((sdx_kernel("top_graph_top_rfi_C", 0))) void top_graph_top_rfi_C(
 
 
 
-    MADCpt<2048,3,double>(stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i,stream__MAD_Computation_mad_R_o__Brd_MAD_R_in,stream__MAD_Computation_mad_I_o__Brd_MAD_I_in);
+    STDCpt<2048,3,ap_int<16>>(stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i,stream__STD_Computation_std_R_o__Brd_STD_R_in,stream__STD_Computation_std_I_o__Brd_STD_I_in);
 
 
 
 
 
 
-    STDCpt<2048,3,double>(stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i,stream__STD_Computation_std_R_o__Brd_STD_R_in,stream__STD_Computation_std_I_o__Brd_STD_I_in);
-
-
-
-
-
-
-    Brd_MAD_R(stream__MAD_Computation_mad_R_o__Brd_MAD_R_in, mad_R_o_stream, stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i);
+    MADCpt<2048,3,ap_int<16>>(stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i,stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i,stream__MAD_Computation_mad_R_o__Brd_MAD_R_in,stream__MAD_Computation_mad_I_o__Brd_MAD_I_in);
 
 
 
@@ -12856,6 +12866,13 @@ __attribute__((sdx_kernel("top_graph_top_rfi_C", 0))) void top_graph_top_rfi_C(
 
 
     Brd_STD_R(stream__STD_Computation_std_R_o__Brd_STD_R_in, std_R_o_stream, stream__Brd_STD_R_out_2__RFI_Filter_std_R_i);
+
+
+
+
+
+
+    Brd_MAD_R(stream__MAD_Computation_mad_R_o__Brd_MAD_R_in, mad_R_o_stream, stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i);
 
 
 
@@ -12876,11 +12893,11 @@ __attribute__((sdx_kernel("top_graph_top_rfi_C", 0))) void top_graph_top_rfi_C(
 
 
 
-    RFIFilter<0,2048,double>(stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i,stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i,stream__Brd_STD_R_out_2__RFI_Filter_std_R_i,stream__Brd_STD_I_out_1__RFI_Filter_std_I_i,stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i,stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i,stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in,stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in);
+    RFIFilter<0,2048,ap_int<16>>(stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i,stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i,stream__Brd_STD_R_out_2__RFI_Filter_std_R_i,stream__Brd_STD_I_out_1__RFI_Filter_std_I_i,stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i,stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i,stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in,stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in);
 
 
 
-  Brd_Res_Real(stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in, filtered_real_1_o_stream, filtered_real_0_o_stream);
   Brd_Res_Im(stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in, filtered_im_1_o_stream, filtered_im_0_o_stream);
+  Brd_Res_Real(stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in, filtered_real_1_o_stream, filtered_real_0_o_stream);
 }
 }

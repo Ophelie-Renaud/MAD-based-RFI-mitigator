@@ -49,20 +49,22 @@ If you want to take advantage of this project
 :warning: **warning**:  Download and extract the project close to your /home repository in order to prevent long path project issue.
 
 **Algo**: 
-- "top_rfi_c" refers to a dataflow graph described in C code that can only be deployed on a CPU.
-- "top_rfi_cplusplus" refers to a dataflow graph described in C++ code that can be deployed on CPU/GPU/FPGA.
-The SCAPE folder contains the graph with the granularity adjusted for a specific target architecture. Please note that the automatic adaptation task for the graph is only available in the developer version of PREESM. However, the transformed graphs mentioned here are provided for your reference :grin:.
-- "top_rfi_scape_full_c" targets a single-core CPU architecture.
-- "top_rfi_scape_part_c" targets a multi-core CPU architecture, and the number of cores to be used needs to be specified in the parameter CORE.
+- "top_rfi_c" refers to the original dataflow graph described in C code that can only be deployed on a CPU.
+- Folder *generated* contains the generated graph
+	- Folder *SCAPE* contains the graph with the granularity adjusted for a specific target architecture. Please note that the automatic adaptation task for the graph is only available in the developer version of PREESM. However, the transformed graphs mentioned here are provided for your reference :grin:.
+	- Folder *simsdp_archi[id]* refers to... [TODO]
 
 
 **CPU-based workflow**:
+![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/stdwf.png)
 [TODO]
 
 **FPGA-based workflow**:
+![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/fpgawf.png)
 [TODO]
 
 **Multinode CPU-based workflow**:
+![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/simsdpwf.png)
 [TODO]
 
 **Code**:
@@ -167,6 +169,9 @@ The PREESM version when I build this project doesn't handle all FPGAs resource a
 >> $ vitis_hls
 >> - Open the Vitis project: File > open project > open folder top
 >> - Your project appear. run > C syntesis
+In the case you want to test your code on with test bench
+>> - add testbench file > select the top_.._testbench
+>> - add source file host_c_... .c, host_xocl_... .cpp, mem_read_... .cpp, mem_write_... .cpp
 
 Have you ever seen such beautiful thing!!! (Flow navigator > C synthesis > Reports & viewers > Dataflow Viewer)
 ![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/lifeisgood.png)
@@ -227,26 +232,26 @@ for i in range(nBlocks):
     timeSeries[i*nSamples:(i+1)*nSamples] = dataCmplx
 fh.close()
 
-raw_data_real_i_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_I,), dtype=np.dtype('double'))
+raw_data_real_i_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_I,), dtype=np.dtype('uint16'))
 raw_data_real_i_vect = np.real(timeSeries);
 np.copyto(raw_data_real_i_buff, raw_data_real_i_vect)
 
-raw_data_im_i_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_I,), dtype=np.dtype('double'))
+raw_data_im_i_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_I,), dtype=np.dtype('uint16'))
 raw_data_im_i_vect = np.imag(timeSeries)
 np.copyto(raw_data_im_i_buff, raw_data_im_i_vect)
 
-raw_data_im_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_O,), dtype=np.dtype('double'))
-raw_data_real_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_O,), dtype=np.dtype('double'))
-mad_R_o_buff = allocate(shape=(RATE_OF_MAD_R_O,), dtype=np.dtype('double'))
-raw_data_real_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_1_O,), dtype=np.dtype('double'))
-std_R_o_buff = allocate(shape=(RATE_OF_STD_R_O,), dtype=np.dtype('double'))
-raw_data_im_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_1_O,), dtype=np.dtype('double'))
-mad_I_o_buff = allocate(shape=(RATE_OF_MAD_I_O,), dtype=np.dtype('double'))
-std_I_o_buff = allocate(shape=(RATE_OF_STD_I_O,), dtype=np.dtype('double'))
-filtered_im_0_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_0_O,), dtype=np.dtype('double'))
-filtered_real_0_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_0_O,), dtype=np.dtype('double'))
-filtered_im_1_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_1_O,), dtype=np.dtype('double'))
-filtered_real_1_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_1_O,), dtype=np.dtype('double'))
+raw_data_im_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_O,), dtype=np.dtype('uint16'))
+raw_data_real_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_O,), dtype=np.dtype('uint16'))
+mad_R_o_buff = allocate(shape=(RATE_OF_MAD_R_O,), dtype=np.dtype('uint16'))
+raw_data_real_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_1_O,), dtype=np.dtype('uint16'))
+std_R_o_buff = allocate(shape=(RATE_OF_STD_R_O,), dtype=np.dtype('uint16'))
+raw_data_im_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_1_O,), dtype=np.dtype('uint16'))
+mad_I_o_buff = allocate(shape=(RATE_OF_MAD_I_O,), dtype=np.dtype('uint16'))
+std_I_o_buff = allocate(shape=(RATE_OF_STD_I_O,), dtype=np.dtype('uint16'))
+filtered_im_0_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_0_O,), dtype=np.dtype('uint16'))
+filtered_real_0_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_0_O,), dtype=np.dtype('uint16'))
+filtered_im_1_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_1_O,), dtype=np.dtype('uint16'))
+filtered_real_1_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_1_O,), dtype=np.dtype('uint16'))
 
 ```
 >> - section TODO check results copy/paste this:
@@ -312,6 +317,7 @@ pltH.set_size_inches([10, 8])
 >> - run notebook
 :fireworks:
 
+
 #### FPGA & CPU
 [TODO]
 
@@ -321,8 +327,9 @@ pltH.set_size_inches([10, 8])
 
 [2] O. Renaud, N. Haggui, K. Desnos, J.-F, Nezan. Automated Clustering and Pipelining of Dataflow Actors for Controlled Scheduling Complexity, IETR, 2023.
 
-[3]...
+[3] O. Renaud, H. Miomandre, K. Desnos, J.-F. Nezan ,Automated Level-Based Clustering of Dataflow Actors for Controlled Scheduling Complexity, IETR, 202_.
 
 [4] A. Honorat, M. Dardaillon. H Miomandre, J.-F, Nezan. Automated Buffer Sizing of Dataflow Applications in a High-Level Synthesis Workflow, IETR, 2023.
 
-[5] 
+[5] O. Renaud, A. Gougeon, K. Desnos, C. Phillips, J. Tuthill, M. Quinson,
+J.-F. Nezan, SimSDP: Dataflow Application Distribution on Heterogeneous Multi-Node Multi-Core Architectures, IETR, CSIRO, IRISA, 202_.

@@ -13,20 +13,20 @@ entity top_graph_top_rfi_C is
 port (
     ap_local_block : OUT STD_LOGIC;
     ap_local_deadlock : OUT STD_LOGIC;
-    raw_data_real_i_stream_TDATA : IN STD_LOGIC_VECTOR (63 downto 0);
-    raw_data_im_i_stream_TDATA : IN STD_LOGIC_VECTOR (63 downto 0);
-    raw_data_im_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    raw_data_real_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    mad_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    raw_data_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    std_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    raw_data_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    mad_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    std_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    filtered_im_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    filtered_real_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    filtered_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-    filtered_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+    raw_data_real_i_stream_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+    raw_data_im_i_stream_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
+    raw_data_im_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    raw_data_real_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    mad_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    raw_data_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    std_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    raw_data_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    mad_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    std_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    filtered_im_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    filtered_real_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    filtered_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+    filtered_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
     raw_data_im_i_stream_TVALID : IN STD_LOGIC;
@@ -41,29 +41,29 @@ port (
     raw_data_real_o_stream_TREADY : IN STD_LOGIC;
     raw_data_real_1_o_stream_TVALID : OUT STD_LOGIC;
     raw_data_real_1_o_stream_TREADY : IN STD_LOGIC;
-    mad_R_o_stream_TVALID : OUT STD_LOGIC;
-    mad_R_o_stream_TREADY : IN STD_LOGIC;
     std_R_o_stream_TVALID : OUT STD_LOGIC;
     std_R_o_stream_TREADY : IN STD_LOGIC;
+    mad_R_o_stream_TVALID : OUT STD_LOGIC;
+    mad_R_o_stream_TREADY : IN STD_LOGIC;
     mad_I_o_stream_TVALID : OUT STD_LOGIC;
     mad_I_o_stream_TREADY : IN STD_LOGIC;
     std_I_o_stream_TVALID : OUT STD_LOGIC;
     std_I_o_stream_TREADY : IN STD_LOGIC;
-    filtered_real_1_o_stream_TVALID : OUT STD_LOGIC;
-    filtered_real_1_o_stream_TREADY : IN STD_LOGIC;
-    filtered_real_0_o_stream_TVALID : OUT STD_LOGIC;
-    filtered_real_0_o_stream_TREADY : IN STD_LOGIC;
     filtered_im_1_o_stream_TVALID : OUT STD_LOGIC;
     filtered_im_1_o_stream_TREADY : IN STD_LOGIC;
     filtered_im_0_o_stream_TVALID : OUT STD_LOGIC;
-    filtered_im_0_o_stream_TREADY : IN STD_LOGIC );
+    filtered_im_0_o_stream_TREADY : IN STD_LOGIC;
+    filtered_real_1_o_stream_TVALID : OUT STD_LOGIC;
+    filtered_real_1_o_stream_TREADY : IN STD_LOGIC;
+    filtered_real_0_o_stream_TVALID : OUT STD_LOGIC;
+    filtered_real_0_o_stream_TREADY : IN STD_LOGIC );
 end;
 
 
 architecture behav of top_graph_top_rfi_C is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "top_graph_top_rfi_C_top_graph_top_rfi_C,hls_ip_2021_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.420548,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=2526,HLS_SYN_DSP=0,HLS_SYN_FF=27767,HLS_SYN_LUT=30050,HLS_VERSION=2021_2}";
+    "top_graph_top_rfi_C_top_graph_top_rfi_C,hls_ip_2021_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.585000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=654,HLS_SYN_DSP=0,HLS_SYN_FF=19225,HLS_SYN_LUT=18326,HLS_VERSION=2021_2}";
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_logic_1 : STD_LOGIC := '1';
 
@@ -74,15 +74,15 @@ architecture behav of top_graph_top_rfi_C is
     signal Brd_Acq_Im_U0_ap_idle : STD_LOGIC;
     signal Brd_Acq_Im_U0_ap_ready : STD_LOGIC;
     signal Brd_Acq_Im_U0_raw_data_im_i_stream_TREADY : STD_LOGIC;
-    signal Brd_Acq_Im_U0_raw_data_im_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Im_U0_raw_data_im_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Im_U0_raw_data_im_o_stream_TVALID : STD_LOGIC;
-    signal Brd_Acq_Im_U0_raw_data_im_1_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Im_U0_raw_data_im_1_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Im_U0_raw_data_im_1_o_stream_TVALID : STD_LOGIC;
-    signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_write : STD_LOGIC;
-    signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_write : STD_LOGIC;
-    signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_write : STD_LOGIC;
     signal Brd_Acq_Real_U0_ap_start : STD_LOGIC;
     signal Brd_Acq_Real_U0_ap_done : STD_LOGIC;
@@ -90,160 +90,160 @@ architecture behav of top_graph_top_rfi_C is
     signal Brd_Acq_Real_U0_ap_idle : STD_LOGIC;
     signal Brd_Acq_Real_U0_ap_ready : STD_LOGIC;
     signal Brd_Acq_Real_U0_raw_data_real_i_stream_TREADY : STD_LOGIC;
-    signal Brd_Acq_Real_U0_raw_data_real_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Real_U0_raw_data_real_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Real_U0_raw_data_real_o_stream_TVALID : STD_LOGIC;
-    signal Brd_Acq_Real_U0_raw_data_real_1_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Real_U0_raw_data_real_1_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Real_U0_raw_data_real_1_o_stream_TVALID : STD_LOGIC;
-    signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write : STD_LOGIC;
-    signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write : STD_LOGIC;
-    signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_ap_start : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_ap_done : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_ap_continue : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_ap_idle : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_ap_ready : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write : STD_LOGIC;
-    signal MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_ap_start : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_ap_done : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_ap_continue : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_ap_idle : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_ap_ready : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write : STD_LOGIC;
-    signal STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write : STD_LOGIC;
-    signal Brd_MAD_R_U0_ap_start : STD_LOGIC;
-    signal Brd_MAD_R_U0_ap_done : STD_LOGIC;
-    signal Brd_MAD_R_U0_ap_continue : STD_LOGIC;
-    signal Brd_MAD_R_U0_ap_idle : STD_LOGIC;
-    signal Brd_MAD_R_U0_ap_ready : STD_LOGIC;
-    signal Brd_MAD_R_U0_mad_R_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal Brd_MAD_R_U0_mad_R_o_stream_TVALID : STD_LOGIC;
-    signal Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read : STD_LOGIC;
-    signal Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_ap_start : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_ap_done : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_ap_continue : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_ap_idle : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_ap_ready : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din : STD_LOGIC_VECTOR (15 downto 0);
+    signal STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write : STD_LOGIC;
+    signal STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din : STD_LOGIC_VECTOR (15 downto 0);
+    signal STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_ap_start : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_ap_done : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_ap_continue : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_ap_idle : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_ap_ready : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din : STD_LOGIC_VECTOR (15 downto 0);
+    signal MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write : STD_LOGIC;
+    signal MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din : STD_LOGIC_VECTOR (15 downto 0);
+    signal MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write : STD_LOGIC;
     signal Brd_STD_R_U0_ap_start : STD_LOGIC;
     signal Brd_STD_R_U0_ap_done : STD_LOGIC;
     signal Brd_STD_R_U0_ap_continue : STD_LOGIC;
     signal Brd_STD_R_U0_ap_idle : STD_LOGIC;
     signal Brd_STD_R_U0_ap_ready : STD_LOGIC;
-    signal Brd_STD_R_U0_std_R_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_STD_R_U0_std_R_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_STD_R_U0_std_R_o_stream_TVALID : STD_LOGIC;
     signal Brd_STD_R_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_read : STD_LOGIC;
-    signal Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write : STD_LOGIC;
+    signal Brd_MAD_R_U0_ap_start : STD_LOGIC;
+    signal Brd_MAD_R_U0_ap_done : STD_LOGIC;
+    signal Brd_MAD_R_U0_ap_continue : STD_LOGIC;
+    signal Brd_MAD_R_U0_ap_idle : STD_LOGIC;
+    signal Brd_MAD_R_U0_ap_ready : STD_LOGIC;
+    signal Brd_MAD_R_U0_mad_R_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal Brd_MAD_R_U0_mad_R_o_stream_TVALID : STD_LOGIC;
+    signal Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read : STD_LOGIC;
+    signal Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din : STD_LOGIC_VECTOR (15 downto 0);
+    signal Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write : STD_LOGIC;
     signal Brd_MAD_I_U0_ap_start : STD_LOGIC;
     signal Brd_MAD_I_U0_ap_done : STD_LOGIC;
     signal Brd_MAD_I_U0_ap_continue : STD_LOGIC;
     signal Brd_MAD_I_U0_ap_idle : STD_LOGIC;
     signal Brd_MAD_I_U0_ap_ready : STD_LOGIC;
-    signal Brd_MAD_I_U0_mad_I_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_MAD_I_U0_mad_I_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_MAD_I_U0_mad_I_o_stream_TVALID : STD_LOGIC;
     signal Brd_MAD_I_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read : STD_LOGIC;
-    signal Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_write : STD_LOGIC;
     signal Brd_STD_I_U0_ap_start : STD_LOGIC;
     signal Brd_STD_I_U0_ap_done : STD_LOGIC;
     signal Brd_STD_I_U0_ap_continue : STD_LOGIC;
     signal Brd_STD_I_U0_ap_idle : STD_LOGIC;
     signal Brd_STD_I_U0_ap_ready : STD_LOGIC;
-    signal Brd_STD_I_U0_std_I_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_STD_I_U0_std_I_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_STD_I_U0_std_I_o_stream_TVALID : STD_LOGIC;
     signal Brd_STD_I_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_read : STD_LOGIC;
-    signal Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_ap_start : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_ap_done : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_ap_continue : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_ap_idle : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_ap_ready : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write : STD_LOGIC;
-    signal RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write : STD_LOGIC;
-    signal Brd_Res_Real_U0_ap_start : STD_LOGIC;
-    signal Brd_Res_Real_U0_ap_done : STD_LOGIC;
-    signal Brd_Res_Real_U0_ap_continue : STD_LOGIC;
-    signal Brd_Res_Real_U0_ap_idle : STD_LOGIC;
-    signal Brd_Res_Real_U0_ap_ready : STD_LOGIC;
-    signal Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID : STD_LOGIC;
-    signal Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID : STD_LOGIC;
-    signal Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_ap_start : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_ap_done : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_ap_continue : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_ap_idle : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_ap_ready : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din : STD_LOGIC_VECTOR (15 downto 0);
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write : STD_LOGIC;
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din : STD_LOGIC_VECTOR (15 downto 0);
+    signal RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write : STD_LOGIC;
     signal Brd_Res_Im_U0_ap_start : STD_LOGIC;
     signal Brd_Res_Im_U0_ap_done : STD_LOGIC;
     signal Brd_Res_Im_U0_ap_continue : STD_LOGIC;
     signal Brd_Res_Im_U0_ap_idle : STD_LOGIC;
     signal Brd_Res_Im_U0_ap_ready : STD_LOGIC;
-    signal Brd_Res_Im_U0_filtered_im_1_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Res_Im_U0_filtered_im_1_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Res_Im_U0_filtered_im_1_o_stream_TVALID : STD_LOGIC;
-    signal Brd_Res_Im_U0_filtered_im_0_o_stream_TDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal Brd_Res_Im_U0_filtered_im_0_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
     signal Brd_Res_Im_U0_filtered_im_0_o_stream_TVALID : STD_LOGIC;
     signal Brd_Res_Im_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read : STD_LOGIC;
+    signal Brd_Res_Real_U0_ap_start : STD_LOGIC;
+    signal Brd_Res_Real_U0_ap_done : STD_LOGIC;
+    signal Brd_Res_Real_U0_ap_continue : STD_LOGIC;
+    signal Brd_Res_Real_U0_ap_idle : STD_LOGIC;
+    signal Brd_Res_Real_U0_ap_ready : STD_LOGIC;
+    signal Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID : STD_LOGIC;
+    signal Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA : STD_LOGIC_VECTOR (15 downto 0);
+    signal Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID : STD_LOGIC;
+    signal Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read : STD_LOGIC;
     signal stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_full_n : STD_LOGIC;
-    signal stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n : STD_LOGIC;
     signal stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_full_n : STD_LOGIC;
-    signal stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n : STD_LOGIC;
     signal stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_full_n : STD_LOGIC;
-    signal stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n : STD_LOGIC;
     signal stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_full_n : STD_LOGIC;
-    signal stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n : STD_LOGIC;
     signal stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_full_n : STD_LOGIC;
-    signal stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n : STD_LOGIC;
     signal stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n : STD_LOGIC;
-    signal stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n : STD_LOGIC;
-    signal stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n : STD_LOGIC;
-    signal stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout : STD_LOGIC_VECTOR (63 downto 0);
-    signal stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n : STD_LOGIC;
-    signal stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n : STD_LOGIC;
-    signal stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout : STD_LOGIC_VECTOR (63 downto 0);
-    signal stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n : STD_LOGIC;
     signal stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n : STD_LOGIC;
-    signal stream_STD_Computation_std_R_o_Brd_STD_R_in_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_STD_Computation_std_R_o_Brd_STD_R_in_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_STD_Computation_std_R_o_Brd_STD_R_in_empty_n : STD_LOGIC;
     signal stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n : STD_LOGIC;
-    signal stream_STD_Computation_std_I_o_Brd_STD_I_in_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_STD_Computation_std_I_o_Brd_STD_I_in_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_STD_Computation_std_I_o_Brd_STD_I_in_empty_n : STD_LOGIC;
-    signal stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n : STD_LOGIC;
-    signal stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout : STD_LOGIC_VECTOR (63 downto 0);
-    signal stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n : STD_LOGIC;
+    signal stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n : STD_LOGIC;
+    signal stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout : STD_LOGIC_VECTOR (15 downto 0);
+    signal stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n : STD_LOGIC;
+    signal stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n : STD_LOGIC;
+    signal stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout : STD_LOGIC_VECTOR (15 downto 0);
+    signal stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n : STD_LOGIC;
     signal stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_full_n : STD_LOGIC;
-    signal stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n : STD_LOGIC;
+    signal stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n : STD_LOGIC;
+    signal stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout : STD_LOGIC_VECTOR (15 downto 0);
+    signal stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n : STD_LOGIC;
     signal stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_full_n : STD_LOGIC;
-    signal stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n : STD_LOGIC;
     signal stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_full_n : STD_LOGIC;
-    signal stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n : STD_LOGIC;
     signal stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n : STD_LOGIC;
-    signal stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n : STD_LOGIC;
     signal stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n : STD_LOGIC;
-    signal stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout : STD_LOGIC_VECTOR (63 downto 0);
+    signal stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout : STD_LOGIC_VECTOR (15 downto 0);
     signal stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n : STD_LOGIC;
 
     component top_graph_top_rfi_C_Brd_Acq_Im IS
@@ -255,22 +255,22 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        raw_data_im_i_stream_TDATA : IN STD_LOGIC_VECTOR (63 downto 0);
+        raw_data_im_i_stream_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
         raw_data_im_i_stream_TVALID : IN STD_LOGIC;
         raw_data_im_i_stream_TREADY : OUT STD_LOGIC;
-        raw_data_im_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        raw_data_im_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         raw_data_im_o_stream_TVALID : OUT STD_LOGIC;
         raw_data_im_o_stream_TREADY : IN STD_LOGIC;
-        raw_data_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        raw_data_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         raw_data_im_1_o_stream_TVALID : OUT STD_LOGIC;
         raw_data_im_1_o_stream_TREADY : IN STD_LOGIC;
-        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_full_n : IN STD_LOGIC;
         stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_write : OUT STD_LOGIC;
-        stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_full_n : IN STD_LOGIC;
         stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_write : OUT STD_LOGIC;
-        stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_full_n : IN STD_LOGIC;
         stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_write : OUT STD_LOGIC );
     end component;
@@ -285,28 +285,28 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        raw_data_real_i_stream_TDATA : IN STD_LOGIC_VECTOR (63 downto 0);
+        raw_data_real_i_stream_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
         raw_data_real_i_stream_TVALID : IN STD_LOGIC;
         raw_data_real_i_stream_TREADY : OUT STD_LOGIC;
-        raw_data_real_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        raw_data_real_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         raw_data_real_o_stream_TVALID : OUT STD_LOGIC;
         raw_data_real_o_stream_TREADY : IN STD_LOGIC;
-        raw_data_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        raw_data_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         raw_data_real_1_o_stream_TVALID : OUT STD_LOGIC;
         raw_data_real_1_o_stream_TREADY : IN STD_LOGIC;
-        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_full_n : IN STD_LOGIC;
         stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write : OUT STD_LOGIC;
-        stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_full_n : IN STD_LOGIC;
         stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write : OUT STD_LOGIC;
-        stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n : IN STD_LOGIC;
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write : OUT STD_LOGIC );
     end component;
 
 
-    component top_graph_top_rfi_C_MADCpt_2048_3_double_s IS
+    component top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -315,46 +315,22 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n : IN STD_LOGIC;
-        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read : OUT STD_LOGIC;
-        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n : IN STD_LOGIC;
-        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read : OUT STD_LOGIC;
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din : OUT STD_LOGIC_VECTOR (63 downto 0);
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n : IN STD_LOGIC;
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write : OUT STD_LOGIC;
-        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din : OUT STD_LOGIC_VECTOR (63 downto 0);
-        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n : IN STD_LOGIC;
-        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write : OUT STD_LOGIC );
-    end component;
-
-
-    component top_graph_top_rfi_C_STDCpt_2048_3_double_s IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n : IN STD_LOGIC;
         stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read : OUT STD_LOGIC;
-        stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n : IN STD_LOGIC;
         stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read : OUT STD_LOGIC;
-        stream_STD_Computation_std_R_o_Brd_STD_R_in_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_STD_Computation_std_R_o_Brd_STD_R_in_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n : IN STD_LOGIC;
         stream_STD_Computation_std_R_o_Brd_STD_R_in_write : OUT STD_LOGIC;
-        stream_STD_Computation_std_I_o_Brd_STD_I_in_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_STD_Computation_std_I_o_Brd_STD_I_in_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n : IN STD_LOGIC;
         stream_STD_Computation_std_I_o_Brd_STD_I_in_write : OUT STD_LOGIC );
     end component;
 
 
-    component top_graph_top_rfi_C_Brd_MAD_R IS
+    component top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -363,15 +339,18 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        mad_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-        mad_R_o_stream_TVALID : OUT STD_LOGIC;
-        mad_R_o_stream_TREADY : IN STD_LOGIC;
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n : IN STD_LOGIC;
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read : OUT STD_LOGIC;
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n : IN STD_LOGIC;
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write : OUT STD_LOGIC );
+        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
+        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n : IN STD_LOGIC;
+        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read : OUT STD_LOGIC;
+        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
+        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n : IN STD_LOGIC;
+        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read : OUT STD_LOGIC;
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din : OUT STD_LOGIC_VECTOR (15 downto 0);
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n : IN STD_LOGIC;
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write : OUT STD_LOGIC;
+        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din : OUT STD_LOGIC_VECTOR (15 downto 0);
+        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n : IN STD_LOGIC;
+        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write : OUT STD_LOGIC );
     end component;
 
 
@@ -384,15 +363,36 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        std_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        std_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         std_R_o_stream_TVALID : OUT STD_LOGIC;
         std_R_o_stream_TREADY : IN STD_LOGIC;
-        stream_STD_Computation_std_R_o_Brd_STD_R_in_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_STD_Computation_std_R_o_Brd_STD_R_in_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_STD_Computation_std_R_o_Brd_STD_R_in_empty_n : IN STD_LOGIC;
         stream_STD_Computation_std_R_o_Brd_STD_R_in_read : OUT STD_LOGIC;
-        stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_full_n : IN STD_LOGIC;
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write : OUT STD_LOGIC );
+    end component;
+
+
+    component top_graph_top_rfi_C_Brd_MAD_R IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        mad_R_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        mad_R_o_stream_TVALID : OUT STD_LOGIC;
+        mad_R_o_stream_TREADY : IN STD_LOGIC;
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout : IN STD_LOGIC_VECTOR (15 downto 0);
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n : IN STD_LOGIC;
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read : OUT STD_LOGIC;
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n : IN STD_LOGIC;
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write : OUT STD_LOGIC );
     end component;
 
 
@@ -405,13 +405,13 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        mad_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        mad_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         mad_I_o_stream_TVALID : OUT STD_LOGIC;
         mad_I_o_stream_TREADY : IN STD_LOGIC;
-        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n : IN STD_LOGIC;
         stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read : OUT STD_LOGIC;
-        stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_full_n : IN STD_LOGIC;
         stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_write : OUT STD_LOGIC );
     end component;
@@ -426,19 +426,19 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        std_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        std_I_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         std_I_o_stream_TVALID : OUT STD_LOGIC;
         std_I_o_stream_TREADY : IN STD_LOGIC;
-        stream_STD_Computation_std_I_o_Brd_STD_I_in_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_STD_Computation_std_I_o_Brd_STD_I_in_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_STD_Computation_std_I_o_Brd_STD_I_in_empty_n : IN STD_LOGIC;
         stream_STD_Computation_std_I_o_Brd_STD_I_in_read : OUT STD_LOGIC;
-        stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_full_n : IN STD_LOGIC;
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write : OUT STD_LOGIC );
     end component;
 
 
-    component top_graph_top_rfi_C_RFIFilter_0_2048_double_s IS
+    component top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -447,51 +447,30 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n : IN STD_LOGIC;
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read : OUT STD_LOGIC;
-        stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n : IN STD_LOGIC;
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read : OUT STD_LOGIC;
-        stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n : IN STD_LOGIC;
         stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read : OUT STD_LOGIC;
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n : IN STD_LOGIC;
         stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read : OUT STD_LOGIC;
-        stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n : IN STD_LOGIC;
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read : OUT STD_LOGIC;
-        stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n : IN STD_LOGIC;
         stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read : OUT STD_LOGIC;
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n : IN STD_LOGIC;
         stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write : OUT STD_LOGIC;
-        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din : OUT STD_LOGIC_VECTOR (15 downto 0);
         stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n : IN STD_LOGIC;
         stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write : OUT STD_LOGIC );
-    end component;
-
-
-    component top_graph_top_rfi_C_Brd_Res_Real IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        filtered_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-        filtered_real_1_o_stream_TVALID : OUT STD_LOGIC;
-        filtered_real_1_o_stream_TREADY : IN STD_LOGIC;
-        filtered_real_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
-        filtered_real_0_o_stream_TVALID : OUT STD_LOGIC;
-        filtered_real_0_o_stream_TREADY : IN STD_LOGIC;
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n : IN STD_LOGIC;
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read : OUT STD_LOGIC );
     end component;
 
 
@@ -504,43 +483,64 @@ architecture behav of top_graph_top_rfi_C is
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        filtered_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        filtered_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         filtered_im_1_o_stream_TVALID : OUT STD_LOGIC;
         filtered_im_1_o_stream_TREADY : IN STD_LOGIC;
-        filtered_im_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        filtered_im_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
         filtered_im_0_o_stream_TVALID : OUT STD_LOGIC;
         filtered_im_0_o_stream_TREADY : IN STD_LOGIC;
-        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout : IN STD_LOGIC_VECTOR (15 downto 0);
         stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n : IN STD_LOGIC;
         stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read : OUT STD_LOGIC );
     end component;
 
 
-    component top_graph_top_rfi_C_fifo_w64_d4078_A IS
+    component top_graph_top_rfi_C_Brd_Res_Real IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        filtered_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        filtered_real_1_o_stream_TVALID : OUT STD_LOGIC;
+        filtered_real_1_o_stream_TREADY : IN STD_LOGIC;
+        filtered_real_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
+        filtered_real_0_o_stream_TVALID : OUT STD_LOGIC;
+        filtered_real_0_o_stream_TREADY : IN STD_LOGIC;
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout : IN STD_LOGIC_VECTOR (15 downto 0);
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n : IN STD_LOGIC;
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read : OUT STD_LOGIC );
+    end component;
+
+
+    component top_graph_top_rfi_C_fifo_w16_d4078_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
         if_read_ce : IN STD_LOGIC;
         if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (63 downto 0);
+        if_din : IN STD_LOGIC_VECTOR (15 downto 0);
         if_full_n : OUT STD_LOGIC;
         if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (63 downto 0);
+        if_dout : OUT STD_LOGIC_VECTOR (15 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
 
 
-    component top_graph_top_rfi_C_fifo_w64_d8156_A IS
+    component top_graph_top_rfi_C_fifo_w16_d8156_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
         if_read_ce : IN STD_LOGIC;
         if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (63 downto 0);
+        if_din : IN STD_LOGIC_VECTOR (15 downto 0);
         if_full_n : OUT STD_LOGIC;
         if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (63 downto 0);
+        if_dout : OUT STD_LOGIC_VECTOR (15 downto 0);
         if_empty_n : OUT STD_LOGIC;
         if_read : IN STD_LOGIC );
     end component;
@@ -604,68 +604,49 @@ begin
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n => stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n,
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write => Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write);
 
-    MADCpt_2048_3_double_U0 : component top_graph_top_rfi_C_MADCpt_2048_3_double_s
+    STDCpt_2048_3_ap_int_16_U0 : component top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => MADCpt_2048_3_double_U0_ap_start,
-        ap_done => MADCpt_2048_3_double_U0_ap_done,
-        ap_continue => MADCpt_2048_3_double_U0_ap_continue,
-        ap_idle => MADCpt_2048_3_double_U0_ap_idle,
-        ap_ready => MADCpt_2048_3_double_U0_ap_ready,
-        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout => stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout,
-        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n => stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n,
-        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read => MADCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read,
-        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout => stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout,
-        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n => stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n,
-        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read => MADCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read,
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din,
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n,
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write,
-        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din,
-        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n,
-        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write);
-
-    STDCpt_2048_3_double_U0 : component top_graph_top_rfi_C_STDCpt_2048_3_double_s
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        ap_start => STDCpt_2048_3_double_U0_ap_start,
-        ap_done => STDCpt_2048_3_double_U0_ap_done,
-        ap_continue => STDCpt_2048_3_double_U0_ap_continue,
-        ap_idle => STDCpt_2048_3_double_U0_ap_idle,
-        ap_ready => STDCpt_2048_3_double_U0_ap_ready,
+        ap_start => STDCpt_2048_3_ap_int_16_U0_ap_start,
+        ap_done => STDCpt_2048_3_ap_int_16_U0_ap_done,
+        ap_continue => STDCpt_2048_3_ap_int_16_U0_ap_continue,
+        ap_idle => STDCpt_2048_3_ap_int_16_U0_ap_idle,
+        ap_ready => STDCpt_2048_3_ap_int_16_U0_ap_ready,
         stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout => stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout,
         stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n => stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n,
-        stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read => STDCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read,
+        stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read => STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read,
         stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout => stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout,
         stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n => stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n,
-        stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read => STDCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read,
-        stream_STD_Computation_std_R_o_Brd_STD_R_in_din => STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din,
+        stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read => STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read,
+        stream_STD_Computation_std_R_o_Brd_STD_R_in_din => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din,
         stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n => stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n,
-        stream_STD_Computation_std_R_o_Brd_STD_R_in_write => STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write,
-        stream_STD_Computation_std_I_o_Brd_STD_I_in_din => STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din,
+        stream_STD_Computation_std_R_o_Brd_STD_R_in_write => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write,
+        stream_STD_Computation_std_I_o_Brd_STD_I_in_din => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din,
         stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n => stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n,
-        stream_STD_Computation_std_I_o_Brd_STD_I_in_write => STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write);
+        stream_STD_Computation_std_I_o_Brd_STD_I_in_write => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write);
 
-    Brd_MAD_R_U0 : component top_graph_top_rfi_C_Brd_MAD_R
+    MADCpt_2048_3_ap_int_16_U0 : component top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Brd_MAD_R_U0_ap_start,
-        ap_done => Brd_MAD_R_U0_ap_done,
-        ap_continue => Brd_MAD_R_U0_ap_continue,
-        ap_idle => Brd_MAD_R_U0_ap_idle,
-        ap_ready => Brd_MAD_R_U0_ap_ready,
-        mad_R_o_stream_TDATA => Brd_MAD_R_U0_mad_R_o_stream_TDATA,
-        mad_R_o_stream_TVALID => Brd_MAD_R_U0_mad_R_o_stream_TVALID,
-        mad_R_o_stream_TREADY => mad_R_o_stream_TREADY,
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout,
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n,
-        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read => Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read,
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din,
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n,
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write);
+        ap_start => MADCpt_2048_3_ap_int_16_U0_ap_start,
+        ap_done => MADCpt_2048_3_ap_int_16_U0_ap_done,
+        ap_continue => MADCpt_2048_3_ap_int_16_U0_ap_continue,
+        ap_idle => MADCpt_2048_3_ap_int_16_U0_ap_idle,
+        ap_ready => MADCpt_2048_3_ap_int_16_U0_ap_ready,
+        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout => stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout,
+        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n => stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n,
+        stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read => MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read,
+        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout => stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout,
+        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n => stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n,
+        stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read => MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read,
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din,
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n,
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write,
+        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din,
+        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n,
+        stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write);
 
     Brd_STD_R_U0 : component top_graph_top_rfi_C_Brd_STD_R
     port map (
@@ -685,6 +666,25 @@ begin
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din => Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din,
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_full_n => stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_full_n,
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write => Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write);
+
+    Brd_MAD_R_U0 : component top_graph_top_rfi_C_Brd_MAD_R
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => Brd_MAD_R_U0_ap_start,
+        ap_done => Brd_MAD_R_U0_ap_done,
+        ap_continue => Brd_MAD_R_U0_ap_continue,
+        ap_idle => Brd_MAD_R_U0_ap_idle,
+        ap_ready => Brd_MAD_R_U0_ap_ready,
+        mad_R_o_stream_TDATA => Brd_MAD_R_U0_mad_R_o_stream_TDATA,
+        mad_R_o_stream_TVALID => Brd_MAD_R_U0_mad_R_o_stream_TVALID,
+        mad_R_o_stream_TREADY => mad_R_o_stream_TREADY,
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout,
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n,
+        stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read => Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read,
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din,
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n,
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write);
 
     Brd_MAD_I_U0 : component top_graph_top_rfi_C_Brd_MAD_I
     port map (
@@ -724,58 +724,39 @@ begin
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_full_n => stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_full_n,
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write => Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write);
 
-    RFIFilter_0_2048_double_U0 : component top_graph_top_rfi_C_RFIFilter_0_2048_double_s
+    RFIFilter_0_2048_ap_int_16_U0 : component top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => RFIFilter_0_2048_double_U0_ap_start,
-        ap_done => RFIFilter_0_2048_double_U0_ap_done,
-        ap_continue => RFIFilter_0_2048_double_U0_ap_continue,
-        ap_idle => RFIFilter_0_2048_double_U0_ap_idle,
-        ap_ready => RFIFilter_0_2048_double_U0_ap_ready,
+        ap_start => RFIFilter_0_2048_ap_int_16_U0_ap_start,
+        ap_done => RFIFilter_0_2048_ap_int_16_U0_ap_done,
+        ap_continue => RFIFilter_0_2048_ap_int_16_U0_ap_continue,
+        ap_idle => RFIFilter_0_2048_ap_int_16_U0_ap_idle,
+        ap_ready => RFIFilter_0_2048_ap_int_16_U0_ap_ready,
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout => stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout,
         stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n => stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n,
-        stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read => RFIFilter_0_2048_double_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read,
+        stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read,
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout => stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout,
         stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n => stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n,
-        stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read => RFIFilter_0_2048_double_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read,
+        stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read,
         stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout => stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout,
         stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n => stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n,
-        stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read => RFIFilter_0_2048_double_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read,
+        stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read,
         stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout,
         stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n,
-        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read => RFIFilter_0_2048_double_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read,
+        stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read,
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout => stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout,
         stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n => stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n,
-        stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read => RFIFilter_0_2048_double_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read,
+        stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read,
         stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout => stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout,
         stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n => stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n,
-        stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read => RFIFilter_0_2048_double_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read,
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din,
+        stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read,
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din,
         stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n,
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write,
-        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din,
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write,
+        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din,
         stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n => stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n,
-        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write);
-
-    Brd_Res_Real_U0 : component top_graph_top_rfi_C_Brd_Res_Real
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst_n_inv,
-        ap_start => Brd_Res_Real_U0_ap_start,
-        ap_done => Brd_Res_Real_U0_ap_done,
-        ap_continue => Brd_Res_Real_U0_ap_continue,
-        ap_idle => Brd_Res_Real_U0_ap_idle,
-        ap_ready => Brd_Res_Real_U0_ap_ready,
-        filtered_real_1_o_stream_TDATA => Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA,
-        filtered_real_1_o_stream_TVALID => Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID,
-        filtered_real_1_o_stream_TREADY => filtered_real_1_o_stream_TREADY,
-        filtered_real_0_o_stream_TDATA => Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA,
-        filtered_real_0_o_stream_TVALID => Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID,
-        filtered_real_0_o_stream_TREADY => filtered_real_0_o_stream_TREADY,
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout,
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n,
-        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read => Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read);
+        stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write);
 
     Brd_Res_Im_U0 : component top_graph_top_rfi_C_Brd_Res_Im
     port map (
@@ -796,7 +777,26 @@ begin
         stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n => stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n,
         stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read => Brd_Res_Im_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read);
 
-    stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    Brd_Res_Real_U0 : component top_graph_top_rfi_C_Brd_Res_Real
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst_n_inv,
+        ap_start => Brd_Res_Real_U0_ap_start,
+        ap_done => Brd_Res_Real_U0_ap_done,
+        ap_continue => Brd_Res_Real_U0_ap_continue,
+        ap_idle => Brd_Res_Real_U0_ap_idle,
+        ap_ready => Brd_Res_Real_U0_ap_ready,
+        filtered_real_1_o_stream_TDATA => Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA,
+        filtered_real_1_o_stream_TVALID => Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID,
+        filtered_real_1_o_stream_TREADY => filtered_real_1_o_stream_TREADY,
+        filtered_real_0_o_stream_TDATA => Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA,
+        filtered_real_0_o_stream_TVALID => Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID,
+        filtered_real_0_o_stream_TREADY => filtered_real_0_o_stream_TREADY,
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout,
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n,
+        stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read => Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read);
+
+    stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -807,9 +807,9 @@ begin
         if_write => Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_write,
         if_dout => stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout,
         if_empty_n => stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n,
-        if_read => MADCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read);
+        if_read => MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read);
 
-    stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -820,9 +820,9 @@ begin
         if_write => Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_write,
         if_dout => stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout,
         if_empty_n => stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n,
-        if_read => STDCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read);
+        if_read => STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read);
 
-    stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U : component top_graph_top_rfi_C_fifo_w64_d8156_A
+    stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U : component top_graph_top_rfi_C_fifo_w16_d8156_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -833,9 +833,9 @@ begin
         if_write => Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_write,
         if_dout => stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout,
         if_empty_n => stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n,
-        if_read => RFIFilter_0_2048_double_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read);
+        if_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read);
 
-    stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -846,9 +846,9 @@ begin
         if_write => Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write,
         if_dout => stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout,
         if_empty_n => stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n,
-        if_read => MADCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read);
+        if_read => MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read);
 
-    stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -859,9 +859,9 @@ begin
         if_write => Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write,
         if_dout => stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout,
         if_empty_n => stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n,
-        if_read => STDCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read);
+        if_read => STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read);
 
-    stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U : component top_graph_top_rfi_C_fifo_w64_d8156_A
+    stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U : component top_graph_top_rfi_C_fifo_w16_d8156_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -872,74 +872,61 @@ begin
         if_write => Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write,
         if_dout => stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout,
         if_empty_n => stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n,
-        if_read => RFIFilter_0_2048_double_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read);
+        if_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read);
 
-    stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_STD_Computation_std_R_o_Brd_STD_R_in_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din,
-        if_full_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n,
-        if_write => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write,
-        if_dout => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout,
-        if_empty_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n,
-        if_read => Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read);
-
-    stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din,
-        if_full_n => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n,
-        if_write => MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write,
-        if_dout => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout,
-        if_empty_n => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n,
-        if_read => Brd_MAD_I_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read);
-
-    stream_STD_Computation_std_R_o_Brd_STD_R_in_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din,
+        if_din => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din,
         if_full_n => stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n,
-        if_write => STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write,
+        if_write => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write,
         if_dout => stream_STD_Computation_std_R_o_Brd_STD_R_in_dout,
         if_empty_n => stream_STD_Computation_std_R_o_Brd_STD_R_in_empty_n,
         if_read => Brd_STD_R_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_read);
 
-    stream_STD_Computation_std_I_o_Brd_STD_I_in_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_STD_Computation_std_I_o_Brd_STD_I_in_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din,
+        if_din => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din,
         if_full_n => stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n,
-        if_write => STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write,
+        if_write => STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write,
         if_dout => stream_STD_Computation_std_I_o_Brd_STD_I_in_dout,
         if_empty_n => stream_STD_Computation_std_I_o_Brd_STD_I_in_empty_n,
         if_read => Brd_STD_I_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_read);
 
-    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din,
-        if_full_n => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n,
-        if_write => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write,
-        if_dout => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout,
-        if_empty_n => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n,
-        if_read => RFIFilter_0_2048_double_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read);
+        if_din => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din,
+        if_full_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n,
+        if_write => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write,
+        if_dout => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout,
+        if_empty_n => stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n,
+        if_read => Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read);
 
-    stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din,
+        if_full_n => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n,
+        if_write => MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write,
+        if_dout => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout,
+        if_empty_n => stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n,
+        if_read => Brd_MAD_I_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read);
+
+    stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -950,9 +937,22 @@ begin
         if_write => Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write,
         if_dout => stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout,
         if_empty_n => stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n,
-        if_read => RFIFilter_0_2048_double_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read);
+        if_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read);
 
-    stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        if_read_ce => ap_const_logic_1,
+        if_write_ce => ap_const_logic_1,
+        if_din => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din,
+        if_full_n => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n,
+        if_write => Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write,
+        if_dout => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout,
+        if_empty_n => stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n,
+        if_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read);
+
+    stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -963,9 +963,9 @@ begin
         if_write => Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_write,
         if_dout => stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout,
         if_empty_n => stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n,
-        if_read => RFIFilter_0_2048_double_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read);
+        if_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read);
 
-    stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -976,30 +976,30 @@ begin
         if_write => Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write,
         if_dout => stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout,
         if_empty_n => stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n,
-        if_read => RFIFilter_0_2048_double_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read);
+        if_read => RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read);
 
-    stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din,
+        if_din => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din,
         if_full_n => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n,
-        if_write => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write,
+        if_write => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write,
         if_dout => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout,
         if_empty_n => stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n,
         if_read => Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read);
 
-    stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U : component top_graph_top_rfi_C_fifo_w64_d4078_A
+    stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U : component top_graph_top_rfi_C_fifo_w16_d4078_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din,
+        if_din => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din,
         if_full_n => stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n,
-        if_write => RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write,
+        if_write => RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write,
         if_dout => stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout,
         if_empty_n => stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n,
         if_read => Brd_Res_Im_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read);
@@ -1023,12 +1023,12 @@ begin
     Brd_STD_I_U0_ap_start <= ap_const_logic_1;
     Brd_STD_R_U0_ap_continue <= ap_const_logic_1;
     Brd_STD_R_U0_ap_start <= ap_const_logic_1;
-    MADCpt_2048_3_double_U0_ap_continue <= ap_const_logic_1;
-    MADCpt_2048_3_double_U0_ap_start <= ap_const_logic_1;
-    RFIFilter_0_2048_double_U0_ap_continue <= ap_const_logic_1;
-    RFIFilter_0_2048_double_U0_ap_start <= ap_const_logic_1;
-    STDCpt_2048_3_double_U0_ap_continue <= ap_const_logic_1;
-    STDCpt_2048_3_double_U0_ap_start <= ap_const_logic_1;
+    MADCpt_2048_3_ap_int_16_U0_ap_continue <= ap_const_logic_1;
+    MADCpt_2048_3_ap_int_16_U0_ap_start <= ap_const_logic_1;
+    RFIFilter_0_2048_ap_int_16_U0_ap_continue <= ap_const_logic_1;
+    RFIFilter_0_2048_ap_int_16_U0_ap_start <= ap_const_logic_1;
+    STDCpt_2048_3_ap_int_16_U0_ap_continue <= ap_const_logic_1;
+    STDCpt_2048_3_ap_int_16_U0_ap_start <= ap_const_logic_1;
     ap_local_block <= ap_const_logic_0;
     ap_local_deadlock <= ap_const_logic_0;
 

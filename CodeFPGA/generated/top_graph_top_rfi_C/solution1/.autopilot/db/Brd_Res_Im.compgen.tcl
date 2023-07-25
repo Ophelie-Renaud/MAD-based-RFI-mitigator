@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 227 \
+    id 189 \
     name filtered_im_1_o_stream \
     reset_level 1 \
     sync_rst true \
     corename {} \
     metadata {  } \
     op interface \
-    ports { filtered_im_1_o_stream_TDATA { O 64 vector } filtered_im_1_o_stream_TVALID { O 1 bit } filtered_im_1_o_stream_TREADY { I 1 bit } } \
+    ports { filtered_im_1_o_stream_TDATA { O 16 vector } filtered_im_1_o_stream_TVALID { O 1 bit } filtered_im_1_o_stream_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filtered_im_1_o_stream'"
@@ -30,14 +30,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 228 \
+    id 190 \
     name filtered_im_0_o_stream \
     reset_level 1 \
     sync_rst true \
     corename {} \
     metadata {  } \
     op interface \
-    ports { filtered_im_0_o_stream_TDATA { O 64 vector } filtered_im_0_o_stream_TVALID { O 1 bit } filtered_im_0_o_stream_TREADY { I 1 bit } } \
+    ports { filtered_im_0_o_stream_TDATA { O 16 vector } filtered_im_0_o_stream_TVALID { O 1 bit } filtered_im_0_o_stream_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filtered_im_0_o_stream'"
@@ -48,7 +48,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 229 \
+    id 191 \
     name stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in \
     type fifo \
     dir I \
@@ -56,7 +56,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in \
     op interface \
-    ports { stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout { I 64 vector } stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n { I 1 bit } stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read { O 1 bit } } \
+    ports { stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout { I 16 vector } stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n { I 1 bit } stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read { O 1 bit } } \
 } "
 }
 
@@ -125,7 +125,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 230
+set ID 192
 set RegSliceName top_graph_top_rfi_C_regslice_both
 set RegSliceInstName top_graph_top_rfi_C_regslice_both_U
 set CoreName ap_simcore_top_graph_top_rfi_C_regslice_both
@@ -148,7 +148,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 231
+set ID 193
 set RegSliceName top_graph_top_rfi_C_regslice_both
 set RegSliceInstName top_graph_top_rfi_C_regslice_both_U
 set CoreName ap_simcore_top_graph_top_rfi_C_regslice_both

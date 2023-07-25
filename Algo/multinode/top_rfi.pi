@@ -4,6 +4,7 @@
     <key attr.name="variables" for="graph" id="variables"/>
     <key attr.name="arguments" for="node" id="arguments"/>
     <key attr.name="name" attr.type="string" for="graph"/>
+    <key attr.name="delay" attr.type="string" for="edge"/>
     <graph edgedefault="directed">
         <data key="name">top_rfi</data>
         <node expr="2048" id="N_SAMPLES" kind="param"/>
@@ -11,82 +12,208 @@
         <node expr="N_BLOCKS*N_SAMPLES" id="SIZE" kind="param"/>
         <node id="sub0" kind="actor">
             <port kind="cfg_input" name="SIZE"/>
-            <port annotation="NONE" expr="0" kind="output" name="raw_data_im"/>
-            <port annotation="NONE" expr="0" kind="output" name="raw_data_real"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_im"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_real"/>
         </node>
         <node id="sub1" kind="actor">
             <port kind="cfg_input" name="SIZE"/>
-            <port annotation="NONE" expr="0" kind="input" name="raw_data_im"/>
-            <port annotation="NONE" expr="0" kind="input" name="raw_data_real"/>
-            <port annotation="NONE" expr="0" kind="output" name="filtered_im_0"/>
-            <port annotation="NONE" expr="0" kind="output" name="filtered_im_1"/>
-            <port annotation="NONE" expr="0" kind="output" name="filtered_real_0"/>
-            <port annotation="NONE" expr="0" kind="output" name="filtered_real_1"/>
-            <port annotation="NONE" expr="0" kind="output" name="mad_I"/>
-            <port annotation="NONE" expr="0" kind="output" name="mad_R"/>
-            <port annotation="NONE" expr="0" kind="output" name="std_I"/>
-            <port annotation="NONE" expr="0" kind="output" name="std_R"/>
-            <port annotation="NONE" expr="0" kind="output" name="raw_data_im_0"/>
-            <port annotation="NONE" expr="0" kind="output" name="raw_data_im_1"/>
-            <port annotation="NONE" expr="0" kind="output" name="raw_data_real_0"/>
-            <port annotation="NONE" expr="0" kind="output" name="raw_data_real_1"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_im_0"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_im_1"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_real_0"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_real_1"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="mad_I"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="mad_R"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="std_I"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="std_R"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_im_0"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_im_1"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_real_0"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_real_1"/>
         </node>
         <node id="sub2" kind="actor">
             <port kind="cfg_input" name="SIZE"/>
-            <port annotation="NONE" expr="0" kind="input" name="filtered_im_0"/>
-            <port annotation="NONE" expr="0" kind="input" name="filtered_im_1"/>
-            <port annotation="NONE" expr="0" kind="input" name="filtered_real_0"/>
-            <port annotation="NONE" expr="0" kind="input" name="filtered_real_1"/>
-            <port annotation="NONE" expr="0" kind="input" name="mad_I"/>
-            <port annotation="NONE" expr="0" kind="input" name="mad_R"/>
-            <port annotation="NONE" expr="0" kind="input" name="std_I"/>
-            <port annotation="NONE" expr="0" kind="input" name="std_R"/>
-            <port annotation="NONE" expr="0" kind="input" name="raw_data_im_0"/>
-            <port annotation="NONE" expr="0" kind="input" name="raw_data_im_1"/>
-            <port annotation="NONE" expr="0" kind="input" name="raw_data_real_0"/>
-            <port annotation="NONE" expr="0" kind="input" name="raw_data_real_1"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_0"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_1"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_0"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_1"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="mad_I"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="mad_R"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="std_I"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="std_R"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im_0"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im_1"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real_0"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real_1"/>
         </node>
-        <edge kind="fifo" source="sub0" sourceport="raw_data_im"
-            target="sub1" targetport="raw_data_im" type="void"/>
-        <edge kind="fifo" source="sub0"
-            sourceport="raw_data_real" target="sub1"
-            targetport="raw_data_real" type="void"/>
-        <edge kind="fifo" source="sub1"
-            sourceport="filtered_im_0" target="sub2"
-            targetport="filtered_im_0" type="void"/>
-        <edge kind="fifo" source="sub1"
-            sourceport="filtered_im_1" target="sub2"
-            targetport="filtered_im_1" type="void"/>
-        <edge kind="fifo" source="sub1"
-            sourceport="filtered_real_0" target="sub2"
-            targetport="filtered_real_0" type="void"/>
-        <edge kind="fifo" source="sub1"
-            sourceport="filtered_real_1" target="sub2"
-            targetport="filtered_real_1" type="void"/>
-        <edge kind="fifo" source="sub1" sourceport="mad_I"
-            target="sub2" targetport="mad_I" type="void"/>
-        <edge kind="fifo" source="sub1" sourceport="mad_R"
-            target="sub2" targetport="mad_R" type="void"/>
-        <edge kind="fifo" source="sub1" sourceport="std_I"
-            target="sub2" targetport="std_I" type="void"/>
-        <edge kind="fifo" source="sub1" sourceport="std_R"
-            target="sub2" targetport="std_R" type="void"/>
-        <edge kind="fifo" source="sub1"
-            sourceport="raw_data_im_0" target="sub2"
-            targetport="raw_data_im_0" type="void"/>
-        <edge kind="fifo" source="sub1"
-            sourceport="raw_data_im_1" target="sub2"
-            targetport="raw_data_im_1" type="void"/>
-        <edge kind="fifo" source="sub1"
-            sourceport="raw_data_real_0" target="sub2"
-            targetport="raw_data_real_0" type="void"/>
-        <edge kind="fifo" source="sub1"
+        <node expr="SIZE" getter=""
+            id="sub1_raw_data_real_1__sub2_raw_data_real_1"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub1_raw_data_real_0__sub2_raw_data_real_0"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub1_raw_data_im_1__sub2_raw_data_im_1"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub1_raw_data_im_0__sub2_raw_data_im_0"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter="" id="sub1_std_R__sub2_std_R"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter="" id="sub1_std_I__sub2_std_I"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter="" id="sub1_mad_R__sub2_mad_R"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter="" id="sub1_mad_I__sub2_mad_I"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub1_filtered_real_1__sub2_filtered_real_1"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub1_filtered_real_0__sub2_filtered_real_0"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub1_filtered_im_1__sub2_filtered_im_1"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub1_filtered_im_0__sub2_filtered_im_0"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub0_raw_data_im__sub1_raw_data_im" kind="delay"
+            level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <node expr="SIZE" getter=""
+            id="sub0_raw_data_real__sub1_raw_data_real"
+            kind="delay" level="permanent" setter="">
+            <port annotation="NONE" expr="SIZE" kind="input" name="set"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="get"/>
+        </node>
+        <edge expr="SIZE" kind="fifo" source="sub1"
             sourceport="raw_data_real_1" target="sub2"
-            targetport="raw_data_real_1" type="void"/>
+            targetport="raw_data_real_1" type="ap_int&lt;16>">
+            <data key="delay">sub1_raw_data_real_1__sub2_raw_data_real_1</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="raw_data_real_0" target="sub2"
+            targetport="raw_data_real_0" type="ap_int&lt;16>">
+            <data key="delay">sub1_raw_data_real_0__sub2_raw_data_real_0</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="raw_data_im_1" target="sub2"
+            targetport="raw_data_im_1" type="ap_int&lt;16>">
+            <data key="delay">sub1_raw_data_im_1__sub2_raw_data_im_1</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="raw_data_im_0" target="sub2"
+            targetport="raw_data_im_0" type="ap_int&lt;16>">
+            <data key="delay">sub1_raw_data_im_0__sub2_raw_data_im_0</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="std_R" target="sub2" targetport="std_R" type="ap_int&lt;16>">
+            <data key="delay">sub1_std_R__sub2_std_R</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="std_I" target="sub2" targetport="std_I" type="ap_int&lt;16>">
+            <data key="delay">sub1_std_I__sub2_std_I</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="mad_R" target="sub2" targetport="mad_R" type="ap_int&lt;16>">
+            <data key="delay">sub1_mad_R__sub2_mad_R</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="mad_I" target="sub2" targetport="mad_I" type="ap_int&lt;16>">
+            <data key="delay">sub1_mad_I__sub2_mad_I</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="filtered_real_1" target="sub2"
+            targetport="filtered_real_1" type="ap_int&lt;16>">
+            <data key="delay">sub1_filtered_real_1__sub2_filtered_real_1</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="filtered_real_0" target="sub2"
+            targetport="filtered_real_0" type="ap_int&lt;16>">
+            <data key="delay">sub1_filtered_real_0__sub2_filtered_real_0</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="filtered_im_1" target="sub2"
+            targetport="filtered_im_1" type="ap_int&lt;16>">
+            <data key="delay">sub1_filtered_im_1__sub2_filtered_im_1</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub1"
+            sourceport="filtered_im_0" target="sub2"
+            targetport="filtered_im_0" type="ap_int&lt;16>">
+            <data key="delay">sub1_filtered_im_0__sub2_filtered_im_0</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub0"
+            sourceport="raw_data_im" target="sub1"
+            targetport="raw_data_im" type="ap_int&lt;16>">
+            <data key="delay">sub0_raw_data_im__sub1_raw_data_im</data>
+        </edge>
+        <edge expr="SIZE" kind="fifo" source="sub0"
+            sourceport="raw_data_real" target="sub1"
+            targetport="raw_data_real" type="ap_int&lt;16>">
+            <data key="delay">sub0_raw_data_real__sub1_raw_data_real</data>
+        </edge>
         <edge kind="dependency" source="N_BLOCKS" target="SIZE"/>
         <edge kind="dependency" source="N_SAMPLES" target="SIZE"/>
         <edge kind="dependency" source="SIZE" target="sub0" targetport="SIZE"/>
         <edge kind="dependency" source="SIZE" target="sub1" targetport="SIZE"/>
         <edge kind="dependency" source="SIZE" target="sub2" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE" target="sub1_raw_data_real_1__sub2_raw_data_real_1"/>
+        <edge kind="dependency" source="SIZE" target="sub1_raw_data_real_0__sub2_raw_data_real_0"/>
+        <edge kind="dependency" source="SIZE" target="sub1_raw_data_im_1__sub2_raw_data_im_1"/>
+        <edge kind="dependency" source="SIZE" target="sub1_raw_data_im_0__sub2_raw_data_im_0"/>
+        <edge kind="dependency" source="SIZE" target="sub1_std_I__sub2_std_I"/>
+        <edge kind="dependency" source="SIZE" target="sub1_mad_R__sub2_mad_R"/>
+        <edge kind="dependency" source="SIZE" target="sub1_mad_I__sub2_mad_I"/>
+        <edge kind="dependency" source="SIZE" target="sub1_filtered_real_1__sub2_filtered_real_1"/>
+        <edge kind="dependency" source="SIZE" target="sub1_filtered_im_1__sub2_filtered_im_1"/>
+        <edge kind="dependency" source="SIZE" target="sub1_filtered_im_0__sub2_filtered_im_0"/>
+        <edge kind="dependency" source="SIZE" target="sub1_filtered_real_1__sub2_filtered_real_1"/>
+        <edge kind="dependency" source="SIZE" target="sub1_raw_data_im_0__sub2_raw_data_im_0"/>
+        <edge kind="dependency" source="SIZE" target="sub1_filtered_real_1__sub2_filtered_real_1"/>
+        <edge kind="dependency" source="SIZE" target="sub1_filtered_real_0__sub2_filtered_real_0"/>
+        <edge kind="dependency" source="SIZE" target="sub1_std_R__sub2_std_R"/>
+        <edge kind="dependency" source="SIZE" target="sub0_raw_data_real__sub1_raw_data_real"/>
+        <edge kind="dependency" source="SIZE" target="sub0_raw_data_im__sub1_raw_data_im"/>
     </graph>
 </graphml>

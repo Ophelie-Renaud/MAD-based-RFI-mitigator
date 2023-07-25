@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { raw_data_real_i_stream_TDATA { I 64 vector } raw_data_real_i_stream_TVALID { I 1 bit } raw_data_real_i_stream_TREADY { O 1 bit } } \
+    ports { raw_data_real_i_stream_TDATA { I 16 vector } raw_data_real_i_stream_TVALID { I 1 bit } raw_data_real_i_stream_TREADY { O 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'raw_data_real_i_stream'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { raw_data_real_o_stream_TDATA { O 64 vector } raw_data_real_o_stream_TVALID { O 1 bit } raw_data_real_o_stream_TREADY { I 1 bit } } \
+    ports { raw_data_real_o_stream_TDATA { O 16 vector } raw_data_real_o_stream_TVALID { O 1 bit } raw_data_real_o_stream_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'raw_data_real_o_stream'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { raw_data_real_1_o_stream_TDATA { O 64 vector } raw_data_real_1_o_stream_TVALID { O 1 bit } raw_data_real_1_o_stream_TREADY { I 1 bit } } \
+    ports { raw_data_real_1_o_stream_TDATA { O 16 vector } raw_data_real_1_o_stream_TVALID { O 1 bit } raw_data_real_1_o_stream_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'raw_data_real_1_o_stream'"
@@ -75,7 +75,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i \
     op interface \
-    ports { stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din { O 64 vector } stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_full_n { I 1 bit } stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write { O 1 bit } } \
+    ports { stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din { O 16 vector } stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_full_n { I 1 bit } stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write { O 1 bit } } \
 } "
 }
 
@@ -90,7 +90,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i \
     op interface \
-    ports { stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din { O 64 vector } stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_full_n { I 1 bit } stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write { O 1 bit } } \
+    ports { stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din { O 16 vector } stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_full_n { I 1 bit } stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write { O 1 bit } } \
 } "
 }
 
@@ -105,7 +105,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i \
     op interface \
-    ports { stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din { O 64 vector } stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n { I 1 bit } stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write { O 1 bit } } \
+    ports { stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din { O 16 vector } stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n { I 1 bit } stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write { O 1 bit } } \
 } "
 }
 

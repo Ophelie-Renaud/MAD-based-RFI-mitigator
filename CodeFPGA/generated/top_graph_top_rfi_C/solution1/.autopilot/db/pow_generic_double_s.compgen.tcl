@@ -1,8 +1,8 @@
 # This script segment is generated automatically by AutoPilot
 
-set name top_graph_top_rfi_C_mul_54s_6ns_54_5_1
+set name top_graph_top_rfi_C_mul_54s_6ns_54_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 4 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
@@ -54,9 +54,9 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name top_graph_top_rfi_C_mul_40ns_40ns_80_2_1
+set name top_graph_top_rfi_C_mul_40ns_40ns_80_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
@@ -66,25 +66,25 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name top_graph_top_rfi_C_mul_43ns_36ns_79_3_1
+set name top_graph_top_rfi_C_mul_43ns_36ns_79_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
-set name top_graph_top_rfi_C_mul_49ns_44ns_93_5_1
+set name top_graph_top_rfi_C_mul_49ns_44ns_93_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 4 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
-set name top_graph_top_rfi_C_mul_50ns_50ns_100_5_1
+set name top_graph_top_rfi_C_mul_50ns_50ns_100_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 4 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
-set id 99
+set id 41
 set name top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1
 set corename simcore_mac
 set op mac
@@ -144,7 +144,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 115
+set ID 57
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb
 set CoreName ap_simcore_mem
@@ -226,7 +226,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 116
+set ID 58
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud
 set CoreName ap_simcore_mem
@@ -308,7 +308,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 117
+set ID 59
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe
 set CoreName ap_simcore_mem
@@ -390,7 +390,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 118
+set ID 60
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg
 set CoreName ap_simcore_mem
@@ -472,7 +472,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 119
+set ID 61
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi
 set CoreName ap_simcore_mem
@@ -554,7 +554,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 120
+set ID 62
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j
 set CoreName ap_simcore_mem
@@ -636,7 +636,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 121
+set ID 63
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi
 set CoreName ap_simcore_mem
@@ -718,7 +718,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 122
+set ID 64
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs
 set CoreName ap_simcore_mem
@@ -800,7 +800,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 123
+set ID 65
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC
 set CoreName ap_simcore_mem
@@ -882,7 +882,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 124
+set ID 66
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM
 set CoreName ap_simcore_mem
@@ -964,7 +964,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 125
+set ID 67
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW
 set CoreName ap_simcore_mem
@@ -1046,7 +1046,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_ROM] == "::AESL_LIB_VIRTEX::xil_gen_RO
 
 
 # Memory (RAM/ROM)  definition:
-set ID 126
+set ID 68
 set hasByteEnable 0
 set MemName top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6
 set CoreName ap_simcore_mem
@@ -1137,7 +1137,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 127 \
+    id 69 \
     name base_r \
     type other \
     dir I \

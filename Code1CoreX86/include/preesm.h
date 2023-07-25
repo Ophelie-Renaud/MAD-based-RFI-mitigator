@@ -28,10 +28,23 @@ typedef unsigned char uchar;
 #define PATH_OUT "./out.ppm"
 #define PATH_TTF "./dat/DejaVuSans.ttf"
 #include <complex.h>
+#include "math.h"
+#include "stdio.h"
+#include "stdlib.h"
+
 #define PATH_TTF_FULL PROJECT_ROOT_PATH "/" PATH_TTF
 #define PATH_LEFT_FULL PROJECT_ROOT_PATH "/" PATH_LEFT
 #define PATH_RIGHT_FULL PROJECT_ROOT_PATH "/" PATH_RIGHT
 #define PATH_OUT_FULL PROJECT_ROOT_PATH "/" PATH_OUT
+#include "dataAcq.h"
+#include "dataRes.h"
+#include "madCpt.h"
+#include "plotFilteredData.h"
+#include "plotRnIHisto.h"
+#include "plotThreshold.h"
+#include "rfiFilter.h"
+#include "stdCpt.h"
+//#include "top.h"
 
 
 

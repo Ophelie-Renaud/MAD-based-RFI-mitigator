@@ -3,182 +3,182 @@
   <CTypeInfo>
       <RtlPort>
         <name>filtered_im_0_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_im_0_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_im_0_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_im_1_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_im_1_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_im_1_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_real_0_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_real_0_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_real_0_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_real_1_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_real_1_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>filtered_real_1_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>mad_I_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>mad_I_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>mad_I_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>mad_R_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>mad_R_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>mad_R_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_1_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_1_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_1_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_im_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_1_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_1_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_1_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>raw_data_real_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>std_I_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>std_I_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>std_I_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>std_R_o_stream_TDATA</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>std_R_o_stream_TREADY</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>std_R_o_stream_TVALID</name>
-        <type>Floating-point</type>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
   </CTypeInfo>

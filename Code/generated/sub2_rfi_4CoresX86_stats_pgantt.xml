@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<data>
+    <event color="#c896fa" end="100" mapping="Core0" start="0" title="src_raw_data_real_0_0 (x1)">Step_src_raw_data_real_0_0_(x1).</event>
+    <event color="#c896fa" end="77213628" mapping="Core0" start="102" title="Plot_Threshold_0 (x1)">Step_Plot_Threshold_0_(x1).</event>
+    <event color="#c896fa" end="1" mapping="Core1" start="0" title="src_filtered_im1_0 (x1)">Step_src_filtered_im1_0_(x1).</event>
+    <event color="#c896fa" end="2" mapping="Core1" start="1" title="src_raw_data_im_1_0 (x1)">Step_src_raw_data_im_1_0_(x1).</event>
+    <event color="#c896fa" end="102" mapping="Core1" start="2" title="src_std_R_0_0 (x1)">Step_src_std_R_0_0_(x1).</event>
+    <event color="#c896fa" end="77213631" mapping="Core1" start="105" title="Plot_RnI_Histo_0 (x1)">Step_Plot_RnI_Histo_0_(x1).</event>
+    <event color="#c896fa" end="1" mapping="Core2" start="0" title="src_filtered_real_1_0 (x1)">Step_src_filtered_real_1_0_(x1).</event>
+    <event color="#c896fa" end="101" mapping="Core2" start="1" title="src_std_I_0_0 (x1)">Step_src_std_I_0_0_(x1).</event>
+    <event color="#c896fa" end="77213627" mapping="Core2" start="101" title="Plot_Filtered_Data_0 (x1)">Step_Plot_Filtered_Data_0_(x1).</event>
+    <event color="#c896fa" end="1" mapping="Core3" start="0" title="src_filtered_im_0_0 (x1)">Step_src_filtered_im_0_0_(x1).</event>
+    <event color="#c896fa" end="2" mapping="Core3" start="1" title="src_filtered_real_0_0 (x1)">Step_src_filtered_real_0_0_(x1).</event>
+    <event color="#c896fa" end="3" mapping="Core3" start="2" title="src_mad_I_0_0 (x1)">Step_src_mad_I_0_0_(x1).</event>
+    <event color="#c896fa" end="4" mapping="Core3" start="3" title="src_mad_R_0_0 (x1)">Step_src_mad_R_0_0_(x1).</event>
+    <event color="#c896fa" end="5" mapping="Core3" start="4" title="src_raw_data_im_0_0 (x1)">Step_src_raw_data_im_0_0_(x1).</event>
+    <event color="#c896fa" end="105" mapping="Core3" start="5" title="src_raw_data_real_1_0 (x1)">Step_src_raw_data_real_1_0_(x1).</event>
+    <event color="#c896fa" end="5011132" mapping="Core3" start="105" title="Data_Restitution_0 (x1)">Step_Data_Restitution_0_(x1).</event>
+    <perfs impl_length="77213631" impl_nbCores="4" impl_nbUsedCores="4" span="77213626" work="236652013">
+        <core id="Core0" load="77213626" used_mem="39321600">Core_Core0.</core>
+        <core id="Core1" load="77213628" used_mem="26214400">Core_Core1.</core>
+        <core id="Core2" load="77213627" used_mem="19660800">Core_Core2.</core>
+        <core id="Core3" load="5011132" used_mem="39321600">Core_Core3.</core>
+    </perfs>
+</data>

@@ -34,10 +34,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3685964704</coreId>
+              <coreId>3720428066</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>64</bitwidth>
+            <bitwidth>16</bitwidth>
           </Value>
           <direction>1</direction>
           <if_type>0</if_type>
@@ -70,10 +70,10 @@
               <coreName>FIFO</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>635075750</coreId>
+              <coreId>560317168</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>64</bitwidth>
+            <bitwidth>16</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>3</if_type>
@@ -106,10 +106,10 @@
               <coreName>FIFO</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3687476016</coreId>
+              <coreId>560488008</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>64</bitwidth>
+            <bitwidth>16</bitwidth>
           </Value>
           <direction>1</direction>
           <if_type>3</if_type>
@@ -163,7 +163,7 @@
               <coreId>78</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>64</bitwidth>
+            <bitwidth>16</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -319,7 +319,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>224</coreId>
+              <coreId>560896016</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -367,7 +367,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>4294967295</coreId>
+            <coreId>559035616</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>

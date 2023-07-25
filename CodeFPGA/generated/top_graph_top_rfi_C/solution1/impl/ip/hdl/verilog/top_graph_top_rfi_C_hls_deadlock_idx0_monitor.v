@@ -13,12 +13,12 @@ module top_graph_top_rfi_C_hls_deadlock_idx0_monitor ( // for module top_graph_t
 reg monitor_find_block;
 wire idx2_block;
 wire idx1_block;
-wire idx3_block;
 wire idx4_block;
+wire idx3_block;
 wire idx5_block;
 wire idx6_block;
-wire idx8_block;
 wire idx7_block;
+wire idx8_block;
 wire [10:0] process_idle_vec;
 wire [10:0] process_chan_block_vec;
 wire [10:0] process_axis_block_vec;
@@ -26,8 +26,8 @@ wire df_has_axis_block;
 wire all_process_stop;
 
 assign block = monitor_find_block;
-assign idx3_block = axis_block_sigs[6];
 assign idx4_block = axis_block_sigs[7];
+assign idx3_block = axis_block_sigs[6];
 assign idx5_block = axis_block_sigs[8];
 assign idx6_block = axis_block_sigs[9];
 assign process_axis_block_vec[0] = idx1_block & (1'b0 | axis_block_sigs[0] | axis_block_sigs[1] | axis_block_sigs[2]);
@@ -95,15 +95,6 @@ end
     .block(idx1_block)
 );
 
- top_graph_top_rfi_C_hls_deadlock_idx8_monitor top_graph_top_rfi_C_hls_deadlock_idx8_monitor_U (
-    .clock(clock),
-    .reset(reset),
-    .axis_block_sigs(axis_block_sigs),
-    .inst_idle_sigs(inst_idle_sigs),
-    .inst_block_sigs(inst_block_sigs),
-    .block(idx8_block)
-);
-
  top_graph_top_rfi_C_hls_deadlock_idx7_monitor top_graph_top_rfi_C_hls_deadlock_idx7_monitor_U (
     .clock(clock),
     .reset(reset),
@@ -111,6 +102,15 @@ end
     .inst_idle_sigs(inst_idle_sigs),
     .inst_block_sigs(inst_block_sigs),
     .block(idx7_block)
+);
+
+ top_graph_top_rfi_C_hls_deadlock_idx8_monitor top_graph_top_rfi_C_hls_deadlock_idx8_monitor_U (
+    .clock(clock),
+    .reset(reset),
+    .axis_block_sigs(axis_block_sigs),
+    .inst_idle_sigs(inst_idle_sigs),
+    .inst_block_sigs(inst_block_sigs),
+    .block(idx8_block)
 );
 
 endmodule

@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 176 \
+    id 158 \
     name std_I_o_stream \
     reset_level 1 \
     sync_rst true \
     corename {} \
     metadata {  } \
     op interface \
-    ports { std_I_o_stream_TDATA { O 64 vector } std_I_o_stream_TVALID { O 1 bit } std_I_o_stream_TREADY { I 1 bit } } \
+    ports { std_I_o_stream_TDATA { O 16 vector } std_I_o_stream_TVALID { O 1 bit } std_I_o_stream_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'std_I_o_stream'"
@@ -29,7 +29,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 177 \
+    id 159 \
     name stream_STD_Computation_std_I_o_Brd_STD_I_in \
     type fifo \
     dir I \
@@ -37,14 +37,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_stream_STD_Computation_std_I_o_Brd_STD_I_in \
     op interface \
-    ports { stream_STD_Computation_std_I_o_Brd_STD_I_in_dout { I 64 vector } stream_STD_Computation_std_I_o_Brd_STD_I_in_empty_n { I 1 bit } stream_STD_Computation_std_I_o_Brd_STD_I_in_read { O 1 bit } } \
+    ports { stream_STD_Computation_std_I_o_Brd_STD_I_in_dout { I 16 vector } stream_STD_Computation_std_I_o_Brd_STD_I_in_empty_n { I 1 bit } stream_STD_Computation_std_I_o_Brd_STD_I_in_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 178 \
+    id 160 \
     name stream_Brd_STD_I_out_1_RFI_Filter_std_I_i \
     type fifo \
     dir O \
@@ -52,7 +52,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i \
     op interface \
-    ports { stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din { O 64 vector } stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_full_n { I 1 bit } stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write { O 1 bit } } \
+    ports { stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din { O 16 vector } stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_full_n { I 1 bit } stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write { O 1 bit } } \
 } "
 }
 
@@ -121,7 +121,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 179
+set ID 161
 set RegSliceName top_graph_top_rfi_C_regslice_both
 set RegSliceInstName top_graph_top_rfi_C_regslice_both_U
 set CoreName ap_simcore_top_graph_top_rfi_C_regslice_both

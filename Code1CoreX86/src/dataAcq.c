@@ -12,8 +12,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <complex.h>
-#include <math.h>
+
 
 // DADA includes for this example
 #include "futils.h"
@@ -62,7 +61,7 @@
 //}
 
 
-void headerCopy(int size, char *header);
+
 
 /*========================================================================
 
@@ -102,14 +101,25 @@ void DataAcq(int N_BLOCKS, int N_SAMPLES, int SIZE, int HEADER_SIZE, double *raw
         unsigned char* dataBuf = (unsigned char*)malloc(dataBufSize * sizeof(unsigned char));
         // Read dataBufSize bytes from file handler `fh` and store it in `dataBuf`
         int r= fread(dataBuf,sizeof(char),dataBufSize,ptfile);
-        unsigned short* data = (unsigned short*)dataBuf;
+        //unsigned short* data = (unsigned short*)dataBuf;
+        //printf("Databuf[0]: %c\n",dataBuf[0]);
+        uint16_t* data = (uint16_t*)dataBuf;
+        //printf("data[0]: %c\n",data[0]);
         double complex* dataCmplx = (double complex*)malloc(N_SAMPLES * sizeof(double complex));
 
         // Convert offset-binary format to Numpy floats
         for (int j = 0; j < N_SAMPLES; j++) {
-            int32_t val = (int32_t)data[j] - (int32_t)(pow(2, 15));
-            dataCmplx[j] = (double)val;
+            int32_t val = (int32_t)data[j] - (1 << 15);//(int32_t)(pow(2, 15));
+
+            //uint16_t array1 = (int16_t)(val & 0xFFFF);              // Extract the lower 16 bits
+            //uint16_t array2 = (int16_t)((val >> 16) & 0xFFFF);
+            //dataCmplx[j] = (double)array1+I*(double)array2;
+            dataCmplx[j] = (double)((int32_t)data[2*j]- (1 << 15))+ (double)((int32_t)data[2*j+1]- (1 << 15))*I;
+            int i =0;
         }
+//        for(int j=0;j<N_SAMPLES;j++){
+//            dataCmplx[j] = (double)data[j]+(double)data[j+1]*I;
+//        }
 
         // Assign dataCmplx to the appropriate portion of timeSeries
         for (int j = 0; j < N_SAMPLES; j++) {
@@ -128,7 +138,18 @@ void DataAcq(int N_BLOCKS, int N_SAMPLES, int SIZE, int HEADER_SIZE, double *raw
         raw_data_real_o[i] = creal(timeSeries[i]);
         raw_data_im_o[i] = cimag(timeSeries[i]);
     }
+
+    //To remove on true data
+    double *xtRFI_R = (double*)malloc(SIZE * sizeof(double));
+    generateRFI(SIZE,8,raw_data_real_o,xtRFI_R);
+    raw_data_real_o = xtRFI_R;
+    double *xtRFI_I = (double*)malloc(SIZE * sizeof(double));
+    generateRFI(SIZE,8,raw_data_im_o,xtRFI_I);
+    raw_data_im_o = xtRFI_I;
+
+
     free(timeSeries);
+    free(xtRFI_R);
 }
 
 void headerCopy(int size, char *header) {
@@ -139,7 +160,7 @@ void headerCopy(int size, char *header) {
         exit(1);
     }
     for(int i=0;i<size;i++){
-        fprintf(fstore, "%c \n",header[i]);
+        fprintf(fstore, "%c",header[i]);
     }
     fclose(fstore);
 }
@@ -488,3 +509,17 @@ void plotHistogram(double* y, int size, const char* label) {
     fprintf(gp, "exit\n");
     pclose(gp);
 }*/
+void generateRFI(int size, int nBits, double *xt, double *xtRFI) {
+    int nOutliers = 50;
+    float rfiScale =3.8;
+    int i;
+    int outlierIdx[nOutliers];
+
+    for (i = 0; i < nOutliers; i++) {
+        outlierIdx[i] = (int)((double)size * rand() / (RAND_MAX + 1.0));
+    }
+    xtRFI = xt;
+    for (i = 0; i < nOutliers; i++) {
+        xtRFI[outlierIdx[i]] = rfiScale * ((1 << (nBits - 1)) - 1) * (2 * (double)rand() / (RAND_MAX + 1.0) - 1);
+    }
+}

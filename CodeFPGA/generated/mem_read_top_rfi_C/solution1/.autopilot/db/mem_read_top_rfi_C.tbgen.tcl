@@ -12,19 +12,19 @@ set isEnableWaveformDebug 1
 set C_modelName {mem_read_top_rfi_C}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ gmem int 64 regular {axi_master 0}  }
+	{ gmem int 16 regular {axi_master 0}  }
 	{ raw_data_real_i_mem int 64 regular {axi_slave 0}  }
-	{ raw_data_real_i_stream int 64 regular {axi_s 1 volatile  { raw_data_real_i_stream Data } }  }
+	{ raw_data_real_i_stream int 16 regular {axi_s 1 volatile  { raw_data_real_i_stream Data } }  }
 	{ raw_data_im_i_mem int 64 regular {axi_slave 0}  }
-	{ raw_data_im_i_stream int 64 regular {axi_s 1 volatile  { raw_data_im_i_stream Data } }  }
+	{ raw_data_im_i_stream int 16 regular {axi_s 1 volatile  { raw_data_im_i_stream Data } }  }
 	{ ap_local_deadlock int 1 unused {axi_slave 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "raw_data_real_i_mem","offset": { "type": "dynamic","port_name": "raw_data_real_i_mem","bundle": "control"},"direction": "READONLY"},{"cName": "raw_data_im_i_mem","offset": { "type": "dynamic","port_name": "raw_data_im_i_mem","bundle": "control"},"direction": "READONLY"}]}]} , 
+	{ "Name" : "gmem", "interface" : "axi_master", "bitwidth" : 16, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "raw_data_real_i_mem","offset": { "type": "dynamic","port_name": "raw_data_real_i_mem","bundle": "control"},"direction": "READONLY"},{"cName": "raw_data_im_i_mem","offset": { "type": "dynamic","port_name": "raw_data_im_i_mem","bundle": "control"},"direction": "READONLY"}]}]} , 
  	{ "Name" : "raw_data_real_i_mem", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":27}} , 
- 	{ "Name" : "raw_data_real_i_stream", "interface" : "axis", "bitwidth" : 64, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "raw_data_real_i_stream", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
  	{ "Name" : "raw_data_im_i_mem", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":28}, "offset_end" : {"in":39}} , 
- 	{ "Name" : "raw_data_im_i_stream", "interface" : "axis", "bitwidth" : 64, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "raw_data_im_i_stream", "interface" : "axis", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
  	{ "Name" : "ap_local_deadlock", "interface" : "axi_slave", "bundle":"control","type":"ap_none","bitwidth" : 1, "direction" : "WRITEONLY", "offset" : {"out":0}, "offset_end" : {"out":4294967295}} ]}
 # RTL Port declarations: 
 set portNum 72
@@ -47,8 +47,8 @@ set portList {
 	{ m_axi_gmem_AWUSER sc_out sc_lv 1 signal 0 } 
 	{ m_axi_gmem_WVALID sc_out sc_logic 1 signal 0 } 
 	{ m_axi_gmem_WREADY sc_in sc_logic 1 signal 0 } 
-	{ m_axi_gmem_WDATA sc_out sc_lv 64 signal 0 } 
-	{ m_axi_gmem_WSTRB sc_out sc_lv 8 signal 0 } 
+	{ m_axi_gmem_WDATA sc_out sc_lv 32 signal 0 } 
+	{ m_axi_gmem_WSTRB sc_out sc_lv 4 signal 0 } 
 	{ m_axi_gmem_WLAST sc_out sc_logic 1 signal 0 } 
 	{ m_axi_gmem_WID sc_out sc_lv 1 signal 0 } 
 	{ m_axi_gmem_WUSER sc_out sc_lv 1 signal 0 } 
@@ -67,7 +67,7 @@ set portList {
 	{ m_axi_gmem_ARUSER sc_out sc_lv 1 signal 0 } 
 	{ m_axi_gmem_RVALID sc_in sc_logic 1 signal 0 } 
 	{ m_axi_gmem_RREADY sc_out sc_logic 1 signal 0 } 
-	{ m_axi_gmem_RDATA sc_in sc_lv 64 signal 0 } 
+	{ m_axi_gmem_RDATA sc_in sc_lv 32 signal 0 } 
 	{ m_axi_gmem_RLAST sc_in sc_logic 1 signal 0 } 
 	{ m_axi_gmem_RID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem_RUSER sc_in sc_lv 1 signal 0 } 
@@ -77,10 +77,10 @@ set portList {
 	{ m_axi_gmem_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem_BUSER sc_in sc_lv 1 signal 0 } 
-	{ raw_data_real_i_stream_TDATA sc_out sc_lv 64 signal 2 } 
+	{ raw_data_real_i_stream_TDATA sc_out sc_lv 16 signal 2 } 
 	{ raw_data_real_i_stream_TVALID sc_out sc_logic 1 outvld 2 } 
 	{ raw_data_real_i_stream_TREADY sc_in sc_logic 1 outacc 2 } 
-	{ raw_data_im_i_stream_TDATA sc_out sc_lv 64 signal 4 } 
+	{ raw_data_im_i_stream_TDATA sc_out sc_lv 16 signal 4 } 
 	{ raw_data_im_i_stream_TVALID sc_out sc_logic 1 outvld 4 } 
 	{ raw_data_im_i_stream_TREADY sc_in sc_logic 1 outacc 4 } 
 	{ s_axi_control_AWVALID sc_in sc_logic 1 signal -1 } 
@@ -139,8 +139,8 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_AWUSER", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "AWUSER" }} , 
  	{ "name": "m_axi_gmem_WVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "WVALID" }} , 
  	{ "name": "m_axi_gmem_WREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "WREADY" }} , 
- 	{ "name": "m_axi_gmem_WDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "gmem", "role": "WDATA" }} , 
- 	{ "name": "m_axi_gmem_WSTRB", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "gmem", "role": "WSTRB" }} , 
+ 	{ "name": "m_axi_gmem_WDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "gmem", "role": "WDATA" }} , 
+ 	{ "name": "m_axi_gmem_WSTRB", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "gmem", "role": "WSTRB" }} , 
  	{ "name": "m_axi_gmem_WLAST", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "WLAST" }} , 
  	{ "name": "m_axi_gmem_WID", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "WID" }} , 
  	{ "name": "m_axi_gmem_WUSER", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "WUSER" }} , 
@@ -159,7 +159,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_ARUSER", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "ARUSER" }} , 
  	{ "name": "m_axi_gmem_RVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "RVALID" }} , 
  	{ "name": "m_axi_gmem_RREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "RREADY" }} , 
- 	{ "name": "m_axi_gmem_RDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "gmem", "role": "RDATA" }} , 
+ 	{ "name": "m_axi_gmem_RDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "gmem", "role": "RDATA" }} , 
  	{ "name": "m_axi_gmem_RLAST", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "RLAST" }} , 
  	{ "name": "m_axi_gmem_RID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "RID" }} , 
  	{ "name": "m_axi_gmem_RUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "RUSER" }} , 
@@ -169,10 +169,10 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem", "role": "BUSER" }} , 
- 	{ "name": "raw_data_real_i_stream_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "raw_data_real_i_stream", "role": "TDATA" }} , 
+ 	{ "name": "raw_data_real_i_stream_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "raw_data_real_i_stream", "role": "TDATA" }} , 
  	{ "name": "raw_data_real_i_stream_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "raw_data_real_i_stream", "role": "TVALID" }} , 
  	{ "name": "raw_data_real_i_stream_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "raw_data_real_i_stream", "role": "TREADY" }} , 
- 	{ "name": "raw_data_im_i_stream_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "raw_data_im_i_stream", "role": "TDATA" }} , 
+ 	{ "name": "raw_data_im_i_stream_TDATA", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "raw_data_im_i_stream", "role": "TDATA" }} , 
  	{ "name": "raw_data_im_i_stream_TVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "raw_data_im_i_stream", "role": "TVALID" }} , 
  	{ "name": "raw_data_im_i_stream_TREADY", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "outacc", "bundle":{"name": "raw_data_im_i_stream", "role": "TREADY" }}  ]}
 
@@ -243,9 +243,9 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	gmem { m_axi {  { m_axi_gmem_AWVALID VALID 1 1 }  { m_axi_gmem_AWREADY READY 0 1 }  { m_axi_gmem_AWADDR ADDR 1 64 }  { m_axi_gmem_AWID ID 1 1 }  { m_axi_gmem_AWLEN SIZE 1 8 }  { m_axi_gmem_AWSIZE BURST 1 3 }  { m_axi_gmem_AWBURST LOCK 1 2 }  { m_axi_gmem_AWLOCK CACHE 1 2 }  { m_axi_gmem_AWCACHE PROT 1 4 }  { m_axi_gmem_AWPROT QOS 1 3 }  { m_axi_gmem_AWQOS REGION 1 4 }  { m_axi_gmem_AWREGION USER 1 4 }  { m_axi_gmem_AWUSER DATA 1 1 }  { m_axi_gmem_WVALID VALID 1 1 }  { m_axi_gmem_WREADY READY 0 1 }  { m_axi_gmem_WDATA FIFONUM 1 64 }  { m_axi_gmem_WSTRB STRB 1 8 }  { m_axi_gmem_WLAST LAST 1 1 }  { m_axi_gmem_WID ID 1 1 }  { m_axi_gmem_WUSER DATA 1 1 }  { m_axi_gmem_ARVALID VALID 1 1 }  { m_axi_gmem_ARREADY READY 0 1 }  { m_axi_gmem_ARADDR ADDR 1 64 }  { m_axi_gmem_ARID ID 1 1 }  { m_axi_gmem_ARLEN SIZE 1 8 }  { m_axi_gmem_ARSIZE BURST 1 3 }  { m_axi_gmem_ARBURST LOCK 1 2 }  { m_axi_gmem_ARLOCK CACHE 1 2 }  { m_axi_gmem_ARCACHE PROT 1 4 }  { m_axi_gmem_ARPROT QOS 1 3 }  { m_axi_gmem_ARQOS REGION 1 4 }  { m_axi_gmem_ARREGION USER 1 4 }  { m_axi_gmem_ARUSER DATA 1 1 }  { m_axi_gmem_RVALID VALID 0 1 }  { m_axi_gmem_RREADY READY 1 1 }  { m_axi_gmem_RDATA FIFONUM 0 64 }  { m_axi_gmem_RLAST LAST 0 1 }  { m_axi_gmem_RID ID 0 1 }  { m_axi_gmem_RUSER DATA 0 1 }  { m_axi_gmem_RRESP RESP 0 2 }  { m_axi_gmem_BVALID VALID 0 1 }  { m_axi_gmem_BREADY READY 1 1 }  { m_axi_gmem_BRESP RESP 0 2 }  { m_axi_gmem_BID ID 0 1 }  { m_axi_gmem_BUSER DATA 0 1 } } }
-	raw_data_real_i_stream { axis {  { raw_data_real_i_stream_TDATA out_data 1 64 }  { raw_data_real_i_stream_TVALID out_vld 1 1 }  { raw_data_real_i_stream_TREADY out_acc 0 1 } } }
-	raw_data_im_i_stream { axis {  { raw_data_im_i_stream_TDATA out_data 1 64 }  { raw_data_im_i_stream_TVALID out_vld 1 1 }  { raw_data_im_i_stream_TREADY out_acc 0 1 } } }
+	gmem { m_axi {  { m_axi_gmem_AWVALID VALID 1 1 }  { m_axi_gmem_AWREADY READY 0 1 }  { m_axi_gmem_AWADDR ADDR 1 64 }  { m_axi_gmem_AWID ID 1 1 }  { m_axi_gmem_AWLEN SIZE 1 8 }  { m_axi_gmem_AWSIZE BURST 1 3 }  { m_axi_gmem_AWBURST LOCK 1 2 }  { m_axi_gmem_AWLOCK CACHE 1 2 }  { m_axi_gmem_AWCACHE PROT 1 4 }  { m_axi_gmem_AWPROT QOS 1 3 }  { m_axi_gmem_AWQOS REGION 1 4 }  { m_axi_gmem_AWREGION USER 1 4 }  { m_axi_gmem_AWUSER DATA 1 1 }  { m_axi_gmem_WVALID VALID 1 1 }  { m_axi_gmem_WREADY READY 0 1 }  { m_axi_gmem_WDATA FIFONUM 1 32 }  { m_axi_gmem_WSTRB STRB 1 4 }  { m_axi_gmem_WLAST LAST 1 1 }  { m_axi_gmem_WID ID 1 1 }  { m_axi_gmem_WUSER DATA 1 1 }  { m_axi_gmem_ARVALID VALID 1 1 }  { m_axi_gmem_ARREADY READY 0 1 }  { m_axi_gmem_ARADDR ADDR 1 64 }  { m_axi_gmem_ARID ID 1 1 }  { m_axi_gmem_ARLEN SIZE 1 8 }  { m_axi_gmem_ARSIZE BURST 1 3 }  { m_axi_gmem_ARBURST LOCK 1 2 }  { m_axi_gmem_ARLOCK CACHE 1 2 }  { m_axi_gmem_ARCACHE PROT 1 4 }  { m_axi_gmem_ARPROT QOS 1 3 }  { m_axi_gmem_ARQOS REGION 1 4 }  { m_axi_gmem_ARREGION USER 1 4 }  { m_axi_gmem_ARUSER DATA 1 1 }  { m_axi_gmem_RVALID VALID 0 1 }  { m_axi_gmem_RREADY READY 1 1 }  { m_axi_gmem_RDATA FIFONUM 0 32 }  { m_axi_gmem_RLAST LAST 0 1 }  { m_axi_gmem_RID ID 0 1 }  { m_axi_gmem_RUSER DATA 0 1 }  { m_axi_gmem_RRESP RESP 0 2 }  { m_axi_gmem_BVALID VALID 0 1 }  { m_axi_gmem_BREADY READY 1 1 }  { m_axi_gmem_BRESP RESP 0 2 }  { m_axi_gmem_BID ID 0 1 }  { m_axi_gmem_BUSER DATA 0 1 } } }
+	raw_data_real_i_stream { axis {  { raw_data_real_i_stream_TDATA out_data 1 16 }  { raw_data_real_i_stream_TVALID out_vld 1 1 }  { raw_data_real_i_stream_TREADY out_acc 0 1 } } }
+	raw_data_im_i_stream { axis {  { raw_data_im_i_stream_TDATA out_data 1 16 }  { raw_data_im_i_stream_TVALID out_vld 1 1 }  { raw_data_im_i_stream_TREADY out_acc 0 1 } } }
 }
 
 set busDeadlockParameterList { 

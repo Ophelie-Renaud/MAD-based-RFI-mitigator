@@ -237,79 +237,79 @@
         </node>
         <edge kind="fifo" source="raw_data_real_i"
             sourceport="raw_data_real_i" target="Brd_Acq_Real"
-            targetport="in" type="double"/>
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Real"
             sourceport="out_0" target="raw_data_real_o"
-            targetport="raw_data_real_o" type="double"/>
+            targetport="raw_data_real_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Real"
             sourceport="out_1" target="MAD_Computation"
-            targetport="raw_data_real_i" type="double"/>
+            targetport="raw_data_real_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Real"
             sourceport="out_2" target="STD_Computation"
-            targetport="raw_data_real_i" type="double"/>
+            targetport="raw_data_real_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="MAD_Computation"
             sourceport="mad_R_o" target="Brd_MAD_R"
-            targetport="in" type="double"/>
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_MAD_R" sourceport="out_0"
-            target="mad_R_o" targetport="mad_R_o" type="double"/>
+            target="mad_R_o" targetport="mad_R_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Real"
             sourceport="out_3" target="raw_data_real_1_o"
-            targetport="raw_data_real_1_o" type="double"/>
+            targetport="raw_data_real_1_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="STD_Computation"
             sourceport="std_R_o" target="Brd_STD_R"
-            targetport="in" type="double"/>
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_STD_R" sourceport="out_1"
-            target="std_R_o" targetport="std_R_o" type="double"/>
+            target="std_R_o" targetport="std_R_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_MAD_R" sourceport="out_2"
-            target="RFI_Filter" targetport="mad_R_i" type="double"/>
+            target="RFI_Filter" targetport="mad_R_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_STD_R" sourceport="out_2"
-            target="RFI_Filter" targetport="std_R_i" type="double"/>
+            target="RFI_Filter" targetport="std_R_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="RFI_Filter"
             sourceport="filtered_real_data_o"
-            target="Brd_Res_Real" targetport="in" type="double"/>
+            target="Brd_Res_Real" targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="raw_data_im_i"
             sourceport="raw_data_im_i" target="Brd_Acq_Im"
-            targetport="in" type="double"/>
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_0"
-            target="MAD_Computation" targetport="raw_data_im_i" type="double"/>
+            target="MAD_Computation" targetport="raw_data_im_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_1"
-            target="STD_Computation" targetport="raw_data_im_i" type="double"/>
+            target="STD_Computation" targetport="raw_data_im_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_2"
-            target="raw_data_im_o" targetport="raw_data_im_o" type="double"/>
+            target="raw_data_im_o" targetport="raw_data_im_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_3"
-            target="raw_data_im_1_o" targetport="raw_data_im_1_o" type="double"/>
+            target="raw_data_im_1_o" targetport="raw_data_im_1_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="MAD_Computation"
             sourceport="mad_I_o" target="Brd_MAD_I"
-            targetport="in" type="double"/>
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="STD_Computation"
             sourceport="std_I_o" target="Brd_STD_I"
-            targetport="in" type="double"/>
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_MAD_I" sourceport="out_0"
-            target="mad_I_o" targetport="mad_I_o" type="double"/>
+            target="mad_I_o" targetport="mad_I_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_MAD_I" sourceport="out_1"
-            target="RFI_Filter" targetport="mad_I_i" type="double"/>
+            target="RFI_Filter" targetport="mad_I_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_STD_I" sourceport="out_0"
-            target="std_I_o" targetport="std_I_o" type="double"/>
+            target="std_I_o" targetport="std_I_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_STD_I" sourceport="out_1"
-            target="RFI_Filter" targetport="std_I_i" type="double"/>
+            target="RFI_Filter" targetport="std_I_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Im" sourceport="out_4"
-            target="RFI_Filter" targetport="raw_data_im_i" type="double"/>
+            target="RFI_Filter" targetport="raw_data_im_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Acq_Real"
             sourceport="out_4" target="RFI_Filter"
-            targetport="raw_data_real_i" type="double"/>
+            targetport="raw_data_real_i" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="RFI_Filter"
             sourceport="filtered_im_data_o" target="Brd_Res_Im"
-            targetport="in" type="double"/>
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Res_Im" sourceport="out_0"
-            target="filtered_im_1_o" targetport="filtered_im_1_o" type="double"/>
+            target="filtered_im_1_o" targetport="filtered_im_1_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Res_Im" sourceport="out_1"
-            target="filtered_im_0_o" targetport="filtered_im_0_o" type="double"/>
+            target="filtered_im_0_o" targetport="filtered_im_0_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Res_Real"
             sourceport="out_0" target="filtered_real_1_o"
-            targetport="filtered_real_1_o" type="double"/>
+            targetport="filtered_real_1_o" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Brd_Res_Real"
             sourceport="out_1" target="filtered_real_0_o"
-            targetport="filtered_real_0_o" type="double"/>
+            targetport="filtered_real_0_o" type="ap_int&lt;16>"/>
         <edge kind="dependency" source="N_BLOCKS"
             target="Brd_Acq_Real" targetport="N_BLOCKS"/>
         <edge kind="dependency" source="N_SAMPLES"

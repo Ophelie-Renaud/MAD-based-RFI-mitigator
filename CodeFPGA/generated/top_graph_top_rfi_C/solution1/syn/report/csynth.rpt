@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'top_graph_top_rfi_C'
 ================================================================
 + General Information: 
-    * Date:           Thu Jul  6 01:41:57 2023
+    * Date:           Tue Jul 25 02:51:47 2023
     * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
     * Project:        top_graph_top_rfi_C
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,81 +15,67 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+-------------+-----------+-------------+-------------+-----+
-    |                       Modules                       |  Issue |       | Latency |  Latency  | Iteration|         |  Trip  |          |             |           |             |             |     |
-    |                       & Loops                       |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval|  Count | Pipelined|    BRAM     |    DSP    |      FF     |     LUT     | URAM|
-    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+-------------+-----------+-------------+-------------+-----+
-    |+ top_graph_top_rfi_C*                               |  Timing|  -0.12|        -|          -|         -|        -|       -|  dataflow|  2526 (902%)|  115 (52%)|  27767 (26%)|  30050 (56%)|    -|
-    | + Brd_Acq_Im                                        |       -|   3.79|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     83 (~0%)|    -|
-    | + Brd_Acq_Real                                      |       -|   3.79|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     83 (~0%)|    -|
-    | + MADCpt_2048_3_double_s                            |       -|   0.00|        -|          -|         -|        -|       -|        no|  2128 (760%)|   28 (12%)|    5733 (5%)|  11049 (20%)|    -|
-    |  + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1    |       -|   0.54|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     27 (~0%)|     84 (~0%)|    -|
-    |   o VITIS_LOOP_84_1                                 |       -|   7.30|     2048|  2.048e+04|         2|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + sortList                                         |       -|   0.35|        -|          -|         -|        -|       -|        no|  1024 (365%)|          -|    1116 (1%)|    3110 (5%)|    -|
-    |   + sortList_Pipeline_1                             |       -|   1.61|   409602|  4.096e+06|         -|   409602|       -|        no|            -|          -|     21 (~0%)|     66 (~0%)|    -|
-    |    o Loop 1                                         |       -|   7.30|   409600|  4.096e+06|         1|        1|  409600|       yes|            -|          -|            -|            -|    -|
-    |   + sortList_Pipeline_VITIS_LOOP_23_1               |       -|   0.36|     4098|  4.098e+04|         -|     4098|       -|        no|            -|          -|    277 (~0%)|    263 (~0%)|    -|
-    |    o VITIS_LOOP_23_1                                |      II|   7.30|     4096|  4.096e+04|         5|        2|    2047|       yes|            -|          -|            -|            -|    -|
-    |   + sortList_Pipeline_VITIS_LOOP_38_1               |       -|   0.52|     4101|  4.101e+04|         -|     4101|       -|        no|            -|          -|    335 (~0%)|    1249 (2%)|    -|
-    |    o VITIS_LOOP_38_1                                |      II|   7.30|     4099|  4.099e+04|         6|        2|    2048|       yes|            -|          -|            -|            -|    -|
-    |   o VITIS_LOOP_44_2                                 |       -|   7.30|        -|          -|         -|        -|       -|        no|            -|          -|            -|            -|    -|
-    |    + sortList_Pipeline_VITIS_LOOP_45_3              |       -|   1.58|        -|          -|         -|        -|       -|        no|            -|          -|     67 (~0%)|    133 (~0%)|    -|
-    |     o VITIS_LOOP_45_3                               |       -|   7.30|        -|          -|         1|        1|       -|       yes|            -|          -|            -|            -|    -|
-    |  + sortList                                         |       -|   0.35|        -|          -|         -|        -|       -|        no|  1024 (365%)|          -|    1116 (1%)|    3110 (5%)|    -|
-    |   + sortList_Pipeline_1                             |       -|   1.61|   409602|  4.096e+06|         -|   409602|       -|        no|            -|          -|     21 (~0%)|     66 (~0%)|    -|
-    |    o Loop 1                                         |       -|   7.30|   409600|  4.096e+06|         1|        1|  409600|       yes|            -|          -|            -|            -|    -|
-    |   + sortList_Pipeline_VITIS_LOOP_23_1               |       -|   0.36|     4098|  4.098e+04|         -|     4098|       -|        no|            -|          -|    277 (~0%)|    263 (~0%)|    -|
-    |    o VITIS_LOOP_23_1                                |      II|   7.30|     4096|  4.096e+04|         5|        2|    2047|       yes|            -|          -|            -|            -|    -|
-    |   + sortList_Pipeline_VITIS_LOOP_38_1               |       -|   0.52|     4101|  4.101e+04|         -|     4101|       -|        no|            -|          -|    335 (~0%)|    1249 (2%)|    -|
-    |    o VITIS_LOOP_38_1                                |      II|   7.30|     4099|  4.099e+04|         6|        2|    2048|       yes|            -|          -|            -|            -|    -|
-    |   o VITIS_LOOP_44_2                                 |       -|   7.30|        -|          -|         -|        -|       -|        no|            -|          -|            -|            -|    -|
-    |    + sortList_Pipeline_VITIS_LOOP_45_3              |       -|   1.58|        -|          -|         -|        -|       -|        no|            -|          -|     67 (~0%)|    133 (~0%)|    -|
-    |     o VITIS_LOOP_45_3                               |       -|   7.30|        -|          -|         1|        1|       -|       yes|            -|          -|            -|            -|    -|
-    |  + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1    |       -|   0.00|     2058|  2.058e+04|         -|     2058|       -|        no|            -|          -|    234 (~0%)|     94 (~0%)|    -|
-    |   o VITIS_LOOP_69_1                                 |       -|   7.30|     2056|  2.056e+04|        10|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115  |       -|   0.00|     2058|  2.058e+04|         -|     2058|       -|        no|            -|          -|    234 (~0%)|     94 (~0%)|    -|
-    |   o VITIS_LOOP_69_1                                 |       -|   7.30|     2056|  2.056e+04|        10|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2   |       -|   2.06|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     14 (~0%)|     51 (~0%)|    -|
-    |   o VITIS_LOOP_114_2                                |       -|   7.30|     2048|  2.048e+04|         1|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3   |       -|   0.54|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     15 (~0%)|     84 (~0%)|    -|
-    |   o VITIS_LOOP_119_3                                |       -|   7.30|     2048|  2.048e+04|         2|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    | + STDCpt_2048_3_double_s                            |  Timing|  -0.12|    51456|  5.146e+05|         -|    51456|       -|        no|     78 (27%)|   73 (33%)|  17203 (16%)|  14092 (26%)|    -|
-    |  + STDCpt_2048_3_double_Pipeline_loop_2             |       -|   0.54|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     27 (~0%)|     84 (~0%)|    -|
-    |   o loop_2                                          |       -|   7.30|     2048|  2.048e+04|         2|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1    |       -|   0.00|    14340|  1.434e+05|         -|    14340|       -|        no|            -|          -|    215 (~0%)|    140 (~0%)|    -|
-    |   o VITIS_LOOP_21_1                                 |      II|   7.30|    14338|  1.434e+05|        10|        7|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111  |       -|   0.00|    14340|  1.434e+05|         -|    14340|       -|        no|            -|          -|    215 (~0%)|    140 (~0%)|    -|
-    |   o VITIS_LOOP_21_1                                 |      II|   7.30|    14338|  1.434e+05|        10|        7|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1    |  Timing|  -0.12|     2196|  2.196e+04|         -|     2196|       -|        no|            -|          -|    640 (~0%)|     94 (~0%)|    -|
-    |   o VITIS_LOOP_39_1                                 |       -|   7.30|     2194|  2.194e+04|       148|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |    + pow_generic_double_s                           |  Timing|  -0.12|       80|    800.000|         -|        1|       -|       yes|     30 (10%)|   45 (20%)|  12706 (11%)|   8613 (16%)|    -|
-    |  + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112  |  Timing|  -0.12|     2196|  2.196e+04|         -|     2196|       -|        no|            -|          -|    640 (~0%)|     94 (~0%)|    -|
-    |   o VITIS_LOOP_39_1                                 |       -|   7.30|     2194|  2.194e+04|       148|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |    + pow_generic_double_s                           |  Timing|  -0.12|       80|    800.000|         -|        1|       -|       yes|     30 (10%)|   45 (20%)|  12706 (11%)|   8613 (16%)|    -|
-    |  + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1    |       -|   0.00|    14340|  1.434e+05|         -|    14340|       -|        no|            -|          -|    215 (~0%)|    140 (~0%)|    -|
-    |   o VITIS_LOOP_32_1                                 |      II|   7.30|    14338|  1.434e+05|        10|        7|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113  |       -|   0.00|    14340|  1.434e+05|         -|    14340|       -|        no|            -|          -|    215 (~0%)|    140 (~0%)|    -|
-    |   o VITIS_LOOP_32_1                                 |      II|   7.30|    14338|  1.434e+05|        10|        7|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1    |       -|   2.06|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     14 (~0%)|     51 (~0%)|    -|
-    |   o VITIS_LOOP_72_1                                 |       -|   7.30|     2048|  2.048e+04|         1|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + STDCpt_2048_3_double_Pipeline_loop_3             |       -|   0.54|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     15 (~0%)|     84 (~0%)|    -|
-    |   o loop_3                                          |       -|   7.30|     2048|  2.048e+04|         2|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    | + Brd_MAD_R                                         |       -|   0.29|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     54 (~0%)|    -|
-    | + Brd_STD_R                                         |       -|   0.29|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     54 (~0%)|    -|
-    | + Brd_MAD_I                                         |       -|   0.29|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     54 (~0%)|    -|
-    | + Brd_STD_I                                         |       -|   0.29|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     54 (~0%)|    -|
-    | + RFIFilter_0_2048_double_s                         |       -|   0.00|     6171|  6.171e+04|         -|     6171|       -|        no|     32 (11%)|    14 (6%)|    2199 (2%)|    3103 (5%)|    -|
-    |  + RFIFilter_0_2048_double_Pipeline_loop_2          |       -|   0.54|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     27 (~0%)|     84 (~0%)|    -|
-    |   o loop_2                                          |       -|   7.30|     2048|  2.048e+04|         2|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + RFIFilter_0_2048_double_Pipeline_loop_1          |       -|   0.86|     2053|  2.053e+04|         -|     2053|       -|        no|            -|          -|    357 (~0%)|    393 (~0%)|    -|
-    |   o loop_1                                          |       -|   7.30|     2051|  2.051e+04|         5|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + RFIFilter_0_2048_double_Pipeline_loop_114        |       -|   0.86|     2053|  2.053e+04|         -|     2053|       -|        no|            -|          -|    357 (~0%)|    393 (~0%)|    -|
-    |   o loop_1                                          |       -|   7.30|     2051|  2.051e+04|         5|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    |  + RFIFilter_0_2048_double_Pipeline_loop_3          |       -|   0.54|     2050|  2.050e+04|         -|     2050|       -|        no|            -|          -|     15 (~0%)|     84 (~0%)|    -|
-    |   o loop_3                                          |       -|   7.30|     2048|  2.048e+04|         2|        1|    2048|       yes|            -|          -|            -|            -|    -|
-    | + Brd_Res_Real                                      |       -|   3.79|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     56 (~0%)|    -|
-    | + Brd_Res_Im                                        |       -|   3.79|        1|     10.000|         -|        1|       -|        no|            -|          -|      3 (~0%)|     56 (~0%)|    -|
-    +-----------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+-------------+-----------+-------------+-------------+-----+
+    +--------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+-------------+-------------+-----+
+    |                         Modules                        | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |          |             |             |     |
+    |                         & Loops                        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP   |      FF     |     LUT     | URAM|
+    +--------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+-------------+-------------+-----+
+    |+ top_graph_top_rfi_C*                                  |     -|  0.00|   475231|  4.752e+06|         -|   475232|     -|  dataflow|  144 (51%)|  78 (35%)|  18283 (17%)|  18595 (34%)|    -|
+    | + Brd_Acq_Im                                           |     -|  5.49|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     83 (~0%)|    -|
+    | + Brd_Acq_Real                                         |     -|  5.49|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     83 (~0%)|    -|
+    | + STDCpt_2048_3_ap_int_16_s                            |     -|  0.00|    14603|  1.460e+05|         -|    14603|     -|        no|   42 (15%)|  45 (20%)|  13042 (12%)|  10996 (20%)|    -|
+    |  + STDCpt_2048_3_ap_int_16_Pipeline_loop_2             |     -|  2.24|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     27 (~0%)|     84 (~0%)|    -|
+    |   o loop_2                                             |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1    |     -|  2.08|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     31 (~0%)|     94 (~0%)|    -|
+    |   o VITIS_LOOP_21_1                                    |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17   |     -|  2.08|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     31 (~0%)|     94 (~0%)|    -|
+    |   o VITIS_LOOP_21_1                                    |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + stdDeviationList                                    |     -|  0.10|     2160|  2.160e+04|         -|     2160|     -|        no|   30 (10%)|  45 (20%)|  12447 (11%)|   9009 (16%)|    -|
+    |   o VITIS_LOOP_39_1                                    |     -|  9.00|     2158|  2.158e+04|       112|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |    + pow_generic_double_s                              |    II|  0.38|       69|    690.000|         -|        1|     -|       yes|   30 (10%)|  45 (20%)|  11734 (11%)|   8470 (15%)|    -|
+    |  + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1    |     -|  2.08|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     31 (~0%)|     94 (~0%)|    -|
+    |   o VITIS_LOOP_32_1                                    |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18   |     -|  2.08|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     31 (~0%)|     94 (~0%)|    -|
+    |   o VITIS_LOOP_32_1                                    |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1    |     -|  3.76|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     14 (~0%)|     51 (~0%)|    -|
+    |   o VITIS_LOOP_72_1                                    |     -|  9.00|     2048|  2.048e+04|         1|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + STDCpt_2048_3_ap_int_16_Pipeline_loop_3             |     -|  2.24|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     15 (~0%)|     84 (~0%)|    -|
+    |   o loop_3                                             |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    | + MADCpt_2048_3_ap_int_16_s                            |     -|  0.06|   475231|  4.752e+06|         -|   475231|     -|        no|    22 (7%)|  33 (15%)|    2360 (2%)|    4965 (9%)|    -|
+    |  + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1    |     -|  2.24|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     27 (~0%)|     84 (~0%)|    -|
+    |   o VITIS_LOOP_98_1                                    |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + sortList                                            |     -|  0.06|   116746|  1.167e+06|         -|   116746|     -|        no|    2 (~0%)|         -|    280 (~0%)|     643 (1%)|    -|
+    |   + sortList_Pipeline_VITIS_LOOP_28_1                  |     -|  0.92|     2049|  2.049e+04|         -|     2049|     -|        no|          -|         -|     47 (~0%)|    125 (~0%)|    -|
+    |    o VITIS_LOOP_28_1                                   |     -|  9.00|     2047|  2.047e+04|         2|        1|  2047|       yes|          -|         -|            -|            -|    -|
+    |   + sortList_Pipeline_occurence_loop                   |     -|  0.42|     2051|  2.051e+04|         -|     2051|     -|        no|          -|         -|    109 (~0%)|    160 (~0%)|    -|
+    |    o occurence_loop                                    |     -|  9.00|     2049|  2.049e+04|         3|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |   o VITIS_LOOP_52_1                                    |     -|  9.00|   112640|  1.126e+06|        55|        -|  2048|        no|          -|         -|            -|            -|    -|
+    |    + sortList_Pipeline_VITIS_LOOP_55_2                 |     -|  3.32|       52|    520.000|         -|       52|     -|        no|          -|         -|     25 (~0%)|     93 (~0%)|    -|
+    |     o VITIS_LOOP_55_2                                  |     -|  9.00|       50|    500.000|         1|        1|    50|       yes|          -|         -|            -|            -|    -|
+    |  + computeMedian                                       |     -|  0.19|       15|    150.000|         -|       15|     -|        no|          -|   11 (5%)|    602 (~0%)|    1104 (2%)|    -|
+    |  + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1    |     -|  0.79|     2051|  2.051e+04|         -|     2051|     -|        no|          -|         -|     74 (~0%)|    125 (~0%)|    -|
+    |   o VITIS_LOOP_83_1                                    |     -|  9.00|     2049|  2.049e+04|         3|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110  |     -|  0.79|     2051|  2.051e+04|         -|     2051|     -|        no|          -|         -|     74 (~0%)|    125 (~0%)|    -|
+    |   o VITIS_LOOP_83_1                                    |     -|  9.00|     2049|  2.049e+04|         3|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2   |     -|  3.76|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     14 (~0%)|     51 (~0%)|    -|
+    |   o VITIS_LOOP_128_2                                   |     -|  9.00|     2048|  2.048e+04|         1|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3   |     -|  2.24|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     15 (~0%)|     84 (~0%)|    -|
+    |   o VITIS_LOOP_133_3                                   |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    | + Brd_STD_R                                            |     -|  1.99|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     54 (~0%)|    -|
+    | + Brd_MAD_R                                            |     -|  1.99|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     54 (~0%)|    -|
+    | + Brd_MAD_I                                            |     -|  1.99|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     54 (~0%)|    -|
+    | + Brd_STD_I                                            |     -|  1.99|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     54 (~0%)|    -|
+    | + RFIFilter_0_2048_ap_int_16_s                         |     -|  1.36|     6157|  6.157e+04|         -|     6157|     -|        no|     8 (2%)|         -|    249 (~0%)|     828 (1%)|    -|
+    |  + RFIFilter_0_2048_ap_int_16_Pipeline_loop_2          |     -|  2.24|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     27 (~0%)|     84 (~0%)|    -|
+    |   o loop_2                                             |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + RFIFilter_0_2048_ap_int_16_Pipeline_loop_1          |     -|  1.36|     2051|  2.051e+04|         -|     2051|     -|        no|          -|         -|     57 (~0%)|    137 (~0%)|    -|
+    |   o loop_1                                             |     -|  9.00|     2049|  2.049e+04|         3|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + RFIFilter_0_2048_ap_int_16_Pipeline_loop_19         |     -|  1.36|     2051|  2.051e+04|         -|     2051|     -|        no|          -|         -|     57 (~0%)|    137 (~0%)|    -|
+    |   o loop_1                                             |     -|  9.00|     2049|  2.049e+04|         3|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    |  + RFIFilter_0_2048_ap_int_16_Pipeline_loop_3          |     -|  2.24|     2050|  2.050e+04|         -|     2050|     -|        no|          -|         -|     15 (~0%)|     84 (~0%)|    -|
+    |   o loop_3                                             |     -|  9.00|     2048|  2.048e+04|         2|        1|  2048|       yes|          -|         -|            -|            -|    -|
+    | + Brd_Res_Im                                           |     -|  5.49|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     56 (~0%)|    -|
+    | + Brd_Res_Real                                         |     -|  5.49|        1|     10.000|         -|        1|     -|        no|          -|         -|      3 (~0%)|     56 (~0%)|    -|
+    +--------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+----------+-------------+-------------+-----+
 
 
 ================================================================
@@ -99,20 +85,20 @@
 +--------------------------+---------------+-------+--------+--------+
 | Interface                | Register Mode | TDATA | TREADY | TVALID |
 +--------------------------+---------------+-------+--------+--------+
-| filtered_im_0_o_stream   | both          | 64    | 1      | 1      |
-| filtered_im_1_o_stream   | both          | 64    | 1      | 1      |
-| filtered_real_0_o_stream | both          | 64    | 1      | 1      |
-| filtered_real_1_o_stream | both          | 64    | 1      | 1      |
-| mad_I_o_stream           | both          | 64    | 1      | 1      |
-| mad_R_o_stream           | both          | 64    | 1      | 1      |
-| raw_data_im_1_o_stream   | both          | 64    | 1      | 1      |
-| raw_data_im_i_stream     | both          | 64    | 1      | 1      |
-| raw_data_im_o_stream     | both          | 64    | 1      | 1      |
-| raw_data_real_1_o_stream | both          | 64    | 1      | 1      |
-| raw_data_real_i_stream   | both          | 64    | 1      | 1      |
-| raw_data_real_o_stream   | both          | 64    | 1      | 1      |
-| std_I_o_stream           | both          | 64    | 1      | 1      |
-| std_R_o_stream           | both          | 64    | 1      | 1      |
+| filtered_im_0_o_stream   | both          | 16    | 1      | 1      |
+| filtered_im_1_o_stream   | both          | 16    | 1      | 1      |
+| filtered_real_0_o_stream | both          | 16    | 1      | 1      |
+| filtered_real_1_o_stream | both          | 16    | 1      | 1      |
+| mad_I_o_stream           | both          | 16    | 1      | 1      |
+| mad_R_o_stream           | both          | 16    | 1      | 1      |
+| raw_data_im_1_o_stream   | both          | 16    | 1      | 1      |
+| raw_data_im_i_stream     | both          | 16    | 1      | 1      |
+| raw_data_im_o_stream     | both          | 16    | 1      | 1      |
+| raw_data_real_1_o_stream | both          | 16    | 1      | 1      |
+| raw_data_real_i_stream   | both          | 16    | 1      | 1      |
+| raw_data_real_o_stream   | both          | 16    | 1      | 1      |
+| std_I_o_stream           | both          | 16    | 1      | 1      |
+| std_R_o_stream           | both          | 16    | 1      | 1      |
 +--------------------------+---------------+-------+--------+--------+
 
 * TOP LEVEL CONTROL
@@ -129,24 +115,24 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+--------------------------+-----------+--------------------+
-| Argument                 | Direction | Datatype           |
-+--------------------------+-----------+--------------------+
-| raw_data_real_i_stream   | in        | stream<double, 0>& |
-| raw_data_im_i_stream     | in        | stream<double, 0>& |
-| raw_data_im_o_stream     | out       | stream<double, 0>& |
-| raw_data_real_o_stream   | out       | stream<double, 0>& |
-| mad_R_o_stream           | out       | stream<double, 0>& |
-| raw_data_real_1_o_stream | out       | stream<double, 0>& |
-| std_R_o_stream           | out       | stream<double, 0>& |
-| raw_data_im_1_o_stream   | out       | stream<double, 0>& |
-| mad_I_o_stream           | out       | stream<double, 0>& |
-| std_I_o_stream           | out       | stream<double, 0>& |
-| filtered_im_0_o_stream   | out       | stream<double, 0>& |
-| filtered_real_0_o_stream | out       | stream<double, 0>& |
-| filtered_im_1_o_stream   | out       | stream<double, 0>& |
-| filtered_real_1_o_stream | out       | stream<double, 0>& |
-+--------------------------+-----------+--------------------+
++--------------------------+-----------+------------------------+
+| Argument                 | Direction | Datatype               |
++--------------------------+-----------+------------------------+
+| raw_data_real_i_stream   | in        | stream<ap_int<16>, 0>& |
+| raw_data_im_i_stream     | in        | stream<ap_int<16>, 0>& |
+| raw_data_im_o_stream     | out       | stream<ap_int<16>, 0>& |
+| raw_data_real_o_stream   | out       | stream<ap_int<16>, 0>& |
+| mad_R_o_stream           | out       | stream<ap_int<16>, 0>& |
+| raw_data_real_1_o_stream | out       | stream<ap_int<16>, 0>& |
+| std_R_o_stream           | out       | stream<ap_int<16>, 0>& |
+| raw_data_im_1_o_stream   | out       | stream<ap_int<16>, 0>& |
+| mad_I_o_stream           | out       | stream<ap_int<16>, 0>& |
+| std_I_o_stream           | out       | stream<ap_int<16>, 0>& |
+| filtered_im_0_o_stream   | out       | stream<ap_int<16>, 0>& |
+| filtered_real_0_o_stream | out       | stream<ap_int<16>, 0>& |
+| filtered_im_1_o_stream   | out       | stream<ap_int<16>, 0>& |
+| filtered_real_1_o_stream | out       | stream<ap_int<16>, 0>& |
++--------------------------+-----------+------------------------+
 
 * SW-to-HW Mapping
 +--------------------------+--------------------------+-----------+
@@ -179,226 +165,168 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------------+-----+--------+-----------------------------+-------+---------+---------+
-| Name                                                | DSP | Pragma | Variable                    | Op    | Impl    | Latency |
-+-----------------------------------------------------+-----+--------+-----------------------------+-------+---------+---------+
-| + top_graph_top_rfi_C                               | 115 |        |                             |       |         |         |
-|  + MADCpt_2048_3_double_s                           | 28  |        |                             |       |         |         |
-|    dadddsub_64ns_64ns_64_7_full_dsp_1_U61           | 3   |        | add_i_i                     | dadd  | fulldsp | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U63                | 11  |        | div4_i_i                    | dmul  | maxdsp  | 6       |
-|    dadddsub_64ns_64ns_64_7_full_dsp_1_U62           | 3   |        | add_i9_i                    | dadd  | fulldsp | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U64                | 11  |        | div4_i1_i                   | dmul  | maxdsp  | 6       |
-|    dadddsub_64ns_64ns_64_7_full_dsp_1_U61           | 3   |        | add_i1_i                    | dadd  | fulldsp | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U63                | 11  |        | div4_i2_i                   | dmul  | maxdsp  | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U63                | 11  |        | median_absolute_deviation_R | dmul  | maxdsp  | 6       |
-|    dadddsub_64ns_64ns_64_7_full_dsp_1_U62           | 3   |        | add_i2_i                    | dadd  | fulldsp | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U64                | 11  |        | div4_i3_i                   | dmul  | maxdsp  | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U64                | 11  |        | median_absolute_deviation_I | dmul  | maxdsp  | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U63                | 11  |        | mul_i                       | dmul  | maxdsp  | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U64                | 11  |        | mul2_i                      | dmul  | maxdsp  | 6       |
-|   + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1   | 0   |        |                             |       |         |         |
-|     add_ln84_fu_98_p2                               | -   |        | add_ln84                    | add   | fabric  | 0       |
-|   + sortList                                        | 0   |        |                             |       |         |         |
-|     add_ln513_fu_198_p2                             | -   |        | add_ln513                   | add   | fabric  | 0       |
-|     sub_ln1364_fu_212_p2                            | -   |        | sub_ln1364                  | sub   | fabric  | 0       |
-|     result_V_3_fu_280_p2                            | -   |        | result_V_3                  | sub   | fabric  | 0       |
-|     add_ln44_1_fu_305_p2                            | -   |        | add_ln44_1                  | add   | fabric  | 0       |
-|     empty_95_fu_319_p2                              | -   |        | empty_95                    | add   | fabric  | 0       |
-|     add_ln44_fu_342_p2                              | -   |        | add_ln44                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_1                            | 0   |        |                             |       |         |         |
-|      empty_92_fu_56_p2                              | -   |        | empty_92                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_VITIS_LOOP_23_1              | 0   |        |                             |       |         |         |
-|      add_ln23_fu_106_p2                             | -   |        | add_ln23                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_VITIS_LOOP_38_1              | 0   |        |                             |       |         |         |
-|      add_ln38_fu_142_p2                             | -   |        | add_ln38                    | add   | fabric  | 0       |
-|      add_ln513_fu_180_p2                            | -   |        | add_ln513                   | add   | fabric  | 0       |
-|      sub_ln1364_fu_194_p2                           | -   |        | sub_ln1364                  | sub   | fabric  | 0       |
-|      result_V_2_fu_273_p2                           | -   |        | result_V_2                  | sub   | fabric  | 0       |
-|      sub_ln40_fu_292_p2                             | -   |        | sub_ln40                    | sub   | fabric  | 0       |
-|      add_ln40_fu_326_p2                             | -   |        | add_ln40                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_VITIS_LOOP_45_3              | 0   |        |                             |       |         |         |
-|      j_1_fu_103_p2                                  | -   |        | j_1                         | add   | fabric  | 0       |
-|      add_ln46_fu_117_p2                             | -   |        | add_ln46                    | add   | fabric  | 0       |
-|   + sortList                                        | 0   |        |                             |       |         |         |
-|     add_ln513_fu_198_p2                             | -   |        | add_ln513                   | add   | fabric  | 0       |
-|     sub_ln1364_fu_212_p2                            | -   |        | sub_ln1364                  | sub   | fabric  | 0       |
-|     result_V_3_fu_280_p2                            | -   |        | result_V_3                  | sub   | fabric  | 0       |
-|     add_ln44_1_fu_305_p2                            | -   |        | add_ln44_1                  | add   | fabric  | 0       |
-|     empty_95_fu_319_p2                              | -   |        | empty_95                    | add   | fabric  | 0       |
-|     add_ln44_fu_342_p2                              | -   |        | add_ln44                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_1                            | 0   |        |                             |       |         |         |
-|      empty_92_fu_56_p2                              | -   |        | empty_92                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_VITIS_LOOP_23_1              | 0   |        |                             |       |         |         |
-|      add_ln23_fu_106_p2                             | -   |        | add_ln23                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_VITIS_LOOP_38_1              | 0   |        |                             |       |         |         |
-|      add_ln38_fu_142_p2                             | -   |        | add_ln38                    | add   | fabric  | 0       |
-|      add_ln513_fu_180_p2                            | -   |        | add_ln513                   | add   | fabric  | 0       |
-|      sub_ln1364_fu_194_p2                           | -   |        | sub_ln1364                  | sub   | fabric  | 0       |
-|      result_V_2_fu_273_p2                           | -   |        | result_V_2                  | sub   | fabric  | 0       |
-|      sub_ln40_fu_292_p2                             | -   |        | sub_ln40                    | sub   | fabric  | 0       |
-|      add_ln40_fu_326_p2                             | -   |        | add_ln40                    | add   | fabric  | 0       |
-|    + sortList_Pipeline_VITIS_LOOP_45_3              | 0   |        |                             |       |         |         |
-|      j_1_fu_103_p2                                  | -   |        | j_1                         | add   | fabric  | 0       |
-|      add_ln46_fu_117_p2                             | -   |        | add_ln46                    | add   | fabric  | 0       |
-|   + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1   | 0   |        |                             |       |         |         |
-|     add_ln69_fu_92_p2                               | -   |        | add_ln69                    | add   | fabric  | 0       |
-|   + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115 | 0   |        |                             |       |         |         |
-|     add_ln69_fu_92_p2                               | -   |        | add_ln69                    | add   | fabric  | 0       |
-|   + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2  | 0   |        |                             |       |         |         |
-|     add_ln114_fu_94_p2                              | -   |        | add_ln114                   | add   | fabric  | 0       |
-|   + MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3  | 0   |        |                             |       |         |         |
-|     add_ln119_fu_100_p2                             | -   |        | add_ln119                   | add   | fabric  | 0       |
-|  + STDCpt_2048_3_double_s                           | 73  |        |                             |       |         |         |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U152               | 11  |        | average_R                   | dmul  | maxdsp  | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U152               | 11  |        | av_i                        | dmul  | maxdsp  | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U152               | 11  |        | variance_R                  | dmul  | maxdsp  | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U153               | 11  |        | variance_I                  | dmul  | maxdsp  | 6       |
-|    dsqrt_64ns_64ns_64_57_no_dsp_1_U154              | -   |        | tmp_7_i                     | dsqrt | fabric  | 56      |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U152               | 11  |        | mul_i                       | dmul  | maxdsp  | 6       |
-|    dsqrt_64ns_64ns_64_57_no_dsp_1_U155              | -   |        | tmp_8_i                     | dsqrt | fabric  | 56      |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U153               | 11  |        | mul1_i                      | dmul  | maxdsp  | 6       |
-|   + STDCpt_2048_3_double_Pipeline_loop_2            | 0   |        |                             |       |         |         |
-|     add_ln50_fu_98_p2                               | -   |        | add_ln50                    | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1   | 0   |        |                             |       |         |         |
-|     add_ln21_fu_85_p2                               | -   |        | add_ln21                    | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111 | 0   |        |                             |       |         |         |
-|     add_ln21_fu_85_p2                               | -   |        | add_ln21                    | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1   | 0   |        |                             |       |         |         |
-|     add_ln39_fu_150_p2                              | -   |        | add_ln39                    | add   | fabric  | 0       |
-|    + pow_generic_double_s                           | 45  |        |                             |       |         |         |
-|      b_exp_fu_594_p2                                | -   |        | b_exp                       | add   | fabric  | 0       |
-|      b_exp_1_fu_654_p2                              | -   |        | b_exp_1                     | add   | fabric  | 0       |
-|      mul_12s_80ns_90_5_1_U93                        | 4   |        | Elog2_V                     | mul   | auto    | 4       |
-|      mul_54s_6ns_54_5_1_U85                         | 2   |        | mul_ln691                   | mul   | auto    | 4       |
-|      ret_V_23_fu_839_p2                             | -   |        | ret_V_23                    | add   | tadder  | 0       |
-|      mul_71ns_4ns_75_5_1_U86                        | -   |        | r_V_22                      | mul   | auto    | 4       |
-|      ret_V_2_fu_848_p2                              | -   |        | ret_V_2                     | add   | tadder  | 0       |
-|      ret_V_24_fu_922_p2                             | -   |        | ret_V_24                    | add   | tadder  | 0       |
-|      mul_6ns_73ns_79_5_1_U87                        | 3   |        | r_V_23                      | mul   | auto    | 4       |
-|      ret_V_4_fu_939_p2                              | -   |        | ret_V_4                     | add   | tadder  | 0       |
-|      ret_V_25_fu_1003_p2                            | -   |        | ret_V_25                    | add   | tadder  | 0       |
-|      mul_83ns_6ns_89_5_1_U88                        | 3   |        | r_V_24                      | mul   | auto    | 4       |
-|      ret_V_6_fu_1020_p2                             | -   |        | ret_V_6                     | add   | tadder  | 0       |
-|      ret_V_26_fu_1094_p2                            | -   |        | ret_V_26                    | add   | tadder  | 0       |
-|      mul_6ns_92ns_98_5_1_U89                        | 4   |        | r_V_25                      | mul   | auto    | 4       |
-|      ret_V_8_fu_1111_p2                             | -   |        | ret_V_8                     | add   | tadder  | 0       |
-|      ret_V_27_fu_1181_p2                            | -   |        | ret_V_27                    | add   | tadder  | 0       |
-|      mul_6ns_87ns_93_5_1_U90                        | 3   |        | r_V_26                      | mul   | auto    | 4       |
-|      ret_V_10_fu_1198_p2                            | -   |        | ret_V_10                    | add   | tadder  | 0       |
-|      ret_V_28_fu_1268_p2                            | -   |        | ret_V_28                    | add   | tadder  | 0       |
-|      mul_6ns_82ns_88_5_1_U91                        | 3   |        | r_V_27                      | mul   | auto    | 4       |
-|      ret_V_12_fu_1285_p2                            | -   |        | ret_V_12                    | add   | tadder  | 0       |
-|      ret_V_29_fu_1372_p2                            | -   |        | ret_V_29                    | add   | tadder  | 0       |
-|      mul_6ns_77ns_83_5_1_U92                        | 3   |        | r_V_28                      | mul   | auto    | 4       |
-|      ret_V_14_fu_1389_p2                            | -   |        | ret_V_14                    | add   | tadder  | 0       |
-|      add_ln666_fu_1489_p2                           | -   |        | add_ln666                   | add   | tadder  | 0       |
-|      add_ln666_1_fu_1458_p2                         | -   |        | add_ln666_1                 | add   | fabric  | 0       |
-|      add_ln666_2_fu_1497_p2                         | -   |        | add_ln666_2                 | add   | tadder  | 0       |
-|      add_ln666_3_fu_1503_p2                         | -   |        | add_ln666_3                 | add   | tadder  | 0       |
-|      add_ln666_4_fu_1464_p2                         | -   |        | add_ln666_4                 | add   | fabric  | 0       |
-|      add_ln666_5_fu_1512_p2                         | -   |        | add_ln666_5                 | add   | tadder  | 0       |
-|      log_sum_V_1_fu_1551_p2                         | -   |        | log_sum_V_1                 | add   | tadder  | 0       |
-|      mul_40ns_40ns_80_2_1_U94                       | 4   |        | r_V_29                      | mul   | auto    | 4       |
-|      ret_V_fu_1532_p2                               | -   |        | ret_V                       | sub   | fabric  | 0       |
-|      add_ln1199_fu_1559_p2                          | -   |        | add_ln1199                  | add   | tadder  | 0       |
-|      ret_V_15_fu_1575_p2                            | -   |        | ret_V_15                    | add   | fabric  | 0       |
-|      mac_muladd_16s_15ns_19s_31_4_1_U99             | 1   |        | r_V_30                      | mul   | dsp     | 3       |
-|      mac_muladd_16s_15ns_19s_31_4_1_U99             | 1   |        | ret_V_30                    | add   | dsp     | 3       |
-|      ret_V_17_fu_1649_p2                            | -   |        | ret_V_17                    | add   | fabric  | 0       |
-|      mul_13s_71s_71_5_1_U95                         | 3   |        | r_V_16                      | mul   | auto    | 1       |
-|      m_diff_V_fu_1690_p2                            | -   |        | m_diff_V                    | sub   | fabric  | 0       |
-|      ret_V_32_fu_1765_p2                            | -   |        | ret_V_32                    | add   | fabric  | 0       |
-|      mul_43ns_36ns_79_3_1_U96                       | 4   |        | r_V_18                      | mul   | auto    | 4       |
-|      add_ln666_7_fu_1812_p2                         | -   |        | add_ln666_7                 | add   | fabric  | 0       |
-|      exp_Z2P_m_1_V_fu_1821_p2                       | -   |        | exp_Z2P_m_1_V               | add   | fabric  | 0       |
-|      mul_49ns_44ns_93_5_1_U97                       | 4   |        | r_V_19                      | mul   | auto    | 2       |
-|      add_ln666_9_fu_1889_p2                         | -   |        | add_ln666_9                 | add   | fabric  | 0       |
-|      exp_Z1P_m_1_l_V_fu_1898_p2                     | -   |        | exp_Z1P_m_1_l_V             | add   | fabric  | 0       |
-|      ret_V_34_fu_1936_p2                            | -   |        | ret_V_34                    | add   | fabric  | 0       |
-|      mul_50ns_50ns_100_5_1_U98                      | 4   |        | r_V                         | mul   | auto    | 4       |
-|      ret_V_22_fu_1979_p2                            | -   |        | ret_V_22                    | add   | fabric  | 0       |
-|      add_ln1199_6_fu_1985_p2                        | -   |        | add_ln1199_6                | add   | fabric  | 0       |
-|      add_ln1199_7_fu_1991_p2                        | -   |        | add_ln1199_7                | add   | fabric  | 0       |
-|      r_exp_V_fu_2005_p2                             | -   |        | r_exp_V                     | add   | fabric  | 0       |
-|      out_exp_V_fu_2137_p2                           | -   |        | out_exp_V                   | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112 | 0   |        |                             |       |         |         |
-|     add_ln39_fu_150_p2                              | -   |        | add_ln39                    | add   | fabric  | 0       |
-|    + pow_generic_double_s                           | 45  |        |                             |       |         |         |
-|      b_exp_fu_594_p2                                | -   |        | b_exp                       | add   | fabric  | 0       |
-|      b_exp_1_fu_654_p2                              | -   |        | b_exp_1                     | add   | fabric  | 0       |
-|      mul_12s_80ns_90_5_1_U93                        | 4   |        | Elog2_V                     | mul   | auto    | 4       |
-|      mul_54s_6ns_54_5_1_U85                         | 2   |        | mul_ln691                   | mul   | auto    | 4       |
-|      ret_V_23_fu_839_p2                             | -   |        | ret_V_23                    | add   | tadder  | 0       |
-|      mul_71ns_4ns_75_5_1_U86                        | -   |        | r_V_22                      | mul   | auto    | 4       |
-|      ret_V_2_fu_848_p2                              | -   |        | ret_V_2                     | add   | tadder  | 0       |
-|      ret_V_24_fu_922_p2                             | -   |        | ret_V_24                    | add   | tadder  | 0       |
-|      mul_6ns_73ns_79_5_1_U87                        | 3   |        | r_V_23                      | mul   | auto    | 4       |
-|      ret_V_4_fu_939_p2                              | -   |        | ret_V_4                     | add   | tadder  | 0       |
-|      ret_V_25_fu_1003_p2                            | -   |        | ret_V_25                    | add   | tadder  | 0       |
-|      mul_83ns_6ns_89_5_1_U88                        | 3   |        | r_V_24                      | mul   | auto    | 4       |
-|      ret_V_6_fu_1020_p2                             | -   |        | ret_V_6                     | add   | tadder  | 0       |
-|      ret_V_26_fu_1094_p2                            | -   |        | ret_V_26                    | add   | tadder  | 0       |
-|      mul_6ns_92ns_98_5_1_U89                        | 4   |        | r_V_25                      | mul   | auto    | 4       |
-|      ret_V_8_fu_1111_p2                             | -   |        | ret_V_8                     | add   | tadder  | 0       |
-|      ret_V_27_fu_1181_p2                            | -   |        | ret_V_27                    | add   | tadder  | 0       |
-|      mul_6ns_87ns_93_5_1_U90                        | 3   |        | r_V_26                      | mul   | auto    | 4       |
-|      ret_V_10_fu_1198_p2                            | -   |        | ret_V_10                    | add   | tadder  | 0       |
-|      ret_V_28_fu_1268_p2                            | -   |        | ret_V_28                    | add   | tadder  | 0       |
-|      mul_6ns_82ns_88_5_1_U91                        | 3   |        | r_V_27                      | mul   | auto    | 4       |
-|      ret_V_12_fu_1285_p2                            | -   |        | ret_V_12                    | add   | tadder  | 0       |
-|      ret_V_29_fu_1372_p2                            | -   |        | ret_V_29                    | add   | tadder  | 0       |
-|      mul_6ns_77ns_83_5_1_U92                        | 3   |        | r_V_28                      | mul   | auto    | 4       |
-|      ret_V_14_fu_1389_p2                            | -   |        | ret_V_14                    | add   | tadder  | 0       |
-|      add_ln666_fu_1489_p2                           | -   |        | add_ln666                   | add   | tadder  | 0       |
-|      add_ln666_1_fu_1458_p2                         | -   |        | add_ln666_1                 | add   | fabric  | 0       |
-|      add_ln666_2_fu_1497_p2                         | -   |        | add_ln666_2                 | add   | tadder  | 0       |
-|      add_ln666_3_fu_1503_p2                         | -   |        | add_ln666_3                 | add   | tadder  | 0       |
-|      add_ln666_4_fu_1464_p2                         | -   |        | add_ln666_4                 | add   | fabric  | 0       |
-|      add_ln666_5_fu_1512_p2                         | -   |        | add_ln666_5                 | add   | tadder  | 0       |
-|      log_sum_V_1_fu_1551_p2                         | -   |        | log_sum_V_1                 | add   | tadder  | 0       |
-|      mul_40ns_40ns_80_2_1_U94                       | 4   |        | r_V_29                      | mul   | auto    | 4       |
-|      ret_V_fu_1532_p2                               | -   |        | ret_V                       | sub   | fabric  | 0       |
-|      add_ln1199_fu_1559_p2                          | -   |        | add_ln1199                  | add   | tadder  | 0       |
-|      ret_V_15_fu_1575_p2                            | -   |        | ret_V_15                    | add   | fabric  | 0       |
-|      mac_muladd_16s_15ns_19s_31_4_1_U99             | 1   |        | r_V_30                      | mul   | dsp     | 3       |
-|      mac_muladd_16s_15ns_19s_31_4_1_U99             | 1   |        | ret_V_30                    | add   | dsp     | 3       |
-|      ret_V_17_fu_1649_p2                            | -   |        | ret_V_17                    | add   | fabric  | 0       |
-|      mul_13s_71s_71_5_1_U95                         | 3   |        | r_V_16                      | mul   | auto    | 1       |
-|      m_diff_V_fu_1690_p2                            | -   |        | m_diff_V                    | sub   | fabric  | 0       |
-|      ret_V_32_fu_1765_p2                            | -   |        | ret_V_32                    | add   | fabric  | 0       |
-|      mul_43ns_36ns_79_3_1_U96                       | 4   |        | r_V_18                      | mul   | auto    | 4       |
-|      add_ln666_7_fu_1812_p2                         | -   |        | add_ln666_7                 | add   | fabric  | 0       |
-|      exp_Z2P_m_1_V_fu_1821_p2                       | -   |        | exp_Z2P_m_1_V               | add   | fabric  | 0       |
-|      mul_49ns_44ns_93_5_1_U97                       | 4   |        | r_V_19                      | mul   | auto    | 2       |
-|      add_ln666_9_fu_1889_p2                         | -   |        | add_ln666_9                 | add   | fabric  | 0       |
-|      exp_Z1P_m_1_l_V_fu_1898_p2                     | -   |        | exp_Z1P_m_1_l_V             | add   | fabric  | 0       |
-|      ret_V_34_fu_1936_p2                            | -   |        | ret_V_34                    | add   | fabric  | 0       |
-|      mul_50ns_50ns_100_5_1_U98                      | 4   |        | r_V                         | mul   | auto    | 4       |
-|      ret_V_22_fu_1979_p2                            | -   |        | ret_V_22                    | add   | fabric  | 0       |
-|      add_ln1199_6_fu_1985_p2                        | -   |        | add_ln1199_6                | add   | fabric  | 0       |
-|      add_ln1199_7_fu_1991_p2                        | -   |        | add_ln1199_7                | add   | fabric  | 0       |
-|      r_exp_V_fu_2005_p2                             | -   |        | r_exp_V                     | add   | fabric  | 0       |
-|      out_exp_V_fu_2137_p2                           | -   |        | out_exp_V                   | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1   | 0   |        |                             |       |         |         |
-|     add_ln32_fu_85_p2                               | -   |        | add_ln32                    | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113 | 0   |        |                             |       |         |         |
-|     add_ln32_fu_85_p2                               | -   |        | add_ln32                    | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1   | 0   |        |                             |       |         |         |
-|     add_ln72_fu_94_p2                               | -   |        | add_ln72                    | add   | fabric  | 0       |
-|   + STDCpt_2048_3_double_Pipeline_loop_3            | 0   |        |                             |       |         |         |
-|     add_ln76_fu_100_p2                              | -   |        | add_ln76                    | add   | fabric  | 0       |
-|  + RFIFilter_0_2048_double_s                        | 14  |        |                             |       |         |         |
-|    dadd_64ns_64ns_64_7_full_dsp_1_U210              | 3   |        | add4_i                      | dadd  | fulldsp | 6       |
-|    dmul_64ns_64ns_64_7_max_dsp_1_U211               | 11  |        | av_threshold_i              | dmul  | maxdsp  | 6       |
-|   + RFIFilter_0_2048_double_Pipeline_loop_2         | 0   |        |                             |       |         |         |
-|     add_ln60_fu_98_p2                               | -   |        | add_ln60                    | add   | fabric  | 0       |
-|   + RFIFilter_0_2048_double_Pipeline_loop_1         | 0   |        |                             |       |         |         |
-|     add_ln19_fu_152_p2                              | -   |        | add_ln19                    | add   | fabric  | 0       |
-|   + RFIFilter_0_2048_double_Pipeline_loop_114       | 0   |        |                             |       |         |         |
-|     add_ln19_fu_152_p2                              | -   |        | add_ln19                    | add   | fabric  | 0       |
-|   + RFIFilter_0_2048_double_Pipeline_loop_3         | 0   |        |                             |       |         |         |
-|     add_ln67_fu_100_p2                              | -   |        | add_ln67                    | add   | fabric  | 0       |
-+-----------------------------------------------------+-----+--------+-----------------------------+-------+---------+---------+
++--------------------------------------------------------+-----+--------+---------------------------------+-------+--------+---------+
+| Name                                                   | DSP | Pragma | Variable                        | Op    | Impl   | Latency |
++--------------------------------------------------------+-----+--------+---------------------------------+-------+--------+---------+
+| + top_graph_top_rfi_C                                  | 78  |        |                                 |       |        |         |
+|  + STDCpt_2048_3_ap_int_16_s                           | 45  |        |                                 |       |        |         |
+|    sub_ln1558_fu_270_p2                                | -   |        | sub_ln1558                      | sub   | fabric | 0       |
+|    sub_ln1558_1_fu_300_p2                              | -   |        | sub_ln1558_1                    | sub   | fabric | 0       |
+|    sub_ln1558_2_fu_338_p2                              | -   |        | sub_ln1558_2                    | sub   | fabric | 0       |
+|    sub_ln1558_3_fu_368_p2                              | -   |        | sub_ln1558_3                    | sub   | fabric | 0       |
+|    sub_ln1558_4_fu_409_p2                              | -   |        | sub_ln1558_4                    | sub   | fabric | 0       |
+|    sub_ln1558_5_fu_439_p2                              | -   |        | sub_ln1558_5                    | sub   | fabric | 0       |
+|    sub_ln1558_6_fu_473_p2                              | -   |        | sub_ln1558_6                    | sub   | fabric | 0       |
+|    sub_ln1558_7_fu_503_p2                              | -   |        | sub_ln1558_7                    | sub   | fabric | 0       |
+|    fsqrt_32ns_32ns_32_12_no_dsp_1_U93                  | -   |        | val                             | fsqrt | fabric | 11      |
+|    fsqrt_32ns_32ns_32_12_no_dsp_1_U94                  | -   |        | val_1                           | fsqrt | fabric | 11      |
+|    sub_i_i_i_fu_572_p2                                 | -   |        | sub_i_i_i                       | sub   | fabric | 0       |
+|    sub_i_i305_i_fu_623_p2                              | -   |        | sub_i_i305_i                    | sub   | fabric | 0       |
+|    sub40_i_i_i_fu_635_p2                               | -   |        | sub40_i_i_i                     | sub   | fabric | 0       |
+|    sub40_i_i314_i_fu_671_p2                            | -   |        | sub40_i_i314_i                  | sub   | fabric | 0       |
+|    sub_i_i_i_i_i_fu_865_p2                             | -   |        | sub_i_i_i_i_i                   | sub   | fabric | 0       |
+|    sub_i_i_i_i322_i_fu_870_p2                          | -   |        | sub_i_i_i_i322_i                | sub   | fabric | 0       |
+|    mul_i_i54_i_fu_887_p2                               | -   |        | mul_i_i54_i                     | sub   | fabric | 0       |
+|    mul_i_i_i_fu_906_p2                                 | -   |        | mul_i_i_i                       | sub   | fabric | 0       |
+|   + STDCpt_2048_3_ap_int_16_Pipeline_loop_2            | 0   |        |                                 |       |        |         |
+|     i_V_11_fu_100_p2                                   | -   |        | i_V_11                          | add   | fabric | 0       |
+|   + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1   | 0   |        |                                 |       |        |         |
+|     i_V_18_fu_81_p2                                    | -   |        | i_V_18                          | add   | fabric | 0       |
+|     sum_V_3_fu_100_p2                                  | -   |        | sum_V_3                         | add   | fabric | 0       |
+|   + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17  | 0   |        |                                 |       |        |         |
+|     i_V_17_fu_81_p2                                    | -   |        | i_V_17                          | add   | fabric | 0       |
+|     sum_V_fu_100_p2                                    | -   |        | sum_V                           | add   | fabric | 0       |
+|   + stdDeviationList                                   | 45  |        |                                 |       |        |         |
+|     i_V_2_fu_190_p2                                    | -   |        | i_V_2                           | add   | fabric | 0       |
+|     ret_fu_210_p2                                      | -   |        | ret                             | sub   | fabric | 0       |
+|     dsqrt_64ns_64ns_64_30_no_dsp_1_U72                 | -   |        | val                             | dsqrt | fabric | 29      |
+|     sh_amt_fu_258_p2                                   | -   |        | sh_amt                          | sub   | fabric | 0       |
+|     sh_amt_1_fu_286_p2                                 | -   |        | sh_amt_1                        | sub   | fabric | 0       |
+|     sub_ln501_fu_442_p2                                | -   |        | sub_ln501                       | sub   | fabric | 0       |
+|    + pow_generic_double_s                              | 45  |        |                                 |       |        |         |
+|      b_exp_fu_594_p2                                   | -   |        | b_exp                           | add   | fabric | 0       |
+|      b_exp_1_fu_654_p2                                 | -   |        | b_exp_1                         | add   | fabric | 0       |
+|      mul_12s_80ns_90_5_1_U35                           | 4   |        | Elog2_V                         | mul   | auto   | 1       |
+|      mul_54s_6ns_54_2_1_U27                            | 2   |        | mul_ln691                       | mul   | auto   | 4       |
+|      ret_V_23_fu_838_p2                                | -   |        | ret_V_23                        | add   | tadder | 0       |
+|      mul_71ns_4ns_75_5_1_U28                           | -   |        | r_V_21                          | mul   | auto   | 1       |
+|      ret_V_2_fu_847_p2                                 | -   |        | ret_V_2                         | add   | tadder | 0       |
+|      ret_V_24_fu_921_p2                                | -   |        | ret_V_24                        | add   | tadder | 0       |
+|      mul_6ns_73ns_79_5_1_U29                           | 3   |        | r_V_22                          | mul   | auto   | 4       |
+|      ret_V_4_fu_938_p2                                 | -   |        | ret_V_4                         | add   | tadder | 0       |
+|      ret_V_25_fu_1002_p2                               | -   |        | ret_V_25                        | add   | tadder | 0       |
+|      mul_83ns_6ns_89_5_1_U30                           | 3   |        | r_V_23                          | mul   | auto   | 4       |
+|      ret_V_6_fu_1019_p2                                | -   |        | ret_V_6                         | add   | tadder | 0       |
+|      ret_V_26_fu_1093_p2                               | -   |        | ret_V_26                        | add   | tadder | 0       |
+|      mul_6ns_92ns_98_5_1_U31                           | 4   |        | r_V_24                          | mul   | auto   | 4       |
+|      ret_V_8_fu_1110_p2                                | -   |        | ret_V_8                         | add   | tadder | 0       |
+|      ret_V_27_fu_1180_p2                               | -   |        | ret_V_27                        | add   | tadder | 0       |
+|      mul_6ns_87ns_93_5_1_U32                           | 3   |        | r_V_25                          | mul   | auto   | 4       |
+|      ret_V_10_fu_1197_p2                               | -   |        | ret_V_10                        | add   | tadder | 0       |
+|      ret_V_28_fu_1267_p2                               | -   |        | ret_V_28                        | add   | tadder | 0       |
+|      mul_6ns_82ns_88_5_1_U33                           | 3   |        | r_V_26                          | mul   | auto   | 4       |
+|      ret_V_12_fu_1284_p2                               | -   |        | ret_V_12                        | add   | tadder | 0       |
+|      ret_V_29_fu_1387_p2                               | -   |        | ret_V_29                        | add   | tadder | 0       |
+|      mul_6ns_77ns_83_5_1_U34                           | 3   |        | r_V_27                          | mul   | auto   | 4       |
+|      ret_V_14_fu_1404_p2                               | -   |        | ret_V_14                        | add   | tadder | 0       |
+|      add_ln666_fu_1490_p2                              | -   |        | add_ln666                       | add   | tadder | 0       |
+|      add_ln666_1_fu_1450_p2                            | -   |        | add_ln666_1                     | add   | fabric | 0       |
+|      add_ln666_2_fu_1498_p2                            | -   |        | add_ln666_2                     | add   | tadder | 0       |
+|      add_ln666_3_fu_1504_p2                            | -   |        | add_ln666_3                     | add   | tadder | 0       |
+|      add_ln666_4_fu_1456_p2                            | -   |        | add_ln666_4                     | add   | fabric | 0       |
+|      add_ln666_5_fu_1513_p2                            | -   |        | add_ln666_5                     | add   | tadder | 0       |
+|      log_sum_V_1_fu_1552_p2                            | -   |        | log_sum_V_1                     | add   | tadder | 0       |
+|      mul_40ns_40ns_80_1_1_U36                          | 4   |        | r_V_28                          | mul   | auto   | 4       |
+|      ret_V_fu_1533_p2                                  | -   |        | ret_V                           | sub   | fabric | 0       |
+|      add_ln1199_fu_1560_p2                             | -   |        | add_ln1199                      | add   | tadder | 0       |
+|      ret_V_15_fu_1576_p2                               | -   |        | ret_V_15                        | add   | fabric | 0       |
+|      mac_muladd_16s_15ns_19s_31_4_1_U41                | 1   |        | r_V_29                          | mul   | dsp    | 3       |
+|      mac_muladd_16s_15ns_19s_31_4_1_U41                | 1   |        | ret_V_30                        | add   | dsp    | 3       |
+|      ret_V_17_fu_1650_p2                               | -   |        | ret_V_17                        | add   | fabric | 0       |
+|      mul_13s_71s_71_5_1_U37                            | 3   |        | r_V_14                          | mul   | auto   | 0       |
+|      m_diff_V_fu_1691_p2                               | -   |        | m_diff_V                        | sub   | fabric | 0       |
+|      ret_V_32_fu_1766_p2                               | -   |        | ret_V_32                        | add   | fabric | 0       |
+|      mul_43ns_36ns_79_2_1_U38                          | 4   |        | r_V_16                          | mul   | auto   | 4       |
+|      add_ln666_7_fu_1813_p2                            | -   |        | add_ln666_7                     | add   | fabric | 0       |
+|      exp_Z2P_m_1_V_fu_1822_p2                          | -   |        | exp_Z2P_m_1_V                   | add   | fabric | 0       |
+|      mul_49ns_44ns_93_2_1_U39                          | 4   |        | r_V_18                          | mul   | auto   | 1       |
+|      add_ln666_9_fu_1890_p2                            | -   |        | add_ln666_9                     | add   | fabric | 0       |
+|      exp_Z1P_m_1_l_V_fu_1899_p2                        | -   |        | exp_Z1P_m_1_l_V                 | add   | fabric | 0       |
+|      ret_V_34_fu_1937_p2                               | -   |        | ret_V_34                        | add   | fabric | 0       |
+|      mul_50ns_50ns_100_2_1_U40                         | 4   |        | r_V                             | mul   | auto   | 1       |
+|      ret_V_22_fu_1980_p2                               | -   |        | ret_V_22                        | add   | fabric | 0       |
+|      add_ln1199_6_fu_1986_p2                           | -   |        | add_ln1199_6                    | add   | fabric | 0       |
+|      add_ln1199_7_fu_1992_p2                           | -   |        | add_ln1199_7                    | add   | fabric | 0       |
+|      r_exp_V_fu_2006_p2                                | -   |        | r_exp_V                         | add   | fabric | 0       |
+|      out_exp_V_fu_2087_p2                              | -   |        | out_exp_V                       | add   | fabric | 0       |
+|   + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1   | 0   |        |                                 |       |        |         |
+|     i_V_16_fu_81_p2                                    | -   |        | i_V_16                          | add   | fabric | 0       |
+|     sum_V_2_fu_100_p2                                  | -   |        | sum_V_2                         | add   | fabric | 0       |
+|   + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18  | 0   |        |                                 |       |        |         |
+|     i_V_15_fu_81_p2                                    | -   |        | i_V_15                          | add   | fabric | 0       |
+|     sum_V_1_fu_100_p2                                  | -   |        | sum_V_1                         | add   | fabric | 0       |
+|   + STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1   | 0   |        |                                 |       |        |         |
+|     i_V_13_fu_94_p2                                    | -   |        | i_V_13                          | add   | fabric | 0       |
+|   + STDCpt_2048_3_ap_int_16_Pipeline_loop_3            | 0   |        |                                 |       |        |         |
+|     i_V_9_fu_102_p2                                    | -   |        | i_V_9                           | add   | fabric | 0       |
+|  + MADCpt_2048_3_ap_int_16_s                           | 33  |        |                                 |       |        |         |
+|    dmul_64ns_64ns_64_6_max_dsp_1_U137                  | 11  |        | val                             | dmul  | maxdsp | 5       |
+|    sh_amt_fu_239_p2                                    | -   |        | sh_amt                          | sub   | fabric | 0       |
+|    sh_amt_3_fu_267_p2                                  | -   |        | sh_amt_3                        | sub   | fabric | 0       |
+|    median_absolute_deviation_R_V_7_fu_630_p2           | -   |        | median_absolute_deviation_R_V_7 | sub   | fabric | 0       |
+|    dmul_64ns_64ns_64_6_max_dsp_1_U138                  | 11  |        | val_1                           | dmul  | maxdsp | 5       |
+|    sh_amt_4_fu_364_p2                                  | -   |        | sh_amt_4                        | sub   | fabric | 0       |
+|    sh_amt_5_fu_392_p2                                  | -   |        | sh_amt_5                        | sub   | fabric | 0       |
+|    median_absolute_deviation_I_V_7_fu_659_p2           | -   |        | median_absolute_deviation_I_V_7 | sub   | fabric | 0       |
+|    mul_i_i46_i_fu_677_p2                               | -   |        | mul_i_i46_i                     | sub   | fabric | 0       |
+|    mul_i_i_i_fu_688_p2                                 | -   |        | mul_i_i_i                       | sub   | fabric | 0       |
+|   + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1   | 0   |        |                                 |       |        |         |
+|     i_V_26_fu_100_p2                                   | -   |        | i_V_26                          | add   | fabric | 0       |
+|   + sortList                                           | 0   |        |                                 |       |        |         |
+|     i_V_7_fu_139_p2                                    | -   |        | i_V_7                           | add   | fabric | 0       |
+|     conv3_i_fu_154_p2                                  | -   |        | conv3_i                         | add   | fabric | 0       |
+|     index_3_fu_186_p2                                  | -   |        | index_3                         | add   | fabric | 0       |
+|    + sortList_Pipeline_VITIS_LOOP_28_1                 | 0   |        |                                 |       |        |         |
+|      i_V_6_fu_101_p2                                   | -   |        | i_V_6                           | add   | fabric | 0       |
+|    + sortList_Pipeline_occurence_loop                  | 0   |        |                                 |       |        |         |
+|      i_V_4_fu_110_p2                                   | -   |        | i_V_4                           | add   | fabric | 0       |
+|      ret_fu_130_p2                                     | -   |        | ret                             | sub   | fabric | 0       |
+|      count_V_d0                                        | -   |        | add_ln885                       | add   | fabric | 0       |
+|    + sortList_Pipeline_VITIS_LOOP_55_2                 | 0   |        |                                 |       |        |         |
+|      j_V_1_fu_103_p2                                   | -   |        | j_V_1                           | add   | fabric | 0       |
+|      index_2_fu_112_p2                                 | -   |        | index_2                         | add   | fabric | 0       |
+|   + computeMedian                                      | 11  |        |                                 |       |        |         |
+|     ret_fu_89_p2                                       | -   |        | ret                             | add   | fabric | 0       |
+|     dmul_64ns_64ns_64_6_max_dsp_1_U118                 | 11  |        | val                             | dmul  | maxdsp | 5       |
+|     sh_amt_fu_138_p2                                   | -   |        | sh_amt                          | sub   | fabric | 0       |
+|     sh_amt_2_fu_166_p2                                 | -   |        | sh_amt_2                        | sub   | fabric | 0       |
+|     median_V_7_fu_322_p2                               | -   |        | median_V_7                      | sub   | fabric | 0       |
+|   + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1   | 0   |        |                                 |       |        |         |
+|     i_V_29_fu_94_p2                                    | -   |        | i_V_29                          | add   | fabric | 0       |
+|     ret_fu_114_p2                                      | -   |        | ret                             | sub   | fabric | 0       |
+|     sub_ln180_fu_123_p2                                | -   |        | sub_ln180                       | sub   | fabric | 0       |
+|   + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110 | 0   |        |                                 |       |        |         |
+|     i_V_28_fu_94_p2                                    | -   |        | i_V_28                          | add   | fabric | 0       |
+|     ret_fu_114_p2                                      | -   |        | ret                             | sub   | fabric | 0       |
+|     sub_ln180_fu_123_p2                                | -   |        | sub_ln180                       | sub   | fabric | 0       |
+|   + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2  | 0   |        |                                 |       |        |         |
+|     i_V_33_fu_94_p2                                    | -   |        | i_V_33                          | add   | fabric | 0       |
+|   + MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3  | 0   |        |                                 |       |        |         |
+|     i_V_31_fu_102_p2                                   | -   |        | i_V_31                          | add   | fabric | 0       |
+|  + RFIFilter_0_2048_ap_int_16_s                        | 0   |        |                                 |       |        |         |
+|    add_ln1540_fu_134_p2                                | -   |        | add_ln1540                      | add   | fabric | 0       |
+|    sub_ln1558_fu_148_p2                                | -   |        | sub_ln1558                      | sub   | fabric | 0       |
+|    sub_ln1558_8_fu_174_p2                              | -   |        | sub_ln1558_8                    | sub   | fabric | 0       |
+|    sub_i_i46_i_i_fu_191_p2                             | -   |        | sub_i_i46_i_i                   | sub   | fabric | 0       |
+|   + RFIFilter_0_2048_ap_int_16_Pipeline_loop_2         | 0   |        |                                 |       |        |         |
+|     i_V_22_fu_100_p2                                   | -   |        | i_V_22                          | add   | fabric | 0       |
+|   + RFIFilter_0_2048_ap_int_16_Pipeline_loop_1         | 0   |        |                                 |       |        |         |
+|     i_V_24_fu_108_p2                                   | -   |        | i_V_24                          | add   | fabric | 0       |
+|   + RFIFilter_0_2048_ap_int_16_Pipeline_loop_19        | 0   |        |                                 |       |        |         |
+|     i_V_23_fu_108_p2                                   | -   |        | i_V_23                          | add   | fabric | 0       |
+|   + RFIFilter_0_2048_ap_int_16_Pipeline_loop_3         | 0   |        |                                 |       |        |         |
+|     i_V_20_fu_102_p2                                   | -   |        | i_V_20                          | add   | fabric | 0       |
++--------------------------------------------------------+-----+--------+---------------------------------+-------+--------+---------+
 
 
 ================================================================
@@ -407,30 +335,15 @@
 +----------------------------------------------------------------------------------------------------------------------+------+------+--------+---------------------------------------------------------------------------------------------------------------+---------+------+---------+
 | Name                                                                                                                 | BRAM | URAM | Pragma | Variable                                                                                                      | Storage | Impl | Latency |
 +----------------------------------------------------------------------------------------------------------------------+------+------+--------+---------------------------------------------------------------------------------------------------------------+---------+------+---------+
-| + top_graph_top_rfi_C                                                                                                | 2526 | 0    |        |                                                                                                               |         |      |         |
-|  + MADCpt_2048_3_double_s                                                                                            | 2128 | 0    |        |                                                                                                               |         |      |         |
-|    sorted_list_R_i_U                                                                                                 | 8    | -    |        | sorted_list_R_i                                                                                               | ram_s2p | auto | 1       |
-|    sorted_list_I_i_U                                                                                                 | 8    | -    |        | sorted_list_I_i                                                                                               | ram_s2p | auto | 1       |
-|    RDRi_U                                                                                                            | 8    | -    |        | RDRi                                                                                                          | ram_1p  | auto | 1       |
-|    RDIi_U                                                                                                            | 8    | -    |        | RDIi                                                                                                          | ram_1p  | auto | 1       |
-|    deviation_list_R_U                                                                                                | 8    | -    |        | deviation_list_R                                                                                              | ram_1p  | auto | 1       |
-|    deviation_list_I_U                                                                                                | 8    | -    |        | deviation_list_I                                                                                              | ram_1p  | auto | 1       |
-|    sorted_deviated_list_R_i_U                                                                                        | 8    | -    |        | sorted_deviated_list_R_i                                                                                      | ram_s2p | auto | 1       |
-|    sorted_deviated_list_I_i_U                                                                                        | 8    | -    |        | sorted_deviated_list_I_i                                                                                      | ram_s2p | auto | 1       |
-|    MRo_U                                                                                                             | 8    | -    |        | MRo                                                                                                           | ram_1p  | auto | 1       |
-|    MIo_U                                                                                                             | 8    | -    |        | MIo                                                                                                           | ram_1p  | auto | 1       |
-|   + sortList                                                                                                         | 1024 | 0    |        |                                                                                                               |         |      |         |
-|     count_U                                                                                                          | 1024 | -    |        | count                                                                                                         | ram_s2p | auto | 1       |
-|   + sortList                                                                                                         | 1024 | 0    |        |                                                                                                               |         |      |         |
-|     count_U                                                                                                          | 1024 | -    |        | count                                                                                                         | ram_s2p | auto | 1       |
-|  + STDCpt_2048_3_double_s                                                                                            | 78   | 0    |        |                                                                                                               |         |      |         |
-|    dadddsub_64ns_64ns_64_7_full_dsp_1_U157                                                                           | 8    | -    |        | RRi                                                                                                           | ram_1p  | auto | 1       |
-|    RRo_U                                                                                                             | 8    | -    |        | RRo                                                                                                           | ram_1p  | auto | 1       |
-|    RIi_U                                                                                                             | 8    | -    |        | RIi                                                                                                           | ram_1p  | auto | 1       |
-|    RIo_U                                                                                                             | 8    | -    |        | RIo                                                                                                           | ram_1p  | auto | 1       |
-|    deviation_list_R_U                                                                                                | 8    | -    |        | deviation_list_R                                                                                              | ram_1p  | auto | 1       |
-|    deviation_list_I_U                                                                                                | 8    | -    |        | deviation_list_I                                                                                              | ram_1p  | auto | 1       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1                                                                    | 0    | 0    |        |                                                                                                               |         |      |         |
+| + top_graph_top_rfi_C                                                                                                | 144  | 0    |        |                                                                                                               |         |      |         |
+|  + STDCpt_2048_3_ap_int_16_s                                                                                         | 42   | 0    |        |                                                                                                               |         |      |         |
+|    RRi_V_U                                                                                                           | 2    | -    |        | RRi_V                                                                                                         | ram_1p  | auto | 1       |
+|    RRo_V_U                                                                                                           | 2    | -    |        | RRo_V                                                                                                         | ram_1p  | auto | 1       |
+|    RIi_V_U                                                                                                           | 2    | -    |        | RIi_V                                                                                                         | ram_1p  | auto | 1       |
+|    RIo_V_U                                                                                                           | 2    | -    |        | RIo_V                                                                                                         | ram_1p  | auto | 1       |
+|    deviation_list_R_i_U                                                                                              | 2    | -    |        | deviation_list_R_i                                                                                            | ram_1p  | auto | 1       |
+|    deviation_list_I_i_U                                                                                              | 2    | -    |        | deviation_list_I_i                                                                                            | ram_1p  | auto | 1       |
+|   + stdDeviationList                                                                                                 | 30   | 0    |        |                                                                                                               |         |      |         |
 |    + pow_generic_double_s                                                                                            | 30   | 0    |        |                                                                                                               |         |      |         |
 |      pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V_U                                       | -    | -    |        | pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V                                       | rom_1p  | auto | 1       |
 |      pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_double_0_5_64_array_V_U | 4    | -    |        | pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_double_0_5_64_array_V | rom_1p  | auto | 1       |
@@ -444,25 +357,24 @@
 |      pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V_U                  | 2    | -    |        | pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V                  | rom_1p  | auto | 1       |
 |      pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_U                    | 1    | -    |        | pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V                    | rom_2p  | auto | 1       |
 |      pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_U                    | 2    | -    |        | pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V                    | rom_1p  | auto | 1       |
-|   + STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112                                                                  | 0    | 0    |        |                                                                                                               |         |      |         |
-|    + pow_generic_double_s                                                                                            | 30   | 0    |        |                                                                                                               |         |      |         |
-|      pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V_U                                       | -    | -    |        | pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V                                       | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_double_0_5_64_array_V_U | 4    | -    |        | pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_double_0_5_64_array_V | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_4_4_16_array_V_U         | 3    | -    |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_4_4_16_array_V         | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_7_6_64_array_V_U         | 3    | -    |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_7_6_64_array_V         | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_12_6_64_array_V_U        | 3    | -    |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_12_6_64_array_V        | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_17_6_64_array_V_U        | 3    | -    |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_17_6_64_array_V        | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_22_6_64_array_V_U        | 3    | -    |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_22_6_64_array_V        | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_27_6_64_array_V_U        | 3    | -    |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_27_6_64_array_V        | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_32_6_64_array_V_U        | 3    | -    |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_32_6_64_array_V        | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V_U                  | 2    | -    |        | pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V                  | rom_1p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_U                    | 1    | -    |        | pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V                    | rom_2p  | auto | 1       |
-|      pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_U                    | 2    | -    |        | pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V                    | rom_1p  | auto | 1       |
-|  + RFIFilter_0_2048_double_s                                                                                         | 32   | 0    |        |                                                                                                               |         |      |         |
-|    RRi_U                                                                                                             | 8    | -    |        | RRi                                                                                                           | ram_1p  | auto | 1       |
-|    RRo_U                                                                                                             | 8    | -    |        | RRo                                                                                                           | ram_1p  | auto | 1       |
-|    RIi_U                                                                                                             | 8    | -    |        | RIi                                                                                                           | ram_1p  | auto | 1       |
-|    RIo_U                                                                                                             | 8    | -    |        | RIo                                                                                                           | ram_1p  | auto | 1       |
+|  + MADCpt_2048_3_ap_int_16_s                                                                                         | 22   | 0    |        |                                                                                                               |         |      |         |
+|    sorted_list_R_V_U                                                                                                 | 2    | -    |        | sorted_list_R_V                                                                                               | ram_s2p | auto | 1       |
+|    sorted_list_I_V_U                                                                                                 | 2    | -    |        | sorted_list_I_V                                                                                               | ram_s2p | auto | 1       |
+|    RDRi_V_U                                                                                                          | 2    | -    |        | RDRi_V                                                                                                        | ram_1p  | auto | 1       |
+|    RDIi_V_U                                                                                                          | 2    | -    |        | RDIi_V                                                                                                        | ram_1p  | auto | 1       |
+|    deviation_list_R_V_U                                                                                              | 2    | -    |        | deviation_list_R_V                                                                                            | ram_1p  | auto | 1       |
+|    deviation_list_I_V_U                                                                                              | 2    | -    |        | deviation_list_I_V                                                                                            | ram_1p  | auto | 1       |
+|    sorted_deviated_list_R_V_U                                                                                        | 2    | -    |        | sorted_deviated_list_R_V                                                                                      | ram_s2p | auto | 1       |
+|    sorted_deviated_list_I_V_U                                                                                        | 2    | -    |        | sorted_deviated_list_I_V                                                                                      | ram_s2p | auto | 1       |
+|    MRo_V_U                                                                                                           | 2    | -    |        | MRo_V                                                                                                         | ram_1p  | auto | 1       |
+|    MIo_V_U                                                                                                           | 2    | -    |        | MIo_V                                                                                                         | ram_1p  | auto | 1       |
+|   + sortList                                                                                                         | 2    | 0    |        |                                                                                                               |         |      |         |
+|     count_V_U                                                                                                        | 2    | -    |        | count_V                                                                                                       | ram_s2p | auto | 1       |
+|  + RFIFilter_0_2048_ap_int_16_s                                                                                      | 8    | 0    |        |                                                                                                               |         |      |         |
+|    RRi_V_U                                                                                                           | 2    | -    |        | RRi_V                                                                                                         | ram_1p  | auto | 1       |
+|    RRo_V_U                                                                                                           | 2    | -    |        | RRo_V                                                                                                         | ram_1p  | auto | 1       |
+|    RIi_V_U                                                                                                           | 2    | -    |        | RIi_V                                                                                                         | ram_1p  | auto | 1       |
+|    RIo_V_U                                                                                                           | 2    | -    |        | RIo_V                                                                                                         | ram_1p  | auto | 1       |
 +----------------------------------------------------------------------------------------------------------------------+------+------+--------+---------------------------------------------------------------------------------------------------------------+---------+------+---------+
 
 
@@ -470,41 +382,43 @@
 == User Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| Type      | Options                                                                                                                                        | Location                                                                                                        |
-+-----------+------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-| interface | axis port=raw_data_real_i_stream name=raw_data_real_i_stream                                                                                   | top_graph_top_rfi_C.cpp:140 in top_graph_top_rfi_c, raw_data_real_i_stream                                      |
-| interface | axis port=raw_data_im_i_stream name=raw_data_im_i_stream                                                                                       | top_graph_top_rfi_C.cpp:141 in top_graph_top_rfi_c, raw_data_im_i_stream                                        |
-| interface | axis port=raw_data_im_o_stream name=raw_data_im_o_stream                                                                                       | top_graph_top_rfi_C.cpp:142 in top_graph_top_rfi_c, raw_data_im_o_stream                                        |
-| interface | axis port=raw_data_real_o_stream name=raw_data_real_o_stream                                                                                   | top_graph_top_rfi_C.cpp:143 in top_graph_top_rfi_c, raw_data_real_o_stream                                      |
-| interface | axis port=mad_R_o_stream name=mad_R_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:144 in top_graph_top_rfi_c, mad_R_o_stream                                              |
-| interface | axis port=raw_data_real_1_o_stream name=raw_data_real_1_o_stream                                                                               | top_graph_top_rfi_C.cpp:145 in top_graph_top_rfi_c, raw_data_real_1_o_stream                                    |
-| interface | axis port=std_R_o_stream name=std_R_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:146 in top_graph_top_rfi_c, std_R_o_stream                                              |
-| interface | axis port=raw_data_im_1_o_stream name=raw_data_im_1_o_stream                                                                                   | top_graph_top_rfi_C.cpp:147 in top_graph_top_rfi_c, raw_data_im_1_o_stream                                      |
-| interface | axis port=mad_I_o_stream name=mad_I_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:148 in top_graph_top_rfi_c, mad_I_o_stream                                              |
-| interface | axis port=std_I_o_stream name=std_I_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:149 in top_graph_top_rfi_c, std_I_o_stream                                              |
-| interface | axis port=filtered_im_0_o_stream name=filtered_im_0_o_stream                                                                                   | top_graph_top_rfi_C.cpp:150 in top_graph_top_rfi_c, filtered_im_0_o_stream                                      |
-| interface | axis port=filtered_real_0_o_stream name=filtered_real_0_o_stream                                                                               | top_graph_top_rfi_C.cpp:151 in top_graph_top_rfi_c, filtered_real_0_o_stream                                    |
-| interface | axis port=filtered_im_1_o_stream name=filtered_im_1_o_stream                                                                                   | top_graph_top_rfi_C.cpp:152 in top_graph_top_rfi_c, filtered_im_1_o_stream                                      |
-| interface | axis port=filtered_real_1_o_stream name=filtered_real_1_o_stream                                                                               | top_graph_top_rfi_C.cpp:153 in top_graph_top_rfi_c, filtered_real_1_o_stream                                    |
-| interface | ap_ctrl_none port=return                                                                                                                       | top_graph_top_rfi_C.cpp:154 in top_graph_top_rfi_c, return                                                      |
-| dataflow  | disable_start_propagation                                                                                                                      | top_graph_top_rfi_C.cpp:155 in top_graph_top_rfi_c                                                              |
-| stream    | variable=stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_1__mad_computation_raw_data_real_i | top_graph_top_rfi_C.cpp:159 in top_graph_top_rfi_c, stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i |
-| stream    | variable=stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_2__std_computation_raw_data_real_i | top_graph_top_rfi_C.cpp:162 in top_graph_top_rfi_c, stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i |
-| stream    | variable=stream__MAD_Computation_mad_R_o__Brd_MAD_R_in depth=size_of_stream__mad_computation_mad_r_o__brd_mad_r_in                             | top_graph_top_rfi_C.cpp:165 in top_graph_top_rfi_c, stream__MAD_Computation_mad_R_o__Brd_MAD_R_in               |
-| stream    | variable=stream__STD_Computation_std_R_o__Brd_STD_R_in depth=size_of_stream__std_computation_std_r_o__brd_std_r_in                             | top_graph_top_rfi_C.cpp:168 in top_graph_top_rfi_c, stream__STD_Computation_std_R_o__Brd_STD_R_in               |
-| stream    | variable=stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i depth=size_of_stream__brd_mad_r_out_2__rfi_filter_mad_r_i                                 | top_graph_top_rfi_C.cpp:171 in top_graph_top_rfi_c, stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i                 |
-| stream    | variable=stream__Brd_STD_R_out_2__RFI_Filter_std_R_i depth=size_of_stream__brd_std_r_out_2__rfi_filter_std_r_i                                 | top_graph_top_rfi_C.cpp:174 in top_graph_top_rfi_c, stream__Brd_STD_R_out_2__RFI_Filter_std_R_i                 |
-| stream    | variable=stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in depth=size_of_stream__rfi_filter_filtered_real_data_o__brd_res_real_in       | top_graph_top_rfi_C.cpp:177 in top_graph_top_rfi_c, stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in    |
-| stream    | variable=stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_0__mad_computation_raw_data_im_i         | top_graph_top_rfi_C.cpp:180 in top_graph_top_rfi_c, stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i     |
-| stream    | variable=stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_1__std_computation_raw_data_im_i         | top_graph_top_rfi_C.cpp:183 in top_graph_top_rfi_c, stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i     |
-| stream    | variable=stream__MAD_Computation_mad_I_o__Brd_MAD_I_in depth=size_of_stream__mad_computation_mad_i_o__brd_mad_i_in                             | top_graph_top_rfi_C.cpp:186 in top_graph_top_rfi_c, stream__MAD_Computation_mad_I_o__Brd_MAD_I_in               |
-| stream    | variable=stream__STD_Computation_std_I_o__Brd_STD_I_in depth=size_of_stream__std_computation_std_i_o__brd_std_i_in                             | top_graph_top_rfi_C.cpp:189 in top_graph_top_rfi_c, stream__STD_Computation_std_I_o__Brd_STD_I_in               |
-| stream    | variable=stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i depth=size_of_stream__brd_mad_i_out_1__rfi_filter_mad_i_i                                 | top_graph_top_rfi_C.cpp:192 in top_graph_top_rfi_c, stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i                 |
-| stream    | variable=stream__Brd_STD_I_out_1__RFI_Filter_std_I_i depth=size_of_stream__brd_std_i_out_1__rfi_filter_std_i_i                                 | top_graph_top_rfi_C.cpp:195 in top_graph_top_rfi_c, stream__Brd_STD_I_out_1__RFI_Filter_std_I_i                 |
-| stream    | variable=stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i depth=size_of_stream__brd_acq_im_out_4__rfi_filter_raw_data_im_i                   | top_graph_top_rfi_C.cpp:198 in top_graph_top_rfi_c, stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i          |
-| stream    | variable=stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i depth=size_of_stream__brd_acq_real_out_4__rfi_filter_raw_data_real_i           | top_graph_top_rfi_C.cpp:201 in top_graph_top_rfi_c, stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i      |
-| stream    | variable=stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in depth=size_of_stream__rfi_filter_filtered_im_data_o__brd_res_im_in               | top_graph_top_rfi_C.cpp:204 in top_graph_top_rfi_c, stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in        |
-+-----------+------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Type           | Options                                                                                                                                        | Location                                                                                                        |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| pipeline       | II=1                                                                                                                                           | ../include/madCpt.hpp:44 in sortlist                                                                            |
+| loop_tripcount | max=50 min=0                                                                                                                                   | ../include/madCpt.hpp:56 in sortlist                                                                            |
+| interface      | axis port=raw_data_real_i_stream name=raw_data_real_i_stream                                                                                   | top_graph_top_rfi_C.cpp:140 in top_graph_top_rfi_c, raw_data_real_i_stream                                      |
+| interface      | axis port=raw_data_im_i_stream name=raw_data_im_i_stream                                                                                       | top_graph_top_rfi_C.cpp:141 in top_graph_top_rfi_c, raw_data_im_i_stream                                        |
+| interface      | axis port=raw_data_im_o_stream name=raw_data_im_o_stream                                                                                       | top_graph_top_rfi_C.cpp:142 in top_graph_top_rfi_c, raw_data_im_o_stream                                        |
+| interface      | axis port=raw_data_real_o_stream name=raw_data_real_o_stream                                                                                   | top_graph_top_rfi_C.cpp:143 in top_graph_top_rfi_c, raw_data_real_o_stream                                      |
+| interface      | axis port=mad_R_o_stream name=mad_R_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:144 in top_graph_top_rfi_c, mad_R_o_stream                                              |
+| interface      | axis port=raw_data_real_1_o_stream name=raw_data_real_1_o_stream                                                                               | top_graph_top_rfi_C.cpp:145 in top_graph_top_rfi_c, raw_data_real_1_o_stream                                    |
+| interface      | axis port=std_R_o_stream name=std_R_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:146 in top_graph_top_rfi_c, std_R_o_stream                                              |
+| interface      | axis port=raw_data_im_1_o_stream name=raw_data_im_1_o_stream                                                                                   | top_graph_top_rfi_C.cpp:147 in top_graph_top_rfi_c, raw_data_im_1_o_stream                                      |
+| interface      | axis port=mad_I_o_stream name=mad_I_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:148 in top_graph_top_rfi_c, mad_I_o_stream                                              |
+| interface      | axis port=std_I_o_stream name=std_I_o_stream                                                                                                   | top_graph_top_rfi_C.cpp:149 in top_graph_top_rfi_c, std_I_o_stream                                              |
+| interface      | axis port=filtered_im_0_o_stream name=filtered_im_0_o_stream                                                                                   | top_graph_top_rfi_C.cpp:150 in top_graph_top_rfi_c, filtered_im_0_o_stream                                      |
+| interface      | axis port=filtered_real_0_o_stream name=filtered_real_0_o_stream                                                                               | top_graph_top_rfi_C.cpp:151 in top_graph_top_rfi_c, filtered_real_0_o_stream                                    |
+| interface      | axis port=filtered_im_1_o_stream name=filtered_im_1_o_stream                                                                                   | top_graph_top_rfi_C.cpp:152 in top_graph_top_rfi_c, filtered_im_1_o_stream                                      |
+| interface      | axis port=filtered_real_1_o_stream name=filtered_real_1_o_stream                                                                               | top_graph_top_rfi_C.cpp:153 in top_graph_top_rfi_c, filtered_real_1_o_stream                                    |
+| interface      | ap_ctrl_none port=return                                                                                                                       | top_graph_top_rfi_C.cpp:154 in top_graph_top_rfi_c, return                                                      |
+| dataflow       | disable_start_propagation                                                                                                                      | top_graph_top_rfi_C.cpp:155 in top_graph_top_rfi_c                                                              |
+| stream         | variable=stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_1__mad_computation_raw_data_real_i | top_graph_top_rfi_C.cpp:159 in top_graph_top_rfi_c, stream__Brd_Acq_Real_out_1__MAD_Computation_raw_data_real_i |
+| stream         | variable=stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i depth=size_of_stream__brd_acq_real_out_2__std_computation_raw_data_real_i | top_graph_top_rfi_C.cpp:162 in top_graph_top_rfi_c, stream__Brd_Acq_Real_out_2__STD_Computation_raw_data_real_i |
+| stream         | variable=stream__MAD_Computation_mad_R_o__Brd_MAD_R_in depth=size_of_stream__mad_computation_mad_r_o__brd_mad_r_in                             | top_graph_top_rfi_C.cpp:165 in top_graph_top_rfi_c, stream__MAD_Computation_mad_R_o__Brd_MAD_R_in               |
+| stream         | variable=stream__STD_Computation_std_R_o__Brd_STD_R_in depth=size_of_stream__std_computation_std_r_o__brd_std_r_in                             | top_graph_top_rfi_C.cpp:168 in top_graph_top_rfi_c, stream__STD_Computation_std_R_o__Brd_STD_R_in               |
+| stream         | variable=stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i depth=size_of_stream__brd_mad_r_out_2__rfi_filter_mad_r_i                                 | top_graph_top_rfi_C.cpp:171 in top_graph_top_rfi_c, stream__Brd_MAD_R_out_2__RFI_Filter_mad_R_i                 |
+| stream         | variable=stream__Brd_STD_R_out_2__RFI_Filter_std_R_i depth=size_of_stream__brd_std_r_out_2__rfi_filter_std_r_i                                 | top_graph_top_rfi_C.cpp:174 in top_graph_top_rfi_c, stream__Brd_STD_R_out_2__RFI_Filter_std_R_i                 |
+| stream         | variable=stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in depth=size_of_stream__rfi_filter_filtered_real_data_o__brd_res_real_in       | top_graph_top_rfi_C.cpp:177 in top_graph_top_rfi_c, stream__RFI_Filter_filtered_real_data_o__Brd_Res_Real_in    |
+| stream         | variable=stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_0__mad_computation_raw_data_im_i         | top_graph_top_rfi_C.cpp:180 in top_graph_top_rfi_c, stream__Brd_Acq_Im_out_0__MAD_Computation_raw_data_im_i     |
+| stream         | variable=stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i depth=size_of_stream__brd_acq_im_out_1__std_computation_raw_data_im_i         | top_graph_top_rfi_C.cpp:183 in top_graph_top_rfi_c, stream__Brd_Acq_Im_out_1__STD_Computation_raw_data_im_i     |
+| stream         | variable=stream__MAD_Computation_mad_I_o__Brd_MAD_I_in depth=size_of_stream__mad_computation_mad_i_o__brd_mad_i_in                             | top_graph_top_rfi_C.cpp:186 in top_graph_top_rfi_c, stream__MAD_Computation_mad_I_o__Brd_MAD_I_in               |
+| stream         | variable=stream__STD_Computation_std_I_o__Brd_STD_I_in depth=size_of_stream__std_computation_std_i_o__brd_std_i_in                             | top_graph_top_rfi_C.cpp:189 in top_graph_top_rfi_c, stream__STD_Computation_std_I_o__Brd_STD_I_in               |
+| stream         | variable=stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i depth=size_of_stream__brd_mad_i_out_1__rfi_filter_mad_i_i                                 | top_graph_top_rfi_C.cpp:192 in top_graph_top_rfi_c, stream__Brd_MAD_I_out_1__RFI_Filter_mad_I_i                 |
+| stream         | variable=stream__Brd_STD_I_out_1__RFI_Filter_std_I_i depth=size_of_stream__brd_std_i_out_1__rfi_filter_std_i_i                                 | top_graph_top_rfi_C.cpp:195 in top_graph_top_rfi_c, stream__Brd_STD_I_out_1__RFI_Filter_std_I_i                 |
+| stream         | variable=stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i depth=size_of_stream__brd_acq_im_out_4__rfi_filter_raw_data_im_i                   | top_graph_top_rfi_C.cpp:198 in top_graph_top_rfi_c, stream__Brd_Acq_Im_out_4__RFI_Filter_raw_data_im_i          |
+| stream         | variable=stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i depth=size_of_stream__brd_acq_real_out_4__rfi_filter_raw_data_real_i           | top_graph_top_rfi_C.cpp:201 in top_graph_top_rfi_c, stream__Brd_Acq_Real_out_4__RFI_Filter_raw_data_real_i      |
+| stream         | variable=stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in depth=size_of_stream__rfi_filter_filtered_im_data_o__brd_res_im_in               | top_graph_top_rfi_C.cpp:204 in top_graph_top_rfi_c, stream__RFI_Filter_filtered_im_data_o__Brd_Res_Im_in        |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 

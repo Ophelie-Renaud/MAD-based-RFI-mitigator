@@ -32,4 +32,5 @@ void MADCpt(int N_SAMPLES, int SIGMA,  IN double *raw_data_real_i, IN double *ra
 void sortList(double *data, int size, double *sorted_list);
 double computeMedian(double *list, int length);
 void deviationList(double *list, double median, int length, double *deviation_list);
+double MIN(double *tab,int len);
 #endif

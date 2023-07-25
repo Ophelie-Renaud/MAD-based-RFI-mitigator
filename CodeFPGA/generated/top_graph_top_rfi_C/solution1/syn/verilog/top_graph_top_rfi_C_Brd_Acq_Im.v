@@ -45,22 +45,22 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-input  [63:0] raw_data_im_i_stream_TDATA;
+input  [15:0] raw_data_im_i_stream_TDATA;
 input   raw_data_im_i_stream_TVALID;
 output   raw_data_im_i_stream_TREADY;
-output  [63:0] raw_data_im_o_stream_TDATA;
+output  [15:0] raw_data_im_o_stream_TDATA;
 output   raw_data_im_o_stream_TVALID;
 input   raw_data_im_o_stream_TREADY;
-output  [63:0] raw_data_im_1_o_stream_TDATA;
+output  [15:0] raw_data_im_1_o_stream_TDATA;
 output   raw_data_im_1_o_stream_TVALID;
 input   raw_data_im_1_o_stream_TREADY;
-output  [63:0] stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din;
+output  [15:0] stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din;
 input   stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_full_n;
 output   stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_write;
-output  [63:0] stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din;
+output  [15:0] stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din;
 input   stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_full_n;
 output   stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_write;
-output  [63:0] stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din;
+output  [15:0] stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din;
 input   stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_full_n;
 output   stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_write;
 
@@ -91,7 +91,7 @@ reg   [1:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
 wire    regslice_both_raw_data_im_i_stream_U_apdone_blk;
-wire   [63:0] raw_data_im_i_stream_TDATA_int_regslice;
+wire   [15:0] raw_data_im_i_stream_TDATA_int_regslice;
 wire    raw_data_im_i_stream_TVALID_int_regslice;
 reg    raw_data_im_i_stream_TREADY_int_regslice;
 wire    regslice_both_raw_data_im_i_stream_U_ack_in;
@@ -110,7 +110,7 @@ initial begin
 end
 
 top_graph_top_rfi_C_regslice_both #(
-    .DataWidth( 64 ))
+    .DataWidth( 16 ))
 regslice_both_raw_data_im_i_stream_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
@@ -124,7 +124,7 @@ regslice_both_raw_data_im_i_stream_U(
 );
 
 top_graph_top_rfi_C_regslice_both #(
-    .DataWidth( 64 ))
+    .DataWidth( 16 ))
 regslice_both_raw_data_im_o_stream_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
@@ -138,7 +138,7 @@ regslice_both_raw_data_im_o_stream_U(
 );
 
 top_graph_top_rfi_C_regslice_both #(
-    .DataWidth( 64 ))
+    .DataWidth( 16 ))
 regslice_both_raw_data_im_1_o_stream_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),

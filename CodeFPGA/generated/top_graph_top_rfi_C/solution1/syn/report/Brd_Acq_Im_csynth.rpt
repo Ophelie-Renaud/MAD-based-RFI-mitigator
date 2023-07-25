@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Brd_Acq_Im'
 ================================================================
-* Date:           Thu Jul  6 01:41:48 2023
+* Date:           Tue Jul 25 02:51:37 2023
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        top_graph_top_rfi_C
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  3.507 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  3.507 ns|     1.00 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -129,22 +129,22 @@
 |ap_continue                                                   |   in|    1|  ap_ctrl_hs|                                             Brd_Acq_Im|  return value|
 |ap_idle                                                       |  out|    1|  ap_ctrl_hs|                                             Brd_Acq_Im|  return value|
 |ap_ready                                                      |  out|    1|  ap_ctrl_hs|                                             Brd_Acq_Im|  return value|
-|raw_data_im_i_stream_TDATA                                    |   in|   64|        axis|                                   raw_data_im_i_stream|       pointer|
+|raw_data_im_i_stream_TDATA                                    |   in|   16|        axis|                                   raw_data_im_i_stream|       pointer|
 |raw_data_im_i_stream_TVALID                                   |   in|    1|        axis|                                   raw_data_im_i_stream|       pointer|
 |raw_data_im_i_stream_TREADY                                   |  out|    1|        axis|                                   raw_data_im_i_stream|       pointer|
-|raw_data_im_o_stream_TDATA                                    |  out|   64|        axis|                                   raw_data_im_o_stream|       pointer|
+|raw_data_im_o_stream_TDATA                                    |  out|   16|        axis|                                   raw_data_im_o_stream|       pointer|
 |raw_data_im_o_stream_TVALID                                   |  out|    1|        axis|                                   raw_data_im_o_stream|       pointer|
 |raw_data_im_o_stream_TREADY                                   |   in|    1|        axis|                                   raw_data_im_o_stream|       pointer|
-|raw_data_im_1_o_stream_TDATA                                  |  out|   64|        axis|                                 raw_data_im_1_o_stream|       pointer|
+|raw_data_im_1_o_stream_TDATA                                  |  out|   16|        axis|                                 raw_data_im_1_o_stream|       pointer|
 |raw_data_im_1_o_stream_TVALID                                 |  out|    1|        axis|                                 raw_data_im_1_o_stream|       pointer|
 |raw_data_im_1_o_stream_TREADY                                 |   in|    1|        axis|                                 raw_data_im_1_o_stream|       pointer|
-|stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din     |  out|   64|     ap_fifo|  stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i|       pointer|
+|stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din     |  out|   16|     ap_fifo|  stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i|       pointer|
 |stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_full_n  |   in|    1|     ap_fifo|  stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i|       pointer|
 |stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_write   |  out|    1|     ap_fifo|  stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i|       pointer|
-|stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din     |  out|   64|     ap_fifo|  stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i|       pointer|
+|stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din     |  out|   16|     ap_fifo|  stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i|       pointer|
 |stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_full_n  |   in|    1|     ap_fifo|  stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i|       pointer|
 |stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_write   |  out|    1|     ap_fifo|  stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i|       pointer|
-|stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din          |  out|   64|     ap_fifo|       stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i|       pointer|
+|stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din          |  out|   16|     ap_fifo|       stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i|       pointer|
 |stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_full_n       |   in|    1|     ap_fifo|       stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i|       pointer|
 |stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_write        |  out|    1|     ap_fifo|       stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i|       pointer|
 +--------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------+--------------+

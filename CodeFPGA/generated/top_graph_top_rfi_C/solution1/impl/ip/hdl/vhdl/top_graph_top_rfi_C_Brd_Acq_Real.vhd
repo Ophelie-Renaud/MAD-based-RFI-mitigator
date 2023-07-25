@@ -18,22 +18,22 @@ port (
     ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    raw_data_real_i_stream_TDATA : IN STD_LOGIC_VECTOR (63 downto 0);
+    raw_data_real_i_stream_TDATA : IN STD_LOGIC_VECTOR (15 downto 0);
     raw_data_real_i_stream_TVALID : IN STD_LOGIC;
     raw_data_real_i_stream_TREADY : OUT STD_LOGIC;
-    raw_data_real_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+    raw_data_real_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
     raw_data_real_o_stream_TVALID : OUT STD_LOGIC;
     raw_data_real_o_stream_TREADY : IN STD_LOGIC;
-    raw_data_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+    raw_data_real_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
     raw_data_real_1_o_stream_TVALID : OUT STD_LOGIC;
     raw_data_real_1_o_stream_TREADY : IN STD_LOGIC;
-    stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+    stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
     stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_full_n : IN STD_LOGIC;
     stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write : OUT STD_LOGIC;
-    stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+    stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
     stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_full_n : IN STD_LOGIC;
     stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write : OUT STD_LOGIC;
-    stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+    stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din : OUT STD_LOGIC_VECTOR (15 downto 0);
     stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n : IN STD_LOGIC;
     stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write : OUT STD_LOGIC );
 end;
@@ -73,7 +73,7 @@ attribute shreg_extract : string;
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
     signal regslice_both_raw_data_real_i_stream_U_apdone_blk : STD_LOGIC;
-    signal raw_data_real_i_stream_TDATA_int_regslice : STD_LOGIC_VECTOR (63 downto 0);
+    signal raw_data_real_i_stream_TDATA_int_regslice : STD_LOGIC_VECTOR (15 downto 0);
     signal raw_data_real_i_stream_TVALID_int_regslice : STD_LOGIC;
     signal raw_data_real_i_stream_TREADY_int_regslice : STD_LOGIC;
     signal regslice_both_raw_data_real_i_stream_U_ack_in : STD_LOGIC;
@@ -105,7 +105,7 @@ attribute shreg_extract : string;
 begin
     regslice_both_raw_data_real_i_stream_U : component top_graph_top_rfi_C_regslice_both
     generic map (
-        DataWidth => 64)
+        DataWidth => 16)
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
@@ -119,7 +119,7 @@ begin
 
     regslice_both_raw_data_real_o_stream_U : component top_graph_top_rfi_C_regslice_both
     generic map (
-        DataWidth => 64)
+        DataWidth => 16)
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
@@ -133,7 +133,7 @@ begin
 
     regslice_both_raw_data_real_1_o_stream_U : component top_graph_top_rfi_C_regslice_both
     generic map (
-        DataWidth => 64)
+        DataWidth => 16)
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,

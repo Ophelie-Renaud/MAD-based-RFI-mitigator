@@ -61,7 +61,8 @@ void MADCpt(int N_SAMPLES, int SIGMA,  IN double *raw_data_real_i, IN double *ra
 }
 void sortList(double *data, int size, double *sorted_list) {
     //int* count = (int*)malloc(size * sizeof(int));
-    int count[409600] = {0};
+    int s = 2048;
+    int count[2048] = {0};
 
     int min_value = MIN(data,size);
     int max_value = 50;

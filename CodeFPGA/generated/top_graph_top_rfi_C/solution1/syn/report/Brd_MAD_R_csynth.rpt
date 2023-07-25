@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Brd_MAD_R'
 ================================================================
-* Date:           Thu Jul  6 01:41:54 2023
+* Date:           Tue Jul 25 02:51:43 2023
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        top_graph_top_rfi_C
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.014 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.014 ns|     1.00 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -125,13 +125,13 @@
 |ap_continue                                          |   in|    1|  ap_ctrl_hs|                                    Brd_MAD_R|  return value|
 |ap_idle                                              |  out|    1|  ap_ctrl_hs|                                    Brd_MAD_R|  return value|
 |ap_ready                                             |  out|    1|  ap_ctrl_hs|                                    Brd_MAD_R|  return value|
-|mad_R_o_stream_TDATA                                 |  out|   64|        axis|                               mad_R_o_stream|       pointer|
+|mad_R_o_stream_TDATA                                 |  out|   16|        axis|                               mad_R_o_stream|       pointer|
 |mad_R_o_stream_TVALID                                |  out|    1|        axis|                               mad_R_o_stream|       pointer|
 |mad_R_o_stream_TREADY                                |   in|    1|        axis|                               mad_R_o_stream|       pointer|
-|stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout     |   in|   64|     ap_fifo|  stream_MAD_Computation_mad_R_o_Brd_MAD_R_in|       pointer|
+|stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout     |   in|   16|     ap_fifo|  stream_MAD_Computation_mad_R_o_Brd_MAD_R_in|       pointer|
 |stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n  |   in|    1|     ap_fifo|  stream_MAD_Computation_mad_R_o_Brd_MAD_R_in|       pointer|
 |stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read     |  out|    1|     ap_fifo|  stream_MAD_Computation_mad_R_o_Brd_MAD_R_in|       pointer|
-|stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din        |  out|   64|     ap_fifo|    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i|       pointer|
+|stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din        |  out|   16|     ap_fifo|    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i|       pointer|
 |stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n     |   in|    1|     ap_fifo|    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i|       pointer|
 |stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write      |  out|    1|     ap_fifo|    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i|       pointer|
 +-----------------------------------------------------+-----+-----+------------+---------------------------------------------+--------------+

@@ -47,38 +47,38 @@
 // Top function
 
 void top_graph_top_rfi_C(
-  hls::stream<double> &raw_data_real_i_stream,
-  hls::stream<double> &raw_data_im_i_stream,
-  hls::stream<double> &raw_data_im_o_stream,
-  hls::stream<double> &raw_data_real_o_stream,
-  hls::stream<double> &mad_R_o_stream,
-  hls::stream<double> &raw_data_real_1_o_stream,
-  hls::stream<double> &std_R_o_stream,
-  hls::stream<double> &raw_data_im_1_o_stream,
-  hls::stream<double> &mad_I_o_stream,
-  hls::stream<double> &std_I_o_stream,
-  hls::stream<double> &filtered_im_0_o_stream,
-  hls::stream<double> &filtered_real_0_o_stream,
-  hls::stream<double> &filtered_im_1_o_stream,
-  hls::stream<double> &filtered_real_1_o_stream);
+  hls::stream<ap_int<16>> &raw_data_real_i_stream,
+  hls::stream<ap_int<16>> &raw_data_im_i_stream,
+  hls::stream<ap_int<16>> &raw_data_im_o_stream,
+  hls::stream<ap_int<16>> &raw_data_real_o_stream,
+  hls::stream<ap_int<16>> &mad_R_o_stream,
+  hls::stream<ap_int<16>> &raw_data_real_1_o_stream,
+  hls::stream<ap_int<16>> &std_R_o_stream,
+  hls::stream<ap_int<16>> &raw_data_im_1_o_stream,
+  hls::stream<ap_int<16>> &mad_I_o_stream,
+  hls::stream<ap_int<16>> &std_I_o_stream,
+  hls::stream<ap_int<16>> &filtered_im_0_o_stream,
+  hls::stream<ap_int<16>> &filtered_real_0_o_stream,
+  hls::stream<ap_int<16>> &filtered_im_1_o_stream,
+  hls::stream<ap_int<16>> &filtered_real_1_o_stream);
 
 
 int main() {
 
-	  static hls::stream<double> raw_data_real_i_stream;
-  static hls::stream<double> raw_data_im_i_stream;
-  static hls::stream<double> raw_data_im_o_stream;
-  static hls::stream<double> raw_data_real_o_stream;
-  static hls::stream<double> mad_R_o_stream;
-  static hls::stream<double> raw_data_real_1_o_stream;
-  static hls::stream<double> std_R_o_stream;
-  static hls::stream<double> raw_data_im_1_o_stream;
-  static hls::stream<double> mad_I_o_stream;
-  static hls::stream<double> std_I_o_stream;
-  static hls::stream<double> filtered_im_0_o_stream;
-  static hls::stream<double> filtered_real_0_o_stream;
-  static hls::stream<double> filtered_im_1_o_stream;
-  static hls::stream<double> filtered_real_1_o_stream;
+	  static hls::stream<ap_int<16>> raw_data_real_i_stream;
+  static hls::stream<ap_int<16>> raw_data_im_i_stream;
+  static hls::stream<ap_int<16>> raw_data_im_o_stream;
+  static hls::stream<ap_int<16>> raw_data_real_o_stream;
+  static hls::stream<ap_int<16>> mad_R_o_stream;
+  static hls::stream<ap_int<16>> raw_data_real_1_o_stream;
+  static hls::stream<ap_int<16>> std_R_o_stream;
+  static hls::stream<ap_int<16>> raw_data_im_1_o_stream;
+  static hls::stream<ap_int<16>> mad_I_o_stream;
+  static hls::stream<ap_int<16>> std_I_o_stream;
+  static hls::stream<ap_int<16>> filtered_im_0_o_stream;
+  static hls::stream<ap_int<16>> filtered_real_0_o_stream;
+  static hls::stream<ap_int<16>> filtered_im_1_o_stream;
+  static hls::stream<ap_int<16>> filtered_real_1_o_stream;
 
 
 	for (int i = 0; i < NB_ITERATIONS_COSIM; i++) {

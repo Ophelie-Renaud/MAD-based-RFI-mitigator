@@ -13,7 +13,8 @@
 
 #include "preesm.h"
 
-
+#define REAL_FILTER_PATH PROJECT_ROOT_PATH "/dat/real_filter.data"
+#define IM_FILTER_PATH PROJECT_ROOT_PATH "/dat/im_filter.data"
 /**
 * Read a new frame from the YUV file.
 *
@@ -29,6 +30,6 @@
 *       Destination of the V component read from the file
 */
 void PlotFilteredData( int SIZE, int SAMPLE_RATE, int DISPLAY, IN double *filtered_real_data_i, IN double *filtered_im_data_i);
-void plotData(double* x, double* y, int size, const char* label);
+void plotData(double* x, double* y, int size, const char* label,const char* path);
 
 #endif

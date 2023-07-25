@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'top_graph_top_rfi_C'" level="0">
-<item name = "Date">Thu Jul  6 01:41:47 2023
+<item name = "Date">Tue Jul 25 02:51:36 2023
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">top_graph_top_rfi_C</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.421 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 8.998 ns, 1.00 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">868460, ?, 8.685 ms, ?, 868461, -1, dataflow</column>
+<column name="">65631, 475231, 0.656 ms, 4.752 ms, 65632, 475232, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -33,15 +33,15 @@
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_Brd_Acq_Im_fu_172">Brd_Acq_Im, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 <column name="grp_Brd_Acq_Real_fu_188">Brd_Acq_Real, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
-<column name="grp_MADCpt_2048_3_double_s_fu_204">MADCpt_2048_3_double_s, 868460, ?, 8.685 ms, ?, 868460, ?, no</column>
-<column name="grp_STDCpt_2048_3_double_s_fu_216">STDCpt_2048_3_double_s, 51456, 51456, 0.515 ms, 0.515 ms, 51456, 51456, no</column>
-<column name="grp_Brd_MAD_R_fu_252">Brd_MAD_R, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
-<column name="grp_Brd_STD_R_fu_262">Brd_STD_R, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="grp_STDCpt_2048_3_ap_int_16_s_fu_204">STDCpt_2048_3_ap_int_16_s, 14603, 14603, 0.146 ms, 0.146 ms, 14603, 14603, no</column>
+<column name="grp_MADCpt_2048_3_ap_int_16_s_fu_240">MADCpt_2048_3_ap_int_16_s, 65631, 475231, 0.656 ms, 4.752 ms, 65631, 475231, no</column>
+<column name="grp_Brd_STD_R_fu_252">Brd_STD_R, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="grp_Brd_MAD_R_fu_262">Brd_MAD_R, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 <column name="grp_Brd_MAD_I_fu_272">Brd_MAD_I, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 <column name="grp_Brd_STD_I_fu_282">Brd_STD_I, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
-<column name="grp_RFIFilter_0_2048_double_s_fu_292">RFIFilter_0_2048_double_s, 6171, 6171, 61.710 us, 61.710 us, 6171, 6171, no</column>
-<column name="grp_Brd_Res_Real_fu_312">Brd_Res_Real, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
-<column name="grp_Brd_Res_Im_fu_322">Brd_Res_Im, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="grp_RFIFilter_0_2048_ap_int_16_s_fu_292">RFIFilter_0_2048_ap_int_16_s, 6157, 6157, 61.570 us, 61.570 us, 6157, 6157, no</column>
+<column name="grp_Brd_Res_Im_fu_312">Brd_Res_Im, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="grp_Brd_Res_Real_fu_322">Brd_Res_Real, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

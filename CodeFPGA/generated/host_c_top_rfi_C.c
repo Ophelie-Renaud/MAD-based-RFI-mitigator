@@ -49,20 +49,20 @@ int main(int argc, char **argv) {
 	print("Platform started\n\r");
 
 	// TODO Initialize input and output buffers
-  double* raw_data_real_i = malloc(sizeof(*raw_data_real_i) * RATE_OF_RAW_DATA_REAL_I);
-  double* raw_data_im_i = malloc(sizeof(*raw_data_im_i) * RATE_OF_RAW_DATA_IM_I);
-  double* raw_data_im_o = malloc(sizeof(*raw_data_im_o) * RATE_OF_RAW_DATA_IM_O);
-  double* raw_data_real_o = malloc(sizeof(*raw_data_real_o) * RATE_OF_RAW_DATA_REAL_O);
-  double* mad_R_o = malloc(sizeof(*mad_R_o) * RATE_OF_MAD_R_O);
-  double* raw_data_real_1_o = malloc(sizeof(*raw_data_real_1_o) * RATE_OF_RAW_DATA_REAL_1_O);
-  double* std_R_o = malloc(sizeof(*std_R_o) * RATE_OF_STD_R_O);
-  double* raw_data_im_1_o = malloc(sizeof(*raw_data_im_1_o) * RATE_OF_RAW_DATA_IM_1_O);
-  double* mad_I_o = malloc(sizeof(*mad_I_o) * RATE_OF_MAD_I_O);
-  double* std_I_o = malloc(sizeof(*std_I_o) * RATE_OF_STD_I_O);
-  double* filtered_im_0_o = malloc(sizeof(*filtered_im_0_o) * RATE_OF_FILTERED_IM_0_O);
-  double* filtered_real_0_o = malloc(sizeof(*filtered_real_0_o) * RATE_OF_FILTERED_REAL_0_O);
-  double* filtered_im_1_o = malloc(sizeof(*filtered_im_1_o) * RATE_OF_FILTERED_IM_1_O);
-  double* filtered_real_1_o = malloc(sizeof(*filtered_real_1_o) * RATE_OF_FILTERED_REAL_1_O);
+  ap_int<16>* raw_data_real_i = malloc(sizeof(*raw_data_real_i) * RATE_OF_RAW_DATA_REAL_I);
+  ap_int<16>* raw_data_im_i = malloc(sizeof(*raw_data_im_i) * RATE_OF_RAW_DATA_IM_I);
+  ap_int<16>* raw_data_im_o = malloc(sizeof(*raw_data_im_o) * RATE_OF_RAW_DATA_IM_O);
+  ap_int<16>* raw_data_real_o = malloc(sizeof(*raw_data_real_o) * RATE_OF_RAW_DATA_REAL_O);
+  ap_int<16>* mad_R_o = malloc(sizeof(*mad_R_o) * RATE_OF_MAD_R_O);
+  ap_int<16>* raw_data_real_1_o = malloc(sizeof(*raw_data_real_1_o) * RATE_OF_RAW_DATA_REAL_1_O);
+  ap_int<16>* std_R_o = malloc(sizeof(*std_R_o) * RATE_OF_STD_R_O);
+  ap_int<16>* raw_data_im_1_o = malloc(sizeof(*raw_data_im_1_o) * RATE_OF_RAW_DATA_IM_1_O);
+  ap_int<16>* mad_I_o = malloc(sizeof(*mad_I_o) * RATE_OF_MAD_I_O);
+  ap_int<16>* std_I_o = malloc(sizeof(*std_I_o) * RATE_OF_STD_I_O);
+  ap_int<16>* filtered_im_0_o = malloc(sizeof(*filtered_im_0_o) * RATE_OF_FILTERED_IM_0_O);
+  ap_int<16>* filtered_real_0_o = malloc(sizeof(*filtered_real_0_o) * RATE_OF_FILTERED_REAL_0_O);
+  ap_int<16>* filtered_im_1_o = malloc(sizeof(*filtered_im_1_o) * RATE_OF_FILTERED_IM_1_O);
+  ap_int<16>* filtered_real_1_o = malloc(sizeof(*filtered_real_1_o) * RATE_OF_FILTERED_REAL_1_O);
 
 
 	print("Transferring data\n\r");

@@ -185,7 +185,7 @@
     endfunction
 
     // get the proc path based on dl vector
-    function [568:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
+    function [592:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
         integer index;
         begin
             index = proc_index(dl_vec);
@@ -197,16 +197,16 @@
                     proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Real_U0";
                 end
                 2 : begin
-                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0";
+                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0";
                 end
                 3 : begin
-                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0";
+                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0";
                 end
                 4 : begin
-                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_R_U0";
+                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_STD_R_U0";
                 end
                 5 : begin
-                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_STD_R_U0";
+                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_R_U0";
                 end
                 6 : begin
                     proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_I_U0";
@@ -215,13 +215,13 @@
                     proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_STD_I_U0";
                 end
                 8 : begin
-                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0";
+                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0";
                 end
                 9 : begin
-                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Res_Real_U0";
+                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Res_Im_U0";
                 end
                 10 : begin
-                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Res_Im_U0";
+                    proc_path = "top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Res_Real_U0";
                 end
                 default : begin
                     proc_path = "unknown";
@@ -241,7 +241,7 @@
     endtask
 
     // print the start of a cycle
-    task print_cycle_start(input reg [568:0] proc_path, input integer cycle_id);
+    task print_cycle_start(input reg [592:0] proc_path, input integer cycle_id);
         begin
             $display("/////////////////////////");
             $display("// Dependence cycle %0d:", cycle_id);
@@ -266,7 +266,7 @@
     endtask
 
     // print one proc component in the cycle
-    task print_cycle_proc_comp(input reg [568:0] proc_path, input integer cycle_comp_id);
+    task print_cycle_proc_comp(input reg [592:0] proc_path, input integer cycle_comp_id);
         begin
             $display("// (%0d): Process: %0s", cycle_comp_id, proc_path);
             $fdisplay(fp, "Dependence_Process_ID %0d", cycle_comp_id);
@@ -285,29 +285,29 @@
             case (index1)
                 0 : begin
                     case(index2)
-                    2: begin
+                    3: begin
                         if (~Brd_Acq_Im_U0.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_blk_n) begin
                             if (~stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
-                    3: begin
+                    2: begin
                         if (~Brd_Acq_Im_U0.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_blk_n) begin
                             if (~stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -316,12 +316,12 @@
                     8: begin
                         if (~Brd_Acq_Im_U0.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_blk_n) begin
                             if (~stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -331,29 +331,29 @@
                 end
                 1 : begin
                     case(index2)
-                    2: begin
+                    3: begin
                         if (~Brd_Acq_Real_U0.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_blk_n) begin
                             if (~stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
-                    3: begin
+                    2: begin
                         if (~Brd_Acq_Real_U0.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_blk_n) begin
                             if (~stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -362,12 +362,12 @@
                     8: begin
                         if (~Brd_Acq_Real_U0.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_blk_n) begin
                             if (~stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -378,67 +378,7 @@
                 2 : begin
                     case(index2)
                     1: begin
-                        if (~MADCpt_2048_3_double_U0.grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1_fu_184.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_blk_n) begin
-                            if (~stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Real_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Real_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    0: begin
-                        if (~MADCpt_2048_3_double_U0.grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1_fu_184.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_blk_n) begin
-                            if (~stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Im_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Im_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    4: begin
-                        if (~MADCpt_2048_3_double_U0.grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3_fu_230.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_blk_n) begin
-                            if (~stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_R_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_R_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    6: begin
-                        if (~MADCpt_2048_3_double_U0.grp_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3_fu_230.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_blk_n) begin
-                            if (~stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_I_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_I_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    endcase
-                end
-                3 : begin
-                    case(index2)
-                    1: begin
-                        if (~STDCpt_2048_3_double_U0.grp_STDCpt_2048_3_double_Pipeline_loop_2_fu_108.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_blk_n) begin
+                        if (~STDCpt_2048_3_ap_int_16_U0.grp_STDCpt_2048_3_ap_int_16_Pipeline_loop_2_fu_154.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_blk_n) begin
                             if (~stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Real_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U");
@@ -452,7 +392,7 @@
                         end
                     end
                     0: begin
-                        if (~STDCpt_2048_3_double_U0.grp_STDCpt_2048_3_double_Pipeline_loop_2_fu_108.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_blk_n) begin
+                        if (~STDCpt_2048_3_ap_int_16_U0.grp_STDCpt_2048_3_ap_int_16_Pipeline_loop_2_fu_154.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_blk_n) begin
                             if (~stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Im_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U");
@@ -465,8 +405,8 @@
                             end
                         end
                     end
-                    5: begin
-                        if (~STDCpt_2048_3_double_U0.grp_STDCpt_2048_3_double_Pipeline_loop_3_fu_214.stream_STD_Computation_std_R_o_Brd_STD_R_in_blk_n) begin
+                    4: begin
+                        if (~STDCpt_2048_3_ap_int_16_U0.grp_STDCpt_2048_3_ap_int_16_Pipeline_loop_3_fu_229.stream_STD_Computation_std_R_o_Brd_STD_R_in_blk_n) begin
                             if (~stream_STD_Computation_std_R_o_Brd_STD_R_in_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_STD_R_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U");
@@ -480,7 +420,7 @@
                         end
                     end
                     7: begin
-                        if (~STDCpt_2048_3_double_U0.grp_STDCpt_2048_3_double_Pipeline_loop_3_fu_214.stream_STD_Computation_std_I_o_Brd_STD_I_in_blk_n) begin
+                        if (~STDCpt_2048_3_ap_int_16_U0.grp_STDCpt_2048_3_ap_int_16_Pipeline_loop_3_fu_229.stream_STD_Computation_std_I_o_Brd_STD_I_in_blk_n) begin
                             if (~stream_STD_Computation_std_I_o_Brd_STD_I_in_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_STD_I_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U");
@@ -495,32 +435,92 @@
                     end
                     endcase
                 end
-                4 : begin
+                3 : begin
                     case(index2)
-                    2: begin
-                        if (~Brd_MAD_R_U0.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_blk_n) begin
+                    1: begin
+                        if (~MADCpt_2048_3_ap_int_16_U0.grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1_fu_114.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_blk_n) begin
+                            if (~stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Real_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Real_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                    end
+                    0: begin
+                        if (~MADCpt_2048_3_ap_int_16_U0.grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1_fu_114.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_blk_n) begin
+                            if (~stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Im_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Im_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                    end
+                    5: begin
+                        if (~MADCpt_2048_3_ap_int_16_U0.grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3_fu_159.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_blk_n) begin
                             if (~stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_R_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_R_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
-                    8: begin
-                        if (~Brd_MAD_R_U0.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_blk_n) begin
-                            if (~stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U");
+                    6: begin
+                        if (~MADCpt_2048_3_ap_int_16_U0.grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3_fu_159.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_blk_n) begin
+                            if (~stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_I_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U");
+                            else if (~stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_I_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                    end
+                    endcase
+                end
+                4 : begin
+                    case(index2)
+                    2: begin
+                        if (~Brd_STD_R_U0.stream_STD_Computation_std_R_o_Brd_STD_R_in_blk_n) begin
+                            if (~stream_STD_Computation_std_R_o_Brd_STD_R_in_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~stream_STD_Computation_std_R_o_Brd_STD_R_in_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                    end
+                    8: begin
+                        if (~Brd_STD_R_U0.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_blk_n) begin
+                            if (~stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -530,29 +530,29 @@
                 5 : begin
                     case(index2)
                     3: begin
-                        if (~Brd_STD_R_U0.stream_STD_Computation_std_R_o_Brd_STD_R_in_blk_n) begin
-                            if (~stream_STD_Computation_std_R_o_Brd_STD_R_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U");
+                        if (~Brd_MAD_R_U0.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_blk_n) begin
+                            if (~stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~stream_STD_Computation_std_R_o_Brd_STD_R_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_R_o_Brd_STD_R_in_U");
+                            else if (~stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     8: begin
-                        if (~Brd_STD_R_U0.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_blk_n) begin
-                            if (~stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U");
+                        if (~Brd_MAD_R_U0.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_blk_n) begin
+                            if (~stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U");
+                            else if (~stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -561,15 +561,15 @@
                 end
                 6 : begin
                     case(index2)
-                    2: begin
+                    3: begin
                         if (~Brd_MAD_I_U0.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_blk_n) begin
                             if (~stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.MADCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -578,12 +578,12 @@
                     8: begin
                         if (~Brd_MAD_I_U0.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_blk_n) begin
                             if (~stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -593,15 +593,15 @@
                 end
                 7 : begin
                     case(index2)
-                    3: begin
+                    2: begin
                         if (~Brd_STD_I_U0.stream_STD_Computation_std_I_o_Brd_STD_I_in_blk_n) begin
                             if (~stream_STD_Computation_std_I_o_Brd_STD_I_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_STD_Computation_std_I_o_Brd_STD_I_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.STDCpt_2048_3_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_STD_Computation_std_I_o_Brd_STD_I_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -610,12 +610,12 @@
                     8: begin
                         if (~Brd_STD_I_U0.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_blk_n) begin
                             if (~stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
                             else if (~stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -626,7 +626,7 @@
                 8 : begin
                     case(index2)
                     7: begin
-                        if (~RFIFilter_0_2048_double_U0.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_blk_n) begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_blk_n) begin
                             if (~stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_STD_I_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U");
@@ -639,8 +639,8 @@
                             end
                         end
                     end
-                    5: begin
-                        if (~RFIFilter_0_2048_double_U0.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_blk_n) begin
+                    4: begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_blk_n) begin
                             if (~stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_STD_R_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U");
@@ -654,7 +654,7 @@
                         end
                     end
                     6: begin
-                        if (~RFIFilter_0_2048_double_U0.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_blk_n) begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_blk_n) begin
                             if (~stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_I_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U");
@@ -667,8 +667,8 @@
                             end
                         end
                     end
-                    4: begin
-                        if (~RFIFilter_0_2048_double_U0.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_blk_n) begin
+                    5: begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_blk_n) begin
                             if (~stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_MAD_R_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U");
@@ -682,7 +682,7 @@
                         end
                     end
                     1: begin
-                        if (~RFIFilter_0_2048_double_U0.grp_RFIFilter_0_2048_double_Pipeline_loop_2_fu_84.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_blk_n) begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2_fu_90.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_blk_n) begin
                             if (~stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Real_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U");
@@ -696,7 +696,7 @@
                         end
                     end
                     0: begin
-                        if (~RFIFilter_0_2048_double_U0.grp_RFIFilter_0_2048_double_Pipeline_loop_2_fu_84.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_blk_n) begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2_fu_90.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_blk_n) begin
                             if (~stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Acq_Im_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U");
@@ -709,8 +709,8 @@
                             end
                         end
                     end
-                    9: begin
-                        if (~RFIFilter_0_2048_double_U0.grp_RFIFilter_0_2048_double_Pipeline_loop_3_fu_116.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_blk_n) begin
+                    10: begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3_fu_118.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_blk_n) begin
                             if (~stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Res_Real_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U");
@@ -723,8 +723,8 @@
                             end
                         end
                     end
-                    10: begin
-                        if (~RFIFilter_0_2048_double_U0.grp_RFIFilter_0_2048_double_Pipeline_loop_3_fu_116.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_blk_n) begin
+                    9: begin
+                        if (~RFIFilter_0_2048_ap_int_16_U0.grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3_fu_118.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_blk_n) begin
                             if (~stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.Brd_Res_Im_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U");
@@ -742,15 +742,15 @@
                 9 : begin
                     case(index2)
                     8: begin
-                        if (~Brd_Res_Real_U0.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_blk_n) begin
-                            if (~stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U");
+                        if (~Brd_Res_Im_U0.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_blk_n) begin
+                            if (~stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U");
+                            else if (~stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -760,15 +760,15 @@
                 10 : begin
                     case(index2)
                     8: begin
-                        if (~Brd_Res_Im_U0.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_blk_n) begin
-                            if (~stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U");
+                        if (~Brd_Res_Real_U0.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_blk_n) begin
+                            if (~stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U' written by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_double_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U");
+                            else if (~stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U' read by process 'top_graph_top_rfi_C_top_graph_top_rfi_C.RFIFilter_0_2048_ap_int_16_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path top_graph_top_rfi_C_top_graph_top_rfi_C.stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end

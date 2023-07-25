@@ -115,6 +115,12 @@ set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/
 set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_filtered_im_1_o_stream_0/design_1_axis_data_fifo_filtered_im_1_o_stream_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_filtered_real_1_o_stream_0/design_1_axis_data_fifo_filtered_real_1_o_stream_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<pi:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:al="http://eclipse.org/graphiti/mm/algorithms" xmlns:pi="http://eclipse.org/graphiti/mm/pictograms" visible="true" gridUnit="10" diagramTypeId="PiMM" name="top_rfi_C" snapToGrid="true" pictogramLinks="//@children.0/@link //@children.0/@children.0/@link //@children.0/@anchors.0/@link //@children.1/@link //@children.1/@children.0/@link //@children.1/@anchors.0/@link //@children.2/@link //@children.2/@children.0/@link //@children.2/@anchors.0/@link //@children.3/@link //@children.3/@children.0/@link //@children.3/@anchors.0/@link //@children.4/@link //@children.4/@children.0/@link //@children.4/@anchors.0/@link //@children.5/@link //@children.5/@children.0/@link //@children.5/@anchors.0/@link //@children.6/@link //@children.6/@children.0/@link //@children.6/@anchors.0/@link //@children.7/@link //@children.7/@children.0/@link //@children.7/@anchors.0/@link //@children.8/@link //@children.8/@children.0/@link //@children.8/@anchors.0/@link //@children.8/@anchors.1/@link //@children.8/@anchors.2/@link //@children.8/@anchors.3/@link //@children.8/@anchors.4/@link //@children.8/@anchors.5/@link //@children.8/@anchors.6/@link //@children.9/@link //@children.9/@children.0/@link //@children.9/@anchors.0/@link //@children.9/@anchors.1/@link //@children.9/@anchors.2/@link //@children.9/@anchors.3/@link //@children.9/@anchors.4/@link //@children.10/@link //@children.10/@children.0/@link //@children.10/@anchors.0/@link //@children.10/@anchors.1/@link //@children.10/@anchors.2/@link //@children.10/@anchors.3/@link //@children.10/@anchors.4/@link //@children.10/@anchors.5/@link //@children.10/@anchors.6/@link //@children.10/@anchors.7/@link //@children.10/@anchors.8/@link //@children.11/@link //@children.11/@children.0/@link //@children.11/@anchors.0/@link //@children.11/@anchors.1/@link //@children.11/@anchors.2/@link //@children.11/@anchors.3/@link //@children.11/@anchors.4/@link //@children.11/@anchors.5/@link //@children.11/@anchors.6/@link //@children.12/@link //@children.12/@children.0/@link //@children.12/@anchors.0/@link //@children.12/@anchors.1/@link //@children.12/@anchors.2/@link //@children.12/@anchors.3/@link //@children.12/@anchors.4/@link //@children.12/@anchors.5/@link //@children.13/@link //@children.13/@children.0/@link //@children.13/@anchors.0/@link //@children.13/@anchors.1/@link //@children.13/@anchors.2/@link //@children.13/@anchors.3/@link //@children.13/@anchors.4/@link //@children.13/@anchors.5/@link //@children.13/@anchors.6/@link //@children.13/@anchors.7/@link //@children.13/@anchors.8/@link //@children.13/@anchors.9/@link //@children.14/@link //@children.14/@children.0/@link //@children.14/@anchors.0/@link //@children.14/@anchors.1/@link //@children.14/@anchors.2/@link //@children.14/@anchors.3/@link //@children.14/@anchors.4/@link //@children.14/@anchors.5/@link //@children.15/@link //@children.15/@children.0/@link //@children.15/@anchors.0/@link //@children.15/@anchors.1/@link //@children.15/@anchors.2/@link //@children.15/@anchors.3/@link //@children.15/@anchors.4/@link //@children.15/@anchors.5/@link //@children.16/@link //@children.16/@children.0/@link //@children.16/@anchors.0/@link //@children.16/@anchors.1/@link //@children.16/@anchors.2/@link //@children.16/@anchors.3/@link //@children.16/@anchors.4/@link //@children.16/@anchors.5/@link //@children.16/@anchors.6/@link //@children.16/@anchors.7/@link //@children.16/@anchors.8/@link //@children.16/@anchors.9/@link //@children.16/@anchors.10/@link //@children.17/@link //@children.17/@children.0/@link //@children.17/@anchors.0/@link //@children.17/@anchors.1/@link //@children.17/@anchors.2/@link //@children.17/@anchors.3/@link //@children.17/@anchors.4/@link //@children.17/@anchors.5/@link //@children.18/@link //@children.18/@children.0/@link //@children.18/@anchors.0/@link //@children.18/@anchors.1/@link //@children.18/@anchors.2/@link //@children.18/@anchors.3/@link //@children.18/@anchors.4/@link //@children.18/@anchors.5/@link //@children.18/@anchors.6/@link //@children.18/@anchors.7/@link //@children.18/@anchors.8/@link //@children.19/@link //@children.19/@children.0/@link //@children.19/@anchors.0/@link //@children.19/@anchors.1/@link //@children.19/@anchors.2/@link //@children.19/@anchors.3/@link //@children.19/@anchors.4/@link //@children.19/@anchors.5/@link //@children.20/@link //@children.20/@children.0/@link //@children.20/@anchors.0/@link //@children.20/@anchors.1/@link //@children.20/@anchors.2/@link //@children.20/@anchors.3/@link //@children.20/@anchors.4/@link //@children.20/@anchors.5/@link //@children.21/@link //@children.21/@children.0/@link //@children.21/@anchors.0/@link //@children.21/@anchors.1/@link //@children.21/@anchors.2/@link //@children.21/@anchors.3/@link //@children.21/@anchors.4/@link //@children.21/@anchors.5/@link //@children.21/@anchors.6/@link //@children.22/@link //@children.22/@children.0/@link //@children.22/@anchors.0/@link //@children.22/@anchors.1/@link //@children.22/@anchors.2/@link //@children.22/@anchors.3/@link //@children.22/@anchors.4/@link //@children.22/@anchors.5/@link //@children.23/@link //@children.23/@children.0/@link //@children.23/@anchors.0/@link //@children.23/@anchors.1/@link //@children.23/@anchors.2/@link //@children.23/@anchors.3/@link //@children.23/@anchors.4/@link //@children.23/@anchors.5/@link //@connections.0/@link //@connections.1/@link //@connections.2/@link //@connections.3/@link //@connections.4/@link //@connections.5/@link //@connections.6/@link //@connections.7/@link //@connections.8/@link //@connections.9/@link //@connections.10/@link //@connections.11/@link //@connections.12/@link //@connections.13/@link //@connections.14/@link //@connections.15/@link //@connections.16/@link //@connections.17/@link //@connections.18/@link //@connections.19/@link //@connections.20/@link //@connections.21/@link //@connections.22/@link //@connections.23/@link //@connections.24/@link //@connections.25/@link //@connections.26/@link //@connections.27/@link //@connections.28/@link //@connections.29/@link //@connections.30/@link //@connections.31/@link //@connections.32/@link //@connections.33/@link //@connections.34/@link //@connections.35/@link //@connections.36/@link //@connections.37/@link //@connections.38/@link //@connections.39/@link //@connections.40/@link //@connections.41/@link //@connections.42/@link //@connections.43/@link //@connections.44/@link //@connections.45/@link //@connections.46/@link //@connections.47/@link //@connections.48/@link //@connections.49/@link //@connections.50/@link //@connections.51/@link //@connections.52/@link //@connections.53/@link //@connections.54/@link //@connections.55/@link //@connections.56/@link //@connections.57/@link //@connections.58/@link //@connections.59/@link //@connections.60/@link //@connections.61/@link //@connections.62/@link //@connections.63/@link //@connections.64/@link //@connections.65/@link //@connections.66/@link //@connections.67/@link //@connections.68/@link" version="0.18.0">
+<pi:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:al="http://eclipse.org/graphiti/mm/algorithms" xmlns:pi="http://eclipse.org/graphiti/mm/pictograms" visible="true" gridUnit="10" diagramTypeId="PiMM" name="top_rfi_C" snapToGrid="true" pictogramLinks="//@children.0/@link //@children.0/@children.0/@link //@children.0/@anchors.0/@link //@children.1/@link //@children.1/@children.0/@link //@children.1/@anchors.0/@link //@children.2/@link //@children.2/@children.0/@link //@children.2/@anchors.0/@link //@children.3/@link //@children.3/@children.0/@link //@children.3/@anchors.0/@link //@children.4/@link //@children.4/@children.0/@link //@children.4/@anchors.0/@link //@children.5/@link //@children.5/@children.0/@link //@children.5/@anchors.0/@link //@children.6/@link //@children.6/@children.0/@link //@children.6/@anchors.0/@link //@children.7/@link //@children.7/@children.0/@link //@children.7/@anchors.0/@link //@children.8/@link //@children.8/@children.0/@link //@children.8/@anchors.0/@link //@children.8/@anchors.1/@link //@children.8/@anchors.2/@link //@children.8/@anchors.3/@link //@children.8/@anchors.4/@link //@children.8/@anchors.5/@link //@children.8/@anchors.6/@link //@children.9/@link //@children.9/@children.0/@link //@children.9/@anchors.0/@link //@children.9/@anchors.1/@link //@children.9/@anchors.2/@link //@children.9/@anchors.3/@link //@children.9/@anchors.4/@link //@children.10/@link //@children.10/@children.0/@link //@children.10/@anchors.0/@link //@children.10/@anchors.1/@link //@children.10/@anchors.2/@link //@children.10/@anchors.3/@link //@children.10/@anchors.4/@link //@children.10/@anchors.5/@link //@children.10/@anchors.6/@link //@children.10/@anchors.7/@link //@children.10/@anchors.8/@link //@children.11/@link //@children.11/@children.0/@link //@children.11/@anchors.0/@link //@children.11/@anchors.1/@link //@children.11/@anchors.2/@link //@children.11/@anchors.3/@link //@children.11/@anchors.4/@link //@children.11/@anchors.5/@link //@children.11/@anchors.6/@link //@children.12/@link //@children.12/@children.0/@link //@children.12/@anchors.0/@link //@children.12/@anchors.1/@link //@children.12/@anchors.2/@link //@children.12/@anchors.3/@link //@children.12/@anchors.4/@link //@children.12/@anchors.5/@link //@children.13/@link //@children.13/@children.0/@link //@children.13/@anchors.0/@link //@children.13/@anchors.1/@link //@children.13/@anchors.2/@link //@children.13/@anchors.3/@link //@children.13/@anchors.4/@link //@children.13/@anchors.5/@link //@children.13/@anchors.6/@link //@children.13/@anchors.7/@link //@children.13/@anchors.8/@link //@children.13/@anchors.9/@link //@children.14/@link //@children.14/@children.0/@link //@children.14/@anchors.0/@link //@children.14/@anchors.1/@link //@children.14/@anchors.2/@link //@children.14/@anchors.3/@link //@children.14/@anchors.4/@link //@children.14/@anchors.5/@link //@children.15/@link //@children.15/@children.0/@link //@children.15/@anchors.0/@link //@children.15/@anchors.1/@link //@children.15/@anchors.2/@link //@children.15/@anchors.3/@link //@children.15/@anchors.4/@link //@children.15/@anchors.5/@link //@children.16/@link //@children.16/@children.0/@link //@children.16/@anchors.0/@link //@children.16/@anchors.1/@link //@children.16/@anchors.2/@link //@children.16/@anchors.3/@link //@children.16/@anchors.4/@link //@children.16/@anchors.5/@link //@children.16/@anchors.6/@link //@children.16/@anchors.7/@link //@children.16/@anchors.8/@link //@children.16/@anchors.9/@link //@children.16/@anchors.10/@link //@children.17/@link //@children.17/@children.0/@link //@children.17/@anchors.0/@link //@children.17/@anchors.1/@link //@children.17/@anchors.2/@link //@children.17/@anchors.3/@link //@children.17/@anchors.4/@link //@children.17/@anchors.5/@link //@children.18/@link //@children.18/@children.0/@link //@children.18/@anchors.0/@link //@children.18/@anchors.1/@link //@children.18/@anchors.2/@link //@children.18/@anchors.3/@link //@children.18/@anchors.4/@link //@children.18/@anchors.5/@link //@children.18/@anchors.6/@link //@children.18/@anchors.7/@link //@children.18/@anchors.8/@link //@children.19/@link //@children.19/@children.0/@link //@children.19/@anchors.0/@link //@children.19/@anchors.1/@link //@children.19/@anchors.2/@link //@children.19/@anchors.3/@link //@children.19/@anchors.4/@link //@children.19/@anchors.5/@link //@children.20/@link //@children.20/@children.0/@link //@children.20/@anchors.0/@link //@children.20/@anchors.1/@link //@children.20/@anchors.2/@link //@children.20/@anchors.3/@link //@children.20/@anchors.4/@link //@children.20/@anchors.5/@link //@children.21/@link //@children.21/@children.0/@link //@children.21/@anchors.0/@link //@children.21/@anchors.1/@link //@children.21/@anchors.2/@link //@children.21/@anchors.3/@link //@children.21/@anchors.4/@link //@children.21/@anchors.5/@link //@children.21/@anchors.6/@link //@children.22/@link //@children.22/@children.0/@link //@children.22/@anchors.0/@link //@children.22/@anchors.1/@link //@children.22/@anchors.2/@link //@children.22/@anchors.3/@link //@children.22/@anchors.4/@link //@children.22/@anchors.5/@link //@children.23/@link //@children.23/@children.0/@link //@children.23/@anchors.0/@link //@children.23/@anchors.1/@link //@children.23/@anchors.2/@link //@children.23/@anchors.3/@link //@children.23/@anchors.4/@link //@children.23/@anchors.5/@link //@connections.0/@link //@connections.1/@link //@connections.2/@link //@connections.3/@link //@connections.4/@link //@connections.5/@link //@connections.6/@link //@connections.7/@link //@connections.8/@link //@connections.9/@link //@connections.10/@link //@connections.11/@link //@connections.12/@link //@connections.13/@link //@connections.14/@link //@connections.15/@link //@connections.16/@link //@connections.17/@link //@connections.18/@link //@connections.19/@link //@connections.20/@link //@connections.21/@link //@connections.22/@link //@connections.23/@link //@connections.24/@link //@connections.25/@link //@connections.26/@link //@connections.27/@link //@connections.28/@link //@connections.29/@link //@connections.30/@link //@connections.31/@link //@connections.32/@link //@connections.33/@link //@connections.34/@link //@connections.35/@link //@connections.36/@link //@connections.37/@link //@connections.38/@link //@connections.39/@link //@connections.40/@link //@connections.41/@link //@connections.42/@link //@connections.43/@link //@connections.44/@link //@connections.45/@link //@connections.46/@link //@connections.47/@link //@connections.48/@link //@connections.49/@link //@connections.50/@link //@connections.51/@link //@connections.52/@link //@connections.53/@link //@connections.54/@link //@connections.55/@link //@connections.56/@link //@connections.57/@link //@connections.58/@link //@connections.59/@link //@connections.60/@link //@connections.61/@link //@connections.62/@link //@connections.63/@link //@connections.64/@link //@connections.65/@link //@connections.66/@link //@connections.67/@link //@connections.68/@link //@children.12/@anchors.6/@link //@connections.69/@link" version="0.18.0">
   <properties key="editor_version" value="3"/>
   <graphicsAlgorithm xsi:type="al:Rectangle" background="//@colors.1" foreground="//@colors.0" lineWidth="1" transparency="0.0" width="1000" height="1000"/>
   <link>
@@ -131,7 +131,7 @@
     <link>
       <businessObjects href="top_rfi_C.pi#//@vertices.5"/>
     </link>
-    <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.49">
+    <anchors xsi:type="pi:ChopboxAnchor" outgoingConnections="//@connections.49 //@connections.69">
       <link>
         <businessObjects href="top_rfi_C.pi#//@vertices.5"/>
       </link>
@@ -277,7 +277,7 @@
     </children>
   </children>
   <children xsi:type="pi:ContainerShape" visible="true" active="true">
-    <graphicsAlgorithm xsi:type="al:RoundedRectangle" background="//@colors.6" foreground="//@colors.5" lineWidth="2" transparency="0.0" width="109" height="83" x="553" y="521" cornerHeight="5" cornerWidth="5"/>
+    <graphicsAlgorithm xsi:type="al:RoundedRectangle" background="//@colors.6" foreground="//@colors.5" lineWidth="2" transparency="0.0" width="109" height="83" x="553" y="536" cornerHeight="5" cornerWidth="5"/>
     <link>
       <businessObjects href="top_rfi_C.pi#//@vertices.9"/>
     </link>
@@ -514,7 +514,7 @@
     </children>
   </children>
   <children xsi:type="pi:ContainerShape" visible="true" active="true">
-    <graphicsAlgorithm xsi:type="al:RoundedRectangle" background="//@colors.6" foreground="//@colors.5" lineWidth="2" transparency="0.0" width="145" height="68" x="553" y="393" cornerHeight="5" cornerWidth="5"/>
+    <graphicsAlgorithm xsi:type="al:RoundedRectangle" background="//@colors.6" foreground="//@colors.5" lineWidth="2" transparency="0.0" width="145" height="83" x="553" y="393" cornerHeight="5" cornerWidth="5"/>
     <link>
       <businessObjects href="top_rfi_C.pi#//@vertices.12"/>
     </link>
@@ -523,7 +523,7 @@
         <businessObjects href="top_rfi_C.pi#//@vertices.12"/>
       </link>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" incomingConnections="//@connections.36" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeHeight="0.29411764705882354">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" incomingConnections="//@connections.36" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeHeight="0.24096385542168675">
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="74" height="13">
         <graphicsAlgorithmChildren xsi:type="al:Text" foreground="//@colors.4" lineWidth="1" filled="false" transparency="0.0" width="66" height="13" x="8" font="//@fonts.1" horizontalAlignment="ALIGNMENT_RIGHT" value="N_SAMPLES"/>
         <graphicsAlgorithmChildren xsi:type="al:Polygon" background="//@colors.2" foreground="//@colors.5" lineWidth="0" filled="true" transparency="0.0" y="1">
@@ -536,7 +536,7 @@
         <businessObjects href="top_rfi_C.pi#//@vertices.12/@configInputPorts.0"/>
       </link>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" incomingConnections="//@connections.3" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeHeight="0.5147058823529411">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" incomingConnections="//@connections.3" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeHeight="0.6024096385542169">
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="87" height="13">
         <graphicsAlgorithmChildren xsi:type="al:Text" foreground="//@colors.4" lineWidth="1" filled="false" transparency="0.0" width="79" height="13" x="8" font="//@fonts.1" horizontalAlignment="ALIGNMENT_RIGHT" value="raw_data_real_i"/>
         <graphicsAlgorithmChildren xsi:type="al:Rectangle" background="//@colors.8" foreground="//@colors.5" lineWidth="1" lineStyle="UNSPECIFIED" width="8" height="8" y="2"/>
@@ -545,7 +545,7 @@
         <businessObjects href="top_rfi_C.pi#//@vertices.12/@dataInputPorts.0"/>
       </link>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" incomingConnections="//@connections.14" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeHeight="0.7352941176470589">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" incomingConnections="//@connections.14" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeHeight="0.7831325301204819">
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="80" height="13">
         <graphicsAlgorithmChildren xsi:type="al:Text" foreground="//@colors.4" lineWidth="1" filled="false" transparency="0.0" width="72" height="13" x="8" font="//@fonts.1" horizontalAlignment="ALIGNMENT_RIGHT" value="raw_data_im_i"/>
         <graphicsAlgorithmChildren xsi:type="al:Rectangle" background="//@colors.8" foreground="//@colors.5" lineWidth="1" lineStyle="UNSPECIFIED" width="8" height="8" y="2"/>
@@ -554,7 +554,7 @@
         <businessObjects href="top_rfi_C.pi#//@vertices.12/@dataInputPorts.1"/>
       </link>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" outgoingConnections="//@connections.7" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeWidth="1.0" relativeHeight="0.5147058823529411">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" outgoingConnections="//@connections.7" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeWidth="1.0" relativeHeight="0.6024096385542169">
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="50" height="13" x="-50">
         <graphicsAlgorithmChildren xsi:type="al:Text" foreground="//@colors.4" lineWidth="1" filled="false" transparency="0.0" width="42" height="13" font="//@fonts.1" value="std_R_o"/>
         <graphicsAlgorithmChildren xsi:type="al:Rectangle" background="//@colors.7" foreground="//@colors.5" lineWidth="1" lineStyle="UNSPECIFIED" width="8" height="8" x="42" y="2"/>
@@ -563,13 +563,26 @@
         <businessObjects href="top_rfi_C.pi#//@vertices.12/@dataOutputPorts.0"/>
       </link>
     </anchors>
-    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" outgoingConnections="//@connections.18" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeWidth="1.0" relativeHeight="0.7352941176470589">
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" outgoingConnections="//@connections.18" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeWidth="1.0" relativeHeight="0.7831325301204819">
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="45" height="13" x="-45">
         <graphicsAlgorithmChildren xsi:type="al:Text" foreground="//@colors.4" lineWidth="1" filled="false" transparency="0.0" width="37" height="13" font="//@fonts.1" value="std_I_o"/>
         <graphicsAlgorithmChildren xsi:type="al:Rectangle" background="//@colors.7" foreground="//@colors.5" lineWidth="1" lineStyle="UNSPECIFIED" width="8" height="8" x="37" y="2"/>
       </graphicsAlgorithm>
       <link>
         <businessObjects href="top_rfi_C.pi#//@vertices.12/@dataOutputPorts.1"/>
+      </link>
+    </anchors>
+    <anchors xsi:type="pi:BoxRelativeAnchor" visible="true" active="true" incomingConnections="//@connections.69" referencedGraphicsAlgorithm="//@children.12/@graphicsAlgorithm" relativeHeight="0.42168674698795183">
+      <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="44" height="13">
+        <graphicsAlgorithmChildren xsi:type="al:Text" foreground="//@colors.4" lineWidth="1" filled="false" transparency="0.0" width="36" height="13" x="8" font="//@fonts.1" horizontalAlignment="ALIGNMENT_RIGHT" value="SIGMA"/>
+        <graphicsAlgorithmChildren xsi:type="al:Polygon" background="//@colors.2" foreground="//@colors.5" lineWidth="0" filled="true" transparency="0.0" y="1">
+          <points/>
+          <points x="8" y="5"/>
+          <points y="10"/>
+        </graphicsAlgorithmChildren>
+      </graphicsAlgorithm>
+      <link>
+        <businessObjects href="top_rfi_C.pi#//@vertices.12/@configInputPorts.1"/>
       </link>
     </anchors>
     <children visible="true">
@@ -1510,7 +1523,7 @@
       </graphicsAlgorithm>
     </connectionDecorators>
     <bendpoints x="473" y="493"/>
-    <bendpoints x="533" y="576"/>
+    <bendpoints x="533" y="591"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.10/@anchors.5" end="//@children.11/@anchors.3">
     <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.5" lineWidth="2" filled="false" transparency="0.0"/>
@@ -1540,7 +1553,7 @@
       </graphicsAlgorithm>
     </connectionDecorators>
     <bendpoints x="473" y="523"/>
-    <bendpoints x="533" y="433"/>
+    <bendpoints x="533" y="448"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.11/@anchors.5" end="//@children.14/@anchors.3">
     <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.5" lineWidth="2" filled="false" transparency="0.0"/>
@@ -1585,9 +1598,9 @@
       </graphicsAlgorithm>
     </connectionDecorators>
     <bendpoints x="473" y="538"/>
-    <bendpoints x="533" y="511"/>
-    <bendpoints x="725" y="511"/>
-    <bendpoints x="944" y="511"/>
+    <bendpoints x="533" y="526"/>
+    <bendpoints x="725" y="526"/>
+    <bendpoints x="944" y="526"/>
     <bendpoints x="1004" y="538"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.12/@anchors.4" end="//@children.15/@anchors.3">
@@ -1602,7 +1615,7 @@
         <points x="-10" y="-5"/>
       </graphicsAlgorithm>
     </connectionDecorators>
-    <bendpoints x="718" y="433"/>
+    <bendpoints x="718" y="448"/>
     <bendpoints x="785" y="734"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.15/@anchors.4" end="//@children.13/@anchors.6">
@@ -1708,7 +1721,7 @@
       </graphicsAlgorithm>
     </connectionDecorators>
     <bendpoints x="473" y="320"/>
-    <bendpoints x="533" y="448"/>
+    <bendpoints x="533" y="463"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.18/@anchors.6" end="//@children.9/@anchors.4">
     <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.5" lineWidth="2" filled="false" transparency="0.0"/>
@@ -1723,7 +1736,7 @@
       </graphicsAlgorithm>
     </connectionDecorators>
     <bendpoints x="473" y="335"/>
-    <bendpoints x="533" y="591"/>
+    <bendpoints x="533" y="606"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.18/@anchors.7" end="//@children.13/@anchors.7">
     <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.5" lineWidth="2" filled="false" transparency="0.0"/>
@@ -1769,7 +1782,7 @@
         <points x="-10" y="-5"/>
       </graphicsAlgorithm>
     </connectionDecorators>
-    <bendpoints x="718" y="448"/>
+    <bendpoints x="718" y="463"/>
     <bendpoints x="785" y="591"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.19/@anchors.4" end="//@children.13/@anchors.8">
@@ -1863,9 +1876,9 @@
       </graphicsAlgorithm>
     </connectionDecorators>
     <bendpoints x="473" y="553"/>
-    <bendpoints x="533" y="491"/>
-    <bendpoints x="725" y="491"/>
-    <bendpoints x="944" y="491"/>
+    <bendpoints x="533" y="506"/>
+    <bendpoints x="725" y="506"/>
+    <bendpoints x="944" y="506"/>
     <bendpoints x="1004" y="380"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.16/@anchors.10" end="//@children.22/@anchors.3">
@@ -2241,7 +2254,7 @@
     </connectionDecorators>
     <bendpoints x="852" y="190"/>
     <bendpoints x="505" y="190"/>
-    <bendpoints x="505" y="546"/>
+    <bendpoints x="505" y="561"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.5/@anchors.0" end="//@children.11/@anchors.2">
     <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.3" lineWidth="2" lineStyle="DASH" filled="false" transparency="0.0"/>
@@ -2433,7 +2446,7 @@
     </connectionDecorators>
     <bendpoints x="522" y="166"/>
     <bendpoints x="517" y="166"/>
-    <bendpoints x="517" y="561"/>
+    <bendpoints x="517" y="576"/>
   </connections>
   <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.7/@anchors.0" end="//@children.13/@anchors.3">
     <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.3" lineWidth="2" lineStyle="DASH" filled="false" transparency="0.0"/>
@@ -2562,6 +2575,22 @@
     <bendpoints x="405" y="158"/>
     <bendpoints x="1511" y="158"/>
     <bendpoints x="1511" y="320"/>
+  </connections>
+  <connections xsi:type="pi:FreeFormConnection" visible="true" active="true" start="//@children.5/@anchors.0" end="//@children.12/@anchors.6">
+    <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.3" lineWidth="2" lineStyle="DASH" filled="false" transparency="0.0"/>
+    <link>
+      <businessObjects href="top_rfi_C.pi#//@edges.69"/>
+    </link>
+    <connectionDecorators visible="true" locationRelative="true" location="1.0">
+      <graphicsAlgorithm xsi:type="al:Polyline" foreground="//@colors.3" lineWidth="2" lineStyle="UNSPECIFIED">
+        <points x="-10" y="5"/>
+        <points/>
+        <points x="-10" y="-5"/>
+      </graphicsAlgorithm>
+    </connectionDecorators>
+    <bendpoints x="70" y="134"/>
+    <bendpoints x="533" y="134"/>
+    <bendpoints x="533" y="433"/>
   </connections>
   <colors red="227" green="238" blue="249"/>
   <colors red="255" green="255" blue="255"/>

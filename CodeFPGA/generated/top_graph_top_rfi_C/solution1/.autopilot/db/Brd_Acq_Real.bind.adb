@@ -37,7 +37,7 @@
 						<coreId>3789714224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -70,10 +70,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>627652920</coreId>
+						<coreId>168</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -106,10 +106,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>176</coreId>
+						<coreId>547558448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -142,10 +142,10 @@
 						<coreName>FIFO</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>627885287</coreId>
+						<coreId>3691000307</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>3</if_type>
@@ -178,10 +178,10 @@
 						<coreName>FIFO</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544433253</coreId>
+						<coreId>128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>3</if_type>
@@ -217,7 +217,7 @@
 						<coreId>741681509</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>3</if_type>
@@ -271,7 +271,7 @@
 						<coreId>115</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -601,7 +601,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3674531056</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>

@@ -101,37 +101,37 @@ int main(int argc, char** argv) {
 
 
 // vectors containing interface elements
-  std::vector<double, aligned_allocator<double>> raw_data_real_i_vect(RATE_OF_RAW_DATA_REAL_I);
-  std::vector<double, aligned_allocator<double>> raw_data_im_i_vect(RATE_OF_RAW_DATA_IM_I);
-  std::vector<double, aligned_allocator<double>> raw_data_im_o_vect(RATE_OF_RAW_DATA_IM_O);
-  std::vector<double, aligned_allocator<double>> raw_data_real_o_vect(RATE_OF_RAW_DATA_REAL_O);
-  std::vector<double, aligned_allocator<double>> mad_R_o_vect(RATE_OF_MAD_R_O);
-  std::vector<double, aligned_allocator<double>> raw_data_real_1_o_vect(RATE_OF_RAW_DATA_REAL_1_O);
-  std::vector<double, aligned_allocator<double>> std_R_o_vect(RATE_OF_STD_R_O);
-  std::vector<double, aligned_allocator<double>> raw_data_im_1_o_vect(RATE_OF_RAW_DATA_IM_1_O);
-  std::vector<double, aligned_allocator<double>> mad_I_o_vect(RATE_OF_MAD_I_O);
-  std::vector<double, aligned_allocator<double>> std_I_o_vect(RATE_OF_STD_I_O);
-  std::vector<double, aligned_allocator<double>> filtered_im_0_o_vect(RATE_OF_FILTERED_IM_0_O);
-  std::vector<double, aligned_allocator<double>> filtered_real_0_o_vect(RATE_OF_FILTERED_REAL_0_O);
-  std::vector<double, aligned_allocator<double>> filtered_im_1_o_vect(RATE_OF_FILTERED_IM_1_O);
-  std::vector<double, aligned_allocator<double>> filtered_real_1_o_vect(RATE_OF_FILTERED_REAL_1_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> raw_data_real_i_vect(RATE_OF_RAW_DATA_REAL_I);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> raw_data_im_i_vect(RATE_OF_RAW_DATA_IM_I);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> raw_data_im_o_vect(RATE_OF_RAW_DATA_IM_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> raw_data_real_o_vect(RATE_OF_RAW_DATA_REAL_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> mad_R_o_vect(RATE_OF_MAD_R_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> raw_data_real_1_o_vect(RATE_OF_RAW_DATA_REAL_1_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> std_R_o_vect(RATE_OF_STD_R_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> raw_data_im_1_o_vect(RATE_OF_RAW_DATA_IM_1_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> mad_I_o_vect(RATE_OF_MAD_I_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> std_I_o_vect(RATE_OF_STD_I_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> filtered_im_0_o_vect(RATE_OF_FILTERED_IM_0_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> filtered_real_0_o_vect(RATE_OF_FILTERED_REAL_0_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> filtered_im_1_o_vect(RATE_OF_FILTERED_IM_1_O);
+  std::vector<ap_int<16>, aligned_allocator<ap_int<16>>> filtered_real_1_o_vect(RATE_OF_FILTERED_REAL_1_O);
 
 
 // buffers referencing interface elements
-  OCL_CHECK(err, cl::Buffer raw_data_real_i_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY, sizeof(double)*RATE_OF_RAW_DATA_REAL_I, raw_data_real_i_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer raw_data_im_i_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY, sizeof(double)*RATE_OF_RAW_DATA_IM_I, raw_data_im_i_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer raw_data_im_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_IM_O, raw_data_im_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer raw_data_real_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_REAL_O, raw_data_real_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer mad_R_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_MAD_R_O, mad_R_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer raw_data_real_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_REAL_1_O, raw_data_real_1_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer std_R_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_STD_R_O, std_R_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer raw_data_im_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_RAW_DATA_IM_1_O, raw_data_im_1_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer mad_I_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_MAD_I_O, mad_I_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer std_I_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_STD_I_O, std_I_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer filtered_im_0_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_IM_0_O, filtered_im_0_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer filtered_real_0_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_REAL_0_O, filtered_real_0_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer filtered_im_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_IM_1_O, filtered_im_1_o_vect.data(), &err));
-  OCL_CHECK(err, cl::Buffer filtered_real_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(double)*RATE_OF_FILTERED_REAL_1_O, filtered_real_1_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_real_i_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY, sizeof(ap_int<16>)*RATE_OF_RAW_DATA_REAL_I, raw_data_real_i_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_im_i_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_READ_ONLY, sizeof(ap_int<16>)*RATE_OF_RAW_DATA_IM_I, raw_data_im_i_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_im_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_RAW_DATA_IM_O, raw_data_im_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_real_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_RAW_DATA_REAL_O, raw_data_real_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer mad_R_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_MAD_R_O, mad_R_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_real_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_RAW_DATA_REAL_1_O, raw_data_real_1_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer std_R_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_STD_R_O, std_R_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer raw_data_im_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_RAW_DATA_IM_1_O, raw_data_im_1_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer mad_I_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_MAD_I_O, mad_I_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer std_I_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_STD_I_O, std_I_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_im_0_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_FILTERED_IM_0_O, filtered_im_0_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_real_0_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_FILTERED_REAL_0_O, filtered_real_0_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_im_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_FILTERED_IM_1_O, filtered_im_1_o_vect.data(), &err));
+  OCL_CHECK(err, cl::Buffer filtered_real_1_o_buff(context, CL_MEM_USE_HOST_PTR | CL_MEM_WRITE_ONLY, sizeof(ap_int<16>)*RATE_OF_FILTERED_REAL_1_O, filtered_real_1_o_vect.data(), &err));
 
 
 // set kernel arguments

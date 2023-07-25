@@ -36,13 +36,13 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output  [63:0] filtered_real_1_o_stream_TDATA;
+output  [15:0] filtered_real_1_o_stream_TDATA;
 output   filtered_real_1_o_stream_TVALID;
 input   filtered_real_1_o_stream_TREADY;
-output  [63:0] filtered_real_0_o_stream_TDATA;
+output  [15:0] filtered_real_0_o_stream_TDATA;
 output   filtered_real_0_o_stream_TVALID;
 input   filtered_real_0_o_stream_TREADY;
-input  [63:0] stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout;
+input  [15:0] stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout;
 input   stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n;
 output   stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read;
 
@@ -82,7 +82,7 @@ initial begin
 end
 
 top_graph_top_rfi_C_regslice_both #(
-    .DataWidth( 64 ))
+    .DataWidth( 16 ))
 regslice_both_filtered_real_1_o_stream_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
@@ -96,7 +96,7 @@ regslice_both_filtered_real_1_o_stream_U(
 );
 
 top_graph_top_rfi_C_regslice_both #(
-    .DataWidth( 64 ))
+    .DataWidth( 16 ))
 regslice_both_filtered_real_0_o_stream_U(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),

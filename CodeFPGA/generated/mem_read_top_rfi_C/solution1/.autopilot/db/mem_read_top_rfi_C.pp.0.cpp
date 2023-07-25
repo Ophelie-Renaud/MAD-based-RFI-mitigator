@@ -5835,10 +5835,10 @@ extern "C" {
 
 
 __attribute__((sdx_kernel("mem_read_top_rfi_C", 0))) void mem_read_top_rfi_C(
-  double* raw_data_real_i_mem,
-  hls::stream<double> &raw_data_real_i_stream,
-  double* raw_data_im_i_mem,
-  hls::stream<double> &raw_data_im_i_stream) {
+  ap_int<16>* raw_data_real_i_mem,
+  hls::stream<ap_int<16>> &raw_data_real_i_stream,
+  ap_int<16>* raw_data_im_i_mem,
+  hls::stream<ap_int<16>> &raw_data_im_i_stream) {
 #pragma HLSDIRECTIVE TOP name=mem_read_top_rfi_C
 # 82 "mem_read_top_rfi_C.cpp"
 
@@ -5851,8 +5851,8 @@ __attribute__((sdx_kernel("mem_read_top_rfi_C", 0))) void mem_read_top_rfi_C(
  bool shouldContinue = true;
   VITIS_LOOP_90_1: while (shouldContinue) {
     shouldContinue = false;
-    shouldContinue |= readInput<double, 0, 1, 409600>(raw_data_real_i_mem, raw_data_real_i_stream);
-    shouldContinue |= readInput<double, 1, 1, 409600>(raw_data_im_i_mem, raw_data_im_i_stream);
+    shouldContinue |= readInput<ap_int<16>, 0, 1, 409600>(raw_data_real_i_mem, raw_data_real_i_stream);
+    shouldContinue |= readInput<ap_int<16>, 1, 1, 409600>(raw_data_im_i_mem, raw_data_im_i_stream);
   }
 }
 

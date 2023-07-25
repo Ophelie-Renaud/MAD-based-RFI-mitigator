@@ -48,6 +48,10 @@
 		<Parent Id="design_1_axis_data_fifo_raw_data_real_i_stream_0_synth_1"/>
 	</Run>
 	<Run Id="design_1_auto_pc_1_synth_1" LaunchDir="/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_us_1_synth_1" LaunchDir="/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_auto_us_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_us_0_synth_1" LaunchDir="/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_us_1_synth_1"/>
+	</Run>
 	<Run Id="design_1_auto_pc_0_synth_1" LaunchDir="/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="synth_1" LaunchDir="/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
 		<Parent Id="design_1_top_graph_top_rfi_C_0_0_synth_1"/>
@@ -72,6 +76,8 @@
 		<Parent Id="design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1"/>
 		<Parent Id="design_1_axis_data_fifo_filtered_real_1_o_stream_0_synth_1"/>
 		<Parent Id="design_1_auto_pc_1_synth_1"/>
+		<Parent Id="design_1_auto_us_1_synth_1"/>
+		<Parent Id="design_1_auto_us_0_synth_1"/>
 		<Parent Id="design_1_auto_pc_0_synth_1"/>
 	</Run>
 	<Run Id="impl_1" LaunchDir="/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
@@ -98,6 +104,8 @@
 		<Parent Id="design_1_axis_data_fifo_filtered_im_1_o_stream_0_synth_1"/>
 		<Parent Id="design_1_axis_data_fifo_filtered_real_1_o_stream_0_synth_1"/>
 		<Parent Id="design_1_auto_pc_1_synth_1"/>
+		<Parent Id="design_1_auto_us_1_synth_1"/>
+		<Parent Id="design_1_auto_us_0_synth_1"/>
 		<Parent Id="design_1_auto_pc_0_synth_1"/>
 	</Run>
 	<Parameters>

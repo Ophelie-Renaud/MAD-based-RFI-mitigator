@@ -26,11 +26,20 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_read_top_rfi_C.cpp:87:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="mem_read_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Inlining function 'bool readInput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_read_top_rfi_C'">
-        <args Callee="bool readInput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_read_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Inlining function 'bool readInput&lt;ap_int&lt;16&gt;, 0, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_read_top_rfi_C'">
+        <args Callee="bool readInput&lt;ap_int&lt;16&gt;, 0, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_read_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Inlining function 'bool readInput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_read_top_rfi_C'">
-        <args Callee="bool readInput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_read_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Inlining function 'bool readInput&lt;ap_int&lt;16&gt;, 1, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_read_top_rfi_C'">
+        <args Callee="bool readInput&lt;ap_int&lt;16&gt;, 1, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_read_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Aggregating maxi variable 'raw_data_im_i_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="raw_data_im_i_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_read_top_rfi_C.cpp:82:0" msg_body="Aggregating maxi variable 'raw_data_real_i_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="raw_data_real_i_mem"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_int&lt;16&gt;s.i16.1' into 'mem_read_top_rfi_C'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_int&lt;16&gt;s.i16.1" Caller="mem_read_top_rfi_C"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

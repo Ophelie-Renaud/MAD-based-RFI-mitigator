@@ -117,5 +117,6 @@ file(
 )
 
 add_executable(rfi ${source_files} ${header_files})
-target_link_libraries(rfi ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_EXTRA_LIB})
+target_link_libraries(rfi ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_EXTRA_LIB} ${LIBM_LIBRARIES})
+target_link_libraries(rfi PUBLIC m)
 target_link_libraries(rfi PUBLIC psrdada)

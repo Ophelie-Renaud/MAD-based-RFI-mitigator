@@ -41,9 +41,9 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>8</BRAM_18K>
-            <FF>3897</FF>
-            <LUT>5669</LUT>
+            <BRAM_18K>2</BRAM_18K>
+            <FF>3821</FF>
+            <LUT>5572</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -475,7 +475,7 @@
             <IOProtocol>m_axi</IOProtocol>
             <IOConfig/>
             <Dir>out</Dir>
-            <Bits>64</Bits>
+            <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -487,7 +487,7 @@
             <IOProtocol>m_axi</IOProtocol>
             <IOConfig/>
             <Dir>out</Dir>
-            <Bits>8</Bits>
+            <Bits>4</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -715,7 +715,7 @@
             <IOProtocol>m_axi</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>32</Bits>
             <Attribute>unknown</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -835,7 +835,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -871,7 +871,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -907,7 +907,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -943,7 +943,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -979,7 +979,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1015,7 +1015,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1051,7 +1051,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1087,7 +1087,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1123,7 +1123,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1159,7 +1159,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1195,7 +1195,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1231,7 +1231,7 @@
             <IOProtocol>axis</IOProtocol>
             <IOConfig>register, both mode</IOConfig>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>16</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -1263,7 +1263,7 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>mem_write_top_rfi_C</ModuleName>
-            <BindInstances>add_ln61_fu_762_p2 add_ln62_fu_777_p2 add_ln73_fu_801_p2 add_ln61_1_fu_867_p2 add_ln62_1_fu_882_p2 add_ln73_1_fu_906_p2 add_ln61_2_fu_972_p2 add_ln62_2_fu_987_p2 add_ln73_2_fu_1011_p2 add_ln61_3_fu_1077_p2 add_ln62_3_fu_1092_p2 add_ln73_3_fu_1116_p2 add_ln61_4_fu_1182_p2 add_ln62_4_fu_1197_p2 add_ln73_4_fu_1221_p2 add_ln61_5_fu_1287_p2 add_ln62_5_fu_1302_p2 add_ln73_5_fu_1326_p2 add_ln61_6_fu_1392_p2 add_ln62_6_fu_1407_p2 add_ln73_6_fu_1431_p2 add_ln61_7_fu_1497_p2 add_ln62_7_fu_1512_p2 add_ln73_7_fu_1536_p2 add_ln61_8_fu_1602_p2 add_ln62_8_fu_1617_p2 add_ln73_8_fu_1641_p2 add_ln61_9_fu_1707_p2 add_ln62_9_fu_1722_p2 add_ln73_9_fu_1746_p2 add_ln61_10_fu_1812_p2 add_ln62_10_fu_1827_p2 add_ln73_10_fu_1851_p2 add_ln61_11_fu_1907_p2 add_ln62_11_fu_1922_p2 add_ln73_11_fu_1946_p2</BindInstances>
+            <BindInstances>add_ln61_fu_758_p2 add_ln62_fu_783_p2 add_ln73_fu_807_p2 add_ln61_1_fu_863_p2 add_ln62_1_fu_888_p2 add_ln73_1_fu_912_p2 add_ln61_2_fu_968_p2 add_ln62_2_fu_993_p2 add_ln73_2_fu_1017_p2 add_ln61_3_fu_1073_p2 add_ln62_3_fu_1098_p2 add_ln73_3_fu_1122_p2 add_ln61_4_fu_1178_p2 add_ln62_4_fu_1203_p2 add_ln73_4_fu_1227_p2 add_ln61_5_fu_1283_p2 add_ln62_5_fu_1308_p2 add_ln73_5_fu_1332_p2 add_ln61_6_fu_1388_p2 add_ln62_6_fu_1413_p2 add_ln73_6_fu_1437_p2 add_ln61_7_fu_1493_p2 add_ln62_7_fu_1518_p2 add_ln73_7_fu_1542_p2 add_ln61_8_fu_1598_p2 add_ln62_8_fu_1623_p2 add_ln73_8_fu_1647_p2 add_ln61_9_fu_1703_p2 add_ln62_9_fu_1728_p2 add_ln73_9_fu_1752_p2 add_ln61_10_fu_1808_p2 add_ln62_10_fu_1833_p2 add_ln73_10_fu_1857_p2 add_ln61_11_fu_1913_p2 add_ln62_11_fu_1938_p2 add_ln73_11_fu_1962_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -1303,13 +1303,13 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>8</BRAM_18K>
+                    <BRAM_18K>2</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>2</UTIL_BRAM>
-                    <FF>3897</FF>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>3821</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>3</UTIL_FF>
-                    <LUT>5671</LUT>
+                    <LUT>5574</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>10</UTIL_LUT>
                     <DSP>0</DSP>
@@ -1321,188 +1321,188 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_fu_762_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_fu_777_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_fu_801_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_1_fu_867_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_1_fu_882_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_1_fu_906_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_2_fu_972_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_2_fu_987_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_2_fu_1011_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_3_fu_1077_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_3_fu_1092_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_3_fu_1116_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_4_fu_1182_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_4_fu_1197_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_4_fu_1221_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_5_fu_1287_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_5_fu_1302_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_5_fu_1326_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_6_fu_1392_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_6_fu_1407_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_6_fu_1431_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_7_fu_1497_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_7_fu_1512_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_7_fu_1536_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_8_fu_1602_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_8_fu_1617_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_8_fu_1641_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_9_fu_1707_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_9_fu_1722_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_9_fu_1746_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_10_fu_1812_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_10_fu_1827_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_10_fu_1851_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_11_fu_1907_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_11_fu_1922_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_11_fu_1946_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_fu_758_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_fu_783_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_fu_807_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_1_fu_863_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_1_fu_888_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_1_fu_912_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_2_fu_968_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_2_fu_993_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_2_fu_1017_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_3_fu_1073_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_3_fu_1098_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_3_fu_1122_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_4_fu_1178_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_4_fu_1203_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_4_fu_1227_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_5_fu_1283_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_5_fu_1308_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_5_fu_1332_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_6_fu_1388_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_6_fu_1413_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_6_fu_1437_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_7_fu_1493_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_7_fu_1518_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_7_fu_1542_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_8_fu_1598_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_8_fu_1623_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_8_fu_1647_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_9_fu_1703_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_9_fu_1728_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_9_fu_1752_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_10_fu_1808_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_10_fu_1833_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_10_fu_1857_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_11_fu_1913_p2" SOURCE="mem_write_top_rfi_C.cpp:61" URAM="0" VARIABLE="add_ln61_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln62_11_fu_1938_p2" SOURCE="mem_write_top_rfi_C.cpp:62" URAM="0" VARIABLE="add_ln62_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln73_11_fu_1962_p2" SOURCE="mem_write_top_rfi_C.cpp:73" URAM="0" VARIABLE="add_ln73_11"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands/>
     <Args>
-        <Arg ArgName="raw_data_im_o_mem" index="0" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="raw_data_im_o_mem" index="0" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_im_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_im_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="raw_data_im_o_stream" index="1" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="raw_data_im_o_stream" index="1" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="raw_data_im_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="raw_data_real_o_mem" index="2" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="raw_data_real_o_mem" index="2" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_real_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_real_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="raw_data_real_o_stream" index="3" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="raw_data_real_o_stream" index="3" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="raw_data_real_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="mad_R_o_mem" index="4" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="mad_R_o_mem" index="4" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="mad_R_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="mad_R_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="mad_R_o_stream" index="5" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="mad_R_o_stream" index="5" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="mad_R_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="raw_data_real_1_o_mem" index="6" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="raw_data_real_1_o_mem" index="6" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_real_1_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_real_1_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="raw_data_real_1_o_stream" index="7" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="raw_data_real_1_o_stream" index="7" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="raw_data_real_1_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="std_R_o_mem" index="8" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="std_R_o_mem" index="8" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="std_R_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="std_R_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="std_R_o_stream" index="9" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="std_R_o_stream" index="9" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="std_R_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="raw_data_im_1_o_mem" index="10" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="raw_data_im_1_o_mem" index="10" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_im_1_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="raw_data_im_1_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="raw_data_im_1_o_stream" index="11" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="raw_data_im_1_o_stream" index="11" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="raw_data_im_1_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="mad_I_o_mem" index="12" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="mad_I_o_mem" index="12" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="mad_I_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="mad_I_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="mad_I_o_stream" index="13" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="mad_I_o_stream" index="13" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="mad_I_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="std_I_o_mem" index="14" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="std_I_o_mem" index="14" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="std_I_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="std_I_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="std_I_o_stream" index="15" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="std_I_o_stream" index="15" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="std_I_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_im_0_o_mem" index="16" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="filtered_im_0_o_mem" index="16" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_im_0_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_im_0_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_im_0_o_stream" index="17" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="filtered_im_0_o_stream" index="17" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="filtered_im_0_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_real_0_o_mem" index="18" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="filtered_real_0_o_mem" index="18" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_real_0_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_real_0_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_real_0_o_stream" index="19" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="filtered_real_0_o_stream" index="19" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="filtered_real_0_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_im_1_o_mem" index="20" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="filtered_im_1_o_mem" index="20" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_im_1_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_im_1_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_im_1_o_stream" index="21" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="filtered_im_1_o_stream" index="21" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="filtered_im_1_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_real_1_o_mem" index="22" direction="out" srcType="double*" srcSize="64">
+        <Arg ArgName="filtered_real_1_o_mem" index="22" direction="out" srcType="ap_int&lt;16&gt;*" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_real_1_o_mem_1" usage="address" direction="in"/>
                 <hwRef type="register" interface="s_axi_control" name="filtered_real_1_o_mem_2" usage="address" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="filtered_real_1_o_stream" index="23" direction="in" srcType="stream&lt;double, 0&gt;&amp;" srcSize="64">
+        <Arg ArgName="filtered_real_1_o_stream" index="23" direction="in" srcType="stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
                 <hwRef type="interface" interface="filtered_real_1_o_stream" name="" usage="data" direction="in"/>
             </hwRefs>
@@ -1737,7 +1737,7 @@
                 <port>interrupt</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="m_axi_gmem" type="axi4full" busTypeName="aximm" mode="master" dataWidth="64" addrWidth="64" portPrefix="m_axi_gmem_" paramPrefix="C_M_AXI_GMEM_" preferredUsageValue="MEMORY">
+        <Interface InterfaceName="m_axi_gmem" type="axi4full" busTypeName="aximm" mode="master" dataWidth="32" addrWidth="64" portPrefix="m_axi_gmem_" paramPrefix="C_M_AXI_GMEM_" preferredUsageValue="MEMORY">
             <busParams>
                 <busParam busParamName="NUM_READ_OUTSTANDING">16</busParam>
                 <busParam busParamName="NUM_WRITE_OUTSTANDING">16</busParam>
@@ -1798,32 +1798,32 @@
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="raw_data_im_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="raw_data_im_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="raw_data_im_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="raw_data_real_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="raw_data_real_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="raw_data_real_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="mad_R_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="mad_R_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="mad_R_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="raw_data_real_1_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="raw_data_real_1_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="raw_data_real_1_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="std_R_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="std_R_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="std_R_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="raw_data_im_1_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="raw_data_im_1_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="raw_data_im_1_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="mad_I_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="mad_I_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="mad_I_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="std_I_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="std_I_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="std_I_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="filtered_im_0_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="filtered_im_0_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="filtered_im_0_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="filtered_real_0_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="filtered_real_0_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="filtered_real_0_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="filtered_im_1_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="filtered_im_1_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="filtered_im_1_o_mem"/>
                 <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" argName="filtered_real_1_o_mem"/>
-                <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64" argName="filtered_real_1_o_mem"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="16" final_bitwidth="16" argName="filtered_real_1_o_mem"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="raw_data_im_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="raw_data_im_o_stream_">
+        <Interface InterfaceName="raw_data_im_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="raw_data_im_o_stream_">
             <ports>
                 <port>raw_data_im_o_stream_TDATA</port>
                 <port>raw_data_im_o_stream_TREADY</port>
@@ -1833,7 +1833,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="raw_data_im_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="raw_data_real_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="raw_data_real_o_stream_">
+        <Interface InterfaceName="raw_data_real_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="raw_data_real_o_stream_">
             <ports>
                 <port>raw_data_real_o_stream_TDATA</port>
                 <port>raw_data_real_o_stream_TREADY</port>
@@ -1843,7 +1843,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="raw_data_real_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="mad_R_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="mad_R_o_stream_">
+        <Interface InterfaceName="mad_R_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="mad_R_o_stream_">
             <ports>
                 <port>mad_R_o_stream_TDATA</port>
                 <port>mad_R_o_stream_TREADY</port>
@@ -1853,7 +1853,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="mad_R_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="raw_data_real_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="raw_data_real_1_o_stream_">
+        <Interface InterfaceName="raw_data_real_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="raw_data_real_1_o_stream_">
             <ports>
                 <port>raw_data_real_1_o_stream_TDATA</port>
                 <port>raw_data_real_1_o_stream_TREADY</port>
@@ -1863,7 +1863,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="raw_data_real_1_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="std_R_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="std_R_o_stream_">
+        <Interface InterfaceName="std_R_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="std_R_o_stream_">
             <ports>
                 <port>std_R_o_stream_TDATA</port>
                 <port>std_R_o_stream_TREADY</port>
@@ -1873,7 +1873,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="std_R_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="raw_data_im_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="raw_data_im_1_o_stream_">
+        <Interface InterfaceName="raw_data_im_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="raw_data_im_1_o_stream_">
             <ports>
                 <port>raw_data_im_1_o_stream_TDATA</port>
                 <port>raw_data_im_1_o_stream_TREADY</port>
@@ -1883,7 +1883,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="raw_data_im_1_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="mad_I_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="mad_I_o_stream_">
+        <Interface InterfaceName="mad_I_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="mad_I_o_stream_">
             <ports>
                 <port>mad_I_o_stream_TDATA</port>
                 <port>mad_I_o_stream_TREADY</port>
@@ -1893,7 +1893,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="mad_I_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="std_I_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="std_I_o_stream_">
+        <Interface InterfaceName="std_I_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="std_I_o_stream_">
             <ports>
                 <port>std_I_o_stream_TDATA</port>
                 <port>std_I_o_stream_TREADY</port>
@@ -1903,7 +1903,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="std_I_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="filtered_im_0_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="filtered_im_0_o_stream_">
+        <Interface InterfaceName="filtered_im_0_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="filtered_im_0_o_stream_">
             <ports>
                 <port>filtered_im_0_o_stream_TDATA</port>
                 <port>filtered_im_0_o_stream_TREADY</port>
@@ -1913,7 +1913,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="filtered_im_0_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="filtered_real_0_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="filtered_real_0_o_stream_">
+        <Interface InterfaceName="filtered_real_0_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="filtered_real_0_o_stream_">
             <ports>
                 <port>filtered_real_0_o_stream_TDATA</port>
                 <port>filtered_real_0_o_stream_TREADY</port>
@@ -1923,7 +1923,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="filtered_real_0_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="filtered_im_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="filtered_im_1_o_stream_">
+        <Interface InterfaceName="filtered_im_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="filtered_im_1_o_stream_">
             <ports>
                 <port>filtered_im_1_o_stream_TDATA</port>
                 <port>filtered_im_1_o_stream_TREADY</port>
@@ -1933,7 +1933,7 @@
                 <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="filtered_im_1_o_stream"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="filtered_real_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="64" portPrefix="filtered_real_1_o_stream_">
+        <Interface InterfaceName="filtered_real_1_o_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="16" portPrefix="filtered_real_1_o_stream_">
             <ports>
                 <port>filtered_real_1_o_stream_TDATA</port>
                 <port>filtered_real_1_o_stream_TREADY</port>
@@ -1949,7 +1949,7 @@
             <item name="M_AXI">
                 <table isCollapsed="0">
                     <keys size="12">Interface, Data Width (SW-&gt;HW), Address Width, Latency, Offset, Register, Max Widen Bitwidth, Max Read Burst Length, Max Write Burst Length, Num Read Outstanding, Num Write Outstanding, Resource Estimate</keys>
-                    <column name="m_axi_gmem">64 -&gt; 64, 64, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=8</column>
+                    <column name="m_axi_gmem">16 -&gt; 16, 64, 0, slave, 0, 0, 16, 16, 16, 16, BRAM=2</column>
                 </table>
             </item>
             <item name="S_AXILITE Interfaces">
@@ -1994,18 +1994,18 @@
             <item name="AXIS">
                 <table isCollapsed="0">
                     <keys size="5">Interface, Register Mode, TDATA, TREADY, TVALID</keys>
-                    <column name="filtered_im_0_o_stream">both, 64, 1, 1</column>
-                    <column name="filtered_im_1_o_stream">both, 64, 1, 1</column>
-                    <column name="filtered_real_0_o_stream">both, 64, 1, 1</column>
-                    <column name="filtered_real_1_o_stream">both, 64, 1, 1</column>
-                    <column name="mad_I_o_stream">both, 64, 1, 1</column>
-                    <column name="mad_R_o_stream">both, 64, 1, 1</column>
-                    <column name="raw_data_im_1_o_stream">both, 64, 1, 1</column>
-                    <column name="raw_data_im_o_stream">both, 64, 1, 1</column>
-                    <column name="raw_data_real_1_o_stream">both, 64, 1, 1</column>
-                    <column name="raw_data_real_o_stream">both, 64, 1, 1</column>
-                    <column name="std_I_o_stream">both, 64, 1, 1</column>
-                    <column name="std_R_o_stream">both, 64, 1, 1</column>
+                    <column name="filtered_im_0_o_stream">both, 16, 1, 1</column>
+                    <column name="filtered_im_1_o_stream">both, 16, 1, 1</column>
+                    <column name="filtered_real_0_o_stream">both, 16, 1, 1</column>
+                    <column name="filtered_real_1_o_stream">both, 16, 1, 1</column>
+                    <column name="mad_I_o_stream">both, 16, 1, 1</column>
+                    <column name="mad_R_o_stream">both, 16, 1, 1</column>
+                    <column name="raw_data_im_1_o_stream">both, 16, 1, 1</column>
+                    <column name="raw_data_im_o_stream">both, 16, 1, 1</column>
+                    <column name="raw_data_real_1_o_stream">both, 16, 1, 1</column>
+                    <column name="raw_data_real_o_stream">both, 16, 1, 1</column>
+                    <column name="std_I_o_stream">both, 16, 1, 1</column>
+                    <column name="std_R_o_stream">both, 16, 1, 1</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -2024,30 +2024,30 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="raw_data_im_o_mem">out, double*</column>
-                    <column name="raw_data_im_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="raw_data_real_o_mem">out, double*</column>
-                    <column name="raw_data_real_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="mad_R_o_mem">out, double*</column>
-                    <column name="mad_R_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="raw_data_real_1_o_mem">out, double*</column>
-                    <column name="raw_data_real_1_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="std_R_o_mem">out, double*</column>
-                    <column name="std_R_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="raw_data_im_1_o_mem">out, double*</column>
-                    <column name="raw_data_im_1_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="mad_I_o_mem">out, double*</column>
-                    <column name="mad_I_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="std_I_o_mem">out, double*</column>
-                    <column name="std_I_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="filtered_im_0_o_mem">out, double*</column>
-                    <column name="filtered_im_0_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="filtered_real_0_o_mem">out, double*</column>
-                    <column name="filtered_real_0_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="filtered_im_1_o_mem">out, double*</column>
-                    <column name="filtered_im_1_o_stream">in, stream&lt;double 0&gt;&amp;</column>
-                    <column name="filtered_real_1_o_mem">out, double*</column>
-                    <column name="filtered_real_1_o_stream">in, stream&lt;double 0&gt;&amp;</column>
+                    <column name="raw_data_im_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="raw_data_im_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="raw_data_real_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="raw_data_real_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="mad_R_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="mad_R_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="raw_data_real_1_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="raw_data_real_1_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="std_R_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="std_R_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="raw_data_im_1_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="raw_data_im_1_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="mad_I_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="mad_I_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="std_I_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="std_I_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="filtered_im_0_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="filtered_im_0_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="filtered_real_0_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="filtered_real_0_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="filtered_im_1_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="filtered_im_1_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
+                    <column name="filtered_real_1_o_mem">out, ap_int&lt;16&gt;*</column>
+                    <column name="filtered_real_1_o_stream">in, stream&lt;ap_int&lt;16&gt; 0&gt;&amp;</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">

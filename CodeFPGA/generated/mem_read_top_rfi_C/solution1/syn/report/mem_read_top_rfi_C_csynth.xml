@@ -46,9 +46,9 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>8</BRAM_18K>
-<FF>1301</FF>
-<LUT>1674</LUT>
+<BRAM_18K>2</BRAM_18K>
+<FF>1246</FF>
+<LUT>1585</LUT>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>
@@ -481,7 +481,7 @@
 <IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -493,7 +493,7 @@
 <IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>8</Bits>
+<Bits>4</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -721,7 +721,7 @@
 <IOProtocol>m_axi</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>64</Bits>
+<Bits>32</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -841,7 +841,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>64</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -877,7 +877,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>64</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

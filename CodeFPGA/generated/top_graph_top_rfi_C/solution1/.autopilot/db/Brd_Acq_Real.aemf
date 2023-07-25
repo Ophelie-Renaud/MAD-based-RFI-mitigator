@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600333347">
-  <ports id="1" name="raw_data_real_i_stream" type="PortType" coreId="1886393223" bitwidth="64">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690246297548">
+  <ports id="1" name="raw_data_real_i_stream" type="PortType" coreId="3789714224" bitwidth="16">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="raw_data_real_o_stream" type="PortType" coreId="3789714224" bitwidth="64" direction="DirOut">
+  <ports id="2" name="raw_data_real_o_stream" type="PortType" coreId="168" bitwidth="16" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="3" name="raw_data_real_1_o_stream" type="PortType" coreId="795046515" bitwidth="64" direction="DirOut">
+  <ports id="3" name="raw_data_real_1_o_stream" type="PortType" coreId="547558448" bitwidth="16" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="3203898112" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="4" name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="3691000307" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="30" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="5" name="stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i" type="PortType" coreName="FIFO" coreId="128" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i" type="PortType" coreName="FIFO" coreId="3203819760" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="6" name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i" type="PortType" coreName="FIFO" coreId="741681509" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="32" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -30,7 +30,7 @@
   <edges id="48" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.5"/>
   <edges id="49" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
   <blocks id="29" name="Brd_Acq_Real" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="read" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="read" bitwidth="16" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
       <dataInputObjs>raw_data_real_i_stream</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -64,7 +64,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln0" coreId="3204107400" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln0" coreId="0" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
       <validLinenumbers>144</validLinenumbers>
       <validLinenumbers>173</validLinenumbers>

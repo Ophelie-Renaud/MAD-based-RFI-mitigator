@@ -25,5 +25,8 @@
 <pragma file="mem_write_top_rfi_C.cpp" line="134" pragmaType="interface" parentfunction="mem_write_top_rfi_C" mode="axis" port="filtered_real_1_o_stream" register="0" register_mode="both" name="filtered_real_1_o_stream" depth="-1"/>
 <pragma file="mem_write_top_rfi_C.cpp" line="135" pragmaType="interface" parentfunction="mem_write_top_rfi_C" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
 <pragma file="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" line="153" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int.h" line="66" pragmaType="inline" parentfunction="ap_int<16>::ap_int()" off="0" region="0" recursive="0"/>
 <pragma file="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" line="143" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" line="221" pragmaType="inline" parentfunction="ap_int_base<16, true>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_common.h" line="517" pragmaType="inline" parentfunction="ssdm_int<16, true>::ssdm_int()" off="0" region="0" recursive="0"/>
 </pragmas>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <flags>
+        <sizesAreInBit/>
+    </flags>
+    <files>
+        <algorithm url="/org.ietr.preesm.rfi/Algo/top_rfi_C.pi"/>
+        <architecture url="/org.ietr.preesm.rfi/Archi/1CoresX86.slam"/>
+        <codegenDirectory url="/org.ietr.preesm.rfi/Code1CoreX86/generated"/>
+    </files>
+    <constraints excelUrl="">
+        <constraintGroup>
+            <operator name="Core0"/>
+            <task name="top_rfi_C/Data_Acquisition"/>
+            <task name="top_rfi_C/Plot_RnI_Histo"/>
+            <task name="top_rfi_C/MAD_Computation"/>
+            <task name="top_rfi_C/STD_Computation"/>
+            <task name="top_rfi_C/Plot_Threshold"/>
+            <task name="top_rfi_C/RFI_Filter"/>
+            <task name="top_rfi_C/Plot_Filtered_Data"/>
+            <task name="top_rfi_C/Data_Restitution"/>
+            <task name="top_rfi_C"/>
+        </constraintGroup>
+    </constraints>
+    <timings excelUrl="">
+        <memcpyspeed opname="x86" setuptime="1" timeperunit="0.001"/>
+    </timings>
+    <simuParams>
+        <mainCore>Core0</mainCore>
+        <mainComNode>shared_mem</mainComNode>
+        <averageDataSize>1000</averageDataSize>
+        <dataTypes>
+            <dataType name="double" size="64"/>
+        </dataTypes>
+        <specialVertexOperators>
+            <specialVertexOperator path="Core0"/>
+        </specialVertexOperators>
+    </simuParams>
+    <parameterValues/>
+    <papifyConfigs xmlUrl=""/>
+    <energyConfigs xmlUrl="">
+        <performanceObjective objectiveEPS="0.0"/>
+        <peActorsEnergy/>
+    </energyConfigs>
+</scenario>

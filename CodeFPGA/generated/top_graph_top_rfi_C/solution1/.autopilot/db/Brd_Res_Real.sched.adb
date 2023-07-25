@@ -37,7 +37,7 @@
 						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -70,10 +70,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869376609</coreId>
+						<coreId>563198256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>0</if_type>
@@ -106,10 +106,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>560250848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>3</if_type>
@@ -160,10 +160,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539447110</coreId>
+						<coreId>3721747077</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>16</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -217,7 +217,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3689522816</coreId>
+						<coreId>563435984</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -275,7 +275,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3685390384</coreId>
+						<coreId>563418288</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -319,7 +319,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3685390384</coreId>
+						<coreId>3720462717</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -367,7 +367,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>2036781883</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

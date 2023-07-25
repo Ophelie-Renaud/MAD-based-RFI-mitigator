@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:mem_read_top_rfi_C:1.0
-// IP Revision: 2113105843
+// IP Revision: 2113132093
 
 (* X_CORE_INFO = "mem_read_top_rfi_C,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_mem_read_top_rfi_C_0_0,mem_read_top_rfi_C,{}" *)
-(* CORE_GENERATION_INFO = "design_1_mem_read_top_rfi_C_0_0,mem_read_top_rfi_C,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=mem_read_top_rfi_C,x_ipVersion=1.0,x_ipCoreRevision=2113105843,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=6,C_S_AXI_CONTROL_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=64,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUSER_WID\
+(* CORE_GENERATION_INFO = "design_1_mem_read_top_rfi_C_0_0,mem_read_top_rfi_C,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=mem_read_top_rfi_C,x_ipVersion=1.0,x_ipCoreRevision=2113132093,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=6,C_S_AXI_CONTROL_DATA_WIDTH=32,C_M_AXI_GMEM_ID_WIDTH=1,C_M_AXI_GMEM_ADDR_WIDTH=64,C_M_AXI_GMEM_DATA_WIDTH=32,C_M_AXI_GMEM_AWUSER_WIDTH=1,C_M_AXI_GMEM_ARUSER_WIDTH=1,C_M_AXI_GMEM_WUSER_WIDTH=1,C_M_AXI_GMEM_RUSER_WIDTH=1,C_M_AXI_GMEM_BUSER_WID\
 TH=1,C_M_AXI_GMEM_USER_VALUE=0x00000000,C_M_AXI_GMEM_PROT_VALUE=000,C_M_AXI_GMEM_CACHE_VALUE=0011}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
@@ -190,9 +190,9 @@ output wire m_axi_gmem_AWVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem AWREADY" *)
 input wire m_axi_gmem_AWREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem WDATA" *)
-output wire [63 : 0] m_axi_gmem_WDATA;
+output wire [31 : 0] m_axi_gmem_WDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem WSTRB" *)
-output wire [7 : 0] m_axi_gmem_WSTRB;
+output wire [3 : 0] m_axi_gmem_WSTRB;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem WLAST" *)
 output wire m_axi_gmem_WLAST;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem WVALID" *)
@@ -228,14 +228,14 @@ output wire m_axi_gmem_ARVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem ARREADY" *)
 input wire m_axi_gmem_ARREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem RDATA" *)
-input wire [63 : 0] m_axi_gmem_RDATA;
+input wire [31 : 0] m_axi_gmem_RDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem RRESP" *)
 input wire [1 : 0] m_axi_gmem_RRESP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem RLAST" *)
 input wire m_axi_gmem_RLAST;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem RVALID" *)
 input wire m_axi_gmem_RVALID;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem, ADDR_WIDTH 64, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_READ_BURST_LENGTH 16, MAX_WRITE_BURST_LENGTH 16, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 64, FREQ_HZ 100000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMAIN de\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_gmem, ADDR_WIDTH 64, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_READ_BURST_LENGTH 16, MAX_WRITE_BURST_LENGTH 16, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, FREQ_HZ 100000000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMAIN de\
 sign_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_gmem RREADY" *)
 output wire m_axi_gmem_RREADY;
@@ -243,16 +243,16 @@ output wire m_axi_gmem_RREADY;
 output wire raw_data_real_i_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_i_stream TREADY" *)
 input wire raw_data_real_i_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_i_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_i_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_i_stream TDATA" *)
-output wire [63 : 0] raw_data_real_i_stream_TDATA;
+output wire [15 : 0] raw_data_real_i_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_i_stream TVALID" *)
 output wire raw_data_im_i_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_i_stream TREADY" *)
 input wire raw_data_im_i_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_i_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_i_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_i_stream TDATA" *)
-output wire [63 : 0] raw_data_im_i_stream_TDATA;
+output wire [15 : 0] raw_data_im_i_stream_TDATA;
 
 (* SDX_KERNEL = "true" *)
 (* SDX_KERNEL_TYPE = "hls" *)
@@ -262,7 +262,7 @@ output wire [63 : 0] raw_data_im_i_stream_TDATA;
     .C_S_AXI_CONTROL_DATA_WIDTH(32),
     .C_M_AXI_GMEM_ID_WIDTH(1),
     .C_M_AXI_GMEM_ADDR_WIDTH(64),
-    .C_M_AXI_GMEM_DATA_WIDTH(64),
+    .C_M_AXI_GMEM_DATA_WIDTH(32),
     .C_M_AXI_GMEM_AWUSER_WIDTH(1),
     .C_M_AXI_GMEM_ARUSER_WIDTH(1),
     .C_M_AXI_GMEM_WUSER_WIDTH(1),

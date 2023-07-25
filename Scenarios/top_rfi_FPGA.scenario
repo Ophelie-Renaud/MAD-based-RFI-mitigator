@@ -37,7 +37,9 @@
         <mainComNode/>
         <averageDataSize>1000</averageDataSize>
         <dataTypes>
+            <dataType name="float" size="32"/>
             <dataType name="double" size="64"/>
+            <dataType name="ap_int&lt;16>" size="16"/>
         </dataTypes>
         <specialVertexOperators>
             <specialVertexOperator path="Zynq"/>

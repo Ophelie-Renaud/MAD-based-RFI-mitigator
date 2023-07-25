@@ -3,7 +3,7 @@ set clock_constraint { \
     module top_graph_top_rfi_C \
     port ap_clk \
     period 10 \
-    uncertainty 2.7 \
+    uncertainty 1 \
 }
 
 set all_path {}

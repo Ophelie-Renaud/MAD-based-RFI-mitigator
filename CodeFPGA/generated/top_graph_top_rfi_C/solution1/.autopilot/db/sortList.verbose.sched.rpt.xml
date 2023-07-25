@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'sortList'" level="0">
-<item name = "Date">Thu Jul  6 01:41:36 2023
+<item name = "Date">Tue Jul 25 02:51:33 2023
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">top_graph_top_rfi_C</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.948 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 8.937 ns, 1.00 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">430094, ?, 4.301 ms, ?, 430094, ?, no</column>
+<column name="">14346, 116746, 0.143 ms, 1.167 ms, 14346, 116746, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_44_2">16384, ?, 8 ~ ?, -, -, 2048, no</column>
+<column name="- VITIS_LOOP_52_1">10240, 112640, 5 ~ 55, -, -, 2048, no</column>
 </table>
 </item>
 </section>

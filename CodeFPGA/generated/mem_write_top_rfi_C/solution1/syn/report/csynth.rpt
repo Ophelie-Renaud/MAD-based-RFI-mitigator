@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'mem_write_top_rfi_C'
 ================================================================
 + General Information: 
-    * Date:           Thu Jul  6 01:43:40 2023
+    * Date:           Mon Jul 24 07:13:45 2023
     * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
     * Project:        mem_write_top_rfi_C
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,13 +15,13 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
-    |        Modules        |  Issue |       | Latency | Latency| Iteration|         | Trip |          |        |    |           |            |     |
-    |        & Loops        |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |     LUT    | URAM|
-    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
-    |+ mem_write_top_rfi_C  |  Timing|  -0.29|        -|       -|         -|        -|     -|        no|  8 (2%)|   -|  3897 (3%)|  5671 (10%)|    -|
-    | o Loop 1              |      II|   7.30|        -|       -|        19|       12|     -|       yes|       -|   -|          -|           -|    -|
-    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |        Modules        |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |    |           |            |     |
+    |        & Loops        |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |     LUT    | URAM|
+    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |+ mem_write_top_rfi_C  |  Timing|  -0.29|        -|       -|         -|        -|     -|        no|  2 (~0%)|   -|  3821 (3%)|  5574 (10%)|    -|
+    | o Loop 1              |      II|   7.30|        -|       -|        19|       12|     -|       yes|        -|   -|          -|           -|    -|
+    +-----------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+-----------+------------+-----+
 
 
 ================================================================
@@ -32,7 +32,7 @@
 | Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
 |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
-| m_axi_gmem | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=8            |
+| m_axi_gmem | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
 * S_AXILITE Interfaces
@@ -80,18 +80,18 @@
 +--------------------------+---------------+-------+--------+--------+
 | Interface                | Register Mode | TDATA | TREADY | TVALID |
 +--------------------------+---------------+-------+--------+--------+
-| filtered_im_0_o_stream   | both          | 64    | 1      | 1      |
-| filtered_im_1_o_stream   | both          | 64    | 1      | 1      |
-| filtered_real_0_o_stream | both          | 64    | 1      | 1      |
-| filtered_real_1_o_stream | both          | 64    | 1      | 1      |
-| mad_I_o_stream           | both          | 64    | 1      | 1      |
-| mad_R_o_stream           | both          | 64    | 1      | 1      |
-| raw_data_im_1_o_stream   | both          | 64    | 1      | 1      |
-| raw_data_im_o_stream     | both          | 64    | 1      | 1      |
-| raw_data_real_1_o_stream | both          | 64    | 1      | 1      |
-| raw_data_real_o_stream   | both          | 64    | 1      | 1      |
-| std_I_o_stream           | both          | 64    | 1      | 1      |
-| std_R_o_stream           | both          | 64    | 1      | 1      |
+| filtered_im_0_o_stream   | both          | 16    | 1      | 1      |
+| filtered_im_1_o_stream   | both          | 16    | 1      | 1      |
+| filtered_real_0_o_stream | both          | 16    | 1      | 1      |
+| filtered_real_1_o_stream | both          | 16    | 1      | 1      |
+| mad_I_o_stream           | both          | 16    | 1      | 1      |
+| mad_R_o_stream           | both          | 16    | 1      | 1      |
+| raw_data_im_1_o_stream   | both          | 16    | 1      | 1      |
+| raw_data_im_o_stream     | both          | 16    | 1      | 1      |
+| raw_data_real_1_o_stream | both          | 16    | 1      | 1      |
+| raw_data_real_o_stream   | both          | 16    | 1      | 1      |
+| std_I_o_stream           | both          | 16    | 1      | 1      |
+| std_R_o_stream           | both          | 16    | 1      | 1      |
 +--------------------------+---------------+-------+--------+--------+
 
 * TOP LEVEL CONTROL
@@ -109,34 +109,34 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+--------------------------+-----------+--------------------+
-| Argument                 | Direction | Datatype           |
-+--------------------------+-----------+--------------------+
-| raw_data_im_o_mem        | out       | double*            |
-| raw_data_im_o_stream     | in        | stream<double, 0>& |
-| raw_data_real_o_mem      | out       | double*            |
-| raw_data_real_o_stream   | in        | stream<double, 0>& |
-| mad_R_o_mem              | out       | double*            |
-| mad_R_o_stream           | in        | stream<double, 0>& |
-| raw_data_real_1_o_mem    | out       | double*            |
-| raw_data_real_1_o_stream | in        | stream<double, 0>& |
-| std_R_o_mem              | out       | double*            |
-| std_R_o_stream           | in        | stream<double, 0>& |
-| raw_data_im_1_o_mem      | out       | double*            |
-| raw_data_im_1_o_stream   | in        | stream<double, 0>& |
-| mad_I_o_mem              | out       | double*            |
-| mad_I_o_stream           | in        | stream<double, 0>& |
-| std_I_o_mem              | out       | double*            |
-| std_I_o_stream           | in        | stream<double, 0>& |
-| filtered_im_0_o_mem      | out       | double*            |
-| filtered_im_0_o_stream   | in        | stream<double, 0>& |
-| filtered_real_0_o_mem    | out       | double*            |
-| filtered_real_0_o_stream | in        | stream<double, 0>& |
-| filtered_im_1_o_mem      | out       | double*            |
-| filtered_im_1_o_stream   | in        | stream<double, 0>& |
-| filtered_real_1_o_mem    | out       | double*            |
-| filtered_real_1_o_stream | in        | stream<double, 0>& |
-+--------------------------+-----------+--------------------+
++--------------------------+-----------+------------------------+
+| Argument                 | Direction | Datatype               |
++--------------------------+-----------+------------------------+
+| raw_data_im_o_mem        | out       | ap_int<16>*            |
+| raw_data_im_o_stream     | in        | stream<ap_int<16>, 0>& |
+| raw_data_real_o_mem      | out       | ap_int<16>*            |
+| raw_data_real_o_stream   | in        | stream<ap_int<16>, 0>& |
+| mad_R_o_mem              | out       | ap_int<16>*            |
+| mad_R_o_stream           | in        | stream<ap_int<16>, 0>& |
+| raw_data_real_1_o_mem    | out       | ap_int<16>*            |
+| raw_data_real_1_o_stream | in        | stream<ap_int<16>, 0>& |
+| std_R_o_mem              | out       | ap_int<16>*            |
+| std_R_o_stream           | in        | stream<ap_int<16>, 0>& |
+| raw_data_im_1_o_mem      | out       | ap_int<16>*            |
+| raw_data_im_1_o_stream   | in        | stream<ap_int<16>, 0>& |
+| mad_I_o_mem              | out       | ap_int<16>*            |
+| mad_I_o_stream           | in        | stream<ap_int<16>, 0>& |
+| std_I_o_mem              | out       | ap_int<16>*            |
+| std_I_o_stream           | in        | stream<ap_int<16>, 0>& |
+| filtered_im_0_o_mem      | out       | ap_int<16>*            |
+| filtered_im_0_o_stream   | in        | stream<ap_int<16>, 0>& |
+| filtered_real_0_o_mem    | out       | ap_int<16>*            |
+| filtered_real_0_o_stream | in        | stream<ap_int<16>, 0>& |
+| filtered_im_1_o_mem      | out       | ap_int<16>*            |
+| filtered_im_1_o_stream   | in        | stream<ap_int<16>, 0>& |
+| filtered_real_1_o_mem    | out       | ap_int<16>*            |
+| filtered_real_1_o_stream | in        | stream<ap_int<16>, 0>& |
++--------------------------+-----------+------------------------+
 
 * SW-to-HW Mapping
 +--------------------------+--------------------------+-----------+----------+---------------------------------------------------+
@@ -207,42 +207,42 @@
 | Name                     | DSP | Pragma | Variable    | Op  | Impl   | Latency |
 +--------------------------+-----+--------+-------------+-----+--------+---------+
 | + mem_write_top_rfi_C    | 0   |        |             |     |        |         |
-|   add_ln61_fu_762_p2     | -   |        | add_ln61    | add | fabric | 0       |
-|   add_ln62_fu_777_p2     | -   |        | add_ln62    | add | fabric | 0       |
-|   add_ln73_fu_801_p2     | -   |        | add_ln73    | add | fabric | 0       |
-|   add_ln61_1_fu_867_p2   | -   |        | add_ln61_1  | add | fabric | 0       |
-|   add_ln62_1_fu_882_p2   | -   |        | add_ln62_1  | add | fabric | 0       |
-|   add_ln73_1_fu_906_p2   | -   |        | add_ln73_1  | add | fabric | 0       |
-|   add_ln61_2_fu_972_p2   | -   |        | add_ln61_2  | add | fabric | 0       |
-|   add_ln62_2_fu_987_p2   | -   |        | add_ln62_2  | add | fabric | 0       |
-|   add_ln73_2_fu_1011_p2  | -   |        | add_ln73_2  | add | fabric | 0       |
-|   add_ln61_3_fu_1077_p2  | -   |        | add_ln61_3  | add | fabric | 0       |
-|   add_ln62_3_fu_1092_p2  | -   |        | add_ln62_3  | add | fabric | 0       |
-|   add_ln73_3_fu_1116_p2  | -   |        | add_ln73_3  | add | fabric | 0       |
-|   add_ln61_4_fu_1182_p2  | -   |        | add_ln61_4  | add | fabric | 0       |
-|   add_ln62_4_fu_1197_p2  | -   |        | add_ln62_4  | add | fabric | 0       |
-|   add_ln73_4_fu_1221_p2  | -   |        | add_ln73_4  | add | fabric | 0       |
-|   add_ln61_5_fu_1287_p2  | -   |        | add_ln61_5  | add | fabric | 0       |
-|   add_ln62_5_fu_1302_p2  | -   |        | add_ln62_5  | add | fabric | 0       |
-|   add_ln73_5_fu_1326_p2  | -   |        | add_ln73_5  | add | fabric | 0       |
-|   add_ln61_6_fu_1392_p2  | -   |        | add_ln61_6  | add | fabric | 0       |
-|   add_ln62_6_fu_1407_p2  | -   |        | add_ln62_6  | add | fabric | 0       |
-|   add_ln73_6_fu_1431_p2  | -   |        | add_ln73_6  | add | fabric | 0       |
-|   add_ln61_7_fu_1497_p2  | -   |        | add_ln61_7  | add | fabric | 0       |
-|   add_ln62_7_fu_1512_p2  | -   |        | add_ln62_7  | add | fabric | 0       |
-|   add_ln73_7_fu_1536_p2  | -   |        | add_ln73_7  | add | fabric | 0       |
-|   add_ln61_8_fu_1602_p2  | -   |        | add_ln61_8  | add | fabric | 0       |
-|   add_ln62_8_fu_1617_p2  | -   |        | add_ln62_8  | add | fabric | 0       |
-|   add_ln73_8_fu_1641_p2  | -   |        | add_ln73_8  | add | fabric | 0       |
-|   add_ln61_9_fu_1707_p2  | -   |        | add_ln61_9  | add | fabric | 0       |
-|   add_ln62_9_fu_1722_p2  | -   |        | add_ln62_9  | add | fabric | 0       |
-|   add_ln73_9_fu_1746_p2  | -   |        | add_ln73_9  | add | fabric | 0       |
-|   add_ln61_10_fu_1812_p2 | -   |        | add_ln61_10 | add | fabric | 0       |
-|   add_ln62_10_fu_1827_p2 | -   |        | add_ln62_10 | add | fabric | 0       |
-|   add_ln73_10_fu_1851_p2 | -   |        | add_ln73_10 | add | fabric | 0       |
-|   add_ln61_11_fu_1907_p2 | -   |        | add_ln61_11 | add | fabric | 0       |
-|   add_ln62_11_fu_1922_p2 | -   |        | add_ln62_11 | add | fabric | 0       |
-|   add_ln73_11_fu_1946_p2 | -   |        | add_ln73_11 | add | fabric | 0       |
+|   add_ln61_fu_758_p2     | -   |        | add_ln61    | add | fabric | 0       |
+|   add_ln62_fu_783_p2     | -   |        | add_ln62    | add | fabric | 0       |
+|   add_ln73_fu_807_p2     | -   |        | add_ln73    | add | fabric | 0       |
+|   add_ln61_1_fu_863_p2   | -   |        | add_ln61_1  | add | fabric | 0       |
+|   add_ln62_1_fu_888_p2   | -   |        | add_ln62_1  | add | fabric | 0       |
+|   add_ln73_1_fu_912_p2   | -   |        | add_ln73_1  | add | fabric | 0       |
+|   add_ln61_2_fu_968_p2   | -   |        | add_ln61_2  | add | fabric | 0       |
+|   add_ln62_2_fu_993_p2   | -   |        | add_ln62_2  | add | fabric | 0       |
+|   add_ln73_2_fu_1017_p2  | -   |        | add_ln73_2  | add | fabric | 0       |
+|   add_ln61_3_fu_1073_p2  | -   |        | add_ln61_3  | add | fabric | 0       |
+|   add_ln62_3_fu_1098_p2  | -   |        | add_ln62_3  | add | fabric | 0       |
+|   add_ln73_3_fu_1122_p2  | -   |        | add_ln73_3  | add | fabric | 0       |
+|   add_ln61_4_fu_1178_p2  | -   |        | add_ln61_4  | add | fabric | 0       |
+|   add_ln62_4_fu_1203_p2  | -   |        | add_ln62_4  | add | fabric | 0       |
+|   add_ln73_4_fu_1227_p2  | -   |        | add_ln73_4  | add | fabric | 0       |
+|   add_ln61_5_fu_1283_p2  | -   |        | add_ln61_5  | add | fabric | 0       |
+|   add_ln62_5_fu_1308_p2  | -   |        | add_ln62_5  | add | fabric | 0       |
+|   add_ln73_5_fu_1332_p2  | -   |        | add_ln73_5  | add | fabric | 0       |
+|   add_ln61_6_fu_1388_p2  | -   |        | add_ln61_6  | add | fabric | 0       |
+|   add_ln62_6_fu_1413_p2  | -   |        | add_ln62_6  | add | fabric | 0       |
+|   add_ln73_6_fu_1437_p2  | -   |        | add_ln73_6  | add | fabric | 0       |
+|   add_ln61_7_fu_1493_p2  | -   |        | add_ln61_7  | add | fabric | 0       |
+|   add_ln62_7_fu_1518_p2  | -   |        | add_ln62_7  | add | fabric | 0       |
+|   add_ln73_7_fu_1542_p2  | -   |        | add_ln73_7  | add | fabric | 0       |
+|   add_ln61_8_fu_1598_p2  | -   |        | add_ln61_8  | add | fabric | 0       |
+|   add_ln62_8_fu_1623_p2  | -   |        | add_ln62_8  | add | fabric | 0       |
+|   add_ln73_8_fu_1647_p2  | -   |        | add_ln73_8  | add | fabric | 0       |
+|   add_ln61_9_fu_1703_p2  | -   |        | add_ln61_9  | add | fabric | 0       |
+|   add_ln62_9_fu_1728_p2  | -   |        | add_ln62_9  | add | fabric | 0       |
+|   add_ln73_9_fu_1752_p2  | -   |        | add_ln73_9  | add | fabric | 0       |
+|   add_ln61_10_fu_1808_p2 | -   |        | add_ln61_10 | add | fabric | 0       |
+|   add_ln62_10_fu_1833_p2 | -   |        | add_ln62_10 | add | fabric | 0       |
+|   add_ln73_10_fu_1857_p2 | -   |        | add_ln73_10 | add | fabric | 0       |
+|   add_ln61_11_fu_1913_p2 | -   |        | add_ln61_11 | add | fabric | 0       |
+|   add_ln62_11_fu_1938_p2 | -   |        | add_ln62_11 | add | fabric | 0       |
+|   add_ln73_11_fu_1962_p2 | -   |        | add_ln73_11 | add | fabric | 0       |
 +--------------------------+-----+--------+-------------+-----+--------+---------+
 
 

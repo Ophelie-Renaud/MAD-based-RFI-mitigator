@@ -1,174 +1,911 @@
-
-****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
-  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
-  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-
-source /home/orenaud/Xilinx/Vitis_HLS/2021.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/home/orenaud/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'orenaud' on host 'pc-eii26' (Linux_x86_64 version 5.19.0-46-generic) on Thu Jul 06 01:43:29 CEST 2023
+INFO: [HLS 200-10] For user 'orenaud' on host 'pc-eii26' (Linux_x86_64 version 5.19.0-46-generic) on Tue Jul 25 02:51:06 CEST 2023
 INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/orenaud/preesm2/RFI/CodeFPGA/generated'
-Sourcing Tcl script 'scripts//script_hls.tcl'
-INFO: [HLS 200-1510] Running: open_project mem_write_top_rfi_C 
-INFO: [HLS 200-10] Creating and opening project '/home/orenaud/preesm2/RFI/CodeFPGA/generated/mem_write_top_rfi_C'.
-INFO: [HLS 200-1510] Running: set_top mem_write_top_rfi_C 
-INFO: [HLS 200-1510] Running: add_files mem_write_top_rfi_C.cpp -cflags -I../include 
-INFO: [HLS 200-10] Adding design file 'mem_write_top_rfi_C.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files ../include -cflags -I../include 
-INFO: [HLS 200-10] Adding design file '../include' to the project
+Sourcing Tcl script '/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project top_graph_top_rfi_C 
+INFO: [HLS 200-10] Opening project '/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C'.
+INFO: [HLS 200-1510] Running: set_top top_graph_top_rfi_C 
+INFO: [HLS 200-1510] Running: add_files ../include/madCpt.hpp 
+INFO: [HLS 200-10] Adding design file '../include/madCpt.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files top_graph_top_rfi_C.cpp -cflags -I../include 
+INFO: [HLS 200-10] Adding design file 'top_graph_top_rfi_C.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Creating and opening solution '/home/orenaud/preesm2/RFI/CodeFPGA/generated/mem_write_top_rfi_C/solution1'.
+INFO: [HLS 200-10] Opening solution '/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=top_graph_top_rfi_C.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
-INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output top_graph_top_rfi_C.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [HLS 200-1510] Running: set_directive_top -name top_graph_top_rfi_C top_graph_top_rfi_C 
 INFO: [HLS 200-1510] Running: csynth_design 
-WARNING: [HLS 200-40] Cannot find source file ../include; skipping it.
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.026 GB.
-INFO: [HLS 200-10] Analyzing design file 'mem_write_top_rfi_C.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.87 seconds. CPU system time: 0.52 seconds. Elapsed time: 3.08 seconds; current allocated memory: 114.461 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.029 GB.
+INFO: [HLS 200-10] Analyzing design file 'top_graph_top_rfi_C.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.7 seconds. CPU system time: 0.58 seconds. Elapsed time: 4.46 seconds; current allocated memory: 116.289 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-284] Auto array partition mode is set into default.
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 0, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 1, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 2, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 3, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 4, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 5, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 6, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 7, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 8, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 9, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 10, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
-INFO: [HLS 214-178] Inlining function 'bool writeOutput<double, 11, 1, 409600, 1>(double*, hls::stream<double, 0>&)' into 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:111:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isinf<double>(double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isnan<double>(double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.139.149.159.169.179.189.199.209.278.288)' into 'fp_struct<double>::to_double() const (.136.146.156.166.176.186.196.206.275.285)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:521:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.136.146.156.166.176.186.196.206.275.285)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:536:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:215:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isinf<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:321:0)
+INFO: [HLS 214-178] Inlining function 'pow' into '__gnu_cxx::__promote_2<float, int, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<float, int>(float, int)' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/lib/gcc/x86_64-pc-linux-gnu/6.2.0/../../../../include/c++/6.2.0/cmath:439:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<float, int, __gnu_cxx::__promote<float, std::__is_integer<float>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<float, int>(float, int)' into 'stdDeviationList(ap_int<16>*, ap_int<16>, ap_int<16>, ap_int<16>*)' (../include/stdCpt.hpp:38:0)
+INFO: [HLS 214-178] Inlining function 'computeAverage(ap_int<16>*, ap_int<16>)' into 'void STDCpt<2048, 3, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&)' (../include/stdCpt.hpp:45:0)
+INFO: [HLS 214-178] Inlining function 'computeVariance(ap_int<16>*, ap_int<16>)' into 'void STDCpt<2048, 3, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&)' (../include/stdCpt.hpp:45:0)
+INFO: [HLS 214-178] Inlining function 'std::sqrt(float)' into 'void STDCpt<2048, 3, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&)' (../include/stdCpt.hpp:45:0)
+INFO: [HLS 214-178] Inlining function 'MIN(ap_int<16>*, ap_int<16>) (.518.530.536)' into 'sortList(ap_int<16>*, ap_int<16>, ap_int<16>*)' (../include/madCpt.hpp:37:0)
+INFO: [HLS 214-178] Inlining function 'std::abs(long long)' into 'deviationList(ap_int<16>*, ap_int<16>, ap_int<16>, ap_int<16>*)' (../include/madCpt.hpp:82:0)
+INFO: [HLS 214-178] Inlining function 'deviationList(ap_int<16>*, ap_int<16>, ap_int<16>, ap_int<16>*)' into 'void MADCpt<2048, 3, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&)' (../include/madCpt.hpp:91:0)
+INFO: [HLS 214-178] Inlining function 'madFilter(ap_int<16>*, ap_int<16>, ap_int<16>, ap_int<16>*)' into 'void RFIFilter<0, 2048, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&)' (../include/rfiFilter.hpp:46:0)
 INFO: [HLS 214-270] Starting automatic array partition analysis...
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.21 seconds. CPU system time: 0.23 seconds. Elapsed time: 3.51 seconds; current allocated memory: 114.832 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 114.832 MB.
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int<16>s' into 'void STDCpt<2048, 3, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&) (.1)' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int<16>s' into 'void MADCpt<2048, 3, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&) (.1)' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.s_struct.ap_int<16>s' into 'void RFIFilter<0, 2048, ap_int<16> >(hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&, hls::stream<ap_int<16>, 0>&) (.1)' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.35 seconds. CPU system time: 0.41 seconds. Elapsed time: 8.98 seconds; current allocated memory: 118.750 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 118.750 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 116.184 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.75 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.82 seconds; current allocated memory: 238.566 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 116.238 MB.
-INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (mem_write_top_rfi_C.cpp:139) in function 'mem_write_top_rfi_C' automatically.
-INFO: [XFORM 203-11] Balancing expressions in function 'mem_write_top_rfi_C' (mem_write_top_rfi_C.cpp:88)...11 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 140.777 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 140.777 MB.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.65 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.84 seconds; current allocated memory: 412.770 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_39_1' (../include/stdCpt.hpp:39) in function 'stdDeviationList' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_28_1' (../include/madCpt.hpp:40) in function 'sortList' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_55_2' (../include/madCpt.hpp:55) in function 'sortList' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_2' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:0) in function 'STDCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (../include/stdCpt.hpp:21) in function 'STDCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (../include/stdCpt.hpp:21) in function 'STDCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_32_1' (../include/stdCpt.hpp:32) in function 'STDCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_32_1' (../include/stdCpt.hpp:32) in function 'STDCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_72_1' (../include/stdCpt.hpp:72) in function 'STDCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_3' (../include/stdCpt.hpp:76) in function 'STDCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_2' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:0) in function 'RFIFilter<0, 2048, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_1' (../include/rfiFilter.hpp:21) in function 'RFIFilter<0, 2048, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_1' (../include/rfiFilter.hpp:21) in function 'RFIFilter<0, 2048, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'loop_3' (../include/rfiFilter.hpp:69) in function 'RFIFilter<0, 2048, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_98_1' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:0) in function 'MADCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_83_1' (../include/madCpt.hpp:83) in function 'MADCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_83_1' (../include/madCpt.hpp:83) in function 'MADCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_128_2' (../include/madCpt.hpp:128) in function 'MADCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_133_3' (../include/madCpt.hpp:133) in function 'MADCpt<2048, 3, ap_int<16> >' automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:412) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:548) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32767 to 2048 for loop 'VITIS_LOOP_39_1' in function 'stdDeviationList'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 2048 for loop 'VITIS_LOOP_39_1' in function 'stdDeviationList'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32766 to 2047 for loop 'VITIS_LOOP_28_1' in function 'sortList'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 2047 for loop 'VITIS_LOOP_28_1' in function 'sortList'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32767 to 2048 for loop 'occurence_loop' in function 'sortList'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 2048 for loop 'occurence_loop' in function 'sortList'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 32767 to 2048 for loop 'VITIS_LOOP_52_1' in function 'sortList'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 2048 for loop 'VITIS_LOOP_52_1' in function 'sortList'.
+INFO: [XFORM 203-712] Applying dataflow to function 'top_graph_top_rfi_C' (top_graph_top_rfi_C.cpp:126), detected/extracted 11 process function(s): 
+	 'Brd_Acq_Im'
+	 'Brd_Acq_Real'
+	 'STDCpt<2048, 3, ap_int<16> >'
+	 'MADCpt<2048, 3, ap_int<16> >'
+	 'Brd_STD_R'
+	 'Brd_MAD_R'
+	 'Brd_MAD_I'
+	 'Brd_STD_I'
+	 'RFIFilter<0, 2048, ap_int<16> >'
+	 'Brd_Res_Im'
+	 'Brd_Res_Real'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../include/stdCpt.hpp:39:37) in function 'stdDeviationList'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:690:3) in function 'pow_reduce::pow_generic<double>'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../include/madCpt.hpp:66:38) to (../include/madCpt.hpp:79:1) in function 'computeMedian'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../include/rfiFilter.hpp:21:27) in function 'RFIFilter<0, 2048, ap_int<16> >'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../include/rfiFilter.hpp:21:27) in function 'RFIFilter<0, 2048, ap_int<16> >'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../include/madCpt.hpp:116:16) to (../include/madCpt.hpp:128:23) in function 'MADCpt<2048, 3, ap_int<16> >'... converting 15 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:18:3)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2.12 seconds. CPU system time: 0.12 seconds. Elapsed time: 2.48 seconds; current allocated memory: 598.766 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_52_1' (../include/madCpt.hpp:52:38) in function 'sortList' the outer loop is not a perfect loop because either the parent loop or the sub loop has no invariant trip count.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'deviation_list' (../include/stdCpt.hpp:40:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'count.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'count.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'sorted_list' (../include/madCpt.hpp:58:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'RRi.V' (../include/stdCpt.hpp:51:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'RIi.V' (../include/stdCpt.hpp:52:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'RRo.V' (../include/stdCpt.hpp:73:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'RIo.V' (../include/stdCpt.hpp:74:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'RRi.V' (../include/rfiFilter.hpp:63:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'RIi.V' (../include/rfiFilter.hpp:64:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'RRo.V' (../include/rfiFilter.hpp:23:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'RDRi.V' (../include/madCpt.hpp:99:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'RDIi.V' (../include/madCpt.hpp:100:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'MRo.V' (../include/madCpt.hpp:129:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'MIo.V' (../include/madCpt.hpp:130:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'deviation_list_I.V' (../include/madCpt.hpp:84:27)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.92 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.07 seconds; current allocated memory: 966.145 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'mem_write_top_rfi_C' ...
+INFO: [HLS 200-10] Synthesizing 'top_graph_top_rfi_C' ...
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >_Pipeline_loop_2' to 'STDCpt_2048_3_ap_int_16_Pipeline_loop_2'.
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_21_1' to 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1'.
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_21_17' to 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17'.
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_32_1' to 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1'.
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_32_18' to 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18'.
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_72_1' to 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1'.
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >_Pipeline_loop_3' to 'STDCpt_2048_3_ap_int_16_Pipeline_loop_3'.
+WARNING: [SYN 201-103] Legalizing function name 'STDCpt<2048, 3, ap_int<16> >' to 'STDCpt_2048_3_ap_int_16_s'.
+WARNING: [SYN 201-103] Legalizing function name 'MADCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_98_1' to 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1'.
+WARNING: [SYN 201-103] Legalizing function name 'MADCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_83_1' to 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1'.
+WARNING: [SYN 201-103] Legalizing function name 'MADCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_83_110' to 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110'.
+WARNING: [SYN 201-103] Legalizing function name 'MADCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_128_2' to 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2'.
+WARNING: [SYN 201-103] Legalizing function name 'MADCpt<2048, 3, ap_int<16> >_Pipeline_VITIS_LOOP_133_3' to 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3'.
+WARNING: [SYN 201-103] Legalizing function name 'MADCpt<2048, 3, ap_int<16> >' to 'MADCpt_2048_3_ap_int_16_s'.
+WARNING: [SYN 201-103] Legalizing function name 'RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_2' to 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_2'.
+WARNING: [SYN 201-103] Legalizing function name 'RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_1' to 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_1'.
+WARNING: [SYN 201-103] Legalizing function name 'RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_19' to 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_19'.
+WARNING: [SYN 201-103] Legalizing function name 'RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_3' to 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_3'.
+WARNING: [SYN 201-103] Legalizing function name 'RFIFilter<0, 2048, ap_int<16> >' to 'RFIFilter_0_2048_ap_int_16_s'.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'mem_write_top_rfi_C' 
+INFO: [HLS 200-42] -- Implementing module 'Brd_Acq_Im' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
-WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_1_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_2_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_3_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_4_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'mem_write_top_rfi_C' (loop 'Loop 1'): Unable to schedule bus request operation ('gmem_addr_11_req', mem_write_top_rfi_C.cpp:61) on port 'gmem' (mem_write_top_rfi_C.cpp:61) due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 12, Depth = 19, loop 'Loop 1'
-WARNING: [HLS 200-871] Estimated clock period (7.591ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
-Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-871.html
-WARNING: [HLS 200-1016] The critical path in module 'mem_write_top_rfi_C' consists of the following:	'load' operation ('current_rate_10_load', mem_write_top_rfi_C.cpp:58) on static variable 'current_rate_10' [117]  (0 ns)
-	'icmp' operation ('icmp_ln58', mem_write_top_rfi_C.cpp:58) [118]  (2.47 ns)
-	'and' operation ('and_ln58', mem_write_top_rfi_C.cpp:58) [121]  (0.978 ns)
-	multiplexor before 'phi' operation ('shouldContinue') [151]  (1.59 ns)
-	blocking operation 2.55 ns on control path)
-
-Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1016.html
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.71 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.72 seconds; current allocated memory: 140.777 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.4 seconds; current allocated memory: 967.988 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 140.777 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 967.988 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'mem_write_top_rfi_C' 
+INFO: [HLS 200-42] -- Implementing module 'Brd_Acq_Real' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 968.355 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 968.355 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_Pipeline_loop_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 968.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 968.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 969.043 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 969.043 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 969.336 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 969.336 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=r_V_29) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 70, function 'pow_generic<double>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 971.910 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 971.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stdDeviationList' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_39_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 112, loop 'VITIS_LOOP_39_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.63 seconds; current allocated memory: 972.625 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.63 seconds; current allocated memory: 972.785 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_32_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_32_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.52 seconds; current allocated memory: 973.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 973.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_32_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_32_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 974.125 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 974.125 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_72_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_72_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 974.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 974.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_Pipeline_loop_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 974.656 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 974.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'STDCpt_2048_3_ap_int_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 975.309 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 975.309 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_98_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_98_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.57 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.65 seconds; current allocated memory: 976.254 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 976.254 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sortList_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_28_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 976.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 976.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sortList_Pipeline_occurence_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'occurence_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'occurence_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 976.867 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 976.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sortList_Pipeline_VITIS_LOOP_55_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_55_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_55_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 977.359 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 977.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sortList' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 977.488 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 977.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'computeMedian' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 977.840 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 977.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_83_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_83_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 978.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 978.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_83_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_83_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 978.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 978.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_128_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_128_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 978.992 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 978.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_133_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_133_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 979.309 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 979.309 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MADCpt_2048_3_ap_int_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 979.914 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 979.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Brd_STD_R' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 980.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 980.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Brd_MAD_R' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 980.910 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 980.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Brd_MAD_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 981.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 981.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Brd_STD_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 981.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 981.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 981.629 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 981.629 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'loop_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 981.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 981.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'loop_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 982.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 982.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'loop_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 982.574 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 982.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'RFIFilter_0_2048_ap_int_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 982.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 982.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Brd_Res_Im' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 982.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 982.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Brd_Res_Real' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 983.043 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 983.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_graph_top_rfi_C' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 983.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 983.879 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_Acq_Im' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_Acq_Im'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.81 seconds. CPU system time: 0 seconds. Elapsed time: 0.81 seconds; current allocated memory: 984.191 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_Acq_Real' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_Acq_Real'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 984.910 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_Pipeline_loop_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'STDCpt_2048_3_ap_int_16_Pipeline_loop_2' pipeline 'loop_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_Pipeline_loop_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 985.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 986.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 987.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_double_0_5_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_4_4_16_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_7_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_12_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_17_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_22_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_27_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_121_12_ap_q_mode_5_ap_o_mode_3_0_32_6_64_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58_1_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0_ap_q_mode_5_ap_o_mode_3_0_array_V_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pow_generic_double_s' pipeline 'pow_generic<double>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'pow_generic_double_s' is 13218 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_19s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_80ns_90_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_71s_71_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40ns_40ns_80_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43ns_36ns_79_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44ns_93_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50ns_50ns_100_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_54s_6ns_54_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_73ns_79_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_77ns_83_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_82ns_88_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_87ns_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_92ns_98_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_71ns_4ns_75_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_83ns_6ns_89_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.35 seconds; current allocated memory: 992.980 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stdDeviationList' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stdDeviationList' pipeline 'VITIS_LOOP_39_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'stdDeviationList' is 7451 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'dsqrt_64ns_64ns_64_30_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stdDeviationList'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.37 seconds; current allocated memory: 1001.301 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1' pipeline 'VITIS_LOOP_32_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.78 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.79 seconds; current allocated memory: 1003.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18' pipeline 'VITIS_LOOP_32_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1004.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1005.590 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_Pipeline_loop_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'STDCpt_2048_3_ap_int_16_Pipeline_loop_3' pipeline 'loop_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_Pipeline_loop_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1006.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'STDCpt_2048_3_ap_int_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_12_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_5_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'STDCpt_2048_3_ap_int_16_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1009.109 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1' pipeline 'VITIS_LOOP_98_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.95 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.98 seconds; current allocated memory: 1012.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sortList_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sortList_Pipeline_VITIS_LOOP_28_1' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sortList_Pipeline_VITIS_LOOP_28_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1012.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sortList_Pipeline_occurence_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sortList_Pipeline_occurence_loop' pipeline 'occurence_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sortList_Pipeline_occurence_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1014.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sortList_Pipeline_VITIS_LOOP_55_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sortList_Pipeline_VITIS_LOOP_55_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1015.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sortList' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sortList'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1016.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'computeMedian' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32s_64_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'computeMedian'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1017.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1' pipeline 'VITIS_LOOP_83_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1019.199 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110' pipeline 'VITIS_LOOP_83_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1020.168 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1021.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3' pipeline 'VITIS_LOOP_133_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1021.930 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MADCpt_2048_3_ap_int_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_6_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32s_64_5_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MADCpt_2048_3_ap_int_16_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.000 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_STD_R' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_STD_R'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.83 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.9 seconds; current allocated memory: 1.003 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_MAD_R' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_MAD_R'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.004 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_MAD_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_MAD_I'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.004 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_STD_I' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_STD_I'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.005 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_2' pipeline 'loop_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.006 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_1' pipeline 'loop_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.007 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_19' pipeline 'loop_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_19'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.008 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_3' pipeline 'loop_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'RFIFilter_0_2048_ap_int_16_Pipeline_loop_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.009 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'RFIFilter_0_2048_ap_int_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'RFIFilter_0_2048_ap_int_16_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.010 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_Res_Im' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_Res_Im'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.011 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Brd_Res_Real' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Brd_Res_Real'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.012 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_graph_top_rfi_C' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/gmem' to 'm_axi'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_im_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_im_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_real_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_real_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/mad_R_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/mad_R_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_real_1_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_real_1_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/std_R_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/std_R_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_im_1_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/raw_data_im_1_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/mad_I_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/mad_I_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/std_I_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/std_I_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_im_0_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_im_0_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_real_0_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_real_0_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_im_1_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_im_1_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_real_1_o_mem' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'mem_write_top_rfi_C/filtered_real_1_o_stream' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on function 'mem_write_top_rfi_C' to 's_axilite & ap_ctrl_hs'.
-WARNING: [RTGEN 206-101] Register 'current_rate_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_rate_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'current_factor_7' is power-on initialization.
-INFO: [RTGEN 206-100] Bundling port 'raw_data_im_o_mem', 'raw_data_real_o_mem', 'mad_R_o_mem', 'raw_data_real_1_o_mem', 'std_R_o_mem', 'raw_data_im_1_o_mem', 'mad_I_o_mem', 'std_I_o_mem', 'filtered_im_0_o_mem', 'filtered_real_0_o_mem', 'filtered_im_1_o_mem', 'filtered_real_1_o_mem', 'return' and 'ap_local_deadlock' to AXI-Lite port control.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'mem_write_top_rfi_C'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 140.777 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.78 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.84 seconds; current allocated memory: 151.559 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.99 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.02 seconds; current allocated memory: 157.508 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for mem_write_top_rfi_C.
-INFO: [VLOG 209-307] Generating Verilog RTL for mem_write_top_rfi_C.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 131.73 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 11.48 seconds. CPU system time: 0.85 seconds. Elapsed time: 11.25 seconds; current allocated memory: -892.645 MB.
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output mem_write_top_rfi_C.zip 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2021.2 (64-bit)
-  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
-  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/orenaud/Xilinx/Vivado/2021.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Jul  6 01:43:57 2023...
-INFO: [HLS 200-802] Generated output file mem_write_top_rfi_C.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 17.01 seconds. CPU system time: 0.67 seconds. Elapsed time: 25.41 seconds; current allocated memory: 6.145 MB.
-INFO: [HLS 200-112] Total CPU user time: 29.6 seconds. Total CPU system time: 1.82 seconds. Total elapsed time: 37.78 seconds; peak allocated memory: 1.026 GB.
-INFO: [Common 17-206] Exiting vitis_hls at Thu Jul  6 01:44:07 2023...
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/raw_data_real_i_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/raw_data_im_i_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/raw_data_im_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/raw_data_real_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/mad_R_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/raw_data_real_1_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/std_R_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/raw_data_im_1_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/mad_I_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/std_I_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/filtered_im_0_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/filtered_real_0_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/filtered_im_1_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_graph_top_rfi_C/filtered_real_1_o_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'top_graph_top_rfi_C' to 'ap_ctrl_none'.
+INFO: [HLS 200-633] Setting ap_ctrl_none interface for top_graph_top_rfi_C
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_graph_top_rfi_C'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.013 GB.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s_RRi_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_graph_top_rfi_C_sortList_count_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_RDRi_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s_RRi_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U(top_graph_top_rfi_C_fifo_w16_d8156_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U(top_graph_top_rfi_C_fifo_w16_d8156_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_STD_Computation_std_R_o_Brd_STD_R_in_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_STD_Computation_std_I_o_Brd_STD_I_in_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U(top_graph_top_rfi_C_fifo_w16_d4078_A)' using Vivado Default RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3.06 seconds. CPU system time: 0.08 seconds. Elapsed time: 3.16 seconds; current allocated memory: 1.018 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.43 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.45 seconds; current allocated memory: 1.029 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for top_graph_top_rfi_C.
+INFO: [VLOG 209-307] Generating Verilog RTL for top_graph_top_rfi_C.
+INFO: [HLS 200-789] **** Estimated Fmax: 111.13 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 39.28 seconds. CPU system time: 1.93 seconds. Elapsed time: 42 seconds; current allocated memory: 2.340 MB.
+INFO: [HLS 200-112] Total CPU user time: 40.88 seconds. Total CPU system time: 2.27 seconds. Total elapsed time: 43.52 seconds; peak allocated memory: 1.031 GB.

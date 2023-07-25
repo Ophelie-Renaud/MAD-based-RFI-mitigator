@@ -38,11 +38,13 @@ INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeF
 INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_top_graph_top_rfi_C_0_0/design_1_top_graph_top_rfi_C_0_0.dcp' for cell 'design_1_i/top_graph_top_rfi_C_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.dcp' for cell 'design_1_i/axi_mem_intercon/xbar'
 INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.dcp' for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1.dcp' for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us'
 INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/xbar'
 INFO: [Project 1-454] Reading design checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2610.848 ; gain = 0.000 ; free physical = 8319 ; free virtual = 19485
-INFO: [Netlist 29-17] Analyzing 42564 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 14 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2613.820 ; gain = 0.000 ; free physical = 4237 ; free virtual = 19826
+INFO: [Netlist 29-17] Analyzing 2764 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2021.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
@@ -51,21 +53,21 @@ Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen
 Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
 Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
 Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst'
+Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us/inst'
 INFO: [Project 1-1714] 31 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3181.695 ; gain = 0.000 ; free physical = 7786 ; free virtual = 18897
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2949.883 ; gain = 0.000 ; free physical = 4090 ; free virtual = 19678
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 27123 instances were transformed.
-  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 2048 instances
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 8176 instances
+  A total of 3 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
-  RAM64M => RAM64M (RAMD64E(x4)): 16128 instances
-  RAM64X1D => RAM64X1D (RAMD64E(x2)): 768 instances
 
-34 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 3181.695 ; gain = 570.945 ; free physical = 7784 ; free virtual = 18897
+link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2949.883 ; gain = 336.164 ; free physical = 4090 ; free virtual = 19678
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -76,13 +78,13 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3181.695 ; gain = 0.000 ; free physical = 7759 ; free virtual = 18870
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.79 . Memory (MB): peak = 2949.883 ; gain = 0.000 ; free physical = 4069 ; free virtual = 19657
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: e1c5ed54
+Ending Cache Timing Information Task | Checksum: cbc45270
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:17 . Memory (MB): peak = 3910.246 ; gain = 728.551 ; free physical = 6788 ; free virtual = 17911
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 2997.730 ; gain = 47.848 ; free physical = 3635 ; free virtual = 19237
 
 Starting Logic Optimization Task
 
@@ -93,51 +95,51 @@ INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/m00_couplers/aut
 INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst_i_1 into driver instance design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst_i_3__0, which resulted in an inversion of 8 pins
 INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst_i_2 into driver instance design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_primitive_shifter.gen_srls[0].srl_inst_i_4, which resulted in an inversion of 7 pins
 INFO: [Opt 31-1287] Pulled Inverter design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/gen_srls[0].gen_rep[0].srl_nx1/gen_primitive_shifter.gen_srls[0].srl_inst_i_2__2 into driver instance design_1_i/axi_mem_intercon/xbar/inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_primitive_shifter.gen_srls[0].srl_inst_i_4__0, which resulted in an inversion of 7 pins
-INFO: [Opt 31-1287] Pulled Inverter design_1_i/mem_read_top_rfi_C_0/inst/gmem_m_axi_U/bus_read/fifo_rreq/readRequestFIFONotEmptyReg_i_1 into driver instance design_1_i/mem_read_top_rfi_C_0/inst/gmem_m_axi_U/bus_read/fifo_rreq/readRequestFIFONotEmptyReg_i_2, which resulted in an inversion of 53 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/mem_read_top_rfi_C_0/inst/regslice_both_raw_data_im_i_stream_U/ap_enable_reg_pp0_iter1_i_1 into driver instance design_1_i/mem_read_top_rfi_C_0/inst/regslice_both_raw_data_im_i_stream_U/FSM_sequential_state[1]_i_3, which resulted in an inversion of 14 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/and_ln58_11_reg_2287[0]_i_1 into driver instance design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/and_ln58_11_reg_2287[0]_i_3, which resulted in an inversion of 52 pins
 INFO: [Opt 31-1287] Pulled Inverter design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_enc[1]_i_1 into driver instance design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/m_atarget_hot[2]_i_2, which resulted in an inversion of 5 pins
-INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/RFIFilter_0_2048_double_U0/dmul_64ns_64ns_64_7_max_dsp_1_U211/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_1 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/RFIFilter_0_2048_double_U0/dmul_64ns_64ns_64_7_max_dsp_1_U211/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[1]_i_2, which resulted in an inversion of 3 pins
-INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112_fu_163/flow_control_loop_pipe_sequential_init_U/i_6_cast_i_reg_182[10]_i_2 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112_fu_163/flow_control_loop_pipe_sequential_init_U/i_fu_62[11]_i_3, which resulted in an inversion of 6 pins
-INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1_fu_132/flow_control_loop_pipe_sequential_init_U/i_5_cast_i_reg_182[10]_i_2 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_double_U0/grp_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1_fu_132/flow_control_loop_pipe_sequential_init_U/i_5_fu_62[11]_i_3, which resulted in an inversion of 6 pins
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 32 load pin(s).
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_1 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[1]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[0]_i_1 into driver instance design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.EXP/STATE_DELAY/i_pipe/opt_has_pipe.first_q[1]_i_2, which resulted in an inversion of 3 pins
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 38 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1b8655018
+Phase 1 Retarget | Checksum: 1cf4238ba
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:11 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7122 ; free virtual = 18224
-INFO: [Opt 31-389] Phase Retarget created 274 cells and removed 380 cells
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3437 ; free virtual = 19047
+INFO: [Opt 31-389] Phase Retarget created 142 cells and removed 227 cells
 INFO: [Opt 31-1021] In phase Retarget, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Phase 2 Constant propagation | Checksum: 183b0651a
+INFO: [Opt 31-138] Pushed 6 inverter(s) to 16 load pin(s).
+Phase 2 Constant propagation | Checksum: 182e8f52e
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:12 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7121 ; free virtual = 18223
-INFO: [Opt 31-389] Phase Constant propagation created 265 cells and removed 872 cells
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3437 ; free virtual = 19047
+INFO: [Opt 31-389] Phase Constant propagation created 761 cells and removed 2694 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 27 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 15baf5374
+Phase 3 Sweep | Checksum: 157194e3c
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:17 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7113 ; free virtual = 18230
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1046 cells
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3438 ; free virtual = 19040
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 937 cells
 INFO: [Opt 31-1021] In phase Sweep, 96 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 15baf5374
+Phase 4 BUFG optimization | Checksum: 157194e3c
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:25 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7120 ; free virtual = 18236
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3438 ; free virtual = 19040
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1916a6c60
+Phase 5 Shift Register Optimization | Checksum: 1e4d327e5
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7121 ; free virtual = 18237
-INFO: [Opt 31-389] Phase Shift Register Optimization created 11 cells and removed 0 cells
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3438 ; free virtual = 19040
+INFO: [Opt 31-389] Phase Shift Register Optimization created 4 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1d7b6c0f7
+Phase 6 Post Processing Netlist | Checksum: 1d4f0d17f
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7126 ; free virtual = 18240
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3438 ; free virtual = 19040
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -147,11 +149,11 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             274  |             380  |                                             27  |
-|  Constant propagation         |             265  |             872  |                                             27  |
-|  Sweep                        |               0  |            1046  |                                             96  |
+|  Retarget                     |             142  |             227  |                                             27  |
+|  Constant propagation         |             761  |            2694  |                                             27  |
+|  Sweep                        |               0  |             937  |                                             96  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
-|  Shift Register Optimization  |              11  |               0  |                                              0  |
+|  Shift Register Optimization  |               4  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                             33  |
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -159,10 +161,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.24 . Memory (MB): peak = 4201.262 ; gain = 0.000 ; free physical = 7131 ; free virtual = 18234
-Ending Logic Optimization Task | Checksum: 9a727f44
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3431 ; free virtual = 19041
+Ending Logic Optimization Task | Checksum: 1118aca0f
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:33 . Memory (MB): peak = 4201.262 ; gain = 65.000 ; free physical = 7131 ; free virtual = 18234
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3247.746 ; gain = 0.000 ; free physical = 3431 ; free virtual = 19041
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -175,46 +177,46 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 888 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 440 newly gated: 15 Total Ports: 1776
-Number of Flops added for Enable Generation: 36
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 114 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 16 WE to EN ports
+Number of BRAM Ports augmented: 79 newly gated: 34 Total Ports: 228
+Number of Flops added for Enable Generation: 8
 
-Ending PowerOpt Patch Enables Task | Checksum: 1d4912fa5
+Ending PowerOpt Patch Enables Task | Checksum: ed8c1efc
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 6730 ; free virtual = 17841
-Ending Power Optimization Task | Checksum: 1d4912fa5
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.54 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3337 ; free virtual = 18944
+Ending Power Optimization Task | Checksum: ed8c1efc
 
-Time (s): cpu = 00:03:50 ; elapsed = 00:02:24 . Memory (MB): peak = 6416.359 ; gain = 2215.098 ; free physical = 6917 ; free virtual = 18046
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:16 . Memory (MB): peak = 3837.551 ; gain = 589.805 ; free physical = 3377 ; free virtual = 18991
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 13bedf526
+Ending Logic Optimization Task | Checksum: d6114f09
 
-Time (s): cpu = 00:01:18 ; elapsed = 00:00:29 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 6979 ; free virtual = 18090
-Ending Final Cleanup Task | Checksum: 13bedf526
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3379 ; free virtual = 18994
+Ending Final Cleanup Task | Checksum: d6114f09
 
-Time (s): cpu = 00:01:21 ; elapsed = 00:00:33 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 6982 ; free virtual = 18094
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3379 ; free virtual = 18994
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 7009 ; free virtual = 18120
-Ending Netlist Obfuscation Task | Checksum: 13bedf526
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3379 ; free virtual = 18994
+Ending Netlist Obfuscation Task | Checksum: d6114f09
 
-Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 6416.359 ; gain = 0.000 ; free physical = 7009 ; free virtual = 18120
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3379 ; free virtual = 18994
 INFO: [Common 17-83] Releasing license: Implementation
-72 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+74 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:07:00 ; elapsed = 00:03:52 . Memory (MB): peak = 6416.359 ; gain = 3234.664 ; free physical = 7009 ; free virtual = 18121
+opt_design: Time (s): cpu = 00:01:09 ; elapsed = 00:00:43 . Memory (MB): peak = 3837.551 ; gain = 887.668 ; free physical = 3379 ; free virtual = 18994
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.02 . Memory (MB): peak = 6424.363 ; gain = 0.000 ; free physical = 7007 ; free virtual = 18121
+Write XDEF Complete: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3375 ; free virtual = 18993
 INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:41 ; elapsed = 00:00:28 . Memory (MB): peak = 6424.363 ; gain = 8.004 ; free physical = 6964 ; free virtual = 18108
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3366 ; free virtual = 18984
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -222,7 +224,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:04:38 ; elapsed = 00:00:54 . Memory (MB): peak = 6464.383 ; gain = 40.020 ; free physical = 6074 ; free virtual = 17281
+report_drc: Time (s): cpu = 00:00:30 ; elapsed = 00:00:07 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3236 ; free virtual = 18854
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -231,31 +233,644 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 8 threads
-ERROR: [DRC UTLZ-1] Resource utilization: F7 Muxes over-utilized in Top Level Design (This design requires more F7 Muxes cells than are available in the target device. This design requires 28249 of such cell types but only 26600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: LUT as Distributed RAM over-utilized in Top Level Design (This design requires more LUT as Distributed RAM cells than are available in the target device. This design requires 106954 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
-ERROR: [DRC UTLZ-1] Resource utilization: LUT as Memory over-utilized in Top Level Design (This design requires more LUT as Memory cells than are available in the target device. This design requires 108577 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
-ERROR: [DRC UTLZ-1] Resource utilization: MUXF7 over-utilized in Top Level Design (This design requires more MUXF7 cells than are available in the target device. This design requires 28249 of such cell types but only 26600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 1776 of such cell types but only 280 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 888 of such cell types but only 140 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB36E1 over-utilized in Top Level Design (This design requires more RAMB36E1 cells than are available in the target device. This design requires 888 of such cell types but only 140 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMD64E over-utilized in Top Level Design (This design requires more RAMD64E cells than are available in the target device. This design requires 74240 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMS64E over-utilized in Top Level Design (This design requires more RAMS64E cells than are available in the target device. This design requires 32704 of such cell types but only 17400 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: Slice LUTs over-utilized in Top Level Design (This design requires more Slice LUTs cells than are available in the target device. This design requires 155592 of such cell types but only 53200 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[10] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[11] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[12] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[13] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[6] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[0]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[7] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[1]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[8] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[2]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRARDADDR[9] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[3]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-INFO: [Vivado_Tcl 4-198] DRC finished with 10 Errors, 8 Warnings
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[4] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[0]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[5] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[1]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[6] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[2]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[7] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[3]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 8 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
-INFO: [Common 17-83] Releasing license: Implementation
-87 Infos, 9 Warnings, 0 Critical Warnings and 11 Errors encountered.
-place_design failed
-place_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 6464.383 ; gain = 0.000 ; free physical = 6054 ; free virtual = 17247
-ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Thu Jul  6 02:04:24 2023...
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3227 ; free virtual = 18853
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 88025809
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3227 ; free virtual = 18853
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3227 ; free virtual = 18853
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 3eceb66e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3264 ; free virtual = 18891
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: d6e72ac9
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3237 ; free virtual = 18857
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: d6e72ac9
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3237 ; free virtual = 18857
+Phase 1 Placer Initialization | Checksum: d6e72ac9
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3237 ; free virtual = 18857
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 81ce3b56
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:11 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3205 ; free virtual = 18834
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 7af21119
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:12 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3202 ; free virtual = 18823
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 7af21119
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:13 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3202 ; free virtual = 18823
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 6 LUTNM shape to break, 1044 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 3, two critical 3, total 6, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 452 nets or LUTs. Breaked 6 LUTs, combined 446 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3030 ; free virtual = 18764
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            6  |            446  |                   452  |           0  |           1  |  00:00:01  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            6  |            446  |                   452  |           0  |           9  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 9ee36a53
+
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:35 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3035 ; free virtual = 18775
+Phase 2.4 Global Placement Core | Checksum: 13cffbc6b
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:00:36 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3035 ; free virtual = 18776
+Phase 2 Global Placement | Checksum: 13cffbc6b
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:00:36 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3045 ; free virtual = 18786
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: c8d2abfa
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:00:38 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3049 ; free virtual = 18790
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1227955c1
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:00:42 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3057 ; free virtual = 18798
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1415f6b22
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:00:42 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3057 ; free virtual = 18798
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 148f576e3
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:00:43 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3057 ; free virtual = 18798
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1540e13c7
+
+Time (s): cpu = 00:02:22 ; elapsed = 00:00:45 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3054 ; free virtual = 18795
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 69ef36ca
+
+Time (s): cpu = 00:02:28 ; elapsed = 00:00:51 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3032 ; free virtual = 18772
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 7f2f1ea8
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:00:53 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3032 ; free virtual = 18760
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 95b04ae3
+
+Time (s): cpu = 00:02:30 ; elapsed = 00:00:53 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3027 ; free virtual = 18757
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 134a04b18
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:00:57 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3026 ; free virtual = 18756
+Phase 3 Detail Placement | Checksum: 134a04b18
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:00:58 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3026 ; free virtual = 18755
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 848fe510
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.314 | TNS=-0.754 |
+Phase 1 Physical Synthesis Initialization | Checksum: 766d5564
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3015 ; free virtual = 18751
+INFO: [Place 46-33] Processed net design_1_i/mem_write_top_rfi_C_0/inst/control_s_axi_U/SR[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: cf9e9a5c
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3013 ; free virtual = 18750
+Phase 4.1.1.1 BUFG Insertion | Checksum: 848fe510
+
+Time (s): cpu = 00:03:26 ; elapsed = 00:01:06 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 3013 ; free virtual = 18750
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.173. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 12440cc65
+
+Time (s): cpu = 00:04:03 ; elapsed = 00:01:22 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2929 ; free virtual = 18688
+
+Time (s): cpu = 00:04:03 ; elapsed = 00:01:22 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2929 ; free virtual = 18688
+Phase 4.1 Post Commit Optimization | Checksum: 12440cc65
+
+Time (s): cpu = 00:04:03 ; elapsed = 00:01:22 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2928 ; free virtual = 18688
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 12440cc65
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:01:23 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2930 ; free virtual = 18689
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                4x4|
+|___________|___________________|___________________|
+|      South|                1x1|                4x4|
+|___________|___________________|___________________|
+|       East|                1x1|                2x2|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 12440cc65
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:01:23 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2928 ; free virtual = 18687
+Phase 4.3 Placer Reporting | Checksum: 12440cc65
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:01:23 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2927 ; free virtual = 18687
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2927 ; free virtual = 18687
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:01:23 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2927 ; free virtual = 18687
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 112d07c8b
+
+Time (s): cpu = 00:04:05 ; elapsed = 00:01:23 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2927 ; free virtual = 18686
+Ending Placer Task | Checksum: 110d56984
+
+Time (s): cpu = 00:04:05 ; elapsed = 00:01:23 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2927 ; free virtual = 18686
+INFO: [Common 17-83] Releasing license: Implementation
+115 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:04:09 ; elapsed = 00:01:25 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2969 ; free virtual = 18727
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2871 ; free virtual = 18704
+INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2981 ; free virtual = 18751
+INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2979 ; free virtual = 18750
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.20 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2982 ; free virtual = 18753
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+124 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:06 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2939 ; free virtual = 18710
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2890 ; free virtual = 18727
+INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2939 ; free virtual = 18725
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: fce79cae ConstDB: 0 ShapeSum: 13edccd6 RouteDB: 0
+Post Restoration Checksum: NetGraph: b00f1ad7 NumContArr: c8cfa406 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 178debedd
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2769 ; free virtual = 18556
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 178debedd
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2773 ; free virtual = 18561
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 178debedd
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2734 ; free virtual = 18523
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 178debedd
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2734 ; free virtual = 18523
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: e4d03399
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:30 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2669 ; free virtual = 18457
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.182  | TNS=0.000  | WHS=-0.239 | THS=-340.803|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 39529
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 39528
+  Number of Partially Routed Nets     = 1
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 10781c0d8
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:34 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2722 ; free virtual = 18518
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 10781c0d8
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:34 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2731 ; free virtual = 18527
+Phase 3 Initial Routing | Checksum: 1622b46a0
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:00:42 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2719 ; free virtual = 18509
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 2049
+ Number of Nodes with overlaps = 281
+ Number of Nodes with overlaps = 72
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.402  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 137d30f4b
+
+Time (s): cpu = 00:02:42 ; elapsed = 00:01:07 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2722 ; free virtual = 18512
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.402  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 282def283
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:09 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2695 ; free virtual = 18499
+Phase 4 Rip-up And Reroute | Checksum: 282def283
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:09 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2695 ; free virtual = 18498
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 2631c601d
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:11 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2695 ; free virtual = 18495
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.424  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 2631c601d
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:11 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2695 ; free virtual = 18495
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2631c601d
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:11 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2695 ; free virtual = 18495
+Phase 5 Delay and Skew Optimization | Checksum: 2631c601d
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:11 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2718 ; free virtual = 18518
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 21f348367
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:13 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2721 ; free virtual = 18529
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.424  | TNS=0.000  | WHS=0.023  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 22fd46290
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:13 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2721 ; free virtual = 18529
+Phase 6 Post Hold Fix | Checksum: 22fd46290
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:13 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2721 ; free virtual = 18529
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 8.75536 %
+  Global Horizontal Routing Utilization  = 9.59618 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 269061563
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:01:13 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2721 ; free virtual = 18528
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 269061563
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:01:13 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2721 ; free virtual = 18528
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1a7f0878c
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:01:16 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2721 ; free virtual = 18521
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.424  | TNS=0.000  | WHS=0.023  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1a7f0878c
+
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:17 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2718 ; free virtual = 18518
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:17 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2789 ; free virtual = 18589
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+140 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:18 ; elapsed = 00:01:21 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2789 ; free virtual = 18589
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2711 ; free virtual = 18592
+INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2773 ; free virtual = 18591
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:36 ; elapsed = 00:00:08 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2736 ; free virtual = 18555
+INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:30 ; elapsed = 00:00:07 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2741 ; free virtual = 18560
+INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+152 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:24 ; elapsed = 00:00:08 . Memory (MB): peak = 3837.551 ; gain = 0.000 ; free physical = 2721 ; free virtual = 18555
+INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_std_R_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_std_R_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_std_I_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_std_I_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_raw_data_real_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_raw_data_real_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_raw_data_real_i_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_raw_data_real_i_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_raw_data_real_1_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_raw_data_real_1_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_raw_data_im_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_raw_data_im_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_raw_data_im_i_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_raw_data_im_i_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_raw_data_im_1_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_raw_data_im_1_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_mad_R_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_mad_R_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_mad_I_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_mad_I_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_filtered_real_1_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_filtered_real_1_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_filtered_real_0_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_filtered_real_0_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_filtered_im_1_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_filtered_im_1_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <design_1_i/axis_data_fifo_filtered_im_0_o_stream/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <design_1_i/axis_data_fifo_filtered_im_0_o_stream>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force design_1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP input design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP input design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP input design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP input design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP input design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mac_muladd_16s_15ns_19s_31_4_1_U41/top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1_DSP48_0_U/p_reg_reg input design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mac_muladd_16s_15ns_19s_31_4_1_U41/top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP output design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_12s_80ns_90_5_1_U35/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_12s_80ns_90_5_1_U35/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_12s_80ns_90_5_1_U35/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_12s_80ns_90_5_1_U35/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_13s_71s_71_5_1_U37/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_13s_71s_71_5_1_U37/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__1 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_49ns_44ns_93_5_1_U39/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_49ns_44ns_93_5_1_U39/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_50ns_50ns_100_5_1_U40/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_50ns_50ns_100_5_1_U40/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_73ns_79_5_1_U29/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_73ns_79_5_1_U29/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_77ns_83_5_1_U34/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_77ns_83_5_1_U34/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_77ns_83_5_1_U34/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_77ns_83_5_1_U34/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_82ns_88_5_1_U33/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_82ns_88_5_1_U33/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_82ns_88_5_1_U33/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_82ns_88_5_1_U33/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_87ns_93_5_1_U32/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_87ns_93_5_1_U32/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_87ns_93_5_1_U32/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_87ns_93_5_1_U32/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_92ns_98_5_1_U31/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_92ns_98_5_1_U31/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_92ns_98_5_1_U31/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_92ns_98_5_1_U31/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_71ns_4ns_75_5_1_U28/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_71ns_4ns_75_5_1_U28/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_83ns_6ns_89_5_1_U30/tmp_product output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_83ns_6ns_89_5_1_U30/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_83ns_6ns_89_5_1_U30/tmp_product__0 output design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_83ns_6ns_89_5_1_U30/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/i_no_versal_es1_workaround.DSP multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/i_no_versal_es1_workaround.DSP multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_12s_80ns_90_5_1_U35/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_12s_80ns_90_5_1_U35/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_13s_71s_71_5_1_U37/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_13s_71s_71_5_1_U37/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/dout_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/dout_reg__0 multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/dout_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/dout_reg__1 multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/dout_reg__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product__0 multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_40ns_40ns_80_2_1_U36/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/buff0_reg__0 multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/buff0_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/buff0_reg__1 multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/buff0_reg__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__0 multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__1 multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_43ns_36ns_79_3_1_U38/tmp_product__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_54s_6ns_54_5_1_U27/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_54s_6ns_54_5_1_U27/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_73ns_79_5_1_U29/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_73ns_79_5_1_U29/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_77ns_83_5_1_U34/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_77ns_83_5_1_U34/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_82ns_88_5_1_U33/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_82ns_88_5_1_U33/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_87ns_93_5_1_U32/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_87ns_93_5_1_U32/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_92ns_98_5_1_U31/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_6ns_92ns_98_5_1_U31/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_71ns_4ns_75_5_1_U28/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_71ns_4ns_75_5_1_U28/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_83ns_6ns_89_5_1_U30/buff0_reg multiplier stage design_1_i/top_graph_top_rfi_C_0/inst/STDCpt_2048_3_ap_int_16_U0/grp_stdDeviationList_fu_178/grp_pow_generic_double_s_fu_132/mul_83ns_6ns_89_5_1_U30/buff0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A3)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A5)+((~A5)*(~A6)*A4)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1 (pin design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/gpregsm1.user_valid_i_1/I1) is not included in the LUT equation: 'O6=(A3)+((~A3)*(~A6)*A1)'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[10] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[6]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[11] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[7]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[4] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[0]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[5] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[1]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[6] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[2]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[7] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[3]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[8] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[4]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg has an input control pin design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/mem_reg/ADDRBWRADDR[9] (net: design_1_i/mem_write_top_rfi_C_0/inst/gmem_m_axi_U/bus_write/buff_wdata/rnext[5]) which is driven by a register (design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 33 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i, design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0], design_1_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[2:0]... and (the first 15 of 21 listed).
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP0/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP1/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP2/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP3/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP4/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP5/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP6/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP7/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/DSP8/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.MULT/DSP48E1_SPD_DBL_VARIANT.FIX_MULT/FULL_MAX_USAGE.DSP9/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-4] enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the D port (USE_DPORT = FALSE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/dmul_64ns_64ns_64_7_max_dsp_1_U135/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-5] enum_USE_MULT_NONE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/top_graph_top_rfi_C_0/inst/MADCpt_2048_3_ap_int_16_U0/grp_computeMedian_fu_132/dmul_64ns_64ns_64_7_max_dsp_1_U116/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/inst/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/DSP48_E1.DSP48E1_ADD.DSP48E1_ADD/i_no_versal_es1_workaround.DSP: DSP48E1 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 80 Warnings, 24 Advisories
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+50 Infos, 80 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:01:08 ; elapsed = 00:00:24 . Memory (MB): peak = 4120.316 ; gain = 282.766 ; free physical = 2642 ; free virtual = 18483
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 24 07:31:13 2023...

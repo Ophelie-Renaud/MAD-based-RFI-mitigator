@@ -5844,30 +5844,30 @@ extern "C" {
 
 
 __attribute__((sdx_kernel("mem_write_top_rfi_C", 0))) void mem_write_top_rfi_C(
-  double* raw_data_im_o_mem,
-  hls::stream<double> &raw_data_im_o_stream,
-  double* raw_data_real_o_mem,
-  hls::stream<double> &raw_data_real_o_stream,
-  double* mad_R_o_mem,
-  hls::stream<double> &mad_R_o_stream,
-  double* raw_data_real_1_o_mem,
-  hls::stream<double> &raw_data_real_1_o_stream,
-  double* std_R_o_mem,
-  hls::stream<double> &std_R_o_stream,
-  double* raw_data_im_1_o_mem,
-  hls::stream<double> &raw_data_im_1_o_stream,
-  double* mad_I_o_mem,
-  hls::stream<double> &mad_I_o_stream,
-  double* std_I_o_mem,
-  hls::stream<double> &std_I_o_stream,
-  double* filtered_im_0_o_mem,
-  hls::stream<double> &filtered_im_0_o_stream,
-  double* filtered_real_0_o_mem,
-  hls::stream<double> &filtered_real_0_o_stream,
-  double* filtered_im_1_o_mem,
-  hls::stream<double> &filtered_im_1_o_stream,
-  double* filtered_real_1_o_mem,
-  hls::stream<double> &filtered_real_1_o_stream) {
+  ap_int<16>* raw_data_im_o_mem,
+  hls::stream<ap_int<16>> &raw_data_im_o_stream,
+  ap_int<16>* raw_data_real_o_mem,
+  hls::stream<ap_int<16>> &raw_data_real_o_stream,
+  ap_int<16>* mad_R_o_mem,
+  hls::stream<ap_int<16>> &mad_R_o_stream,
+  ap_int<16>* raw_data_real_1_o_mem,
+  hls::stream<ap_int<16>> &raw_data_real_1_o_stream,
+  ap_int<16>* std_R_o_mem,
+  hls::stream<ap_int<16>> &std_R_o_stream,
+  ap_int<16>* raw_data_im_1_o_mem,
+  hls::stream<ap_int<16>> &raw_data_im_1_o_stream,
+  ap_int<16>* mad_I_o_mem,
+  hls::stream<ap_int<16>> &mad_I_o_stream,
+  ap_int<16>* std_I_o_mem,
+  hls::stream<ap_int<16>> &std_I_o_stream,
+  ap_int<16>* filtered_im_0_o_mem,
+  hls::stream<ap_int<16>> &filtered_im_0_o_stream,
+  ap_int<16>* filtered_real_0_o_mem,
+  hls::stream<ap_int<16>> &filtered_real_0_o_stream,
+  ap_int<16>* filtered_im_1_o_mem,
+  hls::stream<ap_int<16>> &filtered_im_1_o_stream,
+  ap_int<16>* filtered_real_1_o_mem,
+  hls::stream<ap_int<16>> &filtered_real_1_o_stream) {
 #pragma HLSDIRECTIVE TOP name=mem_write_top_rfi_C
 # 111 "mem_write_top_rfi_C.cpp"
 
@@ -5900,18 +5900,18 @@ __attribute__((sdx_kernel("mem_write_top_rfi_C", 0))) void mem_write_top_rfi_C(
  bool shouldContinue = true;
   VITIS_LOOP_139_1: while (shouldContinue) {
     shouldContinue = false;
-    shouldContinue |= writeOutput<double, 0, 1, 409600>(raw_data_im_o_mem, raw_data_im_o_stream);
-    shouldContinue |= writeOutput<double, 1, 1, 409600>(raw_data_real_o_mem, raw_data_real_o_stream);
-    shouldContinue |= writeOutput<double, 2, 1, 409600>(mad_R_o_mem, mad_R_o_stream);
-    shouldContinue |= writeOutput<double, 3, 1, 409600>(raw_data_real_1_o_mem, raw_data_real_1_o_stream);
-    shouldContinue |= writeOutput<double, 4, 1, 409600>(std_R_o_mem, std_R_o_stream);
-    shouldContinue |= writeOutput<double, 5, 1, 409600>(raw_data_im_1_o_mem, raw_data_im_1_o_stream);
-    shouldContinue |= writeOutput<double, 6, 1, 409600>(mad_I_o_mem, mad_I_o_stream);
-    shouldContinue |= writeOutput<double, 7, 1, 409600>(std_I_o_mem, std_I_o_stream);
-    shouldContinue |= writeOutput<double, 8, 1, 409600>(filtered_im_0_o_mem, filtered_im_0_o_stream);
-    shouldContinue |= writeOutput<double, 9, 1, 409600>(filtered_real_0_o_mem, filtered_real_0_o_stream);
-    shouldContinue |= writeOutput<double, 10, 1, 409600>(filtered_im_1_o_mem, filtered_im_1_o_stream);
-    shouldContinue |= writeOutput<double, 11, 1, 409600>(filtered_real_1_o_mem, filtered_real_1_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 0, 1, 409600>(raw_data_im_o_mem, raw_data_im_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 1, 1, 409600>(raw_data_real_o_mem, raw_data_real_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 2, 1, 409600>(mad_R_o_mem, mad_R_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 3, 1, 409600>(raw_data_real_1_o_mem, raw_data_real_1_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 4, 1, 409600>(std_R_o_mem, std_R_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 5, 1, 409600>(raw_data_im_1_o_mem, raw_data_im_1_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 6, 1, 409600>(mad_I_o_mem, mad_I_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 7, 1, 409600>(std_I_o_mem, std_I_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 8, 1, 409600>(filtered_im_0_o_mem, filtered_im_0_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 9, 1, 409600>(filtered_real_0_o_mem, filtered_real_0_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 10, 1, 409600>(filtered_im_1_o_mem, filtered_im_1_o_stream);
+    shouldContinue |= writeOutput<ap_int<16>, 11, 1, 409600>(filtered_real_1_o_mem, filtered_real_1_o_stream);
   }
 }
 

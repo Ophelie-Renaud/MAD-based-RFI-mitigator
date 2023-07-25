@@ -2,13 +2,13 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Thu Jul  6 01:45:01 2023
-# Process ID: 66899
+# Start of session at: Mon Jul 24 07:15:03 2023
+# Process ID: 397093
 # Current directory: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1
 # Command line: vivado -log design_1_mem_read_top_rfi_C_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mem_read_top_rfi_C_0_0.tcl
 # Log file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1/design_1_mem_read_top_rfi_C_0_0.vds
 # Journal file: /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1/vivado.jou
-# Running On: pc-eii26, OS: Linux, CPU Frequency: 4189.923 MHz, CPU Physical cores: 4, Host memory: 33456 MB
+# Running On: pc-eii26, OS: Linux, CPU Frequency: 4200.192 MHz, CPU Physical cores: 4, Host memory: 33456 MB
 #-----------------------------------------------------------
 source design_1_mem_read_top_rfi_C_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -22,48 +22,48 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 66922
+INFO: [Synth 8-7075] Helper process launched with PID 397133
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2609.879 ; gain = 0.000 ; free physical = 2895 ; free virtual = 16494
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2612.816 ; gain = 0.000 ; free physical = 1265 ; free virtual = 16885
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_mem_read_top_rfi_C_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_mem_read_top_rfi_C_0_0/synth/design_1_mem_read_top_rfi_C_0_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C.v:12]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_control_s_axi' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:6]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:213]
-WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:271]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_control_s_axi' (1#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:8]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_write' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:1742]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo' (2#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice' (3#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized0' (3#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:600]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer' (4#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized1' (4#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized2' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized2' (4#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
-WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:2111]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_write' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:1742]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_read' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:951]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer__parameterized0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
-WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:600]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer__parameterized0' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice__parameterized0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice__parameterized0' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
-WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:1237]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_read' (6#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:951]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_throttle' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:728]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_throttle' (7#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:728]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi' (8#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:8]
-INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_regslice_both' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_regslice_both.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_regslice_both' (9#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C_regslice_both.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C' (10#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/4856/hdl/verilog/mem_read_top_rfi_C.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mem_read_top_rfi_C_0_0' (11#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_mem_read_top_rfi_C_0_0/synth/design_1_mem_read_top_rfi_C_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C.v:12]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_control_s_axi' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:213]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:271]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_control_s_axi' (1#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_control_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_write' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:1742]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo' (2#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_decoder' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:712]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_decoder' (3#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:712]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice' (4#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized0' (4#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:600]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized1' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized2' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_fifo__parameterized2' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_write' (6#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:1742]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_read' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:951]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer__parameterized0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:600]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_buffer__parameterized0' (6#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:546]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice__parameterized0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice__parameterized0' (6#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:318]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_read' (7#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:951]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_throttle' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:728]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi_throttle' (8#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:728]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_gmem_m_axi' (9#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_gmem_m_axi.v:8]
+INFO: [Synth 8-6157] synthesizing module 'mem_read_top_rfi_C_regslice_both' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C_regslice_both' (10#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mem_read_top_rfi_C' (11#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ipshared/face/hdl/verilog/mem_read_top_rfi_C.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mem_read_top_rfi_C_0_0' (12#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_mem_read_top_rfi_C_0_0/synth/design_1_mem_read_top_rfi_C_0_0.v:59]
 WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module mem_read_top_rfi_C_gmem_m_axi_read is either unconnected or has no load
 WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module mem_read_top_rfi_C_gmem_m_axi_read is either unconnected or has no load
 WARNING: [Synth 8-7129] Port in_HLS_ARCACHE[3] in module mem_read_top_rfi_C_gmem_m_axi_read is either unconnected or has no load
@@ -104,18 +104,18 @@ WARNING: [Synth 8-7129] Port I_ARBURST[0] in module mem_read_top_rfi_C_gmem_m_ax
 WARNING: [Synth 8-7129] Port I_ARLOCK[1] in module mem_read_top_rfi_C_gmem_m_axi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port I_ARLOCK[0] in module mem_read_top_rfi_C_gmem_m_axi is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2609.879 ; gain = 0.000 ; free physical = 4252 ; free virtual = 17855
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2612.816 ; gain = 0.000 ; free physical = 3056 ; free virtual = 18498
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2609.879 ; gain = 0.000 ; free physical = 4319 ; free virtual = 17923
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2612.816 ; gain = 0.000 ; free physical = 3060 ; free virtual = 18503
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2609.879 ; gain = 0.000 ; free physical = 4319 ; free virtual = 17923
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2612.816 ; gain = 0.000 ; free physical = 3060 ; free virtual = 18503
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2609.879 ; gain = 0.000 ; free physical = 4303 ; free virtual = 17908
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2612.816 ; gain = 0.000 ; free physical = 3046 ; free virtual = 18489
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -126,27 +126,27 @@ Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.run
 Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2673.812 ; gain = 0.000 ; free physical = 4141 ; free virtual = 17759
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2676.746 ; gain = 0.000 ; free physical = 2880 ; free virtual = 18337
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2673.812 ; gain = 0.000 ; free physical = 4138 ; free virtual = 17756
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2676.746 ; gain = 0.000 ; free physical = 2878 ; free virtual = 18335
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4175 ; free virtual = 17794
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2958 ; free virtual = 18415
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4171 ; free virtual = 17789
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2958 ; free virtual = 18416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4171 ; free virtual = 17790
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2956 ; free virtual = 18414
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'mem_read_top_rfi_C_control_s_axi'
 INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'mem_read_top_rfi_C_control_s_axi'
@@ -189,7 +189,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mem_read_top_rfi_C_gmem_m_axi_reg_slice__parameterized0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4184 ; free virtual = 17807
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2939 ; free virtual = 18401
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -200,57 +200,58 @@ Detailed RTL Component Info :
 	   2 Input   52 Bit       Adders := 2     
 	   2 Input   32 Bit       Adders := 4     
 	   2 Input   12 Bit       Adders := 2     
+	   3 Input   10 Bit       Adders := 1     
 	   2 Input    9 Bit       Adders := 7     
-	   3 Input    9 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 5     
-	   2 Input    5 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 6     
+	   2 Input    6 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 2     
-	   2 Input    3 Bit       Adders := 8     
+	   2 Input    3 Bit       Adders := 10    
+	   2 Input    2 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 2     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 3     
 +---Registers : 
 	               96 Bit    Registers := 6     
-	               72 Bit    Registers := 3     
-	               67 Bit    Registers := 3     
-	               66 Bit    Registers := 2     
-	               64 Bit    Registers := 18    
-	               61 Bit    Registers := 2     
+	               64 Bit    Registers := 14    
 	               52 Bit    Registers := 2     
+	               35 Bit    Registers := 3     
 	               32 Bit    Registers := 8     
-	                9 Bit    Registers := 7     
-	                8 Bit    Registers := 7     
-	                6 Bit    Registers := 2     
-	                5 Bit    Registers := 2     
+	               18 Bit    Registers := 5     
+	               16 Bit    Registers := 6     
+	               10 Bit    Registers := 6     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 4     
 	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 4     
-	                2 Bit    Registers := 14    
-	                1 Bit    Registers := 80    
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 19    
+	                1 Bit    Registers := 85    
 +---RAMs : 
-	              18K Bit	(256 X 72 bit)          RAMs := 1     
-	              16K Bit	(256 X 67 bit)          RAMs := 1     
+	               8K Bit	(256 X 35 bit)          RAMs := 1     
+	               4K Bit	(256 X 18 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   96 Bit        Muxes := 2     
-	   2 Input   72 Bit        Muxes := 1     
-	   2 Input   67 Bit        Muxes := 1     
-	   2 Input   66 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 9     
 	   2 Input   52 Bit        Muxes := 2     
+	   2 Input   35 Bit        Muxes := 1     
 	   9 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input   18 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
 	   4 Input   12 Bit        Muxes := 2     
-	   2 Input    9 Bit        Muxes := 10    
-	   2 Input    8 Bit        Muxes := 10    
+	   2 Input   10 Bit        Muxes := 5     
+	   2 Input    9 Bit        Muxes := 5     
+	   2 Input    8 Bit        Muxes := 8     
 	   4 Input    8 Bit        Muxes := 2     
-	   2 Input    5 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 8     
 	   3 Input    4 Bit        Muxes := 1     
 	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 11    
-	   2 Input    2 Bit        Muxes := 49    
-	   3 Input    2 Bit        Muxes := 21    
-	   4 Input    2 Bit        Muxes := 6     
-	   5 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 61    
+	   2 Input    3 Bit        Muxes := 8     
+	   2 Input    2 Bit        Muxes := 59    
+	   3 Input    2 Bit        Muxes := 23    
+	   4 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 81    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -306,25 +307,25 @@ WARNING: [Synth 8-7129] Port I_ARBURST[1] in module mem_read_top_rfi_C_gmem_m_ax
 WARNING: [Synth 8-7129] Port I_ARBURST[0] in module mem_read_top_rfi_C_gmem_m_axi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port I_ARLOCK[1] in module mem_read_top_rfi_C_gmem_m_axi is either unconnected or has no load
 WARNING: [Synth 8-7129] Port I_ARLOCK[0] in module mem_read_top_rfi_C_gmem_m_axi is either unconnected or has no load
-WARNING: [Synth 8-7257] Removed RAM (bus_write/buff_wdata/mem_reg) due to inactive write enable.
-WARNING: [Synth 8-6014] Unused sequential element bus_write/buff_wdata/mem_reg was removed. 
+WARNING: [Synth 8-7257] Removed RAM (gmem_m_axi_U/bus_write/buff_wdata/mem_reg) due to inactive write enable.
+WARNING: [Synth 8-6014] Unused sequential element gmem_m_axi_U/bus_write/buff_wdata/mem_reg was removed. 
 WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module mem_read_top_rfi_C.
 WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module mem_read_top_rfi_C.
-WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/FSM_sequential_state_reg[1]) is unused and will be removed from module mem_read_top_rfi_C_gmem_m_axi.
-WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/FSM_sequential_state_reg[0]) is unused and will be removed from module mem_read_top_rfi_C_gmem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (gmem_m_axi_U/bus_write/rs_wreq/FSM_sequential_state_reg[1]) is unused and will be removed from module mem_read_top_rfi_C.
+WARNING: [Synth 8-3332] Sequential element (gmem_m_axi_U/bus_write/rs_wreq/FSM_sequential_state_reg[0]) is unused and will be removed from module mem_read_top_rfi_C.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4061 ; free virtual = 17695
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2825 ; free virtual = 18299
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Preliminary Mapping Report (see note below)
-+------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name       | RTL Object                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|inst/gmem_m_axi_U | bus_read/buff_rdata/mem_reg | 256 x 67(READ_FIRST)   | W |   | 256 x 67(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-+------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | gmem_m_axi_U/bus_read/buff_rdata/mem_reg | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
@@ -334,24 +335,24 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4064 ; free virtual = 17723
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2911 ; free virtual = 18395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4137 ; free virtual = 17784
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2860 ; free virtual = 18345
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name       | RTL Object                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|inst/gmem_m_axi_U | bus_read/buff_rdata/mem_reg | 256 x 67(READ_FIRST)   | W |   | 256 x 67(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-+------------------+-----------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | gmem_m_axi_U/bus_read/buff_rdata/mem_reg | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -361,7 +362,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4081 ; free virtual = 17728
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2808 ; free virtual = 18293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -379,37 +380,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4061 ; free virtual = 17708
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2647 ; free virtual = 18132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4061 ; free virtual = 17708
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2647 ; free virtual = 18132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4060 ; free virtual = 17707
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2641 ; free virtual = 18127
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4060 ; free virtual = 17707
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2641 ; free virtual = 18127
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4060 ; free virtual = 17707
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2641 ; free virtual = 18127
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4060 ; free virtual = 17707
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2641 ; free virtual = 18127
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -419,8 +420,8 @@ Static Shift Register Report:
 +-------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name        | RTL Name                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +-------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|mem_read_top_rfi_C | and_ln56_reg_383_pp0_iter3_reg_reg[0]   | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mem_read_top_rfi_C | and_ln56_1_reg_400_pp0_iter4_reg_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|mem_read_top_rfi_C | and_ln56_reg_380_pp0_iter3_reg_reg[0]   | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|mem_read_top_rfi_C | and_ln56_1_reg_393_pp0_iter4_reg_reg[0] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +-------------------+-----------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 
@@ -428,7 +429,7 @@ Dynamic Shift Register Report:
 +------------+-------------+--------+------------+--------+---------+--------+--------+--------+
 |Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
 +------------+-------------+--------+------------+--------+---------+--------+--------+--------+
-|dsrl        | mem_reg[4]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl        | mem_reg[4]  | 10     | 10         | 10     | 0       | 0      | 0      | 0      | 
 |dsrl__1     | mem_reg[4]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
 |dsrl__2     | mem_reg[14] | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
 |dsrl__3     | mem_reg[4]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
@@ -451,42 +452,42 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |   155|
-|2     |LUT1     |    15|
-|3     |LUT2     |   275|
-|4     |LUT3     |   574|
-|5     |LUT4     |   102|
-|6     |LUT5     |    77|
-|7     |LUT6     |   207|
-|8     |RAMB36E1 |     1|
-|9     |SRL16E   |    64|
-|10    |FDRE     |  1816|
+|1     |CARRY4   |   158|
+|2     |LUT1     |    16|
+|3     |LUT2     |   288|
+|4     |LUT3     |   462|
+|5     |LUT4     |    63|
+|6     |LUT5     |    89|
+|7     |LUT6     |   230|
+|8     |RAMB18E1 |     1|
+|9     |SRL16E   |    72|
+|10    |FDRE     |  1455|
 |11    |FDSE     |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4060 ; free virtual = 17707
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2641 ; free virtual = 18127
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2673.812 ; gain = 0.000 ; free physical = 4113 ; free virtual = 17760
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2673.812 ; gain = 63.934 ; free physical = 4113 ; free virtual = 17760
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2676.746 ; gain = 0.000 ; free physical = 2699 ; free virtual = 18185
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2676.746 ; gain = 63.930 ; free physical = 2698 ; free virtual = 18184
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2673.812 ; gain = 0.000 ; free physical = 4195 ; free virtual = 17842
-INFO: [Netlist 29-17] Analyzing 156 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2676.746 ; gain = 0.000 ; free physical = 2779 ; free virtual = 18264
+INFO: [Netlist 29-17] Analyzing 159 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2673.812 ; gain = 0.000 ; free physical = 4127 ; free virtual = 17774
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2676.746 ; gain = 0.000 ; free physical = 2957 ; free virtual = 18442
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: cac047b8
+Synth Design complete, checksum: 3f21e754
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
+62 Infos, 89 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 2673.812 ; gain = 64.031 ; free physical = 4329 ; free virtual = 17977
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:41 . Memory (MB): peak = 2676.746 ; gain = 64.031 ; free physical = 3155 ; free virtual = 18641
 INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1/design_1_mem_read_top_rfi_C_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_mem_read_top_rfi_C_0_0, cache-ID = 68404866df3882bf
-INFO: [Coretcl 2-1174] Renamed 11 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_mem_read_top_rfi_C_0_0, cache-ID = 97d6979d637096eb
+INFO: [Coretcl 2-1174] Renamed 12 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/design_1_mem_read_top_rfi_C_0_0_synth_1/design_1_mem_read_top_rfi_C_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_mem_read_top_rfi_C_0_0_utilization_synth.rpt -pb design_1_mem_read_top_rfi_C_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul  6 01:45:54 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 24 07:15:59 2023...

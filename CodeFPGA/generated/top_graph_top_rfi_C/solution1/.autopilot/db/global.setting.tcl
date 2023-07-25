@@ -45,12 +45,12 @@ set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../top_graph_top_rfi_C.cpp}
 set SourceFlags {sc {} c -I../include}
 set DirectiveFile /home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1/solution1.directive
-set TBFiles {verilog ../../top_graph_top_rfi_C_testbench.cpp bc ../../top_graph_top_rfi_C_testbench.cpp vhdl ../../top_graph_top_rfi_C_testbench.cpp sc ../../top_graph_top_rfi_C_testbench.cpp cas ../../top_graph_top_rfi_C_testbench.cpp c {}}
+set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
-set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBTops {bc "" c "" sc "" cas "" vhdl "" verilog ""}
+set TBInstNames {bc "" c "" sc "" cas "" vhdl "" verilog ""}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

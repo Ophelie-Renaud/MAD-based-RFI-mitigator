@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:top_graph_top_rfi_C:1.0
-// IP Revision: 2113105842
+// IP Revision: 2113132092
 
 `timescale 1ns/1ps
 
@@ -115,100 +115,100 @@ input wire ap_rst_n;
 input wire raw_data_real_i_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_i_stream TREADY" *)
 output wire raw_data_real_i_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_i_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_i_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_i_stream TDATA" *)
-input wire [63 : 0] raw_data_real_i_stream_TDATA;
+input wire [15 : 0] raw_data_real_i_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_i_stream TVALID" *)
 input wire raw_data_im_i_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_i_stream TREADY" *)
 output wire raw_data_im_i_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_i_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_i_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_i_stream TDATA" *)
-input wire [63 : 0] raw_data_im_i_stream_TDATA;
+input wire [15 : 0] raw_data_im_i_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_o_stream TVALID" *)
 output wire raw_data_im_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_o_stream TREADY" *)
 input wire raw_data_im_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_o_stream TDATA" *)
-output wire [63 : 0] raw_data_im_o_stream_TDATA;
+output wire [15 : 0] raw_data_im_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_o_stream TVALID" *)
 output wire raw_data_real_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_o_stream TREADY" *)
 input wire raw_data_real_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_o_stream TDATA" *)
-output wire [63 : 0] raw_data_real_o_stream_TDATA;
+output wire [15 : 0] raw_data_real_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 mad_R_o_stream TVALID" *)
 output wire mad_R_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 mad_R_o_stream TREADY" *)
 input wire mad_R_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mad_R_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mad_R_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 mad_R_o_stream TDATA" *)
-output wire [63 : 0] mad_R_o_stream_TDATA;
+output wire [15 : 0] mad_R_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_1_o_stream TVALID" *)
 output wire raw_data_real_1_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_1_o_stream TREADY" *)
 input wire raw_data_real_1_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_1_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_real_1_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_real_1_o_stream TDATA" *)
-output wire [63 : 0] raw_data_real_1_o_stream_TDATA;
+output wire [15 : 0] raw_data_real_1_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 std_R_o_stream TVALID" *)
 output wire std_R_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 std_R_o_stream TREADY" *)
 input wire std_R_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME std_R_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME std_R_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 std_R_o_stream TDATA" *)
-output wire [63 : 0] std_R_o_stream_TDATA;
+output wire [15 : 0] std_R_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_1_o_stream TVALID" *)
 output wire raw_data_im_1_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_1_o_stream TREADY" *)
 input wire raw_data_im_1_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_1_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME raw_data_im_1_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 raw_data_im_1_o_stream TDATA" *)
-output wire [63 : 0] raw_data_im_1_o_stream_TDATA;
+output wire [15 : 0] raw_data_im_1_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 mad_I_o_stream TVALID" *)
 output wire mad_I_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 mad_I_o_stream TREADY" *)
 input wire mad_I_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mad_I_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME mad_I_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 mad_I_o_stream TDATA" *)
-output wire [63 : 0] mad_I_o_stream_TDATA;
+output wire [15 : 0] mad_I_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 std_I_o_stream TVALID" *)
 output wire std_I_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 std_I_o_stream TREADY" *)
 input wire std_I_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME std_I_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME std_I_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 std_I_o_stream TDATA" *)
-output wire [63 : 0] std_I_o_stream_TDATA;
+output wire [15 : 0] std_I_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_im_0_o_stream TVALID" *)
 output wire filtered_im_0_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_im_0_o_stream TREADY" *)
 input wire filtered_im_0_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_im_0_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_im_0_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_im_0_o_stream TDATA" *)
-output wire [63 : 0] filtered_im_0_o_stream_TDATA;
+output wire [15 : 0] filtered_im_0_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_real_0_o_stream TVALID" *)
 output wire filtered_real_0_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_real_0_o_stream TREADY" *)
 input wire filtered_real_0_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_real_0_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_real_0_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_real_0_o_stream TDATA" *)
-output wire [63 : 0] filtered_real_0_o_stream_TDATA;
+output wire [15 : 0] filtered_real_0_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_im_1_o_stream TVALID" *)
 output wire filtered_im_1_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_im_1_o_stream TREADY" *)
 input wire filtered_im_1_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_im_1_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_im_1_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_im_1_o_stream TDATA" *)
-output wire [63 : 0] filtered_im_1_o_stream_TDATA;
+output wire [15 : 0] filtered_im_1_o_stream_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_real_1_o_stream TVALID" *)
 output wire filtered_real_1_o_stream_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_real_1_o_stream TREADY" *)
 input wire filtered_real_1_o_stream_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_real_1_o_stream, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME filtered_real_1_o_stream, TDATA_NUM_BYTES 2, TUSER_WIDTH 0, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 filtered_real_1_o_stream TDATA" *)
-output wire [63 : 0] filtered_real_1_o_stream_TDATA;
+output wire [15 : 0] filtered_real_1_o_stream_TDATA;
 
 (* SDX_KERNEL = "true" *)
 (* SDX_KERNEL_TYPE = "hls" *)

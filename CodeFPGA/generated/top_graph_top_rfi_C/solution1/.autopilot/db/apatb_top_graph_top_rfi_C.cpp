@@ -286,7 +286,7 @@ static bool RTLOutputCheckAndReplacement(std::string &AESL_token, std::string Po
     err = true, AESL_token.replace(x_found, 1, "0");
   
   return err;}
-struct __cosim_s8__ { char data[8]; };
+struct __cosim_s2__ { char data[2]; };
 extern "C" void top_graph_top_rfi_C_hw_stub_wrapper(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
 
 extern "C" void apatb_top_graph_top_rfi_C_hw(volatile void * __xlx_apatb_param_raw_data_real_i_stream, volatile void * __xlx_apatb_param_raw_data_im_i_stream, volatile void * __xlx_apatb_param_raw_data_im_o_stream, volatile void * __xlx_apatb_param_raw_data_real_o_stream, volatile void * __xlx_apatb_param_mad_R_o_stream, volatile void * __xlx_apatb_param_raw_data_real_1_o_stream, volatile void * __xlx_apatb_param_std_R_o_stream, volatile void * __xlx_apatb_param_raw_data_im_1_o_stream, volatile void * __xlx_apatb_param_mad_I_o_stream, volatile void * __xlx_apatb_param_std_I_o_stream, volatile void * __xlx_apatb_param_filtered_im_0_o_stream, volatile void * __xlx_apatb_param_filtered_real_0_o_stream, volatile void * __xlx_apatb_param_filtered_im_1_o_stream, volatile void * __xlx_apatb_param_filtered_real_1_o_stream) {
@@ -332,7 +332,7 @@ long __xlx_apatb_param_raw_data_real_i_stream_stream_buf_final_size;
         } // end transaction
       } // end file is good
     } // end post check logic bolck
-  for (long i = 0; i < __xlx_apatb_param_raw_data_real_i_stream_stream_buf_final_size; ++i)((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_i_stream)->read();
+  for (long i = 0; i < __xlx_apatb_param_raw_data_real_i_stream_stream_buf_final_size; ++i)((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_i_stream)->read();
 long __xlx_apatb_param_raw_data_im_i_stream_stream_buf_final_size;
 {
       static ifstream rtl_tv_out_file;
@@ -363,7 +363,7 @@ long __xlx_apatb_param_raw_data_im_i_stream_stream_buf_final_size;
         } // end transaction
       } // end file is good
     } // end post check logic bolck
-  for (long i = 0; i < __xlx_apatb_param_raw_data_im_i_stream_stream_buf_final_size; ++i)((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_i_stream)->read();
+  for (long i = 0; i < __xlx_apatb_param_raw_data_im_i_stream_stream_buf_final_size; ++i)((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_i_stream)->read();
 long __xlx_apatb_param_raw_data_im_o_stream_stream_buf_final_size;
 {
       static ifstream rtl_tv_out_file;
@@ -413,7 +413,7 @@ long __xlx_apatb_param_raw_data_im_o_stream_stream_buf_final_size;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > raw_data_im_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > raw_data_im_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -438,16 +438,10 @@ long __xlx_apatb_param_raw_data_im_o_stream_stream_buf_final_size;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = raw_data_im_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = raw_data_im_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = raw_data_im_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = raw_data_im_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = raw_data_im_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = raw_data_im_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = raw_data_im_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = raw_data_im_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = raw_data_im_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = raw_data_im_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -502,7 +496,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > raw_data_real_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > raw_data_real_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -527,16 +521,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = raw_data_real_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = raw_data_real_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = raw_data_real_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = raw_data_real_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = raw_data_real_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = raw_data_real_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = raw_data_real_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = raw_data_real_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = raw_data_real_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = raw_data_real_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -591,7 +579,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > mad_R_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > mad_R_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -616,16 +604,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = mad_R_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = mad_R_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = mad_R_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = mad_R_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = mad_R_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = mad_R_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = mad_R_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = mad_R_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_R_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = mad_R_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = mad_R_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_R_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -680,7 +662,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > raw_data_real_1_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > raw_data_real_1_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -705,16 +687,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = raw_data_real_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = raw_data_real_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = raw_data_real_1_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = raw_data_real_1_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = raw_data_real_1_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = raw_data_real_1_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = raw_data_real_1_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = raw_data_real_1_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = raw_data_real_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = raw_data_real_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -769,7 +745,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > std_R_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > std_R_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -794,16 +770,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = std_R_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = std_R_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = std_R_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = std_R_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = std_R_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = std_R_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = std_R_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = std_R_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_R_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = std_R_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = std_R_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_R_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -858,7 +828,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > raw_data_im_1_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > raw_data_im_1_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -883,16 +853,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = raw_data_im_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = raw_data_im_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = raw_data_im_1_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = raw_data_im_1_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = raw_data_im_1_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = raw_data_im_1_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = raw_data_im_1_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = raw_data_im_1_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = raw_data_im_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = raw_data_im_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -947,7 +911,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > mad_I_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > mad_I_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -972,16 +936,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = mad_I_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = mad_I_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = mad_I_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = mad_I_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = mad_I_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = mad_I_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = mad_I_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = mad_I_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_I_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = mad_I_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = mad_I_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_I_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -1036,7 +994,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > std_I_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > std_I_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -1061,16 +1019,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = std_I_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = std_I_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = std_I_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = std_I_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = std_I_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = std_I_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = std_I_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = std_I_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_I_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = std_I_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = std_I_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_I_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -1125,7 +1077,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > filtered_im_0_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > filtered_im_0_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -1150,16 +1102,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = filtered_im_0_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = filtered_im_0_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = filtered_im_0_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = filtered_im_0_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = filtered_im_0_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = filtered_im_0_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = filtered_im_0_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = filtered_im_0_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_0_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = filtered_im_0_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = filtered_im_0_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_0_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -1214,7 +1160,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > filtered_real_0_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > filtered_real_0_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -1239,16 +1185,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = filtered_real_0_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = filtered_real_0_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = filtered_real_0_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = filtered_real_0_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = filtered_real_0_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = filtered_real_0_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = filtered_real_0_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = filtered_real_0_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_0_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = filtered_real_0_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = filtered_real_0_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_0_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -1303,7 +1243,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > filtered_im_1_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > filtered_im_1_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -1328,16 +1268,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = filtered_im_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = filtered_im_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = filtered_im_1_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = filtered_im_1_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = filtered_im_1_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = filtered_im_1_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = filtered_im_1_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = filtered_im_1_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_1_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = filtered_im_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = filtered_im_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_1_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -1392,7 +1326,7 @@ __cosim_s8__ xlx_stream_elt;
           exit(1);
         }
         if (atoi(AESL_num.c_str()) == AESL_transaction_pc) {
-          std::vector<sc_bv<64> > filtered_real_1_o_stream_pc_buffer;
+          std::vector<sc_bv<16> > filtered_real_1_o_stream_pc_buffer;
           int i = 0;
           bool has_unknown_value = false;
           rtl_tv_out_file >> AESL_token; //data
@@ -1417,16 +1351,10 @@ __cosim_s8__ xlx_stream_elt;
           }
   
           if (i > 0) {for (int j = 0, e = i; j != e; ++j) {
-__cosim_s8__ xlx_stream_elt;
-((char*)&xlx_stream_elt)[0*8+0] = filtered_real_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
-((char*)&xlx_stream_elt)[0*8+1] = filtered_real_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
-((char*)&xlx_stream_elt)[0*8+2] = filtered_real_1_o_stream_pc_buffer[j].range(23, 16).to_int64();
-((char*)&xlx_stream_elt)[0*8+3] = filtered_real_1_o_stream_pc_buffer[j].range(31, 24).to_int64();
-((char*)&xlx_stream_elt)[0*8+4] = filtered_real_1_o_stream_pc_buffer[j].range(39, 32).to_int64();
-((char*)&xlx_stream_elt)[0*8+5] = filtered_real_1_o_stream_pc_buffer[j].range(47, 40).to_int64();
-((char*)&xlx_stream_elt)[0*8+6] = filtered_real_1_o_stream_pc_buffer[j].range(55, 48).to_int64();
-((char*)&xlx_stream_elt)[0*8+7] = filtered_real_1_o_stream_pc_buffer[j].range(63, 56).to_int64();
-((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_1_o_stream)->write(xlx_stream_elt);
+__cosim_s2__ xlx_stream_elt;
+((char*)&xlx_stream_elt)[0*2+0] = filtered_real_1_o_stream_pc_buffer[j].range(7, 0).to_int64();
+((char*)&xlx_stream_elt)[0*2+1] = filtered_real_1_o_stream_pc_buffer[j].range(15, 8).to_int64();
+((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_1_o_stream)->write(xlx_stream_elt);
 }
 }
         } // end transaction
@@ -1469,57 +1397,57 @@ aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_filtered_im_1_o_stream);
 aesl_fh.touch(WRAPC_STREAM_SIZE_OUT_filtered_real_1_o_stream);
 aesl_fh.touch(WRAPC_STREAM_EGRESS_STATUS_filtered_real_1_o_stream);
 CodeState = DUMP_INPUTS;
-std::vector<__cosim_s8__> __xlx_apatb_param_raw_data_real_i_stream_stream_buf;
+std::vector<__cosim_s2__> __xlx_apatb_param_raw_data_real_i_stream_stream_buf;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_i_stream)->empty())
-    __xlx_apatb_param_raw_data_real_i_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_i_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_i_stream)->empty())
+    __xlx_apatb_param_raw_data_real_i_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_i_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_raw_data_real_i_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_i_stream)->write(__xlx_apatb_param_raw_data_real_i_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_i_stream)->write(__xlx_apatb_param_raw_data_real_i_stream_stream_buf[i]);
   }
-long __xlx_apatb_param_raw_data_real_i_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_i_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_raw_data_im_i_stream_stream_buf;
+long __xlx_apatb_param_raw_data_real_i_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_i_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_raw_data_im_i_stream_stream_buf;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_i_stream)->empty())
-    __xlx_apatb_param_raw_data_im_i_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_i_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_i_stream)->empty())
+    __xlx_apatb_param_raw_data_im_i_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_i_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_raw_data_im_i_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_i_stream)->write(__xlx_apatb_param_raw_data_im_i_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_i_stream)->write(__xlx_apatb_param_raw_data_im_i_stream_stream_buf[i]);
   }
-long __xlx_apatb_param_raw_data_im_i_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_i_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_raw_data_im_o_stream_stream_buf;
-long __xlx_apatb_param_raw_data_im_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_raw_data_real_o_stream_stream_buf;
-long __xlx_apatb_param_raw_data_real_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_mad_R_o_stream_stream_buf;
-long __xlx_apatb_param_mad_R_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_R_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf;
-long __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_std_R_o_stream_stream_buf;
-long __xlx_apatb_param_std_R_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_R_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf;
-long __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_mad_I_o_stream_stream_buf;
-long __xlx_apatb_param_mad_I_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_I_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_std_I_o_stream_stream_buf;
-long __xlx_apatb_param_std_I_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_I_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_filtered_im_0_o_stream_stream_buf;
-long __xlx_apatb_param_filtered_im_0_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_0_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_filtered_real_0_o_stream_stream_buf;
-long __xlx_apatb_param_filtered_real_0_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_0_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_filtered_im_1_o_stream_stream_buf;
-long __xlx_apatb_param_filtered_im_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_1_o_stream)->size();
-std::vector<__cosim_s8__> __xlx_apatb_param_filtered_real_1_o_stream_stream_buf;
-long __xlx_apatb_param_filtered_real_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_1_o_stream)->size();
+long __xlx_apatb_param_raw_data_im_i_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_i_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_raw_data_im_o_stream_stream_buf;
+long __xlx_apatb_param_raw_data_im_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_raw_data_real_o_stream_stream_buf;
+long __xlx_apatb_param_raw_data_real_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_mad_R_o_stream_stream_buf;
+long __xlx_apatb_param_mad_R_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_R_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf;
+long __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_std_R_o_stream_stream_buf;
+long __xlx_apatb_param_std_R_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_R_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf;
+long __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_mad_I_o_stream_stream_buf;
+long __xlx_apatb_param_mad_I_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_I_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_std_I_o_stream_stream_buf;
+long __xlx_apatb_param_std_I_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_I_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_filtered_im_0_o_stream_stream_buf;
+long __xlx_apatb_param_filtered_im_0_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_0_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_filtered_real_0_o_stream_stream_buf;
+long __xlx_apatb_param_filtered_real_0_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_0_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_filtered_im_1_o_stream_stream_buf;
+long __xlx_apatb_param_filtered_im_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_1_o_stream)->size();
+std::vector<__cosim_s2__> __xlx_apatb_param_filtered_real_1_o_stream_stream_buf;
+long __xlx_apatb_param_filtered_real_1_o_stream_stream_buf_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_1_o_stream)->size();
 CodeState = CALL_C_DUT;
 top_graph_top_rfi_C_hw_stub_wrapper(__xlx_apatb_param_raw_data_real_i_stream, __xlx_apatb_param_raw_data_im_i_stream, __xlx_apatb_param_raw_data_im_o_stream, __xlx_apatb_param_raw_data_real_o_stream, __xlx_apatb_param_mad_R_o_stream, __xlx_apatb_param_raw_data_real_1_o_stream, __xlx_apatb_param_std_R_o_stream, __xlx_apatb_param_raw_data_im_1_o_stream, __xlx_apatb_param_mad_I_o_stream, __xlx_apatb_param_std_I_o_stream, __xlx_apatb_param_filtered_im_0_o_stream, __xlx_apatb_param_filtered_real_0_o_stream, __xlx_apatb_param_filtered_im_1_o_stream, __xlx_apatb_param_filtered_real_1_o_stream);
 CodeState = DUMP_OUTPUTS;
-long __xlx_apatb_param_raw_data_real_i_stream_stream_buf_final_size = __xlx_apatb_param_raw_data_real_i_stream_stream_buf_size - ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_i_stream)->size();
+long __xlx_apatb_param_raw_data_real_i_stream_stream_buf_final_size = __xlx_apatb_param_raw_data_real_i_stream_stream_buf_size - ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_i_stream)->size();
 // print raw_data_real_i_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVIN_raw_data_real_i_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_raw_data_real_i_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv_hw;
-sc_bv<64> __xlx_tmp_lv;
-__xlx_tmp_lv = ((long long*)&__xlx_apatb_param_raw_data_real_i_stream_stream_buf[j])[0];
+sc_bv<16> __xlx_tmp_lv_hw;
+sc_bv<16> __xlx_tmp_lv;
+__xlx_tmp_lv = ((short*)&__xlx_apatb_param_raw_data_real_i_stream_stream_buf[j])[0];
 __xlx_tmp_lv_hw = __xlx_tmp_lv;
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv_hw.to_string(SC_HEX).c_str());
@@ -1556,14 +1484,14 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_raw_data_real_i_s
  aesl_fh.write(WRAPC_STREAM_SIZE_IN_raw_data_real_i_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_IN_raw_data_real_i_stream, end_str());
 }
-long __xlx_apatb_param_raw_data_im_i_stream_stream_buf_final_size = __xlx_apatb_param_raw_data_im_i_stream_stream_buf_size - ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_i_stream)->size();
+long __xlx_apatb_param_raw_data_im_i_stream_stream_buf_final_size = __xlx_apatb_param_raw_data_im_i_stream_stream_buf_size - ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_i_stream)->size();
 // print raw_data_im_i_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVIN_raw_data_im_i_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_raw_data_im_i_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv_hw;
-sc_bv<64> __xlx_tmp_lv;
-__xlx_tmp_lv = ((long long*)&__xlx_apatb_param_raw_data_im_i_stream_stream_buf[j])[0];
+sc_bv<16> __xlx_tmp_lv_hw;
+sc_bv<16> __xlx_tmp_lv;
+__xlx_tmp_lv = ((short*)&__xlx_apatb_param_raw_data_im_i_stream_stream_buf[j])[0];
 __xlx_tmp_lv_hw = __xlx_tmp_lv;
 
     sprintf(__xlx_sprintf_buffer.data(), "%s\n", __xlx_tmp_lv_hw.to_string(SC_HEX).c_str());
@@ -1600,18 +1528,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_raw_data_im_i_str
  aesl_fh.write(WRAPC_STREAM_SIZE_IN_raw_data_im_i_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_IN_raw_data_im_i_stream, end_str());
 }
-long __xlx_apatb_param_raw_data_im_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_o_stream)->size() - __xlx_apatb_param_raw_data_im_o_stream_stream_buf_size;
+long __xlx_apatb_param_raw_data_im_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_o_stream)->size() - __xlx_apatb_param_raw_data_im_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_o_stream)->empty())
-    __xlx_apatb_param_raw_data_im_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_o_stream)->empty())
+    __xlx_apatb_param_raw_data_im_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_raw_data_im_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_o_stream)->write(__xlx_apatb_param_raw_data_im_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_o_stream)->write(__xlx_apatb_param_raw_data_im_o_stream_stream_buf[i]);
   }
 // print raw_data_im_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_raw_data_im_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_raw_data_im_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_raw_data_im_o_stream_stream_buf[__xlx_apatb_param_raw_data_im_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_raw_data_im_o_stream_stream_buf[__xlx_apatb_param_raw_data_im_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_raw_data_im_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1625,18 +1553,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_raw_data_im_o_str
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_im_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_im_o_stream, end_str());
 }
-long __xlx_apatb_param_raw_data_real_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_o_stream)->size() - __xlx_apatb_param_raw_data_real_o_stream_stream_buf_size;
+long __xlx_apatb_param_raw_data_real_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_o_stream)->size() - __xlx_apatb_param_raw_data_real_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_o_stream)->empty())
-    __xlx_apatb_param_raw_data_real_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_o_stream)->empty())
+    __xlx_apatb_param_raw_data_real_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_raw_data_real_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_o_stream)->write(__xlx_apatb_param_raw_data_real_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_o_stream)->write(__xlx_apatb_param_raw_data_real_o_stream_stream_buf[i]);
   }
 // print raw_data_real_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_raw_data_real_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_raw_data_real_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_raw_data_real_o_stream_stream_buf[__xlx_apatb_param_raw_data_real_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_raw_data_real_o_stream_stream_buf[__xlx_apatb_param_raw_data_real_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_raw_data_real_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1650,18 +1578,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_raw_data_real_o_s
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_real_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_real_o_stream, end_str());
 }
-long __xlx_apatb_param_mad_R_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_R_o_stream)->size() - __xlx_apatb_param_mad_R_o_stream_stream_buf_size;
+long __xlx_apatb_param_mad_R_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_R_o_stream)->size() - __xlx_apatb_param_mad_R_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_R_o_stream)->empty())
-    __xlx_apatb_param_mad_R_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_R_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_R_o_stream)->empty())
+    __xlx_apatb_param_mad_R_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_R_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_mad_R_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_R_o_stream)->write(__xlx_apatb_param_mad_R_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_R_o_stream)->write(__xlx_apatb_param_mad_R_o_stream_stream_buf[i]);
   }
 // print mad_R_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_mad_R_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_mad_R_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_mad_R_o_stream_stream_buf[__xlx_apatb_param_mad_R_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_mad_R_o_stream_stream_buf[__xlx_apatb_param_mad_R_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_mad_R_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1675,18 +1603,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_mad_R_o_stream_st
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_mad_R_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_mad_R_o_stream, end_str());
 }
-long __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->size() - __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_size;
+long __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->size() - __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->empty())
-    __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->empty())
+    __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->write(__xlx_apatb_param_raw_data_real_1_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_real_1_o_stream)->write(__xlx_apatb_param_raw_data_real_1_o_stream_stream_buf[i]);
   }
 // print raw_data_real_1_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_raw_data_real_1_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_raw_data_real_1_o_stream_stream_buf[__xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_raw_data_real_1_o_stream_stream_buf[__xlx_apatb_param_raw_data_real_1_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_raw_data_real_1_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1700,18 +1628,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_raw_data_real_1_o
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_real_1_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_real_1_o_stream, end_str());
 }
-long __xlx_apatb_param_std_R_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_R_o_stream)->size() - __xlx_apatb_param_std_R_o_stream_stream_buf_size;
+long __xlx_apatb_param_std_R_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_R_o_stream)->size() - __xlx_apatb_param_std_R_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_R_o_stream)->empty())
-    __xlx_apatb_param_std_R_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_R_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_R_o_stream)->empty())
+    __xlx_apatb_param_std_R_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_R_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_std_R_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_R_o_stream)->write(__xlx_apatb_param_std_R_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_R_o_stream)->write(__xlx_apatb_param_std_R_o_stream_stream_buf[i]);
   }
 // print std_R_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_std_R_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_std_R_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_std_R_o_stream_stream_buf[__xlx_apatb_param_std_R_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_std_R_o_stream_stream_buf[__xlx_apatb_param_std_R_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_std_R_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1725,18 +1653,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_std_R_o_stream_st
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_std_R_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_std_R_o_stream, end_str());
 }
-long __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->size() - __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_size;
+long __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->size() - __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->empty())
-    __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->empty())
+    __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->write(__xlx_apatb_param_raw_data_im_1_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_raw_data_im_1_o_stream)->write(__xlx_apatb_param_raw_data_im_1_o_stream_stream_buf[i]);
   }
 // print raw_data_im_1_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_raw_data_im_1_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_raw_data_im_1_o_stream_stream_buf[__xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_raw_data_im_1_o_stream_stream_buf[__xlx_apatb_param_raw_data_im_1_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_raw_data_im_1_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1750,18 +1678,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_raw_data_im_1_o_s
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_im_1_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_raw_data_im_1_o_stream, end_str());
 }
-long __xlx_apatb_param_mad_I_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_I_o_stream)->size() - __xlx_apatb_param_mad_I_o_stream_stream_buf_size;
+long __xlx_apatb_param_mad_I_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_I_o_stream)->size() - __xlx_apatb_param_mad_I_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_I_o_stream)->empty())
-    __xlx_apatb_param_mad_I_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_I_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_I_o_stream)->empty())
+    __xlx_apatb_param_mad_I_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_I_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_mad_I_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_mad_I_o_stream)->write(__xlx_apatb_param_mad_I_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_mad_I_o_stream)->write(__xlx_apatb_param_mad_I_o_stream_stream_buf[i]);
   }
 // print mad_I_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_mad_I_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_mad_I_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_mad_I_o_stream_stream_buf[__xlx_apatb_param_mad_I_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_mad_I_o_stream_stream_buf[__xlx_apatb_param_mad_I_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_mad_I_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1775,18 +1703,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_mad_I_o_stream_st
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_mad_I_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_mad_I_o_stream, end_str());
 }
-long __xlx_apatb_param_std_I_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_I_o_stream)->size() - __xlx_apatb_param_std_I_o_stream_stream_buf_size;
+long __xlx_apatb_param_std_I_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_I_o_stream)->size() - __xlx_apatb_param_std_I_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_I_o_stream)->empty())
-    __xlx_apatb_param_std_I_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_I_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_I_o_stream)->empty())
+    __xlx_apatb_param_std_I_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_I_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_std_I_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_std_I_o_stream)->write(__xlx_apatb_param_std_I_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_std_I_o_stream)->write(__xlx_apatb_param_std_I_o_stream_stream_buf[i]);
   }
 // print std_I_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_std_I_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_std_I_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_std_I_o_stream_stream_buf[__xlx_apatb_param_std_I_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_std_I_o_stream_stream_buf[__xlx_apatb_param_std_I_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_std_I_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1800,18 +1728,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_std_I_o_stream_st
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_std_I_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_std_I_o_stream, end_str());
 }
-long __xlx_apatb_param_filtered_im_0_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_0_o_stream)->size() - __xlx_apatb_param_filtered_im_0_o_stream_stream_buf_size;
+long __xlx_apatb_param_filtered_im_0_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_0_o_stream)->size() - __xlx_apatb_param_filtered_im_0_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_0_o_stream)->empty())
-    __xlx_apatb_param_filtered_im_0_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_0_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_0_o_stream)->empty())
+    __xlx_apatb_param_filtered_im_0_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_0_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_filtered_im_0_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_0_o_stream)->write(__xlx_apatb_param_filtered_im_0_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_0_o_stream)->write(__xlx_apatb_param_filtered_im_0_o_stream_stream_buf[i]);
   }
 // print filtered_im_0_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_filtered_im_0_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_filtered_im_0_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_filtered_im_0_o_stream_stream_buf[__xlx_apatb_param_filtered_im_0_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_filtered_im_0_o_stream_stream_buf[__xlx_apatb_param_filtered_im_0_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_filtered_im_0_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1825,18 +1753,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_filtered_im_0_o_s
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_filtered_im_0_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_filtered_im_0_o_stream, end_str());
 }
-long __xlx_apatb_param_filtered_real_0_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_0_o_stream)->size() - __xlx_apatb_param_filtered_real_0_o_stream_stream_buf_size;
+long __xlx_apatb_param_filtered_real_0_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_0_o_stream)->size() - __xlx_apatb_param_filtered_real_0_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_0_o_stream)->empty())
-    __xlx_apatb_param_filtered_real_0_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_0_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_0_o_stream)->empty())
+    __xlx_apatb_param_filtered_real_0_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_0_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_filtered_real_0_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_0_o_stream)->write(__xlx_apatb_param_filtered_real_0_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_0_o_stream)->write(__xlx_apatb_param_filtered_real_0_o_stream_stream_buf[i]);
   }
 // print filtered_real_0_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_filtered_real_0_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_filtered_real_0_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_filtered_real_0_o_stream_stream_buf[__xlx_apatb_param_filtered_real_0_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_filtered_real_0_o_stream_stream_buf[__xlx_apatb_param_filtered_real_0_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_filtered_real_0_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1850,18 +1778,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_filtered_real_0_o
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_filtered_real_0_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_filtered_real_0_o_stream, end_str());
 }
-long __xlx_apatb_param_filtered_im_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_1_o_stream)->size() - __xlx_apatb_param_filtered_im_1_o_stream_stream_buf_size;
+long __xlx_apatb_param_filtered_im_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_1_o_stream)->size() - __xlx_apatb_param_filtered_im_1_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_1_o_stream)->empty())
-    __xlx_apatb_param_filtered_im_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_1_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_1_o_stream)->empty())
+    __xlx_apatb_param_filtered_im_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_1_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_filtered_im_1_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_im_1_o_stream)->write(__xlx_apatb_param_filtered_im_1_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_im_1_o_stream)->write(__xlx_apatb_param_filtered_im_1_o_stream_stream_buf[i]);
   }
 // print filtered_im_1_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_filtered_im_1_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_filtered_im_1_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_filtered_im_1_o_stream_stream_buf[__xlx_apatb_param_filtered_im_1_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_filtered_im_1_o_stream_stream_buf[__xlx_apatb_param_filtered_im_1_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_filtered_im_1_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 
@@ -1875,18 +1803,18 @@ sprintf(__xlx_sprintf_buffer.data(), "%d\n", __xlx_apatb_param_filtered_im_1_o_s
  aesl_fh.write(WRAPC_STREAM_SIZE_OUT_filtered_im_1_o_stream, __xlx_sprintf_buffer.data());
 aesl_fh.write(WRAPC_STREAM_SIZE_OUT_filtered_im_1_o_stream, end_str());
 }
-long __xlx_apatb_param_filtered_real_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_1_o_stream)->size() - __xlx_apatb_param_filtered_real_1_o_stream_stream_buf_size;
+long __xlx_apatb_param_filtered_real_1_o_stream_stream_buf_final_size = ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_1_o_stream)->size() - __xlx_apatb_param_filtered_real_1_o_stream_stream_buf_size;
 {
-  while (!((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_1_o_stream)->empty())
-    __xlx_apatb_param_filtered_real_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_1_o_stream)->read());
+  while (!((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_1_o_stream)->empty())
+    __xlx_apatb_param_filtered_real_1_o_stream_stream_buf.push_back(((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_1_o_stream)->read());
   for (int i = 0; i < __xlx_apatb_param_filtered_real_1_o_stream_stream_buf.size(); ++i)
-    ((hls::stream<__cosim_s8__>*)__xlx_apatb_param_filtered_real_1_o_stream)->write(__xlx_apatb_param_filtered_real_1_o_stream_stream_buf[i]);
+    ((hls::stream<__cosim_s2__>*)__xlx_apatb_param_filtered_real_1_o_stream)->write(__xlx_apatb_param_filtered_real_1_o_stream_stream_buf[i]);
   }
 // print filtered_real_1_o_stream Transactions
 {
 aesl_fh.write(AUTOTB_TVOUT_filtered_real_1_o_stream, begin_str(AESL_transaction));
 for (int j = 0, e = __xlx_apatb_param_filtered_real_1_o_stream_stream_buf_final_size; j != e; ++j) {
-sc_bv<64> __xlx_tmp_lv = ((long long*)&__xlx_apatb_param_filtered_real_1_o_stream_stream_buf[__xlx_apatb_param_filtered_real_1_o_stream_stream_buf_size+j])[0];
+sc_bv<16> __xlx_tmp_lv = ((short*)&__xlx_apatb_param_filtered_real_1_o_stream_stream_buf[__xlx_apatb_param_filtered_real_1_o_stream_stream_buf_size+j])[0];
 aesl_fh.write(AUTOTB_TVOUT_filtered_real_1_o_stream, __xlx_tmp_lv.to_string(SC_HEX)+string("\n"));
 }
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'top_graph_top_rfi_C'" level="0">
-<item name = "Date">Thu Jul  6 01:41:55 2023
+<item name = "Date">Tue Jul 25 02:51:45 2023
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">top_graph_top_rfi_C</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.421 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 8.998 ns, 1.00 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">868460, ?, 8.685 ms, ?, 868461, -1, dataflow</column>
+<column name="">65631, 475231, 0.656 ms, 4.752 ms, 65632, 475232, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -33,15 +33,15 @@
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="Brd_Acq_Im_U0">Brd_Acq_Im, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 <column name="Brd_Acq_Real_U0">Brd_Acq_Real, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
-<column name="MADCpt_2048_3_double_U0">MADCpt_2048_3_double_s, 868460, ?, 8.685 ms, ?, 868460, ?, no</column>
-<column name="STDCpt_2048_3_double_U0">STDCpt_2048_3_double_s, 51456, 51456, 0.515 ms, 0.515 ms, 51456, 51456, no</column>
-<column name="Brd_MAD_R_U0">Brd_MAD_R, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="STDCpt_2048_3_ap_int_16_U0">STDCpt_2048_3_ap_int_16_s, 14603, 14603, 0.146 ms, 0.146 ms, 14603, 14603, no</column>
+<column name="MADCpt_2048_3_ap_int_16_U0">MADCpt_2048_3_ap_int_16_s, 65631, 475231, 0.656 ms, 4.752 ms, 65631, 475231, no</column>
 <column name="Brd_STD_R_U0">Brd_STD_R, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="Brd_MAD_R_U0">Brd_MAD_R, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 <column name="Brd_MAD_I_U0">Brd_MAD_I, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 <column name="Brd_STD_I_U0">Brd_STD_I, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
-<column name="RFIFilter_0_2048_double_U0">RFIFilter_0_2048_double_s, 6171, 6171, 61.710 us, 61.710 us, 6171, 6171, no</column>
-<column name="Brd_Res_Real_U0">Brd_Res_Real, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="RFIFilter_0_2048_ap_int_16_U0">RFIFilter_0_2048_ap_int_16_s, 6157, 6157, 61.570 us, 61.570 us, 6157, 6157, no</column>
 <column name="Brd_Res_Im_U0">Brd_Res_Im, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
+<column name="Brd_Res_Real_U0">Brd_Res_Real, 1, 1, 10.000 ns, 10.000 ns, 1, 1, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -59,13 +59,13 @@
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, -, -, -</column>
-<column name="FIFO">288, -, 2608, 1312, -</column>
-<column name="Instance">2238, 115, 25159, 28738, 0</column>
+<column name="FIFO">72, -, 2608, 1312, -</column>
+<column name="Instance">72, 78, 15675, 17283, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, -, -</column>
 <column name="Register">-, -, -, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">902, 52, 26, 56, 0</specialColumn>
+<specialColumn name="Utilization (%)">51, 35, 17, 34, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -80,9 +80,9 @@
 <column name="Brd_Res_Real_U0">Brd_Res_Real, 0, 0, 3, 56, 0</column>
 <column name="Brd_STD_I_U0">Brd_STD_I, 0, 0, 3, 54, 0</column>
 <column name="Brd_STD_R_U0">Brd_STD_R, 0, 0, 3, 54, 0</column>
-<column name="MADCpt_2048_3_double_U0">MADCpt_2048_3_double_s, 2128, 28, 5733, 11049, 0</column>
-<column name="RFIFilter_0_2048_double_U0">RFIFilter_0_2048_double_s, 32, 14, 2199, 3103, 0</column>
-<column name="STDCpt_2048_3_double_U0">STDCpt_2048_3_double_s, 78, 73, 17203, 14092, 0</column>
+<column name="MADCpt_2048_3_ap_int_16_U0">MADCpt_2048_3_ap_int_16_s, 22, 33, 2360, 4965, 0</column>
+<column name="RFIFilter_0_2048_ap_int_16_U0">RFIFilter_0_2048_ap_int_16_s, 8, 0, 249, 828, 0</column>
+<column name="STDCpt_2048_3_ap_int_16_U0">STDCpt_2048_3_ap_int_16_s, 42, 45, 13042, 10996, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -95,22 +95,22 @@
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
-<column name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U">32, 163, 0, -, 8156, 64, 521984</column>
-<column name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U">32, 163, 0, -, 8156, 64, 521984</column>
-<column name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_STD_Computation_std_I_o_Brd_STD_I_in_U">16, 163, 0, -, 4078, 64, 260992</column>
-<column name="stream_STD_Computation_std_R_o_Brd_STD_R_in_U">16, 163, 0, -, 4078, 64, 260992</column>
+<column name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U">8, 163, 0, -, 8156, 16, 130496</column>
+<column name="stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U">8, 163, 0, -, 8156, 16, 130496</column>
+<column name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_STD_Computation_std_I_o_Brd_STD_I_in_U">4, 163, 0, -, 4078, 16, 65248</column>
+<column name="stream_STD_Computation_std_R_o_Brd_STD_R_in_U">4, 163, 0, -, 4078, 16, 65248</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
@@ -136,46 +136,46 @@
 <column name="ap_local_deadlock">out, 1, ap_ctrl_none, top_graph_top_rfi_C, return value</column>
 <column name="ap_clk">in, 1, ap_ctrl_none, top_graph_top_rfi_C, return value</column>
 <column name="ap_rst_n">in, 1, ap_ctrl_none, top_graph_top_rfi_C, return value</column>
-<column name="raw_data_real_i_stream_TDATA">in, 64, axis, raw_data_real_i_stream, pointer</column>
+<column name="raw_data_real_i_stream_TDATA">in, 16, axis, raw_data_real_i_stream, pointer</column>
 <column name="raw_data_real_i_stream_TVALID">in, 1, axis, raw_data_real_i_stream, pointer</column>
 <column name="raw_data_real_i_stream_TREADY">out, 1, axis, raw_data_real_i_stream, pointer</column>
-<column name="raw_data_im_i_stream_TDATA">in, 64, axis, raw_data_im_i_stream, pointer</column>
+<column name="raw_data_im_i_stream_TDATA">in, 16, axis, raw_data_im_i_stream, pointer</column>
 <column name="raw_data_im_i_stream_TVALID">in, 1, axis, raw_data_im_i_stream, pointer</column>
 <column name="raw_data_im_i_stream_TREADY">out, 1, axis, raw_data_im_i_stream, pointer</column>
-<column name="raw_data_im_o_stream_TDATA">out, 64, axis, raw_data_im_o_stream, pointer</column>
+<column name="raw_data_im_o_stream_TDATA">out, 16, axis, raw_data_im_o_stream, pointer</column>
 <column name="raw_data_im_o_stream_TVALID">out, 1, axis, raw_data_im_o_stream, pointer</column>
 <column name="raw_data_im_o_stream_TREADY">in, 1, axis, raw_data_im_o_stream, pointer</column>
-<column name="raw_data_real_o_stream_TDATA">out, 64, axis, raw_data_real_o_stream, pointer</column>
+<column name="raw_data_real_o_stream_TDATA">out, 16, axis, raw_data_real_o_stream, pointer</column>
 <column name="raw_data_real_o_stream_TVALID">out, 1, axis, raw_data_real_o_stream, pointer</column>
 <column name="raw_data_real_o_stream_TREADY">in, 1, axis, raw_data_real_o_stream, pointer</column>
-<column name="mad_R_o_stream_TDATA">out, 64, axis, mad_R_o_stream, pointer</column>
+<column name="mad_R_o_stream_TDATA">out, 16, axis, mad_R_o_stream, pointer</column>
 <column name="mad_R_o_stream_TVALID">out, 1, axis, mad_R_o_stream, pointer</column>
 <column name="mad_R_o_stream_TREADY">in, 1, axis, mad_R_o_stream, pointer</column>
-<column name="raw_data_real_1_o_stream_TDATA">out, 64, axis, raw_data_real_1_o_stream, pointer</column>
+<column name="raw_data_real_1_o_stream_TDATA">out, 16, axis, raw_data_real_1_o_stream, pointer</column>
 <column name="raw_data_real_1_o_stream_TVALID">out, 1, axis, raw_data_real_1_o_stream, pointer</column>
 <column name="raw_data_real_1_o_stream_TREADY">in, 1, axis, raw_data_real_1_o_stream, pointer</column>
-<column name="std_R_o_stream_TDATA">out, 64, axis, std_R_o_stream, pointer</column>
+<column name="std_R_o_stream_TDATA">out, 16, axis, std_R_o_stream, pointer</column>
 <column name="std_R_o_stream_TVALID">out, 1, axis, std_R_o_stream, pointer</column>
 <column name="std_R_o_stream_TREADY">in, 1, axis, std_R_o_stream, pointer</column>
-<column name="raw_data_im_1_o_stream_TDATA">out, 64, axis, raw_data_im_1_o_stream, pointer</column>
+<column name="raw_data_im_1_o_stream_TDATA">out, 16, axis, raw_data_im_1_o_stream, pointer</column>
 <column name="raw_data_im_1_o_stream_TVALID">out, 1, axis, raw_data_im_1_o_stream, pointer</column>
 <column name="raw_data_im_1_o_stream_TREADY">in, 1, axis, raw_data_im_1_o_stream, pointer</column>
-<column name="mad_I_o_stream_TDATA">out, 64, axis, mad_I_o_stream, pointer</column>
+<column name="mad_I_o_stream_TDATA">out, 16, axis, mad_I_o_stream, pointer</column>
 <column name="mad_I_o_stream_TVALID">out, 1, axis, mad_I_o_stream, pointer</column>
 <column name="mad_I_o_stream_TREADY">in, 1, axis, mad_I_o_stream, pointer</column>
-<column name="std_I_o_stream_TDATA">out, 64, axis, std_I_o_stream, pointer</column>
+<column name="std_I_o_stream_TDATA">out, 16, axis, std_I_o_stream, pointer</column>
 <column name="std_I_o_stream_TVALID">out, 1, axis, std_I_o_stream, pointer</column>
 <column name="std_I_o_stream_TREADY">in, 1, axis, std_I_o_stream, pointer</column>
-<column name="filtered_im_0_o_stream_TDATA">out, 64, axis, filtered_im_0_o_stream, pointer</column>
+<column name="filtered_im_0_o_stream_TDATA">out, 16, axis, filtered_im_0_o_stream, pointer</column>
 <column name="filtered_im_0_o_stream_TVALID">out, 1, axis, filtered_im_0_o_stream, pointer</column>
 <column name="filtered_im_0_o_stream_TREADY">in, 1, axis, filtered_im_0_o_stream, pointer</column>
-<column name="filtered_real_0_o_stream_TDATA">out, 64, axis, filtered_real_0_o_stream, pointer</column>
+<column name="filtered_real_0_o_stream_TDATA">out, 16, axis, filtered_real_0_o_stream, pointer</column>
 <column name="filtered_real_0_o_stream_TVALID">out, 1, axis, filtered_real_0_o_stream, pointer</column>
 <column name="filtered_real_0_o_stream_TREADY">in, 1, axis, filtered_real_0_o_stream, pointer</column>
-<column name="filtered_im_1_o_stream_TDATA">out, 64, axis, filtered_im_1_o_stream, pointer</column>
+<column name="filtered_im_1_o_stream_TDATA">out, 16, axis, filtered_im_1_o_stream, pointer</column>
 <column name="filtered_im_1_o_stream_TVALID">out, 1, axis, filtered_im_1_o_stream, pointer</column>
 <column name="filtered_im_1_o_stream_TREADY">in, 1, axis, filtered_im_1_o_stream, pointer</column>
-<column name="filtered_real_1_o_stream_TDATA">out, 64, axis, filtered_real_1_o_stream, pointer</column>
+<column name="filtered_real_1_o_stream_TDATA">out, 16, axis, filtered_real_1_o_stream, pointer</column>
 <column name="filtered_real_1_o_stream_TVALID">out, 1, axis, filtered_real_1_o_stream, pointer</column>
 <column name="filtered_real_1_o_stream_TREADY">in, 1, axis, filtered_real_1_o_stream, pointer</column>
 </table>

@@ -35,18 +35,20 @@
             <port annotation="NONE" expr="N_BLOCKS*N_SAMPLES"
                 kind="output" name="raw_data_im_o"/>
         </node>
-        <node id="raw_data_real" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_real"/>
+        <node id="snk_raw_data_im" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="in"/>
         </node>
-        <node id="raw_data_im" kind="snk">
-            <port annotation="NONE" expr="SIZE" kind="input" name="raw_data_im"/>
+        <node id="snk_raw_data_real" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="input" name="in"/>
         </node>
         <edge kind="fifo" source="Data_Acquisition"
-            sourceport="raw_data_real_o" target="raw_data_real"
-            targetport="raw_data_real" type="void"/>
+            sourceport="raw_data_real_o"
+            target="snk_raw_data_real" targetport="in" type="ap_int&lt;16>"/>
         <edge kind="fifo" source="Data_Acquisition"
-            sourceport="raw_data_im_o" target="raw_data_im"
-            targetport="raw_data_im" type="void"/>
+            sourceport="raw_data_im_o" target="snk_raw_data_im"
+            targetport="in" type="ap_int&lt;16>"/>
         <edge kind="dependency" source="N_BLOCKS" target="SIZE"/>
         <edge kind="dependency" source="N_SAMPLES" target="SIZE"/>
         <edge kind="dependency" source="HEADER_SIZE"
@@ -57,7 +59,9 @@
             target="Data_Acquisition" targetport="N_SAMPLES"/>
         <edge kind="dependency" source="SIZE"
             target="Data_Acquisition" targetport="SIZE"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_im"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_real"/>
+        <edge kind="dependency" source="SIZE"
+            target="snk_raw_data_im" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="snk_raw_data_real" targetport="SIZE"/>
     </graph>
 </graphml>

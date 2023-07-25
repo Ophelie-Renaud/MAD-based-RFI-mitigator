@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Brd_Res_Real'" level="0">
-<item name = "Date">Thu Jul  6 01:41:55 2023
+<item name = "Date">Tue Jul 25 02:51:44 2023
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
 <item name = "Project">top_graph_top_rfi_C</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 3.507 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 3.507 ns, 1.00 ns</column>
 </table>
 </item>
 </section>
@@ -111,13 +111,13 @@
 <column name="ap_continue">in, 1, ap_ctrl_hs, Brd_Res_Real, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, Brd_Res_Real, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, Brd_Res_Real, return value</column>
-<column name="filtered_real_1_o_stream_TDATA">out, 64, axis, filtered_real_1_o_stream, pointer</column>
+<column name="filtered_real_1_o_stream_TDATA">out, 16, axis, filtered_real_1_o_stream, pointer</column>
 <column name="filtered_real_1_o_stream_TVALID">out, 1, axis, filtered_real_1_o_stream, pointer</column>
 <column name="filtered_real_1_o_stream_TREADY">in, 1, axis, filtered_real_1_o_stream, pointer</column>
-<column name="filtered_real_0_o_stream_TDATA">out, 64, axis, filtered_real_0_o_stream, pointer</column>
+<column name="filtered_real_0_o_stream_TDATA">out, 16, axis, filtered_real_0_o_stream, pointer</column>
 <column name="filtered_real_0_o_stream_TVALID">out, 1, axis, filtered_real_0_o_stream, pointer</column>
 <column name="filtered_real_0_o_stream_TREADY">in, 1, axis, filtered_real_0_o_stream, pointer</column>
-<column name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout">in, 64, ap_fifo, stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, pointer</column>
+<column name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout">in, 16, ap_fifo, stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, pointer</column>
 <column name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n">in, 1, ap_fifo, stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, pointer</column>
 <column name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read">out, 1, ap_fifo, stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, pointer</column>
 </table>

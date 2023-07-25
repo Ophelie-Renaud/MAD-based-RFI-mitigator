@@ -6,7 +6,7 @@
 <Project Version="7" Minor="56" Path="/home/orenaud/preesm2/RFI/CodeFPGA/generated/top_graph_top_rfi_C/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="3f025bd893834d21bd8b85bdfe5e99dd"/>
+    <Option Name="Id" Val="9d402ba08a494114ad4cab6d8ef95253"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -85,27 +85,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -127,14 +106,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip.xci">
+      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

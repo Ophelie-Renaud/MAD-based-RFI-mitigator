@@ -4,7 +4,7 @@
     <dftools:task pluginId="pisdf-synthesis.fpga-estimations" taskId="FPGA analysis">
         <dftools:data key="variables">
             <dftools:variable name="Fifo evaluator: " value="adfgFifoEvalExact"/>
-            <dftools:variable name="Pack tokens ?" value="false"/>
+            <dftools:variable name="Pack tokens ?" value="yes"/>
             <dftools:variable name="Show schedule ?" value="false"/>
         </dftools:data>
     </dftools:task>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600333295">
-  <ports id="1" name="raw_data_im_i_stream" type="PortType" coreId="3789714224" bitwidth="64">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690246297496">
+  <ports id="1" name="raw_data_im_i_stream" type="PortType" coreId="3789714224" bitwidth="16">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="raw_data_im_o_stream" type="PortType" coreId="3204272208" bitwidth="64" direction="DirOut">
+  <ports id="2" name="raw_data_im_o_stream" type="PortType" coreId="547174944" bitwidth="16" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="3" name="raw_data_im_1_o_stream" type="PortType" coreId="1139933544" bitwidth="64" direction="DirOut">
+  <ports id="3" name="raw_data_im_1_o_stream" type="PortType" coreId="3694680468" bitwidth="16" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3204059312" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="4" name="stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="547177184" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="5" name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3203962464" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="5" name="stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i" type="PortType" coreName="FIFO" coreId="51" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i" type="PortType" coreName="FIFO" coreId="3204274816" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="6" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i" type="PortType" coreName="FIFO" coreId="0" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="32" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -30,7 +30,7 @@
   <edges id="48" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@ports.5"/>
   <edges id="49" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
   <blocks id="29" name="Brd_Acq_Im" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="read" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="read" bitwidth="16" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
       <dataInputObjs>raw_data_im_i_stream</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>

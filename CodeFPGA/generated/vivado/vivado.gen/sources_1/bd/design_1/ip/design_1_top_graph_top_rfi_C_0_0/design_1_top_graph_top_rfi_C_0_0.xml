@@ -150,7 +150,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_I_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_I_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -286,7 +286,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_I_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_I_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -422,7 +422,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -558,7 +558,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -694,7 +694,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_R_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_R_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -830,7 +830,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -966,7 +966,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_R_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_R_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -1102,7 +1102,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -1238,7 +1238,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_I_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_I_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -1374,7 +1374,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_I_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_I_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -1510,7 +1510,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_0_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_0_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -1646,7 +1646,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_0_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_0_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -1782,7 +1782,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -1918,7 +1918,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -2062,11 +2062,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 05 23:44:53 UTC 2023</spirit:value>
+            <spirit:value>Mon Jul 24 05:14:54 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:22481fce</spirit:value>
+            <spirit:value>9:0027ba2c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2077,7 +2077,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:22481fce</spirit:value>
+            <spirit:value>9:0027ba2c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2093,11 +2093,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 05 23:44:53 UTC 2023</spirit:value>
+            <spirit:value>Mon Jul 24 05:14:54 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:22481fce</spirit:value>
+            <spirit:value>9:0027ba2c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2140,11 +2140,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 05 23:44:53 UTC 2023</spirit:value>
+            <spirit:value>Mon Jul 24 05:14:54 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0b1a4f9</spirit:value>
+            <spirit:value>9:a9b13d06</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2160,11 +2160,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 05 23:44:53 UTC 2023</spirit:value>
+            <spirit:value>Mon Jul 24 05:14:54 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f0b1a4f9</spirit:value>
+            <spirit:value>9:a9b13d06</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2178,11 +2178,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 05 23:54:32 UTC 2023</spirit:value>
+            <spirit:value>Mon Jul 24 05:18:49 UTC 2023</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:22481fce</spirit:value>
+            <spirit:value>9:0027ba2c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2271,7 +2271,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2314,7 +2314,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2357,7 +2357,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2400,7 +2400,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2443,7 +2443,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2486,7 +2486,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2529,7 +2529,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2572,7 +2572,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2615,7 +2615,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2658,7 +2658,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2701,7 +2701,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2744,7 +2744,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2787,7 +2787,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2830,7 +2830,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2988,35 +2988,27 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3025,207 +3017,199 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Im.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Im.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Real.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Real.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_I.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_I.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_R.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Im.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Im.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Real.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Real.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_STD_I.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_STD_I.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_STD_R.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_STD_R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_computeMedian.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fifo_w16_d4078_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fifo_w16_d8156_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fifo_w64_d4078_A.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fifo_w64_d8156_A.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detection_unit.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detector.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detection_unit.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detector.vh</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx1_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx2_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx1_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx7_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx2_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx8_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx7_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx8_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_report_unit.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_report_unit.vh</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_110.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_126_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_RDRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_sorted_list_R_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_RDRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_73ns_79_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_sorted_list_R_i_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_77ns_83_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_73ns_79_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_82ns_88_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_77ns_83_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_87ns_93_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_82ns_88_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_92ns_98_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_87ns_93_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_12s_80ns_90_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_92ns_98_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_13s_71s_71_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_12s_80ns_90_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_40ns_40ns_80_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_13s_71s_71_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_43ns_36ns_79_3_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_40ns_40ns_80_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_49ns_44ns_93_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_43ns_36ns_79_3_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_50ns_50ns_100_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_49ns_44ns_93_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_54s_6ns_54_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_50ns_50ns_100_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_71ns_4ns_75_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_54s_6ns_54_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_83ns_6ns_89_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_71ns_4ns_75_5_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_83ns_6ns_89_5_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3233,7 +3217,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3241,7 +3225,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3249,7 +3233,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3257,7 +3241,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3265,7 +3249,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3273,7 +3257,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3281,7 +3265,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3289,7 +3273,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3297,7 +3281,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3305,7 +3289,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3313,7 +3297,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -3321,111 +3305,107 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_regslice_both.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_114.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_count_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_count_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_23_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_Inner.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_38_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_occurence_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_45_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_28_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_stdDeviationList.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -3590,257 +3570,247 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Im.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Im.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Real.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Acq_Real.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_I.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_I.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_R.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_MAD_R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Im.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Im.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Real.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_Res_Real.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_STD_I.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_STD_I.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_Brd_STD_R.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_Brd_STD_R.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_computeMedian.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fifo_w16_d4078_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fifo_w16_d8156_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fifo_w64_d4078_A.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fifo_w64_d8156_A.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detection_unit.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detector.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detection_unit.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_detector.vh</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx1_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx2_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx1_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx7_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx2_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx8_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx7_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_idx8_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_report_unit.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_hls_deadlock_report_unit.vh</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mac_muladd_16s_15ns_19s_31_4_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_110.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_126_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_RDRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_sorted_list_R_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_RDRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_73ns_79_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_sorted_list_R_i_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_77ns_83_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_73ns_79_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_82ns_88_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_77ns_83_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_87ns_93_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_82ns_88_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_6ns_92ns_98_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_87ns_93_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_12s_80ns_90_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_6ns_92ns_98_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_13s_71s_71_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_12s_80ns_90_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_40ns_40ns_80_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_13s_71s_71_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_43ns_36ns_79_3_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_40ns_40ns_80_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_49ns_44ns_93_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_43ns_36ns_79_3_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_50ns_50ns_100_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_49ns_44ns_93_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_54s_6ns_54_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_50ns_50ns_100_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_71ns_4ns_75_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_54s_6ns_54_5_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_mul_83ns_6ns_89_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_71ns_4ns_75_5_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_mul_83ns_6ns_89_5_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3849,7 +3819,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_ap_fixed_1cud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3858,7 +3828,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3867,7 +3837,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12dEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3876,7 +3846,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12eOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3885,7 +3855,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3894,7 +3864,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12g8j.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3903,7 +3873,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12hbi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3912,7 +3882,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12ibs.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3921,7 +3891,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12jbC.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3930,7 +3900,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_58kbM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3939,7 +3909,7 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_59_0mb6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3948,177 +3918,162 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_59_0lbW.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_regslice_both.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_114.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_count_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_count_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_23_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_Inner.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_38_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_occurence_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_45_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_28_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C_stdDeviationList.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/verilog/top_graph_top_rfi_C.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/verilog/top_graph_top_rfi_C.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_dmul_64ns_64ns_64_7_max_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/84df/hdl/ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>../../ipshared/6975/hdl/ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -4209,7 +4164,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">868460</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">undef</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4234,7 +4189,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Top_graph_top_rfi_c</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113105842</xilinx:coreRevision>
+      <xilinx:coreRevision>2113132092</xilinx:coreRevision>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4422,10 +4377,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="21e641cf"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="12b11de5"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="7c686859"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0942f313"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bbc0089e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="eb28447d"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="33f5eb35"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b188ec2c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690246304756">
+  <ports id="1" name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i" type="PortType" coreName="FIFO" coreId="5" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" type="PortType" coreName="FIFO" coreId="416" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i" type="PortType" coreName="FIFO" coreId="0" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" type="PortType" coreName="FIFO" coreId="337" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i" type="PortType" coreName="FIFO" coreId="18" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="6" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i" type="PortType" coreName="FIFO" coreId="108" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="7" name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in" type="PortType" coreName="FIFO" coreId="4238480875" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <ports id="8" name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in" type="PortType" coreName="FIFO" coreId="559915248" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>call</dataInputObjs>
+  </ports>
+  <edges id="77" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="79" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="81" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="83" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="89" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="92" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="94" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="102" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="105" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="110" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="115" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="116" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="117" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="118" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="119" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="121" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="122" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="125" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="126" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="127" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="128" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="129" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="132" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="133" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="135" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="136" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="140" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="141" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="142" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="143" source_obj="//@ports.5" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@ports.6"/>
+  <edges id="145" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@ports.7"/>
+  <edges id="694" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="695" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="696" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="697" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="698" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="699" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="700" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="701" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="702" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="703" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="704" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="705" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="706" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="707" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="708" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="709" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="710" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="711" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="712" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.26"/>
+  <blocks id="69" name="RFIFilter&lt;0, 2048, ap_int&lt;16> >" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="RRi_V" lineNumber="56" originalName="RRi.V" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="RRi_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="RFIFilter_0_2048_ap_int_16_s" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="56" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, ap_int&amp;lt;16&amp;gt; &amp;gt;"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="RRo_V" lineNumber="57" originalName="RRo.V" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="RRo_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="RFIFilter_0_2048_ap_int_16_s" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="57" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, ap_int&amp;lt;16&amp;gt; &amp;gt;"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="RIi_V" lineNumber="59" originalName="raw_data.V" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="RIi_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="RFIFilter_0_2048_ap_int_16_s" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="59" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, ap_int&amp;lt;16&amp;gt; &amp;gt;"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="RIo_V" lineNumber="60" originalName="filtered_data.V" fileName="../include/rfiFilter.hpp" fileDirectory=".." rtlName="RIo_V_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="82" contextFuncName="RFIFilter_0_2048_ap_int_16_s" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../include/rfiFilter.hpp" linenumber="60" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="RFIFilter&amp;lt;0, 2048, ap_int&amp;lt;16&amp;gt; &amp;gt;"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="p_048" lineNumber="144" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="16" opcode="read" m_display="0" m_delay="3.5" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
+      <dataInputObjs>stream_Brd_STD_I_out_1_RFI_Filter_std_I_i</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="p_049" lineNumber="144" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="16" opcode="read" m_display="0" m_delay="3.5" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
+      <dataInputObjs>stream_Brd_STD_R_out_2_RFI_Filter_std_R_i</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_V" lineNumber="144" originalName="tmp.V" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="16" opcode="read" m_display="0" m_delay="3.5" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
+      <dataInputObjs>stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="tmp_V_2" lineNumber="144" originalName="tmp.V" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="16" opcode="read" m_display="0" m_delay="3.5" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
+      <dataInputObjs>stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln232" lineNumber="232" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sext_ln232_fu_128_p1" coreId="4294967295" contextFuncName="ap_int_base_16_true_s" bitwidth="17" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="232" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="ap_int_base&amp;lt;16, true&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="empty" coreId="0" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="_ln0" rtlName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2_fu_90" coreId="560953792" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i</dataInputObjs>
+      <dataInputObjs>stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i</dataInputObjs>
+      <constName>RFIFilter_0_2048_ap_int_16_Pipeline_loop_2</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="empty_335" coreId="608" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="sext_ln232_2" lineNumber="232" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sext_ln232_2_fu_131_p1" coreId="562283264" contextFuncName="ap_int_base_16_true_s" bitwidth="17" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="232" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="ap_int_base&amp;lt;16, true&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="add_ln1540" lineNumber="1540" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln1540_fu_134_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_16_true_16_true" bitwidth="17" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.07" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1540" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator+&amp;lt;16, true, 16, true&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="tmp" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_fu_140_p3" coreId="559987744" contextFuncName="operator_div_17_true_32_true" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="sub_ln1558" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sub_ln1558_fu_148_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_div_17_true_32_true" bitwidth="17" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="2.1" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="trunc_ln1558_s" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="trunc_ln1558_s_fu_154_p4" coreId="3710118799" contextFuncName="operator_div_17_true_32_true" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="trunc_ln1558_1" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="trunc_ln1558_1_fu_164_p4" coreId="562164144" contextFuncName="operator_div_17_true_32_true" bitwidth="16" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="sub_ln1558_8" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sub_ln1558_8_fu_174_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_div_17_true_32_true" bitwidth="16" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="2.07" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="select_ln1558" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln1558_fu_180_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_div_17_true_32_true" bitwidth="16" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.8" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="conv_i8_i_i40_i_i" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="conv_i8_i_i40_i_i_fu_188_p1" coreId="562892896" contextFuncName="operator_div_17_true_32_true" bitwidth="17" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="sub_i_i46_i_i" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="sub_i_i46_i_i_fu_191_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_div_17_true_32_true" bitwidth="17" opcode="sub" nodeLabel="3.0" m_display="0" m_delay="2.07" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="empty_336" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="empty_336_fu_199_p1" coreId="1818191214" contextFuncName="operator_div_17_true_32_true" bitwidth="16" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln1558" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1_fu_100" coreId="561649616" contextFuncName="operator_div_17_true_32_true" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <constName>RFIFilter_0_2048_ap_int_16_Pipeline_loop_1</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="_ln1558" lineNumber="1558" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19_fu_109" coreId="561830064" contextFuncName="operator_div_17_true_32_true" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="1558" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="operator/&amp;lt;17, true, 32, true&amp;gt;"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>trunc</dataInputObjs>
+      <constName>RFIFilter_0_2048_ap_int_16_Pipeline_loop_19</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="empty_337" coreId="561650944" bitwidth="32" opcode="wait" nodeLabel="5.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln0" rtlName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3_fu_118" coreId="560038032" opcode="call" nodeLabel="5.0" nodeLatency="1" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in</dataOutputObjs>
+      <dataOutputObjs>stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in</dataOutputObjs>
+      <constName>RFIFilter_0_2048_ap_int_16_Pipeline_loop_3</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="_ln0" coreId="559413376" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1"/>
+    <fileValidLineNumbers fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>144</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>232</validLinenumbers>
+      <validLinenumbers>1540</validLinenumbers>
+      <validLinenumbers>1558</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="../include/rfiFilter.hpp">
+      <validLinenumbers>56</validLinenumbers>
+      <validLinenumbers>57</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+      <validLinenumbers>60</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="select_ln1558_reg_215">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="sub_i_i46_i_i_reg_222">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_V_2_reg_210">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_336_reg_228">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_V_reg_205">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <expressionNodes realName="RIo_V_alloca_fu_62">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln232_2_fu_131">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln1558_s_fu_154">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln1540_fu_134">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_140">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln1558_1_fu_164">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="RRi_V_alloca_fu_50">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_336_fu_199">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1558_fu_180">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="RRo_V_alloca_fu_54">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln232_fu_128">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_i_i46_i_i_fu_191">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="RIi_V_alloca_fu_58">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="conv_i8_i_i40_i_i_fu_188">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln1558_8_fu_174">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln1558_fu_148">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2_fu_90">
+    <nodeIds>51</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1_fu_100">
+    <nodeIds>64</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19_fu_109">
+    <nodeIds>65</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3_fu_118">
+    <nodeIds>67</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="p_048_read_fu_66">
+    <nodeIds>45</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_V_2_read_fu_84">
+    <nodeIds>48</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_V_read_fu_78">
+    <nodeIds>47</nodeIds>
+  </ioNodes>
+  <ioNodes realName="p_049_read_fu_72">
+    <nodeIds>46</nodeIds>
+  </ioNodes>
+  <ioPorts name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i">
+    <contents name="call">
+      <nodeIds>51</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i">
+    <contents name="call">
+      <nodeIds>51</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i">
+    <contents name="read">
+      <nodeIds>47</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i">
+    <contents name="read">
+      <nodeIds>48</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i">
+    <contents name="read">
+      <nodeIds>45</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i">
+    <contents name="read">
+      <nodeIds>46</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in">
+    <contents name="call">
+      <nodeIds>67</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in">
+    <contents name="call">
+      <nodeIds>67</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="2" latency="2"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="51" stage="1" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="2" latency="2"/>
+      <operations id="65" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="64" stage="1" latency="2"/>
+      <operations id="65" stage="1" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="2" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="2"/>
+      <operations id="68" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="RFIFilter_0_2048_ap_int_16_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="6157" mMaxLatency="6157">
+      <basicBlocks>69</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

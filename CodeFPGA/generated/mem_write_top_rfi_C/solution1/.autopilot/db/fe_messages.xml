@@ -86,41 +86,77 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="mem_write_top_rfi_C.cpp:136:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="mem_write_top_rfi_C" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 0, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 0, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 0, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 1, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 1, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 1, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 2, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 2, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 2, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 2, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 3, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 3, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 3, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 3, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 4, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 4, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 4, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 4, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 5, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 5, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 5, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 5, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 6, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 6, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 6, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 6, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 7, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 7, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 7, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 7, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 8, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 8, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 8, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 8, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 9, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 9, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 9, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 9, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 10, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 10, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 10, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 10, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;double, 11, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
-        <args Callee="bool writeOutput&lt;double, 11, 1, 409600, 1&gt;(double*, hls::stream&lt;double, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Inlining function 'bool writeOutput&lt;ap_int&lt;16&gt;, 11, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)' into 'mem_write_top_rfi_C'">
+        <args Callee="bool writeOutput&lt;ap_int&lt;16&gt;, 11, 1, 409600, 1&gt;(ap_int&lt;16&gt;*, hls::stream&lt;ap_int&lt;16&gt;, 0&gt;&amp;)" Caller="mem_write_top_rfi_C"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'filtered_real_1_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="filtered_real_1_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'filtered_im_1_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="filtered_im_1_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'filtered_real_0_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="filtered_real_0_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'filtered_im_0_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="filtered_im_0_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'std_I_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="std_I_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'mad_I_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="mad_I_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'raw_data_im_1_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="raw_data_im_1_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'std_R_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="std_R_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'raw_data_real_1_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="raw_data_real_1_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'mad_R_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="mad_R_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'raw_data_real_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="raw_data_real_o_mem"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="mem_write_top_rfi_C.cpp:111:0" msg_body="Aggregating maxi variable 'raw_data_im_o_mem' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="raw_data_im_o_mem"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

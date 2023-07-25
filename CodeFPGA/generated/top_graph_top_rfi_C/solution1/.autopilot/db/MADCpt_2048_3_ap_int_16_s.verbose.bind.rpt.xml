@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'MADCpt_2048_3_ap_int_16_s'" level="0">
+<item name = "Date">Tue Jul 25 02:51:34 2023
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)</item>
+<item name = "Project">top_graph_top_rfi_C</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.937 ns, 1.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">65631, 475231, 0.656 ms, 4.752 ms, 65631, 475231, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1_fu_114">MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_98_1, 2050, 2050, 20.500 us, 20.500 us, 2050, 2050, no</column>
+<column name="grp_sortList_fu_126">sortList, 14346, 116746, 0.143 ms, 1.167 ms, 14346, 116746, no</column>
+<column name="grp_computeMedian_fu_132">computeMedian, 15, 15, 0.150 us, 0.150 us, 15, 15, no</column>
+<column name="grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1_fu_137">MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_1, 2051, 2051, 20.510 us, 20.510 us, 2051, 2051, no</column>
+<column name="grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110_fu_144">MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_83_110, 2051, 2051, 20.510 us, 20.510 us, 2051, 2051, no</column>
+<column name="grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2_fu_151">MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_128_2, 2050, 2050, 20.500 us, 20.500 us, 2050, 2050, no</column>
+<column name="grp_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3_fu_159">MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_133_3, 2050, 2050, 20.500 us, 20.500 us, 2050, 2050, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

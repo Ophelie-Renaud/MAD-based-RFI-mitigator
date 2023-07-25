@@ -18,13 +18,13 @@ port (
     ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    filtered_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+    filtered_im_1_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
     filtered_im_1_o_stream_TVALID : OUT STD_LOGIC;
     filtered_im_1_o_stream_TREADY : IN STD_LOGIC;
-    filtered_im_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+    filtered_im_0_o_stream_TDATA : OUT STD_LOGIC_VECTOR (15 downto 0);
     filtered_im_0_o_stream_TVALID : OUT STD_LOGIC;
     filtered_im_0_o_stream_TREADY : IN STD_LOGIC;
-    stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout : IN STD_LOGIC_VECTOR (15 downto 0);
     stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n : IN STD_LOGIC;
     stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read : OUT STD_LOGIC );
 end;
@@ -88,7 +88,7 @@ attribute shreg_extract : string;
 begin
     regslice_both_filtered_im_1_o_stream_U : component top_graph_top_rfi_C_regslice_both
     generic map (
-        DataWidth => 64)
+        DataWidth => 16)
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
@@ -102,7 +102,7 @@ begin
 
     regslice_both_filtered_im_0_o_stream_U : component top_graph_top_rfi_C_regslice_both
     generic map (
-        DataWidth => 64)
+        DataWidth => 16)
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,

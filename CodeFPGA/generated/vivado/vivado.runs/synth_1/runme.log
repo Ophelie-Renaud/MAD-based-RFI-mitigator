@@ -20,107 +20,113 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 69882
+INFO: [Synth 8-7075] Helper process launched with PID 399860
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2610.848 ; gain = 0.000 ; free physical = 7477 ; free virtual = 18657
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.816 ; gain = 0.000 ; free physical = 3350 ; free virtual = 18935
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:969]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1R706YB' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2493]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (1#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1R706YB' (2#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2493]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3030]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (3#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3030]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1W60HW0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3579]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1W60HW0' (4#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3579]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_xbar_1_stub.v:6]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1737]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1737]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_1' has 78 connections declared, but only 76 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1737]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_0' (6#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:969]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_im_0_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_0_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_im_0_o_stream_0' (7#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_0_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_im_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_im_1_o_stream_0' (8#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_real_0_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_0_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_real_0_o_stream_0' (9#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_0_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_real_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_real_1_o_stream_0' (10#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_mad_I_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_mad_I_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_mad_I_o_stream_0' (11#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_mad_I_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_mad_R_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_mad_R_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_mad_R_o_stream_0' (12#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_mad_R_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_im_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_im_1_o_stream_0' (13#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_im_i_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_i_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_im_i_stream_0' (14#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_i_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_im_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_im_o_stream_0' (15#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_real_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_real_1_o_stream_0' (16#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_1_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_real_i_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_i_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_real_i_stream_0' (17#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_i_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_real_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_real_o_stream_0' (18#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_std_I_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_std_I_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_std_I_o_stream_0' (19#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_std_I_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_std_R_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_std_R_o_stream_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_std_R_o_stream_0' (20#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_axis_data_fifo_std_R_o_stream_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mem_read_top_rfi_C_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_mem_read_top_rfi_C_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mem_read_top_rfi_C_0_0' (21#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_mem_read_top_rfi_C_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'ap_local_block' of module 'design_1_mem_read_top_rfi_C_0_0' is unconnected for instance 'mem_read_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_mem_read_top_rfi_C_0_0' is unconnected for instance 'mem_read_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'design_1_mem_read_top_rfi_C_0_0' is unconnected for instance 'mem_read_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'design_1_mem_read_top_rfi_C_0_0' is unconnected for instance 'mem_read_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7023] instance 'mem_read_top_rfi_C_0' of module 'design_1_mem_read_top_rfi_C_0_0' has 62 connections declared, but only 58 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:581]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mem_write_top_rfi_C_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_mem_write_top_rfi_C_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mem_write_top_rfi_C_0_0' (22#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_mem_write_top_rfi_C_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'ap_local_block' of module 'design_1_mem_write_top_rfi_C_0_0' is unconnected for instance 'mem_write_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:640]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_mem_write_top_rfi_C_0_0' is unconnected for instance 'mem_write_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:640]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_AWREGION' of module 'design_1_mem_write_top_rfi_C_0_0' is unconnected for instance 'mem_write_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:640]
-WARNING: [Synth 8-7071] port 'm_axi_gmem_ARREGION' of module 'design_1_mem_write_top_rfi_C_0_0' is unconnected for instance 'mem_write_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:640]
-WARNING: [Synth 8-7023] instance 'mem_write_top_rfi_C_0' of module 'design_1_mem_write_top_rfi_C_0_0' has 92 connections declared, but only 88 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:640]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (23#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:729]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:729]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:729]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:729]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:729]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:729]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 110 connections declared, but only 104 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:729]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1816]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2361]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (24#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2361]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2898]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (25#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2898]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3274]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (26#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (27#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3274]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (28#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2320]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2320]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2320]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (29#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1816]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (30#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:915]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:915]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:915]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:915]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:915]
-INFO: [Synth 8-6157] synthesizing module 'design_1_top_graph_top_rfi_C_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_top_graph_top_rfi_C_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_top_graph_top_rfi_C_0_0' (31#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-69847-pc-eii26/realtime/design_1_top_graph_top_rfi_C_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'ap_local_block' of module 'design_1_top_graph_top_rfi_C_0_0' is unconnected for instance 'top_graph_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:922]
-WARNING: [Synth 8-7071] port 'ap_local_deadlock' of module 'design_1_top_graph_top_rfi_C_0_0' is unconnected for instance 'top_graph_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:922]
-WARNING: [Synth 8-7023] instance 'top_graph_top_rfi_C_0' of module 'design_1_top_graph_top_rfi_C_0_0' has 46 connections declared, but only 44 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:922]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (32#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (33#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:981]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1R706YB' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2525]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (1#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1R706YB' (2#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2525]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3062]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (3#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_us_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3349]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3349]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_0' has 72 connections declared, but only 70 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3349]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (4#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3062]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1W60HW0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3727]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_1' (5#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_us_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_1' is unconnected for instance 'auto_us' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:4014]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_1' is unconnected for instance 'auto_us' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:4014]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_1' has 72 connections declared, but only 70 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:4014]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1W60HW0' (6#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3727]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (7#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_xbar_1_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1769]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1769]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_1' has 78 connections declared, but only 76 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1769]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_0' (8#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:981]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_im_0_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_0_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_im_0_o_stream_0' (9#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_0_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_im_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_im_1_o_stream_0' (10#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_im_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_real_0_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_0_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_real_0_o_stream_0' (11#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_0_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_filtered_real_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_filtered_real_1_o_stream_0' (12#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_filtered_real_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_mad_I_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_mad_I_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_mad_I_o_stream_0' (13#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_mad_I_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_mad_R_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_mad_R_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_mad_R_o_stream_0' (14#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_mad_R_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_im_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_im_1_o_stream_0' (15#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_im_i_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_i_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_im_i_stream_0' (16#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_i_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_im_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_im_o_stream_0' (17#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_im_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_real_1_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_real_1_o_stream_0' (18#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_1_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_real_i_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_i_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_real_i_stream_0' (19#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_i_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_data_real_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_data_real_o_stream_0' (20#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_raw_data_real_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_std_I_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_std_I_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_std_I_o_stream_0' (21#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_std_I_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_std_R_o_stream_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_std_R_o_stream_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_std_R_o_stream_0' (22#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_axis_data_fifo_std_R_o_stream_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mem_read_top_rfi_C_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_mem_read_top_rfi_C_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mem_read_top_rfi_C_0_0' (23#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_mem_read_top_rfi_C_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ap_local_block' of module 'design_1_mem_read_top_rfi_C_0_0' is unconnected for instance 'mem_read_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:589]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_mem_read_top_rfi_C_0_0' is unconnected for instance 'mem_read_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:589]
+WARNING: [Synth 8-7023] instance 'mem_read_top_rfi_C_0' of module 'design_1_mem_read_top_rfi_C_0_0' has 62 connections declared, but only 60 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:589]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mem_write_top_rfi_C_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_mem_write_top_rfi_C_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mem_write_top_rfi_C_0_0' (24#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_mem_write_top_rfi_C_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ap_local_block' of module 'design_1_mem_write_top_rfi_C_0_0' is unconnected for instance 'mem_write_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:650]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_mem_write_top_rfi_C_0_0' is unconnected for instance 'mem_write_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:650]
+WARNING: [Synth 8-7023] instance 'mem_write_top_rfi_C_0' of module 'design_1_mem_write_top_rfi_C_0_0' has 92 connections declared, but only 90 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:650]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (25#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:741]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:741]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:741]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:741]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:741]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:741]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 110 connections declared, but only 104 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:741]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1848]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2393]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (26#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2393]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2930]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (27#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2930]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3422]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (28#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (29#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:3422]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (30#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2352]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2352]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:2352]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (31#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:1848]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (32#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:927]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:927]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:927]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:927]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:927]
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_graph_top_rfi_C_0_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_top_graph_top_rfi_C_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_graph_top_rfi_C_0_0' (33#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/.Xil/Vivado-399848-pc-eii26/realtime/design_1_top_graph_top_rfi_C_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ap_local_block' of module 'design_1_top_graph_top_rfi_C_0_0' is unconnected for instance 'top_graph_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:934]
+WARNING: [Synth 8-7071] port 'ap_local_deadlock' of module 'design_1_top_graph_top_rfi_C_0_0' is unconnected for instance 'top_graph_top_rfi_C_0' [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:934]
+WARNING: [Synth 8-7023] instance 'top_graph_top_rfi_C_0' of module 'design_1_top_graph_top_rfi_C_0_0' has 46 connections declared, but only 44 given [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:934]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (34#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (35#1) [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_UYSKKA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_UYSKKA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_XU9C55 is either unconnected or has no load
@@ -139,12 +145,12 @@ WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_ps7_0_axi_periph_0 is e
 WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_arlock[1] in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awlock[1] in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_7HNO1D is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_7HNO1D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ACLK in module s00_couplers_imp_7HNO1D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_ARESETN in module s00_couplers_imp_7HNO1D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_arlock[1] in module s00_couplers_imp_7HNO1D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_awlock[1] in module s00_couplers_imp_7HNO1D is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1R706YB is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1R706YB is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_bid[5] in module m00_couplers_imp_1R706YB is either unconnected or has no load
@@ -223,18 +229,18 @@ WARNING: [Synth 8-7129] Port S_AXI_awaddr[33] in module m00_couplers_imp_1R706YB
 WARNING: [Synth 8-7129] Port S_AXI_awaddr[32] in module m00_couplers_imp_1R706YB is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2610.848 ; gain = 0.000 ; free physical = 7265 ; free virtual = 18454
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2613.816 ; gain = 0.000 ; free physical = 3103 ; free virtual = 18689
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2610.848 ; gain = 0.000 ; free physical = 8138 ; free virtual = 19326
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2613.816 ; gain = 0.000 ; free physical = 3975 ; free virtual = 19561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2610.848 ; gain = 0.000 ; free physical = 8138 ; free virtual = 19326
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2613.816 ; gain = 0.000 ; free physical = 3975 ; free virtual = 19561
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2610.848 ; gain = 0.000 ; free physical = 8154 ; free virtual = 19325
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2613.816 ; gain = 0.000 ; free physical = 3976 ; free virtual = 19563
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -255,6 +261,10 @@ Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen
 Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
 Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
+Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
+Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
+Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us'
+Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us'
 Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
 Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
 Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_data_real_i_stream_0/design_1_axis_data_fifo_raw_data_real_i_stream_0/design_1_axis_data_fifo_raw_data_real_i_stream_0_in_context.xdc] for cell 'design_1_i/axis_data_fifo_raw_data_real_i_stream'
@@ -289,20 +299,20 @@ Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.run
 Finished Parsing XDC File [/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2674.781 ; gain = 0.000 ; free physical = 8119 ; free virtual = 19291
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.746 ; gain = 0.000 ; free physical = 3931 ; free virtual = 19518
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2674.781 ; gain = 0.000 ; free physical = 8119 ; free virtual = 19291
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2677.746 ; gain = 0.000 ; free physical = 3931 ; free virtual = 19518
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8187 ; free virtual = 19370
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3991 ; free virtual = 19578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8187 ; free virtual = 19370
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3991 ; free virtual = 19578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -577,6 +587,8 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph/s00_c
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/s01_couplers/auto_us. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_data_fifo_raw_data_real_i_stream. (constraint file  auto generated constraint).
@@ -594,10 +606,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_data_fifo_filtere
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_data_fifo_filtered_im_1_o_stream. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_data_fifo_filtered_real_1_o_stream. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8187 ; free virtual = 19370
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3991 ; free virtual = 19577
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8210 ; free virtual = 19366
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3991 ; free virtual = 19578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -620,25 +632,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8184 ; free virtual = 19363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3985 ; free virtual = 19577
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8028 ; free virtual = 19218
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3870 ; free virtual = 19462
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8028 ; free virtual = 19218
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3870 ; free virtual = 19462
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8020 ; free virtual = 19209
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -656,37 +668,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8019 ; free virtual = 19208
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8019 ; free virtual = 19208
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8019 ; free virtual = 19208
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8019 ; free virtual = 19208
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8019 ; free virtual = 19208
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8019 ; free virtual = 19208
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -698,27 +710,29 @@ Report BlackBoxes:
 +------+---------------------------------------------------+----------+
 |1     |design_1_xbar_1                                    |         1|
 |2     |design_1_auto_pc_1                                 |         1|
-|3     |design_1_xbar_0                                    |         1|
-|4     |design_1_auto_pc_0                                 |         1|
-|5     |design_1_axis_data_fifo_filtered_im_0_o_stream_0   |         1|
-|6     |design_1_axis_data_fifo_filtered_im_1_o_stream_0   |         1|
-|7     |design_1_axis_data_fifo_filtered_real_0_o_stream_0 |         1|
-|8     |design_1_axis_data_fifo_filtered_real_1_o_stream_0 |         1|
-|9     |design_1_axis_data_fifo_mad_I_o_stream_0           |         1|
-|10    |design_1_axis_data_fifo_mad_R_o_stream_0           |         1|
-|11    |design_1_axis_data_fifo_raw_data_im_1_o_stream_0   |         1|
-|12    |design_1_axis_data_fifo_raw_data_im_i_stream_0     |         1|
-|13    |design_1_axis_data_fifo_raw_data_im_o_stream_0     |         1|
-|14    |design_1_axis_data_fifo_raw_data_real_1_o_stream_0 |         1|
-|15    |design_1_axis_data_fifo_raw_data_real_i_stream_0   |         1|
-|16    |design_1_axis_data_fifo_raw_data_real_o_stream_0   |         1|
-|17    |design_1_axis_data_fifo_std_I_o_stream_0           |         1|
-|18    |design_1_axis_data_fifo_std_R_o_stream_0           |         1|
-|19    |design_1_mem_read_top_rfi_C_0_0                    |         1|
-|20    |design_1_mem_write_top_rfi_C_0_0                   |         1|
-|21    |design_1_processing_system7_0_0                    |         1|
-|22    |design_1_rst_ps7_0_100M_0                          |         1|
-|23    |design_1_top_graph_top_rfi_C_0_0                   |         1|
+|3     |design_1_auto_us_0                                 |         1|
+|4     |design_1_auto_us_1                                 |         1|
+|5     |design_1_xbar_0                                    |         1|
+|6     |design_1_auto_pc_0                                 |         1|
+|7     |design_1_axis_data_fifo_filtered_im_0_o_stream_0   |         1|
+|8     |design_1_axis_data_fifo_filtered_im_1_o_stream_0   |         1|
+|9     |design_1_axis_data_fifo_filtered_real_0_o_stream_0 |         1|
+|10    |design_1_axis_data_fifo_filtered_real_1_o_stream_0 |         1|
+|11    |design_1_axis_data_fifo_mad_I_o_stream_0           |         1|
+|12    |design_1_axis_data_fifo_mad_R_o_stream_0           |         1|
+|13    |design_1_axis_data_fifo_raw_data_im_1_o_stream_0   |         1|
+|14    |design_1_axis_data_fifo_raw_data_im_i_stream_0     |         1|
+|15    |design_1_axis_data_fifo_raw_data_im_o_stream_0     |         1|
+|16    |design_1_axis_data_fifo_raw_data_real_1_o_stream_0 |         1|
+|17    |design_1_axis_data_fifo_raw_data_real_i_stream_0   |         1|
+|18    |design_1_axis_data_fifo_raw_data_real_o_stream_0   |         1|
+|19    |design_1_axis_data_fifo_std_I_o_stream_0           |         1|
+|20    |design_1_axis_data_fifo_std_R_o_stream_0           |         1|
+|21    |design_1_mem_read_top_rfi_C_0_0                    |         1|
+|22    |design_1_mem_write_top_rfi_C_0_0                   |         1|
+|23    |design_1_processing_system7_0_0                    |         1|
+|24    |design_1_rst_ps7_0_100M_0                          |         1|
+|25    |design_1_top_graph_top_rfi_C_0_0                   |         1|
 +------+---------------------------------------------------+----------+
 
 Report Cell Usage: 
@@ -726,46 +740,47 @@ Report Cell Usage:
 |      |Cell                                             |Count |
 +------+-------------------------------------------------+------+
 |1     |design_1_auto_pc                                 |     2|
-|3     |design_1_axis_data_fifo_filtered_im_0_o_stream   |     1|
-|4     |design_1_axis_data_fifo_filtered_im_1_o_stream   |     1|
-|5     |design_1_axis_data_fifo_filtered_real_0_o_stream |     1|
-|6     |design_1_axis_data_fifo_filtered_real_1_o_stream |     1|
-|7     |design_1_axis_data_fifo_mad_I_o_stream           |     1|
-|8     |design_1_axis_data_fifo_mad_R_o_stream           |     1|
-|9     |design_1_axis_data_fifo_raw_data_im_1_o_stream   |     1|
-|10    |design_1_axis_data_fifo_raw_data_im_i_stream     |     1|
-|11    |design_1_axis_data_fifo_raw_data_im_o_stream     |     1|
-|12    |design_1_axis_data_fifo_raw_data_real_1_o_stream |     1|
-|13    |design_1_axis_data_fifo_raw_data_real_i_stream   |     1|
-|14    |design_1_axis_data_fifo_raw_data_real_o_stream   |     1|
-|15    |design_1_axis_data_fifo_std_I_o_stream           |     1|
-|16    |design_1_axis_data_fifo_std_R_o_stream           |     1|
-|17    |design_1_mem_read_top_rfi_C_0                    |     1|
-|18    |design_1_mem_write_top_rfi_C_0                   |     1|
-|19    |design_1_processing_system7_0                    |     1|
-|20    |design_1_rst_ps7_0_100M                          |     1|
-|21    |design_1_top_graph_top_rfi_C_0                   |     1|
-|22    |design_1_xbar                                    |     2|
+|3     |design_1_auto_us                                 |     2|
+|5     |design_1_axis_data_fifo_filtered_im_0_o_stream   |     1|
+|6     |design_1_axis_data_fifo_filtered_im_1_o_stream   |     1|
+|7     |design_1_axis_data_fifo_filtered_real_0_o_stream |     1|
+|8     |design_1_axis_data_fifo_filtered_real_1_o_stream |     1|
+|9     |design_1_axis_data_fifo_mad_I_o_stream           |     1|
+|10    |design_1_axis_data_fifo_mad_R_o_stream           |     1|
+|11    |design_1_axis_data_fifo_raw_data_im_1_o_stream   |     1|
+|12    |design_1_axis_data_fifo_raw_data_im_i_stream     |     1|
+|13    |design_1_axis_data_fifo_raw_data_im_o_stream     |     1|
+|14    |design_1_axis_data_fifo_raw_data_real_1_o_stream |     1|
+|15    |design_1_axis_data_fifo_raw_data_real_i_stream   |     1|
+|16    |design_1_axis_data_fifo_raw_data_real_o_stream   |     1|
+|17    |design_1_axis_data_fifo_std_I_o_stream           |     1|
+|18    |design_1_axis_data_fifo_std_R_o_stream           |     1|
+|19    |design_1_mem_read_top_rfi_C_0                    |     1|
+|20    |design_1_mem_write_top_rfi_C_0                   |     1|
+|21    |design_1_processing_system7_0                    |     1|
+|22    |design_1_rst_ps7_0_100M                          |     1|
+|23    |design_1_top_graph_top_rfi_C_0                   |     1|
+|24    |design_1_xbar                                    |     2|
 +------+-------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8019 ; free virtual = 19208
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3860 ; free virtual = 19452
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2674.781 ; gain = 0.000 ; free physical = 8082 ; free virtual = 19271
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2674.781 ; gain = 63.934 ; free physical = 8082 ; free virtual = 19271
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2677.746 ; gain = 0.000 ; free physical = 3914 ; free virtual = 19506
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2677.746 ; gain = 63.930 ; free physical = 3914 ; free virtual = 19506
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2674.781 ; gain = 0.000 ; free physical = 8176 ; free virtual = 19365
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2677.746 ; gain = 0.000 ; free physical = 3997 ; free virtual = 19589
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2674.781 ; gain = 0.000 ; free physical = 8106 ; free virtual = 19296
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.746 ; gain = 0.000 ; free physical = 3926 ; free virtual = 19518
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: a5e8acc2
+Synth Design complete, checksum: fcf3885b
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 133 Warnings, 0 Critical Warnings and 0 Errors encountered.
+86 Infos, 135 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2674.781 ; gain = 64.031 ; free physical = 8289 ; free virtual = 19479
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 2677.746 ; gain = 64.031 ; free physical = 4110 ; free virtual = 19702
 INFO: [Common 17-1381] The checkpoint '/home/orenaud/preesm2/RFI/CodeFPGA/generated/vivado/vivado.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul  6 01:57:38 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 24 07:25:21 2023...

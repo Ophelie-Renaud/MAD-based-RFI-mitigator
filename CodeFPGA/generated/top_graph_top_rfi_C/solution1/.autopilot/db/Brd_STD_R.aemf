@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1688600339495">
-  <ports id="1" name="std_R_o_stream" type="PortType" coreId="3215228432" bitwidth="64" direction="DirOut">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690246303856">
+  <ports id="1" name="std_R_o_stream" type="PortType" coreId="556788144" bitwidth="16" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="2" name="stream_STD_Computation_std_R_o_Brd_STD_R_in" type="PortType" coreName="FIFO" coreId="3217046208" bitwidth="64" iftype="IfTypeRom">
+  <ports id="2" name="stream_STD_Computation_std_R_o_Brd_STD_R_in" type="PortType" coreName="FIFO" coreId="0" bitwidth="16" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" type="PortType" coreName="FIFO" coreId="1117998811" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
+  <ports id="3" name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" type="PortType" coreName="FIFO" coreId="0" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="20" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -15,7 +15,7 @@
   <edges id="27" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@ports.2"/>
   <edges id="28" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
   <blocks id="17" name="Brd_STD_R" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="64" opcode="read" m_display="0" m_delay="3.5" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="tmp" lineNumber="144" originalName="tmp" fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="read" bitwidth="16" opcode="read" m_display="0" m_delay="3.5" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="/home/orenaud/preesm2/RFI/CodeFPGA/generated" functionName="read"/>
       <dataInputObjs>stream_STD_Computation_std_R_o_Brd_STD_R_in</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
@@ -31,7 +31,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>stream_Brd_STD_R_out_2_RFI_Filter_std_R_i</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln0" coreId="1120756389" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln0" coreId="558345712" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
       <validLinenumbers>144</validLinenumbers>
       <validLinenumbers>173</validLinenumbers>

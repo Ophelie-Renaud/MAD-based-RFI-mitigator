@@ -87,7 +87,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_I_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_I_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -133,7 +133,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_I_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_I_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -179,7 +179,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -225,7 +225,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -271,7 +271,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_R_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_R_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -317,7 +317,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_REAL_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -363,7 +363,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_R_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_R_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -409,7 +409,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RAW_DATA_IM_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -455,7 +455,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_I_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.MAD_I_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -501,7 +501,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_I_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.STD_I_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -547,7 +547,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_0_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_0_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -593,7 +593,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_0_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_0_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -639,7 +639,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_IM_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -685,7 +685,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_1_O_STREAM.TDATA_NUM_BYTES">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.FILTERED_REAL_1_O_STREAM.TDATA_NUM_BYTES">2</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TUSER_WIDTH</spirit:name>
@@ -715,7 +715,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>43821861</spirit:value>
+            <spirit:value>1b3843c6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -734,7 +734,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>716c988c</spirit:value>
+            <spirit:value>408ccdf9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -753,7 +753,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>567d915d</spirit:value>
+            <spirit:value>0d88e56d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -772,7 +772,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>657a1556</spirit:value>
+            <spirit:value>af431069</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -911,7 +911,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -954,7 +954,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -997,7 +997,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1040,7 +1040,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1083,7 +1083,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1126,7 +1126,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1169,7 +1169,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1212,7 +1212,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1255,7 +1255,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1298,7 +1298,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1341,7 +1341,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1384,7 +1384,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1427,7 +1427,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1470,7 +1470,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">63</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1488,6 +1488,10 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1496,27 +1500,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1557,15 +1549,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_computeMedian.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1577,11 +1561,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w64_d4078_A.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w16_d4078_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w64_d8156_A.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w16_d8156_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1593,7 +1577,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1637,35 +1621,35 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_110.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_126_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_RDRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_RDRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_sorted_list_R_i_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_sorted_list_R_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1829,31 +1813,35 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_114.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1861,67 +1849,59 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_count_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_count_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_Inner.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_23_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_occurence_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_38_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_28_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_45_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_stdDeviationList.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1982,17 +1962,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_computeMedian.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2007,12 +1977,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w64_d4078_A.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w16_d4078_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w64_d8156_A.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fifo_w16_d8156_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2027,7 +1997,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2082,42 +2052,42 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_110.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_126_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_RDRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_RDRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_double_s_sorted_list_R_i_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_sorted_list_R_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2310,37 +2280,42 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_114.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2350,87 +2325,82 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_count_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_count_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_Inner.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_23_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_occurence_loop.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_38_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_28_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_45_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_2.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_3.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/top_graph_top_rfi_C_STDCpt_2048_3_double_s_RRi_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/top_graph_top_rfi_C_stdDeviationList.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/top_graph_top_rfi_C.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2445,32 +2415,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2488,6 +2443,10 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/top_graph_top_rfi_C_fpext_32ns_64_2_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -2496,27 +2455,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2557,15 +2504,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_computeMedian.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2577,11 +2516,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w64_d4078_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w16_d4078_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w64_d8156_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w16_d8156_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2593,7 +2532,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2601,35 +2540,35 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_110.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_126_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_s_RDRi_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_RDRi_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_s_sorted_list_R_i_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_sorted_list_R_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2745,31 +2684,35 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_114.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_s_RRi_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2777,73 +2720,65 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_count_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_count_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_Inner.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_23_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_occurence_loop.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_38_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_28_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_45_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_s.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_s_RRi_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_stdDeviationList.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/top_graph_top_rfi_C.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_28335e41</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ed58409c</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2899,17 +2834,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_computeMedian.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2924,12 +2849,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w64_d4078_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w16_d4078_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w64_d8156_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fifo_w16_d8156_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2944,7 +2869,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2954,42 +2879,42 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_69_115.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_81_110.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_84_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_96_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_114_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_126_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_Pipeline_VITIS_LOOP_119_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_131_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_s_RDRi_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_RDRi_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_double_s_sorted_list_R_i_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s_sorted_list_R_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3134,37 +3059,42 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_Pipeline_loop_114.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_s.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_double_s_RRi_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3174,88 +3104,83 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_count_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_count_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_Inner.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_23_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_occurence_loop.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_38_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_28_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_sortList_Pipeline_VITIS_LOOP_45_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_2.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_loop_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_loop_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_21_17.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_21_111.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_32_18.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_32_113.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_Pipeline_VITIS_LOOP_72_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_39_112.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s_RRi_V_RAM_AUTO_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_Pipeline_VITIS_LOOP_72_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_s.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_STDCpt_2048_3_double_s_RRi_RAM_AUTO_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/top_graph_top_rfi_C_stdDeviationList.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/top_graph_top_rfi_C.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32s_64_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
@@ -3269,32 +3194,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_fptrunc_64ns_32_2_no_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadd_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/ip/top_graph_top_rfi_C_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitodp_32ns_64_6_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_sitofp_32s_32_6_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/ip/top_graph_top_rfi_C_dcmp_64ns_64ns_1_2_no_dsp_1_ip.v</spirit:name>
+        <spirit:name>hdl/ip/top_graph_top_rfi_C_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3361,7 +3271,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">868460</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">undef</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -3378,8 +3288,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Top_graph_top_rfi_c</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113105842</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-07-05T23:42:40Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113132092</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-07-24T05:12:57Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -3387,10 +3297,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="21e641cf"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="12b11de5"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="7c686859"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0942f313"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bbc0089e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="eb28447d"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="33f5eb35"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="b188ec2c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

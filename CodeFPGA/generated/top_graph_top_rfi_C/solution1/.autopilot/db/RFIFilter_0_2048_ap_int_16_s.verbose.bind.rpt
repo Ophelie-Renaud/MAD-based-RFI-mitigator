@@ -1,0 +1,1086 @@
+
+
+================================================================
+== Vitis HLS Report for 'RFIFilter_0_2048_ap_int_16_s'
+================================================================
+* Date:           Tue Jul 25 02:51:36 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        top_graph_top_rfi_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.639 ns|     1.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6157|     6157|  61.570 us|  61.570 us|  6157|  6157|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                        |                                             |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                        Instance                        |                    Module                   |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2_fu_90    |RFIFilter_0_2048_ap_int_16_Pipeline_loop_2   |     2050|     2050|  20.500 us|  20.500 us|  2050|  2050|       no|
+        |grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1_fu_100   |RFIFilter_0_2048_ap_int_16_Pipeline_loop_1   |     2051|     2051|  20.510 us|  20.510 us|  2051|  2051|       no|
+        |grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19_fu_109  |RFIFilter_0_2048_ap_int_16_Pipeline_loop_19  |     2051|     2051|  20.510 us|  20.510 us|  2051|  2051|       no|
+        |grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3_fu_118   |RFIFilter_0_2048_ap_int_16_Pipeline_loop_3   |     2050|     2050|  20.500 us|  20.500 us|  2050|  2050|       no|
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.50>
+ST_1 : Operation 8 [1/1] (3.25ns)   --->   "%RRi_V = alloca i64 1" [../include/rfiFilter.hpp:56]   --->   Operation 8 'alloca' 'RRi_V' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 9 [1/1] (3.25ns)   --->   "%RRo_V = alloca i64 1" [../include/rfiFilter.hpp:57]   --->   Operation 9 'alloca' 'RRo_V' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 10 [1/1] (3.25ns)   --->   "%RIi_V = alloca i64 1" [../include/rfiFilter.hpp:59]   --->   Operation 10 'alloca' 'RIi_V' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 11 [1/1] (3.25ns)   --->   "%RIo_V = alloca i64 1" [../include/rfiFilter.hpp:60]   --->   Operation 11 'alloca' 'RIo_V' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 12 [1/1] (3.50ns)   --->   "%p_048 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 12 'read' 'p_048' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+ST_1 : Operation 13 [1/1] (3.50ns)   --->   "%p_049 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 13 'read' 'p_049' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+ST_1 : Operation 14 [1/1] (3.50ns)   --->   "%tmp_V = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 14 'read' 'tmp_V' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+ST_1 : Operation 15 [1/1] (3.50ns)   --->   "%tmp_V_2 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 15 'read' 'tmp_V_2' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+
+State 2 <SV = 1> <Delay = 7.06>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln232 = sext i16 %tmp_V_2"   --->   Operation 16 'sext' 'sext_ln232' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_2, i16 %RRi_V, i16 %RIi_V, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln232_2 = sext i16 %tmp_V"   --->   Operation 19 'sext' 'sext_ln232_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (2.07ns)   --->   "%add_ln1540 = add i17 %sext_ln232, i17 %sext_ln232_2"   --->   Operation 20 'add' 'add_ln1540' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %add_ln1540, i32 16"   --->   Operation 21 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (2.10ns)   --->   "%sub_ln1558 = sub i17 0, i17 %add_ln1540"   --->   Operation 22 'sub' 'sub_ln1558' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln1558_s = partselect i16 @_ssdm_op_PartSelect.i16.i17.i32.i32, i17 %sub_ln1558, i32 1, i32 16"   --->   Operation 23 'partselect' 'trunc_ln1558_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln1558_1 = partselect i16 @_ssdm_op_PartSelect.i16.i17.i32.i32, i17 %add_ln1540, i32 1, i32 16"   --->   Operation 24 'partselect' 'trunc_ln1558_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (2.07ns)   --->   "%sub_ln1558_8 = sub i16 0, i16 %trunc_ln1558_s"   --->   Operation 25 'sub' 'sub_ln1558_8' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.80ns)   --->   "%select_ln1558 = select i1 %tmp, i16 %sub_ln1558_8, i16 %trunc_ln1558_1"   --->   Operation 26 'select' 'select_ln1558' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_2, i16 %RRi_V, i16 %RIi_V, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i"   --->   Operation 27 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 2.07>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%empty_335 = wait i32 @_ssdm_op_Wait"   --->   Operation 28 'wait' 'empty_335' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%conv_i8_i_i40_i_i = sext i16 %select_ln1558"   --->   Operation 29 'sext' 'conv_i8_i_i40_i_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (2.07ns)   --->   "%sub_i_i46_i_i = sub i17 0, i17 %conv_i8_i_i40_i_i"   --->   Operation 30 'sub' 'sub_i_i46_i_i' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%empty_336 = trunc i17 %sub_i_i46_i_i"   --->   Operation 31 'trunc' 'empty_336' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_1, i16 %RRi_V, i17 %sub_i_i46_i_i, i16 %RRo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 32 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_19, i16 %RIi_V, i17 %sub_i_i46_i_i, i16 %RIo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 33 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 34 [1/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_1, i16 %RRi_V, i17 %sub_i_i46_i_i, i16 %RRo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 34 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_19, i16 %RIi_V, i17 %sub_i_i46_i_i, i16 %RIo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 35 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%empty_337 = wait i32 @_ssdm_op_Wait"   --->   Operation 36 'wait' 'empty_337' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_3, i16 %RRo_V, i16 %RIo_V, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_3, i16 %RRo_V, i16 %RIo_V, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in"   --->   Operation 70 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 71 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ stream_Brd_STD_I_out_1_RFI_Filter_std_I_i]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stream_Brd_STD_R_out_2_RFI_Filter_std_R_i]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+RRi_V             (alloca       ) [ 00111100]
+RRo_V             (alloca       ) [ 00111111]
+RIi_V             (alloca       ) [ 00111100]
+RIo_V             (alloca       ) [ 00111111]
+p_048             (read         ) [ 00000000]
+p_049             (read         ) [ 00000000]
+tmp_V             (read         ) [ 00100000]
+tmp_V_2           (read         ) [ 00100000]
+sext_ln232        (sext         ) [ 00000000]
+empty             (wait         ) [ 00000000]
+sext_ln232_2      (sext         ) [ 00000000]
+add_ln1540        (add          ) [ 00000000]
+tmp               (bitselect    ) [ 00000000]
+sub_ln1558        (sub          ) [ 00000000]
+trunc_ln1558_s    (partselect   ) [ 00000000]
+trunc_ln1558_1    (partselect   ) [ 00000000]
+sub_ln1558_8      (sub          ) [ 00000000]
+select_ln1558     (select       ) [ 00011100]
+call_ln0          (call         ) [ 00000000]
+empty_335         (wait         ) [ 00000000]
+conv_i8_i_i40_i_i (sext         ) [ 00000000]
+sub_i_i46_i_i     (sub          ) [ 00000100]
+empty_336         (trunc        ) [ 00000100]
+call_ln1558       (call         ) [ 00000000]
+call_ln1558       (call         ) [ 00000000]
+empty_337         (wait         ) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+specinterface_ln0 (specinterface) [ 00000000]
+call_ln0          (call         ) [ 00000000]
+ret_ln0           (ret          ) [ 00000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_Brd_STD_I_out_1_RFI_Filter_std_I_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_Brd_STD_R_out_2_RFI_Filter_std_R_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i16P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitSelect.i1.i17.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i16.i17.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_19"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_7"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="RRi_V_alloca_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="1" slack="0"/>
+<pin id="52" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="RRi_V/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="RRo_V_alloca_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="1" slack="0"/>
+<pin id="56" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="RRo_V/1 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="RIi_V_alloca_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="1" slack="0"/>
+<pin id="60" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="RIi_V/1 "/>
+</bind>
+</comp>
+
+<comp id="62" class="1004" name="RIo_V_alloca_fu_62">
+<pin_list>
+<pin id="63" dir="0" index="0" bw="1" slack="0"/>
+<pin id="64" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="RIo_V/1 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="p_048_read_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="16" slack="0"/>
+<pin id="68" dir="0" index="1" bw="16" slack="0"/>
+<pin id="69" dir="1" index="2" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_048/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="p_049_read_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="16" slack="0"/>
+<pin id="74" dir="0" index="1" bw="16" slack="0"/>
+<pin id="75" dir="1" index="2" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_049/1 "/>
+</bind>
+</comp>
+
+<comp id="78" class="1004" name="tmp_V_read_fu_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="16" slack="0"/>
+<pin id="80" dir="0" index="1" bw="16" slack="0"/>
+<pin id="81" dir="1" index="2" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="tmp_V/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="tmp_V_2_read_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="16" slack="0"/>
+<pin id="86" dir="0" index="1" bw="16" slack="0"/>
+<pin id="87" dir="1" index="2" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="tmp_V_2/1 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1004" name="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2_fu_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="0" slack="0"/>
+<pin id="92" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="93" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="94" dir="0" index="3" bw="16" slack="0"/>
+<pin id="95" dir="0" index="4" bw="16" slack="0"/>
+<pin id="96" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/2 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="0" slack="0"/>
+<pin id="102" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="103" dir="0" index="2" bw="17" slack="0"/>
+<pin id="104" dir="0" index="3" bw="16" slack="2147483647"/>
+<pin id="105" dir="0" index="4" bw="16" slack="2"/>
+<pin id="106" dir="0" index="5" bw="16" slack="0"/>
+<pin id="107" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln1558/4 "/>
+</bind>
+</comp>
+
+<comp id="109" class="1004" name="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19_fu_109">
+<pin_list>
+<pin id="110" dir="0" index="0" bw="0" slack="0"/>
+<pin id="111" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="112" dir="0" index="2" bw="17" slack="0"/>
+<pin id="113" dir="0" index="3" bw="16" slack="2147483647"/>
+<pin id="114" dir="0" index="4" bw="16" slack="2"/>
+<pin id="115" dir="0" index="5" bw="16" slack="0"/>
+<pin id="116" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln1558/4 "/>
+</bind>
+</comp>
+
+<comp id="118" class="1004" name="grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3_fu_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="0" slack="0"/>
+<pin id="120" dir="0" index="1" bw="16" slack="2147483647"/>
+<pin id="121" dir="0" index="2" bw="16" slack="2147483647"/>
+<pin id="122" dir="0" index="3" bw="16" slack="0"/>
+<pin id="123" dir="0" index="4" bw="16" slack="0"/>
+<pin id="124" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/6 "/>
+</bind>
+</comp>
+
+<comp id="128" class="1004" name="sext_ln232_fu_128">
+<pin_list>
+<pin id="129" dir="0" index="0" bw="16" slack="1"/>
+<pin id="130" dir="1" index="1" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="sext_ln232/2 "/>
+</bind>
+</comp>
+
+<comp id="131" class="1004" name="sext_ln232_2_fu_131">
+<pin_list>
+<pin id="132" dir="0" index="0" bw="16" slack="1"/>
+<pin id="133" dir="1" index="1" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="sext_ln232_2/2 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="add_ln1540_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="16" slack="0"/>
+<pin id="136" dir="0" index="1" bw="16" slack="0"/>
+<pin id="137" dir="1" index="2" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln1540/2 "/>
+</bind>
+</comp>
+
+<comp id="140" class="1004" name="tmp_fu_140">
+<pin_list>
+<pin id="141" dir="0" index="0" bw="1" slack="0"/>
+<pin id="142" dir="0" index="1" bw="17" slack="0"/>
+<pin id="143" dir="0" index="2" bw="6" slack="0"/>
+<pin id="144" dir="1" index="3" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitselect(1000) " fcode="bitselect"/>
+<opset="tmp/2 "/>
+</bind>
+</comp>
+
+<comp id="148" class="1004" name="sub_ln1558_fu_148">
+<pin_list>
+<pin id="149" dir="0" index="0" bw="1" slack="0"/>
+<pin id="150" dir="0" index="1" bw="17" slack="0"/>
+<pin id="151" dir="1" index="2" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="sub_ln1558/2 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="trunc_ln1558_s_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="16" slack="0"/>
+<pin id="156" dir="0" index="1" bw="17" slack="0"/>
+<pin id="157" dir="0" index="2" bw="1" slack="0"/>
+<pin id="158" dir="0" index="3" bw="6" slack="0"/>
+<pin id="159" dir="1" index="4" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="trunc_ln1558_s/2 "/>
+</bind>
+</comp>
+
+<comp id="164" class="1004" name="trunc_ln1558_1_fu_164">
+<pin_list>
+<pin id="165" dir="0" index="0" bw="16" slack="0"/>
+<pin id="166" dir="0" index="1" bw="17" slack="0"/>
+<pin id="167" dir="0" index="2" bw="1" slack="0"/>
+<pin id="168" dir="0" index="3" bw="6" slack="0"/>
+<pin id="169" dir="1" index="4" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="trunc_ln1558_1/2 "/>
+</bind>
+</comp>
+
+<comp id="174" class="1004" name="sub_ln1558_8_fu_174">
+<pin_list>
+<pin id="175" dir="0" index="0" bw="1" slack="0"/>
+<pin id="176" dir="0" index="1" bw="16" slack="0"/>
+<pin id="177" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="sub_ln1558_8/2 "/>
+</bind>
+</comp>
+
+<comp id="180" class="1004" name="select_ln1558_fu_180">
+<pin_list>
+<pin id="181" dir="0" index="0" bw="1" slack="0"/>
+<pin id="182" dir="0" index="1" bw="16" slack="0"/>
+<pin id="183" dir="0" index="2" bw="16" slack="0"/>
+<pin id="184" dir="1" index="3" bw="16" slack="2"/>
+</pin_list>
+<bind>
+<opcode="select(49) " fcode="select"/>
+<opset="select_ln1558/2 "/>
+</bind>
+</comp>
+
+<comp id="188" class="1004" name="conv_i8_i_i40_i_i_fu_188">
+<pin_list>
+<pin id="189" dir="0" index="0" bw="16" slack="2"/>
+<pin id="190" dir="1" index="1" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="conv_i8_i_i40_i_i/4 "/>
+</bind>
+</comp>
+
+<comp id="191" class="1004" name="sub_i_i46_i_i_fu_191">
+<pin_list>
+<pin id="192" dir="0" index="0" bw="1" slack="0"/>
+<pin id="193" dir="0" index="1" bw="16" slack="0"/>
+<pin id="194" dir="1" index="2" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="sub_i_i46_i_i/4 "/>
+</bind>
+</comp>
+
+<comp id="199" class="1004" name="empty_336_fu_199">
+<pin_list>
+<pin id="200" dir="0" index="0" bw="17" slack="0"/>
+<pin id="201" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="empty_336/4 "/>
+</bind>
+</comp>
+
+<comp id="205" class="1005" name="tmp_V_reg_205">
+<pin_list>
+<pin id="206" dir="0" index="0" bw="16" slack="1"/>
+<pin id="207" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_V "/>
+</bind>
+</comp>
+
+<comp id="210" class="1005" name="tmp_V_2_reg_210">
+<pin_list>
+<pin id="211" dir="0" index="0" bw="16" slack="1"/>
+<pin id="212" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="tmp_V_2 "/>
+</bind>
+</comp>
+
+<comp id="215" class="1005" name="select_ln1558_reg_215">
+<pin_list>
+<pin id="216" dir="0" index="0" bw="16" slack="2"/>
+<pin id="217" dir="1" index="1" bw="16" slack="2"/>
+</pin_list>
+<bind>
+<opset="select_ln1558 "/>
+</bind>
+</comp>
+
+<comp id="222" class="1005" name="sub_i_i46_i_i_reg_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="17" slack="1"/>
+<pin id="224" dir="1" index="1" bw="17" slack="1"/>
+</pin_list>
+<bind>
+<opset="sub_i_i46_i_i "/>
+</bind>
+</comp>
+
+<comp id="228" class="1005" name="empty_336_reg_228">
+<pin_list>
+<pin id="229" dir="0" index="0" bw="16" slack="1"/>
+<pin id="230" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="empty_336 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="53"><net_src comp="16" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="57"><net_src comp="16" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="61"><net_src comp="16" pin="0"/><net_sink comp="58" pin=0"/></net>
+
+<net id="65"><net_src comp="16" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="70"><net_src comp="18" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="71"><net_src comp="0" pin="0"/><net_sink comp="66" pin=1"/></net>
+
+<net id="76"><net_src comp="18" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="77"><net_src comp="2" pin="0"/><net_sink comp="72" pin=1"/></net>
+
+<net id="82"><net_src comp="18" pin="0"/><net_sink comp="78" pin=0"/></net>
+
+<net id="83"><net_src comp="4" pin="0"/><net_sink comp="78" pin=1"/></net>
+
+<net id="88"><net_src comp="18" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="89"><net_src comp="6" pin="0"/><net_sink comp="84" pin=1"/></net>
+
+<net id="97"><net_src comp="22" pin="0"/><net_sink comp="90" pin=0"/></net>
+
+<net id="98"><net_src comp="8" pin="0"/><net_sink comp="90" pin=3"/></net>
+
+<net id="99"><net_src comp="10" pin="0"/><net_sink comp="90" pin=4"/></net>
+
+<net id="108"><net_src comp="36" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="117"><net_src comp="38" pin="0"/><net_sink comp="109" pin=0"/></net>
+
+<net id="125"><net_src comp="40" pin="0"/><net_sink comp="118" pin=0"/></net>
+
+<net id="126"><net_src comp="12" pin="0"/><net_sink comp="118" pin=3"/></net>
+
+<net id="127"><net_src comp="14" pin="0"/><net_sink comp="118" pin=4"/></net>
+
+<net id="138"><net_src comp="128" pin="1"/><net_sink comp="134" pin=0"/></net>
+
+<net id="139"><net_src comp="131" pin="1"/><net_sink comp="134" pin=1"/></net>
+
+<net id="145"><net_src comp="24" pin="0"/><net_sink comp="140" pin=0"/></net>
+
+<net id="146"><net_src comp="134" pin="2"/><net_sink comp="140" pin=1"/></net>
+
+<net id="147"><net_src comp="26" pin="0"/><net_sink comp="140" pin=2"/></net>
+
+<net id="152"><net_src comp="28" pin="0"/><net_sink comp="148" pin=0"/></net>
+
+<net id="153"><net_src comp="134" pin="2"/><net_sink comp="148" pin=1"/></net>
+
+<net id="160"><net_src comp="30" pin="0"/><net_sink comp="154" pin=0"/></net>
+
+<net id="161"><net_src comp="148" pin="2"/><net_sink comp="154" pin=1"/></net>
+
+<net id="162"><net_src comp="32" pin="0"/><net_sink comp="154" pin=2"/></net>
+
+<net id="163"><net_src comp="26" pin="0"/><net_sink comp="154" pin=3"/></net>
+
+<net id="170"><net_src comp="30" pin="0"/><net_sink comp="164" pin=0"/></net>
+
+<net id="171"><net_src comp="134" pin="2"/><net_sink comp="164" pin=1"/></net>
+
+<net id="172"><net_src comp="32" pin="0"/><net_sink comp="164" pin=2"/></net>
+
+<net id="173"><net_src comp="26" pin="0"/><net_sink comp="164" pin=3"/></net>
+
+<net id="178"><net_src comp="34" pin="0"/><net_sink comp="174" pin=0"/></net>
+
+<net id="179"><net_src comp="154" pin="4"/><net_sink comp="174" pin=1"/></net>
+
+<net id="185"><net_src comp="140" pin="3"/><net_sink comp="180" pin=0"/></net>
+
+<net id="186"><net_src comp="174" pin="2"/><net_sink comp="180" pin=1"/></net>
+
+<net id="187"><net_src comp="164" pin="4"/><net_sink comp="180" pin=2"/></net>
+
+<net id="195"><net_src comp="28" pin="0"/><net_sink comp="191" pin=0"/></net>
+
+<net id="196"><net_src comp="188" pin="1"/><net_sink comp="191" pin=1"/></net>
+
+<net id="197"><net_src comp="191" pin="2"/><net_sink comp="100" pin=2"/></net>
+
+<net id="198"><net_src comp="191" pin="2"/><net_sink comp="109" pin=2"/></net>
+
+<net id="202"><net_src comp="191" pin="2"/><net_sink comp="199" pin=0"/></net>
+
+<net id="203"><net_src comp="199" pin="1"/><net_sink comp="100" pin=5"/></net>
+
+<net id="204"><net_src comp="199" pin="1"/><net_sink comp="109" pin=5"/></net>
+
+<net id="208"><net_src comp="78" pin="2"/><net_sink comp="205" pin=0"/></net>
+
+<net id="209"><net_src comp="205" pin="1"/><net_sink comp="131" pin=0"/></net>
+
+<net id="213"><net_src comp="84" pin="2"/><net_sink comp="210" pin=0"/></net>
+
+<net id="214"><net_src comp="210" pin="1"/><net_sink comp="128" pin=0"/></net>
+
+<net id="218"><net_src comp="180" pin="3"/><net_sink comp="215" pin=0"/></net>
+
+<net id="219"><net_src comp="215" pin="1"/><net_sink comp="188" pin=0"/></net>
+
+<net id="220"><net_src comp="215" pin="1"/><net_sink comp="100" pin=4"/></net>
+
+<net id="221"><net_src comp="215" pin="1"/><net_sink comp="109" pin=4"/></net>
+
+<net id="225"><net_src comp="191" pin="2"/><net_sink comp="222" pin=0"/></net>
+
+<net id="226"><net_src comp="222" pin="1"/><net_sink comp="100" pin=2"/></net>
+
+<net id="227"><net_src comp="222" pin="1"/><net_sink comp="109" pin=2"/></net>
+
+<net id="231"><net_src comp="199" pin="1"/><net_sink comp="228" pin=0"/></net>
+
+<net id="232"><net_src comp="228" pin="1"/><net_sink comp="100" pin=5"/></net>
+
+<net id="233"><net_src comp="228" pin="1"/><net_sink comp="109" pin=5"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in | {6 7 }
+	Port: stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in | {6 7 }
+ - Input state : 
+	Port: RFIFilter<0, 2048, ap_int<16> > : stream_Brd_STD_I_out_1_RFI_Filter_std_I_i | {1 }
+	Port: RFIFilter<0, 2048, ap_int<16> > : stream_Brd_STD_R_out_2_RFI_Filter_std_R_i | {1 }
+	Port: RFIFilter<0, 2048, ap_int<16> > : stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i | {1 }
+	Port: RFIFilter<0, 2048, ap_int<16> > : stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i | {1 }
+	Port: RFIFilter<0, 2048, ap_int<16> > : stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i | {2 3 }
+	Port: RFIFilter<0, 2048, ap_int<16> > : stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i | {2 3 }
+  - Chain level:
+	State 1
+	State 2
+		add_ln1540 : 1
+		tmp : 2
+		sub_ln1558 : 2
+		trunc_ln1558_s : 3
+		trunc_ln1558_1 : 2
+		sub_ln1558_8 : 4
+		select_ln1558 : 5
+	State 3
+	State 4
+		sub_i_i46_i_i : 1
+		empty_336 : 2
+		call_ln1558 : 3
+		call_ln1558 : 3
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------------------------------|---------|---------|---------|
+| Operation|                     Functional Unit                    |  Delay  |    FF   |   LUT   |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|          |  grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_2_fu_90  |    0    |    24   |    24   |
+|   call   |  grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1_fu_100 |  1.588  |   153   |   108   |
+|          | grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19_fu_109 |  1.588  |   153   |   108   |
+|          |  grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_3_fu_118 |  3.176  |    34   |    42   |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|          |                    sub_ln1558_fu_148                   |    0    |    0    |    24   |
+|    sub   |                   sub_ln1558_8_fu_174                  |    0    |    0    |    23   |
+|          |                  sub_i_i46_i_i_fu_191                  |    0    |    0    |    23   |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|    add   |                    add_ln1540_fu_134                   |    0    |    0    |    23   |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|  select  |                  select_ln1558_fu_180                  |    0    |    0    |    16   |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|          |                    p_048_read_fu_66                    |    0    |    0    |    0    |
+|   read   |                    p_049_read_fu_72                    |    0    |    0    |    0    |
+|          |                    tmp_V_read_fu_78                    |    0    |    0    |    0    |
+|          |                   tmp_V_2_read_fu_84                   |    0    |    0    |    0    |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|          |                    sext_ln232_fu_128                   |    0    |    0    |    0    |
+|   sext   |                   sext_ln232_2_fu_131                  |    0    |    0    |    0    |
+|          |                conv_i8_i_i40_i_i_fu_188                |    0    |    0    |    0    |
+|----------|--------------------------------------------------------|---------|---------|---------|
+| bitselect|                       tmp_fu_140                       |    0    |    0    |    0    |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|partselect|                  trunc_ln1558_s_fu_154                 |    0    |    0    |    0    |
+|          |                  trunc_ln1558_1_fu_164                 |    0    |    0    |    0    |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|   trunc  |                    empty_336_fu_199                    |    0    |    0    |    0    |
+|----------|--------------------------------------------------------|---------|---------|---------|
+|   Total  |                                                        |  6.352  |   364   |   391   |
+|----------|--------------------------------------------------------|---------|---------|---------|
+
+Memories:
++-----+--------+--------+--------+--------+
+|     |  BRAM  |   FF   |   LUT  |  URAM  |
++-----+--------+--------+--------+--------+
+|RIi_V|    2   |    0   |    0   |    0   |
+|RIo_V|    2   |    0   |    0   |    0   |
+|RRi_V|    2   |    0   |    0   |    0   |
+|RRo_V|    2   |    0   |    0   |    0   |
++-----+--------+--------+--------+--------+
+|Total|    8   |    0   |    0   |    0   |
++-----+--------+--------+--------+--------+
+
+* Register list:
++---------------------+--------+
+|                     |   FF   |
++---------------------+--------+
+|  empty_336_reg_228  |   16   |
+|select_ln1558_reg_215|   16   |
+|sub_i_i46_i_i_reg_222|   17   |
+|   tmp_V_2_reg_210   |   16   |
+|    tmp_V_reg_205    |   16   |
++---------------------+--------+
+|        Total        |   81   |
++---------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------------------------------------------------------|------|------|------|--------||---------||---------|
+|                          Comp                          |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|--------------------------------------------------------|------|------|------|--------||---------||---------|
+|  grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1_fu_100 |  p2  |   2  |  17  |   34   ||    9    |
+|  grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_1_fu_100 |  p5  |   2  |  16  |   32   ||    9    |
+| grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19_fu_109 |  p2  |   2  |  17  |   34   ||    9    |
+| grp_RFIFilter_0_2048_ap_int_16_Pipeline_loop_19_fu_109 |  p5  |   2  |  16  |   32   ||    9    |
+|--------------------------------------------------------|------|------|------|--------||---------||---------|
+|                          Total                         |      |      |      |   132  ||  6.352  ||    36   |
+|--------------------------------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |    -   |    6   |   364  |   391  |    -   |
+|   Memory  |    8   |    -   |    0   |    0   |    0   |
+|Multiplexer|    -   |    6   |    -   |   36   |    -   |
+|  Register |    -   |    -   |   81   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |    8   |   12   |   445  |   427  |    0   |
++-----------+--------+--------+--------+--------+--------+

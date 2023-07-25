@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'mem_read_top_rfi_C'
 ================================================================
 + General Information: 
-    * Date:           Thu Jul  6 01:43:03 2023
+    * Date:           Mon Jul 24 07:13:13 2023
     * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
     * Project:        mem_read_top_rfi_C
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,13 +15,13 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
-    |        Modules       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |        |    |           |           |     |
-    |        & Loops       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |    LUT    | URAM|
-    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
-    |+ mem_read_top_rfi_C  |  Timing|  -0.29|        -|       -|         -|        -|     -|        no|  8 (2%)|   -|  1301 (1%)|  1678 (3%)|    -|
-    | o Loop 1             |      II|   7.30|        -|       -|        11|        2|     -|       yes|       -|   -|          -|          -|    -|
-    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+--------+----+-----------+-----------+-----+
+    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |        Modules       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |         |    |           |           |     |
+    |        & Loops       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
+    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |+ mem_read_top_rfi_C  |  Timing|  -0.29|        -|       -|         -|        -|     -|        no|  2 (~0%)|   -|  1246 (1%)|  1589 (2%)|    -|
+    | o Loop 1             |      II|   7.30|        -|       -|        11|        2|     -|       yes|        -|   -|          -|          -|    -|
+    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
 
 
 ================================================================
@@ -32,7 +32,7 @@
 | Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
 |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
-| m_axi_gmem | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=8            |
+| m_axi_gmem | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
 +------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
 * S_AXILITE Interfaces
@@ -60,8 +60,8 @@
 +------------------------+---------------+-------+--------+--------+
 | Interface              | Register Mode | TDATA | TREADY | TVALID |
 +------------------------+---------------+-------+--------+--------+
-| raw_data_im_i_stream   | both          | 64    | 1      | 1      |
-| raw_data_real_i_stream | both          | 64    | 1      | 1      |
+| raw_data_im_i_stream   | both          | 16    | 1      | 1      |
+| raw_data_real_i_stream | both          | 16    | 1      | 1      |
 +------------------------+---------------+-------+--------+--------+
 
 * TOP LEVEL CONTROL
@@ -79,14 +79,14 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+------------------------+-----------+--------------------+
-| Argument               | Direction | Datatype           |
-+------------------------+-----------+--------------------+
-| raw_data_real_i_mem    | in        | double*            |
-| raw_data_real_i_stream | out       | stream<double, 0>& |
-| raw_data_im_i_mem      | in        | double*            |
-| raw_data_im_i_stream   | out       | stream<double, 0>& |
-+------------------------+-----------+--------------------+
++------------------------+-----------+------------------------+
+| Argument               | Direction | Datatype               |
++------------------------+-----------+------------------------+
+| raw_data_real_i_mem    | in        | ap_int<16>*            |
+| raw_data_real_i_stream | out       | stream<ap_int<16>, 0>& |
+| raw_data_im_i_mem      | in        | ap_int<16>*            |
+| raw_data_im_i_stream   | out       | stream<ap_int<16>, 0>& |
++------------------------+-----------+------------------------+
 
 * SW-to-HW Mapping
 +------------------------+------------------------+-----------+----------+-------------------------------------------------+
@@ -117,12 +117,12 @@
 | Name                   | DSP | Pragma | Variable   | Op  | Impl   | Latency |
 +------------------------+-----+--------+------------+-----+--------+---------+
 | + mem_read_top_rfi_C   | 0   |        |            |     |        |         |
-|   add_ln58_fu_208_p2   | -   |        | add_ln58   | add | fabric | 0       |
-|   add_ln59_fu_223_p2   | -   |        | add_ln59   | add | fabric | 0       |
-|   add_ln64_fu_247_p2   | -   |        | add_ln64   | add | fabric | 0       |
-|   add_ln58_1_fu_342_p2 | -   |        | add_ln58_1 | add | fabric | 0       |
-|   add_ln59_1_fu_285_p2 | -   |        | add_ln59_1 | add | fabric | 0       |
-|   add_ln64_1_fu_309_p2 | -   |        | add_ln64_1 | add | fabric | 0       |
+|   add_ln58_fu_204_p2   | -   |        | add_ln58   | add | fabric | 0       |
+|   add_ln59_fu_229_p2   | -   |        | add_ln59   | add | fabric | 0       |
+|   add_ln64_fu_253_p2   | -   |        | add_ln64   | add | fabric | 0       |
+|   add_ln58_1_fu_303_p2 | -   |        | add_ln58_1 | add | fabric | 0       |
+|   add_ln59_1_fu_328_p2 | -   |        | add_ln59_1 | add | fabric | 0       |
+|   add_ln64_1_fu_352_p2 | -   |        | add_ln64_1 | add | fabric | 0       |
 +------------------------+-----+--------+------------+-----+--------+---------+
 
 

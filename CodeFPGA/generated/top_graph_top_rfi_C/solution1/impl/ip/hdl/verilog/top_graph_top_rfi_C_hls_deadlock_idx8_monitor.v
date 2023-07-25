@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 
-module top_graph_top_rfi_C_hls_deadlock_idx8_monitor ( // for module top_graph_top_rfi_C_top_graph_top_rfi_C_inst.Brd_Res_Im_U0
+module top_graph_top_rfi_C_hls_deadlock_idx8_monitor ( // for module top_graph_top_rfi_C_top_graph_top_rfi_C_inst.Brd_Res_Real_U0
     input wire clock,
     input wire reset,
     input wire [13:0] axis_block_sigs,

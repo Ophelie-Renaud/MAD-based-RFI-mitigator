@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vitis HLS Report for 'RFIFilter_0_2048_ap_int_16_s'
+================================================================
+* Date:           Tue Jul 25 02:51:35 2023
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        top_graph_top_rfi_C
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.639 ns|     1.00 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6157|     6157|  61.570 us|  61.570 us|  6157|  6157|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.50>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%RRi_V = alloca i64 1" [../include/rfiFilter.hpp:56]   --->   Operation 8 'alloca' 'RRi_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%RRo_V = alloca i64 1" [../include/rfiFilter.hpp:57]   --->   Operation 9 'alloca' 'RRo_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%RIi_V = alloca i64 1" [../include/rfiFilter.hpp:59]   --->   Operation 10 'alloca' 'RIi_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%RIo_V = alloca i64 1" [../include/rfiFilter.hpp:60]   --->   Operation 11 'alloca' 'RIo_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (3.50ns)   --->   "%p_048 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 12 'read' 'p_048' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+ST_1 : Operation 13 [1/1] (3.50ns)   --->   "%p_049 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 13 'read' 'p_049' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+ST_1 : Operation 14 [1/1] (3.50ns)   --->   "%tmp_V = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 14 'read' 'tmp_V' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+ST_1 : Operation 15 [1/1] (3.50ns)   --->   "%tmp_V_2 = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i" [/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 15 'read' 'tmp_V_2' <Predicate = true> <Delay = 3.50> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.50> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4078> <FIFO>
+
+State 2 <SV = 1> <Delay = 7.06>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln232 = sext i16 %tmp_V_2"   --->   Operation 16 'sext' 'sext_ln232' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_2, i16 %RRi_V, i16 %RIi_V, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln232_2 = sext i16 %tmp_V"   --->   Operation 19 'sext' 'sext_ln232_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (2.07ns)   --->   "%add_ln1540 = add i17 %sext_ln232, i17 %sext_ln232_2"   --->   Operation 20 'add' 'add_ln1540' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %add_ln1540, i32 16"   --->   Operation 21 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (2.10ns)   --->   "%sub_ln1558 = sub i17 0, i17 %add_ln1540"   --->   Operation 22 'sub' 'sub_ln1558' <Predicate = true> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln1558_s = partselect i16 @_ssdm_op_PartSelect.i16.i17.i32.i32, i17 %sub_ln1558, i32 1, i32 16"   --->   Operation 23 'partselect' 'trunc_ln1558_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln1558_1 = partselect i16 @_ssdm_op_PartSelect.i16.i17.i32.i32, i17 %add_ln1540, i32 1, i32 16"   --->   Operation 24 'partselect' 'trunc_ln1558_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (2.07ns)   --->   "%sub_ln1558_8 = sub i16 0, i16 %trunc_ln1558_s"   --->   Operation 25 'sub' 'sub_ln1558_8' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.80ns)   --->   "%select_ln1558 = select i1 %tmp, i16 %sub_ln1558_8, i16 %trunc_ln1558_1"   --->   Operation 26 'select' 'select_ln1558' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_2, i16 %RRi_V, i16 %RIi_V, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i"   --->   Operation 27 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 2.07>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%empty_335 = wait i32 @_ssdm_op_Wait"   --->   Operation 28 'wait' 'empty_335' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%conv_i8_i_i40_i_i = sext i16 %select_ln1558"   --->   Operation 29 'sext' 'conv_i8_i_i40_i_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (2.07ns)   --->   "%sub_i_i46_i_i = sub i17 0, i17 %conv_i8_i_i40_i_i"   --->   Operation 30 'sub' 'sub_i_i46_i_i' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%empty_336 = trunc i17 %sub_i_i46_i_i"   --->   Operation 31 'trunc' 'empty_336' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_1, i16 %RRi_V, i17 %sub_i_i46_i_i, i16 %RRo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 32 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_19, i16 %RIi_V, i17 %sub_i_i46_i_i, i16 %RIo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 33 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 34 [1/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_1, i16 %RRi_V, i17 %sub_i_i46_i_i, i16 %RRo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 34 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 35 [1/2] (0.00ns)   --->   "%call_ln1558 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_19, i16 %RIi_V, i17 %sub_i_i46_i_i, i16 %RIo_V, i16 %select_ln1558, i16 %empty_336"   --->   Operation 35 'call' 'call_ln1558' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%empty_337 = wait i32 @_ssdm_op_Wait"   --->   Operation 36 'wait' 'empty_337' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_3, i16 %RRo_V, i16 %RIo_V, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in"   --->   Operation 37 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 61 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 63 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_I_out_1_RFI_Filter_std_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_STD_R_out_2_RFI_Filter_std_R_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i, void @empty_16, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/2] (0.00ns)   --->   "%call_ln0 = call void @RFIFilter<0, 2048, ap_int<16> >_Pipeline_loop_3, i16 %RRo_V, i16 %RIo_V, i16 %stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in, i16 %stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in"   --->   Operation 70 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 71 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1ns.
+
+ <State 1>: 3.51ns
+The critical path consists of the following:
+	fifo read operation ('p_048', /home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'stream_Brd_STD_I_out_1_RFI_Filter_std_I_i' (/home/orenaud/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [45]  (3.51 ns)
+
+ <State 2>: 7.07ns
+The critical path consists of the following:
+	'add' operation ('add_ln1540') [54]  (2.08 ns)
+	'sub' operation ('sub_ln1558') [56]  (2.11 ns)
+	'sub' operation ('sub_ln1558_8') [59]  (2.08 ns)
+	'select' operation ('select_ln1558') [60]  (0.805 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 2.08ns
+The critical path consists of the following:
+	'sub' operation ('sub_i_i46_i_i') [62]  (2.08 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

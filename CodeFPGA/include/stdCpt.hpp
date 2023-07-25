@@ -13,71 +13,71 @@
 
 #include "hls_stream.h"
 #include "math.h"
-double computeAverage( double *list, int size){
-    double sum = 0.0;
-    double av = 0.0;
-    int i;
-
-    for (i = 0; i < size; i++) {
+#include "ap_fixed.h"
+#include "ap_int.h"
+ap_int<16>  computeAverage( ap_int<16> *list, ap_int<16> size){
+	ap_int<16> sum = 0;
+	ap_int<16> av = 0;
+    for (ap_int<16> i = 0; i < size; i++) {
         sum += list[i];
     }
     //printf ("sum = %f\n",sum);
     av = sum/size;
     return av;
 }
-double computeVariance( double *list, int size){
-	   double sum = 0.0;
-	    int i;
+ap_int<16>  computeVariance( ap_int<16> *list, ap_int<16> size){
+	ap_int<16> sum = 0;
 
-	    for (i = 0; i < size; i++) {
+
+	    for (ap_int<16> i = 0; i < size; i++) {
 	        sum += list[i];
 	    }
 
 	    return sum / size;
 }
-void stdDeviationList(double *list, double average, int length, double *deviation_list){
-    for(int i=0;i<length;i++){
-        deviation_list[i] = sqrt(pow(list[i]-average,2));
+void stdDeviationList(ap_int<16> *list, ap_int<16> average, ap_int<16> length, ap_int<16> *deviation_list){
+    for(ap_int<16> i=0;i<length;i++){
+        deviation_list[i] = ((ap_int<16>) sqrt(pow((float)(list[i]-average),2)));
     }
 }
 
 template<int N_SAMPLES, int SIGMA, typename T>
 void STDCpt(  hls::stream<T> &raw_data_real_i, hls::stream<T> &raw_data_im_i, hls::stream<T> &std_R_o, hls::stream<T> &std_I_o){
-	double RRi[N_SAMPLES];
-	double RRo[N_SAMPLES];
-	double RIi[N_SAMPLES];
-	double RIo[N_SAMPLES];
-	loop_2: for(int i=0;i<N_SAMPLES;i++){
+	ap_int<16> RRi[N_SAMPLES];
+	ap_int<16> RRo[N_SAMPLES];
+	ap_int<16> RIi[N_SAMPLES];
+	ap_int<16> RIo[N_SAMPLES];
+	loop_2: for(ap_int<16> i=0;i<N_SAMPLES;i++){
 	        RRi[i] = raw_data_real_i.read();
 	        RIi[i] = raw_data_im_i.read();
 	        }
 
 	//average cpt
-    double average_R = computeAverage(RRi, N_SAMPLES);
-    double average_I = computeAverage(RIi, N_SAMPLES);
+	ap_int<16> average_R = computeAverage(RRi, N_SAMPLES);
+	ap_int<16> average_I = computeAverage(RIi, N_SAMPLES);
     //printf("AVERAGE: %f\n",average_R);
     //deviation list
-    double deviation_list_R[N_SAMPLES];
+	ap_int<16> deviation_list_R[N_SAMPLES];
     stdDeviationList(RRi, average_R, N_SAMPLES, deviation_list_R);
-    double deviation_list_I[N_SAMPLES];
+    ap_int<16> deviation_list_I[N_SAMPLES];
     stdDeviationList(RIi, average_I, N_SAMPLES, deviation_list_I);
 
 
 
     //variance cpt
-    double variance_R = computeVariance(deviation_list_R, N_SAMPLES);
-    double variance_I = computeVariance(deviation_list_I, N_SAMPLES);
+    ap_int<16> variance_R = computeVariance(deviation_list_R, N_SAMPLES);
+    ap_int<16> variance_I = computeVariance(deviation_list_I, N_SAMPLES);
     //printf("VARIANCE: %f\n",variance_R);
     //threshold cpt
-    for(int i = 0; i<N_SAMPLES;i++){
-    	RRo[i]= sqrt(variance_R)*SIGMA ;
-    	RIo[i]=sqrt(variance_I)*SIGMA;
+    for(ap_int<16> i = 0; i<N_SAMPLES;i++){
+    	RRo[i]= ((ap_int<16>)sqrt((float)variance_R)*SIGMA) ;
+    	RIo[i]=((ap_int<16>)sqrt((float)variance_I)*SIGMA);
     }
-    loop_3:for(int i = 0; i<N_SAMPLES;i++){
+    loop_3:for(ap_int<16> i = 0; i<N_SAMPLES;i++){
     	std_R_o.write(RRo[i]);
     	std_I_o.write(RIo[i]);
             }
 
 }
 
-#endif
+#endif //STD_CPT_HPP

@@ -33,26 +33,26 @@ RATE_OF_FILTERED_REAL_1_O = 409600
 # see: https://numpy.org/doc/stable/user/basics.types.html
 # see: https://numpy.org/doc/stable/reference/arrays.dtypes.html
 # TODO fill data
-raw_data_real_i_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_I,), dtype=np.dtype('double'))
-raw_data_real_i_vect = [double() for i in range(RATE_OF_RAW_DATA_REAL_I)]
+raw_data_real_i_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_I,), dtype=np.dtype('ap_int<16>'))
+raw_data_real_i_vect = [ap_int<16>() for i in range(RATE_OF_RAW_DATA_REAL_I)]
 np.copyto(raw_data_real_i_buff, raw_data_real_i_vect)
 
-raw_data_im_i_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_I,), dtype=np.dtype('double'))
-raw_data_im_i_vect = [double() for i in range(RATE_OF_RAW_DATA_IM_I)]
+raw_data_im_i_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_I,), dtype=np.dtype('ap_int<16>'))
+raw_data_im_i_vect = [ap_int<16>() for i in range(RATE_OF_RAW_DATA_IM_I)]
 np.copyto(raw_data_im_i_buff, raw_data_im_i_vect)
 
-raw_data_im_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_O,), dtype=np.dtype('double'))
-raw_data_real_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_O,), dtype=np.dtype('double'))
-mad_R_o_buff = allocate(shape=(RATE_OF_MAD_R_O,), dtype=np.dtype('double'))
-raw_data_real_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_1_O,), dtype=np.dtype('double'))
-std_R_o_buff = allocate(shape=(RATE_OF_STD_R_O,), dtype=np.dtype('double'))
-raw_data_im_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_1_O,), dtype=np.dtype('double'))
-mad_I_o_buff = allocate(shape=(RATE_OF_MAD_I_O,), dtype=np.dtype('double'))
-std_I_o_buff = allocate(shape=(RATE_OF_STD_I_O,), dtype=np.dtype('double'))
-filtered_im_0_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_0_O,), dtype=np.dtype('double'))
-filtered_real_0_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_0_O,), dtype=np.dtype('double'))
-filtered_im_1_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_1_O,), dtype=np.dtype('double'))
-filtered_real_1_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_1_O,), dtype=np.dtype('double'))
+raw_data_im_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_O,), dtype=np.dtype('ap_int<16>'))
+raw_data_real_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_O,), dtype=np.dtype('ap_int<16>'))
+mad_R_o_buff = allocate(shape=(RATE_OF_MAD_R_O,), dtype=np.dtype('ap_int<16>'))
+raw_data_real_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_REAL_1_O,), dtype=np.dtype('ap_int<16>'))
+std_R_o_buff = allocate(shape=(RATE_OF_STD_R_O,), dtype=np.dtype('ap_int<16>'))
+raw_data_im_1_o_buff = allocate(shape=(RATE_OF_RAW_DATA_IM_1_O,), dtype=np.dtype('ap_int<16>'))
+mad_I_o_buff = allocate(shape=(RATE_OF_MAD_I_O,), dtype=np.dtype('ap_int<16>'))
+std_I_o_buff = allocate(shape=(RATE_OF_STD_I_O,), dtype=np.dtype('ap_int<16>'))
+filtered_im_0_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_0_O,), dtype=np.dtype('ap_int<16>'))
+filtered_real_0_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_0_O,), dtype=np.dtype('ap_int<16>'))
+filtered_im_1_o_buff = allocate(shape=(RATE_OF_FILTERED_IM_1_O,), dtype=np.dtype('ap_int<16>'))
+filtered_real_1_o_buff = allocate(shape=(RATE_OF_FILTERED_REAL_1_O,), dtype=np.dtype('ap_int<16>'))
 
 
         

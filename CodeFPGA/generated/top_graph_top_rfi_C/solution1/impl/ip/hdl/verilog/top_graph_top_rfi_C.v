@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="top_graph_top_rfi_C_top_graph_top_rfi_C,hls_ip_2021_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.420548,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=2526,HLS_SYN_DSP=0,HLS_SYN_FF=27767,HLS_SYN_LUT=30050,HLS_VERSION=2021_2}" *)
+(* CORE_GENERATION_INFO="top_graph_top_rfi_C_top_graph_top_rfi_C,hls_ip_2021_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=8.585000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=654,HLS_SYN_DSP=0,HLS_SYN_FF=19225,HLS_SYN_LUT=18326,HLS_VERSION=2021_2}" *)
 
 module top_graph_top_rfi_C (
         ap_local_block,
@@ -40,41 +40,41 @@ module top_graph_top_rfi_C (
         raw_data_real_o_stream_TREADY,
         raw_data_real_1_o_stream_TVALID,
         raw_data_real_1_o_stream_TREADY,
-        mad_R_o_stream_TVALID,
-        mad_R_o_stream_TREADY,
         std_R_o_stream_TVALID,
         std_R_o_stream_TREADY,
+        mad_R_o_stream_TVALID,
+        mad_R_o_stream_TREADY,
         mad_I_o_stream_TVALID,
         mad_I_o_stream_TREADY,
         std_I_o_stream_TVALID,
         std_I_o_stream_TREADY,
-        filtered_real_1_o_stream_TVALID,
-        filtered_real_1_o_stream_TREADY,
-        filtered_real_0_o_stream_TVALID,
-        filtered_real_0_o_stream_TREADY,
         filtered_im_1_o_stream_TVALID,
         filtered_im_1_o_stream_TREADY,
         filtered_im_0_o_stream_TVALID,
-        filtered_im_0_o_stream_TREADY
+        filtered_im_0_o_stream_TREADY,
+        filtered_real_1_o_stream_TVALID,
+        filtered_real_1_o_stream_TREADY,
+        filtered_real_0_o_stream_TVALID,
+        filtered_real_0_o_stream_TREADY
 );
 
 
 output   ap_local_block;
 output   ap_local_deadlock;
-input  [63:0] raw_data_real_i_stream_TDATA;
-input  [63:0] raw_data_im_i_stream_TDATA;
-output  [63:0] raw_data_im_o_stream_TDATA;
-output  [63:0] raw_data_real_o_stream_TDATA;
-output  [63:0] mad_R_o_stream_TDATA;
-output  [63:0] raw_data_real_1_o_stream_TDATA;
-output  [63:0] std_R_o_stream_TDATA;
-output  [63:0] raw_data_im_1_o_stream_TDATA;
-output  [63:0] mad_I_o_stream_TDATA;
-output  [63:0] std_I_o_stream_TDATA;
-output  [63:0] filtered_im_0_o_stream_TDATA;
-output  [63:0] filtered_real_0_o_stream_TDATA;
-output  [63:0] filtered_im_1_o_stream_TDATA;
-output  [63:0] filtered_real_1_o_stream_TDATA;
+input  [15:0] raw_data_real_i_stream_TDATA;
+input  [15:0] raw_data_im_i_stream_TDATA;
+output  [15:0] raw_data_im_o_stream_TDATA;
+output  [15:0] raw_data_real_o_stream_TDATA;
+output  [15:0] mad_R_o_stream_TDATA;
+output  [15:0] raw_data_real_1_o_stream_TDATA;
+output  [15:0] std_R_o_stream_TDATA;
+output  [15:0] raw_data_im_1_o_stream_TDATA;
+output  [15:0] mad_I_o_stream_TDATA;
+output  [15:0] std_I_o_stream_TDATA;
+output  [15:0] filtered_im_0_o_stream_TDATA;
+output  [15:0] filtered_real_0_o_stream_TDATA;
+output  [15:0] filtered_im_1_o_stream_TDATA;
+output  [15:0] filtered_real_1_o_stream_TDATA;
 input   ap_clk;
 input   ap_rst_n;
 input   raw_data_im_i_stream_TVALID;
@@ -89,22 +89,22 @@ output   raw_data_real_o_stream_TVALID;
 input   raw_data_real_o_stream_TREADY;
 output   raw_data_real_1_o_stream_TVALID;
 input   raw_data_real_1_o_stream_TREADY;
-output   mad_R_o_stream_TVALID;
-input   mad_R_o_stream_TREADY;
 output   std_R_o_stream_TVALID;
 input   std_R_o_stream_TREADY;
+output   mad_R_o_stream_TVALID;
+input   mad_R_o_stream_TREADY;
 output   mad_I_o_stream_TVALID;
 input   mad_I_o_stream_TREADY;
 output   std_I_o_stream_TVALID;
 input   std_I_o_stream_TREADY;
-output   filtered_real_1_o_stream_TVALID;
-input   filtered_real_1_o_stream_TREADY;
-output   filtered_real_0_o_stream_TVALID;
-input   filtered_real_0_o_stream_TREADY;
 output   filtered_im_1_o_stream_TVALID;
 input   filtered_im_1_o_stream_TREADY;
 output   filtered_im_0_o_stream_TVALID;
 input   filtered_im_0_o_stream_TREADY;
+output   filtered_real_1_o_stream_TVALID;
+input   filtered_real_1_o_stream_TREADY;
+output   filtered_real_0_o_stream_TVALID;
+input   filtered_real_0_o_stream_TREADY;
 
  reg    ap_rst_n_inv;
 wire    Brd_Acq_Im_U0_ap_start;
@@ -113,15 +113,15 @@ wire    Brd_Acq_Im_U0_ap_continue;
 wire    Brd_Acq_Im_U0_ap_idle;
 wire    Brd_Acq_Im_U0_ap_ready;
 wire    Brd_Acq_Im_U0_raw_data_im_i_stream_TREADY;
-wire   [63:0] Brd_Acq_Im_U0_raw_data_im_o_stream_TDATA;
+wire   [15:0] Brd_Acq_Im_U0_raw_data_im_o_stream_TDATA;
 wire    Brd_Acq_Im_U0_raw_data_im_o_stream_TVALID;
-wire   [63:0] Brd_Acq_Im_U0_raw_data_im_1_o_stream_TDATA;
+wire   [15:0] Brd_Acq_Im_U0_raw_data_im_1_o_stream_TDATA;
 wire    Brd_Acq_Im_U0_raw_data_im_1_o_stream_TVALID;
-wire   [63:0] Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din;
+wire   [15:0] Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_din;
 wire    Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_write;
-wire   [63:0] Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din;
+wire   [15:0] Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_din;
 wire    Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_write;
-wire   [63:0] Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din;
+wire   [15:0] Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_din;
 wire    Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_write;
 wire    Brd_Acq_Real_U0_ap_start;
 wire    Brd_Acq_Real_U0_ap_done;
@@ -129,160 +129,160 @@ wire    Brd_Acq_Real_U0_ap_continue;
 wire    Brd_Acq_Real_U0_ap_idle;
 wire    Brd_Acq_Real_U0_ap_ready;
 wire    Brd_Acq_Real_U0_raw_data_real_i_stream_TREADY;
-wire   [63:0] Brd_Acq_Real_U0_raw_data_real_o_stream_TDATA;
+wire   [15:0] Brd_Acq_Real_U0_raw_data_real_o_stream_TDATA;
 wire    Brd_Acq_Real_U0_raw_data_real_o_stream_TVALID;
-wire   [63:0] Brd_Acq_Real_U0_raw_data_real_1_o_stream_TDATA;
+wire   [15:0] Brd_Acq_Real_U0_raw_data_real_1_o_stream_TDATA;
 wire    Brd_Acq_Real_U0_raw_data_real_1_o_stream_TVALID;
-wire   [63:0] Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din;
+wire   [15:0] Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_din;
 wire    Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write;
-wire   [63:0] Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din;
+wire   [15:0] Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_din;
 wire    Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write;
-wire   [63:0] Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din;
+wire   [15:0] Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_din;
 wire    Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write;
-wire    MADCpt_2048_3_double_U0_ap_start;
-wire    MADCpt_2048_3_double_U0_ap_done;
-wire    MADCpt_2048_3_double_U0_ap_continue;
-wire    MADCpt_2048_3_double_U0_ap_idle;
-wire    MADCpt_2048_3_double_U0_ap_ready;
-wire    MADCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read;
-wire    MADCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read;
-wire   [63:0] MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din;
-wire    MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write;
-wire   [63:0] MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din;
-wire    MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write;
-wire    STDCpt_2048_3_double_U0_ap_start;
-wire    STDCpt_2048_3_double_U0_ap_done;
-wire    STDCpt_2048_3_double_U0_ap_continue;
-wire    STDCpt_2048_3_double_U0_ap_idle;
-wire    STDCpt_2048_3_double_U0_ap_ready;
-wire    STDCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read;
-wire    STDCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read;
-wire   [63:0] STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din;
-wire    STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write;
-wire   [63:0] STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din;
-wire    STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write;
-wire    Brd_MAD_R_U0_ap_start;
-wire    Brd_MAD_R_U0_ap_done;
-wire    Brd_MAD_R_U0_ap_continue;
-wire    Brd_MAD_R_U0_ap_idle;
-wire    Brd_MAD_R_U0_ap_ready;
-wire   [63:0] Brd_MAD_R_U0_mad_R_o_stream_TDATA;
-wire    Brd_MAD_R_U0_mad_R_o_stream_TVALID;
-wire    Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read;
-wire   [63:0] Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din;
-wire    Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write;
+wire    STDCpt_2048_3_ap_int_16_U0_ap_start;
+wire    STDCpt_2048_3_ap_int_16_U0_ap_done;
+wire    STDCpt_2048_3_ap_int_16_U0_ap_continue;
+wire    STDCpt_2048_3_ap_int_16_U0_ap_idle;
+wire    STDCpt_2048_3_ap_int_16_U0_ap_ready;
+wire    STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read;
+wire    STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read;
+wire   [15:0] STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din;
+wire    STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write;
+wire   [15:0] STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din;
+wire    STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write;
+wire    MADCpt_2048_3_ap_int_16_U0_ap_start;
+wire    MADCpt_2048_3_ap_int_16_U0_ap_done;
+wire    MADCpt_2048_3_ap_int_16_U0_ap_continue;
+wire    MADCpt_2048_3_ap_int_16_U0_ap_idle;
+wire    MADCpt_2048_3_ap_int_16_U0_ap_ready;
+wire    MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read;
+wire    MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read;
+wire   [15:0] MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din;
+wire    MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write;
+wire   [15:0] MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din;
+wire    MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write;
 wire    Brd_STD_R_U0_ap_start;
 wire    Brd_STD_R_U0_ap_done;
 wire    Brd_STD_R_U0_ap_continue;
 wire    Brd_STD_R_U0_ap_idle;
 wire    Brd_STD_R_U0_ap_ready;
-wire   [63:0] Brd_STD_R_U0_std_R_o_stream_TDATA;
+wire   [15:0] Brd_STD_R_U0_std_R_o_stream_TDATA;
 wire    Brd_STD_R_U0_std_R_o_stream_TVALID;
 wire    Brd_STD_R_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_read;
-wire   [63:0] Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din;
+wire   [15:0] Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din;
 wire    Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write;
+wire    Brd_MAD_R_U0_ap_start;
+wire    Brd_MAD_R_U0_ap_done;
+wire    Brd_MAD_R_U0_ap_continue;
+wire    Brd_MAD_R_U0_ap_idle;
+wire    Brd_MAD_R_U0_ap_ready;
+wire   [15:0] Brd_MAD_R_U0_mad_R_o_stream_TDATA;
+wire    Brd_MAD_R_U0_mad_R_o_stream_TVALID;
+wire    Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read;
+wire   [15:0] Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din;
+wire    Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write;
 wire    Brd_MAD_I_U0_ap_start;
 wire    Brd_MAD_I_U0_ap_done;
 wire    Brd_MAD_I_U0_ap_continue;
 wire    Brd_MAD_I_U0_ap_idle;
 wire    Brd_MAD_I_U0_ap_ready;
-wire   [63:0] Brd_MAD_I_U0_mad_I_o_stream_TDATA;
+wire   [15:0] Brd_MAD_I_U0_mad_I_o_stream_TDATA;
 wire    Brd_MAD_I_U0_mad_I_o_stream_TVALID;
 wire    Brd_MAD_I_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read;
-wire   [63:0] Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din;
+wire   [15:0] Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_din;
 wire    Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_write;
 wire    Brd_STD_I_U0_ap_start;
 wire    Brd_STD_I_U0_ap_done;
 wire    Brd_STD_I_U0_ap_continue;
 wire    Brd_STD_I_U0_ap_idle;
 wire    Brd_STD_I_U0_ap_ready;
-wire   [63:0] Brd_STD_I_U0_std_I_o_stream_TDATA;
+wire   [15:0] Brd_STD_I_U0_std_I_o_stream_TDATA;
 wire    Brd_STD_I_U0_std_I_o_stream_TVALID;
 wire    Brd_STD_I_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_read;
-wire   [63:0] Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din;
+wire   [15:0] Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_din;
 wire    Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write;
-wire    RFIFilter_0_2048_double_U0_ap_start;
-wire    RFIFilter_0_2048_double_U0_ap_done;
-wire    RFIFilter_0_2048_double_U0_ap_continue;
-wire    RFIFilter_0_2048_double_U0_ap_idle;
-wire    RFIFilter_0_2048_double_U0_ap_ready;
-wire    RFIFilter_0_2048_double_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read;
-wire    RFIFilter_0_2048_double_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read;
-wire    RFIFilter_0_2048_double_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read;
-wire    RFIFilter_0_2048_double_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read;
-wire    RFIFilter_0_2048_double_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read;
-wire    RFIFilter_0_2048_double_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read;
-wire   [63:0] RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din;
-wire    RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write;
-wire   [63:0] RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din;
-wire    RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write;
-wire    Brd_Res_Real_U0_ap_start;
-wire    Brd_Res_Real_U0_ap_done;
-wire    Brd_Res_Real_U0_ap_continue;
-wire    Brd_Res_Real_U0_ap_idle;
-wire    Brd_Res_Real_U0_ap_ready;
-wire   [63:0] Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA;
-wire    Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID;
-wire   [63:0] Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA;
-wire    Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID;
-wire    Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read;
+wire    RFIFilter_0_2048_ap_int_16_U0_ap_start;
+wire    RFIFilter_0_2048_ap_int_16_U0_ap_done;
+wire    RFIFilter_0_2048_ap_int_16_U0_ap_continue;
+wire    RFIFilter_0_2048_ap_int_16_U0_ap_idle;
+wire    RFIFilter_0_2048_ap_int_16_U0_ap_ready;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read;
+wire   [15:0] RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write;
+wire   [15:0] RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din;
+wire    RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write;
 wire    Brd_Res_Im_U0_ap_start;
 wire    Brd_Res_Im_U0_ap_done;
 wire    Brd_Res_Im_U0_ap_continue;
 wire    Brd_Res_Im_U0_ap_idle;
 wire    Brd_Res_Im_U0_ap_ready;
-wire   [63:0] Brd_Res_Im_U0_filtered_im_1_o_stream_TDATA;
+wire   [15:0] Brd_Res_Im_U0_filtered_im_1_o_stream_TDATA;
 wire    Brd_Res_Im_U0_filtered_im_1_o_stream_TVALID;
-wire   [63:0] Brd_Res_Im_U0_filtered_im_0_o_stream_TDATA;
+wire   [15:0] Brd_Res_Im_U0_filtered_im_0_o_stream_TDATA;
 wire    Brd_Res_Im_U0_filtered_im_0_o_stream_TVALID;
 wire    Brd_Res_Im_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read;
+wire    Brd_Res_Real_U0_ap_start;
+wire    Brd_Res_Real_U0_ap_done;
+wire    Brd_Res_Real_U0_ap_continue;
+wire    Brd_Res_Real_U0_ap_idle;
+wire    Brd_Res_Real_U0_ap_ready;
+wire   [15:0] Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA;
+wire    Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID;
+wire   [15:0] Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA;
+wire    Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID;
+wire    Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read;
 wire    stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_full_n;
-wire   [63:0] stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout;
+wire   [15:0] stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout;
 wire    stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n;
 wire    stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_full_n;
-wire   [63:0] stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout;
+wire   [15:0] stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout;
 wire    stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n;
 wire    stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_full_n;
-wire   [63:0] stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout;
+wire   [15:0] stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout;
 wire    stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n;
 wire    stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_full_n;
-wire   [63:0] stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout;
+wire   [15:0] stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout;
 wire    stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n;
 wire    stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_full_n;
-wire   [63:0] stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout;
+wire   [15:0] stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout;
 wire    stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n;
 wire    stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_full_n;
-wire   [63:0] stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout;
+wire   [15:0] stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout;
 wire    stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n;
-wire    stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n;
-wire   [63:0] stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout;
-wire    stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n;
-wire    stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n;
-wire   [63:0] stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout;
-wire    stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n;
 wire    stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n;
-wire   [63:0] stream_STD_Computation_std_R_o_Brd_STD_R_in_dout;
+wire   [15:0] stream_STD_Computation_std_R_o_Brd_STD_R_in_dout;
 wire    stream_STD_Computation_std_R_o_Brd_STD_R_in_empty_n;
 wire    stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n;
-wire   [63:0] stream_STD_Computation_std_I_o_Brd_STD_I_in_dout;
+wire   [15:0] stream_STD_Computation_std_I_o_Brd_STD_I_in_dout;
 wire    stream_STD_Computation_std_I_o_Brd_STD_I_in_empty_n;
-wire    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n;
-wire   [63:0] stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout;
-wire    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n;
+wire    stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n;
+wire   [15:0] stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout;
+wire    stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n;
+wire    stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n;
+wire   [15:0] stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout;
+wire    stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n;
 wire    stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_full_n;
-wire   [63:0] stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout;
+wire   [15:0] stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout;
 wire    stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n;
+wire    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n;
+wire   [15:0] stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout;
+wire    stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n;
 wire    stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_full_n;
-wire   [63:0] stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout;
+wire   [15:0] stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout;
 wire    stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n;
 wire    stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_full_n;
-wire   [63:0] stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout;
+wire   [15:0] stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout;
 wire    stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n;
 wire    stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n;
-wire   [63:0] stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout;
+wire   [15:0] stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout;
 wire    stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n;
 wire    stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n;
-wire   [63:0] stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout;
+wire   [15:0] stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout;
 wire    stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n;
 
 top_graph_top_rfi_C_Brd_Acq_Im Brd_Acq_Im_U0(
@@ -341,67 +341,48 @@ top_graph_top_rfi_C_Brd_Acq_Real Brd_Acq_Real_U0(
     .stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write(Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write)
 );
 
-top_graph_top_rfi_C_MADCpt_2048_3_double_s MADCpt_2048_3_double_U0(
+top_graph_top_rfi_C_STDCpt_2048_3_ap_int_16_s STDCpt_2048_3_ap_int_16_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(MADCpt_2048_3_double_U0_ap_start),
-    .ap_done(MADCpt_2048_3_double_U0_ap_done),
-    .ap_continue(MADCpt_2048_3_double_U0_ap_continue),
-    .ap_idle(MADCpt_2048_3_double_U0_ap_idle),
-    .ap_ready(MADCpt_2048_3_double_U0_ap_ready),
-    .stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout(stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout),
-    .stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n(stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n),
-    .stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read(MADCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read),
-    .stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout(stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout),
-    .stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n(stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n),
-    .stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read(MADCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read),
-    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din),
-    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n),
-    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write),
-    .stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din),
-    .stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n),
-    .stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write)
-);
-
-top_graph_top_rfi_C_STDCpt_2048_3_double_s STDCpt_2048_3_double_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(STDCpt_2048_3_double_U0_ap_start),
-    .ap_done(STDCpt_2048_3_double_U0_ap_done),
-    .ap_continue(STDCpt_2048_3_double_U0_ap_continue),
-    .ap_idle(STDCpt_2048_3_double_U0_ap_idle),
-    .ap_ready(STDCpt_2048_3_double_U0_ap_ready),
+    .ap_start(STDCpt_2048_3_ap_int_16_U0_ap_start),
+    .ap_done(STDCpt_2048_3_ap_int_16_U0_ap_done),
+    .ap_continue(STDCpt_2048_3_ap_int_16_U0_ap_continue),
+    .ap_idle(STDCpt_2048_3_ap_int_16_U0_ap_idle),
+    .ap_ready(STDCpt_2048_3_ap_int_16_U0_ap_ready),
     .stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout(stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout),
     .stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n(stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n),
-    .stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read(STDCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read),
+    .stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read(STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read),
     .stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout(stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout),
     .stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n(stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n),
-    .stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read(STDCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read),
-    .stream_STD_Computation_std_R_o_Brd_STD_R_in_din(STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din),
+    .stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read(STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read),
+    .stream_STD_Computation_std_R_o_Brd_STD_R_in_din(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din),
     .stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n(stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n),
-    .stream_STD_Computation_std_R_o_Brd_STD_R_in_write(STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write),
-    .stream_STD_Computation_std_I_o_Brd_STD_I_in_din(STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din),
+    .stream_STD_Computation_std_R_o_Brd_STD_R_in_write(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write),
+    .stream_STD_Computation_std_I_o_Brd_STD_I_in_din(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din),
     .stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n(stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n),
-    .stream_STD_Computation_std_I_o_Brd_STD_I_in_write(STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write)
+    .stream_STD_Computation_std_I_o_Brd_STD_I_in_write(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write)
 );
 
-top_graph_top_rfi_C_Brd_MAD_R Brd_MAD_R_U0(
+top_graph_top_rfi_C_MADCpt_2048_3_ap_int_16_s MADCpt_2048_3_ap_int_16_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(Brd_MAD_R_U0_ap_start),
-    .ap_done(Brd_MAD_R_U0_ap_done),
-    .ap_continue(Brd_MAD_R_U0_ap_continue),
-    .ap_idle(Brd_MAD_R_U0_ap_idle),
-    .ap_ready(Brd_MAD_R_U0_ap_ready),
-    .mad_R_o_stream_TDATA(Brd_MAD_R_U0_mad_R_o_stream_TDATA),
-    .mad_R_o_stream_TVALID(Brd_MAD_R_U0_mad_R_o_stream_TVALID),
-    .mad_R_o_stream_TREADY(mad_R_o_stream_TREADY),
-    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout),
-    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n),
-    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read(Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read),
-    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din),
-    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n),
-    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write)
+    .ap_start(MADCpt_2048_3_ap_int_16_U0_ap_start),
+    .ap_done(MADCpt_2048_3_ap_int_16_U0_ap_done),
+    .ap_continue(MADCpt_2048_3_ap_int_16_U0_ap_continue),
+    .ap_idle(MADCpt_2048_3_ap_int_16_U0_ap_idle),
+    .ap_ready(MADCpt_2048_3_ap_int_16_U0_ap_ready),
+    .stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout(stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout),
+    .stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n(stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n),
+    .stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read(MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read),
+    .stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout(stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout),
+    .stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n(stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n),
+    .stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read(MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read),
+    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din),
+    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n),
+    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write),
+    .stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din),
+    .stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n),
+    .stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write)
 );
 
 top_graph_top_rfi_C_Brd_STD_R Brd_STD_R_U0(
@@ -421,6 +402,25 @@ top_graph_top_rfi_C_Brd_STD_R Brd_STD_R_U0(
     .stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din(Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_din),
     .stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_full_n(stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_full_n),
     .stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write(Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write)
+);
+
+top_graph_top_rfi_C_Brd_MAD_R Brd_MAD_R_U0(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(Brd_MAD_R_U0_ap_start),
+    .ap_done(Brd_MAD_R_U0_ap_done),
+    .ap_continue(Brd_MAD_R_U0_ap_continue),
+    .ap_idle(Brd_MAD_R_U0_ap_idle),
+    .ap_ready(Brd_MAD_R_U0_ap_ready),
+    .mad_R_o_stream_TDATA(Brd_MAD_R_U0_mad_R_o_stream_TDATA),
+    .mad_R_o_stream_TVALID(Brd_MAD_R_U0_mad_R_o_stream_TVALID),
+    .mad_R_o_stream_TREADY(mad_R_o_stream_TREADY),
+    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout),
+    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n),
+    .stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read(Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read),
+    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din),
+    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n),
+    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write)
 );
 
 top_graph_top_rfi_C_Brd_MAD_I Brd_MAD_I_U0(
@@ -461,57 +461,38 @@ top_graph_top_rfi_C_Brd_STD_I Brd_STD_I_U0(
     .stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write(Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write)
 );
 
-top_graph_top_rfi_C_RFIFilter_0_2048_double_s RFIFilter_0_2048_double_U0(
+top_graph_top_rfi_C_RFIFilter_0_2048_ap_int_16_s RFIFilter_0_2048_ap_int_16_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(RFIFilter_0_2048_double_U0_ap_start),
-    .ap_done(RFIFilter_0_2048_double_U0_ap_done),
-    .ap_continue(RFIFilter_0_2048_double_U0_ap_continue),
-    .ap_idle(RFIFilter_0_2048_double_U0_ap_idle),
-    .ap_ready(RFIFilter_0_2048_double_U0_ap_ready),
+    .ap_start(RFIFilter_0_2048_ap_int_16_U0_ap_start),
+    .ap_done(RFIFilter_0_2048_ap_int_16_U0_ap_done),
+    .ap_continue(RFIFilter_0_2048_ap_int_16_U0_ap_continue),
+    .ap_idle(RFIFilter_0_2048_ap_int_16_U0_ap_idle),
+    .ap_ready(RFIFilter_0_2048_ap_int_16_U0_ap_ready),
     .stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout(stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout),
     .stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n(stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n),
-    .stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read(RFIFilter_0_2048_double_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read),
+    .stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read),
     .stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout(stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout),
     .stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n(stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n),
-    .stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read(RFIFilter_0_2048_double_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read),
+    .stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read),
     .stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout(stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout),
     .stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n(stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n),
-    .stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read(RFIFilter_0_2048_double_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read),
+    .stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read),
     .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout),
     .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n),
-    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read(RFIFilter_0_2048_double_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read),
+    .stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read),
     .stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout(stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout),
     .stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n(stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n),
-    .stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read(RFIFilter_0_2048_double_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read),
+    .stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read),
     .stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout(stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout),
     .stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n(stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n),
-    .stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read(RFIFilter_0_2048_double_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read),
-    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din),
+    .stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read),
+    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din),
     .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n),
-    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write),
-    .stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din),
+    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write),
+    .stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din),
     .stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n(stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n),
-    .stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write)
-);
-
-top_graph_top_rfi_C_Brd_Res_Real Brd_Res_Real_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst_n_inv),
-    .ap_start(Brd_Res_Real_U0_ap_start),
-    .ap_done(Brd_Res_Real_U0_ap_done),
-    .ap_continue(Brd_Res_Real_U0_ap_continue),
-    .ap_idle(Brd_Res_Real_U0_ap_idle),
-    .ap_ready(Brd_Res_Real_U0_ap_ready),
-    .filtered_real_1_o_stream_TDATA(Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA),
-    .filtered_real_1_o_stream_TVALID(Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID),
-    .filtered_real_1_o_stream_TREADY(filtered_real_1_o_stream_TREADY),
-    .filtered_real_0_o_stream_TDATA(Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA),
-    .filtered_real_0_o_stream_TVALID(Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID),
-    .filtered_real_0_o_stream_TREADY(filtered_real_0_o_stream_TREADY),
-    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout),
-    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n),
-    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read(Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read)
+    .stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write)
 );
 
 top_graph_top_rfi_C_Brd_Res_Im Brd_Res_Im_U0(
@@ -533,7 +514,26 @@ top_graph_top_rfi_C_Brd_Res_Im Brd_Res_Im_U0(
     .stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read(Brd_Res_Im_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U(
+top_graph_top_rfi_C_Brd_Res_Real Brd_Res_Real_U0(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst_n_inv),
+    .ap_start(Brd_Res_Real_U0_ap_start),
+    .ap_done(Brd_Res_Real_U0_ap_done),
+    .ap_continue(Brd_Res_Real_U0_ap_continue),
+    .ap_idle(Brd_Res_Real_U0_ap_idle),
+    .ap_ready(Brd_Res_Real_U0_ap_ready),
+    .filtered_real_1_o_stream_TDATA(Brd_Res_Real_U0_filtered_real_1_o_stream_TDATA),
+    .filtered_real_1_o_stream_TVALID(Brd_Res_Real_U0_filtered_real_1_o_stream_TVALID),
+    .filtered_real_1_o_stream_TREADY(filtered_real_1_o_stream_TREADY),
+    .filtered_real_0_o_stream_TDATA(Brd_Res_Real_U0_filtered_real_0_o_stream_TDATA),
+    .filtered_real_0_o_stream_TVALID(Brd_Res_Real_U0_filtered_real_0_o_stream_TVALID),
+    .filtered_real_0_o_stream_TREADY(filtered_real_0_o_stream_TREADY),
+    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout),
+    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n),
+    .stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read(Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read)
+);
+
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -543,10 +543,10 @@ top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Im_out_0_MAD_Computation_raw
     .if_write(Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_write),
     .if_dout(stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_dout),
     .if_empty_n(stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_empty_n),
-    .if_read(MADCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read)
+    .if_read(MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -556,10 +556,10 @@ top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Im_out_1_STD_Computation_raw
     .if_write(Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_write),
     .if_dout(stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_dout),
     .if_empty_n(stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_empty_n),
-    .if_read(STDCpt_2048_3_double_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read)
+    .if_read(STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d8156_A stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U(
+top_graph_top_rfi_C_fifo_w16_d8156_A stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -569,10 +569,10 @@ top_graph_top_rfi_C_fifo_w64_d8156_A stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data
     .if_write(Brd_Acq_Im_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_write),
     .if_dout(stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_dout),
     .if_empty_n(stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_empty_n),
-    .if_read(RFIFilter_0_2048_double_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read)
+    .if_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -582,10 +582,10 @@ top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Real_out_1_MAD_Computation_r
     .if_write(Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_write),
     .if_dout(stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_dout),
     .if_empty_n(stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_empty_n),
-    .if_read(MADCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read)
+    .if_read(MADCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -595,10 +595,10 @@ top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_Acq_Real_out_2_STD_Computation_r
     .if_write(Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_write),
     .if_dout(stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_dout),
     .if_empty_n(stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_empty_n),
-    .if_read(STDCpt_2048_3_double_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read)
+    .if_read(STDCpt_2048_3_ap_int_16_U0_stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d8156_A stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U(
+top_graph_top_rfi_C_fifo_w16_d8156_A stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -608,75 +608,62 @@ top_graph_top_rfi_C_fifo_w64_d8156_A stream_Brd_Acq_Real_out_4_RFI_Filter_raw_da
     .if_write(Brd_Acq_Real_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_write),
     .if_dout(stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_dout),
     .if_empty_n(stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_empty_n),
-    .if_read(RFIFilter_0_2048_double_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read)
+    .if_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_STD_Computation_std_R_o_Brd_STD_R_in_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din),
-    .if_full_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n),
-    .if_write(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write),
-    .if_dout(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout),
-    .if_empty_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n),
-    .if_read(Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read)
-);
-
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din),
-    .if_full_n(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n),
-    .if_write(MADCpt_2048_3_double_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write),
-    .if_dout(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout),
-    .if_empty_n(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n),
-    .if_read(Brd_MAD_I_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read)
-);
-
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_STD_Computation_std_R_o_Brd_STD_R_in_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din),
+    .if_din(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_din),
     .if_full_n(stream_STD_Computation_std_R_o_Brd_STD_R_in_full_n),
-    .if_write(STDCpt_2048_3_double_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write),
+    .if_write(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_write),
     .if_dout(stream_STD_Computation_std_R_o_Brd_STD_R_in_dout),
     .if_empty_n(stream_STD_Computation_std_R_o_Brd_STD_R_in_empty_n),
     .if_read(Brd_STD_R_U0_stream_STD_Computation_std_R_o_Brd_STD_R_in_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_STD_Computation_std_I_o_Brd_STD_I_in_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_STD_Computation_std_I_o_Brd_STD_I_in_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din),
+    .if_din(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_din),
     .if_full_n(stream_STD_Computation_std_I_o_Brd_STD_I_in_full_n),
-    .if_write(STDCpt_2048_3_double_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write),
+    .if_write(STDCpt_2048_3_ap_int_16_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_write),
     .if_dout(stream_STD_Computation_std_I_o_Brd_STD_I_in_dout),
     .if_empty_n(stream_STD_Computation_std_I_o_Brd_STD_I_in_empty_n),
     .if_read(Brd_STD_I_U0_stream_STD_Computation_std_I_o_Brd_STD_I_in_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din),
-    .if_full_n(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n),
-    .if_write(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write),
-    .if_dout(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout),
-    .if_empty_n(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n),
-    .if_read(RFIFilter_0_2048_double_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read)
+    .if_din(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_din),
+    .if_full_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_full_n),
+    .if_write(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_write),
+    .if_dout(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_dout),
+    .if_empty_n(stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_empty_n),
+    .if_read(Brd_MAD_R_U0_stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_din),
+    .if_full_n(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_full_n),
+    .if_write(MADCpt_2048_3_ap_int_16_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_write),
+    .if_dout(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_dout),
+    .if_empty_n(stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_empty_n),
+    .if_read(Brd_MAD_I_U0_stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_read)
+);
+
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -686,10 +673,23 @@ top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U
     .if_write(Brd_STD_R_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_write),
     .if_dout(stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_dout),
     .if_empty_n(stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_empty_n),
-    .if_read(RFIFilter_0_2048_double_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read)
+    .if_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .if_read_ce(1'b1),
+    .if_write_ce(1'b1),
+    .if_din(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_din),
+    .if_full_n(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_full_n),
+    .if_write(Brd_MAD_R_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_write),
+    .if_dout(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_dout),
+    .if_empty_n(stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_empty_n),
+    .if_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_read)
+);
+
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -699,10 +699,10 @@ top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U
     .if_write(Brd_MAD_I_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_write),
     .if_dout(stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_dout),
     .if_empty_n(stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_empty_n),
-    .if_read(RFIFilter_0_2048_double_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read)
+    .if_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -712,30 +712,30 @@ top_graph_top_rfi_C_fifo_w64_d4078_A stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U
     .if_write(Brd_STD_I_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_write),
     .if_dout(stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_dout),
     .if_empty_n(stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_empty_n),
-    .if_read(RFIFilter_0_2048_double_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read)
+    .if_read(RFIFilter_0_2048_ap_int_16_U0_stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din),
+    .if_din(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_din),
     .if_full_n(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_full_n),
-    .if_write(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write),
+    .if_write(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_write),
     .if_dout(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_dout),
     .if_empty_n(stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_empty_n),
     .if_read(Brd_Res_Real_U0_stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_read)
 );
 
-top_graph_top_rfi_C_fifo_w64_d4078_A stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U(
+top_graph_top_rfi_C_fifo_w16_d4078_A stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din),
+    .if_din(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_din),
     .if_full_n(stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_full_n),
-    .if_write(RFIFilter_0_2048_double_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write),
+    .if_write(RFIFilter_0_2048_ap_int_16_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_write),
     .if_dout(stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_dout),
     .if_empty_n(stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_empty_n),
     .if_read(Brd_Res_Im_U0_stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_read)
@@ -773,17 +773,17 @@ assign Brd_STD_R_U0_ap_continue = 1'b1;
 
 assign Brd_STD_R_U0_ap_start = 1'b1;
 
-assign MADCpt_2048_3_double_U0_ap_continue = 1'b1;
+assign MADCpt_2048_3_ap_int_16_U0_ap_continue = 1'b1;
 
-assign MADCpt_2048_3_double_U0_ap_start = 1'b1;
+assign MADCpt_2048_3_ap_int_16_U0_ap_start = 1'b1;
 
-assign RFIFilter_0_2048_double_U0_ap_continue = 1'b1;
+assign RFIFilter_0_2048_ap_int_16_U0_ap_continue = 1'b1;
 
-assign RFIFilter_0_2048_double_U0_ap_start = 1'b1;
+assign RFIFilter_0_2048_ap_int_16_U0_ap_start = 1'b1;
 
-assign STDCpt_2048_3_double_U0_ap_continue = 1'b1;
+assign STDCpt_2048_3_ap_int_16_U0_ap_continue = 1'b1;
 
-assign STDCpt_2048_3_double_U0_ap_start = 1'b1;
+assign STDCpt_2048_3_ap_int_16_U0_ap_start = 1'b1;
 
 
 

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'top_graph_top_rfi_C'
 ================================================================
-* Date:           Thu Jul  6 01:41:55 2023
+* Date:           Tue Jul 25 02:51:45 2023
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
 * Project:        top_graph_top_rfi_C
@@ -20,36 +20,36 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.421 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  8.998 ns|     1.00 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+--------+-----+----------+
-    |  Latency (cycles) |  Latency (absolute) |   Interval   | Pipeline |
-    |   min   |   max   |    min   |    max   |   min  | max |   Type   |
-    +---------+---------+----------+----------+--------+-----+----------+
-    |   868460|        ?|  8.685 ms|         ?|  868461|   -1|  dataflow|
-    +---------+---------+----------+----------+--------+-----+----------+
+    +---------+---------+----------+----------+-------+--------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval    | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |   max  |   Type   |
+    +---------+---------+----------+----------+-------+--------+----------+
+    |    65631|   475231|  0.656 ms|  4.752 ms|  65632|  475232|  dataflow|
+    +---------+---------+----------+----------+-------+--------+----------+
 
     + Detail: 
         * Instance: 
-        +----------------------------+---------------------------+---------+---------+-----------+-----------+--------+-------+---------+
-        |                            |                           |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline|
-        |          Instance          |           Module          |   min   |   max   |    min    |    max    |   min  |  max  |   Type  |
-        +----------------------------+---------------------------+---------+---------+-----------+-----------+--------+-------+---------+
-        |Brd_Acq_Im_U0               |Brd_Acq_Im                 |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        |Brd_Acq_Real_U0             |Brd_Acq_Real               |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        |MADCpt_2048_3_double_U0     |MADCpt_2048_3_double_s     |   868460|        ?|   8.685 ms|          ?|  868460|      ?|       no|
-        |STDCpt_2048_3_double_U0     |STDCpt_2048_3_double_s     |    51456|    51456|   0.515 ms|   0.515 ms|   51456|  51456|       no|
-        |Brd_MAD_R_U0                |Brd_MAD_R                  |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        |Brd_STD_R_U0                |Brd_STD_R                  |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        |Brd_MAD_I_U0                |Brd_MAD_I                  |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        |Brd_STD_I_U0                |Brd_STD_I                  |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        |RFIFilter_0_2048_double_U0  |RFIFilter_0_2048_double_s  |     6171|     6171|  61.710 us|  61.710 us|    6171|   6171|       no|
-        |Brd_Res_Real_U0             |Brd_Res_Real               |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        |Brd_Res_Im_U0               |Brd_Res_Im                 |        1|        1|  10.000 ns|  10.000 ns|       1|      1|       no|
-        +----------------------------+---------------------------+---------+---------+-----------+-----------+--------+-------+---------+
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-------+--------+---------+
+        |                               |                              |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline|
+        |            Instance           |            Module            |   min   |   max   |    min    |    max    |  min  |   max  |   Type  |
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-------+--------+---------+
+        |Brd_Acq_Im_U0                  |Brd_Acq_Im                    |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        |Brd_Acq_Real_U0                |Brd_Acq_Real                  |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        |STDCpt_2048_3_ap_int_16_U0     |STDCpt_2048_3_ap_int_16_s     |    14603|    14603|   0.146 ms|   0.146 ms|  14603|   14603|       no|
+        |MADCpt_2048_3_ap_int_16_U0     |MADCpt_2048_3_ap_int_16_s     |    65631|   475231|   0.656 ms|   4.752 ms|  65631|  475231|       no|
+        |Brd_STD_R_U0                   |Brd_STD_R                     |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        |Brd_MAD_R_U0                   |Brd_MAD_R                     |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        |Brd_MAD_I_U0                   |Brd_MAD_I                     |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        |Brd_STD_I_U0                   |Brd_STD_I                     |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        |RFIFilter_0_2048_ap_int_16_U0  |RFIFilter_0_2048_ap_int_16_s  |     6157|     6157|  61.570 us|  61.570 us|   6157|    6157|       no|
+        |Brd_Res_Im_U0                  |Brd_Res_Im                    |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        |Brd_Res_Real_U0                |Brd_Res_Real                  |        1|        1|  10.000 ns|  10.000 ns|      1|       1|       no|
+        +-------------------------------+------------------------------+---------+---------+-----------+-----------+-------+--------+---------+
 
         * Loop: 
         N/A
@@ -65,38 +65,38 @@
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       -|      -|    -|
-|FIFO             |      288|    -|    2608|   1312|    -|
-|Instance         |     2238|  115|   25159|  28738|    0|
+|FIFO             |       72|    -|    2608|   1312|    -|
+|Instance         |       72|   78|   15675|  17283|    0|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|      -|    -|
 |Register         |        -|    -|       -|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |     2526|  115|   27767|  30050|    0|
+|Total            |      144|   78|   18283|  18595|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |      902|   52|      26|     56|    0|
+|Utilization (%)  |       51|   35|      17|     34|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +----------------------------+---------------------------+---------+----+-------+-------+-----+
-    |          Instance          |           Module          | BRAM_18K| DSP|   FF  |  LUT  | URAM|
-    +----------------------------+---------------------------+---------+----+-------+-------+-----+
-    |Brd_Acq_Im_U0               |Brd_Acq_Im                 |        0|   0|      3|     83|    0|
-    |Brd_Acq_Real_U0             |Brd_Acq_Real               |        0|   0|      3|     83|    0|
-    |Brd_MAD_I_U0                |Brd_MAD_I                  |        0|   0|      3|     54|    0|
-    |Brd_MAD_R_U0                |Brd_MAD_R                  |        0|   0|      3|     54|    0|
-    |Brd_Res_Im_U0               |Brd_Res_Im                 |        0|   0|      3|     56|    0|
-    |Brd_Res_Real_U0             |Brd_Res_Real               |        0|   0|      3|     56|    0|
-    |Brd_STD_I_U0                |Brd_STD_I                  |        0|   0|      3|     54|    0|
-    |Brd_STD_R_U0                |Brd_STD_R                  |        0|   0|      3|     54|    0|
-    |MADCpt_2048_3_double_U0     |MADCpt_2048_3_double_s     |     2128|  28|   5733|  11049|    0|
-    |RFIFilter_0_2048_double_U0  |RFIFilter_0_2048_double_s  |       32|  14|   2199|   3103|    0|
-    |STDCpt_2048_3_double_U0     |STDCpt_2048_3_double_s     |       78|  73|  17203|  14092|    0|
-    +----------------------------+---------------------------+---------+----+-------+-------+-----+
-    |Total                       |                           |     2238| 115|  25159|  28738|    0|
-    +----------------------------+---------------------------+---------+----+-------+-------+-----+
+    +-------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |            Instance           |            Module            | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +-------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |Brd_Acq_Im_U0                  |Brd_Acq_Im                    |        0|   0|      3|     83|    0|
+    |Brd_Acq_Real_U0                |Brd_Acq_Real                  |        0|   0|      3|     83|    0|
+    |Brd_MAD_I_U0                   |Brd_MAD_I                     |        0|   0|      3|     54|    0|
+    |Brd_MAD_R_U0                   |Brd_MAD_R                     |        0|   0|      3|     54|    0|
+    |Brd_Res_Im_U0                  |Brd_Res_Im                    |        0|   0|      3|     56|    0|
+    |Brd_Res_Real_U0                |Brd_Res_Real                  |        0|   0|      3|     56|    0|
+    |Brd_STD_I_U0                   |Brd_STD_I                     |        0|   0|      3|     54|    0|
+    |Brd_STD_R_U0                   |Brd_STD_R                     |        0|   0|      3|     54|    0|
+    |MADCpt_2048_3_ap_int_16_U0     |MADCpt_2048_3_ap_int_16_s     |       22|  33|   2360|   4965|    0|
+    |RFIFilter_0_2048_ap_int_16_U0  |RFIFilter_0_2048_ap_int_16_s  |        8|   0|    249|    828|    0|
+    |STDCpt_2048_3_ap_int_16_U0     |STDCpt_2048_3_ap_int_16_s     |       42|  45|  13042|  10996|    0|
+    +-------------------------------+------------------------------+---------+----+-------+-------+-----+
+    |Total                          |                              |       72|  78|  15675|  17283|    0|
+    +-------------------------------+------------------------------+---------+----+-------+-------+-----+
 
     * DSP: 
     N/A
@@ -108,24 +108,24 @@
     +-------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
     |                             Name                            | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
     +-------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
-    |stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U      |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U      |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U           |       32|  163|   0|    -|  8156|   64|   521984|
-    |stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U  |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U  |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U       |       32|  163|   0|    -|  8156|   64|   521984|
-    |stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U                  |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U                  |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U                  |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U                  |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U                |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U                |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U         |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U     |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_STD_Computation_std_I_o_Brd_STD_I_in_U                |       16|  163|   0|    -|  4078|   64|   260992|
-    |stream_STD_Computation_std_R_o_Brd_STD_R_in_U                |       16|  163|   0|    -|  4078|   64|   260992|
+    |stream_Brd_Acq_Im_out_0_MAD_Computation_raw_data_im_i_U      |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_Brd_Acq_Im_out_1_STD_Computation_raw_data_im_i_U      |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_Brd_Acq_Im_out_4_RFI_Filter_raw_data_im_i_U           |        8|  163|   0|    -|  8156|   16|   130496|
+    |stream_Brd_Acq_Real_out_1_MAD_Computation_raw_data_real_i_U  |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_Brd_Acq_Real_out_2_STD_Computation_raw_data_real_i_U  |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_Brd_Acq_Real_out_4_RFI_Filter_raw_data_real_i_U       |        8|  163|   0|    -|  8156|   16|   130496|
+    |stream_Brd_MAD_I_out_1_RFI_Filter_mad_I_i_U                  |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_Brd_MAD_R_out_2_RFI_Filter_mad_R_i_U                  |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_Brd_STD_I_out_1_RFI_Filter_std_I_i_U                  |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_Brd_STD_R_out_2_RFI_Filter_std_R_i_U                  |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_MAD_Computation_mad_I_o_Brd_MAD_I_in_U                |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_MAD_Computation_mad_R_o_Brd_MAD_R_in_U                |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_RFI_Filter_filtered_im_data_o_Brd_Res_Im_in_U         |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_RFI_Filter_filtered_real_data_o_Brd_Res_Real_in_U     |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_STD_Computation_std_I_o_Brd_STD_I_in_U                |        4|  163|   0|    -|  4078|   16|    65248|
+    |stream_STD_Computation_std_R_o_Brd_STD_R_in_U                |        4|  163|   0|    -|  4078|   16|    65248|
     +-------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
-    |Total                                                        |      288| 2608|   0|    0| 73404| 1024|  4697856|
+    |Total                                                        |       72| 2608|   0|    0| 73404|  256|  1174464|
     +-------------------------------------------------------------+---------+-----+----+-----+------+-----+---------+
 
     * Expression: 
@@ -150,46 +150,46 @@
 |ap_local_deadlock                |  out|    1|  ap_ctrl_none|       top_graph_top_rfi_C|  return value|
 |ap_clk                           |   in|    1|  ap_ctrl_none|       top_graph_top_rfi_C|  return value|
 |ap_rst_n                         |   in|    1|  ap_ctrl_none|       top_graph_top_rfi_C|  return value|
-|raw_data_real_i_stream_TDATA     |   in|   64|          axis|    raw_data_real_i_stream|       pointer|
+|raw_data_real_i_stream_TDATA     |   in|   16|          axis|    raw_data_real_i_stream|       pointer|
 |raw_data_real_i_stream_TVALID    |   in|    1|          axis|    raw_data_real_i_stream|       pointer|
 |raw_data_real_i_stream_TREADY    |  out|    1|          axis|    raw_data_real_i_stream|       pointer|
-|raw_data_im_i_stream_TDATA       |   in|   64|          axis|      raw_data_im_i_stream|       pointer|
+|raw_data_im_i_stream_TDATA       |   in|   16|          axis|      raw_data_im_i_stream|       pointer|
 |raw_data_im_i_stream_TVALID      |   in|    1|          axis|      raw_data_im_i_stream|       pointer|
 |raw_data_im_i_stream_TREADY      |  out|    1|          axis|      raw_data_im_i_stream|       pointer|
-|raw_data_im_o_stream_TDATA       |  out|   64|          axis|      raw_data_im_o_stream|       pointer|
+|raw_data_im_o_stream_TDATA       |  out|   16|          axis|      raw_data_im_o_stream|       pointer|
 |raw_data_im_o_stream_TVALID      |  out|    1|          axis|      raw_data_im_o_stream|       pointer|
 |raw_data_im_o_stream_TREADY      |   in|    1|          axis|      raw_data_im_o_stream|       pointer|
-|raw_data_real_o_stream_TDATA     |  out|   64|          axis|    raw_data_real_o_stream|       pointer|
+|raw_data_real_o_stream_TDATA     |  out|   16|          axis|    raw_data_real_o_stream|       pointer|
 |raw_data_real_o_stream_TVALID    |  out|    1|          axis|    raw_data_real_o_stream|       pointer|
 |raw_data_real_o_stream_TREADY    |   in|    1|          axis|    raw_data_real_o_stream|       pointer|
-|mad_R_o_stream_TDATA             |  out|   64|          axis|            mad_R_o_stream|       pointer|
+|mad_R_o_stream_TDATA             |  out|   16|          axis|            mad_R_o_stream|       pointer|
 |mad_R_o_stream_TVALID            |  out|    1|          axis|            mad_R_o_stream|       pointer|
 |mad_R_o_stream_TREADY            |   in|    1|          axis|            mad_R_o_stream|       pointer|
-|raw_data_real_1_o_stream_TDATA   |  out|   64|          axis|  raw_data_real_1_o_stream|       pointer|
+|raw_data_real_1_o_stream_TDATA   |  out|   16|          axis|  raw_data_real_1_o_stream|       pointer|
 |raw_data_real_1_o_stream_TVALID  |  out|    1|          axis|  raw_data_real_1_o_stream|       pointer|
 |raw_data_real_1_o_stream_TREADY  |   in|    1|          axis|  raw_data_real_1_o_stream|       pointer|
-|std_R_o_stream_TDATA             |  out|   64|          axis|            std_R_o_stream|       pointer|
+|std_R_o_stream_TDATA             |  out|   16|          axis|            std_R_o_stream|       pointer|
 |std_R_o_stream_TVALID            |  out|    1|          axis|            std_R_o_stream|       pointer|
 |std_R_o_stream_TREADY            |   in|    1|          axis|            std_R_o_stream|       pointer|
-|raw_data_im_1_o_stream_TDATA     |  out|   64|          axis|    raw_data_im_1_o_stream|       pointer|
+|raw_data_im_1_o_stream_TDATA     |  out|   16|          axis|    raw_data_im_1_o_stream|       pointer|
 |raw_data_im_1_o_stream_TVALID    |  out|    1|          axis|    raw_data_im_1_o_stream|       pointer|
 |raw_data_im_1_o_stream_TREADY    |   in|    1|          axis|    raw_data_im_1_o_stream|       pointer|
-|mad_I_o_stream_TDATA             |  out|   64|          axis|            mad_I_o_stream|       pointer|
+|mad_I_o_stream_TDATA             |  out|   16|          axis|            mad_I_o_stream|       pointer|
 |mad_I_o_stream_TVALID            |  out|    1|          axis|            mad_I_o_stream|       pointer|
 |mad_I_o_stream_TREADY            |   in|    1|          axis|            mad_I_o_stream|       pointer|
-|std_I_o_stream_TDATA             |  out|   64|          axis|            std_I_o_stream|       pointer|
+|std_I_o_stream_TDATA             |  out|   16|          axis|            std_I_o_stream|       pointer|
 |std_I_o_stream_TVALID            |  out|    1|          axis|            std_I_o_stream|       pointer|
 |std_I_o_stream_TREADY            |   in|    1|          axis|            std_I_o_stream|       pointer|
-|filtered_im_0_o_stream_TDATA     |  out|   64|          axis|    filtered_im_0_o_stream|       pointer|
+|filtered_im_0_o_stream_TDATA     |  out|   16|          axis|    filtered_im_0_o_stream|       pointer|
 |filtered_im_0_o_stream_TVALID    |  out|    1|          axis|    filtered_im_0_o_stream|       pointer|
 |filtered_im_0_o_stream_TREADY    |   in|    1|          axis|    filtered_im_0_o_stream|       pointer|
-|filtered_real_0_o_stream_TDATA   |  out|   64|          axis|  filtered_real_0_o_stream|       pointer|
+|filtered_real_0_o_stream_TDATA   |  out|   16|          axis|  filtered_real_0_o_stream|       pointer|
 |filtered_real_0_o_stream_TVALID  |  out|    1|          axis|  filtered_real_0_o_stream|       pointer|
 |filtered_real_0_o_stream_TREADY  |   in|    1|          axis|  filtered_real_0_o_stream|       pointer|
-|filtered_im_1_o_stream_TDATA     |  out|   64|          axis|    filtered_im_1_o_stream|       pointer|
+|filtered_im_1_o_stream_TDATA     |  out|   16|          axis|    filtered_im_1_o_stream|       pointer|
 |filtered_im_1_o_stream_TVALID    |  out|    1|          axis|    filtered_im_1_o_stream|       pointer|
 |filtered_im_1_o_stream_TREADY    |   in|    1|          axis|    filtered_im_1_o_stream|       pointer|
-|filtered_real_1_o_stream_TDATA   |  out|   64|          axis|  filtered_real_1_o_stream|       pointer|
+|filtered_real_1_o_stream_TDATA   |  out|   16|          axis|  filtered_real_1_o_stream|       pointer|
 |filtered_real_1_o_stream_TVALID  |  out|    1|          axis|  filtered_real_1_o_stream|       pointer|
 |filtered_real_1_o_stream_TREADY  |   in|    1|          axis|  filtered_real_1_o_stream|       pointer|
 +---------------------------------+-----+-----+--------------+--------------------------+--------------+

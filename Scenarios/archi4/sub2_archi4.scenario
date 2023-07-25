@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <flags>
+        <sizesAreInBit/>
+    </flags>
+    <files>
+        <algorithm url="/org.ietr.preesm.rfi/Algo/multinode/sub2_rfi.pi"/>
+        <architecture url="/org.ietr.preesm.rfi/Archi/4CoresX86.slam"/>
+        <codegenDirectory url="/org.ietr.preesm.rfi/Code/generated"/>
+    </files>
+    <constraints excelUrl="">
+        <constraintGroup>
+            <operator name="Core0"/>
+            <task name="sub2_rfi/Plot_RnI_Histo"/>
+            <task name="sub2_rfi/Plot_Threshold"/>
+            <task name="sub2_rfi/Plot_Filtered_Data"/>
+            <task name="sub2_rfi/Data_Restitution"/>
+            <task name="sub2_rfi/src_filtered_im_0"/>
+            <task name="sub2_rfi/src_filtered_im1"/>
+            <task name="sub2_rfi/src_filtered_real_0"/>
+            <task name="sub2_rfi/src_filtered_real_1"/>
+            <task name="sub2_rfi/src_mad_I_0"/>
+            <task name="sub2_rfi/src_mad_R_0"/>
+            <task name="sub2_rfi/src_raw_data_im_0"/>
+            <task name="sub2_rfi/src_raw_data_im_1"/>
+            <task name="sub2_rfi/src_raw_data_real_0"/>
+            <task name="sub2_rfi/src_raw_data_real_1"/>
+            <task name="sub2_rfi/src_std_I_0"/>
+            <task name="sub2_rfi/src_std_R_0"/>
+            <task name="sub2_rfi"/>
+        </constraintGroup>
+        <constraintGroup>
+            <operator name="Core1"/>
+            <task name="sub2_rfi/Plot_RnI_Histo"/>
+            <task name="sub2_rfi/Plot_Threshold"/>
+            <task name="sub2_rfi/Plot_Filtered_Data"/>
+            <task name="sub2_rfi/Data_Restitution"/>
+            <task name="sub2_rfi/src_filtered_im_0"/>
+            <task name="sub2_rfi/src_filtered_im1"/>
+            <task name="sub2_rfi/src_filtered_real_0"/>
+            <task name="sub2_rfi/src_filtered_real_1"/>
+            <task name="sub2_rfi/src_mad_I_0"/>
+            <task name="sub2_rfi/src_mad_R_0"/>
+            <task name="sub2_rfi/src_raw_data_im_0"/>
+            <task name="sub2_rfi/src_raw_data_im_1"/>
+            <task name="sub2_rfi/src_raw_data_real_0"/>
+            <task name="sub2_rfi/src_raw_data_real_1"/>
+            <task name="sub2_rfi/src_std_I_0"/>
+            <task name="sub2_rfi/src_std_R_0"/>
+            <task name="sub2_rfi"/>
+        </constraintGroup>
+        <constraintGroup>
+            <operator name="Core2"/>
+            <task name="sub2_rfi/Plot_RnI_Histo"/>
+            <task name="sub2_rfi/Plot_Threshold"/>
+            <task name="sub2_rfi/Plot_Filtered_Data"/>
+            <task name="sub2_rfi/Data_Restitution"/>
+            <task name="sub2_rfi/src_filtered_im_0"/>
+            <task name="sub2_rfi/src_filtered_im1"/>
+            <task name="sub2_rfi/src_filtered_real_0"/>
+            <task name="sub2_rfi/src_filtered_real_1"/>
+            <task name="sub2_rfi/src_mad_I_0"/>
+            <task name="sub2_rfi/src_mad_R_0"/>
+            <task name="sub2_rfi/src_raw_data_im_0"/>
+            <task name="sub2_rfi/src_raw_data_im_1"/>
+            <task name="sub2_rfi/src_raw_data_real_0"/>
+            <task name="sub2_rfi/src_raw_data_real_1"/>
+            <task name="sub2_rfi/src_std_I_0"/>
+            <task name="sub2_rfi/src_std_R_0"/>
+            <task name="sub2_rfi"/>
+        </constraintGroup>
+        <constraintGroup>
+            <operator name="Core3"/>
+            <task name="sub2_rfi/Plot_RnI_Histo"/>
+            <task name="sub2_rfi/Plot_Threshold"/>
+            <task name="sub2_rfi/Plot_Filtered_Data"/>
+            <task name="sub2_rfi/Data_Restitution"/>
+            <task name="sub2_rfi/src_filtered_im_0"/>
+            <task name="sub2_rfi/src_filtered_im1"/>
+            <task name="sub2_rfi/src_filtered_real_0"/>
+            <task name="sub2_rfi/src_filtered_real_1"/>
+            <task name="sub2_rfi/src_mad_I_0"/>
+            <task name="sub2_rfi/src_mad_R_0"/>
+            <task name="sub2_rfi/src_raw_data_im_0"/>
+            <task name="sub2_rfi/src_raw_data_im_1"/>
+            <task name="sub2_rfi/src_raw_data_real_0"/>
+            <task name="sub2_rfi/src_raw_data_real_1"/>
+            <task name="sub2_rfi/src_std_I_0"/>
+            <task name="sub2_rfi/src_std_R_0"/>
+            <task name="sub2_rfi"/>
+        </constraintGroup>
+    </constraints>
+    <timings excelUrl="">
+        <timing opname="x86" time="5011027"
+            timingtype="EXECUTION_TIME" vertexname="sub2_rfi/Data_Restitution"/>
+        <timing opname="x86" time="77213526"
+            timingtype="EXECUTION_TIME" vertexname="sub2_rfi/Plot_Filtered_Data"/>
+        <timing opname="x86" time="77213526"
+            timingtype="EXECUTION_TIME" vertexname="sub2_rfi/Plot_RnI_Histo"/>
+        <timing opname="x86" time="77213526"
+            timingtype="EXECUTION_TIME" vertexname="sub2_rfi/Plot_Threshold"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_filtered_im1"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_filtered_im_0"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_filtered_real_0"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_filtered_real_1"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_mad_I_0"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_mad_R_0"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_raw_data_im_0"/>
+        <timing opname="x86" time="1" timingtype="EXECUTION_TIME" vertexname="sub2_rfi/src_raw_data_im_1"/>
+        <memcpyspeed opname="x86" setuptime="1" timeperunit="7.398200757575758E-4"/>
+    </timings>
+    <simuParams>
+        <mainCore>Core0</mainCore>
+        <mainComNode>shared_mem</mainComNode>
+        <averageDataSize>1000</averageDataSize>
+        <dataTypes>
+            <dataType name="ap_int&lt;16>" size="16"/>
+        </dataTypes>
+        <specialVertexOperators>
+            <specialVertexOperator path="Core0"/>
+            <specialVertexOperator path="Core1"/>
+            <specialVertexOperator path="Core2"/>
+            <specialVertexOperator path="Core3"/>
+        </specialVertexOperators>
+    </simuParams>
+    <parameterValues/>
+    <papifyConfigs xmlUrl=""/>
+    <energyConfigs xmlUrl="">
+        <performanceObjective objectiveEPS="0.0"/>
+        <peActorsEnergy/>
+    </energyConfigs>
+</scenario>

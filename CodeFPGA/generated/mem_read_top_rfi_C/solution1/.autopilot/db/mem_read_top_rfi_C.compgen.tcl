@@ -105,7 +105,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { raw_data_real_i_stream_TDATA { O 64 vector } raw_data_real_i_stream_TVALID { O 1 bit } raw_data_real_i_stream_TREADY { I 1 bit } } \
+    ports { raw_data_real_i_stream_TDATA { O 16 vector } raw_data_real_i_stream_TVALID { O 1 bit } raw_data_real_i_stream_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'raw_data_real_i_stream'"
@@ -124,7 +124,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {} \
     metadata {  } \
     op interface \
-    ports { raw_data_im_i_stream_TDATA { O 64 vector } raw_data_im_i_stream_TVALID { O 1 bit } raw_data_im_i_stream_TREADY { I 1 bit } } \
+    ports { raw_data_im_i_stream_TDATA { O 16 vector } raw_data_im_i_stream_TVALID { O 1 bit } raw_data_im_i_stream_TREADY { I 1 bit } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'raw_data_im_i_stream'"

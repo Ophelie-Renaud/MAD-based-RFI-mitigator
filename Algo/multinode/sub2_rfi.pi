@@ -97,77 +97,86 @@
             <port annotation="NONE" expr="SIZE" kind="input" name="filtered_im_data_i"/>
             <port annotation="NONE" expr="SIZE" kind="input" name="filtered_real_data_i"/>
         </node>
-        <node id="filtered_im_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_im_0"/>
+        <node id="src_filtered_im_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="filtered_real_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_real_0"/>
+        <node id="src_filtered_im1" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="mad_R_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="mad_R_0"/>
+        <node id="src_filtered_real_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="raw_data_real_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_real_0"/>
+        <node id="src_filtered_real_1" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="std_R_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="std_R_0"/>
+        <node id="src_mad_I_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="raw_data_im_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_im_0"/>
+        <node id="src_mad_R_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="mad_I_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="mad_I_0"/>
+        <node id="src_raw_data_im_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="std_I_0" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="std_I_0"/>
+        <node id="src_raw_data_im_1" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="filtered_real_1" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_real_1"/>
+        <node id="src_raw_data_real_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="filtered_im_1" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="filtered_im_1"/>
+        <node id="src_raw_data_real_1" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="raw_data_im_1" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_im_1"/>
+        <node id="src_std_I_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <node id="raw_data_real_1" kind="src">
-            <port annotation="NONE" expr="SIZE" kind="output" name="raw_data_real_1"/>
+        <node id="src_std_R_0" kind="actor">
+            <port kind="cfg_input" name="SIZE"/>
+            <port annotation="NONE" expr="SIZE" kind="output" name="out"/>
         </node>
-        <edge kind="fifo" source="filtered_im_0"
-            sourceport="filtered_im_0" target="Data_Restitution"
-            targetport="filtered_im_data_i" type="void"/>
-        <edge kind="fifo" source="filtered_real_0"
-            sourceport="filtered_real_0"
-            target="Data_Restitution"
-            targetport="filtered_real_data_i" type="void"/>
-        <edge kind="fifo" source="mad_R_0" sourceport="mad_R_0"
-            target="Plot_Threshold" targetport="mad_R_i" type="void"/>
-        <edge kind="fifo" source="raw_data_real_0"
-            sourceport="raw_data_real_0" target="Plot_Threshold"
-            targetport="raw_data_real_i" type="void"/>
-        <edge kind="fifo" source="std_R_0" sourceport="std_R_0"
-            target="Plot_Threshold" targetport="std_R_i" type="void"/>
-        <edge kind="fifo" source="raw_data_im_0"
-            sourceport="raw_data_im_0" target="Plot_Threshold"
-            targetport="raw_data_im_i" type="void"/>
-        <edge kind="fifo" source="mad_I_0" sourceport="mad_I_0"
-            target="Plot_Threshold" targetport="mad_I_i" type="void"/>
-        <edge kind="fifo" source="std_I_0" sourceport="std_I_0"
-            target="Plot_Threshold" targetport="std_I_i" type="void"/>
-        <edge kind="fifo" source="filtered_real_1"
-            sourceport="filtered_real_1"
-            target="Plot_Filtered_Data"
-            targetport="filtered_real_data_i" type="void"/>
-        <edge kind="fifo" source="filtered_im_1"
-            sourceport="filtered_im_1"
-            target="Plot_Filtered_Data"
-            targetport="filtered_im_data_i" type="void"/>
-        <edge kind="fifo" source="raw_data_im_1"
-            sourceport="raw_data_im_1" target="Plot_RnI_Histo"
-            targetport="raw_data_im_i" type="void"/>
-        <edge kind="fifo" source="raw_data_real_1"
-            sourceport="raw_data_real_1" target="Plot_RnI_Histo"
-            targetport="raw_data_real_i" type="void"/>
+        <edge kind="fifo" source="src_filtered_im_0"
+            sourceport="out" target="Data_Restitution"
+            targetport="filtered_im_data_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_filtered_real_0"
+            sourceport="out" target="Data_Restitution"
+            targetport="filtered_real_data_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_mad_R_0" sourceport="out"
+            target="Plot_Threshold" targetport="mad_R_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_raw_data_real_0"
+            sourceport="out" target="Plot_Threshold"
+            targetport="raw_data_real_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_std_R_0" sourceport="out"
+            target="Plot_Threshold" targetport="std_R_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_raw_data_im_0"
+            sourceport="out" target="Plot_Threshold"
+            targetport="raw_data_im_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_mad_I_0" sourceport="out"
+            target="Plot_Threshold" targetport="mad_I_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_std_I_0" sourceport="out"
+            target="Plot_Threshold" targetport="std_I_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_filtered_real_1"
+            sourceport="out" target="Plot_Filtered_Data"
+            targetport="filtered_real_data_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_filtered_im1"
+            sourceport="out" target="Plot_Filtered_Data"
+            targetport="filtered_im_data_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_raw_data_im_1"
+            sourceport="out" target="Plot_RnI_Histo"
+            targetport="raw_data_im_i" type="ap_int&lt;16>"/>
+        <edge kind="fifo" source="src_raw_data_real_1"
+            sourceport="out" target="Plot_RnI_Histo"
+            targetport="raw_data_real_i" type="ap_int&lt;16>"/>
         <edge kind="dependency" source="N_BLOCKS" target="SIZE"/>
         <edge kind="dependency" source="N_SAMPLES" target="SIZE"/>
         <edge kind="dependency" source="SAMPLE_RATE"
@@ -194,17 +203,29 @@
             target="Plot_RnI_Histo" targetport="SIZE"/>
         <edge kind="dependency" source="SAMPLE_RATE"
             target="Plot_Filtered_Data" targetport="SAMPLE_RATE"/>
-        <edge kind="dependency" source="SIZE" target="filtered_im_0"/>
-        <edge kind="dependency" source="SIZE" target="filtered_im_1"/>
-        <edge kind="dependency" source="SIZE" target="filtered_real_0"/>
-        <edge kind="dependency" source="SIZE" target="filtered_real_1"/>
-        <edge kind="dependency" source="SIZE" target="mad_I_0"/>
-        <edge kind="dependency" source="SIZE" target="mad_R_0"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_im_0"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_im_1"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_real_0"/>
-        <edge kind="dependency" source="SIZE" target="raw_data_real_1"/>
-        <edge kind="dependency" source="SIZE" target="std_I_0"/>
-        <edge kind="dependency" source="SIZE" target="std_R_0"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_filtered_im_0" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_filtered_im1" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_filtered_real_0" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_filtered_real_1" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_mad_I_0" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_mad_R_0" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_raw_data_im_0" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_raw_data_im_1" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_raw_data_real_0" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_raw_data_real_1" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_std_I_0" targetport="SIZE"/>
+        <edge kind="dependency" source="SIZE"
+            target="src_std_R_0" targetport="SIZE"/>
     </graph>
 </graphml>
