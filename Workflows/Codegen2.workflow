@@ -23,9 +23,9 @@
             <dftools:variable name="Verbose" value="True"/>
         </dftools:data>
     </dftools:task>
-    <dftools:task
-        pluginId="org.ietr.preesm.codegen.xtend.task.CodegenTask" taskId="Code Generation">
+    <dftools:task pluginId="codegen2" taskId="Code Generation">
         <dftools:data key="variables">
+            <dftools:variable name="Multinode" value="false"/>
             <dftools:variable name="Papify" value="false"/>
             <dftools:variable name="Printer" value="C"/>
         </dftools:data>

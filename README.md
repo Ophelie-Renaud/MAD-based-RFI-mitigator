@@ -51,20 +51,33 @@ If you want to take advantage of this project
 **Algo**: 
 - "top_rfi_c" refers to the original dataflow graph described in C code that can only be deployed on a CPU.
 - Folder *generated* contains the generated graph
-	- Folder *SCAPE* contains the graph with the granularity adjusted for a specific target architecture. Please note that the automatic adaptation task for the graph is only available in the developer version of PREESM. However, the transformed graphs mentioned here are provided for your reference :grin:.
+	- Folder *SCAPE* contains the graph with the granularity adjusted for a specific target architecture. Please note that the automatic adaptation task for the graph is only available in the developer version of PREESM. However, the transformed graphs mentioned here are provided for your reference :grin:. (otherwise go on *PREESM developper mode* and branch [clustering](https://github.com/preesm/preesm/tree/clustering))
 	- Folder *simsdp_archi[id]* refers to... [TODO]
 
+**workflow**:
 
+The typical static scheduling process involves four primary tasks, namely flattening, SrDAG (Single rate Directed Acyclic Graph) transformation mapping, and scheduling. Then the process is able to generate the appropriate parallel code.
+
+ PREESM represents the execution of these processes via a directed graph composed of a task for the processes and a directed arc for the exchange of data. This graph is called workflow.
+ 
 **CPU-based workflow**:
+
 ![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/stdwf.png)
-[TODO]
+
+The flattening and SrDAG processes are contained in the *PiMM2SrDAG* task. They make it possible to put the actors on the same level and then to reveal the parallelism and the communication at stake.
+
+
 
 **FPGA-based workflow**:
+
 ![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/fpgawf.png)
+
 [TODO]
 
 **Multinode CPU-based workflow**:
+
 ![](https://github.com/Ophelie-Renaud/MAD-based-RFI-mitigator/blob/main/Pic/simsdpwf.png)
+
 [TODO]
 
 **Code**:
