@@ -88,13 +88,11 @@ e.g.:"Code[number of Processing element][Target type]" contain the generated fil
 ### TARGET :desktop_computer:
 #### CPU
 The CPU plateform used for example is my personnal computer 8 core x86 CPUs.
-
->> - Make sure you have install [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
->> - And of course:
->>
+>> - install PSRDADA: [PSRDADA](https://psrdada.sourceforge.net/)
+>>   $ git clone https://git.code.sf.net/p/psrdada/code psrdada
+>> - install GNU: [GNU](https://psrchive.sourceforge.net/third/autotools/) before :sunglasses: .
 >> $ sudo make install
 >> - install GNUplot:
->>
 >> $ sudo apt-get update
 >> $ sudo apt-get install gnuplot
 >> - Open a terminal on a X86 of this project.
