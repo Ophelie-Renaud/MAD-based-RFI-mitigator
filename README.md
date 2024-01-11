@@ -338,11 +338,11 @@ pltH.set_size_inches([10, 8])
 ### References
 [[1] O. Renaud, D. Gageot, K. Desnos, J.-F. Nezan, SCAPE: HW-Aware Clustering of Dataflow Actors for Tunable Scheduling Complexity, IETR, 2023](https://hal.science/hal-04089941v1/file/DASIP__Architecture_aware_Clustering_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf). 
 
-[2] O. Renaud, N. Haggui, K. Desnos, J.-F, Nezan. Automated Clustering and Pipelining of Dataflow Actors for Controlled Scheduling Complexity, IETR, 2023.
+[[2] O. Renaud, N. Haggui, K. Desnos, J.-F, Nezan. Automated Clustering and Pipelining of Dataflow Actors for Controlled Scheduling Complexity, IETR, 2023](https://hal.science/hal-04253298v1/file/EUSIPCO__Automated_Clustering_and_Pipelining_of_Dataflow_Actors_for_Controlled_Scheduling_Complexity.pdf).
 
 [3] O. Renaud, H. Miomandre, K. Desnos, J.-F. Nezan ,Automated Level-Based Clustering of Dataflow Actors for Controlled Scheduling Complexity, IETR, 202_.
 
-[4] A. Honorat, M. Dardaillon. H Miomandre, J.-F, Nezan. Automated Buffer Sizing of Dataflow Applications in a High-Level Synthesis Workflow, IETR, 2023.
+[[4] A. Honorat, M. Dardaillon. H Miomandre, J.-F, Nezan. Automated Buffer Sizing of Dataflow Applications in a High-Level Synthesis Workflow, IETR, 2023](https://www.researchgate.net/publication/374323521_Automated_Buffer_Sizing_of_Dataflow_Applications_in_a_High-Level_Synthesis_Workflow).
 
 [5] O. Renaud, A. Gougeon, K. Desnos, C. Phillips, J. Tuthill, M. Quinson,
 J.-F. Nezan, SimSDP: Dataflow Application Distribution on Heterogeneous Multi-Node Multi-Core Architectures, IETR, CSIRO, IRISA, 202_.
